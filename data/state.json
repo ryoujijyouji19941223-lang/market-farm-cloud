@@ -1,1 +1,379 @@
-{"runs":[],"predictions":{},"scores":{},"paper":{"cash":100000.0,"positions":{},"history":[]}}
+{
+  "runs": [
+    {
+      "timestamp": "2026-09-17T14:54:42.777110+09:00",
+      "session": "morning",
+      "regime": {
+        "risk_off": 0.32591073147180616,
+        "oil_pressure": -0.033177219111096834,
+        "japan_risk": 0.05841982127026635,
+        "usd_rate_pressure": 0.17539050557494273
+      },
+      "results": [
+        {
+          "symbol": "USDJPY=X",
+          "name": "ドル円",
+          "kind": "fx",
+          "keywords": [
+            "ドル円",
+            "USDJPY",
+            "FRB",
+            "日銀"
+          ],
+          "price": 155.70399475097656,
+          "day_change": 0.0028208897182873116,
+          "momentum5": 0.013876115796418231,
+          "trend": -0.014871645047492832,
+          "volatility": 0.11123627673840936,
+          "price_score": -0.06338361115849891,
+          "news_score": 0.75,
+          "macro_score": 0.035268189315377715,
+          "score": 0.08968937280952739,
+          "probability_up": 0.5491697279065175,
+          "action": "HOLD"
+        },
+        {
+          "symbol": "EURJPY=X",
+          "name": "ユーロ円",
+          "kind": "fx",
+          "keywords": [
+            "ユーロ円",
+            "EURJPY",
+            "ECB",
+            "日銀"
+          ],
+          "price": 178.56300354003906,
+          "day_change": -0.0032431656178789625,
+          "momentum5": -0.0004981151143004237,
+          "trend": -0.02024163902738174,
+          "volatility": 0.09305892035579898,
+          "price_score": -0.16247287146144185,
+          "news_score": 0.0,
+          "macro_score": -0.017622625338034183,
+          "score": -0.11312494639448559,
+          "probability_up": 0.43810044832941364,
+          "action": "HOLD"
+        },
+        {
+          "symbol": "CHFJPY=X",
+          "name": "スイスフラン円",
+          "kind": "fx",
+          "keywords": [
+            "スイスフラン",
+            "CHFJPY",
+            "SNB",
+            "日銀"
+          ],
+          "price": 188.73500061035156,
+          "day_change": -0.004247086125860666,
+          "momentum5": -0.004448333269479465,
+          "trend": -0.025370007780025072,
+          "volatility": 0.08769749161277705,
+          "price_score": -0.21723602033324152,
+          "news_score": 0.125,
+          "macro_score": 0.04337619175674185,
+          "score": -0.11996406506309297,
+          "probability_up": 0.4344000989724648,
+          "action": "HOLD"
+        },
+        {
+          "symbol": "GC=F",
+          "name": "金",
+          "kind": "commodity",
+          "keywords": [
+            "金価格",
+            "gold",
+            "金利",
+            "地政学"
+          ],
+          "price": 4336.5,
+          "day_change": -0.011623931623931605,
+          "momentum5": -0.016064213424328178,
+          "trend": -0.029521242784719237,
+          "volatility": 0.2195810114342335,
+          "price_score": -0.2917031406450405,
+          "news_score": 0.5,
+          "macro_score": 0.040627475513869256,
+          "score": -0.10726401431154717,
+          "probability_up": 0.441277048065233,
+          "action": "HOLD"
+        },
+        {
+          "symbol": "7974.T",
+          "name": "任天堂",
+          "kind": "equity",
+          "keywords": [
+            "任天堂",
+            "Nintendo",
+            "Switch"
+          ],
+          "price": 8438.0,
+          "day_change": 0.03839527442776269,
+          "momentum5": 0.05620227813243206,
+          "trend": -0.04810167683280364,
+          "volatility": 0.36099996969469583,
+          "price_score": -0.15865269814546265,
+          "news_score": 0.0,
+          "macro_score": -0.05214571703548899,
+          "score": -0.11121052737588048,
+          "probability_up": 0.4391375101807402,
+          "action": "HOLD"
+        },
+        {
+          "symbol": "8316.T",
+          "name": "三井住友FG",
+          "kind": "equity",
+          "keywords": [
+            "三井住友",
+            "SMFG",
+            "日銀",
+            "金利"
+          ],
+          "price": 6835.0,
+          "day_change": -0.0010230926629640757,
+          "momentum5": -0.009563831328792904,
+          "trend": 0.0028155078463183436,
+          "volatility": 0.195441491046425,
+          "price_score": -0.01572996498747618,
+          "news_score": 0.625,
+          "macro_score": -0.05214571703548899,
+          "score": 0.08773176625319286,
+          "probability_up": 0.5481032323356246,
+          "action": "HOLD"
+        },
+        {
+          "symbol": "285A.T",
+          "name": "キオクシア",
+          "kind": "equity",
+          "keywords": [
+            "キオクシア",
+            "NAND",
+            "SSD",
+            "AIデータセンター"
+          ],
+          "price": 49790.0,
+          "day_change": -0.01949586451358798,
+          "momentum5": -0.14288173523842318,
+          "trend": -0.024895635673624295,
+          "volatility": 0.7396865598084487,
+          "price_score": -0.6473316713662018,
+          "news_score": 0.0,
+          "macro_score": -0.05214571703548899,
+          "score": -0.3712232742320726,
+          "probability_up": 0.3064664766418504,
+          "action": "RISK_OFF"
+        },
+        {
+          "symbol": "8136.T",
+          "name": "サンリオ",
+          "kind": "equity",
+          "keywords": [
+            "サンリオ",
+            "ハローキティ",
+            "IP"
+          ],
+          "price": 1235.5,
+          "day_change": 0.03736356003358532,
+          "momentum5": 0.0528334043459735,
+          "trend": -0.018511033869533455,
+          "volatility": 0.37038634620181626,
+          "price_score": 0.06316115455400707,
+          "news_score": 0.0,
+          "macro_score": -0.05214571703548899,
+          "score": 0.03364761297222268,
+          "probability_up": 0.5184977411231352,
+          "action": "HOLD"
+        },
+        {
+          "symbol": "5401.T",
+          "name": "日本製鉄",
+          "kind": "equity",
+          "keywords": [
+            "日本製鉄",
+            "US Steel",
+            "鉄鋼"
+          ],
+          "price": 701.2000122070312,
+          "day_change": 0.027098285731961935,
+          "momentum5": 0.015349025479041156,
+          "trend": 0.005455841468415379,
+          "volatility": 0.27078014526739774,
+          "price_score": 0.10465818383054422,
+          "news_score": 0.0,
+          "macro_score": -0.05214571703548899,
+          "score": 0.06288499089844378,
+          "probability_up": 0.5345316848440524,
+          "action": "HOLD"
+        },
+        {
+          "symbol": "6522.T",
+          "name": "アスタリスク",
+          "kind": "equity",
+          "keywords": [
+            "アスタリスク",
+            "RFID",
+            "バーコード"
+          ],
+          "price": 1407.0,
+          "day_change": 0.015151515151515138,
+          "momentum5": -0.06262491672218518,
+          "trend": -0.17453574811285555,
+          "volatility": 1.732296838953727,
+          "price_score": -0.928415217933979,
+          "news_score": 0.0,
+          "macro_score": -0.05214571703548899,
+          "score": -0.41544373373777893,
+          "probability_up": 0.2861868704312743,
+          "action": "RISK_OFF"
+        },
+        {
+          "symbol": "1736.T",
+          "name": "オーテック",
+          "kind": "equity",
+          "keywords": [
+            "オーテック",
+            "設備工事"
+          ],
+          "price": 2485.0,
+          "day_change": 0.01635991820040905,
+          "momentum5": 0.03541666666666665,
+          "trend": 0.006673575129533704,
+          "volatility": 0.14822454912054858,
+          "price_score": 0.1926186163244713,
+          "news_score": 0.0,
+          "macro_score": -0.05214571703548899,
+          "score": 0.12315880154531715,
+          "probability_up": 0.5673259574340975,
+          "action": "HOLD"
+        },
+        {
+          "symbol": "3656.T",
+          "name": "KLab",
+          "kind": "equity",
+          "keywords": [
+            "KLab",
+            "ゲーム",
+            "新作"
+          ],
+          "price": 183.0,
+          "day_change": 0.028089887640449396,
+          "momentum5": 0.028089887640449396,
+          "trend": -0.045112781954887105,
+          "volatility": 0.4045980027779708,
+          "price_score": -0.24354829539772474,
+          "news_score": 0.0,
+          "macro_score": -0.05214571703548899,
+          "score": -0.16405026812961754,
+          "probability_up": 0.4107391556937113,
+          "action": "RISK_OFF"
+        }
+      ]
+    }
+  ],
+  "predictions": {
+    "2026-09-17": [
+      {
+        "symbol": "USDJPY=X",
+        "name": "ドル円",
+        "direction": "FLAT",
+        "probability_up": 0.5491697279065175,
+        "reference_price": 155.70399475097656,
+        "settled": false
+      },
+      {
+        "symbol": "EURJPY=X",
+        "name": "ユーロ円",
+        "direction": "DOWN",
+        "probability_up": 0.43810044832941364,
+        "reference_price": 178.56300354003906,
+        "settled": false
+      },
+      {
+        "symbol": "CHFJPY=X",
+        "name": "スイスフラン円",
+        "direction": "DOWN",
+        "probability_up": 0.4344000989724648,
+        "reference_price": 188.73500061035156,
+        "settled": false
+      },
+      {
+        "symbol": "GC=F",
+        "name": "金",
+        "direction": "DOWN",
+        "probability_up": 0.441277048065233,
+        "reference_price": 4336.5,
+        "settled": false
+      },
+      {
+        "symbol": "7974.T",
+        "name": "任天堂",
+        "direction": "DOWN",
+        "probability_up": 0.4391375101807402,
+        "reference_price": 8438.0,
+        "settled": false
+      },
+      {
+        "symbol": "8316.T",
+        "name": "三井住友FG",
+        "direction": "FLAT",
+        "probability_up": 0.5481032323356246,
+        "reference_price": 6835.0,
+        "settled": false
+      },
+      {
+        "symbol": "285A.T",
+        "name": "キオクシア",
+        "direction": "DOWN",
+        "probability_up": 0.3064664766418504,
+        "reference_price": 49790.0,
+        "settled": false
+      },
+      {
+        "symbol": "8136.T",
+        "name": "サンリオ",
+        "direction": "FLAT",
+        "probability_up": 0.5184977411231352,
+        "reference_price": 1235.5,
+        "settled": false
+      },
+      {
+        "symbol": "5401.T",
+        "name": "日本製鉄",
+        "direction": "FLAT",
+        "probability_up": 0.5345316848440524,
+        "reference_price": 701.2000122070312,
+        "settled": false
+      },
+      {
+        "symbol": "6522.T",
+        "name": "アスタリスク",
+        "direction": "DOWN",
+        "probability_up": 0.2861868704312743,
+        "reference_price": 1407.0,
+        "settled": false
+      },
+      {
+        "symbol": "1736.T",
+        "name": "オーテック",
+        "direction": "UP",
+        "probability_up": 0.5673259574340975,
+        "reference_price": 2485.0,
+        "settled": false
+      },
+      {
+        "symbol": "3656.T",
+        "name": "KLab",
+        "direction": "DOWN",
+        "probability_up": 0.4107391556937113,
+        "reference_price": 183.0,
+        "settled": false
+      }
+    ]
+  },
+  "scores": {},
+  "paper": {
+    "cash": 100000.0,
+    "positions": {},
+    "history": []
+  }
+}
