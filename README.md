@@ -30,15 +30,26 @@ PCをつけっぱなしにせず、GitHub Actionsが日本時間の朝8時台・
 
 次版では中央銀行イベント、CFTC大口ポジション、ETF資金流、SNS急増検知、仮想10万円ポートフォリオを追加予定。
 
-## クラウド化の一度だけ必要な操作
+## 現在のクラウド構成
 
-1. GitHubで `market-farm-cloud` という空リポジトリを作る（公開リポジトリがPagesを最も簡単に使える）。
-2. このフォルダの中身をリポジトリへ入れる。
-3. GitHub → Settings → Pages → Source を **GitHub Actions** にする。
-4. Actions → Market Farm → Run workflow で morning を一度手動実行。
-5. Deploy dashboard が完了すると、Pages URLが表示される。
+- GitHub Actions: 分析エンジン。PCがOFFでも実行される。
+- `data/state.json`: 予測・結果・的中率の履歴。
+- `docs/index.html`: スマホ表示用ダッシュボード。
+- GitHub Pages: `docs/index.html` をWeb公開する役目。
 
-以降はPC不要。スマホからPages URLを開けば最新状態を確認できます。
+## GitHub Pagesについて
+
+GitHub FreeではPagesを使うリポジトリをPublicにする必要があります。GitHub Pro等ではPrivateリポジトリでもPagesを利用できますが、Pagesサイト自体は公開URLになります。
+
+この試作にはAPIキーや個人情報を保存しない設計です。Public化したくない場合は、分析エンジンをPrivateのまま運転し、将来的に認証付きの別ホストへダッシュボードだけ移す構成が適しています。
+
+## Pagesを有効にする一度だけの操作
+
+1. GitHub Freeで使う場合: Settings → General → Danger Zone → Change repository visibility → Public。
+2. Settings → Pages → Source を **GitHub Actions** にする。
+3. Pages workflowが成功するとスマホ用URLが発行される。
+
+分析本体はPagesが無効でも動作します。
 
 ## 時刻
 
