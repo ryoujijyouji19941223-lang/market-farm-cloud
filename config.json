@@ -1,0 +1,30 @@
+{
+  "timezone": "Asia/Tokyo",
+  "initial_cash_jpy": 100000,
+  "buy_threshold": 0.62,
+  "sell_threshold": 0.42,
+  "max_positions": 5,
+  "max_position_fraction": 0.20,
+  "assets": [
+    {"symbol":"USDJPY=X","name":"ドル円","kind":"fx","keywords":["ドル円","USDJPY","FRB","日銀"]},
+    {"symbol":"EURJPY=X","name":"ユーロ円","kind":"fx","keywords":["ユーロ円","EURJPY","ECB","日銀"]},
+    {"symbol":"CHFJPY=X","name":"スイスフラン円","kind":"fx","keywords":["スイスフラン","CHFJPY","SNB","日銀"]},
+    {"symbol":"GC=F","name":"金","kind":"commodity","keywords":["金価格","gold","金利","地政学"]},
+    {"symbol":"7974.T","name":"任天堂","kind":"equity","keywords":["任天堂","Nintendo","Switch"]},
+    {"symbol":"8316.T","name":"三井住友FG","kind":"equity","keywords":["三井住友","SMFG","日銀","金利"]},
+    {"symbol":"285A.T","name":"キオクシア","kind":"equity","keywords":["キオクシア","NAND","SSD","AIデータセンター"]},
+    {"symbol":"8136.T","name":"サンリオ","kind":"equity","keywords":["サンリオ","ハローキティ","IP"]},
+    {"symbol":"5401.T","name":"日本製鉄","kind":"equity","keywords":["日本製鉄","US Steel","鉄鋼"]},
+    {"symbol":"6522.T","name":"アスタリスク","kind":"equity","keywords":["アスタリスク","RFID","バーコード"]},
+    {"symbol":"1736.T","name":"オーテック","kind":"equity","keywords":["オーテック","設備工事"]},
+    {"symbol":"3656.T","name":"KLab","kind":"equity","keywords":["KLab","ゲーム","新作"]}
+  ],
+  "market_proxies": {
+    "oil":"CL=F",
+    "vix":"^VIX",
+    "sp500":"^GSPC",
+    "nikkei":"^N225",
+    "us10y":"^TNX",
+    "dxy":"DX-Y.NYB"
+  }
+}
