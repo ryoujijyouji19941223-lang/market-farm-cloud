@@ -70,9 +70,11 @@ def fetch_gdelt_range(query: str, start_jst: datetime, end_jst: datetime):
     articles = []
     capped_chunks = 0
     cursor = start_jst
-    # Smaller windows reduce the chance that a busy topic hits GDELT's 250-row cap.
+    # The recent test covers only about a month, so request the whole window at once.
+    # If GDELT hits its 250-row cap we record that fact instead of silently pretending
+    # the archive was exhaustive.
     while cursor < end_jst:
-        chunk_end = min(cursor + timedelta(days=10), end_jst)
+        chunk_end = min(cursor + timedelta(days=60), end_jst)
         items, capped = fetch_gdelt_chunk(query, cursor, chunk_end)
         capped_chunks += int(capped)
         for item in items:
