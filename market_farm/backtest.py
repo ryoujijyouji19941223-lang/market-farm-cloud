@@ -151,6 +151,7 @@ def research_candidate(frame):
     improvement = None if base_acc is None or cand_acc is None else cand_acc - base_acc
     promising = bool(
         improvement is not None and improvement >= 0.03 and
+        cand_acc is not None and cand_acc >= 0.50 and
         best_test.get("signals", 0) >= 25
     )
 
