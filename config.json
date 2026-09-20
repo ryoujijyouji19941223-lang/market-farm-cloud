@@ -4,27 +4,154 @@
   "buy_threshold": 0.62,
   "sell_threshold": 0.42,
   "max_positions": 5,
-  "max_position_fraction": 0.20,
+  "max_position_fraction": 0.2,
   "assets": [
-    {"symbol":"USDJPY=X","name":"ドル円","kind":"fx","keywords":["ドル円","USDJPY","FRB","日銀"]},
-    {"symbol":"EURJPY=X","name":"ユーロ円","kind":"fx","keywords":["ユーロ円","EURJPY","ECB","日銀"]},
-    {"symbol":"CHFJPY=X","name":"スイスフラン円","kind":"fx","keywords":["スイスフラン","CHFJPY","SNB","日銀"]},
-    {"symbol":"GC=F","name":"金","kind":"commodity","keywords":["金価格","gold","金利","地政学"]},
-    {"symbol":"7974.T","name":"任天堂","kind":"equity","keywords":["任天堂","Nintendo","Switch"]},
-    {"symbol":"8316.T","name":"三井住友FG","kind":"equity","keywords":["三井住友","SMFG","日銀","金利"]},
-    {"symbol":"285A.T","name":"キオクシア","kind":"equity","keywords":["キオクシア","NAND","SSD","AIデータセンター"]},
-    {"symbol":"8136.T","name":"サンリオ","kind":"equity","keywords":["サンリオ","ハローキティ","IP"]},
-    {"symbol":"5401.T","name":"日本製鉄","kind":"equity","keywords":["日本製鉄","US Steel","鉄鋼"]},
-    {"symbol":"6522.T","name":"アスタリスク","kind":"equity","keywords":["アスタリスク","RFID","バーコード"]},
-    {"symbol":"1736.T","name":"オーテック","kind":"equity","keywords":["オーテック","設備工事"]},
-    {"symbol":"3656.T","name":"KLab","kind":"equity","keywords":["KLab","ゲーム","新作"]}
+    {
+      "symbol": "USDJPY=X",
+      "name": "ドル円",
+      "kind": "fx",
+      "keywords": [
+        "ドル円",
+        "USDJPY",
+        "FRB",
+        "日銀"
+      ],
+      "history_news_query": "(yen OR USDJPY OR \"Bank of Japan\" OR \"Federal Reserve\")"
+    },
+    {
+      "symbol": "EURJPY=X",
+      "name": "ユーロ円",
+      "kind": "fx",
+      "keywords": [
+        "ユーロ円",
+        "EURJPY",
+        "ECB",
+        "日銀"
+      ],
+      "history_news_query": "(euro OR EURJPY OR ECB OR \"Bank of Japan\")"
+    },
+    {
+      "symbol": "CHFJPY=X",
+      "name": "スイスフラン円",
+      "kind": "fx",
+      "keywords": [
+        "スイスフラン",
+        "CHFJPY",
+        "SNB",
+        "日銀"
+      ],
+      "history_news_query": "(\"Swiss franc\" OR CHFJPY OR SNB OR \"Bank of Japan\")"
+    },
+    {
+      "symbol": "GC=F",
+      "name": "金",
+      "kind": "commodity",
+      "keywords": [
+        "金価格",
+        "gold",
+        "金利",
+        "地政学"
+      ],
+      "history_news_query": "(gold OR \"gold price\" OR bullion)"
+    },
+    {
+      "symbol": "7974.T",
+      "name": "任天堂",
+      "kind": "equity",
+      "keywords": [
+        "任天堂",
+        "Nintendo",
+        "Switch"
+      ],
+      "history_news_query": "(Nintendo OR \"Nintendo Switch\")"
+    },
+    {
+      "symbol": "8316.T",
+      "name": "三井住友FG",
+      "kind": "equity",
+      "keywords": [
+        "三井住友",
+        "SMFG",
+        "日銀",
+        "金利"
+      ],
+      "history_news_query": "(\"Sumitomo Mitsui\" OR SMFG)"
+    },
+    {
+      "symbol": "285A.T",
+      "name": "キオクシア",
+      "kind": "equity",
+      "keywords": [
+        "キオクシア",
+        "NAND",
+        "SSD",
+        "AIデータセンター"
+      ],
+      "history_news_query": "(Kioxia OR NAND OR SSD)"
+    },
+    {
+      "symbol": "8136.T",
+      "name": "サンリオ",
+      "kind": "equity",
+      "keywords": [
+        "サンリオ",
+        "ハローキティ",
+        "IP"
+      ],
+      "history_news_query": "(Sanrio OR \"Hello Kitty\")"
+    },
+    {
+      "symbol": "5401.T",
+      "name": "日本製鉄",
+      "kind": "equity",
+      "keywords": [
+        "日本製鉄",
+        "US Steel",
+        "鉄鋼"
+      ],
+      "history_news_query": "(\"Nippon Steel\" OR \"US Steel\")"
+    },
+    {
+      "symbol": "6522.T",
+      "name": "アスタリスク",
+      "kind": "equity",
+      "keywords": [
+        "アスタリスク",
+        "RFID",
+        "バーコード"
+      ],
+      "history_news_query": "(\"Asterisk Inc\" OR RFID barcode Japan)"
+    },
+    {
+      "symbol": "1736.T",
+      "name": "オーテック",
+      "kind": "equity",
+      "keywords": [
+        "オーテック",
+        "設備工事"
+      ],
+      "history_news_query": "(\"Otec Corporation\" OR オーテック)"
+    },
+    {
+      "symbol": "3656.T",
+      "name": "KLab",
+      "kind": "equity",
+      "keywords": [
+        "KLab",
+        "ゲーム",
+        "新作"
+      ],
+      "history_news_query": "(KLab OR \"KLab Inc\")"
+    }
   ],
   "market_proxies": {
-    "oil":"CL=F",
-    "vix":"^VIX",
-    "sp500":"^GSPC",
-    "nikkei":"^N225",
-    "us10y":"^TNX",
-    "dxy":"DX-Y.NYB"
-  }
+    "oil": "CL=F",
+    "vix": "^VIX",
+    "sp500": "^GSPC",
+    "nikkei": "^N225",
+    "us10y": "^TNX",
+    "dxy": "DX-Y.NYB"
+  },
+  "world_news_query": "(\"Federal Reserve\" OR \"Bank of Japan\" OR inflation OR employment OR recession OR tariff OR war OR sanctions)",
+  "recent_news_backtest_days": 35
 }
