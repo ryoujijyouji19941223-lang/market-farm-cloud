@@ -92,6 +92,13 @@ def create_live_cards(cfg: dict, regime: dict, results: list[dict], now: datetim
             },
         }
 
+        path = _card_path(date_key, r["symbol"])
+        # The first morning card is the historical record. A delayed/manual
+        # rerun on the same day must never rewrite it with later information.
+        if path.exists():
+            created.append(_load_json(path, {}))
+            continue
+
         card = {
             "schema_version": 1,
             "model_version": model_version,
@@ -120,7 +127,7 @@ def create_live_cards(cfg: dict, regime: dict, results: list[dict], now: datetim
             "outcome": None,
             "review": None,
         }
-        _save_json(_card_path(date_key, r["symbol"]), card)
+        _save_json(path, card)
         created.append(card)
 
     _refresh_index()
