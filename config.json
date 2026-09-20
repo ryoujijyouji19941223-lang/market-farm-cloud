@@ -116,11 +116,25 @@
       "name": "アスタリスク",
       "kind": "equity",
       "keywords": [
-        "アスタリスク",
+        "株式会社アスタリスク",
+        "AsReader",
         "RFID",
         "バーコード"
       ],
-      "history_news_query": "(\"Asterisk Inc\" OR RFID barcode Japan)"
+      "history_news_query": "(\"Asterisk Inc\" OR AsReader OR AsCode OR \"RFID barcode\" OR \"stock 6522\")",
+      "news_required_any": [
+        "株式会社アスタリスク",
+        "AsReader",
+        "RFID",
+        "バーコード",
+        "AsCode",
+        "6522"
+      ],
+      "news_exclude_terms": [
+        "学戦都市アスタリスク",
+        "アニメ",
+        "ABEMA"
+      ]
     },
     {
       "symbol": "1736.T",
