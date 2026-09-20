@@ -16,6 +16,7 @@ from .recent_news_backtest import fetch_gdelt_range, window_articles, article_pu
 from .sensors import risk_adjust, probability
 from .state import load_state
 from .dashboard import render
+from .research_report import build_report
 
 JST = ZoneInfo("Asia/Tokyo")
 UTC = ZoneInfo("UTC")
@@ -300,6 +301,7 @@ def main():
         if state.get("runs"):
             latest = state["runs"][-1]
             render(load_config(), latest["regime"], latest["results"], state)
+        build_report()
         print("Historical replay backfill already reached the configured five-year boundary.")
         return
 
@@ -325,6 +327,7 @@ def main():
         if state.get("runs"):
             latest = state["runs"][-1]
             render(load_config(), latest["regime"], latest["results"], state)
+        build_report()
 
 
 if __name__ == "__main__":
