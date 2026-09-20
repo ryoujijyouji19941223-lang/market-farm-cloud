@@ -13,7 +13,48 @@ def load_config(path="config.json"):
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
+def _load_challengers(path="data/backtest.json"):
+    p = Path(path)
+    if not p.exists():
+        return {}
+    try:
+        data = json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    out = {}
+    for symbol, row in data.get("assets", {}).items():
+        research = row.get("research", {})
+        candidate = research.get("candidate", {})
+        if research.get("status") != "promising":
+            continue
+        out[symbol] = {
+            "price_coef": candidate.get("price_coef"),
+            "macro_coef": candidate.get("macro_coef"),
+            "edge": candidate.get("edge"),
+            "heldout_accuracy": candidate.get("untouched", {}).get("accuracy"),
+            "heldout_signals": candidate.get("untouched", {}).get("signals"),
+        }
+    return out
+
+
+def _challenger_signal(symbol, p, macro, challengers):
+    ch = challengers.get(symbol)
+    if not ch:
+        return None
+    raw = ch["price_coef"] * p["price_score"] + ch["macro_coef"] * macro
+    raw = risk_adjust(raw, p["volatility"])
+    prob = probability(raw)
+    edge = ch["edge"]
+    direction = "UP" if prob >= 0.5 + edge else ("DOWN" if prob <= 0.5 - edge else "FLAT")
+    return {
+        "probability_up": prob,
+        "direction": direction,
+        **ch,
+    }
+
+
 def analyze(cfg):
+    challengers = _load_challengers()
     proxies = {}
     for key, sym in cfg["market_proxies"].items():
         try:
@@ -40,19 +81,21 @@ def analyze(cfg):
                 action = "RISK_OFF"
             else:
                 action = "HOLD"
+            challenger = _challenger_signal(asset["symbol"], p, macro, challengers)
             results.append({**asset, **p, "news_score": nscore, "macro_score": macro, "score": combined,
-                            "probability_up": prob, "action": action, "news": news[:5]})
+                            "probability_up": prob, "action": action, "news": news[:5],
+                            "challenger": challenger})
         except Exception as e:
             results.append({**asset, "error": str(e), "probability_up": 0.5, "action":"NO_DATA"})
     return regime, results
 
 
-def settle_previous(state, results):
+def _settle_prediction_bucket(state, results, prediction_key, score_key):
     current = {
         r["symbol"]: {"price": r.get("price"), "market_date": r.get("market_date")}
         for r in results if r.get("price") is not None
     }
-    for day, preds in list(state.get("predictions", {}).items()):
+    for day, preds in list(state.get(prediction_key, {}).items()):
         for pred in preds:
             if pred.get("settled") or pred["symbol"] not in current:
                 continue
@@ -72,9 +115,14 @@ def settle_previous(state, results):
             pred["actual_price"] = now
             pred["correct"] = actual == pred["direction"]
             pred["settled"] = True
-            s = state["scores"].setdefault(pred["symbol"], {"correct":0, "total":0})
+            s = state[score_key].setdefault(pred["symbol"], {"correct":0, "total":0})
             s["total"] += 1
             s["correct"] += int(pred["correct"])
+
+
+def settle_previous(state, results):
+    _settle_prediction_bucket(state, results, "predictions", "scores")
+    _settle_prediction_bucket(state, results, "challenger_predictions", "challenger_scores")
 
 
 def save_run(session, cfg, regime, results, state_path="data/state.json"):
@@ -89,6 +137,7 @@ def save_run(session, cfg, regime, results, state_path="data/state.json"):
     if session == "morning":
         key = now.date().isoformat()
         state["predictions"][key] = []
+        state["challenger_predictions"][key] = []
         for r in results:
             if r.get("price") is None:
                 continue
@@ -98,5 +147,15 @@ def save_run(session, cfg, regime, results, state_path="data/state.json"):
                                                "probability_up":p, "reference_price":r["price"],
                                                "reference_market_date": r.get("market_date"),
                                                "settled":False})
+            ch = r.get("challenger")
+            if ch:
+                state["challenger_predictions"][key].append({
+                    "symbol": r["symbol"], "name": r["name"],
+                    "direction": ch["direction"],
+                    "probability_up": ch["probability_up"],
+                    "reference_price": r["price"],
+                    "reference_market_date": r.get("market_date"),
+                    "settled": False
+                })
     save_state(state, state_path)
     return state
