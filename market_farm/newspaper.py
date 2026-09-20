@@ -1,9 +1,10 @@
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import datetime, timezone
 from html import escape
 from pathlib import Path
 from zoneinfo import ZoneInfo
+from email.utils import parsedate_to_datetime
 
 
 def pct(x):
@@ -111,11 +112,14 @@ def next_watch(r):
     return ["新しい材料が出たか", "価格の流れが変わったか", "外からの風が変わったか"]
 
 
-def likely_story(r):
+def likely_story(r, causal_news):
     parts = []
     day = r.get("day_change", 0.0)
     price = r.get("price_score", 0.0)
-    news = r.get("news_score", 0.0)
+    news = 0.0
+    if causal_news:
+        from .news import sentiment
+        news = sentiment([{"title": x.get("title",""), "link": x.get("link","")} for x in causal_news])
     macro = r.get("macro_score", 0.0)
 
     if abs(day) >= .01:
@@ -124,7 +128,7 @@ def likely_story(r):
         parts.append(f"前の取引日から {pct(day)} で、値動きは比較的小さい")
 
     if abs(news) >= .04:
-        parts.append(f"銘柄ニュースは「{force(news)}」側")
+        parts.append(f"値動きより前に確認できた関連ニュースは「{force(news)}」側")
     if abs(macro) >= .04:
         parts.append(f"外部環境は「{force(macro)}」側")
     if abs(price) >= .04:
@@ -133,10 +137,55 @@ def likely_story(r):
     return "。".join(parts) + "。"
 
 
-def news_items(r):
-    items = r.get("news", [])[:3]
+def _strict_terms(r):
+    mapping = {
+        "7974.T": ["任天堂", "nintendo"],
+        "8316.T": ["三井住友", "smfg", "sumitomo mitsui"],
+        "285A.T": ["キオクシア", "kioxia"],
+        "8136.T": ["サンリオ", "sanrio", "hello kitty"],
+        "5401.T": ["日本製鉄", "nippon steel", "us steel"],
+        "6522.T": ["アスタリスク", "asterisk"],
+        "1736.T": ["オーテック", "otec"],
+        "3656.T": ["klab"],
+    }
+    return mapping.get(r.get("symbol"), [])
+
+
+def _published_date(item):
+    raw = item.get("published_at", "")
+    if not raw:
+        return None
+    try:
+        return parsedate_to_datetime(raw).astimezone(timezone.utc).date()
+    except Exception:
+        return None
+
+
+def relevant_news(r, before_market_close=False):
+    items = r.get("news", [])
+    terms = _strict_terms(r)
+    market_date = None
+    try:
+        market_date = datetime.fromisoformat(str(r.get("market_date"))).date()
+    except Exception:
+        pass
+
+    filtered = []
+    for item in items:
+        title = item.get("title", "").lower()
+        if terms and not any(term.lower() in title for term in terms):
+            continue
+        if before_market_close and market_date is not None:
+            pub = _published_date(item)
+            if pub is not None and pub > market_date:
+                continue
+        filtered.append(item)
+    return filtered[:3]
+
+
+def news_items(items, empty_text):
     if not items:
-        return "<p class='muted'>目立つニュース見出しを取得できませんでした。</p>"
+        return f"<p class='muted'>{escape(empty_text)}</p>"
     out = []
     for item in items:
         title = escape(item.get("title", ""))
@@ -170,16 +219,20 @@ def render_newspaper(cfg, regime, results, out="docs/newspaper.html"):
     for r in movers:
         a, label = arrow(r.get("probability_up", .5))
         watches = "".join(f"<li>{escape(x)}</li>" for x in next_watch(r))
+        causal_news = relevant_news(r, before_market_close=True)
+        latest_news = relevant_news(r, before_market_close=False)
         stories.append(f"""
 <article class='story'>
   <div class='story-head'>
     <div><h3>{escape(r['name'])}</h3><small>最新価格日 {escape(str(r.get('market_date','-')))}</small></div>
     <div class='move'>{pct(r.get('day_change',0.0))}</div>
   </div>
-  <p><b>何が起きた？</b><br>{escape(likely_story(r))}</p>
-  <p><b>ニュース材料候補</b></p>
-  {news_items(r)}
-  <p class='caution'>※ニュースと値動きが同時に起きても、それだけで「このニュースが原因」とは断定しません。市場で材料になった可能性として扱います。</p>
+  <p><b>何が起きた？</b><br>{escape(likely_story(r, causal_news))}</p>
+  <p><b>値動きより前に出ていた関連ニュース</b></p>
+  {news_items(causal_news, "株価が動く前の関連見出しを十分に確認できませんでした。無理に原因を決めません。")}
+  <p class='caution'>※ここに記事があっても、それだけで値動きの原因とは断定しません。原因候補として扱います。</p>
+  <p><b>今朝までの新しい関連ニュース</b></p>
+  {news_items(latest_news, "銘柄名と直接結びつく新しい見出しは見つかりませんでした。")}
   <div class='prediction'><b>市場農場の今の見方：</b> {a} {escape(label)}</div>
   <p><b>次に何を見ればいい？</b></p>
   <ul>{watches}</ul>
