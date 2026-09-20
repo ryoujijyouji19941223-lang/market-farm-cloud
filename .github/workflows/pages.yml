@@ -2,7 +2,7 @@ name: Deploy dashboard
 
 on:
   workflow_run:
-    workflows: ["Market Farm", "Historical Backtest", "Recent News Time Machine"]
+    workflows: ["Market Farm", "Historical Backtest", "Recent News Time Machine", "Historical Replay Backfill"]
     types: [completed]
   push:
     branches: [main]
