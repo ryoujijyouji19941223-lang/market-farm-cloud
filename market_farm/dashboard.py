@@ -94,6 +94,16 @@ def historical_cell(window):
     return f"正解 {window['accuracy']*100:.0f}% / {window.get('signals',0)}回"
 
 
+def direction_jp(value):
+    return {"UP": "↑ 上", "DOWN": "↓ 下", "FLAT": "→ 横ばい"}.get(value, "-")
+
+
+def recent_score_cell(score):
+    if not score or score.get("accuracy") is None:
+        return "まだ判定なし"
+    return f"正解 {score['accuracy']*100:.0f}% / {score.get('signals',0)}回"
+
+
 def outside_sources(symbol, kind):
     if symbol == "USDJPY=X":
         return "米10年金利・ドル指数・原油"
@@ -121,6 +131,14 @@ def render(cfg, regime, results, state, out="docs/index.html"):
             backtest = json.loads(backtest_path.read_text(encoding="utf-8"))
         except Exception:
             backtest = {}
+
+    recent = {}
+    recent_path = Path("data/recent_news_backtest.json")
+    if recent_path.exists():
+        try:
+            recent = json.loads(recent_path.read_text(encoding="utf-8"))
+        except Exception:
+            recent = {}
 
     equity_date = latest_date(results, {"equity"}, backtest)
     fx_date = latest_date(results, {"fx"}, backtest)
@@ -225,6 +243,51 @@ def render(cfg, regime, results, state, out="docs/index.html"):
             f"<td>{escape(h.get('available_start','-'))}〜{escape(h.get('available_end','-'))}</td></tr>"
         )
 
+    recent_rows = []
+    recent_audits = []
+    for asset in cfg.get("assets", []):
+        rr = recent.get("assets", {}).get(asset["symbol"], {})
+        with_news = rr.get("with_news", {})
+        without_news = rr.get("without_news", {})
+        aw = with_news.get("accuracy")
+        ab = without_news.get("accuracy")
+        if aw is not None and ab is not None:
+            delta = aw - ab
+            delta_text = f"{delta*100:+.0f}ポイント"
+        else:
+            delta_text = "-"
+        recent_rows.append(
+            f"<tr><td>{escape(asset['name'])}</td>"
+            f"<td>{escape(recent_score_cell(without_news))}</td>"
+            f"<td>{escape(recent_score_cell(with_news))}</td>"
+            f"<td>{escape(delta_text)}</td>"
+            f"<td>{rr.get('archive_articles',0)}件</td></tr>"
+        )
+
+        rows = rr.get("rows", [])
+        sample_rows = []
+        for item in rows[-5:]:
+            mark = "○" if item.get("news_correct") else "×"
+            sample_rows.append(
+                f"<tr><td>{escape(item.get('target_date','-'))}</td>"
+                f"<td>{escape(item.get('information_cutoff_jst','-')[:19].replace('T',' '))}</td>"
+                f"<td>{escape(item.get('price_data_through','-'))}</td>"
+                f"<td>{item.get('asset_news_count',0)}件</td>"
+                f"<td>{escape(direction_jp(item.get('news_direction')))}</td>"
+                f"<td>{escape(direction_jp(item.get('actual_direction')))}</td>"
+                f"<td>{mark}</td></tr>"
+            )
+        if sample_rows:
+            recent_audits.append(
+                f"<details><summary>{escape(asset['name'])}：実際の締切を確認</summary>"
+                f"<div style='overflow:auto'><table><thead><tr><th>予測する日</th><th>情報の締切</th>"
+                f"<th>価格はここまで</th><th>使ったニュース</th><th>予測</th><th>実際</th><th>結果</th></tr></thead>"
+                f"<tbody>{''.join(sample_rows)}</tbody></table></div></details>"
+            )
+
+    recent_overall = recent.get("overall", {})
+    recent_generated = recent.get("generated_at", "-")
+
     body = f"""<!doctype html>
 <html lang='ja'>
 <head>
@@ -241,7 +304,7 @@ h1{{margin:0}}h2{{margin:0 0 10px}}h3{{margin:0}}
 .hero .purpose{{font-size:1.25rem;font-weight:800;margin:8px 0}}
 .remember{{background:#f7f8f9;border-radius:12px;padding:14px;margin-top:12px}}
 .remember b{{display:block;font-size:1.05rem}}
-.auto{{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}}
+.auto{{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}}
 .auto>div,.mini,.weather,.reasons>div,.dates>div{{background:#f7f8f9;border-radius:12px;padding:12px}}
 .small,.muted,small{{color:#60666c}}
 .focuses{{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}}
@@ -295,9 +358,10 @@ details{{margin-top:8px}}summary{{cursor:pointer;font-weight:700}}
   <div><b>平日 朝8:07ごろ</b><small>値段とニュースを自動取得して、その日の向きを予想。</small></div>
   <div><b>平日 夜20:07ごろ</b><small>もう一度取得して、朝の予想の答え合わせ。</small></div>
   <div><b>日曜 朝9:37ごろ</b><small>最大5年の過去データで、この予測法を再テスト。</small></div>
+  <div><b>日曜 朝10:17ごろ</b><small>直近約1か月を、当時のニュースまで使ってタイムマシン検証。</small></div>
   <div><b>そのあと</b><small>GitHub Pagesを自動更新。スマホはこのページを見るだけ。</small></div>
 </div>
-<p class='muted'>値段は yfinance、ニュース見出しは Google News RSS を使っています。GitHub側の混雑で実行時刻が遅れたり、データ取得先の障害で欠けることはあります。秒単位の売買用ではありません。</p>
+<p class='muted'>日々の値段は yfinance、日々のニュース見出しは Google News RSS。直近約1か月の過去ニュース検証は GDELT のニュースアーカイブを使います。GitHub側の混雑や取得先の障害で欠けることはあります。秒単位の売買用ではありません。</p>
 </section>
 
 <section class='card'>
@@ -346,8 +410,24 @@ details{{margin-top:8px}}summary{{cursor:pointer;font-weight:700}}
 </section>
 
 <section class='card'>
+<h2>⑤ 未来を見てない？ 直近約1か月の「タイムマシン畑」</h2>
+<p><b>ここは君が今気にしていた所を、そのまま確認する場所です。</b></p>
+<div class='remember'>
+<b>例：8月20日を予測するなら</b>
+価格は8月19日まで。ニュースも<b>8月19日23:59:59（日本時間）までに確認できた記事だけ</b>。8月20日の値段は、予測を作る時には使わず、最後の答え合わせだけに使います。
+</div>
+<p>「ニュースなし」と「当時のニュースあり」を同じ期間で並べて、<b>ニュースを足して本当に良くなったか</b>を比べます。</p>
+<div style='overflow:auto'><table>
+<thead><tr><th>対象</th><th>ニュースなし</th><th>当時ニュースあり</th><th>差</th><th>取得した記事</th></tr></thead>
+<tbody>{''.join(recent_rows)}</tbody>
+</table></div>
+<p class='muted'>今のニュース判定は見出しの単純な言葉判定なので、良くなるとは限りません。世界ニュースも同じ締切で保存していますが、まだ予測点数には入れず「あとで効くか試す材料」として残しています。更新: {escape(str(recent_generated))}</p>
+{''.join(recent_audits) if recent_audits else "<p>初回のタイムマシン検証を準備中です。</p>"}
+</section>
+
+<section class='card'>
 <h2>いま何を育てているの？</h2>
-<p>今はまだ「価格」「ニュース見出し」「世界の市場データ」だけの小さな農場です。これから、中央銀行、大口投資家の動き、ETFへのお金の出入り、SNSの急増などを<b>別々のセンサー</b>として追加し、過去5年で本当に成績が良くなるか比べます。</p>
+<p>今は「価格」「ニュース見出し」「世界の市場データ」の小さな農場です。5年の広い検証に加えて、直近約1か月はニュースも当時の締切で再現します。これから、中央銀行、大口投資家の動き、ETFへのお金の出入り、SNSの急増などを<b>別々のセンサー</b>として追加し、何を足した時だけ本当に成績が良くなるか比べます。</p>
 <p><b>情報を増やすこと自体が目的ではありません。</b> 入れたセンサーが役に立たなければ捨てます。最終目的は「世界の動きを理解しやすく分解して、自分で理由を考えられるようにすること」です。</p>
 </section>
 
