@@ -6,6 +6,8 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from .data_source import fetch_history
+
 CARDS_DIR = Path("data/cards")
 INDEX_PATH = Path("data/cards_index.json")
 
@@ -168,12 +170,15 @@ def _review(card: dict, actual: str, change: float):
 
 
 def settle_live_cards(results: list[dict], now: datetime | None = None):
-    current = {
-        r["symbol"]: r
-        for r in results
+    # results tells us which symbols are still active/available. The actual
+    # outcome is taken from daily history so a missed GitHub run cannot turn
+    # a next-trading-day forecast into a two-days-later forecast.
+    active_symbols = {
+        r["symbol"] for r in results
         if r.get("price") is not None
     }
     settled = []
+    history_cache = {}
 
     if not CARDS_DIR.exists():
         return settled
@@ -182,32 +187,58 @@ def settle_live_cards(results: list[dict], now: datetime | None = None):
         card = _load_json(path, {})
         if not card or card.get("status") != "OPEN":
             continue
-        r = current.get(card.get("symbol"))
-        if not r:
+
+        symbol = card.get("symbol")
+        if symbol not in active_symbols:
             continue
 
-        old_market_date = card.get("market_data_through")
-        new_market_date = r.get("market_date")
-        if old_market_date and new_market_date and new_market_date <= old_market_date:
+        ref_market_date = card.get("market_data_through")
+        ref_price = card.get("reference_price")
+        if not ref_market_date or not ref_price:
             continue
 
-        ref = card.get("reference_price")
-        now_price = r.get("price")
-        if not ref or now_price is None:
+        try:
+            if symbol not in history_cache:
+                history_cache[symbol] = fetch_history(symbol, "3mo")
+            df = history_cache[symbol]
+        except Exception:
+            # Safer to leave a card open than to score it with the wrong day.
             continue
 
-        change = float(now_price) / float(ref) - 1.0
+        ref_day = datetime.fromisoformat(str(ref_market_date)).date()
+        candidates = []
+        for idx in df.index:
+            try:
+                day = idx.date()
+            except Exception:
+                day = datetime.fromisoformat(str(idx)).date()
+            if day > ref_day:
+                candidates.append((day, idx))
+
+        if not candidates:
+            continue
+
+        # The first actually traded market date after the frozen reference.
+        target_day, target_idx = min(candidates, key=lambda x: x[0])
+        try:
+            target_price = float(df.loc[target_idx, "Close"])
+        except Exception:
+            continue
+
+        change = target_price / float(ref_price) - 1.0
         actual = "UP" if change > 0.002 else ("DOWN" if change < -0.002 else "FLAT")
         correct = actual == card.get("prediction", {}).get("direction")
 
         card["status"] = "SETTLED"
         card["outcome"] = {
-            "market_date": new_market_date,
-            "price": float(now_price),
+            "market_date": target_day.isoformat(),
+            "price": target_price,
             "change": change,
             "direction": actual,
             "correct": bool(correct),
             "settled_at_jst": (now or datetime.now().astimezone()).isoformat(),
+            "target_policy": "FIRST_TRADED_MARKET_DATE_AFTER_REFERENCE",
+            "price_source": "yfinance daily adjusted close",
         }
         card["review"] = _review(card, actual, change)
         _save_json(path, card)
@@ -215,7 +246,6 @@ def settle_live_cards(results: list[dict], now: datetime | None = None):
 
     _refresh_index()
     return settled
-
 
 def _refresh_index():
     rows = []
