@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T21:02:42.706930+00:00",
+  "generated_at": "2026-09-20T21:26:43.842868+00:00",
   "model": "historical base model: price + market proxies; no historical news",
   "method": "walk-forward next-trading-day test using only data available up to each day",
   "assets": {
@@ -205,36 +205,36 @@
       "name": "スイスフラン円",
       "kind": "fx",
       "available_start": "2021-10-18",
-      "available_end": "2026-09-17",
-      "usable_days": 1279,
+      "available_end": "2026-09-18",
+      "usable_days": 1280,
       "windows": {
         "1y": {
           "days": 260,
-          "signals": 42,
+          "signals": 43,
           "correct": 8,
-          "accuracy": 0.19047619047619047,
-          "signal_rate": 0.16153846153846155
+          "accuracy": 0.18604651162790697,
+          "signal_rate": 0.16538461538461538
         },
         "3y": {
           "days": 779,
-          "signals": 191,
+          "signals": 192,
           "correct": 56,
-          "accuracy": 0.2931937172774869,
-          "signal_rate": 0.24518613607188702
+          "accuracy": 0.2916666666666667,
+          "signal_rate": 0.24646983311938384
         },
         "5y": {
-          "days": 1279,
-          "signals": 367,
+          "days": 1280,
+          "signals": 368,
           "correct": 120,
-          "accuracy": 0.32697547683923706,
-          "signal_rate": 0.2869429241594996
+          "accuracy": 0.32608695652173914,
+          "signal_rate": 0.2875
         }
       },
       "diagnostics": {
         "all_signals": {
-          "signals": 367,
+          "signals": 368,
           "correct": 120,
-          "accuracy": 0.32697547683923706
+          "accuracy": 0.32608695652173914
         },
         "up_calls": {
           "signals": 256,
@@ -242,9 +242,9 @@
           "accuracy": 0.328125
         },
         "down_calls": {
-          "signals": 111,
+          "signals": 112,
           "correct": 36,
-          "accuracy": 0.32432432432432434
+          "accuracy": 0.32142857142857145
         },
         "strong_calls": {
           "signals": 21,
@@ -252,14 +252,14 @@
           "accuracy": 0.3333333333333333
         },
         "mild_calls": {
-          "signals": 346,
+          "signals": 347,
           "correct": 113,
-          "accuracy": 0.3265895953757225
+          "accuracy": 0.3256484149855908
         },
         "price_macro_agree": {
-          "signals": 187,
+          "signals": 188,
           "correct": 53,
-          "accuracy": 0.28342245989304815
+          "accuracy": 0.28191489361702127
         },
         "price_macro_disagree": {
           "signals": 180,
@@ -277,9 +277,9 @@
           "accuracy": 0.3446153846153846
         },
         "baseline_untouched": {
-          "signals": 42,
+          "signals": 43,
           "correct": 8,
-          "accuracy": 0.19047619047619047
+          "accuracy": 0.18604651162790697
         },
         "candidate": {
           "price_coef": -0.5,
@@ -288,14 +288,14 @@
           "development": {
             "signals": 153,
             "accuracy": 0.43137254901960786,
-            "signal_rate": 0.1495601173020528
+            "signal_rate": 0.1494140625
           },
           "untouched": {
             "signals": 29,
-            "accuracy": 0.3103448275862069,
+            "accuracy": 0.27586206896551724,
             "signal_rate": 0.11328125
           },
-          "untouched_improvement": 0.11986863711001644
+          "untouched_improvement": 0.08981555733761026
         },
         "note": "Candidate chosen on older 80%; newest 20% remained untouched until final check."
       }
