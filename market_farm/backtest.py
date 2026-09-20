@@ -64,6 +64,114 @@ def evaluate_window(frame, start_date):
     }
 
 
+def slice_accuracy(x):
+    x = x.dropna(subset=["pred", "actual"])
+    x = x[x["pred"] != "FLAT"]
+    n = int(len(x))
+    correct = int((x["pred"] == x["actual"]).sum()) if n else 0
+    return {"signals": n, "correct": correct, "accuracy": (correct / n) if n else None}
+
+
+def diagnostics(frame):
+    x = frame.dropna(subset=["prob", "actual"]).copy()
+    x["correct_flag"] = x["pred"] == x["actual"]
+    x["confidence"] = (x["prob"] - 0.5).abs()
+    x["factor_agree"] = (
+        (np.sign(x["price_score"]) == np.sign(x["macro"])) &
+        (x["price_score"].abs() >= 0.04) &
+        (x["macro"].abs() >= 0.02)
+    )
+    signals = x[x["pred"] != "FLAT"]
+    return {
+        "all_signals": slice_accuracy(signals),
+        "up_calls": slice_accuracy(signals[signals["pred"] == "UP"]),
+        "down_calls": slice_accuracy(signals[signals["pred"] == "DOWN"]),
+        "strong_calls": slice_accuracy(signals[signals["confidence"] >= 0.12]),
+        "mild_calls": slice_accuracy(signals[(signals["confidence"] >= 0.05) & (signals["confidence"] < 0.12)]),
+        "price_macro_agree": slice_accuracy(signals[signals["factor_agree"]]),
+        "price_macro_disagree": slice_accuracy(signals[~signals["factor_agree"]]),
+    }
+
+
+def candidate_probability(frame, price_coef, macro_coef, edge):
+    raw = price_coef * frame["price_score"] + macro_coef * frame["macro"]
+    penalty = ((frame["vol"] - 0.25).clip(lower=0.0, upper=1.0)) * 0.35
+    raw = raw * (1.0 - penalty)
+    prob = 1.0 / (1.0 + np.exp(-2.2 * raw))
+    pred = np.where(prob >= 0.5 + edge, "UP",
+           np.where(prob <= 0.5 - edge, "DOWN", "FLAT"))
+    return prob, pred
+
+
+def score_candidate(frame, price_coef, macro_coef, edge):
+    prob, pred = candidate_probability(frame, price_coef, macro_coef, edge)
+    x = frame.copy()
+    x["cand_prob"] = prob
+    x["cand_pred"] = pred
+    signals = x[x["cand_pred"] != "FLAT"].dropna(subset=["actual"])
+    n = int(len(signals))
+    accuracy = float((signals["cand_pred"] == signals["actual"]).mean()) if n else None
+    rate = n / len(x) if len(x) else 0.0
+    return {"signals": n, "accuracy": accuracy, "signal_rate": rate}
+
+
+def research_candidate(frame):
+    x = frame.dropna(subset=["price_score", "macro", "vol", "actual"]).copy()
+    if len(x) < 150:
+        return {"status": "not_enough_data"}
+
+    cut = max(1, int(len(x) * 0.80))
+    development = x.iloc[:cut]
+    untouched = x.iloc[cut:]
+
+    baseline_dev = slice_accuracy(development.assign(pred=development["pred"]))
+    baseline_test = slice_accuracy(untouched.assign(pred=untouched["pred"]))
+
+    candidates = []
+    for price_coef in (-1.0, -0.5, 0.0, 0.5, 1.0):
+        for macro_coef in (-1.0, -0.5, 0.0, 0.5, 1.0):
+            if price_coef == 0.0 and macro_coef == 0.0:
+                continue
+            for edge in (0.05, 0.08, 0.12):
+                dev = score_candidate(development, price_coef, macro_coef, edge)
+                if dev["signals"] < max(40, int(len(development) * 0.15)):
+                    continue
+                candidates.append((dev["accuracy"] or 0.0, dev["signals"], price_coef, macro_coef, edge, dev))
+
+    if not candidates:
+        return {"status": "no_candidate"}
+
+    # Pick using only the older 80%. Newest 20% is never used to choose the rule.
+    candidates.sort(key=lambda row: (row[0], row[1]), reverse=True)
+    _, _, price_coef, macro_coef, edge, best_dev = candidates[0]
+    best_test = score_candidate(untouched, price_coef, macro_coef, edge)
+
+    base_acc = baseline_test.get("accuracy")
+    cand_acc = best_test.get("accuracy")
+    improvement = None if base_acc is None or cand_acc is None else cand_acc - base_acc
+    promising = bool(
+        improvement is not None and improvement >= 0.03 and
+        best_test.get("signals", 0) >= 25
+    )
+
+    return {
+        "status": "promising" if promising else "keep_current",
+        "development_fraction": 0.80,
+        "untouched_fraction": 0.20,
+        "baseline_development": baseline_dev,
+        "baseline_untouched": baseline_test,
+        "candidate": {
+            "price_coef": price_coef,
+            "macro_coef": macro_coef,
+            "edge": edge,
+            "development": best_dev,
+            "untouched": best_test,
+            "untouched_improvement": improvement,
+        },
+        "note": "Candidate chosen on older 80%; newest 20% remained untouched until final check.",
+    }
+
+
 def run_backtest():
     cfg = load_config()
     period = "5y"
@@ -126,6 +234,8 @@ def run_backtest():
                 "available_end": str(usable.index[-1].date()),
                 "usable_days": int(len(usable)),
                 "windows": windows,
+                "diagnostics": diagnostics(usable),
+                "research": research_candidate(usable),
             }
         except Exception as e:
             assets_out[asset["symbol"]] = {
