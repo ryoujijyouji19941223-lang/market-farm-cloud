@@ -14,6 +14,8 @@ from .engine import load_config
 from .news import sentiment
 from .recent_news_backtest import fetch_gdelt_range, window_articles, article_public
 from .sensors import risk_adjust, probability
+from .state import load_state
+from .dashboard import render
 
 JST = ZoneInfo("Asia/Tokyo")
 UTC = ZoneInfo("UTC")
@@ -294,6 +296,10 @@ def main():
 
     if next_month < oldest:
         update_index(progress)
+        state = load_state("data/state.json")
+        if state.get("runs"):
+            latest = state["runs"][-1]
+            render(load_config(), latest["regime"], latest["results"], state)
         print("Historical replay backfill already reached the configured five-year boundary.")
         return
 
@@ -315,6 +321,10 @@ def main():
     finally:
         save_progress(progress)
         update_index(progress)
+        state = load_state("data/state.json")
+        if state.get("runs"):
+            latest = state["runs"][-1]
+            render(load_config(), latest["regime"], latest["results"], state)
 
 
 if __name__ == "__main__":
