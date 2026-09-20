@@ -49,3 +49,23 @@ def test_prediction_card_freezes_and_settles_only_on_new_market_date(tmp_path, m
     assert settled[0]["outcome"]["direction"] == "UP"
     assert settled[0]["outcome"]["correct"] is True
     assert settled[0]["review"]["result_type"] == "一致"
+
+
+def test_prediction_card_is_not_overwritten_by_same_day_rerun(tmp_path, monkeypatch):
+    monkeypatch.setattr(ledger, "CARDS_DIR", tmp_path / "cards")
+    monkeypatch.setattr(ledger, "INDEX_PATH", tmp_path / "cards_index.json")
+
+    cfg = {"timezone": "Asia/Tokyo", "model_version": "test-v1"}
+    regime = {"risk_off": 0.0, "oil_pressure": 0.0, "japan_risk": 0.0, "usd_rate_pressure": 0.0}
+    first = datetime(2026, 9, 21, 8, 7, tzinfo=ZoneInfo("Asia/Tokyo"))
+    later = datetime(2026, 9, 21, 11, 30, tzinfo=ZoneInfo("Asia/Tokyo"))
+
+    first_cards = ledger.create_live_cards(cfg, regime, [sample_result(price=100.0)], now=first)
+    rerun_cards = ledger.create_live_cards(cfg, regime, [sample_result(price=110.0)], now=later)
+
+    assert first_cards[0]["reference_price"] == 100.0
+    assert rerun_cards[0]["reference_price"] == 100.0
+
+    saved = ledger._load_json(ledger._card_path("2026-09-21", "TEST"), {})
+    assert saved["reference_price"] == 100.0
+    assert saved["created_at_jst"] == first.isoformat()
