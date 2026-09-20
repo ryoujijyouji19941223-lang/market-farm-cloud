@@ -13,7 +13,11 @@ def google_news_rss(query: str, limit: int = 8):
     r = requests.get(url, timeout=12, headers={"User-Agent":"Mozilla/5.0"})
     r.raise_for_status()
     feed = feedparser.parse(r.text)
-    return [{"title": e.get("title", ""), "link": e.get("link", "")} for e in feed.entries[:limit]]
+    return [{
+        "title": e.get("title", ""),
+        "link": e.get("link", ""),
+        "published_at": e.get("published", "") or e.get("updated", ""),
+    } for e in feed.entries[:limit]]
 
 
 def sentiment(items):
