@@ -8,6 +8,14 @@ def pct(a, b):
     return (a / b - 1.0) if b else 0.0
 
 
+def _market_date(df: pd.DataFrame) -> str:
+    idx = df.index[-1]
+    try:
+        return idx.date().isoformat()
+    except Exception:
+        return str(idx)[:10]
+
+
 def price_sensor(df: pd.DataFrame) -> dict:
     close = df["Close"].astype(float)
     price = float(close.iloc[-1])
@@ -20,6 +28,7 @@ def price_sensor(df: pd.DataFrame) -> dict:
     raw = 4.0 * mom5 + 8.0 * trend
     return {
         "price": price,
+        "market_date": _market_date(df),
         "day_change": day,
         "momentum5": mom5,
         "trend": trend,
