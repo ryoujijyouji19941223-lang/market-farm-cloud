@@ -151,33 +151,50 @@ def _strict_terms(r):
     return mapping.get(r.get("symbol"), [])
 
 
-def _published_date(item):
+def _published_jst(item):
     raw = item.get("published_at", "")
     if not raw:
         return None
     try:
-        return parsedate_to_datetime(raw).astimezone(timezone.utc).date()
+        return parsedate_to_datetime(raw).astimezone(ZoneInfo("Asia/Tokyo"))
     except Exception:
         return None
+
+
+def _move_cutoff_jst(r):
+    try:
+        market_day = datetime.fromisoformat(str(r.get("market_date"))).date()
+    except Exception:
+        return None
+    # Tokyo equities have a well-defined cash-market close. For FX/gold the
+    # Yahoo daily bar boundary is less suitable for causal claims, so use only
+    # the end of the displayed market date and keep the wording cautious.
+    if r.get("kind") == "equity":
+        return datetime.combine(
+            market_day,
+            datetime.strptime("15:30", "%H:%M").time(),
+            tzinfo=ZoneInfo("Asia/Tokyo"),
+        )
+    return datetime.combine(
+        market_day,
+        datetime.strptime("23:59:59", "%H:%M:%S").time(),
+        tzinfo=ZoneInfo("Asia/Tokyo"),
+    )
 
 
 def relevant_news(r, before_market_close=False):
     items = r.get("news", [])
     terms = _strict_terms(r)
-    market_date = None
-    try:
-        market_date = datetime.fromisoformat(str(r.get("market_date"))).date()
-    except Exception:
-        pass
+    cutoff = _move_cutoff_jst(r)
 
     filtered = []
     for item in items:
         title = item.get("title", "").lower()
         if terms and not any(term.lower() in title for term in terms):
             continue
-        if before_market_close and market_date is not None:
-            pub = _published_date(item)
-            if pub is not None and pub > market_date:
+        if before_market_close and cutoff is not None:
+            pub = _published_jst(item)
+            if pub is not None and pub > cutoff:
                 continue
         filtered.append(item)
     return filtered[:3]
@@ -220,7 +237,12 @@ def render_newspaper(cfg, regime, results, out="docs/newspaper.html"):
         a, label = arrow(r.get("probability_up", .5))
         watches = "".join(f"<li>{escape(x)}</li>" for x in next_watch(r))
         causal_news = relevant_news(r, before_market_close=True)
-        latest_news = relevant_news(r, before_market_close=False)
+        all_recent_news = relevant_news(r, before_market_close=False)
+        causal_keys = {(x.get("link"), x.get("title")) for x in causal_news}
+        latest_news = [
+            x for x in all_recent_news
+            if (x.get("link"), x.get("title")) not in causal_keys
+        ][:3]
         stories.append(f"""
 <article class='story'>
   <div class='story-head'>
@@ -228,10 +250,10 @@ def render_newspaper(cfg, regime, results, out="docs/newspaper.html"):
     <div class='move'>{pct(r.get('day_change',0.0))}</div>
   </div>
   <p><b>何が起きた？</b><br>{escape(likely_story(r, causal_news))}</p>
-  <p><b>値動きより前に出ていた関連ニュース</b></p>
-  {news_items(causal_news, "株価が動く前の関連見出しを十分に確認できませんでした。無理に原因を決めません。")}
-  <p class='caution'>※ここに記事があっても、それだけで値動きの原因とは断定しません。原因候補として扱います。</p>
-  <p><b>今朝までの新しい関連ニュース</b></p>
+  <p><b>前回の値動きを考える材料候補</b></p>
+  {news_items(causal_news, "値動きより前に確認できる関連見出しが不足しています。無理に原因を決めません。")}
+  <p class='caution'>※日本株は原則その日の15:30までの記事を材料候補にします。為替・金は日足の区切りが市場ごとに曖昧なので、より慎重に「候補」として扱います。記事があっても因果関係の証明にはなりません。</p>
+  <p><b>前回の材料候補とは別の、新しい関連ニュース</b></p>
   {news_items(latest_news, "銘柄名と直接結びつく新しい見出しは見つかりませんでした。")}
   <div class='prediction'><b>市場農場の今の見方：</b> {a} {escape(label)}</div>
   <p><b>次に何を見ればいい？</b></p>
