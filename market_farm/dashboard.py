@@ -140,6 +140,24 @@ def render(cfg, regime, results, state, out="docs/index.html"):
         except Exception:
             recent = {}
 
+    replay_index = {}
+    replay_index_path = Path("data/replay_index.json")
+    if replay_index_path.exists():
+        try:
+            replay_index = json.loads(replay_index_path.read_text(encoding="utf-8"))
+        except Exception:
+            replay_index = {}
+
+    replay_latest = {}
+    completed_months = replay_index.get("completed_months", [])
+    if completed_months:
+        replay_path = Path("data/replay") / f"{completed_months[0]}.json"
+        if replay_path.exists():
+            try:
+                replay_latest = json.loads(replay_path.read_text(encoding="utf-8"))
+            except Exception:
+                replay_latest = {}
+
     equity_date = latest_date(results, {"equity"}, backtest)
     fx_date = latest_date(results, {"fx"}, backtest)
     gold_date = latest_date(results, {"commodity"}, backtest)
@@ -288,6 +306,34 @@ def render(cfg, regime, results, state, out="docs/index.html"):
     recent_overall = recent.get("overall", {})
     recent_generated = recent.get("generated_at", "-")
 
+    replay_examples = []
+    for asset in cfg.get("assets", [])[:4]:
+        rr = replay_latest.get("assets", {}).get(asset["symbol"], {})
+        rows = rr.get("snapshots", [])
+        if not rows:
+            continue
+        item = rows[-1]
+        h1 = item.get("horizons", {}).get("next_day") or {}
+        h2 = item.get("horizons", {}).get("two_days") or {}
+        hm = item.get("horizons", {}).get("one_month") or {}
+        replay_examples.append(
+            f"<tr><td>{escape(asset['name'])}</td>"
+            f"<td>{escape(item.get('as_of_date','-'))}</td>"
+            f"<td>{escape(item.get('information_cutoff_jst','-')[:19].replace('T',' '))}</td>"
+            f"<td>{item.get('asset_news_count_72h',0)}件</td>"
+            f"<td>{escape(direction_jp(item.get('prediction_direction')))}</td>"
+            f"<td>{escape(direction_jp(h1.get('direction')))}</td>"
+            f"<td>{escape(direction_jp(h2.get('direction')))}</td>"
+            f"<td>{escape(direction_jp(hm.get('direction')))}</td></tr>"
+        )
+
+    replay_months = replay_index.get("months_completed", 0)
+    replay_next = replay_index.get("next_month", "-")
+    replay_oldest = replay_index.get("oldest_month", "-")
+    replay_range = "-"
+    if completed_months:
+        replay_range = f"{completed_months[-1]} 〜 {completed_months[0]}"
+
     body = f"""<!doctype html>
 <html lang='ja'>
 <head>
@@ -359,6 +405,7 @@ details{{margin-top:8px}}summary{{cursor:pointer;font-weight:700}}
   <div><b>平日 夜20:07ごろ</b><small>もう一度取得して、朝の予想の答え合わせ。</small></div>
   <div><b>日曜 朝9:37ごろ</b><small>最大5年の過去データで、この予測法を再テスト。</small></div>
   <div><b>日曜 朝10:17ごろ</b><small>直近約1か月を、当時のニュースまで使ってタイムマシン検証。</small></div>
+  <div><b>毎日 朝10:47ごろ</b><small>さらに過去へ1か月ずつ遡り、歴史再現庫を増やす。</small></div>
   <div><b>そのあと</b><small>GitHub Pagesを自動更新。スマホはこのページを見るだけ。</small></div>
 </div>
 <p class='muted'>日々の値段は yfinance、日々のニュース見出しは Google News RSS。直近約1か月の過去ニュース検証は GDELT のニュースアーカイブを使います。GitHub側の混雑や取得先の障害で欠けることはあります。秒単位の売買用ではありません。</p>
@@ -424,6 +471,24 @@ details{{margin-top:8px}}summary{{cursor:pointer;font-weight:700}}
 </table></div>
 <p class='muted'>今のニュース判定は見出しの単純な言葉判定なので、良くなるとは限りません。世界ニュースも同じ締切で保存していますが、まだ予測点数には入れず「あとで効くか試す材料」として残しています。更新: {escape(str(recent_generated))}</p>
 {''.join(recent_audits) if recent_audits else "<p>初回のタイムマシン検証を準備中です。</p>"}
+</section>
+
+<section class='card'>
+<h2>⑥ 過去を1か月ずつ掘る「歴史再現庫」</h2>
+<p><b>これが今追加した、本格的な積み上げ部分です。</b> 毎日1か月ずつ過去へ戻り、その月の各取引日について「その日の23:59までに見えていた価格・市場指標・ニュース」だけを保存します。</p>
+<div class='remember'>
+<b>1日分の記録に残すもの</b>
+その時点の日付 / 情報の締切 / 価格 / 72時間以内のニュース / 世界ニュース / その時の予測 / 翌日・2取引日後・約1か月後の実際。
+</div>
+<div class='dates'>
+  <div><small>掘り終えた月</small><br><b>{replay_months}か月</b></div>
+  <div><small>現在の範囲</small><br><b>{escape(replay_range)}</b></div>
+  <div><small>次に掘る月</small><br><b>{escape(str(replay_next))}</b></div>
+  <div><small>いちばん古い目標</small><br><b>{escape(str(replay_oldest))}</b></div>
+</div>
+<p class='muted'>1日1か月ずつ進めるので、完成した記録はあとから消さずに積み上げます。ニュース取得が上限に当たった月や取得失敗は、その事実も記録します。</p>
+{("<div style='overflow:auto'><table><thead><tr><th>対象</th><th>その時点</th><th>情報締切</th><th>ニュース</th><th>当時の予測</th><th>翌日実際</th><th>2日後実際</th><th>約1か月後実際</th></tr></thead><tbody>" + ''.join(replay_examples) + "</tbody></table></div>") if replay_examples else "<p>最初の1か月分を作成中です。</p>"}
+<p class='note'><b>大事：</b>いまは同じ「その時点の向き」を1日後・2日後・20取引日後で採点しています。十分な月数がたまったら、明日用・2日後用・1か月用を別々の予測器に育てます。先に結果を見てルールを作らないためです。</p>
 </section>
 
 <section class='card'>
