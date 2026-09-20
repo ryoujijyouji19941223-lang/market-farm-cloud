@@ -1,6 +1,8 @@
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
+import pandas as pd
+
 from market_farm import ledger
 
 
@@ -38,14 +40,29 @@ def test_prediction_card_freezes_and_settles_only_on_new_market_date(tmp_path, m
     assert cards[0]["model_version"] == "test-v1"
     assert cards[0]["evidence"]["news"]["headlines"][0]["title"] == "good news"
 
-    # Same market date must not be treated as a new outcome.
+    history = {
+        "df": pd.DataFrame(
+            {"Close": [99.0, 100.0]},
+            index=pd.to_datetime(["2026-09-18", "2026-09-21"]),
+        )
+    }
+    monkeypatch.setattr(ledger, "fetch_history", lambda symbol, period: history["df"])
+
+    # No traded date after the frozen reference yet, so leave it open.
     settled = ledger.settle_live_cards([sample_result(market_date="2026-09-21", price=101.0)])
     assert settled == []
 
-    # A genuinely later market date can settle the card.
-    settled = ledger.settle_live_cards([sample_result(market_date="2026-09-22", price=101.0)])
+    # Even if the system wakes up on Sep 23, the card must use Sep 22,
+    # the first actually traded market date after Sep 21.
+    history["df"] = pd.DataFrame(
+        {"Close": [99.0, 100.0, 101.0, 150.0]},
+        index=pd.to_datetime(["2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23"]),
+    )
+    settled = ledger.settle_live_cards([sample_result(market_date="2026-09-23", price=150.0)])
     assert len(settled) == 1
     assert settled[0]["status"] == "SETTLED"
+    assert settled[0]["outcome"]["market_date"] == "2026-09-22"
+    assert settled[0]["outcome"]["price"] == 101.0
     assert settled[0]["outcome"]["direction"] == "UP"
     assert settled[0]["outcome"]["correct"] is True
     assert settled[0]["review"]["result_type"] == "一致"
