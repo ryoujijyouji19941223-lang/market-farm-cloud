@@ -269,3 +269,15 @@ nav a{{font-weight:700}}
     p = Path(out)
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(html, encoding="utf-8")
+
+
+def main():
+    from .engine import load_config, analyze
+    cfg = load_config()
+    regime, results = analyze(cfg)
+    render_newspaper(cfg, regime, results)
+    print("newspaper generated")
+
+
+if __name__ == "__main__":
+    main()
