@@ -6,6 +6,8 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 from email.utils import parsedate_to_datetime
 
+from .news import is_relevant_item
+
 
 def pct(x):
     try:
@@ -184,15 +186,12 @@ def _move_cutoff_jst(r):
 
 def relevant_news(r, before_market_close=False):
     items = r.get("news", [])
-    terms = _strict_terms(r)
     cutoff = _move_cutoff_jst(r)
 
     filtered = []
     for item in items:
-        title = item.get("title", "").lower()
-        if r.get("symbol") == "6522.T" and any(x in title for x in ["学戦都市アスタリスク", "アニメ", "abema"]):
-            continue
-        if terms and not any(term.lower() in title for term in terms):
+        ok, _reason = is_relevant_item(r, item)
+        if not ok:
             continue
         if before_market_close and cutoff is not None:
             pub = _published_jst(item)
@@ -201,7 +200,6 @@ def relevant_news(r, before_market_close=False):
         filtered.append(item)
     return filtered[:3]
 
-
 def news_items(items, empty_text):
     if not items:
         return f"<p class='muted'>{escape(empty_text)}</p>"
@@ -209,10 +207,14 @@ def news_items(items, empty_text):
     for item in items:
         title = escape(item.get("title", ""))
         link = escape(item.get("link", ""))
+        source = escape(item.get("source", ""))
+        reason = item.get("relevance_reason", "")
+        badge = "公式/一次ソース" if reason == "trusted_source" else ("会社名確認済み" if reason == "identity_match" else "")
+        tail = f" <small>［{source}{'・' if source and badge else ''}{badge}］</small>" if source or badge else ""
         if link:
-            out.append(f"<li><a href='{link}' target='_blank' rel='noopener'>{title}</a></li>")
+            out.append(f"<li><a href='{link}' target='_blank' rel='noopener'>{title}</a>{tail}</li>")
         else:
-            out.append(f"<li>{title}</li>")
+            out.append(f"<li>{title}{tail}</li>")
     return "<ul>" + "".join(out) + "</ul>"
 
 
