@@ -1,0 +1,55 @@
+name: Morning Newspaper
+
+on:
+  schedule:
+    # 08:25 JST every day
+    - cron: '25 23 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'market_farm/newspaper.py'
+      - 'market_farm/news.py'
+      - 'market_farm/data_source.py'
+      - 'market_farm/sensors.py'
+      - 'config.json'
+      - '.github/workflows/newspaper.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-farm-newspaper
+  cancel-in-progress: true
+
+env:
+  PYTHONPATH: ${{ github.workspace }}
+
+jobs:
+  newspaper:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Generate morning newspaper
+        run: python -m market_farm.newspaper
+      - name: Save newspaper
+        shell: bash
+        run: |
+          git config user.name "market-farm-bot"
+          git config user.email "market-farm-bot@users.noreply.github.com"
+          git add docs/newspaper.html
+          if git diff --cached --quiet; then
+            echo "No newspaper changes to save"
+            exit 0
+          fi
+          git commit -m "market farm: morning newspaper $(date -u +%F)"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
