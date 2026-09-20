@@ -306,7 +306,7 @@ nav a{{font-weight:700}}
 <section class='paper'>
 <p class='lead'>今日ここだけ読む：世界の空気 → 大きく動いたもの → 次に見る条件</p>
 <p>研究用の数字はできるだけ隠しています。<b>「何が起きた？」「なぜかもしれない？」「次に何を見ればいい？」</b>の順で読めばOKです。</p>
-<nav><a href='./index.html'>研究用の市場農場を見る</a></nav>
+<nav><a href='./index.html'>研究用の市場農場を見る</a><a href='./research.html'>予測器の弱点を見る</a></nav>
 </section>
 
 <section class='paper'>
