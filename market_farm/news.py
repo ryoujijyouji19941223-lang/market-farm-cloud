@@ -38,6 +38,11 @@ def sentiment(items):
     return max(-1.0, min(1.0, score / max(4, len(items))))
 
 
+def _story_key(title: str):
+    title = re.sub(r"\s+-\s+[^-]+$", "", title or "")
+    return re.sub(r"\s+", " ", title).strip().lower()
+
+
 def fetch_asset_news(asset: dict):
     query = asset.get("news_query") or " OR ".join(asset.get("keywords", [])[:4])
     if not query:
@@ -45,10 +50,19 @@ def fetch_asset_news(asset: dict):
     items = google_news_rss(query)
 
     filtered = []
+    seen = set()
+    noise = ["掲示板", "株価・株式情報", "時系列", "チャート"]
     for item in items:
+        title = item.get("title", "")
+        if asset.get("kind") == "equity" and any(x in title for x in noise):
+            continue
         ok, reason = is_relevant_item(asset, item)
         if not ok:
             continue
+        key = _story_key(title)
+        if key in seen:
+            continue
+        seen.add(key)
         item = dict(item)
         item["relevance_reason"] = reason
         filtered.append(item)
