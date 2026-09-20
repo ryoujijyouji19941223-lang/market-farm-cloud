@@ -61,21 +61,43 @@
       "keywords": [
         "任天堂",
         "Nintendo",
-        "Switch"
+        "Nintendo Switch 2"
       ],
-      "history_news_query": "(Nintendo OR \"Nintendo Switch\")"
+      "history_news_query": "(Nintendo OR \"Nintendo Switch\")",
+      "news_query": "(\"任天堂\" OR \"Nintendo\")",
+      "news_required_any": [
+        "任天堂",
+        "Nintendo",
+        "7974",
+        "Nintendo Switch 2"
+      ],
+      "news_trusted_sources": [
+        "nintendo.co.jp",
+        "nintendo.com"
+      ],
+      "news_exclude_terms": []
     },
     {
       "symbol": "8316.T",
       "name": "三井住友FG",
       "kind": "equity",
       "keywords": [
-        "三井住友",
+        "三井住友FG",
         "SMFG",
-        "日銀",
-        "金利"
+        "SMBCグループ"
       ],
-      "history_news_query": "(\"Sumitomo Mitsui\" OR SMFG)"
+      "history_news_query": "(\"Sumitomo Mitsui\" OR SMFG)",
+      "news_query": "(\"三井住友フィナンシャルグループ\" OR \"SMFG\" OR \"SMBCグループ\")",
+      "news_required_any": [
+        "三井住友フィナンシャルグループ",
+        "SMFG",
+        "SMBCグループ",
+        "8316"
+      ],
+      "news_trusted_sources": [
+        "smfg.co.jp"
+      ],
+      "news_exclude_terms": []
     },
     {
       "symbol": "285A.T",
@@ -83,11 +105,21 @@
       "kind": "equity",
       "keywords": [
         "キオクシア",
-        "NAND",
-        "SSD",
-        "AIデータセンター"
+        "Kioxia",
+        "285A"
       ],
-      "history_news_query": "(Kioxia OR NAND OR SSD)"
+      "history_news_query": "(Kioxia OR NAND OR SSD)",
+      "news_query": "(\"キオクシア\" OR \"Kioxia\" OR \"285A\")",
+      "news_required_any": [
+        "キオクシア",
+        "Kioxia",
+        "285A"
+      ],
+      "news_trusted_sources": [
+        "kioxia-holdings.com",
+        "kioxia.com"
+      ],
+      "news_exclude_terms": []
     },
     {
       "symbol": "8136.T",
@@ -95,10 +127,23 @@
       "kind": "equity",
       "keywords": [
         "サンリオ",
-        "ハローキティ",
-        "IP"
+        "Sanrio",
+        "8136"
       ],
-      "history_news_query": "(Sanrio OR \"Hello Kitty\")"
+      "history_news_query": "(Sanrio OR \"Hello Kitty\")",
+      "news_query": "(\"サンリオ\" OR \"Sanrio\" OR \"8136\")",
+      "news_required_any": [
+        "サンリオ",
+        "Sanrio",
+        "8136"
+      ],
+      "news_trusted_sources": [
+        "corporate.sanrio.co.jp",
+        "sanrio.co.jp"
+      ],
+      "news_exclude_terms": [
+        "サンリオ掲示板"
+      ]
     },
     {
       "symbol": "5401.T",
@@ -106,10 +151,23 @@
       "kind": "equity",
       "keywords": [
         "日本製鉄",
-        "US Steel",
-        "鉄鋼"
+        "Nippon Steel",
+        "US Steel"
       ],
-      "history_news_query": "(\"Nippon Steel\" OR \"US Steel\")"
+      "history_news_query": "(\"Nippon Steel\" OR \"US Steel\")",
+      "news_query": "(\"日本製鉄\" OR \"Nippon Steel\" OR \"U.S. Steel\" OR \"US Steel\")",
+      "news_required_any": [
+        "日本製鉄",
+        "Nippon Steel",
+        "U.S. Steel",
+        "US Steel",
+        "5401"
+      ],
+      "news_trusted_sources": [
+        "nipponsteel.com",
+        "ussteel.com"
+      ],
+      "news_exclude_terms": []
     },
     {
       "symbol": "6522.T",
@@ -125,8 +183,6 @@
       "news_required_any": [
         "株式会社アスタリスク",
         "AsReader",
-        "RFID",
-        "バーコード",
         "AsCode",
         "6522"
       ],
@@ -134,6 +190,11 @@
         "学戦都市アスタリスク",
         "アニメ",
         "ABEMA"
+      ],
+      "news_query": "(\"株式会社アスタリスク\" OR \"AsReader\" OR \"AsCode\" OR \"6522\")",
+      "news_trusted_sources": [
+        "asx.co.jp",
+        "asreader.jp"
       ]
     },
     {
@@ -141,10 +202,29 @@
       "name": "オーテック",
       "kind": "equity",
       "keywords": [
-        "オーテック",
-        "設備工事"
+        "オーテック 1736",
+        "空調自動制御",
+        "管工機材"
       ],
-      "history_news_query": "(\"Otec Corporation\" OR オーテック)"
+      "history_news_query": "(\"Otec Corporation\" OR オーテック)",
+      "news_query": "(\"オーテック\" 1736 OR \"オーテック\" \"空調自動制御\" OR \"オーテック\" \"管工機材\")",
+      "news_required_any": [
+        "1736",
+        "オーテック---",
+        "オーテック[1736]",
+        "オーテック（1736）",
+        "オーテック<1736>"
+      ],
+      "news_trusted_sources": [
+        "o-tec.co.jp"
+      ],
+      "news_exclude_terms": [
+        "自動車部品のオーテック",
+        "e-autec",
+        "有限会社オーテック",
+        "ootech.co.jp",
+        "otech.jp"
+      ]
     },
     {
       "symbol": "3656.T",
@@ -152,10 +232,21 @@
       "kind": "equity",
       "keywords": [
         "KLab",
-        "ゲーム",
-        "新作"
+        "KLab株式会社",
+        "KLab HOMMA"
       ],
-      "history_news_query": "(KLab OR \"KLab Inc\")"
+      "history_news_query": "(KLab OR \"KLab Inc\")",
+      "news_query": "(\"KLab\" OR \"KLab株式会社\" OR \"3656\" OR \"KLab HOMMA\")",
+      "news_required_any": [
+        "KLab",
+        "KLab株式会社",
+        "3656",
+        "KLab HOMMA"
+      ],
+      "news_trusted_sources": [
+        "klab.com"
+      ],
+      "news_exclude_terms": []
     }
   ],
   "market_proxies": {
