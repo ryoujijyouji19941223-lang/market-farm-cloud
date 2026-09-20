@@ -2,17 +2,9 @@ name: Market Farm
 
 on:
   schedule:
-    # GitHub cron uses UTC. These correspond to 08:07 and 20:07 JST, Mon-Fri.
+    # UTC: 08:07 and 20:07 JST, Mon-Fri.
     - cron: '7 23 * * 0-4'
     - cron: '7 11 * * 1-5'
-  push:
-    branches: [main]
-    paths:
-      - 'market_farm/**'
-      - 'config.json'
-      - 'requirements.txt'
-      - 'tests/**'
-      - '.github/workflows/market-farm.yml'
   workflow_dispatch:
     inputs:
       session:
@@ -55,8 +47,6 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "value=${{ inputs.session }}" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event_name }}" = "push" ]; then
-            echo "value=morning" >> "$GITHUB_OUTPUT"
           elif [ "${{ github.event.schedule }}" = "7 23 * * 0-4" ]; then
             echo "value=morning" >> "$GITHUB_OUTPUT"
           else
