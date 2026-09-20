@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T19:37:43.016978+00:00",
+  "generated_at": "2026-09-20T20:37:10.332147+00:00",
   "window_days": 35,
   "cutoff_rule": "For target date D, use market data through the prior trading day and news seen by 23:59:59 JST on calendar day D-1.",
   "anti_leakage": {
@@ -11,9 +11,9 @@
   "news_model": "Headline keyword sentiment, experimental. World-news headlines are archived for audit but not yet added to the score.",
   "world_news": {
     "query": "(\"Federal Reserve\" OR \"Bank of Japan\" OR inflation OR employment OR recession OR tariff OR war OR sanctions)",
-    "archive_articles": 0,
-    "capped_chunks": 0,
-    "error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22Federal+Reserve%22+OR+%22Bank+of+Japan%22+OR+inflation+OR+employment+OR+recession+OR+tariff+OR+war+OR+sanctions%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000"
+    "archive_articles": 250,
+    "capped_chunks": 1,
+    "error": null
   },
   "overall": {
     "without_news": {
@@ -31,9 +31,9 @@
     "USDJPY=X": {
       "name": "ドル円",
       "query": "(yen OR USDJPY OR \"Bank of Japan\" OR \"Federal Reserve\")",
-      "archive_articles": 250,
-      "capped_chunks": 1,
-      "news_error": null,
+      "archive_articles": 0,
+      "capped_chunks": 0,
+      "news_error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28yen+OR+USDJPY+OR+%22Bank+of+Japan%22+OR+%22Federal+Reserve%22%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000",
       "rows": [
         {
           "symbol": "USDJPY=X",
@@ -648,9 +648,9 @@
     "EURJPY=X": {
       "name": "ユーロ円",
       "query": "(euro OR EURJPY OR ECB OR \"Bank of Japan\")",
-      "archive_articles": 0,
-      "capped_chunks": 0,
-      "news_error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28euro+OR+EURJPY+OR+ECB+OR+%22Bank+of+Japan%22%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000",
+      "archive_articles": 250,
+      "capped_chunks": 1,
+      "news_error": null,
       "rows": [
         {
           "symbol": "EURJPY=X",
@@ -1246,7 +1246,7 @@
           "news_probability_up": 0.44502849401121986,
           "news_direction": "DOWN",
           "actual_direction": "UP",
-          "actual_change": 0.0035659302856285713,
+          "actual_change": 0.003956515371358105,
           "baseline_correct": false,
           "news_correct": false
         }
@@ -1265,9 +1265,9 @@
     "CHFJPY=X": {
       "name": "スイスフラン円",
       "query": "(\"Swiss franc\" OR CHFJPY OR SNB OR \"Bank of Japan\")",
-      "archive_articles": 0,
-      "capped_chunks": 0,
-      "news_error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22Swiss+franc%22+OR+CHFJPY+OR+SNB+OR+%22Bank+of+Japan%22%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000",
+      "archive_articles": 250,
+      "capped_chunks": 1,
+      "news_error": null,
       "rows": [
         {
           "symbol": "CHFJPY=X",
@@ -1859,9 +1859,9 @@
     "GC=F": {
       "name": "金",
       "query": "(gold OR \"gold price\" OR bullion)",
-      "archive_articles": 250,
-      "capped_chunks": 1,
-      "news_error": null,
+      "archive_articles": 0,
+      "capped_chunks": 0,
+      "news_error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28gold+OR+%22gold+price%22+OR+bullion%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000",
       "rows": [
         {
           "symbol": "GC=F",
@@ -2430,9 +2430,9 @@
     "7974.T": {
       "name": "任天堂",
       "query": "(Nintendo OR \"Nintendo Switch\")",
-      "archive_articles": 250,
-      "capped_chunks": 1,
-      "news_error": null,
+      "archive_articles": 0,
+      "capped_chunks": 0,
+      "news_error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28Nintendo+OR+%22Nintendo+Switch%22%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000",
       "rows": [
         {
           "symbol": "7974.T",
@@ -3024,9 +3024,9 @@
     "8316.T": {
       "name": "三井住友FG",
       "query": "(\"Sumitomo Mitsui\" OR SMFG)",
-      "archive_articles": 223,
+      "archive_articles": 0,
       "capped_chunks": 0,
-      "news_error": null,
+      "news_error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22Sumitomo+Mitsui%22+OR+SMFG%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000",
       "rows": [
         {
           "symbol": "8316.T",
@@ -3035,28 +3035,9 @@
           "information_cutoff_jst": "2026-08-16T23:59:59+09:00",
           "price_data_through": "2026-08-14",
           "news_lookback_hours": 72,
-          "asset_news_count": 58,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Every fusion startup that has raised over $100M",
-              "url": "https://techcrunch.com/2026/08/15/every-fusion-startup-that-has-raised-over-100m/",
-              "domain": "techcrunch.com",
-              "seen_jst": "2026-08-15T23:00:00+09:00"
-            },
-            {
-              "title": "Analysts Set Protagonist Therapeutics , Inc . ( NASDAQ : PTGX ) Target Price at $137 . 86",
-              "url": "https://www.tickerreport.com/banking-finance/13545095/analysts-set-protagonist-therapeutics-inc-nasdaqptgx-target-price-at-137-86.html",
-              "domain": "tickerreport.com",
-              "seen_jst": "2026-08-16T15:15:00+09:00"
-            },
-            {
-              "title": "RWQ Financial Management Services Inc . Buys 31 , 510 Shares of AbbVie Inc . $ABBV",
-              "url": "https://www.dailypolitical.com/2026/08/16/rwq-financial-management-services-inc-buys-31510-shares-of-abbvie-inc-abbv.html",
-              "domain": "dailypolitical.com",
-              "seen_jst": "2026-08-16T18:45:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.07789865702076736,
           "macro_score": 0.02907937248307597,
@@ -3077,28 +3058,9 @@
           "information_cutoff_jst": "2026-08-17T23:59:59+09:00",
           "price_data_through": "2026-08-17",
           "news_lookback_hours": 72,
-          "asset_news_count": 17,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "日企財會管理轉型論壇登場 龜甲萬等分享進化實務",
-              "url": "https://n.yam.com/Article/20260817433394",
-              "domain": "n.yam.com",
-              "seen_jst": "2026-08-17T16:15:00+09:00"
-            },
-            {
-              "title": "India bonds sink on RBI early close of FX swap facility",
-              "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-sink-on-rbis-early-close-of-fx-swap-facility/articleshow/133296451.cms",
-              "domain": "economictimes.indiatimes.com",
-              "seen_jst": "2026-08-17T21:45:00+09:00"
-            },
-            {
-              "title": "Barings Private Credit Prices $350 Million of 6 . 5 % Notes Due 2031 : ",
-              "url": "https://hedgeco.net/news/08/2026/barings-private-credit-prices-350-million-of-6-5-notes-due-2031.html",
-              "domain": "hedgeco.net",
-              "seen_jst": "2026-08-17T22:00:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.085365516364945,
           "macro_score": 0.010845004776732949,
@@ -3119,28 +3081,9 @@
           "information_cutoff_jst": "2026-08-18T23:59:59+09:00",
           "price_data_through": "2026-08-18",
           "news_lookback_hours": 72,
-          "asset_news_count": 12,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Japanese Market Notably Lower",
-              "url": "https://www.rttnews.com/story.aspx?Id=3681268",
-              "domain": "rttnews.com",
-              "seen_jst": "2026-08-18T13:30:00+09:00"
-            },
-            {
-              "title": "Asian Markets Track Wall Street Lower",
-              "url": "https://www.finanznachrichten.de/nachrichten-2026-08/69335983-asian-markets-track-wall-street-lower-020.htm",
-              "domain": "finanznachrichten.de",
-              "seen_jst": "2026-08-18T14:15:00+09:00"
-            },
-            {
-              "title": "Japanese bond sell - off ignites as bets surge on BOJ rate hike | The Asahi Shimbun : Breaking News , Japan News and Analysis",
-              "url": "https://www.asahi.com/ajw/articles/16815306",
-              "domain": "asahi.com",
-              "seen_jst": "2026-08-18T17:00:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.21799506556908654,
           "macro_score": -0.02496439676376358,
@@ -3161,28 +3104,9 @@
           "information_cutoff_jst": "2026-08-19T23:59:59+09:00",
           "price_data_through": "2026-08-19",
           "news_lookback_hours": 72,
-          "asset_news_count": 17,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Japanese Market Sharply Lower",
-              "url": "https://www.rttnews.com/story.aspx?Id=3681719",
-              "domain": "rttnews.com",
-              "seen_jst": "2026-08-19T12:45:00+09:00"
-            },
-            {
-              "title": "Asian Markets Track Wall Street Lower",
-              "url": "https://www.finanzen.ch/nachrichten/aktien/asian-markets-track-wall-street-lower-1036472546",
-              "domain": "finanzen.ch",
-              "seen_jst": "2026-08-19T13:15:00+09:00"
-            },
-            {
-              "title": "Infratil shareholders appoint controversial Australian director , raise fears about overbuilding data centres",
-              "url": "https://www.nzherald.co.nz/business/infratil-shareholders-appoint-controversial-australian-director-raise-fears-about-overbuilding-data-centres/premium/JQERV3CRVNC57H4JHQ6QX2MJPU/",
-              "domain": "nzherald.co.nz",
-              "seen_jst": "2026-08-19T15:30:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": -0.15427176682951071,
           "macro_score": -0.016628741539150234,
@@ -3203,28 +3127,9 @@
           "information_cutoff_jst": "2026-08-20T23:59:59+09:00",
           "price_data_through": "2026-08-20",
           "news_lookback_hours": 72,
-          "asset_news_count": 21,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Piper Sandler Cuts Ardelyx ( NASDAQ : ARDX ) Price Target to $15 . 00",
-              "url": "https://www.dailypolitical.com/2026/08/19/piper-sandler-cuts-ardelyx-nasdaqardx-price-target-to-15-00.html",
-              "domain": "dailypolitical.com",
-              "seen_jst": "2026-08-20T15:30:00+09:00"
-            },
-            {
-              "title": "看好台灣 ！ 外銀在台資產突破4兆2千億 創下4年同期新高 ！ | 財經 | 三立新聞網 SETN . COM",
-              "url": "https://www.setn.com/news/1892750",
-              "domain": "setn.com",
-              "seen_jst": "2026-08-20T19:15:00+09:00"
-            },
-            {
-              "title": "外銀在台分行 「 資產 」、「 淨值 」 雙雙寫下歷年同期新高",
-              "url": "https://ec.ltn.com.tw/article/breakingnews/5546939",
-              "domain": "ec.ltn.com.tw",
-              "seen_jst": "2026-08-20T22:45:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": -0.2894626646119135,
           "macro_score": -0.06684502759573921,
@@ -3245,28 +3150,9 @@
           "information_cutoff_jst": "2026-08-23T23:59:59+09:00",
           "price_data_through": "2026-08-21",
           "news_lookback_hours": 72,
-          "asset_news_count": 12,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "10 Major Solar Projects Advance in 2026 with GW - Scale Capacity , Battery Storage and $695 Million Financing",
-              "url": "https://greentechlead.com/solar/10-major-solar-projects-advance-in-2026-with-gw-scale-capacity-battery-storage-and-695-million-financing-54860",
-              "domain": "greentechlead.com",
-              "seen_jst": "2026-08-22T04:45:00+09:00"
-            },
-            {
-              "title": "28家外銀資產 、 淨值創高 上半年獲利近15年最佳｜卡優新聞網",
-              "url": "https://www.cardu.com.tw/news/detail.php?64940",
-              "domain": "cardu.com.tw",
-              "seen_jst": "2026-08-22T05:30:00+09:00"
-            },
-            {
-              "title": "Heartland Advisors Inc . Takes Position in LXP Industrial Trust $LXP",
-              "url": "https://www.themarketsdaily.com/2026/08/22/heartland-advisors-inc-takes-position-in-lxp-industrial-trust-lxp.html",
-              "domain": "themarketsdaily.com",
-              "seen_jst": "2026-08-22T17:45:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": -0.306054850564915,
           "macro_score": -0.04410100215716831,
@@ -3287,28 +3173,9 @@
           "information_cutoff_jst": "2026-08-24T23:59:59+09:00",
           "price_data_through": "2026-08-24",
           "news_lookback_hours": 72,
-          "asset_news_count": 6,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Japanese Market Modestly Lower",
-              "url": "https://www.finanznachrichten.de/nachrichten-2026-08/69384148-japanese-market-modestly-lower-020.htm",
-              "domain": "finanznachrichten.de",
-              "seen_jst": "2026-08-24T15:00:00+09:00"
-            },
-            {
-              "title": "Asian Markets Trade Mostly Lower",
-              "url": "https://www.finanznachrichten.de/nachrichten-2026-08/69384386-asian-markets-trade-mostly-lower-020.htm",
-              "domain": "finanznachrichten.de",
-              "seen_jst": "2026-08-24T15:00:00+09:00"
-            },
-            {
-              "title": "Cibc World Market Inc . Purchases New Holdings in Equinix , Inc . $EQIX",
-              "url": "https://www.dailypolitical.com/2026/08/24/cibc-world-market-inc-purchases-new-holdings-in-equinix-inc-eqix.html",
-              "domain": "dailypolitical.com",
-              "seen_jst": "2026-08-24T18:30:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": -0.32698407188328743,
           "macro_score": -0.03161720675440424,
@@ -3329,28 +3196,9 @@
           "information_cutoff_jst": "2026-08-25T23:59:59+09:00",
           "price_data_through": "2026-08-25",
           "news_lookback_hours": 72,
-          "asset_news_count": 6,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "SoftBank Retail Bond : Banks Rejected It , Now Japanese Savers Are Being Asked to Buy It",
-              "url": "https://www.techtimes.com/articles/325294/20260824/softbank-retail-bond-banks-rejected-it-now-japanese-savers-are-being-asked-buy-it.htm",
-              "domain": "techtimes.com",
-              "seen_jst": "2026-08-25T04:15:00+09:00"
-            },
-            {
-              "title": "Asian Markets Trade Mostly Lower",
-              "url": "https://www.finanznachrichten.de/nachrichten-2026-08/69395270-asian-markets-trade-mostly-lower-020.htm",
-              "domain": "finanznachrichten.de",
-              "seen_jst": "2026-08-25T13:30:00+09:00"
-            },
-            {
-              "title": "Futures Bounce As Brent Drops Under $90 On Renewed Iran Optimism",
-              "url": "https://www.zerohedge.com/markets/futures-bounce-brent-drops-under-90-renewed-iran-optimism",
-              "domain": "zerohedge.com",
-              "seen_jst": "2026-08-25T22:30:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": -0.32377803006187805,
           "macro_score": 0.015155179379954547,
@@ -3371,35 +3219,16 @@
           "information_cutoff_jst": "2026-08-26T23:59:59+09:00",
           "price_data_through": "2026-08-26",
           "news_lookback_hours": 72,
-          "asset_news_count": 18,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "India - Japan bilateral trade can reach $50 billion by 2030 : ASSOCHAM",
-              "url": "https://www.prokerala.com/news/articles/a1804962.html",
-              "domain": "prokerala.com",
-              "seen_jst": "2026-08-26T20:30:00+09:00"
-            },
-            {
-              "title": "Piyush Goyal highlights India startup growth during Japan visit as count nears to  250000 :  Great companies arent … ",
-              "url": "https://www.livemint.com/news/india/piyush-goyal-highlights-indias-startup-growth-during-japan-visit-as-count-nears-to-250000-great-companies-arent-11787735301610.html",
-              "domain": "livemint.com",
-              "seen_jst": "2026-08-26T20:30:00+09:00"
-            },
-            {
-              "title": "BNP Paribas , KB Kookmin in talks for $2 billion Vietnam Techcombank stake , sources say",
-              "url": "https://news.tuoitre.vn/bnp-paribas-kb-kookmin-in-talks-for-2-billion-vietnam-techcombank-stake-sources-say-103260826170135942.htm",
-              "domain": "news.tuoitre.vn",
-              "seen_jst": "2026-08-26T20:30:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": -0.030480615540116787,
           "macro_score": -0.01509429274217233,
-          "news_score": 0.16666666666666666,
+          "news_score": 0.0,
           "baseline_probability_up": 0.485181497955367,
           "baseline_direction": "FLAT",
-          "news_probability_up": 0.5028587866602761,
+          "news_probability_up": 0.4876995226953883,
           "news_direction": "FLAT",
           "actual_direction": "UP",
           "actual_change": 0.009209744503862138,
@@ -3413,35 +3242,16 @@
           "information_cutoff_jst": "2026-08-27T23:59:59+09:00",
           "price_data_through": "2026-08-27",
           "news_lookback_hours": 72,
-          "asset_news_count": 24,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": " 《 日股 》 日經指數開高走低 記憶體受青睞 鎧俠逆勢大漲逾6 % - 財經",
-              "url": "https://www.chinatimes.com/realtimenews/20260827002416-260410",
-              "domain": "chinatimes.com",
-              "seen_jst": "2026-08-27T14:45:00+09:00"
-            },
-            {
-              "title": "تباين أداء المؤشرات اليابانية وسط ترقب مسارات الفائدة الأمريكية",
-              "url": "https://www.albayan.ae/economy/business/uae-economy/1548427",
-              "domain": "albayan.ae",
-              "seen_jst": "2026-08-27T18:00:00+09:00"
-            },
-            {
-              "title": "Home loan rates start at 7 % in Aug : Check best offers by top lenders",
-              "url": "https://www.business-standard.com/finance/personal-finance/home-loan-rates-start-at-7-in-aug-check-best-offers-by-top-lenders-126082700776_1.html",
-              "domain": "business-standard.com",
-              "seen_jst": "2026-08-27T19:45:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.08474780152856995,
           "macro_score": 0.06372446766456306,
-          "news_score": 0.125,
+          "news_score": 0.0,
           "baseline_probability_up": 0.5431953618392995,
           "baseline_direction": "FLAT",
-          "news_probability_up": 0.5471687417777857,
+          "news_probability_up": 0.5358799655367876,
           "news_direction": "FLAT",
           "actual_direction": "UP",
           "actual_change": 0.01589637915808062,
@@ -3455,28 +3265,9 @@
           "information_cutoff_jst": "2026-08-30T23:59:59+09:00",
           "price_data_through": "2026-08-28",
           "news_lookback_hours": 72,
-          "asset_news_count": 3,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "IREN ( NASDAQ : IREN ) Trading 2 . 4 % Higher – What Next ? ",
-              "url": "https://www.themarketsdaily.com/2026/08/27/iren-nasdaqiren-trading-2-4-higher-whats-next.html",
-              "domain": "themarketsdaily.com",
-              "seen_jst": "2026-08-28T06:45:00+09:00"
-            },
-            {
-              "title": "Japanese Market Notably Higher",
-              "url": "https://www.finanznachrichten.de/nachrichten-2026-08/69431018-japanese-market-notably-higher-020.htm",
-              "domain": "finanznachrichten.de",
-              "seen_jst": "2026-08-28T11:45:00+09:00"
-            },
-            {
-              "title": "टोक्यो ने चीन और दक्षिण - पूर्व एशिया को पीछे छोड़ते हुए भारत में भारी निवेश किया",
-              "url": "https://www.deshbandhu.co.in/articles/overtaking-china-and-southeast-asia-tokyo-has-invested-heavily-in-india-318036",
-              "domain": "deshbandhu.co.in",
-              "seen_jst": "2026-08-29T11:00:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.1674309856931823,
           "macro_score": 0.0311690828616576,
@@ -3497,28 +3288,9 @@
           "information_cutoff_jst": "2026-08-31T23:59:59+09:00",
           "price_data_through": "2026-08-31",
           "news_lookback_hours": 72,
-          "asset_news_count": 6,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Asian Markets Track Wall Street Lower",
-              "url": "https://www.finanznachrichten.de/nachrichten-2026-08/69446638-asian-markets-track-wall-street-lower-020.htm",
-              "domain": "finanznachrichten.de",
-              "seen_jst": "2026-08-31T13:45:00+09:00"
-            },
-            {
-              "title": "Japanese Market Sharply Lower",
-              "url": "https://www.rttnews.com/3686713/japanese-market-sharply-lower.aspx",
-              "domain": "rttnews.com",
-              "seen_jst": "2026-08-31T14:15:00+09:00"
-            },
-            {
-              "title": "Singapore CIX , Carbonplace plan merger as carbon markets seek trust and scale | News | Eco - Business",
-              "url": "https://www.eco-business.com/news/singapores-cix-carbonplace-plan-merger-as-carbon-markets-seek-trust-and-scale/",
-              "domain": "eco-business.com",
-              "seen_jst": "2026-08-31T16:30:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.2936924794663005,
           "macro_score": 0.03894365767317609,
@@ -3539,28 +3311,9 @@
           "information_cutoff_jst": "2026-09-01T23:59:59+09:00",
           "price_data_through": "2026-09-01",
           "news_lookback_hours": 72,
-          "asset_news_count": 11,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Japanese Market Modestly Lower",
-              "url": "https://www.finanznachrichten.de/nachrichten-2026-09/69457015-japanese-market-modestly-lower-020.htm",
-              "domain": "finanznachrichten.de",
-              "seen_jst": "2026-09-01T12:15:00+09:00"
-            },
-            {
-              "title": "Asian Markets Track Wall Street Lower",
-              "url": "https://www.finanzen.ch/nachrichten/aktien/asian-markets-track-wall-street-lower-1036509635",
-              "domain": "finanzen.ch",
-              "seen_jst": "2026-09-01T13:00:00+09:00"
-            },
-            {
-              "title": "JNBA Financial Advisors Acquires 7 , 396 Shares of Flex Ltd . $FLEX",
-              "url": "https://www.themarketsdaily.com/2026/09/01/jnba-financial-advisors-acquires-7396-shares-of-flex-ltd-flex.html",
-              "domain": "themarketsdaily.com",
-              "seen_jst": "2026-09-01T20:00:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.3477934497875639,
           "macro_score": -0.038776736991356454,
@@ -3581,28 +3334,9 @@
           "information_cutoff_jst": "2026-09-02T23:59:59+09:00",
           "price_data_through": "2026-09-02",
           "news_lookback_hours": 72,
-          "asset_news_count": 16,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Japan Inc is betting big on India as China risks deepen - International",
-              "url": "https://www.dailymirror.lk/breaking-news/Japan-Inc-is-betting-big-on-India-as-China-risks-deepen/107-349189",
-              "domain": "dailymirror.lk",
-              "seen_jst": "2026-09-02T13:15:00+09:00"
-            },
-            {
-              "title": "Asian Markets Track Wall Street Lower",
-              "url": "https://www.finanzen.ch/nachrichten/aktien/asian-markets-track-wall-street-lower-1036513718",
-              "domain": "finanzen.ch",
-              "seen_jst": "2026-09-02T13:30:00+09:00"
-            },
-            {
-              "title": "Global Market : Japanese shares tumble as Iran conflict lifts oil prices , bond yields",
-              "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-japanese-shares-tumble-as-iran-conflict-lifts-oil-prices-bond-yields/articleshow/133697674.cms",
-              "domain": "economictimes.indiatimes.com",
-              "seen_jst": "2026-09-02T14:00:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.2978807800407576,
           "macro_score": 4.1402294060937094e-05,
@@ -3623,28 +3357,9 @@
           "information_cutoff_jst": "2026-09-03T23:59:59+09:00",
           "price_data_through": "2026-09-03",
           "news_lookback_hours": 72,
-          "asset_news_count": 17,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": " 《 國際經濟 》 半導體熱潮若退燒 韓國經濟將如何 - 財經",
-              "url": "https://www.chinatimes.com/realtimenews/20260903003401-260410",
-              "domain": "chinatimes.com",
-              "seen_jst": "2026-09-03T18:00:00+09:00"
-            },
-            {
-              "title": "188 , 364 Shares in iShares MSCI Kuwait ETF $KWT Bought by KFG Wealth Management LLC",
-              "url": "https://www.tickerreport.com/banking-finance/13571813/188364-shares-in-ishares-msci-kuwait-etf-kwt-bought-by-kfg-wealth-management-llc.html",
-              "domain": "tickerreport.com",
-              "seen_jst": "2026-09-03T19:45:00+09:00"
-            },
-            {
-              "title": "Head - To - Head Contrast : Barclays ( NYSE : BCS ) & Sumitomo Mitsui Trust ( OTCMKTS : SUTNY ) ",
-              "url": "https://www.tickerreport.com/banking-finance/13571999/head-to-head-contrast-barclays-nysebcs-sumitomo-mitsui-trust-otcmktssutny.html",
-              "domain": "tickerreport.com",
-              "seen_jst": "2026-09-03T21:45:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.36514559813846587,
           "macro_score": 0.00907251115486325,
@@ -3665,28 +3380,9 @@
           "information_cutoff_jst": "2026-09-06T23:59:59+09:00",
           "price_data_through": "2026-09-04",
           "news_lookback_hours": 72,
-          "asset_news_count": 14,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Adgully . com : Latest Advertising , Marketing & Media News",
-              "url": "https://www.adgully.com/date/05-09-2026",
-              "domain": "adgully.com",
-              "seen_jst": "2026-09-05T17:15:00+09:00"
-            },
-            {
-              "title": "Anthropic looks set to tie up $15bn of pre - IPO funding",
-              "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-looks-set-tie-15bn-071200428.html",
-              "domain": "finance.yahoo.com",
-              "seen_jst": "2026-09-05T19:00:00+09:00"
-            },
-            {
-              "title": "E - Seikatsu signs SMBC API deal for rental management cloud",
-              "url": "https://jp.ibtimes.com/e-seikatsu-signs-smbc-api-deal-rental-management-cloud-104165",
-              "domain": "jp.ibtimes.com",
-              "seen_jst": "2026-09-06T03:00:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.32595017647240027,
           "macro_score": -0.004151338916524026,
@@ -3707,28 +3403,9 @@
           "information_cutoff_jst": "2026-09-07T23:59:59+09:00",
           "price_data_through": "2026-09-07",
           "news_lookback_hours": 72,
-          "asset_news_count": 6,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Adgully . com : Latest Advertising , Marketing & Media News",
-              "url": "https://www.adgully.com/date/07-09-2026",
-              "domain": "adgully.com",
-              "seen_jst": "2026-09-07T12:00:00+09:00"
-            },
-            {
-              "title": "Japanese Market Sharply Higher",
-              "url": "https://www.rttnews.com/3688728/japanese-market-sharply-higher.aspx",
-              "domain": "rttnews.com",
-              "seen_jst": "2026-09-07T13:00:00+09:00"
-            },
-            {
-              "title": "Japanese Market Sharply Higher",
-              "url": "https://www.rttnews.com/story.aspx?Id=3688728",
-              "domain": "rttnews.com",
-              "seen_jst": "2026-09-07T15:45:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.21891647292455588,
           "macro_score": -0.016016432875717756,
@@ -3749,28 +3426,9 @@
           "information_cutoff_jst": "2026-09-08T23:59:59+09:00",
           "price_data_through": "2026-09-08",
           "news_lookback_hours": 72,
-          "asset_news_count": 6,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Japanese Market Sharply Higher",
-              "url": "https://www.rttnews.com/story.aspx?Id=3688728",
-              "domain": "rttnews.com",
-              "seen_jst": "2026-09-07T15:45:00+09:00"
-            },
-            {
-              "title": "أداء ضعيف للأسهم الأوروبية مع تصاعد مخاوف التضخم",
-              "url": "https://www.albayan.ae/economy/business/world-economy/1550584",
-              "domain": "albayan.ae",
-              "seen_jst": "2026-09-08T07:45:00+09:00"
-            },
-            {
-              "title": "Asian Markets Trade Mixed",
-              "url": "https://www.finanznachrichten.de/nachrichten-2026-09/69514647-asian-markets-trade-mixed-020.htm",
-              "domain": "finanznachrichten.de",
-              "seen_jst": "2026-09-08T13:30:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.1379732382263057,
           "macro_score": 0.023758542873186243,
@@ -3791,28 +3449,9 @@
           "information_cutoff_jst": "2026-09-09T23:59:59+09:00",
           "price_data_through": "2026-09-09",
           "news_lookback_hours": 72,
-          "asset_news_count": 12,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "iShares MSCI Qatar ETF ( NASDAQ : QAT ) Shares Up 0 . 9 % – What Next ? ",
-              "url": "https://www.tickerreport.com/banking-finance/13577457/ishares-msci-qatar-etf-nasdaqqat-shares-up-0-9-whats-next.html",
-              "domain": "tickerreport.com",
-              "seen_jst": "2026-09-09T14:00:00+09:00"
-            },
-            {
-              "title": "iShares MSCI Qatar ETF ( NASDAQ : QAT ) Trading Up 0 . 9 % – Here Why",
-              "url": "https://www.dailypolitical.com/2026/09/08/ishares-msci-qatar-etf-nasdaqqat-trading-up-0-9-heres-why.html",
-              "domain": "dailypolitical.com",
-              "seen_jst": "2026-09-09T14:00:00+09:00"
-            },
-            {
-              "title": "Adani Group plans $2 . 5 billion refinancing in India biggest offshore loan this year",
-              "url": "https://economictimes.indiatimes.com/industry/indl-goods/svs/cement/adani-group-plans-2-5-billion-refinancing-in-indias-biggest-offshore-loan-this-year-hdfc-bank-sbi-ambuja-cement-acc/articleshow/133961880.cms",
-              "domain": "economictimes.indiatimes.com",
-              "seen_jst": "2026-09-09T18:45:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.05112119835415387,
           "macro_score": -0.05284757078862896,
@@ -3833,28 +3472,9 @@
           "information_cutoff_jst": "2026-09-10T23:59:59+09:00",
           "price_data_through": "2026-09-10",
           "news_lookback_hours": 72,
-          "asset_news_count": 20,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Tap - to - pay rail discount offered for Hojoya visitors",
-              "url": "https://www.fukuoka-now.com/en/news/tap-to-pay-rail-discount-offered-for-hojoya-visitors/",
-              "domain": "fukuoka-now.com",
-              "seen_jst": "2026-09-10T13:45:00+09:00"
-            },
-            {
-              "title": "Inside Drip Capital : How Pushkar Mukewar Built a Global Trade Finance Powerhouse After 160 Investor Meetings and a Covid Reckoning",
-              "url": "https://openthemagazine.com/business/drip-by-drip-how-pushkar-mukewar-built-drip-capital-after-160-investor-meetings-a-moment-of-reckoning",
-              "domain": "openthemagazine.com",
-              "seen_jst": "2026-09-10T15:30:00+09:00"
-            },
-            {
-              "title": "Mint Money app adds bill payments , loans at Global Fintech Fest 2026",
-              "url": "https://www.livemint.com/money/mint-money-app-adds-bill-payments-loans-at-global-fintech-fest-2026-11789041358038.html",
-              "domain": "livemint.com",
-              "seen_jst": "2026-09-10T23:15:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.002734270130560592,
           "macro_score": -0.16,
@@ -3875,28 +3495,9 @@
           "information_cutoff_jst": "2026-09-13T23:59:59+09:00",
           "price_data_through": "2026-09-11",
           "news_lookback_hours": 72,
-          "asset_news_count": 6,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Asian Markets Sink Amid Inflationary Risks",
-              "url": "https://www.finanznachrichten.de/nachrichten-2026-09/69551068-asian-markets-sink-amid-inflationary-risks-020.htm",
-              "domain": "finanznachrichten.de",
-              "seen_jst": "2026-09-11T13:45:00+09:00"
-            },
-            {
-              "title": "US listing could put Japan Kioxia in global AI spotlight ,  Voya Thomas says",
-              "url": "https://www.businesstimes.com.sg/startups-tech/technology/us-listing-could-put-japans-kioxia-global-ai-spotlight-voyas-thomas-says",
-              "domain": "businesstimes.com.sg",
-              "seen_jst": "2026-09-11T18:00:00+09:00"
-            },
-            {
-              "title": "US listing could put Japan Kioxia in global AI spotlight , Voya Thomas says",
-              "url": "https://www.thestar.com.my/tech/tech-news/2026/09/11/us-listing-could-put-japan039s-kioxia-in-global-ai-spotlight-voya039s-thomas-says",
-              "domain": "thestar.com.my",
-              "seen_jst": "2026-09-11T18:00:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": -0.025100880209779942,
           "macro_score": -0.06144870465233957,
@@ -5490,9 +5091,9 @@
     "5401.T": {
       "name": "日本製鉄",
       "query": "(\"Nippon Steel\" OR \"US Steel\")",
-      "archive_articles": 250,
-      "capped_chunks": 1,
-      "news_error": null,
+      "archive_articles": 0,
+      "capped_chunks": 0,
+      "news_error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22Nippon+Steel%22+OR+%22US+Steel%22%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000",
       "rows": [
         {
           "symbol": "5401.T",
@@ -5501,28 +5102,9 @@
           "information_cutoff_jst": "2026-08-16T23:59:59+09:00",
           "price_data_through": "2026-08-14",
           "news_lookback_hours": 72,
-          "asset_news_count": 33,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Звезда « Фабрики » попала под суд : Роскомнадзор требует 32 тысячи за неплатежи по рекламе в соцсетях",
-              "url": "https://runews24.ru/show-business/16/08/2026/zvezda-fabriki-popala-pod-sud-roskomnadzor-trebuet-32-tyisyachi-za-neplatezhi-po-reklame-v-soczsetyax",
-              "domain": "runews24.ru",
-              "seen_jst": "2026-08-16T10:00:00+09:00"
-            },
-            {
-              "title": "Дневник войны , глава 317 . « Ну ты и стерва , Ира ! Придется еще жить !» ",
-              "url": "http://gazetaby.com/post/dnevnik-vojny-glava-317-nu-ty-i-sterva-ira-pridetsya-eshhe-zhit/215847/",
-              "domain": "gazetaby.com",
-              "seen_jst": "2026-08-16T20:30:00+09:00"
-            },
-            {
-              "title": "Мамдани решил осудить антисемитизм - и услышал все , что о нем думают : скандал дошел до Конгресса",
-              "url": "https://www.9tv.co.il/item/259017",
-              "domain": "9tv.co.il",
-              "seen_jst": "2026-08-16T23:15:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.4164803434295878,
           "macro_score": 0.02907937248307597,
@@ -5543,28 +5125,9 @@
           "information_cutoff_jst": "2026-08-17T23:59:59+09:00",
           "price_data_through": "2026-08-17",
           "news_lookback_hours": 72,
-          "asset_news_count": 25,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Australia BlueScope posts profit beat , sees earnings above expectations",
-              "url": "https://www.miningweekly.com/article/australias-bluescope-posts-profit-beat-sees-earnings-above-expectations-2026-08-17",
-              "domain": "miningweekly.com",
-              "seen_jst": "2026-08-17T16:30:00+09:00"
-            },
-            {
-              "title": "Санкции ЕС против РФ Каллас говорит о новом крупном пакете осенью подробности",
-              "url": "https://focus.ua/world/764678-sankcii-es-protiv-rf-kallas-govorit-o-novom-krupnom-pakete-osenyu-podrobnosti",
-              "domain": "focus.ua",
-              "seen_jst": "2026-08-17T17:45:00+09:00"
-            },
-            {
-              "title": "Трамп сокращает учения с Южной Кореей : реакция мировых СМИ",
-              "url": "https://www.kommersant.ru/doc/8891288",
-              "domain": "kommersant.ru",
-              "seen_jst": "2026-08-17T22:15:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.19915601327679222,
           "macro_score": 0.010845004776732949,
@@ -5585,28 +5148,9 @@
           "information_cutoff_jst": "2026-08-18T23:59:59+09:00",
           "price_data_through": "2026-08-18",
           "news_lookback_hours": 72,
-          "asset_news_count": 26,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Steel Rebar Market worth $250 . 38 billion by 2031 - Exclusive Report by MarketsandMarkets",
-              "url": "https://www.finanznachrichten.de/nachrichten-2026-08/69340659-steel-rebar-market-worth-dollar-250-38-billion-by-2031-exclusive-report-by-marketsandmarkets-008.htm",
-              "domain": "finanznachrichten.de",
-              "seen_jst": "2026-08-18T20:15:00+09:00"
-            },
-            {
-              "title": "Латвия выдвинула фильм « Уля » на премию « Оскар » ",
-              "url": "https://www.gorod.lv/novosti/368481-latviya-vydvinula-film-ulya-na-premiu-oskar",
-              "domain": "gorod.lv",
-              "seen_jst": "2026-08-18T22:45:00+09:00"
-            },
-            {
-              "title": "Дональд Трамп опубликовал карту Ормузского пролива как новую территорию США",
-              "url": "http://govoritmoskva.ru/news/502648/",
-              "domain": "govoritmoskva.ru",
-              "seen_jst": "2026-08-18T23:15:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.31442256302578026,
           "macro_score": -0.02496439676376358,
@@ -5627,28 +5171,9 @@
           "information_cutoff_jst": "2026-08-19T23:59:59+09:00",
           "price_data_through": "2026-08-19",
           "news_lookback_hours": 72,
-          "asset_news_count": 48,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Российские банки расширяют QR - платежи : теперь стал доступен и Таиланд",
-              "url": "https://sibnovosti.ru/news/456530/",
-              "domain": "sibnovosti.ru",
-              "seen_jst": "2026-08-19T18:15:00+09:00"
-            },
-            {
-              "title": "ВТБ запустил оплату по QR - коду в Таиланде",
-              "url": "https://www.niann.ru/?id=643736&erid=2SDnjcFzGwD",
-              "domain": "niann.ru",
-              "seen_jst": "2026-08-19T22:45:00+09:00"
-            },
-            {
-              "title": "Медведев , Рублев и Хачанов проиграли на Мастерсе в Цинциннати",
-              "url": "https://www.kommersant.ru/doc/8892840",
-              "domain": "kommersant.ru",
-              "seen_jst": "2026-08-19T23:00:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.14354566777461158,
           "macro_score": -0.016628741539150234,
@@ -5669,28 +5194,9 @@
           "information_cutoff_jst": "2026-08-20T23:59:59+09:00",
           "price_data_through": "2026-08-20",
           "news_lookback_hours": 72,
-          "asset_news_count": 60,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "на культурном фронте ждут перемен : кто придет ректором в ГИТИС , фейки друзей или врагов",
-              "url": "https://www.mk.ru/culture/2026/08/20/na-kulturnom-fronte-zhdut-peremen.html",
-              "domain": "mk.ru",
-              "seen_jst": "2026-08-20T23:15:00+09:00"
-            },
-            {
-              "title": "Актрисы Вахтанговского театра покорили соцсети",
-              "url": "https://www.mk.ru/culture/2026/08/20/aktrisy-vakhtangovskogo-teatra-pokorili-socseti.html",
-              "domain": "mk.ru",
-              "seen_jst": "2026-08-20T23:15:00+09:00"
-            },
-            {
-              "title": "Carney demande aux provinces de se réapprovisionner en alcool américain",
-              "url": "https://www.courrierfrontenac.qc.ca/nouvelles-nationales/carney-demande-aux-provinces-de-se-reapprovisionner-en-alcool-americain/",
-              "domain": "courrierfrontenac.qc.ca",
-              "seen_jst": "2026-08-20T23:45:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.05795953220928774,
           "macro_score": -0.06684502759573921,
@@ -5711,28 +5217,9 @@
           "information_cutoff_jst": "2026-08-23T23:59:59+09:00",
           "price_data_through": "2026-08-21",
           "news_lookback_hours": 72,
-          "asset_news_count": 87,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Kanadský premiér Mark Carney : Kanada je v obchodní válce , neboť byla napadena",
-              "url": "https://www.idnes.cz/ekonomika/zahranicni/kanada-je-v-obchodni-valce-nebot-byla-napadena-prohlasil-premier-carney.A260823_071928_eko-zahranicni_vank",
-              "domain": "idnes.cz",
-              "seen_jst": "2026-08-23T15:15:00+09:00"
-            },
-            {
-              "title": "যুক্তরাষ্ট্রের পণ্যে পাল্টা শুল্ক আরোপের ঘোষণা কানাডার",
-              "url": "https://www.mzamin.com/article/35925",
-              "domain": "mzamin.com",
-              "seen_jst": "2026-08-23T15:15:00+09:00"
-            },
-            {
-              "title": "미국 , 캐나다에 50 % 고율관세 부과하자 캐나다도 맞불",
-              "url": "https://segye.com:443/newsView/20260823501506",
-              "domain": "segye.com",
-              "seen_jst": "2026-08-23T15:30:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": -0.02723450003438217,
           "macro_score": -0.04410100215716831,
@@ -5753,28 +5240,9 @@
           "information_cutoff_jst": "2026-08-24T23:59:59+09:00",
           "price_data_through": "2026-08-24",
           "news_lookback_hours": 72,
-          "asset_news_count": 71,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Kanadský premiér Mark Carney : Kanada je v obchodní válce , neboť byla napadena",
-              "url": "https://www.idnes.cz/ekonomika/zahranicni/kanada-je-v-obchodni-valce-nebot-byla-napadena-prohlasil-premier-carney.A260823_071928_eko-zahranicni_vank",
-              "domain": "idnes.cz",
-              "seen_jst": "2026-08-23T15:15:00+09:00"
-            },
-            {
-              "title": "যুক্তরাষ্ট্রের পণ্যে পাল্টা শুল্ক আরোপের ঘোষণা কানাডার",
-              "url": "https://www.mzamin.com/article/35925",
-              "domain": "mzamin.com",
-              "seen_jst": "2026-08-23T15:15:00+09:00"
-            },
-            {
-              "title": "미국 , 캐나다에 50 % 고율관세 부과하자 캐나다도 맞불",
-              "url": "https://segye.com:443/newsView/20260823501506",
-              "domain": "segye.com",
-              "seen_jst": "2026-08-23T15:30:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": 0.010428774430380415,
           "macro_score": -0.03161720675440424,
@@ -5795,28 +5263,9 @@
           "information_cutoff_jst": "2026-08-25T23:59:59+09:00",
           "price_data_through": "2026-08-25",
           "news_lookback_hours": 72,
-          "asset_news_count": 36,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Kanadský premiér Mark Carney : Kanada je v obchodní válce , neboť byla napadena",
-              "url": "https://www.idnes.cz/ekonomika/zahranicni/kanada-je-v-obchodni-valce-nebot-byla-napadena-prohlasil-premier-carney.A260823_071928_eko-zahranicni_vank",
-              "domain": "idnes.cz",
-              "seen_jst": "2026-08-23T15:15:00+09:00"
-            },
-            {
-              "title": "যুক্তরাষ্ট্রের পণ্যে পাল্টা শুল্ক আরোপের ঘোষণা কানাডার",
-              "url": "https://www.mzamin.com/article/35925",
-              "domain": "mzamin.com",
-              "seen_jst": "2026-08-23T15:15:00+09:00"
-            },
-            {
-              "title": "미국 , 캐나다에 50 % 고율관세 부과하자 캐나다도 맞불",
-              "url": "https://segye.com:443/newsView/20260823501506",
-              "domain": "segye.com",
-              "seen_jst": "2026-08-23T15:30:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": -0.16046798985593091,
           "macro_score": 0.015155179379954547,
@@ -6832,7 +6281,7 @@
       "query": "(\"Otec Corporation\" OR オーテック)",
       "archive_articles": 0,
       "capped_chunks": 0,
-      "news_error": null,
+      "news_error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22Otec+Corporation%22+OR+%E3%82%AA%E3%83%BC%E3%83%86%E3%83%83%E3%82%AF%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000",
       "rows": [
         {
           "symbol": "1736.T",
@@ -7424,9 +6873,9 @@
     "3656.T": {
       "name": "KLab",
       "query": "(KLab OR \"KLab Inc\")",
-      "archive_articles": 0,
+      "archive_articles": 1,
       "capped_chunks": 0,
-      "news_error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28KLab+OR+%22KLab+Inc%22%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000",
+      "news_error": null,
       "rows": [
         {
           "symbol": "3656.T",
@@ -7596,9 +7045,16 @@
           "information_cutoff_jst": "2026-08-25T23:59:59+09:00",
           "price_data_through": "2026-08-25",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 1,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "Ichigo New Form Has Bleach Anime Fans Asking Some Big Questions",
+              "url": "https://www.polygon.com/bleach-new-ichigo-form/",
+              "domain": "polygon.com",
+              "seen_jst": "2026-08-25T04:30:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": -0.6629545021207366,
           "macro_score": 0.015155179379954547,
@@ -7619,9 +7075,16 @@
           "information_cutoff_jst": "2026-08-26T23:59:59+09:00",
           "price_data_through": "2026-08-26",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 1,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "Ichigo New Form Has Bleach Anime Fans Asking Some Big Questions",
+              "url": "https://www.polygon.com/bleach-new-ichigo-form/",
+              "domain": "polygon.com",
+              "seen_jst": "2026-08-25T04:30:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": -0.5686708063320446,
           "macro_score": -0.01509429274217233,
@@ -7642,9 +7105,16 @@
           "information_cutoff_jst": "2026-08-27T23:59:59+09:00",
           "price_data_through": "2026-08-27",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 1,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "Ichigo New Form Has Bleach Anime Fans Asking Some Big Questions",
+              "url": "https://www.polygon.com/bleach-new-ichigo-form/",
+              "domain": "polygon.com",
+              "seen_jst": "2026-08-25T04:30:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": -0.5758524874775645,
           "macro_score": 0.06372446766456306,
