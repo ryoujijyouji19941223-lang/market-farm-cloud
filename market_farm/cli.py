@@ -7,6 +7,7 @@ from .engine import load_config, analyze, save_run
 from .dashboard import render
 from .ledger import create_live_cards, settle_live_cards
 from .newspaper import render_newspaper
+from .research_report import build_report
 
 
 def main():
@@ -29,6 +30,7 @@ def main():
 
     render(cfg, regime, results, state)
     render_newspaper(cfg, regime, results)
+    build_report()
 
     for r in results:
         print(r["name"], r.get("action"), round(r.get("probability_up", .5) * 100, 1))
