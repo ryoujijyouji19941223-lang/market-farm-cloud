@@ -140,6 +140,14 @@ def render(cfg, regime, results, state, out="docs/index.html"):
         except Exception:
             recent = {}
 
+    cards_index = {}
+    cards_index_path = Path("data/cards_index.json")
+    if cards_index_path.exists():
+        try:
+            cards_index = json.loads(cards_index_path.read_text(encoding="utf-8"))
+        except Exception:
+            cards_index = {}
+
     replay_index = {}
     replay_index_path = Path("data/replay_index.json")
     if replay_index_path.exists():
@@ -327,6 +335,23 @@ def render(cfg, regime, results, state, out="docs/index.html"):
             f"<td>{escape(direction_jp(hm.get('direction')))}</td></tr>"
         )
 
+    card_rows = []
+    for item in cards_index.get("recent", [])[:8]:
+        result = "-"
+        if item.get("status") == "SETTLED":
+            result = "○" if item.get("correct") else "×"
+        card_rows.append(
+            f"<tr><td>{escape(str(item.get('prediction_date','-')))}</td>"
+            f"<td>{escape(str(item.get('name','-')))}</td>"
+            f"<td>{escape(direction_jp(item.get('direction')))}</td>"
+            f"<td>{escape(str(item.get('market_data_through','-')))}</td>"
+            f"<td>{escape(str(item.get('status','-')))}</td>"
+            f"<td>{result}</td>"
+            f"<td>{escape(str(item.get('result_type') or '-'))}</td></tr>"
+        )
+    cards_accuracy = cards_index.get("accuracy")
+    cards_accuracy_text = "-" if cards_accuracy is None else f"{cards_accuracy*100:.0f}%"
+
     replay_months = replay_index.get("months_completed", 0)
     replay_next = replay_index.get("next_month", "-")
     replay_oldest = replay_index.get("oldest_month", "-")
@@ -502,6 +527,24 @@ details{{margin-top:8px}}summary{{cursor:pointer;font-weight:700}}
 いちばん大事。朝に予測を固定して、未来の結果で答え合わせする。
 </div>
 <p><b>この3つは別々に保存・表示します。</b> 5年の成績を、ニュース込みモデルの成績として水増ししません。</p>
+</section>
+
+<section class='card'>
+<h2>⑦ 本番の「予測カルテ」</h2>
+<p><b>朝の予測を作った瞬間に、その時見ていた証拠ごと固定保存します。</b> あとから予測ルールを直しても、昔のカルテは昔のまま残します。</p>
+<div class='dates'>
+  <div><small>カルテ総数</small><br><b>{cards_index.get('cards_total',0)}</b></div>
+  <div><small>まだ答え待ち</small><br><b>{cards_index.get('cards_open',0)}</b></div>
+  <div><small>答え合わせ済み</small><br><b>{cards_index.get('cards_settled',0)}</b></div>
+  <div><small>本番正解率</small><br><b>{escape(cards_accuracy_text)}</b></div>
+</div>
+<div class='remember'>
+<b>1枚のカルテに固定するもの</b>
+予測日時 / モデルの版 / 価格データは何日までか / 最近の価格の勢い / その時読めたニュース見出し / 外からの風 / 現行モデルの予測 / 挑戦者モデルの予測。<br><br>
+答えが出た後にだけ、実際の値動きと「方向を逆に読んだ」「動きを見逃した」などの反省を追記します。
+</div>
+{("<div style='overflow:auto'><table><thead><tr><th>予測日</th><th>対象</th><th>予測</th><th>価格データ</th><th>状態</th><th>結果</th><th>反省</th></tr></thead><tbody>" + ''.join(card_rows) + "</tbody></table></div>") if card_rows else "<p>次の朝の本番予測からカルテが自動で作られます。</p>"}
+<p class='muted'>この反省分類は機械的な整理です。「これが原因だった」と断定するものではありません。因果関係は、カルテがたまった後に僕と一緒に複数例を比べて調べます。</p>
 </section>
 
 <section class='card'>
