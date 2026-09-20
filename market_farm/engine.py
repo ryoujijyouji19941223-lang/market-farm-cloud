@@ -48,13 +48,22 @@ def analyze(cfg):
 
 
 def settle_previous(state, results):
-    current = {r["symbol"]: r.get("price") for r in results if r.get("price") is not None}
+    current = {
+        r["symbol"]: {"price": r.get("price"), "market_date": r.get("market_date")}
+        for r in results if r.get("price") is not None
+    }
     for day, preds in list(state.get("predictions", {}).items()):
         for pred in preds:
             if pred.get("settled") or pred["symbol"] not in current:
                 continue
             ref = pred.get("reference_price")
-            now = current[pred["symbol"]]
+            now_info = current[pred["symbol"]]
+            now = now_info["price"]
+            ref_market_date = pred.get("reference_market_date")
+            now_market_date = now_info.get("market_date")
+            # Do not score a holiday/weekend refresh as a new market outcome.
+            if ref_market_date and now_market_date and now_market_date <= ref_market_date:
+                continue
             if not ref:
                 continue
             change = now/ref - 1
@@ -86,6 +95,8 @@ def save_run(session, cfg, regime, results, state_path="data/state.json"):
             p = r["probability_up"]
             direction = "UP" if p >= .55 else ("DOWN" if p <= .45 else "FLAT")
             state["predictions"][key].append({"symbol": r["symbol"], "name":r["name"], "direction":direction,
-                                               "probability_up":p, "reference_price":r["price"], "settled":False})
+                                               "probability_up":p, "reference_price":r["price"],
+                                               "reference_market_date": r.get("market_date"),
+                                               "settled":False})
     save_state(state, state_path)
     return state
