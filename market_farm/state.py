@@ -2,7 +2,14 @@ from __future__ import annotations
 from pathlib import Path
 import json
 
-DEFAULT = {"runs": [], "predictions": {}, "scores": {}, "paper": {"cash": 100000.0, "positions": {}, "history": []}}
+DEFAULT = {
+    "runs": [],
+    "predictions": {},
+    "scores": {},
+    "challenger_predictions": {},
+    "challenger_scores": {},
+    "paper": {"cash": 100000.0, "positions": {}, "history": []}
+}
 
 
 def load_state(path="data/state.json"):
