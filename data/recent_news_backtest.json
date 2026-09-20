@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T19:18:06.698230+00:00",
+  "generated_at": "2026-09-20T19:37:43.016978+00:00",
   "window_days": 35,
   "cutoff_rule": "For target date D, use market data through the prior trading day and news seen by 23:59:59 JST on calendar day D-1.",
   "anti_leakage": {
@@ -11,9 +11,9 @@
   "news_model": "Headline keyword sentiment, experimental. World-news headlines are archived for audit but not yet added to the score.",
   "world_news": {
     "query": "(\"Federal Reserve\" OR \"Bank of Japan\" OR inflation OR employment OR recession OR tariff OR war OR sanctions)",
-    "archive_articles": 250,
-    "capped_chunks": 1,
-    "error": null
+    "archive_articles": 0,
+    "capped_chunks": 0,
+    "error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22Federal+Reserve%22+OR+%22Bank+of+Japan%22+OR+inflation+OR+employment+OR+recession+OR+tariff+OR+war+OR+sanctions%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000"
   },
   "overall": {
     "without_news": {
@@ -648,9 +648,9 @@
     "EURJPY=X": {
       "name": "ユーロ円",
       "query": "(euro OR EURJPY OR ECB OR \"Bank of Japan\")",
-      "archive_articles": 250,
-      "capped_chunks": 1,
-      "news_error": null,
+      "archive_articles": 0,
+      "capped_chunks": 0,
+      "news_error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28euro+OR+EURJPY+OR+ECB+OR+%22Bank+of+Japan%22%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000",
       "rows": [
         {
           "symbol": "EURJPY=X",
@@ -1246,7 +1246,7 @@
           "news_probability_up": 0.44502849401121986,
           "news_direction": "DOWN",
           "actual_direction": "UP",
-          "actual_change": 0.002795829671864203,
+          "actual_change": 0.0035659302856285713,
           "baseline_correct": false,
           "news_correct": false
         }
@@ -1859,9 +1859,9 @@
     "GC=F": {
       "name": "金",
       "query": "(gold OR \"gold price\" OR bullion)",
-      "archive_articles": 0,
-      "capped_chunks": 0,
-      "news_error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28gold+OR+%22gold+price%22+OR+bullion%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000",
+      "archive_articles": 250,
+      "capped_chunks": 1,
+      "news_error": null,
       "rows": [
         {
           "symbol": "GC=F",
@@ -4017,9 +4017,9 @@
     "285A.T": {
       "name": "キオクシア",
       "query": "(Kioxia OR NAND OR SSD)",
-      "archive_articles": 0,
-      "capped_chunks": 0,
-      "news_error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28Kioxia+OR+NAND+OR+SSD%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000",
+      "archive_articles": 250,
+      "capped_chunks": 1,
+      "news_error": null,
       "rows": [
         {
           "symbol": "285A.T",
@@ -4611,9 +4611,9 @@
     "8136.T": {
       "name": "サンリオ",
       "query": "(Sanrio OR \"Hello Kitty\")",
-      "archive_articles": 0,
-      "capped_chunks": 0,
-      "news_error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28Sanrio+OR+%22Hello+Kitty%22%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000",
+      "archive_articles": 250,
+      "capped_chunks": 1,
+      "news_error": null,
       "rows": [
         {
           "symbol": "8136.T",
@@ -4622,9 +4622,28 @@
           "information_cutoff_jst": "2026-08-16T23:59:59+09:00",
           "price_data_through": "2026-08-14",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 30,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "藍心湄 、 陳美鳳都在背 ！ 日本Ball CAPE _ x7206 _ 紅 三麗鷗聯名瘋搶",
+              "url": "https://news.tvbs.com.tw/life/4005283",
+              "domain": "news.tvbs.com.tw",
+              "seen_jst": "2026-08-16T07:00:00+09:00"
+            },
+            {
+              "title": "  ニコ㋲  のその先～先輩たちの進路選択エピソード～ 第五回 ／ 大手企業 ITエンジニア ／ 高嶋芙佳 - ニコラネット｜nicola オフィシャルサイト",
+              "url": "https://nicola.jp/article/article-119188/",
+              "domain": "nicola.jp",
+              "seen_jst": "2026-08-16T08:45:00+09:00"
+            },
+            {
+              "title": "Sanrios Kuromi And Global Pop Sensation KATSEYE Launch Exclusive Target Capsule Collection",
+              "url": "https://www.kpopstarz.com/articles/323271/20260815/sanrios-kuromi-global-pop-sensation-katseye-launch-exclusive-target-capsule-collection.htm",
+              "domain": "kpopstarz.com",
+              "seen_jst": "2026-08-16T11:00:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": 0.21841210422511853,
           "macro_score": 0.02907937248307597,
@@ -4645,9 +4664,28 @@
           "information_cutoff_jst": "2026-08-17T23:59:59+09:00",
           "price_data_through": "2026-08-17",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 27,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "Seven Machina Rasmissen | File 770",
+              "url": "https://file770.com/tag/seven-machina-rasmissen/",
+              "domain": "file770.com",
+              "seen_jst": "2026-08-17T12:15:00+09:00"
+            },
+            {
+              "title": "추석선물도  취향 소비 … 세븐일레븐 , 헬로키티 · 호텔 디저트 띄운다",
+              "url": "https://www.ddaily.co.kr:443/page/view/2026081713102229529",
+              "domain": "ddaily.co.kr",
+              "seen_jst": "2026-08-17T16:15:00+09:00"
+            },
+            {
+              "title": "全球知名 IP 落地武漢江岸 多元潮流業態打造城市青年休閒新地標",
+              "url": "https://www.hkcd.com/hkcdweb/content/2026/08/17/content_8770078.html",
+              "domain": "hkcd.com",
+              "seen_jst": "2026-08-17T16:30:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": -0.42393543993730637,
           "macro_score": 0.010845004776732949,
@@ -4668,9 +4706,28 @@
           "information_cutoff_jst": "2026-08-18T23:59:59+09:00",
           "price_data_through": "2026-08-18",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 29,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "Amazon MGM Studios and Jazwares to develop Squishmallows film",
+              "url": "https://licensing.biz/amazon-mgm-studios-and-jazwares-announce-squishmallows-film/",
+              "domain": "licensing.biz",
+              "seen_jst": "2026-08-18T18:15:00+09:00"
+            },
+            {
+              "title": "Miniso opens first Miniso Friends store in Indonesia",
+              "url": "https://insideretail.asia/2026/08/18/miniso-opens-first-miniso-friends-store-in-indonesia/",
+              "domain": "insideretail.asia",
+              "seen_jst": "2026-08-18T18:15:00+09:00"
+            },
+            {
+              "title": "中元節最後採買優惠 7 - ELEVEN限時5天回饋放大術 滿額再送多重好禮",
+              "url": "https://n.yam.com/Article/20260818433611",
+              "domain": "n.yam.com",
+              "seen_jst": "2026-08-18T23:15:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": -0.7471256344358597,
           "macro_score": -0.02496439676376358,
@@ -4691,9 +4748,28 @@
           "information_cutoff_jst": "2026-08-19T23:59:59+09:00",
           "price_data_through": "2026-08-19",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 49,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "3천만원 로봇부터 2만원대 실속세트까지 … 유통가 , 추석 선물 총력전",
+              "url": "https://www.hani.co.kr/arti/economy/economy_general/1273599.html",
+              "domain": "hani.co.kr",
+              "seen_jst": "2026-08-19T16:15:00+09:00"
+            },
+            {
+              "title": "7 - 11中元節採買優惠 ！ 限時5天回饋放大術 ， 推7大宮廟隨取卡｜卡優新聞網",
+              "url": "https://www.cardu.com.tw/epoint/detail.php?64841",
+              "domain": "cardu.com.tw",
+              "seen_jst": "2026-08-19T21:15:00+09:00"
+            },
+            {
+              "title": "McDonald New Meal Has Us Changing Our Dinner Plans",
+              "url": "https://www.aol.com/articles/mcdonald-meal-us-changing-dinner-100000000.html",
+              "domain": "aol.com",
+              "seen_jst": "2026-08-19T23:45:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": -0.35782514615171956,
           "macro_score": -0.016628741539150234,
@@ -4714,9 +4790,28 @@
           "information_cutoff_jst": "2026-08-20T23:59:59+09:00",
           "price_data_through": "2026-08-20",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 53,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "락앤락 , 산리오 입은  스쿨핏  텀블러 · 보틀 2종 출시",
+              "url": "https://www.newspim.com/news/view/20260820000849",
+              "domain": "newspim.com",
+              "seen_jst": "2026-08-20T15:15:00+09:00"
+            },
+            {
+              "title": "中元最後優惠 ！ 7 - ELEVEN限時放大術 必收可怕又可愛伊藤潤二KITTY周邊 | 生活",
+              "url": "https://www.setn.com/news/1892635",
+              "domain": "setn.com",
+              "seen_jst": "2026-08-20T17:45:00+09:00"
+            },
+            {
+              "title": "McDonald Corporation $MCD Stock Position Lessened by Soltis Investment Advisors LLC",
+              "url": "https://www.dailypolitical.com/2026/08/20/mcdonalds-corporation-mcd-stock-position-lessened-by-soltis-investment-advisors-llc.html",
+              "domain": "dailypolitical.com",
+              "seen_jst": "2026-08-20T19:30:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": -0.3945369784221844,
           "macro_score": -0.06684502759573921,
@@ -4737,9 +4832,28 @@
           "information_cutoff_jst": "2026-08-23T23:59:59+09:00",
           "price_data_through": "2026-08-21",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 43,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "Unique finds for back - to - school season in Hamilton",
+              "url": "https://www.thespec.com/life/hamilton-region/unique-finds-for-back-to-school-season-in-hamilton/article_2a0b9fd2-1cda-5962-8710-66813cdec475.html",
+              "domain": "thespec.com",
+              "seen_jst": "2026-08-23T21:15:00+09:00"
+            },
+            {
+              "title": "TTN - Travel & Tourism News Middle East",
+              "url": "https://www.ttnworldwide.com:443/ArticleMG/466825/qatar-highlights-family-friendly-summer-attractions",
+              "domain": "ttnworldwide.com",
+              "seen_jst": "2026-08-23T21:15:00+09:00"
+            },
+            {
+              "title": "Nintendo Forgotten  90s Mario Spinoff Deserves a Switch 2 Reboot",
+              "url": "https://www.polygon.com/super-nintendo-35th-anniversary-mario-paint-switch-2/",
+              "domain": "polygon.com",
+              "seen_jst": "2026-08-23T23:45:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": -0.6700858497069633,
           "macro_score": -0.04410100215716831,
@@ -4760,9 +4874,28 @@
           "information_cutoff_jst": "2026-08-24T23:59:59+09:00",
           "price_data_through": "2026-08-24",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 20,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "Red Cross Says That Blood and Platelet Supplies Remain Strained",
+              "url": "https://1065thebuzz.com/2026/08/24/red-cross-says-that-blood-and-platelet-supplies-remain-strained/",
+              "domain": "1065thebuzz.com",
+              "seen_jst": "2026-08-24T20:00:00+09:00"
+            },
+            {
+              "title": "Red Cross Says That Blood and Platelet Supplies Remain Strained",
+              "url": "https://b93radio.com/2026/08/24/red-cross-says-that-blood-and-platelet-supplies-remain-strained/",
+              "domain": "b93radio.com",
+              "seen_jst": "2026-08-24T22:00:00+09:00"
+            },
+            {
+              "title": "Red Cross Says That Blood and Platelet Supplies Remain Strained",
+              "url": "https://b93radio.com/2026/08/24/red-cross-says-that-blood-and-platelet-supplies-remain-strained-2/",
+              "domain": "b93radio.com",
+              "seen_jst": "2026-08-24T22:00:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": -0.4660220301966251,
           "macro_score": -0.03161720675440424,
@@ -4783,9 +4916,28 @@
           "information_cutoff_jst": "2026-08-25T23:59:59+09:00",
           "price_data_through": "2026-08-25",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 25,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "布丁狗蟬聯人氣王 ， Hello Kitty 連 7 年未奪冠 ！ 三麗鷗如何用 450 個角色撐起近 9 成授權利益率 ？ ｜未來商務",
+              "url": "https://fc.bnext.com.tw/articles/view/4874",
+              "domain": "fc.bnext.com.tw",
+              "seen_jst": "2026-08-25T16:00:00+09:00"
+            },
+            {
+              "title": "サンリオ 、 熊本地震被災地に1100万円を寄付 支援活動や募金 、 イベント収益も寄付へ - スポニチ Sponichi Annex 芸能",
+              "url": "https://www.sponichi.co.jp/entertainment/news/2026/08/25/kiji/20260825s00041000180000c.html",
+              "domain": "sponichi.co.jp",
+              "seen_jst": "2026-08-25T17:15:00+09:00"
+            },
+            {
+              "title": "Red Cross Teams Up With Hello Kitty To Encourage September Blood Donations",
+              "url": "https://chattooga1180.com/red-cross-teams-up-with-hello-kitty-to-encourage-september-blood-donations/",
+              "domain": "chattooga1180.com",
+              "seen_jst": "2026-08-25T17:45:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": -0.3739030930275396,
           "macro_score": 0.015155179379954547,
@@ -4806,9 +4958,28 @@
           "information_cutoff_jst": "2026-08-26T23:59:59+09:00",
           "price_data_through": "2026-08-26",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 34,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "サンリオキャラクターズのパンが登場 全20種のシールがランダムで1枚封入",
+              "url": "https://www.chibanippo.co.jp/life/oricon/1658308",
+              "domain": "chibanippo.co.jp",
+              "seen_jst": "2026-08-26T15:00:00+09:00"
+            },
+            {
+              "title": "大分県立美術館 「 ハローキティ展 」 の来場者４万人 オリジナルぬいぐるみやキーホルダーなど贈呈 - 大分のニュースなら 大分合同新聞プレミアムオンライン Gate",
+              "url": "https://www.oita-press.co.jp/1010000000/2026/08/26/JDC2026082601166",
+              "domain": "oita-press.co.jp",
+              "seen_jst": "2026-08-26T16:45:00+09:00"
+            },
+            {
+              "title": "限時９折 ！ 藏壽司南投首店地點 ／ 營業時間 ／ 停車資訊整理 ， 全台剩２縣市沒有分店｜食尚玩家",
+              "url": "https://supertaste.tvbs.com.tw/food/361177",
+              "domain": "supertaste.tvbs.com.tw",
+              "seen_jst": "2026-08-26T17:45:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": -0.21302978880675794,
           "macro_score": -0.01509429274217233,
@@ -4829,16 +5000,35 @@
           "information_cutoff_jst": "2026-08-27T23:59:59+09:00",
           "price_data_through": "2026-08-27",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 37,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "岩手日報ONLINE",
+              "url": "https://www.iwate-np.co.jp/article/oricon/2476544",
+              "domain": "iwate-np.co.jp",
+              "seen_jst": "2026-08-27T18:00:00+09:00"
+            },
+            {
+              "title": "KC Outlook : Southwest Trafficway Trouble , Piker Probs & Nacho Biz",
+              "url": "https://www.tonyskansascity.com/2026/08/kc-outlook-southwest-trafficway-trouble.html",
+              "domain": "tonyskansascity.com",
+              "seen_jst": "2026-08-27T18:15:00+09:00"
+            },
+            {
+              "title": "Mt . Fuji Meets Hello Kitty : The Ultimate Japanese Stationery Mashup",
+              "url": "https://www.japantrends.com/mt-fuji-meets-hello-kitty-the-ultimate-japanese-stationery-mashup/",
+              "domain": "japantrends.com",
+              "seen_jst": "2026-08-27T23:30:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": -0.13228144246436846,
           "macro_score": 0.06372446766456306,
-          "news_score": 0.0,
+          "news_score": 0.02702702702702703,
           "baseline_probability_up": 0.45802009634173596,
           "baseline_direction": "FLAT",
-          "news_probability_up": 0.4651311507942568,
+          "news_probability_up": 0.4671180462140475,
           "news_direction": "FLAT",
           "actual_direction": "UP",
           "actual_change": 0.015618742490989268,
@@ -4852,9 +5042,28 @@
           "information_cutoff_jst": "2026-08-30T23:59:59+09:00",
           "price_data_through": "2026-08-28",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 20,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "Coburn United Methodist Church to Host Blood Drive Amid National Shortage - YourRadioPlace . com",
+              "url": "https://yourradioplace.com/coburn-united-methodist-church-to-host-blood-drive-amid-national-shortage/",
+              "domain": "yourradioplace.com",
+              "seen_jst": "2026-08-30T15:00:00+09:00"
+            },
+            {
+              "title": "Nintendo Switch 2 eShop charts - August 30 , 2026 - Elden Ring and Metal Gear Solid battle for first",
+              "url": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-30-2026/",
+              "domain": "nintendoeverything.com",
+              "seen_jst": "2026-08-30T19:30:00+09:00"
+            },
+            {
+              "title": "中職 ／ 桃猿3連戰7萬4189人進場 「 攻蛋 」 票房再刷新高 | 棒球 | 運動",
+              "url": "https://udn.com/news/story/7001/9723211",
+              "domain": "udn.com",
+              "seen_jst": "2026-08-30T21:15:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": 0.1656457337595087,
           "macro_score": 0.0311690828616576,
@@ -4875,9 +5084,28 @@
           "information_cutoff_jst": "2026-08-31T23:59:59+09:00",
           "price_data_through": "2026-08-31",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 19,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "Donors needed during critical blood shortage ; Local drives offered in September",
+              "url": "https://www.lockhaven.com/news/local-news/2026/08/donors-needed-during-critical-blood-shortage-local-drives-offered-in-september/",
+              "domain": "lockhaven.com",
+              "seen_jst": "2026-08-31T16:45:00+09:00"
+            },
+            {
+              "title": "Build - A - Bear Workshop , Inc . ( NYSE : BBW ) Receives Consensus Recommendation of  Moderate Buy  from Brokerages",
+              "url": "https://www.dailypolitical.com/2026/08/31/build-a-bear-workshop-inc-nysebbw-receives-consensus-recommendation-of-moderate-buy-from-brokerages.html",
+              "domain": "dailypolitical.com",
+              "seen_jst": "2026-08-31T20:45:00+09:00"
+            },
+            {
+              "title": "すごい ！ やっぱり安くてお得なMINISO 、 サンリオ 、 ディズニー 、 ちいかわグッズ☆ | キャラクター大好き ！ コロ助の2回目ロンドン生活にっき★",
+              "url": "https://ameblo.jp/naminnie0408/entry-12977000652.html",
+              "domain": "ameblo.jp",
+              "seen_jst": "2026-08-31T21:00:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": 0.20006575141010713,
           "macro_score": 0.03894365767317609,
@@ -4898,9 +5126,28 @@
           "information_cutoff_jst": "2026-09-01T23:59:59+09:00",
           "price_data_through": "2026-09-01",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 18,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "  SpongeBob  and  One Piece  Combining For Happy Meal Toys",
+              "url": "https://kw3.com/ixp/442/p/spongebob-one-piece-happy-meal/",
+              "domain": "kw3.com",
+              "seen_jst": "2026-09-01T05:45:00+09:00"
+            },
+            {
+              "title": "  SpongeBob  and  One Piece  Combining For Happy Meal Toys",
+              "url": "https://967theeagle.net/ixp/442/p/spongebob-one-piece-happy-meal/",
+              "domain": "967theeagle.net",
+              "seen_jst": "2026-09-01T05:45:00+09:00"
+            },
+            {
+              "title": "  SpongeBob  and  One Piece  Combining For Happy Meal Toys",
+              "url": "https://wkfr.com/ixp/442/p/spongebob-one-piece-happy-meal/",
+              "domain": "wkfr.com",
+              "seen_jst": "2026-09-01T06:00:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": 0.38914763760280857,
           "macro_score": -0.038776736991356454,
@@ -4921,9 +5168,28 @@
           "information_cutoff_jst": "2026-09-02T23:59:59+09:00",
           "price_data_through": "2026-09-02",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 14,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "  SpongeBob  and  One Piece  Combining For Happy Meal Toys",
+              "url": "https://kw3.com/ixp/442/p/spongebob-one-piece-happy-meal/",
+              "domain": "kw3.com",
+              "seen_jst": "2026-09-01T05:45:00+09:00"
+            },
+            {
+              "title": "  SpongeBob  and  One Piece  Combining For Happy Meal Toys",
+              "url": "https://967theeagle.net/ixp/442/p/spongebob-one-piece-happy-meal/",
+              "domain": "967theeagle.net",
+              "seen_jst": "2026-09-01T05:45:00+09:00"
+            },
+            {
+              "title": "  SpongeBob  and  One Piece  Combining For Happy Meal Toys",
+              "url": "https://wkfr.com/ixp/442/p/spongebob-one-piece-happy-meal/",
+              "domain": "wkfr.com",
+              "seen_jst": "2026-09-01T06:00:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": 0.4556039552282677,
           "macro_score": 4.1402294060937094e-05,
@@ -4944,9 +5210,28 @@
           "information_cutoff_jst": "2026-09-03T23:59:59+09:00",
           "price_data_through": "2026-09-03",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 4,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "  SpongeBob  and  One Piece  Combining For Happy Meal Toys",
+              "url": "https://kw3.com/ixp/442/p/spongebob-one-piece-happy-meal/",
+              "domain": "kw3.com",
+              "seen_jst": "2026-09-01T05:45:00+09:00"
+            },
+            {
+              "title": "  SpongeBob  and  One Piece  Combining For Happy Meal Toys",
+              "url": "https://967theeagle.net/ixp/442/p/spongebob-one-piece-happy-meal/",
+              "domain": "967theeagle.net",
+              "seen_jst": "2026-09-01T05:45:00+09:00"
+            },
+            {
+              "title": "  SpongeBob  and  One Piece  Combining For Happy Meal Toys",
+              "url": "https://wkfr.com/ixp/442/p/spongebob-one-piece-happy-meal/",
+              "domain": "wkfr.com",
+              "seen_jst": "2026-09-01T06:00:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": 0.33816484146700376,
           "macro_score": 0.00907251115486325,
@@ -5205,9 +5490,9 @@
     "5401.T": {
       "name": "日本製鉄",
       "query": "(\"Nippon Steel\" OR \"US Steel\")",
-      "archive_articles": 0,
-      "capped_chunks": 0,
-      "news_error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22Nippon+Steel%22+OR+%22US+Steel%22%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000",
+      "archive_articles": 250,
+      "capped_chunks": 1,
+      "news_error": null,
       "rows": [
         {
           "symbol": "5401.T",
@@ -5216,9 +5501,28 @@
           "information_cutoff_jst": "2026-08-16T23:59:59+09:00",
           "price_data_through": "2026-08-14",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 33,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "Звезда « Фабрики » попала под суд : Роскомнадзор требует 32 тысячи за неплатежи по рекламе в соцсетях",
+              "url": "https://runews24.ru/show-business/16/08/2026/zvezda-fabriki-popala-pod-sud-roskomnadzor-trebuet-32-tyisyachi-za-neplatezhi-po-reklame-v-soczsetyax",
+              "domain": "runews24.ru",
+              "seen_jst": "2026-08-16T10:00:00+09:00"
+            },
+            {
+              "title": "Дневник войны , глава 317 . « Ну ты и стерва , Ира ! Придется еще жить !» ",
+              "url": "http://gazetaby.com/post/dnevnik-vojny-glava-317-nu-ty-i-sterva-ira-pridetsya-eshhe-zhit/215847/",
+              "domain": "gazetaby.com",
+              "seen_jst": "2026-08-16T20:30:00+09:00"
+            },
+            {
+              "title": "Мамдани решил осудить антисемитизм - и услышал все , что о нем думают : скандал дошел до Конгресса",
+              "url": "https://www.9tv.co.il/item/259017",
+              "domain": "9tv.co.il",
+              "seen_jst": "2026-08-16T23:15:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": 0.4164803434295878,
           "macro_score": 0.02907937248307597,
@@ -5239,9 +5543,28 @@
           "information_cutoff_jst": "2026-08-17T23:59:59+09:00",
           "price_data_through": "2026-08-17",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 25,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "Australia BlueScope posts profit beat , sees earnings above expectations",
+              "url": "https://www.miningweekly.com/article/australias-bluescope-posts-profit-beat-sees-earnings-above-expectations-2026-08-17",
+              "domain": "miningweekly.com",
+              "seen_jst": "2026-08-17T16:30:00+09:00"
+            },
+            {
+              "title": "Санкции ЕС против РФ Каллас говорит о новом крупном пакете осенью подробности",
+              "url": "https://focus.ua/world/764678-sankcii-es-protiv-rf-kallas-govorit-o-novom-krupnom-pakete-osenyu-podrobnosti",
+              "domain": "focus.ua",
+              "seen_jst": "2026-08-17T17:45:00+09:00"
+            },
+            {
+              "title": "Трамп сокращает учения с Южной Кореей : реакция мировых СМИ",
+              "url": "https://www.kommersant.ru/doc/8891288",
+              "domain": "kommersant.ru",
+              "seen_jst": "2026-08-17T22:15:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": 0.19915601327679222,
           "macro_score": 0.010845004776732949,
@@ -5262,9 +5585,28 @@
           "information_cutoff_jst": "2026-08-18T23:59:59+09:00",
           "price_data_through": "2026-08-18",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 26,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "Steel Rebar Market worth $250 . 38 billion by 2031 - Exclusive Report by MarketsandMarkets",
+              "url": "https://www.finanznachrichten.de/nachrichten-2026-08/69340659-steel-rebar-market-worth-dollar-250-38-billion-by-2031-exclusive-report-by-marketsandmarkets-008.htm",
+              "domain": "finanznachrichten.de",
+              "seen_jst": "2026-08-18T20:15:00+09:00"
+            },
+            {
+              "title": "Латвия выдвинула фильм « Уля » на премию « Оскар » ",
+              "url": "https://www.gorod.lv/novosti/368481-latviya-vydvinula-film-ulya-na-premiu-oskar",
+              "domain": "gorod.lv",
+              "seen_jst": "2026-08-18T22:45:00+09:00"
+            },
+            {
+              "title": "Дональд Трамп опубликовал карту Ормузского пролива как новую территорию США",
+              "url": "http://govoritmoskva.ru/news/502648/",
+              "domain": "govoritmoskva.ru",
+              "seen_jst": "2026-08-18T23:15:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": 0.31442256302578026,
           "macro_score": -0.02496439676376358,
@@ -5285,9 +5627,28 @@
           "information_cutoff_jst": "2026-08-19T23:59:59+09:00",
           "price_data_through": "2026-08-19",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 48,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "Российские банки расширяют QR - платежи : теперь стал доступен и Таиланд",
+              "url": "https://sibnovosti.ru/news/456530/",
+              "domain": "sibnovosti.ru",
+              "seen_jst": "2026-08-19T18:15:00+09:00"
+            },
+            {
+              "title": "ВТБ запустил оплату по QR - коду в Таиланде",
+              "url": "https://www.niann.ru/?id=643736&erid=2SDnjcFzGwD",
+              "domain": "niann.ru",
+              "seen_jst": "2026-08-19T22:45:00+09:00"
+            },
+            {
+              "title": "Медведев , Рублев и Хачанов проиграли на Мастерсе в Цинциннати",
+              "url": "https://www.kommersant.ru/doc/8892840",
+              "domain": "kommersant.ru",
+              "seen_jst": "2026-08-19T23:00:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": 0.14354566777461158,
           "macro_score": -0.016628741539150234,
@@ -5308,9 +5669,28 @@
           "information_cutoff_jst": "2026-08-20T23:59:59+09:00",
           "price_data_through": "2026-08-20",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 60,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "на культурном фронте ждут перемен : кто придет ректором в ГИТИС , фейки друзей или врагов",
+              "url": "https://www.mk.ru/culture/2026/08/20/na-kulturnom-fronte-zhdut-peremen.html",
+              "domain": "mk.ru",
+              "seen_jst": "2026-08-20T23:15:00+09:00"
+            },
+            {
+              "title": "Актрисы Вахтанговского театра покорили соцсети",
+              "url": "https://www.mk.ru/culture/2026/08/20/aktrisy-vakhtangovskogo-teatra-pokorili-socseti.html",
+              "domain": "mk.ru",
+              "seen_jst": "2026-08-20T23:15:00+09:00"
+            },
+            {
+              "title": "Carney demande aux provinces de se réapprovisionner en alcool américain",
+              "url": "https://www.courrierfrontenac.qc.ca/nouvelles-nationales/carney-demande-aux-provinces-de-se-reapprovisionner-en-alcool-americain/",
+              "domain": "courrierfrontenac.qc.ca",
+              "seen_jst": "2026-08-20T23:45:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": 0.05795953220928774,
           "macro_score": -0.06684502759573921,
@@ -5331,9 +5711,28 @@
           "information_cutoff_jst": "2026-08-23T23:59:59+09:00",
           "price_data_through": "2026-08-21",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 87,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "Kanadský premiér Mark Carney : Kanada je v obchodní válce , neboť byla napadena",
+              "url": "https://www.idnes.cz/ekonomika/zahranicni/kanada-je-v-obchodni-valce-nebot-byla-napadena-prohlasil-premier-carney.A260823_071928_eko-zahranicni_vank",
+              "domain": "idnes.cz",
+              "seen_jst": "2026-08-23T15:15:00+09:00"
+            },
+            {
+              "title": "যুক্তরাষ্ট্রের পণ্যে পাল্টা শুল্ক আরোপের ঘোষণা কানাডার",
+              "url": "https://www.mzamin.com/article/35925",
+              "domain": "mzamin.com",
+              "seen_jst": "2026-08-23T15:15:00+09:00"
+            },
+            {
+              "title": "미국 , 캐나다에 50 % 고율관세 부과하자 캐나다도 맞불",
+              "url": "https://segye.com:443/newsView/20260823501506",
+              "domain": "segye.com",
+              "seen_jst": "2026-08-23T15:30:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": -0.02723450003438217,
           "macro_score": -0.04410100215716831,
@@ -5354,9 +5753,28 @@
           "information_cutoff_jst": "2026-08-24T23:59:59+09:00",
           "price_data_through": "2026-08-24",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 71,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "Kanadský premiér Mark Carney : Kanada je v obchodní válce , neboť byla napadena",
+              "url": "https://www.idnes.cz/ekonomika/zahranicni/kanada-je-v-obchodni-valce-nebot-byla-napadena-prohlasil-premier-carney.A260823_071928_eko-zahranicni_vank",
+              "domain": "idnes.cz",
+              "seen_jst": "2026-08-23T15:15:00+09:00"
+            },
+            {
+              "title": "যুক্তরাষ্ট্রের পণ্যে পাল্টা শুল্ক আরোপের ঘোষণা কানাডার",
+              "url": "https://www.mzamin.com/article/35925",
+              "domain": "mzamin.com",
+              "seen_jst": "2026-08-23T15:15:00+09:00"
+            },
+            {
+              "title": "미국 , 캐나다에 50 % 고율관세 부과하자 캐나다도 맞불",
+              "url": "https://segye.com:443/newsView/20260823501506",
+              "domain": "segye.com",
+              "seen_jst": "2026-08-23T15:30:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": 0.010428774430380415,
           "macro_score": -0.03161720675440424,
@@ -5377,9 +5795,28 @@
           "information_cutoff_jst": "2026-08-25T23:59:59+09:00",
           "price_data_through": "2026-08-25",
           "news_lookback_hours": 72,
-          "asset_news_count": 0,
+          "asset_news_count": 36,
           "world_news_count": 0,
-          "asset_news_examples": [],
+          "asset_news_examples": [
+            {
+              "title": "Kanadský premiér Mark Carney : Kanada je v obchodní válce , neboť byla napadena",
+              "url": "https://www.idnes.cz/ekonomika/zahranicni/kanada-je-v-obchodni-valce-nebot-byla-napadena-prohlasil-premier-carney.A260823_071928_eko-zahranicni_vank",
+              "domain": "idnes.cz",
+              "seen_jst": "2026-08-23T15:15:00+09:00"
+            },
+            {
+              "title": "যুক্তরাষ্ট্রের পণ্যে পাল্টা শুল্ক আরোপের ঘোষণা কানাডার",
+              "url": "https://www.mzamin.com/article/35925",
+              "domain": "mzamin.com",
+              "seen_jst": "2026-08-23T15:15:00+09:00"
+            },
+            {
+              "title": "미국 , 캐나다에 50 % 고율관세 부과하자 캐나다도 맞불",
+              "url": "https://segye.com:443/newsView/20260823501506",
+              "domain": "segye.com",
+              "seen_jst": "2026-08-23T15:30:00+09:00"
+            }
+          ],
           "world_news_examples": [],
           "price_score": -0.16046798985593091,
           "macro_score": 0.015155179379954547,
@@ -5799,9 +6236,9 @@
     "6522.T": {
       "name": "アスタリスク",
       "query": "(\"Asterisk Inc\" OR RFID barcode Japan)",
-      "archive_articles": 0,
-      "capped_chunks": 0,
-      "news_error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22Asterisk+Inc%22+OR+RFID+barcode+Japan%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000",
+      "archive_articles": 250,
+      "capped_chunks": 1,
+      "news_error": null,
       "rows": [
         {
           "symbol": "6522.T",
@@ -6987,9 +7424,9 @@
     "3656.T": {
       "name": "KLab",
       "query": "(KLab OR \"KLab Inc\")",
-      "archive_articles": 1,
+      "archive_articles": 0,
       "capped_chunks": 0,
-      "news_error": null,
+      "news_error": "GDELT request failed: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28KLab+OR+%22KLab+Inc%22%29&mode=artlist&format=json&sort=dateasc&maxrecords=250&startdatetime=20260809150000&enddatetime=20260920150000",
       "rows": [
         {
           "symbol": "3656.T",
@@ -7159,16 +7596,9 @@
           "information_cutoff_jst": "2026-08-25T23:59:59+09:00",
           "price_data_through": "2026-08-25",
           "news_lookback_hours": 72,
-          "asset_news_count": 1,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Ichigo New Form Has Bleach Anime Fans Asking Some Big Questions",
-              "url": "https://www.polygon.com/bleach-new-ichigo-form/",
-              "domain": "polygon.com",
-              "seen_jst": "2026-08-25T04:30:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": -0.6629545021207366,
           "macro_score": 0.015155179379954547,
@@ -7189,16 +7619,9 @@
           "information_cutoff_jst": "2026-08-26T23:59:59+09:00",
           "price_data_through": "2026-08-26",
           "news_lookback_hours": 72,
-          "asset_news_count": 1,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Ichigo New Form Has Bleach Anime Fans Asking Some Big Questions",
-              "url": "https://www.polygon.com/bleach-new-ichigo-form/",
-              "domain": "polygon.com",
-              "seen_jst": "2026-08-25T04:30:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": -0.5686708063320446,
           "macro_score": -0.01509429274217233,
@@ -7219,16 +7642,9 @@
           "information_cutoff_jst": "2026-08-27T23:59:59+09:00",
           "price_data_through": "2026-08-27",
           "news_lookback_hours": 72,
-          "asset_news_count": 1,
+          "asset_news_count": 0,
           "world_news_count": 0,
-          "asset_news_examples": [
-            {
-              "title": "Ichigo New Form Has Bleach Anime Fans Asking Some Big Questions",
-              "url": "https://www.polygon.com/bleach-new-ichigo-form/",
-              "domain": "polygon.com",
-              "seen_jst": "2026-08-25T04:30:00+09:00"
-            }
-          ],
+          "asset_news_examples": [],
           "world_news_examples": [],
           "price_score": -0.5758524874775645,
           "macro_score": 0.06372446766456306,
