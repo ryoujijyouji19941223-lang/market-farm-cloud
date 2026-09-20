@@ -1,0 +1,367 @@
+{
+  "generated_at": "2026-09-20T18:26:26.093102+00:00",
+  "model": "historical base model: price + market proxies; no historical news",
+  "method": "walk-forward next-trading-day test using only data available up to each day",
+  "assets": {
+    "USDJPY=X": {
+      "name": "ドル円",
+      "kind": "fx",
+      "available_start": "2021-10-18",
+      "available_end": "2026-09-18",
+      "usable_days": 1280,
+      "windows": {
+        "1y": {
+          "days": 260,
+          "signals": 57,
+          "correct": 19,
+          "accuracy": 0.3333333333333333,
+          "signal_rate": 0.21923076923076923
+        },
+        "3y": {
+          "days": 779,
+          "signals": 271,
+          "correct": 91,
+          "accuracy": 0.33579335793357934,
+          "signal_rate": 0.3478818998716303
+        },
+        "5y": {
+          "days": 1280,
+          "signals": 515,
+          "correct": 188,
+          "accuracy": 0.3650485436893204,
+          "signal_rate": 0.40234375
+        }
+      }
+    },
+    "EURJPY=X": {
+      "name": "ユーロ円",
+      "kind": "fx",
+      "available_start": "2021-10-18",
+      "available_end": "2026-09-18",
+      "usable_days": 1280,
+      "windows": {
+        "1y": {
+          "days": 260,
+          "signals": 36,
+          "correct": 7,
+          "accuracy": 0.19444444444444445,
+          "signal_rate": 0.13846153846153847
+        },
+        "3y": {
+          "days": 779,
+          "signals": 198,
+          "correct": 71,
+          "accuracy": 0.35858585858585856,
+          "signal_rate": 0.25417201540436457
+        },
+        "5y": {
+          "days": 1280,
+          "signals": 391,
+          "correct": 135,
+          "accuracy": 0.3452685421994885,
+          "signal_rate": 0.30546875
+        }
+      }
+    },
+    "CHFJPY=X": {
+      "name": "スイスフラン円",
+      "kind": "fx",
+      "available_start": "2021-10-18",
+      "available_end": "2026-09-17",
+      "usable_days": 1279,
+      "windows": {
+        "1y": {
+          "days": 260,
+          "signals": 42,
+          "correct": 8,
+          "accuracy": 0.19047619047619047,
+          "signal_rate": 0.16153846153846155
+        },
+        "3y": {
+          "days": 779,
+          "signals": 191,
+          "correct": 56,
+          "accuracy": 0.2931937172774869,
+          "signal_rate": 0.24518613607188702
+        },
+        "5y": {
+          "days": 1279,
+          "signals": 367,
+          "correct": 120,
+          "accuracy": 0.32697547683923706,
+          "signal_rate": 0.2869429241594996
+        }
+      }
+    },
+    "GC=F": {
+      "name": "金",
+      "kind": "commodity",
+      "available_start": "2021-10-18",
+      "available_end": "2026-09-17",
+      "usable_days": 1237,
+      "windows": {
+        "1y": {
+          "days": 252,
+          "signals": 189,
+          "correct": 93,
+          "accuracy": 0.49206349206349204,
+          "signal_rate": 0.75
+        },
+        "3y": {
+          "days": 756,
+          "signals": 490,
+          "correct": 217,
+          "accuracy": 0.44285714285714284,
+          "signal_rate": 0.6481481481481481
+        },
+        "5y": {
+          "days": 1237,
+          "signals": 764,
+          "correct": 325,
+          "accuracy": 0.42539267015706805,
+          "signal_rate": 0.6176232821341956
+        }
+      }
+    },
+    "7974.T": {
+      "name": "任天堂",
+      "kind": "equity",
+      "available_start": "2021-10-20",
+      "available_end": "2026-09-17",
+      "usable_days": 1202,
+      "windows": {
+        "1y": {
+          "days": 245,
+          "signals": 197,
+          "correct": 99,
+          "accuracy": 0.5025380710659898,
+          "signal_rate": 0.8040816326530612
+        },
+        "3y": {
+          "days": 733,
+          "signals": 535,
+          "correct": 254,
+          "accuracy": 0.4747663551401869,
+          "signal_rate": 0.7298772169167803
+        },
+        "5y": {
+          "days": 1202,
+          "signals": 856,
+          "correct": 387,
+          "accuracy": 0.45210280373831774,
+          "signal_rate": 0.7121464226289518
+        }
+      }
+    },
+    "8316.T": {
+      "name": "三井住友FG",
+      "kind": "equity",
+      "available_start": "2021-10-20",
+      "available_end": "2026-09-17",
+      "usable_days": 1202,
+      "windows": {
+        "1y": {
+          "days": 245,
+          "signals": 191,
+          "correct": 93,
+          "accuracy": 0.4869109947643979,
+          "signal_rate": 0.7795918367346939
+        },
+        "3y": {
+          "days": 733,
+          "signals": 535,
+          "correct": 247,
+          "accuracy": 0.4616822429906542,
+          "signal_rate": 0.7298772169167803
+        },
+        "5y": {
+          "days": 1202,
+          "signals": 828,
+          "correct": 369,
+          "accuracy": 0.44565217391304346,
+          "signal_rate": 0.6888519134775375
+        }
+      }
+    },
+    "285A.T": {
+      "name": "キオクシア",
+      "kind": "equity",
+      "available_start": "2025-01-22",
+      "available_end": "2026-09-17",
+      "usable_days": 406,
+      "windows": {
+        "1y": {
+          "days": 245,
+          "signals": 235,
+          "correct": 126,
+          "accuracy": 0.5361702127659574,
+          "signal_rate": 0.9591836734693877
+        },
+        "3y": {
+          "days": 406,
+          "signals": 372,
+          "correct": 191,
+          "accuracy": 0.5134408602150538,
+          "signal_rate": 0.916256157635468
+        },
+        "5y": {
+          "days": 406,
+          "signals": 372,
+          "correct": 191,
+          "accuracy": 0.5134408602150538,
+          "signal_rate": 0.916256157635468
+        }
+      }
+    },
+    "8136.T": {
+      "name": "サンリオ",
+      "kind": "equity",
+      "available_start": "2021-10-20",
+      "available_end": "2026-09-17",
+      "usable_days": 1202,
+      "windows": {
+        "1y": {
+          "days": 245,
+          "signals": 220,
+          "correct": 109,
+          "accuracy": 0.4954545454545455,
+          "signal_rate": 0.8979591836734694
+        },
+        "3y": {
+          "days": 733,
+          "signals": 644,
+          "correct": 311,
+          "accuracy": 0.4829192546583851,
+          "signal_rate": 0.878581173260573
+        },
+        "5y": {
+          "days": 1202,
+          "signals": 1033,
+          "correct": 479,
+          "accuracy": 0.46369796708615685,
+          "signal_rate": 0.8594009983361065
+        }
+      }
+    },
+    "5401.T": {
+      "name": "日本製鉄",
+      "kind": "equity",
+      "available_start": "2021-10-20",
+      "available_end": "2026-09-17",
+      "usable_days": 1202,
+      "windows": {
+        "1y": {
+          "days": 245,
+          "signals": 172,
+          "correct": 74,
+          "accuracy": 0.43023255813953487,
+          "signal_rate": 0.7020408163265306
+        },
+        "3y": {
+          "days": 733,
+          "signals": 527,
+          "correct": 230,
+          "accuracy": 0.4364326375711575,
+          "signal_rate": 0.7189631650750341
+        },
+        "5y": {
+          "days": 1202,
+          "signals": 906,
+          "correct": 395,
+          "accuracy": 0.4359823399558499,
+          "signal_rate": 0.7537437603993344
+        }
+      }
+    },
+    "6522.T": {
+      "name": "アスタリスク",
+      "kind": "equity",
+      "available_start": "2021-10-28",
+      "available_end": "2026-09-17",
+      "usable_days": 1196,
+      "windows": {
+        "1y": {
+          "days": 245,
+          "signals": 208,
+          "correct": 97,
+          "accuracy": 0.46634615384615385,
+          "signal_rate": 0.8489795918367347
+        },
+        "3y": {
+          "days": 733,
+          "signals": 585,
+          "correct": 261,
+          "accuracy": 0.4461538461538462,
+          "signal_rate": 0.7980900409276944
+        },
+        "5y": {
+          "days": 1196,
+          "signals": 985,
+          "correct": 455,
+          "accuracy": 0.4619289340101523,
+          "signal_rate": 0.8235785953177257
+        }
+      }
+    },
+    "1736.T": {
+      "name": "オーテック",
+      "kind": "equity",
+      "available_start": "2021-10-20",
+      "available_end": "2026-09-17",
+      "usable_days": 1202,
+      "windows": {
+        "1y": {
+          "days": 245,
+          "signals": 168,
+          "correct": 68,
+          "accuracy": 0.40476190476190477,
+          "signal_rate": 0.6857142857142857
+        },
+        "3y": {
+          "days": 733,
+          "signals": 500,
+          "correct": 209,
+          "accuracy": 0.418,
+          "signal_rate": 0.6821282401091405
+        },
+        "5y": {
+          "days": 1202,
+          "signals": 737,
+          "correct": 276,
+          "accuracy": 0.37449118046132973,
+          "signal_rate": 0.6131447587354409
+        }
+      }
+    },
+    "3656.T": {
+      "name": "KLab",
+      "kind": "equity",
+      "available_start": "2021-10-20",
+      "available_end": "2026-09-17",
+      "usable_days": 1202,
+      "windows": {
+        "1y": {
+          "days": 245,
+          "signals": 214,
+          "correct": 94,
+          "accuracy": 0.4392523364485981,
+          "signal_rate": 0.8734693877551021
+        },
+        "3y": {
+          "days": 733,
+          "signals": 584,
+          "correct": 257,
+          "accuracy": 0.4400684931506849,
+          "signal_rate": 0.7967257844474761
+        },
+        "5y": {
+          "days": 1202,
+          "signals": 961,
+          "correct": 445,
+          "accuracy": 0.4630593132154006,
+          "signal_rate": 0.7995008319467554
+        }
+      }
+    }
+  }
+}
