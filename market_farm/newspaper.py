@@ -144,7 +144,7 @@ def _strict_terms(r):
         "285A.T": ["キオクシア", "kioxia"],
         "8136.T": ["サンリオ", "sanrio", "hello kitty"],
         "5401.T": ["日本製鉄", "nippon steel", "us steel"],
-        "6522.T": ["アスタリスク", "asterisk"],
+        "6522.T": ["株式会社アスタリスク", "asreader", "rfid", "ascode", "6522"],
         "1736.T": ["オーテック", "otec"],
         "3656.T": ["klab"],
     }
@@ -190,6 +190,8 @@ def relevant_news(r, before_market_close=False):
     filtered = []
     for item in items:
         title = item.get("title", "").lower()
+        if r.get("symbol") == "6522.T" and any(x in title for x in ["学戦都市アスタリスク", "アニメ", "abema"]):
+            continue
         if terms and not any(term.lower() in title for term in terms):
             continue
         if before_market_close and cutoff is not None:
