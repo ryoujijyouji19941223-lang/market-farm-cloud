@@ -1,0 +1,40 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'market_farm/**'
+      - 'tests/**'
+      - 'config.json'
+      - 'requirements.txt'
+      - '.github/workflows/tests.yml'
+  pull_request:
+    paths:
+      - 'market_farm/**'
+      - 'tests/**'
+      - 'config.json'
+      - 'requirements.txt'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: market-farm-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHONPATH: ${{ github.workspace }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt pytest
+      - run: python -m pytest -q
