@@ -32,8 +32,22 @@ def sentiment(items):
 
 
 def fetch_asset_news(asset: dict):
-    query = " OR ".join(asset.get("keywords", [])[:3])
+    query = " OR ".join(asset.get("keywords", [])[:4])
     if not query:
         return [], 0.0
     items = google_news_rss(query)
+
+    required = [x.lower() for x in asset.get("news_required_any", [])]
+    excluded = [x.lower() for x in asset.get("news_exclude_terms", [])]
+    if required or excluded:
+        filtered = []
+        for item in items:
+            title = item.get("title", "").lower()
+            if excluded and any(term in title for term in excluded):
+                continue
+            if required and not any(term in title for term in required):
+                continue
+            filtered.append(item)
+        items = filtered
+
     return items, sentiment(items)
