@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T06:56:41.582641+00:00",
+  "generated_at": "2026-09-22T15:29:17.513428+00:00",
   "replay_months": [
     "2026-04",
     "2026-05",
@@ -9,7 +9,7 @@
   ],
   "replay_month_count": 5,
   "replay_rows": 3555,
-  "live_settled_rows": 4,
+  "live_settled_rows": 5,
   "note": "Diagnostics only. These findings must not auto-change the production model.",
   "by_asset": {
     "1736.T": {
@@ -1435,14 +1435,15 @@
     "GC=F": {
       "name": "金",
       "summary": {
-        "observations": 1,
-        "signals": 0,
-        "coverage": 0.0,
-        "correct": 0,
-        "accuracy": null
+        "observations": 2,
+        "signals": 1,
+        "coverage": 0.5,
+        "correct": 1,
+        "accuracy": 1.0
       },
       "result_types": {
-        "動きを見逃した": 1
+        "動きを見逃した": 1,
+        "一致": 1
       }
     },
     "USDJPY=X": {
