@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T16:58:23.598629+00:00",
+  "generated_at": "2026-09-22T01:34:53.475916+00:00",
   "replay_months": [
     "2026-05",
     "2026-06",
@@ -8,7 +8,7 @@
   ],
   "replay_month_count": 4,
   "replay_rows": 2790,
-  "live_settled_rows": 1,
+  "live_settled_rows": 4,
   "note": "Diagnostics only. These findings must not auto-change the production model.",
   "by_asset": {
     "1736.T": {
@@ -1405,8 +1405,47 @@
     }
   },
   "live_by_asset": {
+    "CHFJPY=X": {
+      "name": "スイスフラン円",
+      "summary": {
+        "observations": 1,
+        "signals": 0,
+        "coverage": 0.0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "result_types": {
+        "動きを見逃した": 1
+      }
+    },
+    "EURJPY=X": {
+      "name": "ユーロ円",
+      "summary": {
+        "observations": 1,
+        "signals": 0,
+        "coverage": 0.0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "result_types": {
+        "動きを見逃した": 1
+      }
+    },
     "GC=F": {
       "name": "金",
+      "summary": {
+        "observations": 1,
+        "signals": 0,
+        "coverage": 0.0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "result_types": {
+        "動きを見逃した": 1
+      }
+    },
+    "USDJPY=X": {
+      "name": "ドル円",
       "summary": {
         "observations": 1,
         "signals": 0,
