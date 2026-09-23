@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.5",
+  "status": "OPEN",
+  "created_at_jst": "2026-09-23T10:26:39.171304+09:00",
+  "prediction_date": "2026-09-23",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-09-23T10:26:39.171304+09:00",
+  "market_data_through": "2026-09-22",
+  "reference_price": 4385.0,
+  "prediction": {
+    "direction": "FLAT",
+    "direction_score": 0.46194346536321557,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.06899327576297148,
+      "direction": "DOWN",
+      "day_change": 0.00025094041395923306,
+      "momentum5": 0.012047682252945613,
+      "trend": -0.014661723685581496,
+      "volatility": 0.19560418884088926
+    },
+    "news": {
+      "score": 0.0,
+      "direction": "NEUTRAL",
+      "headlines": []
+    },
+    "outside_wind": {
+      "score": -0.1494157055067904,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": -0.7425191633445158,
+        "oil_pressure": -0.7379761162395876,
+        "japan_risk": -0.04722332218601655,
+        "usd_rate_pressure": 0.006513377413480015
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
