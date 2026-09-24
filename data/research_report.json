@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T15:24:51.054794+00:00",
+  "generated_at": "2026-09-24T01:19:18.198685+00:00",
   "replay_months": [
     "2026-03",
     "2026-04",
@@ -10,7 +10,7 @@
   ],
   "replay_month_count": 6,
   "replay_rows": 4323,
-  "live_settled_rows": 9,
+  "live_settled_rows": 36,
   "note": "Diagnostics only. These findings must not auto-change the production model.",
   "by_asset": {
     "1736.T": {
@@ -1407,31 +1407,135 @@
     }
   },
   "live_by_asset": {
-    "CHFJPY=X": {
-      "name": "スイスフラン円",
+    "1736.T": {
+      "name": "オーテック",
       "summary": {
-        "observations": 2,
+        "observations": 3,
+        "signals": 3,
+        "coverage": 1.0,
+        "correct": 3,
+        "accuracy": 1.0
+      },
+      "result_types": {
+        "一致": 3
+      }
+    },
+    "285A.T": {
+      "name": "キオクシア",
+      "summary": {
+        "observations": 3,
         "signals": 0,
         "coverage": 0.0,
         "correct": 0,
         "accuracy": null
       },
       "result_types": {
-        "動きを見逃した": 1,
+        "動きを見逃した": 3
+      }
+    },
+    "3656.T": {
+      "name": "KLab",
+      "summary": {
+        "observations": 3,
+        "signals": 0,
+        "coverage": 0.0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "result_types": {
+        "一致": 3
+      }
+    },
+    "5401.T": {
+      "name": "日本製鉄",
+      "summary": {
+        "observations": 3,
+        "signals": 0,
+        "coverage": 0.0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "result_types": {
+        "動きを見逃した": 3
+      }
+    },
+    "6522.T": {
+      "name": "アスタリスク",
+      "summary": {
+        "observations": 3,
+        "signals": 3,
+        "coverage": 1.0,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "result_types": {
+        "方向を逆に読んだ": 3
+      }
+    },
+    "7974.T": {
+      "name": "任天堂",
+      "summary": {
+        "observations": 3,
+        "signals": 3,
+        "coverage": 1.0,
+        "correct": 3,
+        "accuracy": 1.0
+      },
+      "result_types": {
+        "一致": 3
+      }
+    },
+    "8136.T": {
+      "name": "サンリオ",
+      "summary": {
+        "observations": 3,
+        "signals": 0,
+        "coverage": 0.0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "result_types": {
+        "動きを見逃した": 3
+      }
+    },
+    "8316.T": {
+      "name": "三井住友FG",
+      "summary": {
+        "observations": 3,
+        "signals": 0,
+        "coverage": 0.0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "result_types": {
+        "動きを見逃した": 3
+      }
+    },
+    "CHFJPY=X": {
+      "name": "スイスフラン円",
+      "summary": {
+        "observations": 3,
+        "signals": 0,
+        "coverage": 0.0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "result_types": {
+        "動きを見逃した": 2,
         "一致": 1
       }
     },
     "EURJPY=X": {
       "name": "ユーロ円",
       "summary": {
-        "observations": 2,
+        "observations": 3,
         "signals": 0,
         "coverage": 0.0,
         "correct": 0,
         "accuracy": null
       },
       "result_types": {
-        "動きを見逃した": 1,
+        "動きを見逃した": 2,
         "一致": 1
       }
     },
@@ -1452,14 +1556,14 @@
     "USDJPY=X": {
       "name": "ドル円",
       "summary": {
-        "observations": 2,
+        "observations": 3,
         "signals": 0,
         "coverage": 0.0,
         "correct": 0,
         "accuracy": null
       },
       "result_types": {
-        "動きを見逃した": 1,
+        "動きを見逃した": 2,
         "一致": 1
       }
     }

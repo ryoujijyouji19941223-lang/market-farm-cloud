@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "model_version": "market-farm-live-v0.5",
-  "status": "OPEN",
+  "status": "SETTLED",
   "created_at_jst": "2026-09-22T10:34:53.442721+09:00",
   "prediction_date": "2026-09-22",
   "symbol": "285A.T",
@@ -55,6 +55,32 @@
     "live_news": "Google News RSS headlines",
     "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
   },
-  "outcome": null,
-  "review": null
+  "outcome": {
+    "market_date": "2026-09-24",
+    "price": 56870.0,
+    "change": 0.04214770020157599,
+    "direction": "UP",
+    "correct": false,
+    "settled_at_jst": "2026-09-24T01:19:17.662313+00:00",
+    "target_policy": "FIRST_TRADED_MARKET_DATE_AFTER_REFERENCE",
+    "price_source": "yfinance daily adjusted close"
+  },
+  "review": {
+    "result_type": "動きを見逃した",
+    "supporting_factors": [],
+    "opposing_factors": [
+      "price",
+      "outside_wind"
+    ],
+    "neutral_factors": [
+      "news"
+    ],
+    "factor_directions": {
+      "price": "DOWN",
+      "news": "NEUTRAL",
+      "outside_wind": "UP"
+    },
+    "actual_change": 0.04214770020157599,
+    "note": "This is a mechanical post-mortem classification, not a causal proof."
+  }
 }

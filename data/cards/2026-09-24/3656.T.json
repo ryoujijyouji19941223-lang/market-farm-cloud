@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.5",
+  "status": "OPEN",
+  "created_at_jst": "2026-09-24T10:19:18.161952+09:00",
+  "prediction_date": "2026-09-24",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-09-24T10:19:18.161952+09:00",
+  "market_data_through": "2026-09-24",
+  "reference_price": 185.0,
+  "prediction": {
+    "direction": "FLAT",
+    "direction_score": 0.5457498413267452,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5415781089417825,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5106382978723404,
+    "heldout_signals": 47
+  },
+  "evidence": {
+    "price": {
+      "score": 0.11219964191299693,
+      "direction": "UP",
+      "day_change": 0.0,
+      "momentum5": 0.06321839080459779,
+      "trend": -0.01752493933674848,
+      "volatility": 0.409029516368004
+    },
+    "news": {
+      "score": 0.0,
+      "direction": "NEUTRAL",
+      "headlines": []
+    },
+    "outside_wind": {
+      "score": 0.08023758791779656,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.5014849244862285,
+        "oil_pressure": -0.5393929033894307,
+        "japan_risk": -0.12742899452787726,
+        "usd_rate_pressure": 0.1391820987772745
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

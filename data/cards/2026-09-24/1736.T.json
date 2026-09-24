@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.5",
+  "status": "OPEN",
+  "created_at_jst": "2026-09-24T10:19:18.161952+09:00",
+  "prediction_date": "2026-09-24",
+  "symbol": "1736.T",
+  "name": "オーテック",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-09-24T10:19:18.161952+09:00",
+  "market_data_through": "2026-09-24",
+  "reference_price": 2515.0,
+  "prediction": {
+    "direction": "UP",
+    "direction_score": 0.6320067765674685,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.3438216504542191,
+      "direction": "UP",
+      "day_change": 0.006000000000000005,
+      "momentum5": 0.04748021657642654,
+      "trend": 0.02106240330067055,
+      "volatility": 0.13136413005908373
+    },
+    "news": {
+      "score": 0.0,
+      "direction": "NEUTRAL",
+      "headlines": []
+    },
+    "outside_wind": {
+      "score": 0.08023758791779656,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.5014849244862285,
+        "oil_pressure": -0.5393929033894307,
+        "japan_risk": -0.12742899452787726,
+        "usd_rate_pressure": 0.1391820987772745
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
