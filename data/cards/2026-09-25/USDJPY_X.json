@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.5",
+  "status": "OPEN",
+  "created_at_jst": "2026-09-25T10:25:09.083977+09:00",
+  "prediction_date": "2026-09-25",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-09-25T10:25:09.083977+09:00",
+  "market_data_through": "2026-09-25",
+  "reference_price": 158.65699768066406,
+  "prediction": {
+    "direction": "FLAT",
+    "direction_score": 0.5470304441330682,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.46066089834844137,
+    "direction": "FLAT",
+    "price_coef": -0.5,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5128205128205128,
+    "heldout_signals": 39
+  },
+  "evidence": {
+    "price": {
+      "score": 0.127833766604453,
+      "direction": "UP",
+      "day_change": 0.0024768476449459342,
+      "momentum5": 0.016191738328608096,
+      "trend": 0.007971256510572955,
+      "volatility": 0.11599182999694305
+    },
+    "news": {
+      "score": 0.0,
+      "direction": "NEUTRAL",
+      "headlines": []
+    },
+    "outside_wind": {
+      "score": -0.0077568940894685925,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.5010963855692219,
+        "oil_pressure": -0.4111473153605738,
+        "japan_risk": -0.11678571791114956,
+        "usd_rate_pressure": 0.15162653384813085
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
