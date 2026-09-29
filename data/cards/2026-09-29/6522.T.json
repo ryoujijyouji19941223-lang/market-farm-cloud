@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.5",
+  "status": "OPEN",
+  "created_at_jst": "2026-09-29T11:33:31.081828+09:00",
+  "prediction_date": "2026-09-29",
+  "symbol": "6522.T",
+  "name": "アスタリスク",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-09-29T11:33:31.081828+09:00",
+  "market_data_through": "2026-09-29",
+  "reference_price": 1243.0,
+  "prediction": {
+    "direction": "DOWN",
+    "direction_score": 0.29119467410041505,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.48035255117326264,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5714285714285714,
+    "heldout_signals": 49
+  },
+  "evidence": {
+    "price": {
+      "score": -0.9027091157538486,
+      "direction": "DOWN",
+      "day_change": -0.02202989771833197,
+      "momentum5": -0.0992753623188406,
+      "trend": -0.13619536273299993,
+      "volatility": 1.4335714413065486
+    },
+    "news": {
+      "score": 0.0,
+      "direction": "NEUTRAL",
+      "headlines": []
+    },
+    "outside_wind": {
+      "score": -0.054986211679900844,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.34366382299938025,
+        "oil_pressure": -0.12319903113538588,
+        "japan_risk": -0.05344840817400476,
+        "usd_rate_pressure": 0.24583521272870157
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

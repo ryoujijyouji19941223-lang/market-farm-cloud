@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.5",
+  "status": "OPEN",
+  "created_at_jst": "2026-09-29T11:33:31.081828+09:00",
+  "prediction_date": "2026-09-29",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-09-29T11:33:31.081828+09:00",
+  "market_data_through": "2026-09-29",
+  "reference_price": 7887.0,
+  "prediction": {
+    "direction": "DOWN",
+    "direction_score": 0.30930791416866793,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.5452028087255225,
+      "direction": "DOWN",
+      "day_change": -0.014001750218777365,
+      "momentum5": -0.06938053097345132,
+      "trend": -0.041750913412081814,
+      "volatility": 0.35421525109237345
+    },
+    "news": {
+      "score": 0.0,
+      "direction": "NEUTRAL",
+      "headlines": []
+    },
+    "outside_wind": {
+      "score": -0.054986211679900844,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.34366382299938025,
+        "oil_pressure": -0.12319903113538588,
+        "japan_risk": -0.05344840817400476,
+        "usd_rate_pressure": 0.24583521272870157
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
