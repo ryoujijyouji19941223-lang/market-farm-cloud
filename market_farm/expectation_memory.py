@@ -105,3 +105,16 @@ def promote_expectation(row: dict, released_at: str, *, provenance: str) -> dict
     promoted["visibility"] = "public"
     promoted["release_date_provenance"] = provenance
     return promoted
+
+
+def load_all_expectations() -> list[dict]:
+    out = []
+    if not STORE.exists():
+        return out
+    for path in sorted(STORE.glob("*.jsonl")):
+        for line in path.read_text(encoding="utf-8").splitlines():
+            try:
+                out.append(json.loads(line))
+            except Exception:
+                continue
+    return out
