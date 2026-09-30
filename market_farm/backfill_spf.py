@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import io
 import json
+from dataclasses import asdict
 import re
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -10,7 +11,8 @@ from zoneinfo import ZoneInfo
 import pandas as pd
 import requests
 
-from .expectation_memory import make_expectation, save_expectations
+from .expectation_memory import Expectation, make_expectation, save_expectations, promote_expectation
+from .spf_release_dates import fetch_release_dates
 
 ET = ZoneInfo("America/New_York")
 STATUS = Path("data/expectations/spf_backfill_status.json")
@@ -67,6 +69,7 @@ def parse_median_growth(data: bytes) -> list:
     book = pd.ExcelFile(io.BytesIO(data))
     frame = pd.read_excel(book, sheet_name=book.sheet_names[0])
     out = []
+    release_dates = fetch_release_dates()
     for _, row in frame.iterrows():
         survey = _survey_quarter(row)
         if survey is None:
@@ -82,7 +85,7 @@ def parse_median_growth(data: bytes) -> list:
             # A quarterly target ends after the survey publication. This is not
             # an exact government release timestamp; it identifies the forecast horizon.
             scheduled = available + timedelta(days=max(7, horizon * 91 + 7))
-            out.append(make_expectation(
+            item = make_expectation(
                 event_key=f"SPF:{indicator}:{target_year}Q{target_quarter}",
                 available_at=available.isoformat(),
                 scheduled_for=scheduled.isoformat(),
@@ -94,7 +97,12 @@ def parse_median_growth(data: bytes) -> list:
                 source_url=MEDIAN_GROWTH,
                 visibility="quarantined_release_date_proxy",
                 observation_basis="professional_forecaster_survey",
-            ))
+            )
+            release = release_dates.get(f"{year}-Q{quarter}")
+            if release:
+                promoted = promote_expectation(asdict(item), release, provenance="philadelphia_fed_spf_release_dates")
+                item = Expectation(**{k: promoted[k] for k in Expectation.__dataclass_fields__})
+            out.append(item)
     return out
 
 
