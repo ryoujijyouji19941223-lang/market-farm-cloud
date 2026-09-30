@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -102,6 +103,22 @@ def main():
             })
 
     saved = save_reactions(out)
+    reaction_coverage = {}
+    for source_id in SOURCES:
+        statuses = Counter(
+            row.get("reaction", {}).get("status", "UNKNOWN")
+            for row in out if row["source_id"] == source_id
+        )
+        reaction_coverage[source_id] = {
+            "total_events": sum(statuses.values()),
+            "usable_reactions": statuses.get("OK", 0),
+            "coverage": (
+                statuses.get("OK", 0) / sum(statuses.values())
+                if statuses else 0.0
+            ),
+            "status_counts": dict(statuses),
+        }
+
     STATUS.parent.mkdir(parents=True, exist_ok=True)
     STATUS.write_text(json.dumps({
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -110,6 +127,7 @@ def main():
         "reaction_rows": len(out),
         "saved": saved,
         "sources": source_status,
+        "reaction_coverage": reaction_coverage,
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"reaction rows={len(out)} saved={saved}")
 
