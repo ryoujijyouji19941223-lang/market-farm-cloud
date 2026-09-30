@@ -10,7 +10,7 @@ def test_dgs10_fallback_is_scaled_to_percent(monkeypatch):
         raise RuntimeError("fred down")
 
     idx = pd.date_range("2026-01-02", periods=2, freq="B")
-    proxy = pd.DataFrame({"close": [50.0, 51.0]}, index=idx)
+    proxy = pd.DataFrame({"close": [5.0, 5.1]}, index=idx)
 
     monkeypatch.setattr(reaction_data, "_fred_frame", fail_fred)
     monkeypatch.setattr(
