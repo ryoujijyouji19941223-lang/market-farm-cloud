@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-09-30T07:24:38.984803-04:00",
+  "results": [
+    {
+      "code": "routput",
+      "workbook_url": "https://www.philadelphiafed.org/-/media/FRBP/Assets/Surveys-And-Data/real-time-data/data-files/xlsx/routput_first_second_third.xlsx?sc_lang=en&hash=AB8BB59BBBF6840DE1448851E90D7A80",
+      "parsed": 241,
+      "saved": 241,
+      "spf_equivalent": true,
+      "release_dates_promoted": 111
+    }
+  ],
+  "errors": [
+    {
+      "code": "pcpi",
+      "error": "RuntimeError('pcpi: official first-release workbook parsed zero rows')"
+    },
+    {
+      "code": "pcpix",
+      "error": "RuntimeError('pcpix: official first-release workbook parsed zero rows')"
+    }
+  ],
+  "note": "First-release values are archived immediately. GDP observations with verified BEA release dates are promoted to public_realtime; exact timestamps are required before post-release reaction measurement. Others remain unresolved."
+}

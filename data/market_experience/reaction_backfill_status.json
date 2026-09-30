@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-09-30T11:26:43.149066+00:00",
+  "actual_release_count": 110,
+  "eligibility_rule": "exact public release timestamp required",
+  "reaction_rows": 440,
+  "saved": 440,
+  "sources": {
+    "usd_jpy": {
+      "status": "fetch_error",
+      "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=60)"
+    },
+    "us10y": {
+      "status": "fetch_error",
+      "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=60)"
+    },
+    "sp500": {
+      "status": "ok",
+      "rows": 7584,
+      "first_date": "1996-07-22 00:00:00",
+      "last_date": "2026-09-11 00:00:00"
+    },
+    "gold_futures": {
+      "status": "ok",
+      "rows": 6533,
+      "first_date": "2000-08-30 00:00:00",
+      "last_date": "2026-09-11 00:00:00"
+    }
+  }
+}
