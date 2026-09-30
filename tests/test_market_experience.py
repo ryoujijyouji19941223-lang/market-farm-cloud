@@ -27,12 +27,13 @@ def test_expectation_must_precede_actual():
 
 
 def test_reaction_is_measured_after_release():
-    idx = pd.date_range("2026-09-11", periods=8, freq="D", tz=JST)
-    frame = pd.DataFrame({"close": [100, 101, 102, 103, 104, 105, 106, 107]}, index=idx)
+    idx = pd.date_range("2026-09-10", periods=9, freq="D", tz=JST)
+    frame = pd.DataFrame({"close": [100, 101, 102, 103, 104, 105, 106, 107, 108]}, index=idx)
     out = reaction_from_frame(frame, "2026-09-11T21:30:00+09:00")
     assert out["status"] == "OK"
-    assert out["base_time"].startswith("2026-09-12")
-    assert out["horizons"]["1d"]["return"] > 0
+    assert out["base_time"].startswith("2026-09-10")
+    assert out["first_reaction_time"].startswith("2026-09-11")
+    assert out["horizons"]["1d"]["return"] == pytest.approx(0.01)
 
 
 def test_experience_rejects_future_actual():
@@ -43,3 +44,18 @@ def test_experience_rejects_future_actual():
             actual={"record_id": "a", "available_at": "2026-09-11T21:30:00+09:00", "value": 1},
             surprise={}, semantic={}, reactions={}, provenance={},
         )
+
+
+def test_after_close_release_uses_next_session():
+    idx = pd.date_range("2026-09-10", periods=5, freq="D", tz=JST)
+    frame = pd.DataFrame({"close": [100, 101, 102, 103, 104]}, index=idx)
+    # 18:00 New York: the Sep 11 close was already known, so Sep 12 is first reaction session.
+    out = reaction_from_frame(
+        frame,
+        "2026-09-11T18:00:00-04:00",
+        market_timezone="America/New_York",
+        close_hour=16,
+    )
+    assert out["status"] == "OK"
+    assert out["base_time"].startswith("2026-09-11")
+    assert out["first_reaction_time"].startswith("2026-09-12")
