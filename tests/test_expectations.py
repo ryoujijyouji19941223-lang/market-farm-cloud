@@ -79,3 +79,25 @@ def test_verified_release_promotes_quarantined_forecast():
     )
     assert fixed["visibility"] == "public"
     assert fixed["available_at"] == "1991-02-20T23:59:59-05:00"
+
+
+def test_quarantined_historical_survey_is_hidden(tmp_path, monkeypatch):
+    monkeypatch.setattr("market_farm.expectation_memory.STORE", tmp_path)
+    item = make_expectation(
+        event_key="LIVINGSTON:US_CPI_LEVEL:1950-06:6M",
+        available_at="1950-06-30T23:59:59-04:00",
+        scheduled_for="1950-12-28T23:59:59-05:00",
+        indicator="US_CPI_LEVEL",
+        jurisdiction="US",
+        expected_value=24.0,
+        unit="index",
+        source="Livingston",
+        source_url="https://example.test",
+        visibility="quarantined_release_date_proxy",
+    )
+    save_expectations([item])
+    rows = visible_expectations(
+        datetime(1950, 6, 1, tzinfo=JST),
+        datetime(1950, 7, 31, tzinfo=JST),
+    )
+    assert rows == []
