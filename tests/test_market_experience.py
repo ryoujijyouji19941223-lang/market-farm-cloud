@@ -59,3 +59,15 @@ def test_after_close_release_uses_next_session():
     assert out["status"] == "OK"
     assert out["base_time"].startswith("2026-09-11")
     assert out["first_reaction_time"].startswith("2026-09-12")
+
+
+def test_large_market_data_gap_is_not_treated_as_reaction():
+    idx = pd.date_range("2000-01-03", periods=5, freq="B")
+    frame = pd.DataFrame({"close": [100, 101, 102, 103, 104]}, index=idx)
+    out = reaction_from_frame(
+        frame,
+        "1997-01-03T08:30:00-05:00",
+        market_timezone="America/New_York",
+        close_hour=16,
+    )
+    assert out["status"] == "MISSING_MARKET_WINDOW"
