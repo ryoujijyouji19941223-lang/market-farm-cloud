@@ -117,17 +117,23 @@ def main():
     raw = _download_excel(MEDIAN_GROWTH)
     items = parse_median_growth(raw)
     saved = save_expectations(items)
+    public_count = sum(x.visibility == "public" for x in items)
+    quarantined_count = len(items) - public_count
     STATUS.parent.mkdir(parents=True, exist_ok=True)
     STATUS.write_text(json.dumps({
         "source": "Philadelphia Fed SPF",
         "dataset": MEDIAN_GROWTH,
         "parsed": len(items),
         "saved": saved,
-        "visibility": "quarantined_release_date_proxy",
-        "note": "Rows remain hidden from replay until exact historical publication dates are joined.",
+        "public": public_count,
+        "quarantined": quarantined_count,
+        "note": (
+            "Only forecasts with independently verified Philadelphia Fed release "
+            "dates are public to historical replay; the rest remain quarantined."
+        ),
         "generated_at": datetime.now(ET).isoformat(),
     }, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"SPF parsed={len(items)} saved={saved}; quarantined pending exact release dates")
+    print(f"SPF parsed={len(items)} saved={saved} public={public_count} quarantined={quarantined_count}")
 
 
 if __name__ == "__main__":
