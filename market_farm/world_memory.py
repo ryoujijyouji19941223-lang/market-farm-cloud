@@ -10,6 +10,7 @@ from typing import Iterable
 from .news_archive import load_range
 from .official_archive import load_official_range, visible_official
 from .event_memory import group_evidence
+from .expectation_memory import visible_expectations
 
 MEMORY = Path("data/world_memory")
 
@@ -95,6 +96,7 @@ def world_as_of(cutoff: datetime, *, lookback_hours: int = 72, queries: Iterable
 
     evidence_rows = [asdict(x) for x in evidence]
     events = group_evidence(evidence_rows)
+    expectations = visible_expectations(start, cutoff)
 
     return {
         "as_of": cutoff.isoformat(),
@@ -103,6 +105,8 @@ def world_as_of(cutoff: datetime, *, lookback_hours: int = 72, queries: Iterable
         "source_mix": by_reliability,
         "event_count": len(events),
         "events": events,
+        "expectation_count": len(expectations),
+        "expectations": expectations,
         "evidence": evidence_rows,
     }
 
