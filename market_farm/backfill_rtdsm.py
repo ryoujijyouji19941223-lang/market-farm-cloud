@@ -146,7 +146,6 @@ def backfill_one(code: str) -> dict:
                 continue
             row.update(release)
             row["information_tier"] = "public_realtime"
-            row["reaction_eligible"] = False
             promoted += 1
     saved = save_rows(f"rtdsm_{code}", rows)
     return {
