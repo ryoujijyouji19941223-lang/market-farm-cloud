@@ -8,6 +8,7 @@ from zoneinfo import ZoneInfo
 
 JST = ZoneInfo("Asia/Tokyo")
 ARCHIVE = Path("data/news_archive")
+MANIFEST = ARCHIVE / "manifest.json"
 
 
 def _month_key(seen_jst: str) -> str:
@@ -78,3 +79,38 @@ def load_range(start_jst: datetime, end_jst: datetime, *, query: str | None = No
                 row["_seen"] = seen
                 out.append(row)
     return sorted(out, key=lambda x: x["_seen"])
+
+
+def load_manifest() -> dict:
+    if not MANIFEST.exists():
+        return {"ranges": {}}
+    try:
+        return json.loads(MANIFEST.read_text(encoding="utf-8"))
+    except Exception:
+        return {"ranges": {}}
+
+
+def range_key(query: str, start_jst: datetime, end_jst: datetime) -> str:
+    raw = query + "|" + start_jst.isoformat() + "|" + end_jst.isoformat()
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:24]
+
+
+def range_status(query: str, start_jst: datetime, end_jst: datetime) -> dict | None:
+    return load_manifest().get("ranges", {}).get(range_key(query, start_jst, end_jst))
+
+
+def record_range(query: str, start_jst: datetime, end_jst: datetime, *, status: str, article_count: int, provider: str, error: str | None = None):
+    manifest = load_manifest()
+    key = range_key(query, start_jst, end_jst)
+    manifest.setdefault("ranges", {})[key] = {
+        "query": query,
+        "start_jst": start_jst.isoformat(),
+        "end_jst": end_jst.isoformat(),
+        "status": status,
+        "article_count": int(article_count),
+        "provider": provider,
+        "error": error,
+        "updated_at": datetime.now(JST).isoformat(),
+    }
+    MANIFEST.parent.mkdir(parents=True, exist_ok=True)
+    MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
