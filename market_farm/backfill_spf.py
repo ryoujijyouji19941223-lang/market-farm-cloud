@@ -127,6 +127,8 @@ def parse_median_growth(data: bytes, release_dates: dict[str, str] | None = None
 def main():
     raw = _download_excel(MEDIAN_GROWTH)
     items = parse_median_growth(raw)
+    if not items:
+        raise RuntimeError("SPF official workbook parsed zero forecasts; refusing silent empty backfill")
     saved = save_expectations(items)
     public_count = sum(x.visibility == "public" for x in items)
     quarantined_count = len(items) - public_count
