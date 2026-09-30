@@ -82,7 +82,8 @@ def visible_expectations(start: datetime, cutoff: datetime) -> list[dict]:
                 scheduled = _aware(row["scheduled_for"], "scheduled_for")
             except Exception:
                 continue
-            if start <= available <= cutoff and available < scheduled:
+            if (start <= available <= cutoff and available < scheduled
+                    and row.get("visibility", "public") == "public"):
                 out.append(row)
     return sorted(out, key=lambda x: x["available_at"])
 
