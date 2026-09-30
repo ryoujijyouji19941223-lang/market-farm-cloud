@@ -13,6 +13,7 @@ import requests
 
 from .expectation_memory import Expectation, make_expectation, save_expectations, promote_expectation
 from .spf_release_dates import fetch_release_dates
+from .canonical_events import canonical_event_key
 from .event_keys import event_key
 
 ET = ZoneInfo("America/New_York")
