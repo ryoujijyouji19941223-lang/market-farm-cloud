@@ -1,0 +1,65 @@
+name: Historical Market Memory
+
+on:
+  schedule:
+    # RTDSM is updated at month-end; run on the 2nd at 09:35 JST.
+    - cron: '35 0 2 * *'
+  push:
+    branches: [main]
+    paths:
+      - 'market_farm/backfill_spf.py'
+      - 'market_farm/backfill_livingston.py'
+      - 'market_farm/backfill_rtdsm.py'
+      - 'market_farm/build_experience_pairs.py'
+      - 'market_farm/event_keys.py'
+      - 'market_farm/actual_archive.py'
+      - 'tests/test_historical_memory.py'
+      - '.github/workflows/historical-memory.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-farm-historical-memory
+  cancel-in-progress: false
+
+env:
+  PYTHONPATH: ${{ github.workspace }}
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt pytest
+      - name: Test historical memory safety
+        run: python -m pytest -q tests/test_expectations.py tests/test_market_experience.py tests/test_information_tiers.py tests/test_historical_memory.py
+      - name: Backfill expectations
+        run: |
+          python -m market_farm.backfill_spf
+          python -m market_farm.backfill_livingston
+      - name: Backfill first-release actuals
+        run: python -m market_farm.backfill_rtdsm
+      - name: Build expectation-actual pairs
+        run: python -m market_farm.build_experience_pairs
+      - name: Persist historical memory
+        shell: bash
+        run: |
+          git config user.name "market-farm-bot"
+          git config user.email "market-farm-bot@users.noreply.github.com"
+          git add data/expectations data/actual_releases data/market_experience
+          if git diff --cached --quiet; then
+            echo "No historical-memory changes"
+            exit 0
+          fi
+          git commit -m "market farm: refresh historical memory $(date -u +%F)"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
