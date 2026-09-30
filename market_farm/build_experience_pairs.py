@@ -20,6 +20,8 @@ def build_pairs() -> dict:
     pairs = []
     unmatched = 0
     for exp in expectations:
+        if exp.get("visibility") != "public":
+            continue
         matches = actual_by_key.get(exp.get("event_key"), [])
         if not matches:
             unmatched += 1
