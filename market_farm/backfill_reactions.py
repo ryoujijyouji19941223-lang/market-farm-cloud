@@ -67,6 +67,10 @@ def main():
                 "rows": int(len(frame)),
                 "first_date": None if frame.empty else str(frame.index.min()),
                 "last_date": None if frame.empty else str(frame.index.max()),
+                "data_provider": frame.attrs.get("data_provider"),
+                "fallback": bool(frame.attrs.get("fallback", False)),
+                "data_provenance_url": frame.attrs.get("provenance_url", source.provenance_url),
+                "primary_error": frame.attrs.get("primary_error"),
             }
         except Exception as exc:
             frames[source_id] = None
@@ -88,6 +92,11 @@ def main():
                 )
                 reaction = _decorate_measurement(source, reaction)
 
+            data_provider = source_status.get(source_id, {}).get("data_provider")
+            fallback = source_status.get(source_id, {}).get("fallback", False)
+            data_url = source_status.get(source_id, {}).get(
+                "data_provenance_url", source.provenance_url
+            )
             out.append({
                 "reaction_id": _reaction_id(actual["record_id"], source_id),
                 "actual_record_id": actual["record_id"],
@@ -98,7 +107,9 @@ def main():
                 "symbol": source.symbol,
                 "unit": source.unit,
                 "information_tier": "post_event_evaluation",
-                "provenance_url": source.provenance_url,
+                "provenance_url": data_url,
+                "data_provider": data_provider,
+                "fallback": fallback,
                 "reaction": reaction,
             })
 
