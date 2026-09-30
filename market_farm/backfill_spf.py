@@ -71,16 +71,40 @@ def _target_from_column(name: str, year: int, quarter: int):
     return m.group(1), suffix, target_year, target_quarter
 
 
+
+def _header_row(book: pd.ExcelFile, sheet_name: str, required: set[str]) -> int | None:
+    preview = pd.read_excel(book, sheet_name=sheet_name, header=None, nrows=25)
+    wanted = {x.upper() for x in required}
+    for idx, row in preview.iterrows():
+        cells = {str(x).strip().upper() for x in row.tolist() if not pd.isna(x)}
+        if wanted.issubset(cells):
+            return int(idx)
+    return None
+
+
+def _sheet_variable(sheet_name: str, columns) -> str | None:
+    name = str(sheet_name).strip().upper()
+    if name in VARIABLES:
+        return name
+    normalized = [str(c).strip().upper() for c in columns]
+    for variable in VARIABLES:
+        if any(re.fullmatch(rf"{re.escape(variable)}[1-6]", col) for col in normalized):
+            return variable
+    return None
+
 def parse_median_growth(data: bytes, release_dates: dict[str, str] | None = None) -> list:
     book = pd.ExcelFile(io.BytesIO(data))
     out = []
     release_dates = fetch_release_dates() if release_dates is None else release_dates
 
     for sheet_name in book.sheet_names:
-        variable = str(sheet_name).strip().upper()
-        if variable not in VARIABLES:
+        header = _header_row(book, sheet_name, {"YEAR", "QUARTER"})
+        if header is None:
             continue
-        frame = pd.read_excel(book, sheet_name=sheet_name)
+        frame = pd.read_excel(book, sheet_name=sheet_name, header=header)
+        variable = _sheet_variable(sheet_name, frame.columns)
+        if variable is None:
+            continue
         for _, row in frame.iterrows():
             survey = _survey_quarter(row)
             if survey is None:
