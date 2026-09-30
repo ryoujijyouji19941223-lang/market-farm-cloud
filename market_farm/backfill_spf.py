@@ -13,6 +13,7 @@ import requests
 
 from .expectation_memory import Expectation, make_expectation, save_expectations, promote_expectation
 from .spf_release_dates import fetch_release_dates
+from .event_keys import event_key
 
 ET = ZoneInfo("America/New_York")
 STATUS = Path("data/expectations/spf_backfill_status.json")
@@ -55,14 +56,19 @@ def _release_proxy(year: int, quarter: int) -> datetime:
 def _target_from_column(name: str, year: int, quarter: int):
     text = str(name).upper().strip()
     # Growth workbooks commonly use variable+horizon columns such as CPI1/CPI2.
-    m = re.match(r"([A-Z]+)([0-4])$", text)
+    m = re.match(r"([A-Z]+)([1-6])$", text)
     if not m or m.group(1) not in VARIABLES:
         return None
-    horizon = int(m.group(2))
-    q0 = quarter - 1 + horizon
+    suffix = int(m.group(2))
+    # SPF convention: 1=historical previous quarter, 2=current quarter,
+    # 3..6 = one..four quarters ahead. Column 1 is not a forecast.
+    if suffix == 1:
+        return None
+    offset = suffix - 2
+    q0 = quarter - 1 + offset
     target_year = year + q0 // 4
     target_quarter = q0 % 4 + 1
-    return m.group(1), horizon, target_year, target_quarter
+    return m.group(1), suffix, target_year, target_quarter
 
 
 def parse_median_growth(data: bytes) -> list:
@@ -80,13 +86,14 @@ def parse_median_growth(data: bytes) -> list:
             target = _target_from_column(col, year, quarter)
             if target is None or pd.isna(row[col]):
                 continue
-            variable, horizon, target_year, target_quarter = target
+            variable, suffix, target_year, target_quarter = target
             indicator, unit = VARIABLES[variable]
             # A quarterly target ends after the survey publication. This is not
             # an exact government release timestamp; it identifies the forecast horizon.
-            scheduled = available + timedelta(days=max(7, horizon * 91 + 7))
+            offset = suffix - 2
+            scheduled = available + timedelta(days=max(7, (offset + 1) * 91))
             item = make_expectation(
-                event_key=f"SPF:{indicator}:{target_year}Q{target_quarter}",
+                event_key=event_key(indicator, f"{target_year}Q{target_quarter}"),
                 available_at=available.isoformat(),
                 scheduled_for=scheduled.isoformat(),
                 indicator=indicator,
