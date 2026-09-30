@@ -87,15 +87,25 @@ def _period(value, frequency: str) -> str | None:
         return None
 
 
+def _release_frame(book: pd.ExcelFile, sheet_name: str) -> pd.DataFrame:
+    preview = pd.read_excel(book, sheet_name=sheet_name, header=None, nrows=30)
+    for idx, row in preview.iterrows():
+        cells = {str(x).strip().upper() for x in row.tolist() if not pd.isna(x)}
+        if {"FIRST", "SECOND", "THIRD"}.issubset(cells):
+            return pd.read_excel(book, sheet_name=sheet_name, header=int(idx))
+    return pd.read_excel(book, sheet_name=sheet_name)
+
+
 def parse_first_releases(data: bytes, code: str, spec: dict, workbook_url: str) -> list[dict]:
     book = pd.ExcelFile(io.BytesIO(data))
     sheet = next((s for s in book.sheet_names if s.strip().upper() == "DATA"), book.sheet_names[0])
-    frame = pd.read_excel(book, sheet_name=sheet)
+    frame = _release_frame(book, sheet)
     cols = {str(c).strip().upper(): c for c in frame.columns}
     date_col = cols.get("DATE") or cols.get("OBSERVATION") or frame.columns[0]
     first_col = cols.get("FIRST")
     if first_col is None:
-        raise RuntimeError(f"{code}: workbook has no First column")
+        preview = [str(x) for x in frame.columns[:12]]
+        raise RuntimeError(f"{code}: workbook has no First column after header scan; columns={preview}")
 
     out = []
     for _, row in frame.iterrows():
