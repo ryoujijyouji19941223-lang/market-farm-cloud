@@ -37,7 +37,9 @@ def _decorate_measurement(source, reaction: dict) -> dict:
 def main():
     actuals = [
         row for row in load_rows()
-        if row.get("release_number") == 1 and row.get("information_tier") == "public_realtime"
+        if (row.get("release_number") == 1
+            and row.get("information_tier") == "public_realtime"
+            and row.get("reaction_eligible") is True)
     ]
     if not actuals:
         STATUS.parent.mkdir(parents=True, exist_ok=True)
@@ -104,6 +106,7 @@ def main():
     STATUS.write_text(json.dumps({
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "actual_release_count": len(actuals),
+        "eligibility_rule": "exact public release timestamp required",
         "reaction_rows": len(out),
         "saved": saved,
         "sources": source_status,
