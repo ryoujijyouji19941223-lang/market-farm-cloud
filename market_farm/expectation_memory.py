@@ -42,6 +42,7 @@ def make_expectation(*, event_key: str, available_at: str, scheduled_for: str,
                      indicator: str, jurisdiction: str, expected_value: float,
                      unit: str, source: str, source_url: str,
                      visibility: str = "public", observation_basis: str = "survey",
+                     target_period: str | None = None,
                      sample_size=None, low=None, high=None) -> Expectation:
     available = _aware(available_at, "available_at")
     scheduled = _aware(scheduled_for, "scheduled_for")
