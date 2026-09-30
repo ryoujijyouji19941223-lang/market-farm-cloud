@@ -116,6 +116,7 @@ def create_live_cards(cfg: dict, regime: dict, results: list[dict], now: datetim
             "reference_price": float(r["price"]),
             "prediction": {
                 "direction": direction,
+                "qualification": r.get("forecast_qualification", {}),
                 "direction_score": prob,
                 "note": "direction_score is a model score, not a calibrated probability",
             },
@@ -228,6 +229,7 @@ def settle_live_cards(results: list[dict], now: datetime | None = None):
         change = target_price / float(ref_price) - 1.0
         actual = "UP" if change > 0.002 else ("DOWN" if change < -0.002 else "FLAT")
         correct = actual == card.get("prediction", {}).get("direction")
+        decision = card.get("prediction", {}).get("qualification", {}).get("decision", "FORECAST")
 
         card["status"] = "SETTLED"
         card["outcome"] = {
@@ -236,6 +238,7 @@ def settle_live_cards(results: list[dict], now: datetime | None = None):
             "change": change,
             "direction": actual,
             "correct": bool(correct),
+            "scored_forecast": decision == "FORECAST",
             "settled_at_jst": (now or datetime.now().astimezone()).isoformat(),
             "target_policy": "FIRST_TRADED_MARKET_DATE_AFTER_REFERENCE",
             "price_source": "yfinance daily adjusted close",
@@ -261,6 +264,7 @@ def _refresh_index():
                 "status": card.get("status"),
                 "direction": card.get("prediction", {}).get("direction"),
                 "score": card.get("prediction", {}).get("direction_score"),
+                "decision": card.get("prediction", {}).get("qualification", {}).get("decision", "FORECAST"),
                 "market_data_through": card.get("market_data_through"),
                 "correct": (card.get("outcome") or {}).get("correct"),
                 "result_type": (card.get("review") or {}).get("result_type"),
@@ -269,6 +273,9 @@ def _refresh_index():
 
     settled = [r for r in rows if r.get("status") == "SETTLED"]
     correct = sum(1 for r in settled if r.get("correct"))
+    forecasted = [r for r in settled if r.get("decision") == "FORECAST"]
+    forecast_correct = sum(1 for r in forecasted if r.get("correct"))
+    abstained = [r for r in settled if r.get("decision") == "ABSTAIN"]
     index = {
         "updated_at": datetime.now().astimezone().isoformat(),
         "cards_total": len(rows),
@@ -276,6 +283,11 @@ def _refresh_index():
         "cards_settled": len(settled),
         "cards_correct": correct,
         "accuracy": (correct / len(settled)) if settled else None,
+        "forecasted_settled": len(forecasted),
+        "forecasted_correct": forecast_correct,
+        "forecasted_accuracy": (forecast_correct / len(forecasted)) if forecasted else None,
+        "abstained_settled": len(abstained),
+        "coverage": (len(forecasted) / len(settled)) if settled else None,
         "recent": rows[:36],
     }
     _save_json(INDEX_PATH, index)
