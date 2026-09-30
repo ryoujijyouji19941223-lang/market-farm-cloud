@@ -17,7 +17,7 @@ from .engine import load_config
 from .news import sentiment
 from .sensors import risk_adjust, probability
 from .state import load_state
-from .dashboard import render
+from .dashboard import render\nfrom .point_in_time import assert_market_frame_cutoff, assert_articles_cutoff, assert_snapshot_metadata
 
 JST = ZoneInfo("Asia/Tokyo")
 UTC = ZoneInfo("UTC")
@@ -230,6 +230,7 @@ def run_recent_news_backtest():
                 nscore = sentiment(public_news)
 
                 world_window = window_articles(world_articles, cutoff, 72)
+                assert_articles_cutoff(world_window, cutoff, "world news")
 
                 # Baseline: same long-history model that intentionally has no historical news.
                 base_raw = (0.68 / 0.83) * float(f["price_score"]) + (0.15 / 0.83) * float(f["macro"])
