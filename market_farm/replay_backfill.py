@@ -18,6 +18,7 @@ from .state import load_state
 from .dashboard import render
 from .research_report import build_report
 from .point_in_time import assert_market_frame_cutoff, assert_articles_cutoff, assert_snapshot_metadata
+from .decision import forecast_qualification
 
 JST = ZoneInfo("Asia/Tokyo")
 UTC = ZoneInfo("UTC")
@@ -206,6 +207,9 @@ def replay_month(month_dt):
                     float(news_score),
                     float(f["vol"]),
                 )
+                qualification = forecast_qualification(
+                    prob, float(f["price_score"]), float(news_score), float(f["macro"])
+                )
 
                 # First version freezes one evidence-based direction and checks
                 # which horizon that signal actually predicts best.
@@ -229,9 +233,9 @@ def replay_month(month_dt):
                     "world_news_examples": [article_public(a) for a in world72[-2:]],
                     "prediction_probability_up": prob,
                     "prediction_direction": pred,
+                    "forecast_qualification": qualification,
                     "horizons": horizons,
                 }
-                assert_snapshot_metadata(row)
                 assert_snapshot_metadata(row)
                 rows.append(row)
                 snapshot_count += 1
