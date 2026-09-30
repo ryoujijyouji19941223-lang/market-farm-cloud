@@ -21,6 +21,8 @@ class Expectation:
     unit: str
     source: str
     source_url: str
+    visibility: str
+    observation_basis: str
     sample_size: int | None = None
     low: float | None = None
     high: float | None = None
@@ -36,6 +38,7 @@ def _aware(value: str, field: str) -> datetime:
 def make_expectation(*, event_key: str, available_at: str, scheduled_for: str,
                      indicator: str, jurisdiction: str, expected_value: float,
                      unit: str, source: str, source_url: str,
+                     visibility: str = "public", observation_basis: str = "survey",
                      sample_size=None, low=None, high=None) -> Expectation:
     available = _aware(available_at, "available_at")
     scheduled = _aware(scheduled_for, "scheduled_for")
@@ -45,7 +48,7 @@ def make_expectation(*, event_key: str, available_at: str, scheduled_for: str,
     eid = hashlib.sha256(raw.encode("utf-8")).hexdigest()[:24]
     return Expectation(eid, event_key, available_at, scheduled_for, indicator,
                        jurisdiction, float(expected_value), unit, source,
-                       source_url, sample_size, low, high)
+                       source_url, visibility, observation_basis, sample_size, low, high)
 
 
 def save_expectations(items: list[Expectation]) -> int:
