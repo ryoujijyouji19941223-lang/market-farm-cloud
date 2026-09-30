@@ -1,4 +1,5 @@
 import pandas as pd
+import pytest
 
 from market_farm import reaction_data
 from market_farm.reaction_sources import SOURCES
@@ -19,8 +20,8 @@ def test_dgs10_fallback_is_scaled_to_percent(monkeypatch):
     )
 
     frame = reaction_data.fetch_reaction_frame(SOURCES["us10y"])
-    assert frame.iloc[0]["close"] == 5.0
-    assert frame.iloc[1]["close"] == 5.1
+    assert frame.iloc[0]["close"] == pytest.approx(5.0)
+    assert frame.iloc[1]["close"] == pytest.approx(5.1)
     assert frame.attrs["fallback"] is True
     assert frame.attrs["data_provider"] == "yfinance_tnx_proxy"
 
