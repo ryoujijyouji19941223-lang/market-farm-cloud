@@ -97,6 +97,7 @@ def parse_workbook(data: bytes) -> list:
                     source_url=MEDIAN_LEVELS,
                     visibility="quarantined_release_date_proxy",
                     observation_basis="professional_forecaster_survey",
+                    target_period=target.strftime("%Y-%m"),
                 ))
     return out
 
