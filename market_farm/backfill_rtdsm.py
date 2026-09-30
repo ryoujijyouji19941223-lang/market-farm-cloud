@@ -14,6 +14,7 @@ import requests
 
 from .actual_archive import save_rows
 from .event_keys import canonical_period, event_key
+from .bea_gdp_release_dates import fetch_gdp_advance_dates
 
 ET = ZoneInfo("America/New_York")
 STATUS = Path("data/actual_releases/rtdsm_status.json")
@@ -136,6 +137,17 @@ def backfill_one(code: str) -> dict:
     workbook_url = discover_workbook(spec["page"], code)
     raw = _get(workbook_url).content
     rows = parse_first_releases(raw, code, spec, workbook_url)
+    promoted = 0
+    if code == "routput":
+        release_dates = fetch_gdp_advance_dates()
+        for row in rows:
+            release = release_dates.get(row["observation_period"])
+            if not release:
+                continue
+            row.update(release)
+            row["information_tier"] = "public_realtime"
+            row["reaction_eligible"] = False
+            promoted += 1
     saved = save_rows(f"rtdsm_{code}", rows)
     return {
         "code": code,
@@ -143,6 +155,7 @@ def backfill_one(code: str) -> dict:
         "parsed": len(rows),
         "saved": saved,
         "spf_equivalent": spec["spf_equivalent"],
+        "release_dates_promoted": promoted,
     }
 
 
