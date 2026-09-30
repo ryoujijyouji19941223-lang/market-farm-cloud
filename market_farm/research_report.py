@@ -29,13 +29,15 @@ def accuracy(rows):
 
 
 def summarize_bucket(rows):
-    signals = [r for r in rows if r["prediction"] != "FLAT"]
+    forecasted = [r for r in rows if r.get("decision", "FORECAST") == "FORECAST"]
+    abstained = [r for r in rows if r.get("decision") == "ABSTAIN"]
     return {
         "observations": len(rows),
-        "signals": len(signals),
-        "coverage": (len(signals) / len(rows)) if rows else None,
-        "correct": sum(bool(r["correct"]) for r in signals),
-        "accuracy": accuracy(signals),
+        "signals": len(forecasted),
+        "abstained": len(abstained),
+        "coverage": (len(forecasted) / len(rows)) if rows else None,
+        "correct": sum(bool(r["correct"]) for r in forecasted),
+        "accuracy": accuracy(forecasted),
     }
 
 
@@ -80,6 +82,7 @@ def replay_rows():
                         "name": asset.get("name", symbol),
                         "horizon": horizon,
                         "prediction": prediction,
+                        "decision": (snap.get("forecast_qualification") or {}).get("decision", "FORECAST"),
                         "actual": outcome.get("direction"),
                         "correct": prediction == outcome.get("direction"),
                         "probability_up": prob,
@@ -109,6 +112,7 @@ def live_rows():
             "name": card.get("name"),
             "horizon": "next_day",
             "prediction": card.get("prediction", {}).get("direction"),
+            "decision": card.get("prediction", {}).get("qualification", {}).get("decision", "FORECAST"),
             "actual": card.get("outcome", {}).get("direction"),
             "correct": bool(card.get("outcome", {}).get("correct")),
             "probability_up": card.get("prediction", {}).get("direction_score"),
