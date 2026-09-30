@@ -39,7 +39,7 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt pytest
       - name: Test memory safety
-        run: python -m pytest -q tests/test_point_in_time.py tests/test_world_memory.py tests/test_external_memory.py
+        run: python -m pytest -q tests/test_point_in_time.py tests/test_world_memory.py tests/test_external_memory.py tests/test_expectations.py tests/test_market_experience.py tests/test_information_tiers.py tests/test_experience_pairs.py
       - name: Collect official evidence
         run: python -m market_farm.collect_official
       - name: Save official archive
