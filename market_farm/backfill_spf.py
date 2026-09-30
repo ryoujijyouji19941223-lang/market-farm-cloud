@@ -12,7 +12,7 @@ from zoneinfo import ZoneInfo
 import pandas as pd
 import requests
 
-from .canonical_events import canonical_event_key
+from .event_keys import event_key
 from .expectation_memory import Expectation, make_expectation, promote_expectation, save_expectations
 from .spf_release_dates import fetch_release_dates
 
@@ -43,20 +43,23 @@ def _survey_quarter(row: pd.Series) -> tuple[int, int] | None:
         return None
 
 
-def _target_from_column(name: str, variable: str, year: int, quarter: int):
+def _target_from_column(name: str, year: int, quarter: int):
     text = str(name).upper().strip()
     # Official MedianGrowth workbook uses names such as drgdp2 ... drgdp6.
-    m = re.fullmatch(rf"D?{re.escape(variable)}([1-6])", text)
+    m = re.fullmatch(r"D?([A-Z_]+)([1-6])", text)
     if not m:
         return None
-    suffix = int(m.group(1))
+    variable = m.group(1)
+    if variable not in VARIABLES:
+        return None
+    suffix = int(m.group(2))
     # SPF convention: 1=previous quarter history, 2=current quarter,
     # 3..6=one through four quarters ahead.
     if suffix == 1:
         return None
     offset = suffix - 2
     q0 = quarter - 1 + offset
-    return suffix, year + q0 // 4, q0 % 4 + 1
+    return variable, suffix, year + q0 // 4, q0 % 4 + 1
 
 
 def _target_release_marker(year: int, quarter: int) -> datetime:
@@ -99,10 +102,12 @@ def parse_median_growth(data: bytes, release_dates: dict[str, str] | None = None
             year, quarter = survey
 
             for col in frame.columns:
-                target = _target_from_column(col, variable, year, quarter)
+                target = _target_from_column(col, year, quarter)
                 if target is None or pd.isna(row[col]):
                     continue
-                _, target_year, target_quarter = target
+                parsed_variable, _, target_year, target_quarter = target
+                if parsed_variable != variable:
+                    continue
                 target_period = f"{target_year}-Q{target_quarter}"
                 scheduled = _target_release_marker(target_year, target_quarter)
 
@@ -110,7 +115,7 @@ def parse_median_growth(data: bytes, release_dates: dict[str, str] | None = None
                 proxy_month = {1: 3, 2: 6, 3: 9, 4: 12}[quarter]
                 proxy = datetime(year, proxy_month, 28, 23, 59, 59, tzinfo=ET)
                 item = make_expectation(
-                    event_key=canonical_event_key(indicator, target_period),
+                    event_key=event_key(indicator, target_period),
                     available_at=proxy.isoformat(),
                     scheduled_for=scheduled.isoformat(),
                     indicator=indicator,
