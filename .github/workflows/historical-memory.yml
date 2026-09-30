@@ -11,6 +11,12 @@ on:
       - 'market_farm/backfill_livingston.py'
       - 'market_farm/backfill_rtdsm.py'
       - 'market_farm/build_experience_pairs.py'
+      - 'market_farm/backfill_reactions.py'
+      - 'market_farm/build_market_experiences.py'
+      - 'market_farm/reaction_*.py'
+      - 'market_farm/market_experience.py'
+      - 'market_farm/experience_builder.py'
+      - 'market_farm/indicator_semantics.py'
       - 'market_farm/event_keys.py'
       - 'market_farm/actual_archive.py'
       - 'market_farm/bea_gdp_release_dates.py'
@@ -18,6 +24,7 @@ on:
       - 'market_farm/expectation_memory.py'
       - 'market_farm/release_gate.py'
       - 'tests/test_historical_memory.py'
+      - 'tests/test_market_experience.py'
       - '.github/workflows/historical-memory.yml'
   workflow_dispatch:
 
@@ -34,7 +41,7 @@ env:
 jobs:
   backfill:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v7
         with:
@@ -44,16 +51,33 @@ jobs:
           python-version: '3.12'
           cache: pip
       - run: pip install -r requirements.txt pytest
+
       - name: Test historical memory safety
-        run: python -m pytest -q tests/test_expectations.py tests/test_market_experience.py tests/test_information_tiers.py tests/test_historical_memory.py
+        run: >
+          python -m pytest -q
+          tests/test_expectations.py
+          tests/test_market_experience.py
+          tests/test_information_tiers.py
+          tests/test_historical_memory.py
+          tests/test_experience_pairs.py
+
       - name: Backfill expectations
         run: |
           python -m market_farm.backfill_spf
           python -m market_farm.backfill_livingston
-      - name: Backfill first-release actuals
+
+      - name: Backfill verified first-release actuals
         run: python -m market_farm.backfill_rtdsm
+
       - name: Build expectation-actual pairs
         run: python -m market_farm.build_experience_pairs
+
+      - name: Measure exact-timestamp market reactions
+        run: python -m market_farm.backfill_reactions
+
+      - name: Build market experience cards
+        run: python -m market_farm.build_market_experiences
+
       - name: Persist historical memory
         shell: bash
         run: |
