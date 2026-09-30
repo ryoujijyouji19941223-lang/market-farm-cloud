@@ -25,6 +25,7 @@ class Expectation:
     source_url: str
     visibility: str
     observation_basis: str
+    target_period: str | None = None
     release_date_provenance: str | None = None
     sample_size: int | None = None
     low: float | None = None
@@ -52,7 +53,7 @@ def make_expectation(*, event_key: str, available_at: str, scheduled_for: str,
     eid = hashlib.sha256(raw.encode("utf-8")).hexdigest()[:24]
     return Expectation(eid, event_key, available_at, scheduled_for, indicator,
                        jurisdiction, float(expected_value), unit, source,
-                       source_url, visibility, observation_basis, None, sample_size, low, high)
+                       source_url, visibility, observation_basis, target_period, None, sample_size, low, high)
 
 
 def save_expectations(items: list[Expectation]) -> int:
