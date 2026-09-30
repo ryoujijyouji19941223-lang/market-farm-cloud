@@ -171,8 +171,9 @@ def main():
         "results": results,
         "errors": errors,
         "note": (
-            "First-release values are archived immediately. They remain in the "
-            "unresolved_release_time tier until an official public release date is joined."
+            "First-release values are archived immediately. GDP observations with "
+            "verified BEA release dates are promoted to public_realtime; exact timestamps "
+            "are required before post-release reaction measurement. Others remain unresolved."
         ),
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps({"results": results, "errors": errors}, ensure_ascii=False))
