@@ -5,6 +5,7 @@ import pandas as pd
 from market_farm.backfill_spf import _target_from_column
 from market_farm.backfill_rtdsm import parse_first_releases, SOURCES
 from market_farm.event_keys import event_key
+from market_farm.spf_release_dates import parse_release_dates
 
 
 def test_spf_suffix_two_is_current_quarter():
@@ -41,3 +42,16 @@ def test_rtdsm_first_release_matches_canonical_spf_event():
     assert rows[0]["value"] == 1.537
     assert rows[0]["availability_precision"] == "unresolved"
     assert rows[0]["reaction_eligible"] is False
+
+
+def test_spf_release_date_parser_carries_year_forward():
+    text = """
+1991 Q1             2/16/91             2/21/91
+     Q2             5/18/91             5/24/91
+     Q3             8/18/91             8/21/91
+"""
+    rows = parse_release_dates(text)
+    assert "1991-Q1" in rows
+    assert "1991-Q2" in rows
+    assert "1991-Q3" in rows
+    assert rows["1991-Q2"].startswith("1991-05-24")
