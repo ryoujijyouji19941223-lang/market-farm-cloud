@@ -27,6 +27,7 @@ SOURCES = {
         "frequency": "quarterly",
         "transformation": "qoq_annualized_percent",
         "spf_equivalent": True,
+        "required": True,
     },
     "pcpi": {
         "page": "https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/pcpi",
@@ -35,6 +36,7 @@ SOURCES = {
         "frequency": "monthly",
         "transformation": "mom_annualized_percent",
         "spf_equivalent": False,
+        "required": False,
     },
     "pcpix": {
         "page": "https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/pcpix",
@@ -43,6 +45,7 @@ SOURCES = {
         "frequency": "monthly",
         "transformation": "mom_annualized_percent",
         "spf_equivalent": False,
+        "required": False,
     },
 }
 
@@ -189,8 +192,12 @@ def main():
         ),
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps({"results": results, "errors": errors}, ensure_ascii=False))
-    if errors:
-        raise RuntimeError(f"RTDSM backfill errors: {errors}")
+    required_errors = [
+        error for error in errors
+        if SOURCES.get(error["code"], {}).get("required", False)
+    ]
+    if required_errors:
+        raise RuntimeError(f"RTDSM required backfill errors: {required_errors}")
 
 
 if __name__ == "__main__":
