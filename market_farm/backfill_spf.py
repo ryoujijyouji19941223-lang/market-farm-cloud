@@ -131,14 +131,19 @@ def parse_median_growth(data: bytes, release_dates: dict[str, str] | None = None
 
                 release = release_dates.get(f"{year}-Q{quarter}")
                 if release:
-                    promoted = promote_expectation(
-                        asdict(item),
-                        release,
-                        provenance="philadelphia_fed_spf_release_dates",
-                    )
-                    item = Expectation(**{
-                        k: promoted[k] for k in Expectation.__dataclass_fields__
-                    })
+                    try:
+                        promoted = promote_expectation(
+                            asdict(item),
+                            release,
+                            provenance="philadelphia_fed_spf_release_dates",
+                        )
+                        item = Expectation(**{
+                            k: promoted[k] for k in Expectation.__dataclass_fields__
+                        })
+                    except ValueError:
+                        # Fail closed: an inconsistent date stays quarantined
+                        # instead of aborting the entire historical backfill.
+                        pass
                 out.append(item)
     return out
 
