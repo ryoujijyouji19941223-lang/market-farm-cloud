@@ -17,7 +17,8 @@ SURVEYS = {
         cadence="semiannual",
         reliability_note=(
             "Official Philadelphia Fed archive. Pre-2004 base-value caveats apply; "
-            "discontinued stock-price series must remain separately flagged."
+            "discontinued stock-price series must remain separately flagged. "
+            "Variable definitions and transformations must be preserved by era."
         ),
         historical_url="https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/livingston-historical-data",
     ),
