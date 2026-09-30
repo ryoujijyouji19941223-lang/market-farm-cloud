@@ -30,14 +30,20 @@ def accuracy(rows):
 
 def summarize_bucket(rows):
     forecasted = [r for r in rows if r.get("decision", "FORECAST") == "FORECAST"]
+    directional = [r for r in forecasted if r.get("prediction") in {"UP", "DOWN"}]
+    flat = [r for r in forecasted if r.get("prediction") == "FLAT"]
     abstained = [r for r in rows if r.get("decision") == "ABSTAIN"]
     return {
         "observations": len(rows),
-        "signals": len(forecasted),
+        # Directional signal accuracy intentionally excludes FLAT forecasts.
+        "signals": len(directional),
+        "flat_forecasts": len(flat),
         "abstained": len(abstained),
         "coverage": (len(forecasted) / len(rows)) if rows else None,
-        "correct": sum(bool(r["correct"]) for r in forecasted),
-        "accuracy": accuracy(forecasted),
+        "directional_coverage": (len(directional) / len(rows)) if rows else None,
+        "correct": sum(bool(r["correct"]) for r in directional),
+        "accuracy": accuracy(directional),
+        "all_forecast_accuracy": accuracy(forecasted),
     }
 
 
