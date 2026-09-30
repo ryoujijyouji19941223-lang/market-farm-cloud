@@ -3,7 +3,7 @@ from zoneinfo import ZoneInfo
 
 import pytest
 
-from market_farm.expectation_memory import make_expectation, save_expectations, visible_expectations
+from market_farm.expectation_memory import make_expectation, save_expectations, visible_expectations, promote_expectation
 from market_farm.indicator_semantics import describe_surprise
 
 
@@ -56,3 +56,26 @@ def test_private_expectation_is_not_visible_to_replay(tmp_path, monkeypatch):
         datetime(2026, 6, 1, 23, 0, tzinfo=JST),
     )
     assert rows == []
+
+
+def test_verified_release_promotes_quarantined_forecast():
+    item = make_expectation(
+        event_key="SPF:TEST:1991Q1",
+        available_at="1991-02-28T23:59:00-05:00",
+        scheduled_for="1991-03-31T23:59:00-05:00",
+        indicator="US_REAL_GDP_GROWTH",
+        jurisdiction="US",
+        expected_value=2.0,
+        unit="percent",
+        source="SPF",
+        source_url="https://example.test",
+        visibility="quarantined_release_date_proxy",
+    )
+    row = item.__dict__.copy()
+    fixed = promote_expectation(
+        row,
+        "1991-02-20T23:59:59-05:00",
+        provenance="official_release_dates",
+    )
+    assert fixed["visibility"] == "public"
+    assert fixed["available_at"] == "1991-02-20T23:59:59-05:00"
