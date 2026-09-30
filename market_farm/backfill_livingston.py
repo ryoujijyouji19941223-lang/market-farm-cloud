@@ -15,12 +15,12 @@ ET = ZoneInfo("America/New_York")
 STATUS = Path("data/expectations/livingston_backfill_status.json")
 
 # The Philadelphia Fed may change download filenames. Keep URLs isolated here.
-MEDIAN_LEVELS = "https://www.philadelphiafed.org/-/media/frbp/assets/surveys-and-data/livingston-survey/livingston-median.xlsx"
+MEDIAN_LEVELS = "https://www.philadelphiafed.org/-/media/FRBP/Assets/Surveys-And-Data/livingston-survey/historical-data/medians.xlsx"
 
 VARIABLES = {
     "CPI": ("US_CPI_LEVEL", "index"),
-    "UNEMP": ("US_UNEMPLOYMENT_RATE", "percent"),
-    "RGDP": ("US_REAL_GDP_LEVEL", "index_or_billions"),
+    "UNPR": ("US_UNEMPLOYMENT_RATE", "percent"),
+    "RGDPX": ("US_REAL_GDP_LEVEL", "billions_real_dollars"),
     "TBILL": ("US_TBILL_RATE", "percent"),
     "TBOND": ("US_TBOND_RATE", "percent"),
 }
