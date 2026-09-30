@@ -6,6 +6,7 @@ from market_farm.backfill_spf import _target_from_column
 from market_farm.backfill_rtdsm import parse_first_releases, SOURCES
 from market_farm.event_keys import event_key
 from market_farm.spf_release_dates import parse_release_dates
+from market_farm.bea_gdp_release_dates import parse_release_timestamp
 
 
 def test_spf_suffix_two_is_current_quarter():
@@ -55,3 +56,11 @@ def test_spf_release_date_parser_carries_year_forward():
     assert "1991-Q2" in rows
     assert "1991-Q3" in rows
     assert rows["1991-Q2"].startswith("1991-05-24")
+
+
+def test_bea_release_timestamp_parser():
+    html = """
+    <p>FOR WIRE TRANSMISSION: 8:30 A.M. EDT, FRIDAY, OCTOBER 27, 2000</p>
+    """
+    value = parse_release_timestamp(html)
+    assert value.startswith("2000-10-27T08:30:00")
