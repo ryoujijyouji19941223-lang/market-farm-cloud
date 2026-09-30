@@ -6,9 +6,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .actual_archive import load_rows
-from .expectation_memory import load_expectations
+from .build_experience_pairs import build_pairs
+from .expectation_memory import load_all_expectations
 from .experience_builder import assemble_experience
-from .experience_pairs import pair_index
 from .market_experience import save_experiences
 from .reaction_archive import load_reactions
 
@@ -16,7 +16,7 @@ STATUS = Path("data/market_experience/build_status.json")
 
 
 def main():
-    expectations = {x["expectation_id"]: x for x in load_expectations()}
+    expectations = {x["expectation_id"]: x for x in load_all_expectations()}
     actuals = {x["record_id"]: x for x in load_rows()}
     reaction_map = defaultdict(dict)
 
@@ -29,19 +29,26 @@ def main():
             **row.get("reaction", {}),
         }
 
+    pair_payload = build_pairs()
     experiences = []
     skipped = []
-    for pair in pair_index():
+    allowed = {"READY", "READY_SURPRISE_ONLY"}
+
+    for pair in pair_payload["items"]:
+        if pair["status"] not in allowed:
+            skipped.append({"pair": pair, "reason": pair["status"]})
+            continue
         expectation = expectations.get(pair["expectation_id"])
         actual = actuals.get(pair["actual_record_id"])
         if expectation is None or actual is None:
             skipped.append({"pair": pair, "reason": "missing_source_record"})
             continue
         try:
+            reactions = reaction_map.get(actual["record_id"], {}) if pair["status"] == "READY" else {}
             experience = assemble_experience(
                 expectation=expectation,
                 actual=actual,
-                reactions=reaction_map.get(actual["record_id"], {}),
+                reactions=reactions,
                 information_cutoff=actual["available_at"],
             )
             experiences.append(experience)
@@ -52,7 +59,8 @@ def main():
     STATUS.parent.mkdir(parents=True, exist_ok=True)
     STATUS.write_text(json.dumps({
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "pairs": len(pair_index()),
+        "pair_status_counts": pair_payload["status_counts"],
+        "pairs": pair_payload["pairs"],
         "experiences": len(experiences),
         "saved": saved,
         "skipped_count": len(skipped),
