@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Iterable
 
 from .news_archive import load_range
+from .official_archive import load_official_range, visible_official
 
 MEMORY = Path("data/world_memory")
 
@@ -64,6 +65,21 @@ def world_as_of(cutoff: datetime, *, lookback_hours: int = 72, queries: Iterable
     wanted = set(queries or [])
     rows = load_range(start, cutoff)
     evidence = []
+    official_rows = visible_official(load_official_range(start, cutoff), cutoff)
+    for row in official_rows:
+        evidence.append(Evidence(
+            evidence_id=row["record_id"],
+            available_at=row["available_at"],
+            source_type=row["source_type"],
+            provider=row["authority"],
+            title=row["title"],
+            url=row["url"],
+            domain="",
+            query="official",
+            entities=tuple(row.get("entities", [])),
+            tags=tuple(row.get("tags", [])),
+            reliability="primary",
+        ))
     for row in rows:
         if wanted and row.get("query") not in wanted:
             continue
