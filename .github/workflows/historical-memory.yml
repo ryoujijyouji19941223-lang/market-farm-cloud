@@ -13,6 +13,7 @@ on:
       - 'market_farm/build_experience_pairs.py'
       - 'market_farm/backfill_reactions.py'
       - 'market_farm/build_market_experiences.py'
+      - 'market_farm/build_release_events.py'
       - 'market_farm/reaction_*.py'
       - 'market_farm/market_experience.py'
       - 'market_farm/experience_builder.py'
@@ -75,7 +76,10 @@ jobs:
       - name: Measure exact-timestamp market reactions
         run: python -m market_farm.backfill_reactions
 
-      - name: Build market experience cards
+      - name: Build deduplicated release events
+        run: python -m market_farm.build_release_events
+
+      - name: Build forecast experience cards
         run: python -m market_farm.build_market_experiences
 
       - name: Persist historical memory
