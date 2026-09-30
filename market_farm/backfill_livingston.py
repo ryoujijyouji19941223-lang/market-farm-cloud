@@ -89,6 +89,8 @@ def parse_workbook(data: bytes) -> list:
 def main():
     raw = download(MEDIAN_LEVELS)
     items = parse_workbook(raw)
+    if not items:
+        raise RuntimeError("Livingston official workbook parsed zero forecasts; refusing silent empty backfill")
     saved = save_expectations(items)
     STATUS.parent.mkdir(parents=True, exist_ok=True)
     STATUS.write_text(json.dumps({
