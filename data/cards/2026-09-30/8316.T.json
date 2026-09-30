@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.5",
+  "status": "OPEN",
+  "created_at_jst": "2026-09-30T11:01:47.680606+09:00",
+  "prediction_date": "2026-09-30",
+  "symbol": "8316.T",
+  "name": "三井住友FG",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-09-30T11:01:47.680606+09:00",
+  "market_data_through": "2026-09-30",
+  "reference_price": 3400.0,
+  "prediction": {
+    "direction": "FLAT",
+    "direction_score": 0.510794265582943,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.4526843658406621,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5428571428571428,
+    "heldout_signals": 70
+  },
+  "evidence": {
+    "price": {
+      "score": 0.04789996909203375,
+      "direction": "UP",
+      "day_change": 0.012809055704497974,
+      "momentum5": 0.02192324157715375,
+      "trend": -0.004969539086629338,
+      "volatility": 0.24724937326302915
+    },
+    "news": {
+      "score": 0.0,
+      "direction": "NEUTRAL",
+      "headlines": []
+    },
+    "outside_wind": {
+      "score": -0.08628661147166866,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.5392913216979291,
+        "oil_pressure": -0.2674700155669013,
+        "japan_risk": -0.05518986021563044,
+        "usd_rate_pressure": 0.2545483140570963
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

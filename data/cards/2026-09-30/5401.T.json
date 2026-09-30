@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.5",
+  "status": "OPEN",
+  "created_at_jst": "2026-09-30T11:01:47.680606+09:00",
+  "prediction_date": "2026-09-30",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-09-30T11:01:47.680606+09:00",
+  "market_data_through": "2026-09-30",
+  "reference_price": 649.4000244140625,
+  "prediction": {
+    "direction": "DOWN",
+    "direction_score": 0.3821482774267327,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.30800803176905234,
+      "direction": "DOWN",
+      "day_change": -0.0021511422943535363,
+      "momentum5": -0.0488986607327625,
+      "trend": -0.015343564855298308,
+      "volatility": 0.30147652248837953
+    },
+    "news": {
+      "score": 0.0,
+      "direction": "NEUTRAL",
+      "headlines": []
+    },
+    "outside_wind": {
+      "score": -0.08628661147166866,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.5392913216979291,
+        "oil_pressure": -0.2674700155669013,
+        "japan_risk": -0.05518986021563044,
+        "usd_rate_pressure": 0.2545483140570963
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
