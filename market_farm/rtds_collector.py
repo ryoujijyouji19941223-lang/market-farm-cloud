@@ -10,6 +10,7 @@ import requests
 
 from .realtime_actuals import actual_from_vintage
 from .rtds_sources import SOURCES
+from .canonical_events import canonical_event_key
 
 ET = ZoneInfo("America/New_York")
 
@@ -84,7 +85,7 @@ def parse_first_releases(code: str, raw: bytes) -> list[dict]:
                 # Do not guess a historical public timestamp.
                 continue
 
-            event_key = f"RTDS:{source.indicator}:{period}"
+            event_key = canonical_event_key(source.indicator, period)
             actual = actual_from_vintage(
                 event_key=event_key,
                 indicator=source.indicator,
