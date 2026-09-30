@@ -137,6 +137,8 @@ def backfill_one(code: str) -> dict:
     workbook_url = discover_workbook(spec["page"], code)
     raw = _get(workbook_url).content
     rows = parse_first_releases(raw, code, spec, workbook_url)
+    if not rows:
+        raise RuntimeError(f"{code}: official first-release workbook parsed zero rows")
     promoted = 0
     if code == "routput":
         release_dates = fetch_gdp_advance_dates()
