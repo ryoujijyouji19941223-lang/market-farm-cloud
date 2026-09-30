@@ -1,0 +1,172 @@
+from __future__ import annotations
+
+import html
+import io
+import json
+import re
+from datetime import datetime
+from pathlib import Path
+from urllib.parse import urljoin
+from zoneinfo import ZoneInfo
+
+import pandas as pd
+import requests
+
+from .actual_archive import save_rows
+from .event_keys import canonical_period, event_key
+
+ET = ZoneInfo("America/New_York")
+STATUS = Path("data/actual_releases/rtdsm_status.json")
+
+SOURCES = {
+    "routput": {
+        "page": "https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/routput",
+        "indicator": "US_REAL_GDP_GROWTH",
+        "unit": "percent",
+        "frequency": "quarterly",
+        "transformation": "qoq_annualized_percent",
+        "spf_equivalent": True,
+    },
+    "pcpi": {
+        "page": "https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/pcpi",
+        "indicator": "US_CPI_MOM_GROWTH",
+        "unit": "percent",
+        "frequency": "monthly",
+        "transformation": "mom_annualized_percent",
+        "spf_equivalent": False,
+    },
+    "pcpix": {
+        "page": "https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/pcpix",
+        "indicator": "US_CORE_CPI_MOM_GROWTH",
+        "unit": "percent",
+        "frequency": "monthly",
+        "transformation": "mom_annualized_percent",
+        "spf_equivalent": False,
+    },
+}
+
+
+def _get(url: str) -> requests.Response:
+    r = requests.get(url, timeout=60, headers={"User-Agent": "market-farm-cloud/0.9"})
+    r.raise_for_status()
+    return r
+
+
+def discover_workbook(page_url: str, code: str) -> str:
+    body = _get(page_url).text
+    pattern = rf'href=["\']([^"\']*{re.escape(code)}_first_second_third\.xlsx[^"\']*)'
+    match = re.search(pattern, body, re.I)
+    if not match:
+        raise RuntimeError(f"first/second/third workbook not found on {page_url}")
+    return urljoin(page_url, html.unescape(match.group(1)))
+
+
+def _period(value, frequency: str) -> str | None:
+    if pd.isna(value):
+        return None
+    if isinstance(value, (pd.Timestamp, datetime)):
+        ts = pd.Timestamp(value)
+        if frequency == "quarterly":
+            return f"{ts.year}Q{ts.quarter}"
+        return f"{ts.year}M{ts.month:02d}"
+
+    text = str(value).strip().upper()
+    q = re.search(r"(\d{4})\s*[:/-]?\s*Q([1-4])", text)
+    if q:
+        return f"{q.group(1)}Q{q.group(2)}"
+    m = re.search(r"(\d{4})\s*[:/-]?\s*M(0?[1-9]|1[0-2])", text)
+    if m:
+        return f"{m.group(1)}M{int(m.group(2)):02d}"
+    try:
+        ts = pd.Timestamp(value)
+        if frequency == "quarterly":
+            return f"{ts.year}Q{ts.quarter}"
+        return f"{ts.year}M{ts.month:02d}"
+    except Exception:
+        return None
+
+
+def parse_first_releases(data: bytes, code: str, spec: dict, workbook_url: str) -> list[dict]:
+    book = pd.ExcelFile(io.BytesIO(data))
+    sheet = next((s for s in book.sheet_names if s.strip().upper() == "DATA"), book.sheet_names[0])
+    frame = pd.read_excel(book, sheet_name=sheet)
+    cols = {str(c).strip().upper(): c for c in frame.columns}
+    date_col = cols.get("DATE") or cols.get("OBSERVATION") or frame.columns[0]
+    first_col = cols.get("FIRST")
+    if first_col is None:
+        raise RuntimeError(f"{code}: workbook has no First column")
+
+    out = []
+    for _, row in frame.iterrows():
+        period = _period(row[date_col], spec["frequency"])
+        value = row[first_col]
+        if not period or pd.isna(value):
+            continue
+        try:
+            number = float(value)
+        except Exception:
+            continue
+
+        key = event_key(spec["indicator"], period)
+        out.append({
+            "record_id": f"RTDSM:{code.upper()}:{canonical_period(period)}:r1",
+            "dataset": f"rtdsm_{code}",
+            "event_key": key,
+            "indicator": spec["indicator"],
+            "observation_period": canonical_period(period),
+            "value": number,
+            "unit": spec["unit"],
+            "release_number": 1,
+            "vintage": "first_release",
+            "source": "Philadelphia Fed Real-Time Data Set for Macroeconomists",
+            "source_page": spec["page"],
+            "source_url": workbook_url,
+            "transformation": spec["transformation"],
+            "spf_equivalent": spec["spf_equivalent"],
+            "available_at": None,
+            "availability_precision": "unresolved",
+            "information_tier": "unresolved_release_time",
+            "reaction_eligible": False,
+        })
+    return out
+
+
+def backfill_one(code: str) -> dict:
+    spec = SOURCES[code]
+    workbook_url = discover_workbook(spec["page"], code)
+    raw = _get(workbook_url).content
+    rows = parse_first_releases(raw, code, spec, workbook_url)
+    saved = save_rows(f"rtdsm_{code}", rows)
+    return {
+        "code": code,
+        "workbook_url": workbook_url,
+        "parsed": len(rows),
+        "saved": saved,
+        "spf_equivalent": spec["spf_equivalent"],
+    }
+
+
+def main():
+    results, errors = [], []
+    for code in SOURCES:
+        try:
+            results.append(backfill_one(code))
+        except Exception as exc:
+            errors.append({"code": code, "error": repr(exc)})
+    STATUS.parent.mkdir(parents=True, exist_ok=True)
+    STATUS.write_text(json.dumps({
+        "generated_at": datetime.now(ET).isoformat(),
+        "results": results,
+        "errors": errors,
+        "note": (
+            "First-release values are archived immediately. They remain in the "
+            "unresolved_release_time tier until an official public release date is joined."
+        ),
+    }, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(json.dumps({"results": results, "errors": errors}, ensure_ascii=False))
+    if errors:
+        raise RuntimeError(f"RTDSM backfill errors: {errors}")
+
+
+if __name__ == "__main__":
+    main()
