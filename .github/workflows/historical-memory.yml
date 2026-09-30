@@ -13,6 +13,10 @@ on:
       - 'market_farm/build_experience_pairs.py'
       - 'market_farm/event_keys.py'
       - 'market_farm/actual_archive.py'
+      - 'market_farm/bea_gdp_release_dates.py'
+      - 'market_farm/spf_release_dates.py'
+      - 'market_farm/expectation_memory.py'
+      - 'market_farm/release_gate.py'
       - 'tests/test_historical_memory.py'
       - '.github/workflows/historical-memory.yml'
   workflow_dispatch:
