@@ -32,7 +32,12 @@ def build_pairs() -> dict:
             else:
                 exp_at = datetime.fromisoformat(exp["available_at"])
                 act_at = datetime.fromisoformat(actual["available_at"])
-                status = "READY" if exp_at < act_at else "INVALID_TIME_ORDER"
+                if exp_at >= act_at:
+                    status = "INVALID_TIME_ORDER"
+                elif actual.get("reaction_eligible"):
+                    status = "READY"
+                else:
+                    status = "READY_SURPRISE_ONLY"
             pairs.append({
                 "event_key": exp["event_key"],
                 "expectation_id": exp["expectation_id"],
