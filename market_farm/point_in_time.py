@@ -36,7 +36,13 @@ def assert_articles_cutoff(articles: Iterable[dict], cutoff: datetime, label: st
     """Fail closed if any article became available after the information cutoff."""
     bad = []
     for article in articles:
-        raw = (\n            article.get("_seen")\n            or article.get("seen_jst")\n            or article.get("seen_at")\n            or article.get("published_at")\n            or article.get("date")\n        )
+        raw = (
+            article.get("_seen")
+            or article.get("seen_jst")
+            or article.get("seen_at")
+            or article.get("published_at")
+            or article.get("date")
+        )
         if raw is None:
             # Unknown publication time cannot be proven point-in-time safe.
             raise FutureInformationLeak(f"{label} article has no verifiable publication timestamp")
