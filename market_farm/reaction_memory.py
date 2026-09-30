@@ -21,6 +21,7 @@ def reaction_from_frame(
     market_timezone: str = "America/New_York",
     close_hour: int = 16,
     close_minute: int = 0,
+    max_session_gap_days: int = 7,
 ) -> dict:
     """Measure daily-close reaction from the last close knowable before release.
 
@@ -51,10 +52,22 @@ def reaction_from_frame(
         return {"status": "NO_POST_RELEASE_OBSERVATION"}
 
     reaction_pos = reaction_positions[0]
+    reaction_day = session_dates[reaction_pos]
+    if (reaction_day - release_date).days > max_session_gap_days:
+        return {
+            "status": "MISSING_MARKET_WINDOW",
+            "reason": "first available market observation is too far after release",
+        }
     if reaction_pos == 0:
         return {"status": "NO_PRE_RELEASE_BASELINE"}
 
     base_pos = reaction_pos - 1
+    base_day = session_dates[base_pos]
+    if (release_date - base_day).days > max_session_gap_days:
+        return {
+            "status": "MISSING_MARKET_WINDOW",
+            "reason": "pre-release baseline is too far before release",
+        }
     base = float(frame.iloc[base_pos]["close"])
     out = {
         "status": "OK",
