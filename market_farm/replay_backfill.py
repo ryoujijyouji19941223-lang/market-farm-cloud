@@ -190,8 +190,12 @@ def replay_month(month_dt):
                     continue
 
                 cutoff = cutoff_for(anchor_date)
+                prediction_frame = frame.iloc[: pos + 1]
+                assert_market_frame_cutoff(prediction_frame, cutoff, f"{asset['symbol']} prediction frame")
                 news72 = window_articles(articles, cutoff, 72)
                 world72 = window_articles(world_articles, cutoff, 72)
+                assert_articles_cutoff(news72, cutoff, f"{asset['symbol']} news")
+                assert_articles_cutoff(world72, cutoff, "world news")
                 news_score = sentiment([{"title": a["title"], "link": a["url"]} for a in news72])
 
                 f = frame.iloc[pos]
@@ -226,6 +230,7 @@ def replay_month(month_dt):
                     "prediction_direction": pred,
                     "horizons": horizons,
                 }
+                assert_snapshot_metadata(row)
                 rows.append(row)
                 snapshot_count += 1
 
