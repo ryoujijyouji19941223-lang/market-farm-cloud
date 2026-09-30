@@ -10,6 +10,7 @@ import pandas as pd
 import requests
 
 from .expectation_memory import make_expectation, save_expectations
+from .canonical_events import canonical_event_key
 
 ET = ZoneInfo("America/New_York")
 STATUS = Path("data/expectations/livingston_backfill_status.json")
@@ -86,7 +87,7 @@ def parse_workbook(data: bytes) -> list:
                 if target <= survey:
                     target = target.replace(year=target.year + 1)
                 out.append(make_expectation(
-                    event_key=f"LIVINGSTON:{indicator}:{survey.date()}:{horizon}",
+                    event_key=canonical_event_key(indicator, target.strftime("%Y-%m")),
                     available_at=survey.isoformat(),
                     scheduled_for=target.isoformat(),
                     indicator=indicator,
