@@ -1,29 +1,86 @@
 {
-  "generated_at": "2026-09-30T11:26:43.149066+00:00",
+  "generated_at": "2026-09-30T11:38:08.586910+00:00",
   "actual_release_count": 110,
   "eligibility_rule": "exact public release timestamp required",
   "reaction_rows": 440,
   "saved": 440,
   "sources": {
     "usd_jpy": {
-      "status": "fetch_error",
-      "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=60)"
+      "status": "ok",
+      "rows": 7745,
+      "first_date": "1996-10-30 00:00:00",
+      "last_date": "2026-09-11 00:00:00",
+      "data_provider": "yfinance_fx_proxy",
+      "fallback": true,
+      "data_provenance_url": "https://finance.yahoo.com/quote/JPY=X/history/",
+      "primary_error": "FRED DEXJPUS failed after 2 attempts for 1996-07-22..2026-09-13: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=15)"
     },
     "us10y": {
-      "status": "fetch_error",
-      "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=60)"
+      "status": "ok",
+      "rows": 7569,
+      "first_date": "1996-07-22 00:00:00",
+      "last_date": "2026-09-11 00:00:00",
+      "data_provider": "yfinance_tnx_proxy",
+      "fallback": true,
+      "data_provenance_url": "https://finance.yahoo.com/quote/%5ETNX/history/",
+      "primary_error": "FRED DGS10 failed after 2 attempts for 1996-07-22..2026-09-13: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=15)"
     },
     "sp500": {
       "status": "ok",
       "rows": 7584,
       "first_date": "1996-07-22 00:00:00",
-      "last_date": "2026-09-11 00:00:00"
+      "last_date": "2026-09-11 00:00:00",
+      "data_provider": "yfinance",
+      "fallback": false,
+      "data_provenance_url": "https://finance.yahoo.com/quote/%5EGSPC/history/",
+      "primary_error": null
     },
     "gold_futures": {
       "status": "ok",
       "rows": 6533,
       "first_date": "2000-08-30 00:00:00",
-      "last_date": "2026-09-11 00:00:00"
+      "last_date": "2026-09-11 00:00:00",
+      "data_provider": "yfinance",
+      "fallback": false,
+      "data_provenance_url": "https://finance.yahoo.com/quote/GC%3DF/history/",
+      "primary_error": null
+    }
+  },
+  "reaction_coverage": {
+    "usd_jpy": {
+      "total_events": 110,
+      "usable_reactions": 108,
+      "coverage": 0.9818181818181818,
+      "status_counts": {
+        "MISSING_MARKET_WINDOW": 1,
+        "NO_PRE_RELEASE_BASELINE": 1,
+        "OK": 108
+      }
+    },
+    "us10y": {
+      "total_events": 110,
+      "usable_reactions": 110,
+      "coverage": 1.0,
+      "status_counts": {
+        "OK": 110
+      }
+    },
+    "sp500": {
+      "total_events": 110,
+      "usable_reactions": 110,
+      "coverage": 1.0,
+      "status_counts": {
+        "OK": 110
+      }
+    },
+    "gold_futures": {
+      "total_events": 110,
+      "usable_reactions": 93,
+      "coverage": 0.8454545454545455,
+      "status_counts": {
+        "MISSING_MARKET_WINDOW": 17,
+        "OK": 93
+      }
     }
   }
 }
