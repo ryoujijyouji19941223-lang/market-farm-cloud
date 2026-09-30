@@ -16,7 +16,8 @@ from .recent_news_backtest import fetch_gdelt_range, window_articles, article_pu
 from .sensors import risk_adjust, probability
 from .state import load_state
 from .dashboard import render
-from .research_report import build_report\nfrom .point_in_time import assert_market_frame_cutoff, assert_articles_cutoff, assert_snapshot_metadata
+from .research_report import build_report
+from .point_in_time import assert_market_frame_cutoff, assert_articles_cutoff, assert_snapshot_metadata
 
 JST = ZoneInfo("Asia/Tokyo")
 UTC = ZoneInfo("UTC")
@@ -230,6 +231,7 @@ def replay_month(month_dt):
                     "prediction_direction": pred,
                     "horizons": horizons,
                 }
+                assert_snapshot_metadata(row)
                 assert_snapshot_metadata(row)
                 rows.append(row)
                 snapshot_count += 1
