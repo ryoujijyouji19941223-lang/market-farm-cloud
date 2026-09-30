@@ -76,13 +76,13 @@ def analyze(cfg):
             combined = 0.68*p["price_score"] + 0.17*nscore + 0.15*macro
             combined = risk_adjust(combined, p["volatility"])
             prob = probability(combined)
-            if prob >= cfg["buy_threshold"]:
-                action = "BUY_CANDIDATE"
-            elif prob <= cfg["sell_threshold"]:
-                action = "RISK_OFF"
-            else:
-                action = "HOLD"
             qualification = forecast_qualification(prob, p["price_score"], nscore, macro)
+            # Internal research action follows forecast qualification. A weak
+            # signal must never masquerade as a trading instruction.
+            if qualification["decision"] == "ABSTAIN":
+                action = "NO_FORECAST"
+            else:
+                action = qualification["direction"]
             challenger = _challenger_signal(asset["symbol"], p, macro, challengers)
             results.append({**asset, **p, "news_score": nscore, "macro_score": macro, "score": combined,
                             "probability_up": prob, "action": action, "forecast_qualification": qualification, "news": news[:5],
