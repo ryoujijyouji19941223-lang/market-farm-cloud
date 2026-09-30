@@ -21,8 +21,9 @@ FRED_FALLBACKS = {
     },
     "DGS10": {
         "symbol": "^TNX",
-        # Yahoo/CBOE TNX quotes 10x the percentage yield.
-        "scale": 0.1,
+        # Yahoo historical ^TNX closes are already expressed as percentage yield
+        # (for example ~5.24 when the 10Y yield is ~5.24%).
+        "scale": 1.0,
         "provider": "yfinance_tnx_proxy",
         "provenance_url": "https://finance.yahoo.com/quote/%5ETNX/history/",
     },
