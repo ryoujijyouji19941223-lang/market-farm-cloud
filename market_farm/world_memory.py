@@ -9,6 +9,7 @@ from typing import Iterable
 
 from .news_archive import load_range
 from .official_archive import load_official_range, visible_official
+from .event_memory import group_evidence
 
 MEMORY = Path("data/world_memory")
 
@@ -92,12 +93,17 @@ def world_as_of(cutoff: datetime, *, lookback_hours: int = 72, queries: Iterable
     for item in evidence:
         by_reliability[item.reliability] = by_reliability.get(item.reliability, 0) + 1
 
+    evidence_rows = [asdict(x) for x in evidence]
+    events = group_evidence(evidence_rows)
+
     return {
         "as_of": cutoff.isoformat(),
         "lookback_hours": lookback_hours,
         "evidence_count": len(evidence),
         "source_mix": by_reliability,
-        "evidence": [asdict(x) for x in evidence],
+        "event_count": len(events),
+        "events": events,
+        "evidence": evidence_rows,
     }
 
 
