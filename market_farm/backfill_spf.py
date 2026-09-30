@@ -71,45 +71,56 @@ def _target_from_column(name: str, year: int, quarter: int):
     return m.group(1), suffix, target_year, target_quarter
 
 
-def parse_median_growth(data: bytes) -> list:
+def parse_median_growth(data: bytes, release_dates: dict[str, str] | None = None) -> list:
     book = pd.ExcelFile(io.BytesIO(data))
-    frame = pd.read_excel(book, sheet_name=book.sheet_names[0])
     out = []
-    release_dates = fetch_release_dates()
-    for _, row in frame.iterrows():
-        survey = _survey_quarter(row)
-        if survey is None:
+    release_dates = fetch_release_dates() if release_dates is None else release_dates
+
+    for sheet_name in book.sheet_names:
+        variable = str(sheet_name).strip().upper()
+        if variable not in VARIABLES:
             continue
-        year, quarter = survey
-        available = _release_proxy(year, quarter)
-        for col in frame.columns:
-            target = _target_from_column(col, year, quarter)
-            if target is None or pd.isna(row[col]):
+        frame = pd.read_excel(book, sheet_name=sheet_name)
+        for _, row in frame.iterrows():
+            survey = _survey_quarter(row)
+            if survey is None:
                 continue
-            variable, suffix, target_year, target_quarter = target
-            indicator, unit = VARIABLES[variable]
-            # A quarterly target ends after the survey publication. This is not
-            # an exact government release timestamp; it identifies the forecast horizon.
-            offset = suffix - 2
-            scheduled = available + timedelta(days=max(7, (offset + 1) * 91))
-            item = make_expectation(
-                event_key=event_key(indicator, f"{target_year}Q{target_quarter}"),
-                available_at=available.isoformat(),
-                scheduled_for=scheduled.isoformat(),
-                indicator=indicator,
-                jurisdiction="US",
-                expected_value=float(row[col]),
-                unit=unit,
-                source="Philadelphia Fed SPF median",
-                source_url=MEDIAN_GROWTH,
-                visibility="quarantined_release_date_proxy",
-                observation_basis="professional_forecaster_survey",
-            )
-            release = release_dates.get(f"{year}-Q{quarter}")
-            if release:
-                promoted = promote_expectation(asdict(item), release, provenance="philadelphia_fed_spf_release_dates")
-                item = Expectation(**{k: promoted[k] for k in Expectation.__dataclass_fields__})
-            out.append(item)
+            year, quarter = survey
+            available = _release_proxy(year, quarter)
+            for col in frame.columns:
+                target = _target_from_column(col, year, quarter)
+                if target is None or pd.isna(row[col]):
+                    continue
+                parsed_variable, suffix, target_year, target_quarter = target
+                if parsed_variable != variable:
+                    continue
+                indicator, unit = VARIABLES[variable]
+                offset = suffix - 2
+                scheduled = available + timedelta(days=max(7, (offset + 1) * 91))
+                item = make_expectation(
+                    event_key=event_key(indicator, f"{target_year}Q{target_quarter}"),
+                    available_at=available.isoformat(),
+                    scheduled_for=scheduled.isoformat(),
+                    indicator=indicator,
+                    jurisdiction="US",
+                    expected_value=float(row[col]),
+                    unit=unit,
+                    source="Philadelphia Fed SPF median",
+                    source_url=MEDIAN_GROWTH,
+                    visibility="quarantined_release_date_proxy",
+                    observation_basis="professional_forecaster_survey",
+                )
+                release = release_dates.get(f"{year}-Q{quarter}")
+                if release:
+                    promoted = promote_expectation(
+                        asdict(item),
+                        release,
+                        provenance="philadelphia_fed_spf_release_dates",
+                    )
+                    item = Expectation(**{
+                        k: promoted[k] for k in Expectation.__dataclass_fields__
+                    })
+                out.append(item)
     return out
 
 
