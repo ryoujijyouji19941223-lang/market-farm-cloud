@@ -6,6 +6,8 @@ from dataclasses import asdict, dataclass
 from datetime import datetime
 from pathlib import Path
 
+from .release_gate import usable_before_target
+
 STORE = Path("data/expectations")
 
 
@@ -92,3 +94,14 @@ def latest_expectation(event_key: str, cutoff: datetime) -> dict | None:
     rows = [x for x in visible_expectations(datetime.min.replace(tzinfo=cutoff.tzinfo), cutoff)
             if x["event_key"] == event_key]
     return max(rows, key=lambda x: x["available_at"]) if rows else None
+
+
+def promote_expectation(row: dict, released_at: str, *, provenance: str) -> dict:
+    """Return a public copy only when an independently verified release precedes its target."""
+    if not usable_before_target(released_at, row["scheduled_for"]):
+        raise ValueError("verified release must precede forecast target")
+    promoted = dict(row)
+    promoted["available_at"] = released_at
+    promoted["visibility"] = "public"
+    promoted["release_date_provenance"] = provenance
+    return promoted
