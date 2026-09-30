@@ -147,10 +147,10 @@ def fetch_gdp_advance_dates(max_pages: int = 30, resolve_exact: bool = True) -> 
         rows, row_count = parse_archive_page(_get(ARCHIVE.format(page=page)).text)
         if page > 0 and row_count <= 1:
             break
-        before = len(out)
         out.update(rows)
-        if page > 3 and not rows and len(out) == before:
-            break
+        # Do not stop merely because a page has no advance estimate.
+        # A page can contain only later GDP estimates; pagination ends only
+        # when the archive table itself is exhausted.
 
     cache = _load_cache()
     for period, row in out.items():
