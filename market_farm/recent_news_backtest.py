@@ -19,7 +19,7 @@ from .sensors import risk_adjust, probability
 from .state import load_state
 from .dashboard import render
 from .point_in_time import assert_market_frame_cutoff, assert_articles_cutoff, assert_snapshot_metadata
-from .news_archive import load_range, save_articles
+from .news_archive import load_range, save_articles, range_status, record_range
 
 JST = ZoneInfo("Asia/Tokyo")
 UTC = ZoneInfo("UTC")
@@ -69,8 +69,9 @@ def fetch_gdelt_chunk(query: str, start_jst: datetime, end_jst: datetime):
 
 
 def fetch_gdelt_range(query: str, start_jst: datetime, end_jst: datetime):
+    status = range_status(query, start_jst, end_jst)
     cached = load_range(start_jst, end_jst, query=query)
-    if cached:
+    if status and status.get("status") == "complete":
         return cached, 0
 
     articles = []
@@ -106,6 +107,7 @@ def fetch_gdelt_range(query: str, start_jst: datetime, end_jst: datetime):
     out = sorted(dedup.values(), key=lambda x: x["_seen"])
     if out:
         save_articles(out, source="GDELT DOC 2.0", query=query)
+    record_range(query, start_jst, end_jst, status="partial" if capped_chunks else "complete", article_count=len(out), provider="GDELT DOC 2.0")
     return out, capped_chunks
 
 
