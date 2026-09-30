@@ -7,6 +7,7 @@ from .data_source import fetch_history
 from .sensors import price_sensor, market_regime, regime_adjustment, risk_adjust, probability
 from .news import fetch_asset_news
 from .state import load_state, save_state
+from .decision import forecast_qualification
 
 
 def load_config(path="config.json"):
@@ -81,9 +82,10 @@ def analyze(cfg):
                 action = "RISK_OFF"
             else:
                 action = "HOLD"
+            qualification = forecast_qualification(prob, p["price_score"], nscore, macro)
             challenger = _challenger_signal(asset["symbol"], p, macro, challengers)
             results.append({**asset, **p, "news_score": nscore, "macro_score": macro, "score": combined,
-                            "probability_up": prob, "action": action, "news": news[:5],
+                            "probability_up": prob, "action": action, "forecast_qualification": qualification, "news": news[:5],
                             "challenger": challenger})
         except Exception as e:
             results.append({**asset, "error": str(e), "probability_up": 0.5, "action":"NO_DATA"})
