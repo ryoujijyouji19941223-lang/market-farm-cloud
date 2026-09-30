@@ -148,11 +148,27 @@ def parse_median_growth(data: bytes, release_dates: dict[str, str] | None = None
     return out
 
 
+
+def workbook_diagnostics(data: bytes) -> dict:
+    book = pd.ExcelFile(io.BytesIO(data))
+    report = {"sheet_names": list(book.sheet_names), "previews": {}}
+    for sheet in book.sheet_names[:6]:
+        preview = pd.read_excel(book, sheet_name=sheet, header=None, nrows=12)
+        rows = []
+        for _, row in preview.iloc[:, :10].iterrows():
+            rows.append([
+                "" if pd.isna(value) else str(value)[:80]
+                for value in row.tolist()
+            ])
+        report["previews"][str(sheet)] = rows
+    return report
+
 def main():
     raw = _download_excel(MEDIAN_GROWTH)
     items = parse_median_growth(raw)
     if not items:
-        raise RuntimeError("SPF official workbook parsed zero forecasts; refusing silent empty backfill")
+        diagnostic = json.dumps(workbook_diagnostics(raw), ensure_ascii=False)
+        raise RuntimeError("SPF official workbook parsed zero forecasts; diagnostics=" + diagnostic)
     saved = save_expectations(items)
     public_count = sum(x.visibility == "public" for x in items)
     quarantined_count = len(items) - public_count
