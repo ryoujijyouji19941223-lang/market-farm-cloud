@@ -29,7 +29,7 @@ def _published(entry):
 
 
 def rss_records(*, feed_url: str, authority: str, jurisdiction: str,
-                source_type: str, entities=(), tags=()):
+                source_type: str, entities=(), tags=(), **_ignored):
     r = requests.get(feed_url, timeout=30, headers={"User-Agent": "market-farm-cloud/0.6"})
     r.raise_for_status()
     feed = feedparser.parse(r.content)
