@@ -47,6 +47,19 @@ def target_time(survey: datetime, horizon: str) -> datetime:
     return datetime(ts.year, ts.month, 28, 23, 59, 59, tzinfo=ET)
 
 
+
+def _read_sheet(book: pd.ExcelFile, sheet_name: str) -> pd.DataFrame:
+    preview = pd.read_excel(book, sheet_name=sheet_name, header=None, nrows=25)
+    header = None
+    for idx, row in preview.iterrows():
+        cells = {str(x).strip().upper() for x in row.tolist() if not pd.isna(x)}
+        if "DATE" in cells:
+            header = int(idx)
+            break
+    if header is None:
+        return pd.DataFrame()
+    return pd.read_excel(book, sheet_name=sheet_name, header=header)
+
 def parse_workbook(data: bytes) -> list:
     book = pd.ExcelFile(io.BytesIO(data))
     out = []
@@ -54,7 +67,9 @@ def parse_workbook(data: bytes) -> list:
         variable = sheet.strip().upper()
         if variable not in VARIABLES:
             continue
-        frame = pd.read_excel(book, sheet_name=sheet)
+        frame = _read_sheet(book, sheet)
+        if frame.empty:
+            continue
         indicator, unit = VARIABLES[variable]
         date_col = next((c for c in frame.columns if str(c).strip().upper() == "DATE"), None)
         if date_col is None:
