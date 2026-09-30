@@ -1,0 +1,43 @@
+import io
+
+import pandas as pd
+
+from market_farm.backfill_spf import _target_from_column
+from market_farm.backfill_rtdsm import parse_first_releases, SOURCES
+from market_farm.event_keys import event_key
+
+
+def test_spf_suffix_two_is_current_quarter():
+    assert _target_from_column("RGDP2", 2005, 3) == ("RGDP", 2, 2005, 3)
+
+
+def test_spf_suffix_six_is_four_quarters_ahead():
+    assert _target_from_column("RGDP6", 2005, 3) == ("RGDP", 6, 2006, 3)
+
+
+def test_spf_suffix_one_is_historical_not_forecast():
+    assert _target_from_column("RGDP1", 2005, 3) is None
+
+
+def test_rtdsm_first_release_matches_canonical_spf_event():
+    frame = pd.DataFrame({
+        "Date": ["2012:Q2", "2012:Q3"],
+        "First": [1.537, 2.014],
+        "Second": [1.732, 2.672],
+        "Third": [1.253, 3.106],
+        "Most_Recent": [2.0, 3.0],
+    })
+    buf = io.BytesIO()
+    with pd.ExcelWriter(buf, engine="openpyxl") as writer:
+        frame.to_excel(writer, sheet_name="DATA", index=False)
+
+    rows = parse_first_releases(
+        buf.getvalue(),
+        "routput",
+        SOURCES["routput"],
+        "https://example.test/routput.xlsx",
+    )
+    assert rows[0]["event_key"] == event_key("US_REAL_GDP_GROWTH", "2012Q2")
+    assert rows[0]["value"] == 1.537
+    assert rows[0]["availability_precision"] == "unresolved"
+    assert rows[0]["reaction_eligible"] is False
