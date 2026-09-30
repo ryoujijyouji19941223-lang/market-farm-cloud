@@ -83,19 +83,19 @@ def parse_release_timestamp(source: str) -> str | None:
     text = " ".join(text.split())
     pattern = (
         rf"(?:EMBARGOED UNTIL RELEASE AT|FOR WIRE TRANSMISSION:)\s*"
-        rf"(\d{{1,2}}):(\d{{2}})\s*([AP])\.?\s*M\.?.{{0,100}}?"
-        rf"({_MONTHS}\s+\d{{1,2}},\s+\d{{4}})"
+        rf"(?P<hour>\d{{1,2}}):(?P<minute>\d{{2}})\s*(?P<ampm>[AP])\.?\s*M\.?.{{0,100}}?"
+        rf"(?P<date>(?:{_MONTHS})\s+\d{{1,2}},\s+\d{{4}})"
     )
     m = re.search(pattern, text, re.I)
     if not m:
         return None
-    hour, minute = int(m.group(1)), int(m.group(2))
-    ampm = m.group(3).upper()
+    hour, minute = int(m.group("hour")), int(m.group("minute"))
+    ampm = m.group("ampm").upper()
     if ampm == "P" and hour != 12:
         hour += 12
     if ampm == "A" and hour == 12:
         hour = 0
-    date = datetime.strptime(m.group(4), "%B %d, %Y")
+    date = datetime.strptime(m.group("date").title(), "%B %d, %Y")
     return date.replace(hour=hour, minute=minute, second=0, tzinfo=ET).isoformat()
 
 
