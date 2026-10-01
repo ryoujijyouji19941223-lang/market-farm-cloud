@@ -1,6 +1,7 @@
 {
-  "generated_at": "2026-10-01T02:02:47.848638+00:00",
+  "generated_at": "2026-10-01T07:56:37.192304+00:00",
   "replay_months": [
+    "2025-07",
     "2025-08",
     "2025-09",
     "2025-10",
@@ -15,8 +16,8 @@
     "2026-07",
     "2026-08"
   ],
-  "replay_month_count": 13,
-  "replay_rows": 9435,
+  "replay_month_count": 14,
+  "replay_rows": 10239,
   "live_settled_rows": 96,
   "note": "Diagnostics only. These findings must not auto-change the production model.",
   "by_asset": {
@@ -25,173 +26,173 @@
       "horizons": {
         "next_day": {
           "overall": {
-            "observations": 257,
-            "signals": 174,
+            "observations": 279,
+            "signals": 191,
             "flat_forecasts": 82,
-            "abstained": 1,
-            "coverage": 0.9961089494163424,
-            "directional_coverage": 0.6770428015564203,
-            "correct": 73,
-            "accuracy": 0.41954022988505746,
-            "all_forecast_accuracy": 0.3359375
+            "abstained": 6,
+            "coverage": 0.978494623655914,
+            "directional_coverage": 0.6845878136200717,
+            "correct": 81,
+            "accuracy": 0.42408376963350786,
+            "all_forecast_accuracy": 0.3443223443223443
           },
           "factor_agreement": {
-            "observations": 80,
-            "signals": 68,
+            "observations": 84,
+            "signals": 72,
             "flat_forecasts": 12,
             "abstained": 0,
             "coverage": 1.0,
-            "directional_coverage": 0.85,
-            "correct": 30,
-            "accuracy": 0.4411764705882353,
-            "all_forecast_accuracy": 0.4125
+            "directional_coverage": 0.8571428571428571,
+            "correct": 32,
+            "accuracy": 0.4444444444444444,
+            "all_forecast_accuracy": 0.4166666666666667
           },
           "factor_disagreement": {
-            "observations": 65,
-            "signals": 44,
+            "observations": 68,
+            "signals": 46,
             "flat_forecasts": 20,
-            "abstained": 1,
-            "coverage": 0.9846153846153847,
-            "directional_coverage": 0.676923076923077,
-            "correct": 22,
+            "abstained": 2,
+            "coverage": 0.9705882352941176,
+            "directional_coverage": 0.6764705882352942,
+            "correct": 23,
             "accuracy": 0.5,
-            "all_forecast_accuracy": 0.421875
+            "all_forecast_accuracy": 0.42424242424242425
           },
           "strong_calls": {
-            "observations": 98,
-            "signals": 98,
+            "observations": 108,
+            "signals": 108,
+            "flat_forecasts": 0,
+            "abstained": 0,
+            "coverage": 1.0,
+            "directional_coverage": 1.0,
+            "correct": 49,
+            "accuracy": 0.4537037037037037,
+            "all_forecast_accuracy": 0.4537037037037037
+          },
+          "mild_calls": {
+            "observations": 83,
+            "signals": 83,
+            "flat_forecasts": 0,
+            "abstained": 0,
+            "coverage": 1.0,
+            "directional_coverage": 1.0,
+            "correct": 32,
+            "accuracy": 0.3855421686746988,
+            "all_forecast_accuracy": 0.3855421686746988
+          }
+        },
+        "two_days": {
+          "overall": {
+            "observations": 279,
+            "signals": 191,
+            "flat_forecasts": 82,
+            "abstained": 6,
+            "coverage": 0.978494623655914,
+            "directional_coverage": 0.6845878136200717,
+            "correct": 82,
+            "accuracy": 0.4293193717277487,
+            "all_forecast_accuracy": 0.3626373626373626
+          },
+          "factor_agreement": {
+            "observations": 84,
+            "signals": 72,
+            "flat_forecasts": 12,
+            "abstained": 0,
+            "coverage": 1.0,
+            "directional_coverage": 0.8571428571428571,
+            "correct": 28,
+            "accuracy": 0.3888888888888889,
+            "all_forecast_accuracy": 0.35714285714285715
+          },
+          "factor_disagreement": {
+            "observations": 68,
+            "signals": 46,
+            "flat_forecasts": 20,
+            "abstained": 2,
+            "coverage": 0.9705882352941176,
+            "directional_coverage": 0.6764705882352942,
+            "correct": 23,
+            "accuracy": 0.5,
+            "all_forecast_accuracy": 0.3787878787878788
+          },
+          "strong_calls": {
+            "observations": 108,
+            "signals": 108,
+            "flat_forecasts": 0,
+            "abstained": 0,
+            "coverage": 1.0,
+            "directional_coverage": 1.0,
+            "correct": 53,
+            "accuracy": 0.49074074074074076,
+            "all_forecast_accuracy": 0.49074074074074076
+          },
+          "mild_calls": {
+            "observations": 83,
+            "signals": 83,
+            "flat_forecasts": 0,
+            "abstained": 0,
+            "coverage": 1.0,
+            "directional_coverage": 1.0,
+            "correct": 29,
+            "accuracy": 0.3493975903614458,
+            "all_forecast_accuracy": 0.3493975903614458
+          }
+        },
+        "one_month": {
+          "overall": {
+            "observations": 279,
+            "signals": 191,
+            "flat_forecasts": 82,
+            "abstained": 6,
+            "coverage": 0.978494623655914,
+            "directional_coverage": 0.6845878136200717,
+            "correct": 102,
+            "accuracy": 0.5340314136125655,
+            "all_forecast_accuracy": 0.41025641025641024
+          },
+          "factor_agreement": {
+            "observations": 84,
+            "signals": 72,
+            "flat_forecasts": 12,
+            "abstained": 0,
+            "coverage": 1.0,
+            "directional_coverage": 0.8571428571428571,
+            "correct": 39,
+            "accuracy": 0.5416666666666666,
+            "all_forecast_accuracy": 0.4642857142857143
+          },
+          "factor_disagreement": {
+            "observations": 68,
+            "signals": 46,
+            "flat_forecasts": 20,
+            "abstained": 2,
+            "coverage": 0.9705882352941176,
+            "directional_coverage": 0.6764705882352942,
+            "correct": 24,
+            "accuracy": 0.5217391304347826,
+            "all_forecast_accuracy": 0.4090909090909091
+          },
+          "strong_calls": {
+            "observations": 108,
+            "signals": 108,
+            "flat_forecasts": 0,
+            "abstained": 0,
+            "coverage": 1.0,
+            "directional_coverage": 1.0,
+            "correct": 58,
+            "accuracy": 0.5370370370370371,
+            "all_forecast_accuracy": 0.5370370370370371
+          },
+          "mild_calls": {
+            "observations": 83,
+            "signals": 83,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
             "correct": 44,
-            "accuracy": 0.4489795918367347,
-            "all_forecast_accuracy": 0.4489795918367347
-          },
-          "mild_calls": {
-            "observations": 76,
-            "signals": 76,
-            "flat_forecasts": 0,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 1.0,
-            "correct": 29,
-            "accuracy": 0.3815789473684211,
-            "all_forecast_accuracy": 0.3815789473684211
-          }
-        },
-        "two_days": {
-          "overall": {
-            "observations": 257,
-            "signals": 174,
-            "flat_forecasts": 82,
-            "abstained": 1,
-            "coverage": 0.9961089494163424,
-            "directional_coverage": 0.6770428015564203,
-            "correct": 74,
-            "accuracy": 0.42528735632183906,
-            "all_forecast_accuracy": 0.35546875
-          },
-          "factor_agreement": {
-            "observations": 80,
-            "signals": 68,
-            "flat_forecasts": 12,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 0.85,
-            "correct": 26,
-            "accuracy": 0.38235294117647056,
-            "all_forecast_accuracy": 0.35
-          },
-          "factor_disagreement": {
-            "observations": 65,
-            "signals": 44,
-            "flat_forecasts": 20,
-            "abstained": 1,
-            "coverage": 0.9846153846153847,
-            "directional_coverage": 0.676923076923077,
-            "correct": 22,
-            "accuracy": 0.5,
-            "all_forecast_accuracy": 0.375
-          },
-          "strong_calls": {
-            "observations": 98,
-            "signals": 98,
-            "flat_forecasts": 0,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 1.0,
-            "correct": 45,
-            "accuracy": 0.45918367346938777,
-            "all_forecast_accuracy": 0.45918367346938777
-          },
-          "mild_calls": {
-            "observations": 76,
-            "signals": 76,
-            "flat_forecasts": 0,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 1.0,
-            "correct": 29,
-            "accuracy": 0.3815789473684211,
-            "all_forecast_accuracy": 0.3815789473684211
-          }
-        },
-        "one_month": {
-          "overall": {
-            "observations": 257,
-            "signals": 174,
-            "flat_forecasts": 82,
-            "abstained": 1,
-            "coverage": 0.9961089494163424,
-            "directional_coverage": 0.6770428015564203,
-            "correct": 85,
-            "accuracy": 0.4885057471264368,
-            "all_forecast_accuracy": 0.37109375
-          },
-          "factor_agreement": {
-            "observations": 80,
-            "signals": 68,
-            "flat_forecasts": 12,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 0.85,
-            "correct": 35,
-            "accuracy": 0.5147058823529411,
-            "all_forecast_accuracy": 0.4375
-          },
-          "factor_disagreement": {
-            "observations": 65,
-            "signals": 44,
-            "flat_forecasts": 20,
-            "abstained": 1,
-            "coverage": 0.9846153846153847,
-            "directional_coverage": 0.676923076923077,
-            "correct": 22,
-            "accuracy": 0.5,
-            "all_forecast_accuracy": 0.390625
-          },
-          "strong_calls": {
-            "observations": 98,
-            "signals": 98,
-            "flat_forecasts": 0,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 1.0,
-            "correct": 48,
-            "accuracy": 0.4897959183673469,
-            "all_forecast_accuracy": 0.4897959183673469
-          },
-          "mild_calls": {
-            "observations": 76,
-            "signals": 76,
-            "flat_forecasts": 0,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 1.0,
-            "correct": 37,
-            "accuracy": 0.4868421052631579,
-            "all_forecast_accuracy": 0.4868421052631579
+            "accuracy": 0.5301204819277109,
+            "all_forecast_accuracy": 0.5301204819277109
           }
         }
       }
@@ -201,173 +202,173 @@
       "horizons": {
         "next_day": {
           "overall": {
-            "observations": 257,
-            "signals": 244,
+            "observations": 279,
+            "signals": 260,
             "flat_forecasts": 11,
-            "abstained": 2,
-            "coverage": 0.9922178988326849,
-            "directional_coverage": 0.9494163424124513,
-            "correct": 138,
-            "accuracy": 0.5655737704918032,
-            "all_forecast_accuracy": 0.5411764705882353
+            "abstained": 8,
+            "coverage": 0.9713261648745519,
+            "directional_coverage": 0.931899641577061,
+            "correct": 147,
+            "accuracy": 0.5653846153846154,
+            "all_forecast_accuracy": 0.5424354243542435
           },
           "factor_agreement": {
-            "observations": 85,
-            "signals": 82,
+            "observations": 89,
+            "signals": 85,
             "flat_forecasts": 3,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 0.9647058823529412,
-            "correct": 54,
-            "accuracy": 0.6585365853658537,
-            "all_forecast_accuracy": 0.6352941176470588
+            "abstained": 1,
+            "coverage": 0.9887640449438202,
+            "directional_coverage": 0.9550561797752809,
+            "correct": 56,
+            "accuracy": 0.6588235294117647,
+            "all_forecast_accuracy": 0.6363636363636364
           },
           "factor_disagreement": {
-            "observations": 76,
-            "signals": 72,
+            "observations": 77,
+            "signals": 73,
             "flat_forecasts": 4,
             "abstained": 0,
             "coverage": 1.0,
-            "directional_coverage": 0.9473684210526315,
-            "correct": 34,
-            "accuracy": 0.4722222222222222,
-            "all_forecast_accuracy": 0.4473684210526316
+            "directional_coverage": 0.948051948051948,
+            "correct": 35,
+            "accuracy": 0.4794520547945205,
+            "all_forecast_accuracy": 0.45454545454545453
           },
           "strong_calls": {
-            "observations": 204,
-            "signals": 204,
+            "observations": 212,
+            "signals": 212,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 114,
-            "accuracy": 0.5588235294117647,
-            "all_forecast_accuracy": 0.5588235294117647
+            "correct": 117,
+            "accuracy": 0.5518867924528302,
+            "all_forecast_accuracy": 0.5518867924528302
           },
           "mild_calls": {
-            "observations": 40,
-            "signals": 40,
+            "observations": 48,
+            "signals": 48,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 24,
-            "accuracy": 0.6,
-            "all_forecast_accuracy": 0.6
+            "correct": 30,
+            "accuracy": 0.625,
+            "all_forecast_accuracy": 0.625
           }
         },
         "two_days": {
           "overall": {
-            "observations": 257,
-            "signals": 244,
+            "observations": 279,
+            "signals": 260,
             "flat_forecasts": 11,
-            "abstained": 2,
-            "coverage": 0.9922178988326849,
-            "directional_coverage": 0.9494163424124513,
-            "correct": 133,
-            "accuracy": 0.5450819672131147,
-            "all_forecast_accuracy": 0.5215686274509804
+            "abstained": 8,
+            "coverage": 0.9713261648745519,
+            "directional_coverage": 0.931899641577061,
+            "correct": 140,
+            "accuracy": 0.5384615384615384,
+            "all_forecast_accuracy": 0.5166051660516605
           },
           "factor_agreement": {
-            "observations": 85,
-            "signals": 82,
+            "observations": 89,
+            "signals": 85,
             "flat_forecasts": 3,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 0.9647058823529412,
-            "correct": 49,
-            "accuracy": 0.5975609756097561,
-            "all_forecast_accuracy": 0.5764705882352941
+            "abstained": 1,
+            "coverage": 0.9887640449438202,
+            "directional_coverage": 0.9550561797752809,
+            "correct": 51,
+            "accuracy": 0.6,
+            "all_forecast_accuracy": 0.5795454545454546
           },
           "factor_disagreement": {
-            "observations": 76,
-            "signals": 72,
+            "observations": 77,
+            "signals": 73,
             "flat_forecasts": 4,
             "abstained": 0,
             "coverage": 1.0,
-            "directional_coverage": 0.9473684210526315,
-            "correct": 35,
-            "accuracy": 0.4861111111111111,
-            "all_forecast_accuracy": 0.4605263157894737
+            "directional_coverage": 0.948051948051948,
+            "correct": 36,
+            "accuracy": 0.4931506849315068,
+            "all_forecast_accuracy": 0.4675324675324675
           },
           "strong_calls": {
-            "observations": 204,
-            "signals": 204,
+            "observations": 212,
+            "signals": 212,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 116,
-            "accuracy": 0.5686274509803921,
-            "all_forecast_accuracy": 0.5686274509803921
+            "correct": 117,
+            "accuracy": 0.5518867924528302,
+            "all_forecast_accuracy": 0.5518867924528302
           },
           "mild_calls": {
-            "observations": 40,
-            "signals": 40,
+            "observations": 48,
+            "signals": 48,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 17,
-            "accuracy": 0.425,
-            "all_forecast_accuracy": 0.425
+            "correct": 23,
+            "accuracy": 0.4791666666666667,
+            "all_forecast_accuracy": 0.4791666666666667
           }
         },
         "one_month": {
           "overall": {
-            "observations": 257,
-            "signals": 244,
+            "observations": 279,
+            "signals": 260,
             "flat_forecasts": 11,
-            "abstained": 2,
-            "coverage": 0.9922178988326849,
-            "directional_coverage": 0.9494163424124513,
-            "correct": 147,
-            "accuracy": 0.6024590163934426,
-            "all_forecast_accuracy": 0.5803921568627451
+            "abstained": 8,
+            "coverage": 0.9713261648745519,
+            "directional_coverage": 0.931899641577061,
+            "correct": 152,
+            "accuracy": 0.5846153846153846,
+            "all_forecast_accuracy": 0.5645756457564576
           },
           "factor_agreement": {
-            "observations": 85,
-            "signals": 82,
+            "observations": 89,
+            "signals": 85,
             "flat_forecasts": 3,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 0.9647058823529412,
+            "abstained": 1,
+            "coverage": 0.9887640449438202,
+            "directional_coverage": 0.9550561797752809,
             "correct": 48,
-            "accuracy": 0.5853658536585366,
-            "all_forecast_accuracy": 0.5647058823529412
+            "accuracy": 0.5647058823529412,
+            "all_forecast_accuracy": 0.5454545454545454
           },
           "factor_disagreement": {
-            "observations": 76,
-            "signals": 72,
+            "observations": 77,
+            "signals": 73,
             "flat_forecasts": 4,
             "abstained": 0,
             "coverage": 1.0,
-            "directional_coverage": 0.9473684210526315,
+            "directional_coverage": 0.948051948051948,
             "correct": 41,
-            "accuracy": 0.5694444444444444,
-            "all_forecast_accuracy": 0.5394736842105263
+            "accuracy": 0.5616438356164384,
+            "all_forecast_accuracy": 0.5324675324675324
           },
           "strong_calls": {
-            "observations": 204,
-            "signals": 204,
+            "observations": 212,
+            "signals": 212,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 136,
-            "accuracy": 0.6666666666666666,
-            "all_forecast_accuracy": 0.6666666666666666
+            "correct": 139,
+            "accuracy": 0.6556603773584906,
+            "all_forecast_accuracy": 0.6556603773584906
           },
           "mild_calls": {
-            "observations": 40,
-            "signals": 40,
+            "observations": 48,
+            "signals": 48,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 11,
-            "accuracy": 0.275,
-            "all_forecast_accuracy": 0.275
+            "correct": 13,
+            "accuracy": 0.2708333333333333,
+            "all_forecast_accuracy": 0.2708333333333333
           }
         }
       }
@@ -377,173 +378,173 @@
       "horizons": {
         "next_day": {
           "overall": {
-            "observations": 257,
-            "signals": 219,
+            "observations": 279,
+            "signals": 235,
             "flat_forecasts": 37,
-            "abstained": 1,
-            "coverage": 0.9961089494163424,
-            "directional_coverage": 0.8521400778210116,
-            "correct": 101,
-            "accuracy": 0.4611872146118721,
-            "all_forecast_accuracy": 0.39453125
+            "abstained": 7,
+            "coverage": 0.974910394265233,
+            "directional_coverage": 0.8422939068100358,
+            "correct": 106,
+            "accuracy": 0.451063829787234,
+            "all_forecast_accuracy": 0.3897058823529412
           },
           "factor_agreement": {
-            "observations": 85,
-            "signals": 81,
+            "observations": 90,
+            "signals": 85,
             "flat_forecasts": 4,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 0.9529411764705882,
-            "correct": 36,
-            "accuracy": 0.4444444444444444,
-            "all_forecast_accuracy": 0.4235294117647059
+            "abstained": 1,
+            "coverage": 0.9888888888888889,
+            "directional_coverage": 0.9444444444444444,
+            "correct": 37,
+            "accuracy": 0.43529411764705883,
+            "all_forecast_accuracy": 0.4157303370786517
           },
           "factor_disagreement": {
-            "observations": 71,
-            "signals": 61,
+            "observations": 73,
+            "signals": 63,
             "flat_forecasts": 9,
             "abstained": 1,
-            "coverage": 0.9859154929577465,
-            "directional_coverage": 0.8591549295774648,
-            "correct": 29,
-            "accuracy": 0.47540983606557374,
-            "all_forecast_accuracy": 0.4142857142857143
+            "coverage": 0.9863013698630136,
+            "directional_coverage": 0.863013698630137,
+            "correct": 31,
+            "accuracy": 0.49206349206349204,
+            "all_forecast_accuracy": 0.4305555555555556
           },
           "strong_calls": {
-            "observations": 161,
-            "signals": 161,
+            "observations": 168,
+            "signals": 168,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 74,
-            "accuracy": 0.45962732919254656,
-            "all_forecast_accuracy": 0.45962732919254656
+            "correct": 76,
+            "accuracy": 0.4523809523809524,
+            "all_forecast_accuracy": 0.4523809523809524
           },
           "mild_calls": {
-            "observations": 58,
-            "signals": 58,
+            "observations": 67,
+            "signals": 67,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 27,
-            "accuracy": 0.46551724137931033,
-            "all_forecast_accuracy": 0.46551724137931033
+            "correct": 30,
+            "accuracy": 0.44776119402985076,
+            "all_forecast_accuracy": 0.44776119402985076
           }
         },
         "two_days": {
           "overall": {
-            "observations": 257,
-            "signals": 219,
+            "observations": 279,
+            "signals": 235,
             "flat_forecasts": 37,
-            "abstained": 1,
-            "coverage": 0.9961089494163424,
-            "directional_coverage": 0.8521400778210116,
-            "correct": 114,
-            "accuracy": 0.5205479452054794,
-            "all_forecast_accuracy": 0.44921875
+            "abstained": 7,
+            "coverage": 0.974910394265233,
+            "directional_coverage": 0.8422939068100358,
+            "correct": 122,
+            "accuracy": 0.5191489361702127,
+            "all_forecast_accuracy": 0.4522058823529412
           },
           "factor_agreement": {
-            "observations": 85,
-            "signals": 81,
+            "observations": 90,
+            "signals": 85,
             "flat_forecasts": 4,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 0.9529411764705882,
-            "correct": 41,
-            "accuracy": 0.5061728395061729,
-            "all_forecast_accuracy": 0.4823529411764706
+            "abstained": 1,
+            "coverage": 0.9888888888888889,
+            "directional_coverage": 0.9444444444444444,
+            "correct": 43,
+            "accuracy": 0.5058823529411764,
+            "all_forecast_accuracy": 0.48314606741573035
           },
           "factor_disagreement": {
-            "observations": 71,
-            "signals": 61,
+            "observations": 73,
+            "signals": 63,
             "flat_forecasts": 9,
             "abstained": 1,
-            "coverage": 0.9859154929577465,
-            "directional_coverage": 0.8591549295774648,
-            "correct": 36,
-            "accuracy": 0.5901639344262295,
-            "all_forecast_accuracy": 0.5142857142857142
+            "coverage": 0.9863013698630136,
+            "directional_coverage": 0.863013698630137,
+            "correct": 38,
+            "accuracy": 0.6031746031746031,
+            "all_forecast_accuracy": 0.5277777777777778
           },
           "strong_calls": {
-            "observations": 161,
-            "signals": 161,
+            "observations": 168,
+            "signals": 168,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 82,
-            "accuracy": 0.5093167701863354,
-            "all_forecast_accuracy": 0.5093167701863354
+            "correct": 85,
+            "accuracy": 0.5059523809523809,
+            "all_forecast_accuracy": 0.5059523809523809
           },
           "mild_calls": {
-            "observations": 58,
-            "signals": 58,
+            "observations": 67,
+            "signals": 67,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 32,
-            "accuracy": 0.5517241379310345,
-            "all_forecast_accuracy": 0.5517241379310345
+            "correct": 37,
+            "accuracy": 0.5522388059701493,
+            "all_forecast_accuracy": 0.5522388059701493
           }
         },
         "one_month": {
           "overall": {
-            "observations": 257,
-            "signals": 219,
+            "observations": 279,
+            "signals": 235,
             "flat_forecasts": 37,
-            "abstained": 1,
-            "coverage": 0.9961089494163424,
-            "directional_coverage": 0.8521400778210116,
-            "correct": 107,
-            "accuracy": 0.4885844748858447,
-            "all_forecast_accuracy": 0.43359375
+            "abstained": 7,
+            "coverage": 0.974910394265233,
+            "directional_coverage": 0.8422939068100358,
+            "correct": 117,
+            "accuracy": 0.4978723404255319,
+            "all_forecast_accuracy": 0.44485294117647056
           },
           "factor_agreement": {
-            "observations": 85,
-            "signals": 81,
+            "observations": 90,
+            "signals": 85,
             "flat_forecasts": 4,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 0.9529411764705882,
-            "correct": 36,
-            "accuracy": 0.4444444444444444,
-            "all_forecast_accuracy": 0.4235294117647059
+            "abstained": 1,
+            "coverage": 0.9888888888888889,
+            "directional_coverage": 0.9444444444444444,
+            "correct": 39,
+            "accuracy": 0.4588235294117647,
+            "all_forecast_accuracy": 0.43820224719101125
           },
           "factor_disagreement": {
-            "observations": 71,
-            "signals": 61,
+            "observations": 73,
+            "signals": 63,
             "flat_forecasts": 9,
             "abstained": 1,
-            "coverage": 0.9859154929577465,
-            "directional_coverage": 0.8591549295774648,
-            "correct": 34,
-            "accuracy": 0.5573770491803278,
-            "all_forecast_accuracy": 0.4857142857142857
+            "coverage": 0.9863013698630136,
+            "directional_coverage": 0.863013698630137,
+            "correct": 36,
+            "accuracy": 0.5714285714285714,
+            "all_forecast_accuracy": 0.5
           },
           "strong_calls": {
-            "observations": 161,
-            "signals": 161,
+            "observations": 168,
+            "signals": 168,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 86,
-            "accuracy": 0.5341614906832298,
-            "all_forecast_accuracy": 0.5341614906832298
+            "correct": 91,
+            "accuracy": 0.5416666666666666,
+            "all_forecast_accuracy": 0.5416666666666666
           },
           "mild_calls": {
-            "observations": 58,
-            "signals": 58,
+            "observations": 67,
+            "signals": 67,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 21,
-            "accuracy": 0.3620689655172414,
-            "all_forecast_accuracy": 0.3620689655172414
+            "correct": 26,
+            "accuracy": 0.3880597014925373,
+            "all_forecast_accuracy": 0.3880597014925373
           }
         }
       }
@@ -553,173 +554,173 @@
       "horizons": {
         "next_day": {
           "overall": {
-            "observations": 257,
-            "signals": 174,
+            "observations": 279,
+            "signals": 189,
             "flat_forecasts": 79,
-            "abstained": 4,
-            "coverage": 0.9844357976653697,
-            "directional_coverage": 0.6770428015564203,
-            "correct": 78,
-            "accuracy": 0.4482758620689655,
-            "all_forecast_accuracy": 0.34782608695652173
+            "abstained": 11,
+            "coverage": 0.9605734767025089,
+            "directional_coverage": 0.6774193548387096,
+            "correct": 83,
+            "accuracy": 0.43915343915343913,
+            "all_forecast_accuracy": 0.34701492537313433
           },
           "factor_agreement": {
-            "observations": 88,
-            "signals": 70,
+            "observations": 92,
+            "signals": 74,
             "flat_forecasts": 18,
             "abstained": 0,
             "coverage": 1.0,
-            "directional_coverage": 0.7954545454545454,
-            "correct": 31,
-            "accuracy": 0.44285714285714284,
-            "all_forecast_accuracy": 0.38636363636363635
+            "directional_coverage": 0.8043478260869565,
+            "correct": 32,
+            "accuracy": 0.43243243243243246,
+            "all_forecast_accuracy": 0.3804347826086957
           },
           "factor_disagreement": {
-            "observations": 58,
-            "signals": 41,
+            "observations": 60,
+            "signals": 42,
             "flat_forecasts": 14,
-            "abstained": 3,
-            "coverage": 0.9482758620689655,
-            "directional_coverage": 0.7068965517241379,
+            "abstained": 4,
+            "coverage": 0.9333333333333333,
+            "directional_coverage": 0.7,
             "correct": 20,
-            "accuracy": 0.4878048780487805,
-            "all_forecast_accuracy": 0.4
+            "accuracy": 0.47619047619047616,
+            "all_forecast_accuracy": 0.39285714285714285
           },
           "strong_calls": {
-            "observations": 69,
-            "signals": 69,
+            "observations": 72,
+            "signals": 72,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
             "correct": 32,
-            "accuracy": 0.463768115942029,
-            "all_forecast_accuracy": 0.463768115942029
+            "accuracy": 0.4444444444444444,
+            "all_forecast_accuracy": 0.4444444444444444
           },
           "mild_calls": {
-            "observations": 105,
-            "signals": 105,
+            "observations": 117,
+            "signals": 117,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 46,
-            "accuracy": 0.4380952380952381,
-            "all_forecast_accuracy": 0.4380952380952381
+            "correct": 51,
+            "accuracy": 0.4358974358974359,
+            "all_forecast_accuracy": 0.4358974358974359
           }
         },
         "two_days": {
           "overall": {
-            "observations": 257,
-            "signals": 174,
+            "observations": 279,
+            "signals": 189,
             "flat_forecasts": 79,
-            "abstained": 4,
-            "coverage": 0.9844357976653697,
-            "directional_coverage": 0.6770428015564203,
-            "correct": 80,
-            "accuracy": 0.45977011494252873,
-            "all_forecast_accuracy": 0.3438735177865613
+            "abstained": 11,
+            "coverage": 0.9605734767025089,
+            "directional_coverage": 0.6774193548387096,
+            "correct": 85,
+            "accuracy": 0.4497354497354497,
+            "all_forecast_accuracy": 0.34328358208955223
           },
           "factor_agreement": {
-            "observations": 88,
-            "signals": 70,
+            "observations": 92,
+            "signals": 74,
             "flat_forecasts": 18,
             "abstained": 0,
             "coverage": 1.0,
-            "directional_coverage": 0.7954545454545454,
+            "directional_coverage": 0.8043478260869565,
             "correct": 31,
-            "accuracy": 0.44285714285714284,
-            "all_forecast_accuracy": 0.36363636363636365
+            "accuracy": 0.4189189189189189,
+            "all_forecast_accuracy": 0.34782608695652173
           },
           "factor_disagreement": {
-            "observations": 58,
-            "signals": 41,
+            "observations": 60,
+            "signals": 42,
             "flat_forecasts": 14,
-            "abstained": 3,
-            "coverage": 0.9482758620689655,
-            "directional_coverage": 0.7068965517241379,
+            "abstained": 4,
+            "coverage": 0.9333333333333333,
+            "directional_coverage": 0.7,
             "correct": 20,
-            "accuracy": 0.4878048780487805,
-            "all_forecast_accuracy": 0.38181818181818183
+            "accuracy": 0.47619047619047616,
+            "all_forecast_accuracy": 0.375
           },
           "strong_calls": {
-            "observations": 69,
-            "signals": 69,
+            "observations": 72,
+            "signals": 72,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
             "correct": 39,
-            "accuracy": 0.5652173913043478,
-            "all_forecast_accuracy": 0.5652173913043478
+            "accuracy": 0.5416666666666666,
+            "all_forecast_accuracy": 0.5416666666666666
           },
           "mild_calls": {
-            "observations": 105,
-            "signals": 105,
+            "observations": 117,
+            "signals": 117,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 41,
-            "accuracy": 0.3904761904761905,
-            "all_forecast_accuracy": 0.3904761904761905
+            "correct": 46,
+            "accuracy": 0.39316239316239315,
+            "all_forecast_accuracy": 0.39316239316239315
           }
         },
         "one_month": {
           "overall": {
-            "observations": 257,
-            "signals": 174,
+            "observations": 279,
+            "signals": 189,
             "flat_forecasts": 79,
-            "abstained": 4,
-            "coverage": 0.9844357976653697,
-            "directional_coverage": 0.6770428015564203,
-            "correct": 84,
-            "accuracy": 0.4827586206896552,
-            "all_forecast_accuracy": 0.383399209486166
+            "abstained": 11,
+            "coverage": 0.9605734767025089,
+            "directional_coverage": 0.6774193548387096,
+            "correct": 98,
+            "accuracy": 0.5185185185185185,
+            "all_forecast_accuracy": 0.4141791044776119
           },
           "factor_agreement": {
-            "observations": 88,
-            "signals": 70,
+            "observations": 92,
+            "signals": 74,
             "flat_forecasts": 18,
             "abstained": 0,
             "coverage": 1.0,
-            "directional_coverage": 0.7954545454545454,
-            "correct": 29,
-            "accuracy": 0.4142857142857143,
-            "all_forecast_accuracy": 0.3409090909090909
+            "directional_coverage": 0.8043478260869565,
+            "correct": 33,
+            "accuracy": 0.44594594594594594,
+            "all_forecast_accuracy": 0.3695652173913043
           },
           "factor_disagreement": {
-            "observations": 58,
-            "signals": 41,
+            "observations": 60,
+            "signals": 42,
             "flat_forecasts": 14,
-            "abstained": 3,
-            "coverage": 0.9482758620689655,
-            "directional_coverage": 0.7068965517241379,
-            "correct": 24,
-            "accuracy": 0.5853658536585366,
-            "all_forecast_accuracy": 0.4727272727272727
+            "abstained": 4,
+            "coverage": 0.9333333333333333,
+            "directional_coverage": 0.7,
+            "correct": 25,
+            "accuracy": 0.5952380952380952,
+            "all_forecast_accuracy": 0.48214285714285715
           },
           "strong_calls": {
-            "observations": 69,
-            "signals": 69,
+            "observations": 72,
+            "signals": 72,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 40,
-            "accuracy": 0.5797101449275363,
-            "all_forecast_accuracy": 0.5797101449275363
+            "correct": 43,
+            "accuracy": 0.5972222222222222,
+            "all_forecast_accuracy": 0.5972222222222222
           },
           "mild_calls": {
-            "observations": 105,
-            "signals": 105,
+            "observations": 117,
+            "signals": 117,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 44,
-            "accuracy": 0.41904761904761906,
-            "all_forecast_accuracy": 0.41904761904761906
+            "correct": 55,
+            "accuracy": 0.4700854700854701,
+            "all_forecast_accuracy": 0.4700854700854701
           }
         }
       }
@@ -729,173 +730,173 @@
       "horizons": {
         "next_day": {
           "overall": {
-            "observations": 257,
-            "signals": 195,
+            "observations": 279,
+            "signals": 209,
             "flat_forecasts": 50,
-            "abstained": 12,
-            "coverage": 0.953307392996109,
-            "directional_coverage": 0.7587548638132295,
-            "correct": 88,
-            "accuracy": 0.4512820512820513,
-            "all_forecast_accuracy": 0.37551020408163266
+            "abstained": 20,
+            "coverage": 0.9283154121863799,
+            "directional_coverage": 0.7491039426523297,
+            "correct": 95,
+            "accuracy": 0.45454545454545453,
+            "all_forecast_accuracy": 0.38223938223938225
           },
           "factor_agreement": {
-            "observations": 74,
-            "signals": 64,
+            "observations": 79,
+            "signals": 69,
             "flat_forecasts": 6,
             "abstained": 4,
-            "coverage": 0.9459459459459459,
-            "directional_coverage": 0.8648648648648649,
-            "correct": 34,
-            "accuracy": 0.53125,
-            "all_forecast_accuracy": 0.5
+            "coverage": 0.9493670886075949,
+            "directional_coverage": 0.8734177215189873,
+            "correct": 36,
+            "accuracy": 0.5217391304347826,
+            "all_forecast_accuracy": 0.49333333333333335
           },
           "factor_disagreement": {
-            "observations": 74,
-            "signals": 58,
+            "observations": 75,
+            "signals": 59,
             "flat_forecasts": 12,
             "abstained": 4,
-            "coverage": 0.9459459459459459,
-            "directional_coverage": 0.7837837837837838,
-            "correct": 25,
-            "accuracy": 0.43103448275862066,
-            "all_forecast_accuracy": 0.37142857142857144
+            "coverage": 0.9466666666666667,
+            "directional_coverage": 0.7866666666666666,
+            "correct": 26,
+            "accuracy": 0.4406779661016949,
+            "all_forecast_accuracy": 0.38028169014084506
           },
           "strong_calls": {
-            "observations": 124,
-            "signals": 124,
+            "observations": 130,
+            "signals": 130,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 57,
-            "accuracy": 0.4596774193548387,
-            "all_forecast_accuracy": 0.4596774193548387
+            "correct": 60,
+            "accuracy": 0.46153846153846156,
+            "all_forecast_accuracy": 0.46153846153846156
           },
           "mild_calls": {
-            "observations": 71,
-            "signals": 71,
+            "observations": 79,
+            "signals": 79,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 31,
-            "accuracy": 0.43661971830985913,
-            "all_forecast_accuracy": 0.43661971830985913
+            "correct": 35,
+            "accuracy": 0.4430379746835443,
+            "all_forecast_accuracy": 0.4430379746835443
           }
         },
         "two_days": {
           "overall": {
-            "observations": 257,
-            "signals": 195,
+            "observations": 279,
+            "signals": 209,
             "flat_forecasts": 50,
-            "abstained": 12,
-            "coverage": 0.953307392996109,
-            "directional_coverage": 0.7587548638132295,
-            "correct": 74,
-            "accuracy": 0.37948717948717947,
-            "all_forecast_accuracy": 0.3306122448979592
+            "abstained": 20,
+            "coverage": 0.9283154121863799,
+            "directional_coverage": 0.7491039426523297,
+            "correct": 77,
+            "accuracy": 0.3684210526315789,
+            "all_forecast_accuracy": 0.32432432432432434
           },
           "factor_agreement": {
-            "observations": 74,
-            "signals": 64,
+            "observations": 79,
+            "signals": 69,
             "flat_forecasts": 6,
             "abstained": 4,
-            "coverage": 0.9459459459459459,
-            "directional_coverage": 0.8648648648648649,
-            "correct": 24,
-            "accuracy": 0.375,
-            "all_forecast_accuracy": 0.34285714285714286
+            "coverage": 0.9493670886075949,
+            "directional_coverage": 0.8734177215189873,
+            "correct": 25,
+            "accuracy": 0.36231884057971014,
+            "all_forecast_accuracy": 0.3333333333333333
           },
           "factor_disagreement": {
-            "observations": 74,
-            "signals": 58,
+            "observations": 75,
+            "signals": 59,
             "flat_forecasts": 12,
             "abstained": 4,
-            "coverage": 0.9459459459459459,
-            "directional_coverage": 0.7837837837837838,
+            "coverage": 0.9466666666666667,
+            "directional_coverage": 0.7866666666666666,
             "correct": 21,
-            "accuracy": 0.3620689655172414,
-            "all_forecast_accuracy": 0.3142857142857143
+            "accuracy": 0.3559322033898305,
+            "all_forecast_accuracy": 0.30985915492957744
           },
           "strong_calls": {
-            "observations": 124,
-            "signals": 124,
+            "observations": 130,
+            "signals": 130,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 47,
-            "accuracy": 0.3790322580645161,
-            "all_forecast_accuracy": 0.3790322580645161
+            "correct": 48,
+            "accuracy": 0.36923076923076925,
+            "all_forecast_accuracy": 0.36923076923076925
           },
           "mild_calls": {
-            "observations": 71,
-            "signals": 71,
+            "observations": 79,
+            "signals": 79,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 27,
-            "accuracy": 0.38028169014084506,
-            "all_forecast_accuracy": 0.38028169014084506
+            "correct": 29,
+            "accuracy": 0.3670886075949367,
+            "all_forecast_accuracy": 0.3670886075949367
           }
         },
         "one_month": {
           "overall": {
-            "observations": 257,
-            "signals": 195,
+            "observations": 279,
+            "signals": 209,
             "flat_forecasts": 50,
-            "abstained": 12,
-            "coverage": 0.953307392996109,
-            "directional_coverage": 0.7587548638132295,
+            "abstained": 20,
+            "coverage": 0.9283154121863799,
+            "directional_coverage": 0.7491039426523297,
             "correct": 88,
-            "accuracy": 0.4512820512820513,
-            "all_forecast_accuracy": 0.37142857142857144
+            "accuracy": 0.42105263157894735,
+            "all_forecast_accuracy": 0.35135135135135137
           },
           "factor_agreement": {
-            "observations": 74,
-            "signals": 64,
+            "observations": 79,
+            "signals": 69,
             "flat_forecasts": 6,
             "abstained": 4,
-            "coverage": 0.9459459459459459,
-            "directional_coverage": 0.8648648648648649,
+            "coverage": 0.9493670886075949,
+            "directional_coverage": 0.8734177215189873,
             "correct": 26,
-            "accuracy": 0.40625,
-            "all_forecast_accuracy": 0.37142857142857144
+            "accuracy": 0.37681159420289856,
+            "all_forecast_accuracy": 0.3466666666666667
           },
           "factor_disagreement": {
-            "observations": 74,
-            "signals": 58,
+            "observations": 75,
+            "signals": 59,
             "flat_forecasts": 12,
             "abstained": 4,
-            "coverage": 0.9459459459459459,
-            "directional_coverage": 0.7837837837837838,
+            "coverage": 0.9466666666666667,
+            "directional_coverage": 0.7866666666666666,
             "correct": 19,
-            "accuracy": 0.3275862068965517,
-            "all_forecast_accuracy": 0.2714285714285714
+            "accuracy": 0.3220338983050847,
+            "all_forecast_accuracy": 0.2676056338028169
           },
           "strong_calls": {
-            "observations": 124,
-            "signals": 124,
+            "observations": 130,
+            "signals": 130,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
             "correct": 54,
-            "accuracy": 0.43548387096774194,
-            "all_forecast_accuracy": 0.43548387096774194
+            "accuracy": 0.4153846153846154,
+            "all_forecast_accuracy": 0.4153846153846154
           },
           "mild_calls": {
-            "observations": 71,
-            "signals": 71,
+            "observations": 79,
+            "signals": 79,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
             "correct": 34,
-            "accuracy": 0.4788732394366197,
-            "all_forecast_accuracy": 0.4788732394366197
+            "accuracy": 0.43037974683544306,
+            "all_forecast_accuracy": 0.43037974683544306
           }
         }
       }
@@ -905,173 +906,173 @@
       "horizons": {
         "next_day": {
           "overall": {
-            "observations": 257,
-            "signals": 199,
+            "observations": 279,
+            "signals": 208,
             "flat_forecasts": 55,
-            "abstained": 3,
-            "coverage": 0.9883268482490273,
-            "directional_coverage": 0.77431906614786,
-            "correct": 100,
-            "accuracy": 0.5025125628140703,
-            "all_forecast_accuracy": 0.41732283464566927
+            "abstained": 16,
+            "coverage": 0.942652329749104,
+            "directional_coverage": 0.7455197132616488,
+            "correct": 104,
+            "accuracy": 0.5,
+            "all_forecast_accuracy": 0.41825095057034223
           },
           "factor_agreement": {
-            "observations": 73,
-            "signals": 64,
+            "observations": 76,
+            "signals": 66,
             "flat_forecasts": 9,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 0.8767123287671232,
-            "correct": 26,
-            "accuracy": 0.40625,
-            "all_forecast_accuracy": 0.3561643835616438
+            "abstained": 1,
+            "coverage": 0.9868421052631579,
+            "directional_coverage": 0.868421052631579,
+            "correct": 27,
+            "accuracy": 0.4090909090909091,
+            "all_forecast_accuracy": 0.36
           },
           "factor_disagreement": {
-            "observations": 79,
+            "observations": 81,
             "signals": 61,
             "flat_forecasts": 17,
-            "abstained": 1,
-            "coverage": 0.9873417721518988,
-            "directional_coverage": 0.7721518987341772,
+            "abstained": 3,
+            "coverage": 0.9629629629629629,
+            "directional_coverage": 0.7530864197530864,
             "correct": 30,
             "accuracy": 0.4918032786885246,
             "all_forecast_accuracy": 0.41025641025641024
           },
           "strong_calls": {
-            "observations": 126,
-            "signals": 126,
+            "observations": 131,
+            "signals": 131,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 64,
-            "accuracy": 0.5079365079365079,
-            "all_forecast_accuracy": 0.5079365079365079
+            "correct": 65,
+            "accuracy": 0.4961832061068702,
+            "all_forecast_accuracy": 0.4961832061068702
           },
           "mild_calls": {
-            "observations": 73,
-            "signals": 73,
-            "flat_forecasts": 0,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 1.0,
-            "correct": 36,
-            "accuracy": 0.4931506849315068,
-            "all_forecast_accuracy": 0.4931506849315068
-          }
-        },
-        "two_days": {
-          "overall": {
-            "observations": 257,
-            "signals": 199,
-            "flat_forecasts": 55,
-            "abstained": 3,
-            "coverage": 0.9883268482490273,
-            "directional_coverage": 0.77431906614786,
-            "correct": 92,
-            "accuracy": 0.4623115577889447,
-            "all_forecast_accuracy": 0.3937007874015748
-          },
-          "factor_agreement": {
-            "observations": 73,
-            "signals": 64,
-            "flat_forecasts": 9,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 0.8767123287671232,
-            "correct": 28,
-            "accuracy": 0.4375,
-            "all_forecast_accuracy": 0.3835616438356164
-          },
-          "factor_disagreement": {
-            "observations": 79,
-            "signals": 61,
-            "flat_forecasts": 17,
-            "abstained": 1,
-            "coverage": 0.9873417721518988,
-            "directional_coverage": 0.7721518987341772,
-            "correct": 27,
-            "accuracy": 0.4426229508196721,
-            "all_forecast_accuracy": 0.358974358974359
-          },
-          "strong_calls": {
-            "observations": 126,
-            "signals": 126,
-            "flat_forecasts": 0,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 1.0,
-            "correct": 56,
-            "accuracy": 0.4444444444444444,
-            "all_forecast_accuracy": 0.4444444444444444
-          },
-          "mild_calls": {
-            "observations": 73,
-            "signals": 73,
-            "flat_forecasts": 0,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 1.0,
-            "correct": 36,
-            "accuracy": 0.4931506849315068,
-            "all_forecast_accuracy": 0.4931506849315068
-          }
-        },
-        "one_month": {
-          "overall": {
-            "observations": 257,
-            "signals": 199,
-            "flat_forecasts": 55,
-            "abstained": 3,
-            "coverage": 0.9883268482490273,
-            "directional_coverage": 0.77431906614786,
-            "correct": 98,
-            "accuracy": 0.49246231155778897,
-            "all_forecast_accuracy": 0.3937007874015748
-          },
-          "factor_agreement": {
-            "observations": 73,
-            "signals": 64,
-            "flat_forecasts": 9,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 0.8767123287671232,
-            "correct": 33,
-            "accuracy": 0.515625,
-            "all_forecast_accuracy": 0.4520547945205479
-          },
-          "factor_disagreement": {
-            "observations": 79,
-            "signals": 61,
-            "flat_forecasts": 17,
-            "abstained": 1,
-            "coverage": 0.9873417721518988,
-            "directional_coverage": 0.7721518987341772,
-            "correct": 34,
-            "accuracy": 0.5573770491803278,
-            "all_forecast_accuracy": 0.44871794871794873
-          },
-          "strong_calls": {
-            "observations": 126,
-            "signals": 126,
-            "flat_forecasts": 0,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 1.0,
-            "correct": 59,
-            "accuracy": 0.46825396825396826,
-            "all_forecast_accuracy": 0.46825396825396826
-          },
-          "mild_calls": {
-            "observations": 73,
-            "signals": 73,
+            "observations": 77,
+            "signals": 77,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
             "correct": 39,
-            "accuracy": 0.5342465753424658,
-            "all_forecast_accuracy": 0.5342465753424658
+            "accuracy": 0.5064935064935064,
+            "all_forecast_accuracy": 0.5064935064935064
+          }
+        },
+        "two_days": {
+          "overall": {
+            "observations": 279,
+            "signals": 208,
+            "flat_forecasts": 55,
+            "abstained": 16,
+            "coverage": 0.942652329749104,
+            "directional_coverage": 0.7455197132616488,
+            "correct": 95,
+            "accuracy": 0.4567307692307692,
+            "all_forecast_accuracy": 0.3916349809885932
+          },
+          "factor_agreement": {
+            "observations": 76,
+            "signals": 66,
+            "flat_forecasts": 9,
+            "abstained": 1,
+            "coverage": 0.9868421052631579,
+            "directional_coverage": 0.868421052631579,
+            "correct": 28,
+            "accuracy": 0.42424242424242425,
+            "all_forecast_accuracy": 0.37333333333333335
+          },
+          "factor_disagreement": {
+            "observations": 81,
+            "signals": 61,
+            "flat_forecasts": 17,
+            "abstained": 3,
+            "coverage": 0.9629629629629629,
+            "directional_coverage": 0.7530864197530864,
+            "correct": 27,
+            "accuracy": 0.4426229508196721,
+            "all_forecast_accuracy": 0.358974358974359
+          },
+          "strong_calls": {
+            "observations": 131,
+            "signals": 131,
+            "flat_forecasts": 0,
+            "abstained": 0,
+            "coverage": 1.0,
+            "directional_coverage": 1.0,
+            "correct": 57,
+            "accuracy": 0.4351145038167939,
+            "all_forecast_accuracy": 0.4351145038167939
+          },
+          "mild_calls": {
+            "observations": 77,
+            "signals": 77,
+            "flat_forecasts": 0,
+            "abstained": 0,
+            "coverage": 1.0,
+            "directional_coverage": 1.0,
+            "correct": 38,
+            "accuracy": 0.4935064935064935,
+            "all_forecast_accuracy": 0.4935064935064935
+          }
+        },
+        "one_month": {
+          "overall": {
+            "observations": 279,
+            "signals": 208,
+            "flat_forecasts": 55,
+            "abstained": 16,
+            "coverage": 0.942652329749104,
+            "directional_coverage": 0.7455197132616488,
+            "correct": 98,
+            "accuracy": 0.47115384615384615,
+            "all_forecast_accuracy": 0.38022813688212925
+          },
+          "factor_agreement": {
+            "observations": 76,
+            "signals": 66,
+            "flat_forecasts": 9,
+            "abstained": 1,
+            "coverage": 0.9868421052631579,
+            "directional_coverage": 0.868421052631579,
+            "correct": 33,
+            "accuracy": 0.5,
+            "all_forecast_accuracy": 0.44
+          },
+          "factor_disagreement": {
+            "observations": 81,
+            "signals": 61,
+            "flat_forecasts": 17,
+            "abstained": 3,
+            "coverage": 0.9629629629629629,
+            "directional_coverage": 0.7530864197530864,
+            "correct": 34,
+            "accuracy": 0.5573770491803278,
+            "all_forecast_accuracy": 0.44871794871794873
+          },
+          "strong_calls": {
+            "observations": 131,
+            "signals": 131,
+            "flat_forecasts": 0,
+            "abstained": 0,
+            "coverage": 1.0,
+            "directional_coverage": 1.0,
+            "correct": 59,
+            "accuracy": 0.45038167938931295,
+            "all_forecast_accuracy": 0.45038167938931295
+          },
+          "mild_calls": {
+            "observations": 77,
+            "signals": 77,
+            "flat_forecasts": 0,
+            "abstained": 0,
+            "coverage": 1.0,
+            "directional_coverage": 1.0,
+            "correct": 39,
+            "accuracy": 0.5064935064935064,
+            "all_forecast_accuracy": 0.5064935064935064
           }
         }
       }
@@ -1081,173 +1082,173 @@
       "horizons": {
         "next_day": {
           "overall": {
-            "observations": 257,
-            "signals": 220,
+            "observations": 279,
+            "signals": 237,
             "flat_forecasts": 32,
-            "abstained": 5,
-            "coverage": 0.980544747081712,
-            "directional_coverage": 0.8560311284046692,
-            "correct": 112,
-            "accuracy": 0.509090909090909,
-            "all_forecast_accuracy": 0.45634920634920634
+            "abstained": 10,
+            "coverage": 0.96415770609319,
+            "directional_coverage": 0.8494623655913979,
+            "correct": 120,
+            "accuracy": 0.5063291139240507,
+            "all_forecast_accuracy": 0.45724907063197023
           },
           "factor_agreement": {
-            "observations": 67,
-            "signals": 63,
+            "observations": 70,
+            "signals": 66,
             "flat_forecasts": 4,
             "abstained": 0,
             "coverage": 1.0,
-            "directional_coverage": 0.9402985074626866,
+            "directional_coverage": 0.9428571428571428,
             "correct": 36,
-            "accuracy": 0.5714285714285714,
-            "all_forecast_accuracy": 0.5373134328358209
+            "accuracy": 0.5454545454545454,
+            "all_forecast_accuracy": 0.5142857142857142
           },
           "factor_disagreement": {
-            "observations": 90,
-            "signals": 73,
+            "observations": 94,
+            "signals": 77,
             "flat_forecasts": 16,
             "abstained": 1,
-            "coverage": 0.9888888888888889,
-            "directional_coverage": 0.8111111111111111,
-            "correct": 38,
-            "accuracy": 0.5205479452054794,
-            "all_forecast_accuracy": 0.449438202247191
+            "coverage": 0.9893617021276596,
+            "directional_coverage": 0.8191489361702128,
+            "correct": 41,
+            "accuracy": 0.5324675324675324,
+            "all_forecast_accuracy": 0.46236559139784944
           },
           "strong_calls": {
-            "observations": 139,
-            "signals": 139,
-            "flat_forecasts": 0,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 1.0,
-            "correct": 64,
-            "accuracy": 0.460431654676259,
-            "all_forecast_accuracy": 0.460431654676259
-          },
-          "mild_calls": {
-            "observations": 81,
-            "signals": 81,
-            "flat_forecasts": 0,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 1.0,
-            "correct": 48,
-            "accuracy": 0.5925925925925926,
-            "all_forecast_accuracy": 0.5925925925925926
-          }
-        },
-        "two_days": {
-          "overall": {
-            "observations": 257,
-            "signals": 220,
-            "flat_forecasts": 32,
-            "abstained": 5,
-            "coverage": 0.980544747081712,
-            "directional_coverage": 0.8560311284046692,
-            "correct": 113,
-            "accuracy": 0.5136363636363637,
-            "all_forecast_accuracy": 0.45634920634920634
-          },
-          "factor_agreement": {
-            "observations": 67,
-            "signals": 63,
-            "flat_forecasts": 4,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 0.9402985074626866,
-            "correct": 38,
-            "accuracy": 0.6031746031746031,
-            "all_forecast_accuracy": 0.582089552238806
-          },
-          "factor_disagreement": {
-            "observations": 90,
-            "signals": 73,
-            "flat_forecasts": 16,
-            "abstained": 1,
-            "coverage": 0.9888888888888889,
-            "directional_coverage": 0.8111111111111111,
-            "correct": 38,
-            "accuracy": 0.5205479452054794,
-            "all_forecast_accuracy": 0.42696629213483145
-          },
-          "strong_calls": {
-            "observations": 139,
-            "signals": 139,
+            "observations": 152,
+            "signals": 152,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
             "correct": 70,
-            "accuracy": 0.5035971223021583,
-            "all_forecast_accuracy": 0.5035971223021583
+            "accuracy": 0.4605263157894737,
+            "all_forecast_accuracy": 0.4605263157894737
           },
           "mild_calls": {
-            "observations": 81,
-            "signals": 81,
+            "observations": 85,
+            "signals": 85,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 43,
-            "accuracy": 0.5308641975308642,
-            "all_forecast_accuracy": 0.5308641975308642
+            "correct": 50,
+            "accuracy": 0.5882352941176471,
+            "all_forecast_accuracy": 0.5882352941176471
+          }
+        },
+        "two_days": {
+          "overall": {
+            "observations": 279,
+            "signals": 237,
+            "flat_forecasts": 32,
+            "abstained": 10,
+            "coverage": 0.96415770609319,
+            "directional_coverage": 0.8494623655913979,
+            "correct": 121,
+            "accuracy": 0.510548523206751,
+            "all_forecast_accuracy": 0.45724907063197023
+          },
+          "factor_agreement": {
+            "observations": 70,
+            "signals": 66,
+            "flat_forecasts": 4,
+            "abstained": 0,
+            "coverage": 1.0,
+            "directional_coverage": 0.9428571428571428,
+            "correct": 40,
+            "accuracy": 0.6060606060606061,
+            "all_forecast_accuracy": 0.5857142857142857
+          },
+          "factor_disagreement": {
+            "observations": 94,
+            "signals": 77,
+            "flat_forecasts": 16,
+            "abstained": 1,
+            "coverage": 0.9893617021276596,
+            "directional_coverage": 0.8191489361702128,
+            "correct": 40,
+            "accuracy": 0.5194805194805194,
+            "all_forecast_accuracy": 0.43010752688172044
+          },
+          "strong_calls": {
+            "observations": 152,
+            "signals": 152,
+            "flat_forecasts": 0,
+            "abstained": 0,
+            "coverage": 1.0,
+            "directional_coverage": 1.0,
+            "correct": 74,
+            "accuracy": 0.4868421052631579,
+            "all_forecast_accuracy": 0.4868421052631579
+          },
+          "mild_calls": {
+            "observations": 85,
+            "signals": 85,
+            "flat_forecasts": 0,
+            "abstained": 0,
+            "coverage": 1.0,
+            "directional_coverage": 1.0,
+            "correct": 47,
+            "accuracy": 0.5529411764705883,
+            "all_forecast_accuracy": 0.5529411764705883
           }
         },
         "one_month": {
           "overall": {
-            "observations": 257,
-            "signals": 220,
+            "observations": 279,
+            "signals": 237,
             "flat_forecasts": 32,
-            "abstained": 5,
-            "coverage": 0.980544747081712,
-            "directional_coverage": 0.8560311284046692,
-            "correct": 98,
-            "accuracy": 0.44545454545454544,
-            "all_forecast_accuracy": 0.39285714285714285
+            "abstained": 10,
+            "coverage": 0.96415770609319,
+            "directional_coverage": 0.8494623655913979,
+            "correct": 103,
+            "accuracy": 0.4345991561181435,
+            "all_forecast_accuracy": 0.38661710037174724
           },
           "factor_agreement": {
-            "observations": 67,
-            "signals": 63,
+            "observations": 70,
+            "signals": 66,
             "flat_forecasts": 4,
             "abstained": 0,
             "coverage": 1.0,
-            "directional_coverage": 0.9402985074626866,
-            "correct": 31,
-            "accuracy": 0.49206349206349204,
-            "all_forecast_accuracy": 0.4626865671641791
+            "directional_coverage": 0.9428571428571428,
+            "correct": 32,
+            "accuracy": 0.48484848484848486,
+            "all_forecast_accuracy": 0.45714285714285713
           },
           "factor_disagreement": {
-            "observations": 90,
-            "signals": 73,
+            "observations": 94,
+            "signals": 77,
             "flat_forecasts": 16,
             "abstained": 1,
-            "coverage": 0.9888888888888889,
-            "directional_coverage": 0.8111111111111111,
+            "coverage": 0.9893617021276596,
+            "directional_coverage": 0.8191489361702128,
             "correct": 37,
-            "accuracy": 0.5068493150684932,
-            "all_forecast_accuracy": 0.4157303370786517
+            "accuracy": 0.4805194805194805,
+            "all_forecast_accuracy": 0.3978494623655914
           },
           "strong_calls": {
-            "observations": 139,
-            "signals": 139,
+            "observations": 152,
+            "signals": 152,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 67,
-            "accuracy": 0.48201438848920863,
-            "all_forecast_accuracy": 0.48201438848920863
+            "correct": 70,
+            "accuracy": 0.4605263157894737,
+            "all_forecast_accuracy": 0.4605263157894737
           },
           "mild_calls": {
-            "observations": 81,
-            "signals": 81,
+            "observations": 85,
+            "signals": 85,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 31,
-            "accuracy": 0.38271604938271603,
-            "all_forecast_accuracy": 0.38271604938271603
+            "correct": 33,
+            "accuracy": 0.38823529411764707,
+            "all_forecast_accuracy": 0.38823529411764707
           }
         }
       }
@@ -1257,173 +1258,173 @@
       "horizons": {
         "next_day": {
           "overall": {
-            "observations": 257,
-            "signals": 192,
+            "observations": 279,
+            "signals": 199,
             "flat_forecasts": 58,
-            "abstained": 7,
-            "coverage": 0.9727626459143969,
-            "directional_coverage": 0.7470817120622568,
-            "correct": 93,
-            "accuracy": 0.484375,
-            "all_forecast_accuracy": 0.404
+            "abstained": 22,
+            "coverage": 0.921146953405018,
+            "directional_coverage": 0.7132616487455197,
+            "correct": 96,
+            "accuracy": 0.4824120603015075,
+            "all_forecast_accuracy": 0.4046692607003891
           },
           "factor_agreement": {
-            "observations": 87,
-            "signals": 72,
+            "observations": 91,
+            "signals": 76,
             "flat_forecasts": 14,
             "abstained": 1,
-            "coverage": 0.9885057471264368,
-            "directional_coverage": 0.8275862068965517,
-            "correct": 36,
-            "accuracy": 0.5,
-            "all_forecast_accuracy": 0.4418604651162791
+            "coverage": 0.989010989010989,
+            "directional_coverage": 0.8351648351648352,
+            "correct": 37,
+            "accuracy": 0.4868421052631579,
+            "all_forecast_accuracy": 0.43333333333333335
           },
           "factor_disagreement": {
-            "observations": 65,
-            "signals": 55,
+            "observations": 66,
+            "signals": 56,
             "flat_forecasts": 7,
             "abstained": 3,
-            "coverage": 0.9538461538461539,
-            "directional_coverage": 0.8461538461538461,
+            "coverage": 0.9545454545454546,
+            "directional_coverage": 0.8484848484848485,
             "correct": 30,
-            "accuracy": 0.5454545454545454,
-            "all_forecast_accuracy": 0.4838709677419355
+            "accuracy": 0.5357142857142857,
+            "all_forecast_accuracy": 0.47619047619047616
           },
           "strong_calls": {
-            "observations": 103,
-            "signals": 103,
+            "observations": 108,
+            "signals": 108,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 50,
-            "accuracy": 0.4854368932038835,
-            "all_forecast_accuracy": 0.4854368932038835
+            "correct": 52,
+            "accuracy": 0.48148148148148145,
+            "all_forecast_accuracy": 0.48148148148148145
           },
           "mild_calls": {
-            "observations": 89,
-            "signals": 89,
+            "observations": 92,
+            "signals": 91,
             "flat_forecasts": 0,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 1.0,
-            "correct": 43,
-            "accuracy": 0.48314606741573035,
-            "all_forecast_accuracy": 0.48314606741573035
+            "abstained": 1,
+            "coverage": 0.9891304347826086,
+            "directional_coverage": 0.9891304347826086,
+            "correct": 44,
+            "accuracy": 0.4835164835164835,
+            "all_forecast_accuracy": 0.4835164835164835
           }
         },
         "two_days": {
           "overall": {
-            "observations": 257,
-            "signals": 192,
+            "observations": 279,
+            "signals": 199,
             "flat_forecasts": 58,
-            "abstained": 7,
-            "coverage": 0.9727626459143969,
-            "directional_coverage": 0.7470817120622568,
-            "correct": 95,
-            "accuracy": 0.4947916666666667,
-            "all_forecast_accuracy": 0.412
+            "abstained": 22,
+            "coverage": 0.921146953405018,
+            "directional_coverage": 0.7132616487455197,
+            "correct": 97,
+            "accuracy": 0.48743718592964824,
+            "all_forecast_accuracy": 0.4085603112840467
           },
           "factor_agreement": {
-            "observations": 87,
-            "signals": 72,
+            "observations": 91,
+            "signals": 76,
             "flat_forecasts": 14,
             "abstained": 1,
-            "coverage": 0.9885057471264368,
-            "directional_coverage": 0.8275862068965517,
-            "correct": 33,
-            "accuracy": 0.4583333333333333,
-            "all_forecast_accuracy": 0.4186046511627907
+            "coverage": 0.989010989010989,
+            "directional_coverage": 0.8351648351648352,
+            "correct": 34,
+            "accuracy": 0.4473684210526316,
+            "all_forecast_accuracy": 0.4111111111111111
           },
           "factor_disagreement": {
-            "observations": 65,
-            "signals": 55,
+            "observations": 66,
+            "signals": 56,
             "flat_forecasts": 7,
             "abstained": 3,
-            "coverage": 0.9538461538461539,
-            "directional_coverage": 0.8461538461538461,
+            "coverage": 0.9545454545454546,
+            "directional_coverage": 0.8484848484848485,
             "correct": 35,
-            "accuracy": 0.6363636363636364,
-            "all_forecast_accuracy": 0.5645161290322581
+            "accuracy": 0.625,
+            "all_forecast_accuracy": 0.5555555555555556
           },
           "strong_calls": {
-            "observations": 103,
-            "signals": 103,
-            "flat_forecasts": 0,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 1.0,
-            "correct": 47,
-            "accuracy": 0.4563106796116505,
-            "all_forecast_accuracy": 0.4563106796116505
-          },
-          "mild_calls": {
-            "observations": 89,
-            "signals": 89,
+            "observations": 108,
+            "signals": 108,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
             "correct": 48,
-            "accuracy": 0.5393258426966292,
-            "all_forecast_accuracy": 0.5393258426966292
+            "accuracy": 0.4444444444444444,
+            "all_forecast_accuracy": 0.4444444444444444
+          },
+          "mild_calls": {
+            "observations": 92,
+            "signals": 91,
+            "flat_forecasts": 0,
+            "abstained": 1,
+            "coverage": 0.9891304347826086,
+            "directional_coverage": 0.9891304347826086,
+            "correct": 49,
+            "accuracy": 0.5384615384615384,
+            "all_forecast_accuracy": 0.5384615384615384
           }
         },
         "one_month": {
           "overall": {
-            "observations": 257,
-            "signals": 192,
+            "observations": 279,
+            "signals": 199,
             "flat_forecasts": 58,
-            "abstained": 7,
-            "coverage": 0.9727626459143969,
-            "directional_coverage": 0.7470817120622568,
-            "correct": 111,
-            "accuracy": 0.578125,
-            "all_forecast_accuracy": 0.476
+            "abstained": 22,
+            "coverage": 0.921146953405018,
+            "directional_coverage": 0.7132616487455197,
+            "correct": 118,
+            "accuracy": 0.592964824120603,
+            "all_forecast_accuracy": 0.490272373540856
           },
           "factor_agreement": {
-            "observations": 87,
-            "signals": 72,
+            "observations": 91,
+            "signals": 76,
             "flat_forecasts": 14,
             "abstained": 1,
-            "coverage": 0.9885057471264368,
-            "directional_coverage": 0.8275862068965517,
-            "correct": 44,
-            "accuracy": 0.6111111111111112,
-            "all_forecast_accuracy": 0.5232558139534884
+            "coverage": 0.989010989010989,
+            "directional_coverage": 0.8351648351648352,
+            "correct": 48,
+            "accuracy": 0.631578947368421,
+            "all_forecast_accuracy": 0.5444444444444444
           },
           "factor_disagreement": {
-            "observations": 65,
-            "signals": 55,
+            "observations": 66,
+            "signals": 56,
             "flat_forecasts": 7,
             "abstained": 3,
-            "coverage": 0.9538461538461539,
-            "directional_coverage": 0.8461538461538461,
-            "correct": 27,
-            "accuracy": 0.4909090909090909,
-            "all_forecast_accuracy": 0.43548387096774194
+            "coverage": 0.9545454545454546,
+            "directional_coverage": 0.8484848484848485,
+            "correct": 28,
+            "accuracy": 0.5,
+            "all_forecast_accuracy": 0.4444444444444444
           },
           "strong_calls": {
-            "observations": 103,
-            "signals": 103,
+            "observations": 108,
+            "signals": 108,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 62,
-            "accuracy": 0.6019417475728155,
-            "all_forecast_accuracy": 0.6019417475728155
+            "correct": 67,
+            "accuracy": 0.6203703703703703,
+            "all_forecast_accuracy": 0.6203703703703703
           },
           "mild_calls": {
-            "observations": 89,
-            "signals": 89,
+            "observations": 92,
+            "signals": 91,
             "flat_forecasts": 0,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 1.0,
-            "correct": 49,
-            "accuracy": 0.550561797752809,
-            "all_forecast_accuracy": 0.550561797752809
+            "abstained": 1,
+            "coverage": 0.9891304347826086,
+            "directional_coverage": 0.9891304347826086,
+            "correct": 51,
+            "accuracy": 0.5604395604395604,
+            "all_forecast_accuracy": 0.5604395604395604
           }
         }
       }
@@ -1433,37 +1434,37 @@
       "horizons": {
         "next_day": {
           "overall": {
-            "observations": 274,
-            "signals": 20,
+            "observations": 297,
+            "signals": 31,
             "flat_forecasts": 234,
-            "abstained": 20,
-            "coverage": 0.927007299270073,
-            "directional_coverage": 0.072992700729927,
-            "correct": 3,
-            "accuracy": 0.15,
-            "all_forecast_accuracy": 0.4094488188976378
+            "abstained": 32,
+            "coverage": 0.8922558922558923,
+            "directional_coverage": 0.10437710437710437,
+            "correct": 7,
+            "accuracy": 0.22580645161290322,
+            "all_forecast_accuracy": 0.4075471698113208
           },
           "factor_agreement": {
-            "observations": 53,
-            "signals": 15,
+            "observations": 55,
+            "signals": 16,
             "flat_forecasts": 33,
-            "abstained": 5,
-            "coverage": 0.9056603773584906,
-            "directional_coverage": 0.2830188679245283,
+            "abstained": 6,
+            "coverage": 0.8909090909090909,
+            "directional_coverage": 0.2909090909090909,
             "correct": 3,
-            "accuracy": 0.2,
-            "all_forecast_accuracy": 0.375
+            "accuracy": 0.1875,
+            "all_forecast_accuracy": 0.3673469387755102
           },
           "factor_disagreement": {
-            "observations": 45,
-            "signals": 0,
+            "observations": 50,
+            "signals": 1,
             "flat_forecasts": 42,
-            "abstained": 3,
-            "coverage": 0.9333333333333333,
-            "directional_coverage": 0.0,
+            "abstained": 7,
+            "coverage": 0.86,
+            "directional_coverage": 0.02,
             "correct": 0,
-            "accuracy": null,
-            "all_forecast_accuracy": 0.47619047619047616
+            "accuracy": 0.0,
+            "all_forecast_accuracy": 0.46511627906976744
           },
           "strong_calls": {
             "observations": 0,
@@ -1477,50 +1478,50 @@
             "all_forecast_accuracy": null
           },
           "mild_calls": {
-            "observations": 20,
-            "signals": 20,
+            "observations": 34,
+            "signals": 31,
             "flat_forecasts": 0,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 1.0,
-            "correct": 3,
-            "accuracy": 0.15,
-            "all_forecast_accuracy": 0.15
+            "abstained": 3,
+            "coverage": 0.9117647058823529,
+            "directional_coverage": 0.9117647058823529,
+            "correct": 7,
+            "accuracy": 0.22580645161290322,
+            "all_forecast_accuracy": 0.22580645161290322
           }
         },
         "two_days": {
           "overall": {
-            "observations": 274,
-            "signals": 20,
+            "observations": 297,
+            "signals": 31,
             "flat_forecasts": 234,
-            "abstained": 20,
-            "coverage": 0.927007299270073,
-            "directional_coverage": 0.072992700729927,
-            "correct": 2,
-            "accuracy": 0.1,
-            "all_forecast_accuracy": 0.3858267716535433
+            "abstained": 32,
+            "coverage": 0.8922558922558923,
+            "directional_coverage": 0.10437710437710437,
+            "correct": 9,
+            "accuracy": 0.2903225806451613,
+            "all_forecast_accuracy": 0.39622641509433965
           },
           "factor_agreement": {
-            "observations": 53,
-            "signals": 15,
+            "observations": 55,
+            "signals": 16,
             "flat_forecasts": 33,
-            "abstained": 5,
-            "coverage": 0.9056603773584906,
-            "directional_coverage": 0.2830188679245283,
+            "abstained": 6,
+            "coverage": 0.8909090909090909,
+            "directional_coverage": 0.2909090909090909,
             "correct": 2,
-            "accuracy": 0.13333333333333333,
-            "all_forecast_accuracy": 0.3541666666666667
+            "accuracy": 0.125,
+            "all_forecast_accuracy": 0.3469387755102041
           },
           "factor_disagreement": {
-            "observations": 45,
-            "signals": 0,
+            "observations": 50,
+            "signals": 1,
             "flat_forecasts": 42,
-            "abstained": 3,
-            "coverage": 0.9333333333333333,
-            "directional_coverage": 0.0,
+            "abstained": 7,
+            "coverage": 0.86,
+            "directional_coverage": 0.02,
             "correct": 0,
-            "accuracy": null,
-            "all_forecast_accuracy": 0.4523809523809524
+            "accuracy": 0.0,
+            "all_forecast_accuracy": 0.4418604651162791
           },
           "strong_calls": {
             "observations": 0,
@@ -1534,50 +1535,50 @@
             "all_forecast_accuracy": null
           },
           "mild_calls": {
-            "observations": 20,
-            "signals": 20,
+            "observations": 34,
+            "signals": 31,
             "flat_forecasts": 0,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 1.0,
-            "correct": 2,
-            "accuracy": 0.1,
-            "all_forecast_accuracy": 0.1
+            "abstained": 3,
+            "coverage": 0.9117647058823529,
+            "directional_coverage": 0.9117647058823529,
+            "correct": 9,
+            "accuracy": 0.2903225806451613,
+            "all_forecast_accuracy": 0.2903225806451613
           }
         },
         "one_month": {
           "overall": {
-            "observations": 274,
-            "signals": 20,
+            "observations": 297,
+            "signals": 31,
             "flat_forecasts": 234,
-            "abstained": 20,
-            "coverage": 0.927007299270073,
-            "directional_coverage": 0.072992700729927,
-            "correct": 3,
-            "accuracy": 0.15,
-            "all_forecast_accuracy": 0.41338582677165353
+            "abstained": 32,
+            "coverage": 0.8922558922558923,
+            "directional_coverage": 0.10437710437710437,
+            "correct": 7,
+            "accuracy": 0.22580645161290322,
+            "all_forecast_accuracy": 0.41132075471698115
           },
           "factor_agreement": {
-            "observations": 53,
-            "signals": 15,
+            "observations": 55,
+            "signals": 16,
             "flat_forecasts": 33,
-            "abstained": 5,
-            "coverage": 0.9056603773584906,
-            "directional_coverage": 0.2830188679245283,
+            "abstained": 6,
+            "coverage": 0.8909090909090909,
+            "directional_coverage": 0.2909090909090909,
             "correct": 2,
-            "accuracy": 0.13333333333333333,
-            "all_forecast_accuracy": 0.3541666666666667
+            "accuracy": 0.125,
+            "all_forecast_accuracy": 0.3469387755102041
           },
           "factor_disagreement": {
-            "observations": 45,
-            "signals": 0,
+            "observations": 50,
+            "signals": 1,
             "flat_forecasts": 42,
-            "abstained": 3,
-            "coverage": 0.9333333333333333,
-            "directional_coverage": 0.0,
+            "abstained": 7,
+            "coverage": 0.86,
+            "directional_coverage": 0.02,
             "correct": 0,
-            "accuracy": null,
-            "all_forecast_accuracy": 0.47619047619047616
+            "accuracy": 0.0,
+            "all_forecast_accuracy": 0.46511627906976744
           },
           "strong_calls": {
             "observations": 0,
@@ -1591,15 +1592,15 @@
             "all_forecast_accuracy": null
           },
           "mild_calls": {
-            "observations": 20,
-            "signals": 20,
+            "observations": 34,
+            "signals": 31,
             "flat_forecasts": 0,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 1.0,
-            "correct": 3,
-            "accuracy": 0.15,
-            "all_forecast_accuracy": 0.15
+            "abstained": 3,
+            "coverage": 0.9117647058823529,
+            "directional_coverage": 0.9117647058823529,
+            "correct": 7,
+            "accuracy": 0.22580645161290322,
+            "all_forecast_accuracy": 0.22580645161290322
           }
         }
       }
@@ -1609,15 +1610,15 @@
       "horizons": {
         "next_day": {
           "overall": {
-            "observations": 275,
-            "signals": 12,
+            "observations": 298,
+            "signals": 15,
             "flat_forecasts": 242,
-            "abstained": 21,
-            "coverage": 0.9236363636363636,
-            "directional_coverage": 0.04363636363636364,
-            "correct": 1,
-            "accuracy": 0.08333333333333333,
-            "all_forecast_accuracy": 0.4921259842519685
+            "abstained": 41,
+            "coverage": 0.8624161073825504,
+            "directional_coverage": 0.050335570469798654,
+            "correct": 2,
+            "accuracy": 0.13333333333333333,
+            "all_forecast_accuracy": 0.490272373540856
           },
           "factor_agreement": {
             "observations": 14,
@@ -1653,28 +1654,28 @@
             "all_forecast_accuracy": null
           },
           "mild_calls": {
-            "observations": 12,
-            "signals": 12,
+            "observations": 15,
+            "signals": 15,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 1,
-            "accuracy": 0.08333333333333333,
-            "all_forecast_accuracy": 0.08333333333333333
+            "correct": 2,
+            "accuracy": 0.13333333333333333,
+            "all_forecast_accuracy": 0.13333333333333333
           }
         },
         "two_days": {
           "overall": {
-            "observations": 275,
-            "signals": 12,
+            "observations": 298,
+            "signals": 15,
             "flat_forecasts": 242,
-            "abstained": 21,
-            "coverage": 0.9236363636363636,
-            "directional_coverage": 0.04363636363636364,
-            "correct": 0,
-            "accuracy": 0.0,
-            "all_forecast_accuracy": 0.49606299212598426
+            "abstained": 41,
+            "coverage": 0.8624161073825504,
+            "directional_coverage": 0.050335570469798654,
+            "correct": 2,
+            "accuracy": 0.13333333333333333,
+            "all_forecast_accuracy": 0.4980544747081712
           },
           "factor_agreement": {
             "observations": 14,
@@ -1710,28 +1711,28 @@
             "all_forecast_accuracy": null
           },
           "mild_calls": {
-            "observations": 12,
-            "signals": 12,
+            "observations": 15,
+            "signals": 15,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 0,
-            "accuracy": 0.0,
-            "all_forecast_accuracy": 0.0
+            "correct": 2,
+            "accuracy": 0.13333333333333333,
+            "all_forecast_accuracy": 0.13333333333333333
           }
         },
         "one_month": {
           "overall": {
-            "observations": 275,
-            "signals": 12,
+            "observations": 298,
+            "signals": 15,
             "flat_forecasts": 242,
-            "abstained": 21,
-            "coverage": 0.9236363636363636,
-            "directional_coverage": 0.04363636363636364,
+            "abstained": 41,
+            "coverage": 0.8624161073825504,
+            "directional_coverage": 0.050335570469798654,
             "correct": 0,
             "accuracy": 0.0,
-            "all_forecast_accuracy": 0.4763779527559055
+            "all_forecast_accuracy": 0.4708171206225681
           },
           "factor_agreement": {
             "observations": 14,
@@ -1767,8 +1768,8 @@
             "all_forecast_accuracy": null
           },
           "mild_calls": {
-            "observations": 12,
-            "signals": 12,
+            "observations": 15,
+            "signals": 15,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
@@ -1785,37 +1786,37 @@
       "horizons": {
         "next_day": {
           "overall": {
-            "observations": 265,
-            "signals": 184,
-            "flat_forecasts": 67,
-            "abstained": 14,
-            "coverage": 0.9471698113207547,
-            "directional_coverage": 0.6943396226415094,
-            "correct": 93,
-            "accuracy": 0.5054347826086957,
-            "all_forecast_accuracy": 0.4063745019920319
+            "observations": 288,
+            "signals": 188,
+            "flat_forecasts": 69,
+            "abstained": 31,
+            "coverage": 0.8923611111111112,
+            "directional_coverage": 0.6527777777777778,
+            "correct": 94,
+            "accuracy": 0.5,
+            "all_forecast_accuracy": 0.40077821011673154
           },
           "factor_agreement": {
-            "observations": 65,
+            "observations": 69,
             "signals": 54,
             "flat_forecasts": 11,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 0.8307692307692308,
+            "abstained": 4,
+            "coverage": 0.9420289855072463,
+            "directional_coverage": 0.782608695652174,
             "correct": 32,
             "accuracy": 0.5925925925925926,
             "all_forecast_accuracy": 0.5076923076923077
           },
           "factor_disagreement": {
-            "observations": 81,
-            "signals": 54,
-            "flat_forecasts": 21,
-            "abstained": 6,
-            "coverage": 0.9259259259259259,
-            "directional_coverage": 0.6666666666666666,
+            "observations": 85,
+            "signals": 55,
+            "flat_forecasts": 23,
+            "abstained": 7,
+            "coverage": 0.9176470588235294,
+            "directional_coverage": 0.6470588235294118,
             "correct": 24,
-            "accuracy": 0.4444444444444444,
-            "all_forecast_accuracy": 0.3333333333333333
+            "accuracy": 0.43636363636363634,
+            "all_forecast_accuracy": 0.32051282051282054
           },
           "strong_calls": {
             "observations": 75,
@@ -1829,50 +1830,50 @@
             "all_forecast_accuracy": 0.5066666666666667
           },
           "mild_calls": {
-            "observations": 109,
-            "signals": 109,
+            "observations": 113,
+            "signals": 113,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 55,
-            "accuracy": 0.5045871559633027,
-            "all_forecast_accuracy": 0.5045871559633027
+            "correct": 56,
+            "accuracy": 0.49557522123893805,
+            "all_forecast_accuracy": 0.49557522123893805
           }
         },
         "two_days": {
           "overall": {
-            "observations": 265,
-            "signals": 184,
-            "flat_forecasts": 67,
-            "abstained": 14,
-            "coverage": 0.9471698113207547,
-            "directional_coverage": 0.6943396226415094,
-            "correct": 98,
-            "accuracy": 0.532608695652174,
-            "all_forecast_accuracy": 0.4342629482071713
+            "observations": 288,
+            "signals": 188,
+            "flat_forecasts": 69,
+            "abstained": 31,
+            "coverage": 0.8923611111111112,
+            "directional_coverage": 0.6527777777777778,
+            "correct": 99,
+            "accuracy": 0.526595744680851,
+            "all_forecast_accuracy": 0.4280155642023346
           },
           "factor_agreement": {
-            "observations": 65,
+            "observations": 69,
             "signals": 54,
             "flat_forecasts": 11,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 0.8307692307692308,
+            "abstained": 4,
+            "coverage": 0.9420289855072463,
+            "directional_coverage": 0.782608695652174,
             "correct": 35,
             "accuracy": 0.6481481481481481,
             "all_forecast_accuracy": 0.5692307692307692
           },
           "factor_disagreement": {
-            "observations": 81,
-            "signals": 54,
-            "flat_forecasts": 21,
-            "abstained": 6,
-            "coverage": 0.9259259259259259,
-            "directional_coverage": 0.6666666666666666,
+            "observations": 85,
+            "signals": 55,
+            "flat_forecasts": 23,
+            "abstained": 7,
+            "coverage": 0.9176470588235294,
+            "directional_coverage": 0.6470588235294118,
             "correct": 26,
-            "accuracy": 0.48148148148148145,
-            "all_forecast_accuracy": 0.38666666666666666
+            "accuracy": 0.4727272727272727,
+            "all_forecast_accuracy": 0.3717948717948718
           },
           "strong_calls": {
             "observations": 75,
@@ -1886,50 +1887,50 @@
             "all_forecast_accuracy": 0.56
           },
           "mild_calls": {
-            "observations": 109,
-            "signals": 109,
+            "observations": 113,
+            "signals": 113,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
-            "correct": 56,
-            "accuracy": 0.5137614678899083,
-            "all_forecast_accuracy": 0.5137614678899083
+            "correct": 57,
+            "accuracy": 0.504424778761062,
+            "all_forecast_accuracy": 0.504424778761062
           }
         },
         "one_month": {
           "overall": {
-            "observations": 265,
-            "signals": 184,
-            "flat_forecasts": 67,
-            "abstained": 14,
-            "coverage": 0.9471698113207547,
-            "directional_coverage": 0.6943396226415094,
+            "observations": 288,
+            "signals": 188,
+            "flat_forecasts": 69,
+            "abstained": 31,
+            "coverage": 0.8923611111111112,
+            "directional_coverage": 0.6527777777777778,
             "correct": 108,
-            "accuracy": 0.5869565217391305,
-            "all_forecast_accuracy": 0.43824701195219123
+            "accuracy": 0.574468085106383,
+            "all_forecast_accuracy": 0.4357976653696498
           },
           "factor_agreement": {
-            "observations": 65,
+            "observations": 69,
             "signals": 54,
             "flat_forecasts": 11,
-            "abstained": 0,
-            "coverage": 1.0,
-            "directional_coverage": 0.8307692307692308,
+            "abstained": 4,
+            "coverage": 0.9420289855072463,
+            "directional_coverage": 0.782608695652174,
             "correct": 35,
             "accuracy": 0.6481481481481481,
             "all_forecast_accuracy": 0.5384615384615384
           },
           "factor_disagreement": {
-            "observations": 81,
-            "signals": 54,
-            "flat_forecasts": 21,
-            "abstained": 6,
-            "coverage": 0.9259259259259259,
-            "directional_coverage": 0.6666666666666666,
+            "observations": 85,
+            "signals": 55,
+            "flat_forecasts": 23,
+            "abstained": 7,
+            "coverage": 0.9176470588235294,
+            "directional_coverage": 0.6470588235294118,
             "correct": 24,
-            "accuracy": 0.4444444444444444,
-            "all_forecast_accuracy": 0.32
+            "accuracy": 0.43636363636363634,
+            "all_forecast_accuracy": 0.3333333333333333
           },
           "strong_calls": {
             "observations": 75,
@@ -1943,15 +1944,15 @@
             "all_forecast_accuracy": 0.4533333333333333
           },
           "mild_calls": {
-            "observations": 109,
-            "signals": 109,
+            "observations": 113,
+            "signals": 113,
             "flat_forecasts": 0,
             "abstained": 0,
             "coverage": 1.0,
             "directional_coverage": 1.0,
             "correct": 74,
-            "accuracy": 0.6788990825688074,
-            "all_forecast_accuracy": 0.6788990825688074
+            "accuracy": 0.6548672566371682,
+            "all_forecast_accuracy": 0.6548672566371682
           }
         }
       }
@@ -1961,34 +1962,34 @@
       "horizons": {
         "next_day": {
           "overall": {
-            "observations": 275,
-            "signals": 36,
+            "observations": 298,
+            "signals": 41,
             "flat_forecasts": 219,
-            "abstained": 20,
-            "coverage": 0.9272727272727272,
-            "directional_coverage": 0.13090909090909092,
-            "correct": 10,
-            "accuracy": 0.2777777777777778,
-            "all_forecast_accuracy": 0.43529411764705883
+            "abstained": 38,
+            "coverage": 0.87248322147651,
+            "directional_coverage": 0.13758389261744966,
+            "correct": 12,
+            "accuracy": 0.2926829268292683,
+            "all_forecast_accuracy": 0.4346153846153846
           },
           "factor_agreement": {
-            "observations": 32,
+            "observations": 34,
             "signals": 17,
             "flat_forecasts": 14,
-            "abstained": 1,
-            "coverage": 0.96875,
-            "directional_coverage": 0.53125,
+            "abstained": 3,
+            "coverage": 0.9117647058823529,
+            "directional_coverage": 0.5,
             "correct": 7,
             "accuracy": 0.4117647058823529,
             "all_forecast_accuracy": 0.3548387096774194
           },
           "factor_disagreement": {
-            "observations": 26,
+            "observations": 27,
             "signals": 2,
             "flat_forecasts": 23,
-            "abstained": 1,
-            "coverage": 0.9615384615384616,
-            "directional_coverage": 0.07692307692307693,
+            "abstained": 2,
+            "coverage": 0.9259259259259259,
+            "directional_coverage": 0.07407407407407407,
             "correct": 0,
             "accuracy": 0.0,
             "all_forecast_accuracy": 0.6
@@ -2005,47 +2006,47 @@
             "all_forecast_accuracy": null
           },
           "mild_calls": {
-            "observations": 37,
-            "signals": 36,
+            "observations": 44,
+            "signals": 41,
             "flat_forecasts": 0,
-            "abstained": 1,
-            "coverage": 0.972972972972973,
-            "directional_coverage": 0.972972972972973,
-            "correct": 10,
-            "accuracy": 0.2777777777777778,
-            "all_forecast_accuracy": 0.2777777777777778
+            "abstained": 3,
+            "coverage": 0.9318181818181818,
+            "directional_coverage": 0.9318181818181818,
+            "correct": 12,
+            "accuracy": 0.2926829268292683,
+            "all_forecast_accuracy": 0.2926829268292683
           }
         },
         "two_days": {
           "overall": {
-            "observations": 275,
-            "signals": 36,
+            "observations": 298,
+            "signals": 41,
             "flat_forecasts": 219,
-            "abstained": 20,
-            "coverage": 0.9272727272727272,
-            "directional_coverage": 0.13090909090909092,
-            "correct": 5,
-            "accuracy": 0.1388888888888889,
-            "all_forecast_accuracy": 0.39215686274509803
+            "abstained": 38,
+            "coverage": 0.87248322147651,
+            "directional_coverage": 0.13758389261744966,
+            "correct": 6,
+            "accuracy": 0.14634146341463414,
+            "all_forecast_accuracy": 0.38846153846153847
           },
           "factor_agreement": {
-            "observations": 32,
+            "observations": 34,
             "signals": 17,
             "flat_forecasts": 14,
-            "abstained": 1,
-            "coverage": 0.96875,
-            "directional_coverage": 0.53125,
+            "abstained": 3,
+            "coverage": 0.9117647058823529,
+            "directional_coverage": 0.5,
             "correct": 4,
             "accuracy": 0.23529411764705882,
             "all_forecast_accuracy": 0.25806451612903225
           },
           "factor_disagreement": {
-            "observations": 26,
+            "observations": 27,
             "signals": 2,
             "flat_forecasts": 23,
-            "abstained": 1,
-            "coverage": 0.9615384615384616,
-            "directional_coverage": 0.07692307692307693,
+            "abstained": 2,
+            "coverage": 0.9259259259259259,
+            "directional_coverage": 0.07407407407407407,
             "correct": 0,
             "accuracy": 0.0,
             "all_forecast_accuracy": 0.52
@@ -2062,47 +2063,47 @@
             "all_forecast_accuracy": null
           },
           "mild_calls": {
-            "observations": 37,
-            "signals": 36,
+            "observations": 44,
+            "signals": 41,
             "flat_forecasts": 0,
-            "abstained": 1,
-            "coverage": 0.972972972972973,
-            "directional_coverage": 0.972972972972973,
-            "correct": 5,
-            "accuracy": 0.1388888888888889,
-            "all_forecast_accuracy": 0.1388888888888889
+            "abstained": 3,
+            "coverage": 0.9318181818181818,
+            "directional_coverage": 0.9318181818181818,
+            "correct": 6,
+            "accuracy": 0.14634146341463414,
+            "all_forecast_accuracy": 0.14634146341463414
           }
         },
         "one_month": {
           "overall": {
-            "observations": 275,
-            "signals": 36,
+            "observations": 298,
+            "signals": 41,
             "flat_forecasts": 219,
-            "abstained": 20,
-            "coverage": 0.9272727272727272,
-            "directional_coverage": 0.13090909090909092,
+            "abstained": 38,
+            "coverage": 0.87248322147651,
+            "directional_coverage": 0.13758389261744966,
             "correct": 7,
-            "accuracy": 0.19444444444444445,
-            "all_forecast_accuracy": 0.3137254901960784
+            "accuracy": 0.17073170731707318,
+            "all_forecast_accuracy": 0.3076923076923077
           },
           "factor_agreement": {
-            "observations": 32,
+            "observations": 34,
             "signals": 17,
             "flat_forecasts": 14,
-            "abstained": 1,
-            "coverage": 0.96875,
-            "directional_coverage": 0.53125,
+            "abstained": 3,
+            "coverage": 0.9117647058823529,
+            "directional_coverage": 0.5,
             "correct": 4,
             "accuracy": 0.23529411764705882,
             "all_forecast_accuracy": 0.22580645161290322
           },
           "factor_disagreement": {
-            "observations": 26,
+            "observations": 27,
             "signals": 2,
             "flat_forecasts": 23,
-            "abstained": 1,
-            "coverage": 0.9615384615384616,
-            "directional_coverage": 0.07692307692307693,
+            "abstained": 2,
+            "coverage": 0.9259259259259259,
+            "directional_coverage": 0.07407407407407407,
             "correct": 1,
             "accuracy": 0.5,
             "all_forecast_accuracy": 0.2
@@ -2119,15 +2120,15 @@
             "all_forecast_accuracy": null
           },
           "mild_calls": {
-            "observations": 37,
-            "signals": 36,
+            "observations": 44,
+            "signals": 41,
             "flat_forecasts": 0,
-            "abstained": 1,
-            "coverage": 0.972972972972973,
-            "directional_coverage": 0.972972972972973,
+            "abstained": 3,
+            "coverage": 0.9318181818181818,
+            "directional_coverage": 0.9318181818181818,
             "correct": 7,
-            "accuracy": 0.19444444444444445,
-            "all_forecast_accuracy": 0.19444444444444445
+            "accuracy": 0.17073170731707318,
+            "all_forecast_accuracy": 0.17073170731707318
           }
         }
       }
@@ -2365,10 +2366,10 @@
       "type": "agreement",
       "text": "価格・ニュース・外部環境が同じ方向を向く時だけ使う案を検証する価値あり",
       "evidence": {
-        "agree_accuracy": 0.6585365853658537,
-        "agree_signals": 82,
-        "disagree_accuracy": 0.4722222222222222,
-        "disagree_signals": 72
+        "agree_accuracy": 0.6588235294117647,
+        "agree_signals": 85,
+        "disagree_accuracy": 0.4794520547945205,
+        "disagree_signals": 73
       }
     },
     {
@@ -2378,10 +2379,10 @@
       "type": "agreement",
       "text": "価格・ニュース・外部環境が同じ方向を向く時だけ使う案を検証する価値あり",
       "evidence": {
-        "agree_accuracy": 0.5975609756097561,
-        "agree_signals": 82,
-        "disagree_accuracy": 0.4861111111111111,
-        "disagree_signals": 72
+        "agree_accuracy": 0.6,
+        "agree_signals": 85,
+        "disagree_accuracy": 0.4931506849315068,
+        "disagree_signals": 73
       }
     },
     {
@@ -2391,10 +2392,10 @@
       "type": "agreement",
       "text": "価格・ニュース・外部環境が同じ方向を向く時だけ使う案を検証する価値あり",
       "evidence": {
-        "agree_accuracy": 0.53125,
-        "agree_signals": 64,
-        "disagree_accuracy": 0.43103448275862066,
-        "disagree_signals": 58
+        "agree_accuracy": 0.5217391304347826,
+        "agree_signals": 69,
+        "disagree_accuracy": 0.4406779661016949,
+        "disagree_signals": 59
       }
     },
     {
@@ -2404,10 +2405,10 @@
       "type": "confidence_warning",
       "text": "強い向きメーターがむしろ弱い可能性。スコアの自信度を再設計する候補",
       "evidence": {
-        "strong_accuracy": 0.460431654676259,
-        "strong_signals": 139,
-        "mild_accuracy": 0.5925925925925926,
-        "mild_signals": 81
+        "strong_accuracy": 0.4605263157894737,
+        "strong_signals": 152,
+        "mild_accuracy": 0.5882352941176471,
+        "mild_signals": 85
       }
     },
     {
@@ -2417,10 +2418,10 @@
       "type": "agreement",
       "text": "価格・ニュース・外部環境が同じ方向を向く時だけ使う案を検証する価値あり",
       "evidence": {
-        "agree_accuracy": 0.6031746031746031,
-        "agree_signals": 63,
-        "disagree_accuracy": 0.5205479452054794,
-        "disagree_signals": 73
+        "agree_accuracy": 0.6060606060606061,
+        "agree_signals": 66,
+        "disagree_accuracy": 0.5194805194805194,
+        "disagree_signals": 77
       }
     },
     {
@@ -2430,10 +2431,10 @@
       "type": "confidence_warning",
       "text": "強い向きメーターがむしろ弱い可能性。スコアの自信度を再設計する候補",
       "evidence": {
-        "strong_accuracy": 0.4563106796116505,
-        "strong_signals": 103,
-        "mild_accuracy": 0.5393258426966292,
-        "mild_signals": 89
+        "strong_accuracy": 0.4444444444444444,
+        "strong_signals": 108,
+        "mild_accuracy": 0.5384615384615384,
+        "mild_signals": 91
       }
     },
     {
@@ -2443,10 +2444,10 @@
       "type": "agreement",
       "text": "価格・ニュース・外部環境が同じ方向を向く時だけ使う案を検証する価値あり",
       "evidence": {
-        "agree_accuracy": 0.6111111111111112,
-        "agree_signals": 72,
-        "disagree_accuracy": 0.4909090909090909,
-        "disagree_signals": 55
+        "agree_accuracy": 0.631578947368421,
+        "agree_signals": 76,
+        "disagree_accuracy": 0.5,
+        "disagree_signals": 56
       }
     },
     {
@@ -2458,8 +2459,8 @@
       "evidence": {
         "agree_accuracy": 0.5925925925925926,
         "agree_signals": 54,
-        "disagree_accuracy": 0.4444444444444444,
-        "disagree_signals": 54
+        "disagree_accuracy": 0.43636363636363634,
+        "disagree_signals": 55
       }
     },
     {
@@ -2471,8 +2472,8 @@
       "evidence": {
         "agree_accuracy": 0.6481481481481481,
         "agree_signals": 54,
-        "disagree_accuracy": 0.48148148148148145,
-        "disagree_signals": 54
+        "disagree_accuracy": 0.4727272727272727,
+        "disagree_signals": 55
       }
     },
     {
@@ -2484,8 +2485,8 @@
       "evidence": {
         "agree_accuracy": 0.6481481481481481,
         "agree_signals": 54,
-        "disagree_accuracy": 0.4444444444444444,
-        "disagree_signals": 54
+        "disagree_accuracy": 0.43636363636363634,
+        "disagree_signals": 55
       }
     },
     {
@@ -2497,8 +2498,8 @@
       "evidence": {
         "strong_accuracy": 0.4533333333333333,
         "strong_signals": 75,
-        "mild_accuracy": 0.6788990825688074,
-        "mild_signals": 109
+        "mild_accuracy": 0.6548672566371682,
+        "mild_signals": 113
       }
     }
   ]
