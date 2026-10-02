@@ -22,6 +22,13 @@ MONTHS = {
     )
 }
 MONTH_PATTERN = "|".join(MONTHS)
+MONTH_TOKEN = "(?:" + "|".join(
+    f"{name[:3]}(?:{name[3:]})?"
+    for name in [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December",
+    ]
+) + ")"
 
 
 def _text(source: str) -> str:
