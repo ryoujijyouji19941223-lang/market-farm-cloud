@@ -26,6 +26,8 @@ def main():
             "symbol": row.get("symbol"),
             "unit": row.get("unit"),
             "provenance_url": row.get("provenance_url"),
+            "data_provider": row.get("data_provider"),
+            "fallback": bool(row.get("fallback", False)),
             **row.get("reaction", {}),
         }
 
