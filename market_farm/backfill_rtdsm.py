@@ -93,8 +93,19 @@ def _period(value, frequency: str) -> str | None:
 def _release_frame(book: pd.ExcelFile, sheet_name: str) -> pd.DataFrame:
     preview = pd.read_excel(book, sheet_name=sheet_name, header=None, nrows=30)
     for idx, row in preview.iterrows():
-        cells = {str(x).strip().upper() for x in row.tolist() if not pd.isna(x)}
-        if {"FIRST", "SECOND", "THIRD"}.issubset(cells):
+        cells = {
+            str(x).strip().upper().replace(" ", "_")
+            for x in row.tolist() if not pd.isna(x)
+        }
+        # GDP and many activity series have First/Second/Third.
+        # CPI/PPI series intentionally provide First + Most_Recent only.
+        if (
+            "FIRST" in cells
+            and (
+                {"SECOND", "THIRD"}.issubset(cells)
+                or "MOST_RECENT" in cells
+            )
+        ):
             return pd.read_excel(book, sheet_name=sheet_name, header=int(idx))
     return pd.read_excel(book, sheet_name=sheet_name)
 
