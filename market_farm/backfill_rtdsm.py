@@ -82,6 +82,10 @@ def _period(value, frequency: str) -> str | None:
     m = re.search(r"(\d{4})\s*[:/-]?\s*M(0?[1-9]|1[0-2])", text)
     if m:
         return f"{m.group(1)}M{int(m.group(2)):02d}"
+    # PCPI/PCPIX first-release files use forms such as 1998:10.
+    m_plain = re.fullmatch(r"(\d{4})\s*[:/-]\s*(0?[1-9]|1[0-2])", text)
+    if m_plain:
+        return f"{m_plain.group(1)}M{int(m_plain.group(2)):02d}"
     try:
         ts = pd.Timestamp(value)
         if frequency == "quarterly":
