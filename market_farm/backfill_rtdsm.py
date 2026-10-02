@@ -151,7 +151,26 @@ def backfill_one(code: str) -> dict:
     raw = _get(workbook_url).content
     rows = parse_first_releases(raw, code, spec, workbook_url)
     if not rows:
-        raise RuntimeError(f"{code}: official first-release workbook parsed zero rows")
+        book = pd.ExcelFile(io.BytesIO(raw))
+        sheet = next(
+            (s for s in book.sheet_names if s.strip().upper() == "DATA"),
+            book.sheet_names[0],
+        )
+        frame = _release_frame(book, sheet)
+        diagnostic = {
+            "sheet_names": list(book.sheet_names),
+            "selected_sheet": sheet,
+            "shape": list(frame.shape),
+            "columns": [str(x) for x in frame.columns[:20]],
+            "preview": [
+                ["" if pd.isna(v) else str(v)[:80] for v in row.tolist()[:12]]
+                for _, row in frame.head(8).iterrows()
+            ],
+        }
+        raise RuntimeError(
+            f"{code}: official first-release workbook parsed zero rows; "
+            f"diagnostics={json.dumps(diagnostic, ensure_ascii=False)}"
+        )
     promoted = 0
     if code == "routput":
         release_dates = fetch_gdp_advance_dates()
