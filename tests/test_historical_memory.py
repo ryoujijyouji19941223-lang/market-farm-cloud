@@ -7,6 +7,7 @@ from market_farm.backfill_rtdsm import parse_first_releases, SOURCES
 from market_farm.event_keys import event_key
 from market_farm.spf_release_dates import parse_release_dates
 from market_farm.bea_gdp_release_dates import parse_release_timestamp
+from market_farm.bls_cpi_release_dates import parse_schedule
 
 
 def test_spf_suffix_two_is_current_quarter():
@@ -64,3 +65,37 @@ def test_bea_release_timestamp_parser():
     """
     value = parse_release_timestamp(html)
     assert value.startswith("2000-10-27T08:30:00")
+
+
+def test_cpi_first_release_workbook_without_second_third_columns():
+    frame = pd.DataFrame({
+        "Date": ["2012:M2", "2012:M3"],
+        "First": [3.25, 2.11],
+        "Most_Recent": [3.10, 2.00],
+    })
+    buf = io.BytesIO()
+    with pd.ExcelWriter(buf, engine="openpyxl") as writer:
+        frame.to_excel(writer, sheet_name="DATA", index=False, startrow=2)
+
+    rows = parse_first_releases(
+        buf.getvalue(),
+        "pcpi",
+        SOURCES["pcpi"],
+        "https://example.test/pcpi.xlsx",
+    )
+    assert len(rows) == 2
+    assert rows[0]["event_key"] == event_key("US_CPI_MOM_GROWTH", "2012M02")
+    assert rows[0]["value"] == 3.25
+
+
+def test_bls_cpi_schedule_parser_handles_abbreviated_release_month():
+    source = """
+    <html><body>
+    Consumer Price Index, December 1997 Jan. 13 8:30 am
+    Consumer Price Indexes, January 1998 Feb. 24 8:30 am
+    </body></html>
+    """
+    rows = parse_schedule(source, 1998)
+    assert rows["1997M12"]["available_at"].startswith("1998-01-13T08:30:00")
+    assert rows["1998M01"]["available_at"].startswith("1998-02-24T08:30:00")
+    assert rows["1998M01"]["reaction_eligible"] is True
