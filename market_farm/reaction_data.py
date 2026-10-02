@@ -31,7 +31,7 @@ FRED_FALLBACKS = {
 
 
 def _fred_frame(series_id: str, start: datetime | None = None,
-                end: datetime | None = None, attempts: int = 2) -> pd.DataFrame:
+                end: datetime | None = None, attempts: int = 1) -> pd.DataFrame:
     """Fetch only the reaction window needed from FRED.
 
     Full-history downloads occasionally time out in GitHub Actions. Limiting
@@ -50,7 +50,7 @@ def _fred_frame(series_id: str, start: datetime | None = None,
             r = requests.get(
                 FRED_CSV,
                 params=params,
-                timeout=(5, 15),
+                timeout=(5, 8),
                 headers={"User-Agent": "market-farm-cloud/1.2"},
             )
             r.raise_for_status()
