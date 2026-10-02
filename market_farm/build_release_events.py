@@ -10,6 +10,7 @@ from .build_experience_pairs import build_pairs
 from .expectation_memory import load_all_expectations
 from .indicator_semantics import describe_surprise
 from .reaction_archive import load_reactions
+from .regime_context import inflation_context
 
 OUT = Path("data/market_experience/release_events.jsonl")
 STATUS = Path("data/market_experience/release_event_status.json")
@@ -33,7 +34,8 @@ def _surprise(expectation: dict, actual: dict) -> dict:
 
 def build_release_events() -> list[dict]:
     expectations = {x["expectation_id"]: x for x in load_all_expectations()}
-    actuals = {x["record_id"]: x for x in load_rows()}
+    all_actual_rows = load_rows()
+    actuals = {x["record_id"]: x for x in all_actual_rows}
     reaction_map = defaultdict(dict)
     for row in load_reactions():
         reaction_map[row["actual_record_id"]][row["source_id"]] = {
@@ -85,6 +87,12 @@ def build_release_events() -> list[dict]:
             "surprise": surprise.get("surprise"),
             "surprise_direction": surprise.get("direction"),
             "semantic_effect": surprise.get("semantic_effect"),
+            "pre_release_context": {
+                "inflation": inflation_context(
+                    datetime.fromisoformat(actual["available_at"]),
+                    all_actual_rows,
+                ),
+            },
             "reactions": reaction_map.get(actual_id, {}),
             "causal_claim": None,
             "reaction_note": "Observed after the release; not attributed solely to this release.",
