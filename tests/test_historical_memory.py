@@ -8,6 +8,7 @@ from market_farm.event_keys import event_key
 from market_farm.spf_release_dates import parse_release_dates
 from market_farm.bea_gdp_release_dates import parse_release_timestamp
 from market_farm.bls_cpi_release_dates import parse_schedule
+from market_farm.rtdsm_vintage_dates import conservative_first_visible_dates
 
 
 def test_spf_suffix_two_is_current_quarter():
@@ -99,3 +100,27 @@ def test_bls_cpi_schedule_parser_handles_abbreviated_release_month():
     assert rows["1997M12"]["available_at"].startswith("1998-01-13T08:30:00")
     assert rows["1998M01"]["available_at"].startswith("1998-02-24T08:30:00")
     assert rows["1998M01"]["reaction_eligible"] is True
+
+
+def test_cpi_vintage_month_end_is_safe_visibility_proxy():
+    frame = pd.DataFrame({
+        "Date": ["1998:10", "1998:11"],
+        "PCPI98M11": [164.0, None],
+        "PCPI98M12": [164.0, 164.4],
+        "PCPI99M1": [164.0, 164.4],
+    })
+    buf = io.BytesIO()
+    with pd.ExcelWriter(buf, engine="openpyxl") as writer:
+        frame.to_excel(writer, sheet_name="DATA", index=False, startrow=2)
+
+    rows = conservative_first_visible_dates(
+        buf.getvalue(),
+        source_url="https://example.test/pcpi-vintages.xlsx",
+    )
+
+    oct_row = rows["1998M10"]
+    nov_row = rows["1998M11"]
+    assert oct_row["available_at"].startswith("1998-11-30T23:59:59")
+    assert nov_row["available_at"].startswith("1998-12-31T23:59:59")
+    assert oct_row["reaction_eligible"] is False
+    assert oct_row["availability_precision"] == "conservative_vintage_month_end"
