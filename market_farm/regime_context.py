@@ -97,8 +97,9 @@ def inflation_context(
     if cutoff.tzinfo is None:
         raise ValueError("cutoff must be timezone-aware")
     rows = load_rows() if rows is None else rows
-    return {
-        "cutoff": cutoff.isoformat(),
+    out = {"cutoff": cutoff.isoformat()}
+    out.update({
         name: _series_context(rows, indicator, cutoff)
         for name, indicator in SERIES.items()
-    }
+    })
+    return out
