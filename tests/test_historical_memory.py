@@ -69,7 +69,7 @@ def test_bea_release_timestamp_parser():
 
 def test_cpi_first_release_workbook_without_second_third_columns():
     frame = pd.DataFrame({
-        "Date": ["2012:M2", "2012:M3"],
+        "Date": ["2012:02", "2012:03"],
         "First": [3.25, 2.11],
         "Most_Recent": [3.10, 2.00],
     })
