@@ -15,6 +15,7 @@ import requests
 from .actual_archive import save_rows
 from .event_keys import canonical_period, event_key
 from .bea_gdp_release_dates import fetch_gdp_advance_dates
+from .bls_cpi_release_dates import fetch_cpi_release_dates
 
 ET = ZoneInfo("America/New_York")
 STATUS = Path("data/actual_releases/rtdsm_status.json")
@@ -183,15 +184,19 @@ def backfill_one(code: str) -> dict:
             f"diagnostics={json.dumps(diagnostic, ensure_ascii=False)}"
         )
     promoted = 0
+    release_dates = {}
     if code == "routput":
         release_dates = fetch_gdp_advance_dates()
-        for row in rows:
-            release = release_dates.get(row["observation_period"])
-            if not release:
-                continue
-            row.update(release)
-            row["information_tier"] = "public_realtime"
-            promoted += 1
+    elif code in {"pcpi", "pcpix"}:
+        release_dates = fetch_cpi_release_dates()
+
+    for row in rows:
+        release = release_dates.get(row["observation_period"])
+        if not release:
+            continue
+        row.update(release)
+        row["information_tier"] = "public_realtime"
+        promoted += 1
     saved = save_rows(f"rtdsm_{code}", rows)
     return {
         "code": code,
@@ -216,9 +221,9 @@ def main():
         "results": results,
         "errors": errors,
         "note": (
-            "First-release values are archived immediately. GDP observations with "
-            "verified BEA release dates are promoted to public_realtime; exact timestamps "
-            "are required before post-release reaction measurement. Others remain unresolved."
+            "First-release values are archived immediately. GDP uses verified BEA release "
+            "timestamps; CPI/core CPI use verified BLS schedule timestamps when available. "
+            "Exact timestamps are required before post-release reaction measurement."
         ),
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps({"results": results, "errors": errors}, ensure_ascii=False))
