@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.5",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-02T11:08:58.389487+09:00",
+  "prediction_date": "2026-10-02",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-02T11:08:58.389487+09:00",
+  "market_data_through": "2026-10-02",
+  "reference_price": 19095.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.15760088938153186,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5682365584046123,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5376596981149788,
+    "direction": "FLAT",
+    "price_coef": 0.5,
+    "macro_coef": 1.0,
+    "edge": 0.12,
+    "heldout_accuracy": 0.5581395348837209,
+    "heldout_signals": 43
+  },
+  "evidence": {
+    "price": {
+      "score": 0.224934054075588,
+      "direction": "UP",
+      "day_change": -0.0002617801047120061,
+      "momentum5": 0.026980960813514088,
+      "trend": 0.015115405272832616,
+      "volatility": 0.7020276926221005
+    },
+    "news": {
+      "score": 0.0,
+      "direction": "NEUTRAL",
+      "headlines": []
+    },
+    "outside_wind": {
+      "score": -0.030971550734213517,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.19357219208883447,
+        "oil_pressure": -0.08720016463557523,
+        "japan_risk": -0.08808000548111772,
+        "usd_rate_pressure": 0.08187049555938586
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

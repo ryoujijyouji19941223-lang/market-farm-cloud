@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.5",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-02T11:08:58.389487+09:00",
+  "prediction_date": "2026-10-02",
+  "symbol": "8316.T",
+  "name": "三井住友FG",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-02T11:08:58.389487+09:00",
+  "market_data_through": "2026-10-02",
+  "reference_price": 3332.0,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.008312322143409734,
+      "factor_agreement": 0.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.4954915602231942,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.48320750372912563,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5428571428571428,
+    "heldout_signals": 70
+  },
+  "evidence": {
+    "price": {
+      "score": -0.005392043431290746,
+      "direction": "NEUTRAL",
+      "day_change": -0.015075376884422065,
+      "momentum5": -0.011397502842584784,
+      "trend": 0.00502473946022608,
+      "volatility": 0.2895064943209261
+    },
+    "news": {
+      "score": 0.0,
+      "direction": "NEUTRAL",
+      "headlines": []
+    },
+    "outside_wind": {
+      "score": -0.030971550734213517,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.19357219208883447,
+        "oil_pressure": -0.08720016463557523,
+        "japan_risk": -0.08808000548111772,
+        "usd_rate_pressure": 0.08187049555938586
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
