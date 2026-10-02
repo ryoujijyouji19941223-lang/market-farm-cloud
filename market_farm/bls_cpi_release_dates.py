@@ -13,21 +13,15 @@ ET = ZoneInfo("America/New_York")
 CACHE = Path("data/actual_releases/bls_cpi_release_dates.json")
 URL = "https://www.bls.gov/schedule/{year}/home.htm"
 
-MONTHS = {
-    name.upper(): i
-    for i, name in enumerate(
-        ["January", "February", "March", "April", "May", "June",
-         "July", "August", "September", "October", "November", "December"],
-        1,
-    )
-}
-MONTH_PATTERN = "|".join(MONTHS)
-MONTH_TOKEN = "(?:" + "|".join(
+MONTH_NAMES = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December",
+]
+MONTHS = {name.upper(): i for i, name in enumerate(MONTH_NAMES, 1)}
+OBS_MONTH_PATTERN = "|".join(MONTH_NAMES)
+REL_MONTH_PATTERN = "(?:" + "|".join(
     f"{name[:3]}(?:{name[3:]})?"
-    for name in [
-        "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December",
-    ]
+    for name in MONTH_NAMES
 ) + ")"
 
 
@@ -40,32 +34,33 @@ def _text(source: str) -> str:
 
 def parse_schedule(source: str, schedule_year: int) -> dict[str, dict]:
     text = _text(source)
-    # Example:
+    # Examples:
     # Consumer Price Index, December 1997 Jan. 13 8:30 am
+    # Consumer Price Indexes, January 1998 Feb. 24 8:30 am
     pattern = re.compile(
         rf"Consumer\s+Price\s+Index(?:es)?\s*,?\s*"
-        rf"(?P<obs_month>{MONTH_PATTERN})\s+(?P<obs_year>\d{{4}})"
+        rf"(?P<obs_month>{OBS_MONTH_PATTERN})\s+(?P<obs_year>\d{{4}})"
         rf".{{0,80}}?"
-        rf"(?P<rel_month>{MONTH_PATTERN[:3]}[a-z]*\.?|"
-        rf"January|February|March|April|May|June|July|August|September|October|November|December)"
+        rf"(?P<rel_month>{REL_MONTH_PATTERN})\.?"
         rf"\s+(?P<day>\d{{1,2}})"
         rf"(?:\s*,?\s*(?P<rel_year>\d{{4}}))?"
-        rf".{{0,30}}?(?P<hour>\d{{1,2}}):(?P<minute>\d{{2}})\s*(?P<ampm>[ap])\.?m\.?",
+        rf".{{0,30}}?"
+        rf"(?P<hour>\d{{1,2}}):(?P<minute>\d{{2}})\s*"
+        rf"(?P<ampm>[ap])\.?m\.?",
         re.I,
     )
 
     out = {}
     for match in pattern.finditer(text):
-        obs_month_name = match.group("obs_month").upper()
-        obs_month = MONTHS.get(obs_month_name)
+        obs_month = MONTHS.get(match.group("obs_month").upper())
         obs_year = int(match.group("obs_year"))
         if obs_month is None:
             continue
 
-        raw_rel_month = match.group("rel_month").rstrip(".")
+        raw_rel_month = match.group("rel_month").upper()
         rel_month = next(
             (num for name, num in MONTHS.items()
-             if name.startswith(raw_rel_month.upper()[:3])),
+             if name.startswith(raw_rel_month[:3])),
             None,
         )
         if rel_month is None:
@@ -75,6 +70,7 @@ def parse_schedule(source: str, schedule_year: int) -> dict[str, dict]:
         rel_year = int(rel_year_raw) if rel_year_raw else (
             obs_year + 1 if rel_month <= obs_month else obs_year
         )
+
         hour = int(match.group("hour"))
         minute = int(match.group("minute"))
         if match.group("ampm").lower() == "p" and hour != 12:
@@ -108,10 +104,16 @@ def _load_cache() -> dict:
 
 def _save_cache(rows: dict) -> None:
     CACHE.parent.mkdir(parents=True, exist_ok=True)
-    CACHE.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
+    CACHE.write_text(
+        json.dumps(rows, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
 
 
-def fetch_cpi_release_dates(start_year: int = 1998, end_year: int | None = None) -> dict[str, dict]:
+def fetch_cpi_release_dates(
+    start_year: int = 1998,
+    end_year: int | None = None,
+) -> dict[str, dict]:
     end_year = end_year or datetime.now(ET).year
     cache = _load_cache()
     covered = {
@@ -136,6 +138,7 @@ def fetch_cpi_release_dates(start_year: int = 1998, end_year: int | None = None)
         except Exception:
             # Fail closed. Missing release dates leave CPI observations unresolved.
             continue
+
         for period, row in rows.items():
             row["schedule_year"] = year
             cache[period] = row
