@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T18:39:03.366112-04:00",
+  "generated_at": "2026-10-02T18:47:01.845332-04:00",
   "results": [
     {
       "code": "routput",
@@ -7,7 +7,9 @@
       "parsed": 241,
       "saved": 241,
       "spf_equivalent": true,
-      "release_dates_promoted": 111
+      "release_dates_promoted": 111,
+      "exact_release_dates_promoted": 111,
+      "conservative_vintage_dates_promoted": 0
     },
     {
       "code": "pcpi",
@@ -15,7 +17,9 @@
       "parsed": 333,
       "saved": 333,
       "spf_equivalent": false,
-      "release_dates_promoted": 0
+      "release_dates_promoted": 333,
+      "exact_release_dates_promoted": 0,
+      "conservative_vintage_dates_promoted": 333
     },
     {
       "code": "pcpix",
@@ -23,9 +27,11 @@
       "parsed": 333,
       "saved": 333,
       "spf_equivalent": false,
-      "release_dates_promoted": 0
+      "release_dates_promoted": 333,
+      "exact_release_dates_promoted": 0,
+      "conservative_vintage_dates_promoted": 333
     }
   ],
   "errors": [],
-  "note": "First-release values are archived immediately. GDP uses verified BEA release timestamps; CPI/core CPI use verified BLS schedule timestamps when available. Exact timestamps are required before post-release reaction measurement."
+  "note": "First-release values are archived immediately. GDP uses verified BEA release timestamps; CPI/core CPI prefer verified BLS timestamps and otherwise use a conservative Philadelphia Fed vintage-month-end visibility proxy. Only exact timestamps are eligible for post-release reaction measurement."
 }
