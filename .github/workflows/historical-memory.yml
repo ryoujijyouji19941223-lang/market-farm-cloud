@@ -21,6 +21,7 @@ on:
       - 'market_farm/event_keys.py'
       - 'market_farm/actual_archive.py'
       - 'market_farm/bea_gdp_release_dates.py'
+      - 'market_farm/bls_cpi_release_dates.py'
       - 'market_farm/spf_release_dates.py'
       - 'market_farm/expectation_memory.py'
       - 'market_farm/release_gate.py'
@@ -61,6 +62,8 @@ jobs:
           tests/test_information_tiers.py
           tests/test_historical_memory.py
           tests/test_experience_pairs.py
+          tests/test_release_events.py
+          tests/test_reaction_data.py
 
       - name: Backfill expectations
         run: |
