@@ -16,6 +16,7 @@ from .actual_archive import save_rows
 from .event_keys import canonical_period, event_key
 from .bea_gdp_release_dates import fetch_gdp_advance_dates
 from .bls_cpi_release_dates import fetch_cpi_release_dates
+from .rtdsm_vintage_dates import fetch_conservative_dates
 
 ET = ZoneInfo("America/New_York")
 STATUS = Path("data/actual_releases/rtdsm_status.json")
@@ -188,19 +189,38 @@ def backfill_one(code: str) -> dict:
             f"diagnostics={json.dumps(diagnostic, ensure_ascii=False)}"
         )
     promoted = 0
+    exact_promoted = 0
+    conservative_promoted = 0
     release_dates = {}
+    conservative_dates = {}
+
     if code == "routput":
         release_dates = fetch_gdp_advance_dates()
     elif code in {"pcpi", "pcpix"}:
         release_dates = fetch_cpi_release_dates()
+        try:
+            conservative_dates = fetch_conservative_dates(code)
+        except Exception:
+            # Exact BLS dates remain preferred. If the fallback itself fails,
+            # leave the row unresolved rather than guessing.
+            conservative_dates = {}
 
     for row in rows:
-        release = release_dates.get(row["observation_period"])
-        if not release:
+        period = row["observation_period"]
+        release = release_dates.get(period)
+        if release:
+            row.update(release)
+            row["information_tier"] = "public_realtime"
+            promoted += 1
+            exact_promoted += 1
             continue
-        row.update(release)
-        row["information_tier"] = "public_realtime"
-        promoted += 1
+
+        fallback_release = conservative_dates.get(period)
+        if fallback_release:
+            row.update(fallback_release)
+            row["information_tier"] = "public_realtime"
+            promoted += 1
+            conservative_promoted += 1
     saved = save_rows(f"rtdsm_{code}", rows)
     return {
         "code": code,
@@ -209,6 +229,8 @@ def backfill_one(code: str) -> dict:
         "saved": saved,
         "spf_equivalent": spec["spf_equivalent"],
         "release_dates_promoted": promoted,
+        "exact_release_dates_promoted": exact_promoted,
+        "conservative_vintage_dates_promoted": conservative_promoted,
     }
 
 
@@ -226,8 +248,9 @@ def main():
         "errors": errors,
         "note": (
             "First-release values are archived immediately. GDP uses verified BEA release "
-            "timestamps; CPI/core CPI use verified BLS schedule timestamps when available. "
-            "Exact timestamps are required before post-release reaction measurement."
+            "timestamps; CPI/core CPI prefer verified BLS timestamps and otherwise use a "
+            "conservative Philadelphia Fed vintage-month-end visibility proxy. Only exact "
+            "timestamps are eligible for post-release reaction measurement."
         ),
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps({"results": results, "errors": errors}, ensure_ascii=False))
