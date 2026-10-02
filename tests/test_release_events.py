@@ -45,7 +45,17 @@ def test_release_event_uses_latest_public_expectation_once(monkeypatch):
 
     monkeypatch.setattr(module, "load_all_expectations", lambda: expectations)
     monkeypatch.setattr(module, "load_rows", lambda: [actual])
-    monkeypatch.setattr(module, "load_reactions", lambda: [])
+    monkeypatch.setattr(module, "load_reactions", lambda: [{
+        "actual_record_id": "a1",
+        "source_id": "us10y",
+        "label": "US 10Y Treasury yield",
+        "symbol": "DGS10",
+        "unit": "percent",
+        "provenance_url": "https://example.test/tnx",
+        "data_provider": "yfinance_tnx_proxy",
+        "fallback": True,
+        "reaction": {"status": "OK"},
+    }])
     monkeypatch.setattr(module, "build_pairs", lambda: pairs)
 
     rows = module.build_release_events()
@@ -54,3 +64,5 @@ def test_release_event_uses_latest_public_expectation_once(monkeypatch):
     assert rows[0]["eligible_expectation_count"] == 2
     assert rows[0]["surprise"] == -1.25
     assert rows[0]["causal_claim"] is None
+    assert rows[0]["reactions"]["us10y"]["fallback"] is True
+    assert rows[0]["reactions"]["us10y"]["data_provider"] == "yfinance_tnx_proxy"
