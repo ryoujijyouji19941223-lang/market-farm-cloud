@@ -11,6 +11,7 @@ import requests
 
 ET = ZoneInfo("America/New_York")
 CACHE = Path("data/actual_releases/bls_cpi_release_dates.json")
+STATUS = Path("data/actual_releases/bls_cpi_release_status.json")
 URL = "https://www.bls.gov/schedule/{year}/home.htm"
 
 MONTH_NAMES = [
@@ -128,20 +129,73 @@ def fetch_cpi_release_dates(
         "Accept": "text/html,application/xhtml+xml",
     })
 
+    attempts = []
+    blocked = False
     for year in range(start_year, end_year + 1):
         if year in covered:
+            attempts.append({"year": year, "status": "cached"})
             continue
-        try:
-            response = session.get(URL.format(year=year), timeout=30)
-            response.raise_for_status()
-            rows = parse_schedule(response.text, year)
-        except Exception:
-            # Fail closed. Missing release dates leave CPI observations unresolved.
+        if blocked:
+            attempts.append({"year": year, "status": "skipped_after_access_block"})
             continue
 
+        url = URL.format(year=year)
+        try:
+            response = session.get(url, timeout=(5, 15))
+            http_status = response.status_code
+            response.raise_for_status()
+            rows = parse_schedule(response.text, year)
+        except requests.HTTPError as exc:
+            status = getattr(exc.response, "status_code", None)
+            attempts.append({
+                "year": year,
+                "status": "http_error",
+                "http_status": status,
+                "error": str(exc),
+            })
+            # A host-wide access denial/rate limit is unlikely to improve by
+            # hammering every historical year in the same workflow run.
+            if status in {403, 429}:
+                blocked = True
+            continue
+        except Exception as exc:
+            attempts.append({
+                "year": year,
+                "status": "fetch_or_parse_error",
+                "error": repr(exc),
+            })
+            continue
+
+        if not rows:
+            attempts.append({
+                "year": year,
+                "status": "parse_empty",
+                "http_status": http_status,
+            })
+            continue
+
+        attempts.append({
+            "year": year,
+            "status": "ok",
+            "http_status": http_status,
+            "rows": len(rows),
+        })
         for period, row in rows.items():
             row["schedule_year"] = year
             cache[period] = row
 
     _save_cache(cache)
+    STATUS.parent.mkdir(parents=True, exist_ok=True)
+    STATUS.write_text(json.dumps({
+        "generated_at": datetime.now(ET).isoformat(),
+        "start_year": start_year,
+        "end_year": end_year,
+        "cached_release_dates": len(cache),
+        "access_blocked": blocked,
+        "attempts": attempts,
+        "note": (
+            "Failure to fetch BLS schedules never fabricates a release timestamp. "
+            "RTDSM vintage timing may be used separately as a conservative fallback."
+        ),
+    }, ensure_ascii=False, indent=2), encoding="utf-8")
     return cache
