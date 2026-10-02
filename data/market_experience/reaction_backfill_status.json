@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T22:48:12.227254+00:00",
+  "generated_at": "2026-10-02T22:51:42.438127+00:00",
   "actual_release_count": 110,
   "eligibility_rule": "exact public release timestamp required",
   "reaction_rows": 440,
@@ -13,7 +13,7 @@
       "data_provider": "yfinance_fx_proxy",
       "fallback": true,
       "data_provenance_url": "https://finance.yahoo.com/quote/JPY=X/history/",
-      "primary_error": "FRED DEXJPUS failed after 2 attempts for 1996-07-22..2026-09-13: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=15)"
+      "primary_error": "FRED DEXJPUS failed after 1 attempts for 1996-07-22..2026-09-13: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=8)"
     },
     "us10y": {
       "status": "ok",
@@ -23,7 +23,7 @@
       "data_provider": "yfinance_tnx_proxy",
       "fallback": true,
       "data_provenance_url": "https://finance.yahoo.com/quote/%5ETNX/history/",
-      "primary_error": "FRED DGS10 failed after 2 attempts for 1996-07-22..2026-09-13: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=15)"
+      "primary_error": "FRED DGS10 failed after 1 attempts for 1996-07-22..2026-09-13: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=8)"
     },
     "sp500": {
       "status": "ok",
