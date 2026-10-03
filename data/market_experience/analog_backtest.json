@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-10-03T05:19:27.722809+00:00",
+  "generated_at": "2026-10-03T05:26:38.459873+00:00",
   "minimum_sample": 5,
-  "release_events": 111,
-  "rows_scored": 4452,
+  "release_events": 141,
+  "rows_scored": 4224,
   "summaries": [
     {
       "model": "hierarchical_regime",
       "source_id": "gold_futures",
       "horizon": "1d",
-      "predictions": 72,
-      "mean_brier": 0.27390392785158296,
-      "directional_predictions": 61,
-      "directional_accuracy": 0.5409836065573771,
+      "predictions": 70,
+      "mean_brier": 0.26817772614293334,
+      "directional_predictions": 59,
+      "directional_accuracy": 0.559322033898305,
       "flat_probability_count": 11,
       "similarity_tier_counts": {
         "SURPRISE_ONLY": 13,
-        "LEVEL_ONLY": 30,
+        "LEVEL_ONLY": 28,
         "LEVEL_AND_MOMENTUM": 29
       }
     },
@@ -23,14 +23,14 @@
       "model": "hierarchical_regime",
       "source_id": "gold_futures",
       "horizon": "20d",
-      "predictions": 72,
-      "mean_brier": 0.3077344207187973,
-      "directional_predictions": 70,
-      "directional_accuracy": 0.5285714285714286,
+      "predictions": 70,
+      "mean_brier": 0.3078919121044137,
+      "directional_predictions": 68,
+      "directional_accuracy": 0.5294117647058824,
       "flat_probability_count": 2,
       "similarity_tier_counts": {
         "SURPRISE_ONLY": 13,
-        "LEVEL_ONLY": 30,
+        "LEVEL_ONLY": 28,
         "LEVEL_AND_MOMENTUM": 29
       }
     },
@@ -38,14 +38,14 @@
       "model": "hierarchical_regime",
       "source_id": "gold_futures",
       "horizon": "2d",
-      "predictions": 72,
-      "mean_brier": 0.26699101807697856,
-      "directional_predictions": 67,
-      "directional_accuracy": 0.5373134328358209,
+      "predictions": 70,
+      "mean_brier": 0.2631272693871145,
+      "directional_predictions": 65,
+      "directional_accuracy": 0.5538461538461539,
       "flat_probability_count": 5,
       "similarity_tier_counts": {
         "SURPRISE_ONLY": 13,
-        "LEVEL_ONLY": 30,
+        "LEVEL_ONLY": 28,
         "LEVEL_AND_MOMENTUM": 29
       }
     },
@@ -53,14 +53,14 @@
       "model": "hierarchical_regime",
       "source_id": "gold_futures",
       "horizon": "5d",
-      "predictions": 72,
-      "mean_brier": 0.29521210946556437,
-      "directional_predictions": 68,
-      "directional_accuracy": 0.47058823529411764,
+      "predictions": 70,
+      "mean_brier": 0.29695185580302846,
+      "directional_predictions": 66,
+      "directional_accuracy": 0.4696969696969697,
       "flat_probability_count": 4,
       "similarity_tier_counts": {
         "SURPRISE_ONLY": 13,
-        "LEVEL_ONLY": 30,
+        "LEVEL_ONLY": 28,
         "LEVEL_AND_MOMENTUM": 29
       }
     },
@@ -68,14 +68,14 @@
       "model": "hierarchical_regime",
       "source_id": "sp500",
       "horizon": "1d",
-      "predictions": 98,
-      "mean_brier": 0.2679777877209635,
-      "directional_predictions": 95,
-      "directional_accuracy": 0.5789473684210527,
+      "predictions": 96,
+      "mean_brier": 0.271549639014737,
+      "directional_predictions": 93,
+      "directional_accuracy": 0.5698924731182796,
       "flat_probability_count": 3,
       "similarity_tier_counts": {
         "SURPRISE_ONLY": 30,
-        "LEVEL_ONLY": 35,
+        "LEVEL_ONLY": 33,
         "LEVEL_AND_MOMENTUM": 33
       }
     },
@@ -83,14 +83,14 @@
       "model": "hierarchical_regime",
       "source_id": "sp500",
       "horizon": "20d",
-      "predictions": 98,
-      "mean_brier": 0.2722123547098099,
-      "directional_predictions": 90,
-      "directional_accuracy": 0.5555555555555556,
+      "predictions": 96,
+      "mean_brier": 0.2733586520445012,
+      "directional_predictions": 88,
+      "directional_accuracy": 0.5568181818181818,
       "flat_probability_count": 8,
       "similarity_tier_counts": {
         "SURPRISE_ONLY": 30,
-        "LEVEL_ONLY": 35,
+        "LEVEL_ONLY": 33,
         "LEVEL_AND_MOMENTUM": 33
       }
     },
@@ -98,14 +98,14 @@
       "model": "hierarchical_regime",
       "source_id": "sp500",
       "horizon": "2d",
-      "predictions": 98,
-      "mean_brier": 0.2810948516144296,
-      "directional_predictions": 86,
-      "directional_accuracy": 0.4883720930232558,
+      "predictions": 96,
+      "mean_brier": 0.28438212383298095,
+      "directional_predictions": 84,
+      "directional_accuracy": 0.47619047619047616,
       "flat_probability_count": 12,
       "similarity_tier_counts": {
         "SURPRISE_ONLY": 30,
-        "LEVEL_ONLY": 35,
+        "LEVEL_ONLY": 33,
         "LEVEL_AND_MOMENTUM": 33
       }
     },
@@ -113,119 +113,119 @@
       "model": "hierarchical_regime",
       "source_id": "sp500",
       "horizon": "5d",
-      "predictions": 98,
-      "mean_brier": 0.2942991307603404,
-      "directional_predictions": 87,
-      "directional_accuracy": 0.47126436781609193,
+      "predictions": 96,
+      "mean_brier": 0.2982781587944316,
+      "directional_predictions": 85,
+      "directional_accuracy": 0.4588235294117647,
       "flat_probability_count": 11,
       "similarity_tier_counts": {
         "SURPRISE_ONLY": 30,
-        "LEVEL_ONLY": 35,
+        "LEVEL_ONLY": 33,
         "LEVEL_AND_MOMENTUM": 33
       }
     },
     {
       "model": "hierarchical_regime",
       "source_id": "us10y",
-      "horizon": "1d",
-      "predictions": 98,
-      "mean_brier": 0.2473766148580045,
-      "directional_predictions": 94,
-      "directional_accuracy": 0.6702127659574468,
-      "flat_probability_count": 4,
-      "similarity_tier_counts": {
-        "SURPRISE_ONLY": 30,
-        "LEVEL_ONLY": 35,
-        "LEVEL_AND_MOMENTUM": 33
-      }
-    },
-    {
-      "model": "hierarchical_regime",
-      "source_id": "us10y",
-      "horizon": "20d",
-      "predictions": 98,
-      "mean_brier": 0.26427716436598,
-      "directional_predictions": 89,
-      "directional_accuracy": 0.5280898876404494,
-      "flat_probability_count": 9,
-      "similarity_tier_counts": {
-        "SURPRISE_ONLY": 30,
-        "LEVEL_ONLY": 35,
-        "LEVEL_AND_MOMENTUM": 33
-      }
-    },
-    {
-      "model": "hierarchical_regime",
-      "source_id": "us10y",
-      "horizon": "2d",
-      "predictions": 98,
-      "mean_brier": 0.28083166867378634,
-      "directional_predictions": 87,
-      "directional_accuracy": 0.4827586206896552,
-      "flat_probability_count": 11,
-      "similarity_tier_counts": {
-        "SURPRISE_ONLY": 30,
-        "LEVEL_ONLY": 35,
-        "LEVEL_AND_MOMENTUM": 33
-      }
-    },
-    {
-      "model": "hierarchical_regime",
-      "source_id": "us10y",
-      "horizon": "5d",
-      "predictions": 98,
-      "mean_brier": 0.26508917007973826,
-      "directional_predictions": 84,
-      "directional_accuracy": 0.5119047619047619,
-      "flat_probability_count": 14,
-      "similarity_tier_counts": {
-        "SURPRISE_ONLY": 30,
-        "LEVEL_ONLY": 35,
-        "LEVEL_AND_MOMENTUM": 33
-      }
-    },
-    {
-      "model": "hierarchical_regime",
-      "source_id": "usd_jpy",
       "horizon": "1d",
       "predictions": 96,
-      "mean_brier": 0.2834172958931544,
+      "mean_brier": 0.2494862171992267,
       "directional_predictions": 92,
-      "directional_accuracy": 0.5652173913043478,
+      "directional_accuracy": 0.6630434782608695,
       "flat_probability_count": 4,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 28,
-        "LEVEL_ONLY": 35,
+        "SURPRISE_ONLY": 30,
+        "LEVEL_ONLY": 33,
         "LEVEL_AND_MOMENTUM": 33
       }
     },
     {
       "model": "hierarchical_regime",
-      "source_id": "usd_jpy",
+      "source_id": "us10y",
       "horizon": "20d",
       "predictions": 96,
-      "mean_brier": 0.28153694294682013,
+      "mean_brier": 0.2650170984032189,
       "directional_predictions": 87,
-      "directional_accuracy": 0.4942528735632184,
+      "directional_accuracy": 0.5287356321839081,
       "flat_probability_count": 9,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 28,
-        "LEVEL_ONLY": 35,
+        "SURPRISE_ONLY": 30,
+        "LEVEL_ONLY": 33,
         "LEVEL_AND_MOMENTUM": 33
       }
     },
     {
       "model": "hierarchical_regime",
-      "source_id": "usd_jpy",
+      "source_id": "us10y",
       "horizon": "2d",
       "predictions": 96,
-      "mean_brier": 0.2523837673805342,
+      "mean_brier": 0.27786345791440753,
       "directional_predictions": 85,
       "directional_accuracy": 0.49411764705882355,
       "flat_probability_count": 11,
       "similarity_tier_counts": {
+        "SURPRISE_ONLY": 30,
+        "LEVEL_ONLY": 33,
+        "LEVEL_AND_MOMENTUM": 33
+      }
+    },
+    {
+      "model": "hierarchical_regime",
+      "source_id": "us10y",
+      "horizon": "5d",
+      "predictions": 96,
+      "mean_brier": 0.26470965726631684,
+      "directional_predictions": 82,
+      "directional_accuracy": 0.5121951219512195,
+      "flat_probability_count": 14,
+      "similarity_tier_counts": {
+        "SURPRISE_ONLY": 30,
+        "LEVEL_ONLY": 33,
+        "LEVEL_AND_MOMENTUM": 33
+      }
+    },
+    {
+      "model": "hierarchical_regime",
+      "source_id": "usd_jpy",
+      "horizon": "1d",
+      "predictions": 94,
+      "mean_brier": 0.2852659846223739,
+      "directional_predictions": 90,
+      "directional_accuracy": 0.5666666666666667,
+      "flat_probability_count": 4,
+      "similarity_tier_counts": {
         "SURPRISE_ONLY": 28,
-        "LEVEL_ONLY": 35,
+        "LEVEL_ONLY": 33,
+        "LEVEL_AND_MOMENTUM": 33
+      }
+    },
+    {
+      "model": "hierarchical_regime",
+      "source_id": "usd_jpy",
+      "horizon": "20d",
+      "predictions": 94,
+      "mean_brier": 0.2827934877149871,
+      "directional_predictions": 85,
+      "directional_accuracy": 0.49411764705882355,
+      "flat_probability_count": 9,
+      "similarity_tier_counts": {
+        "SURPRISE_ONLY": 28,
+        "LEVEL_ONLY": 33,
+        "LEVEL_AND_MOMENTUM": 33
+      }
+    },
+    {
+      "model": "hierarchical_regime",
+      "source_id": "usd_jpy",
+      "horizon": "2d",
+      "predictions": 94,
+      "mean_brier": 0.25653682450257476,
+      "directional_predictions": 83,
+      "directional_accuracy": 0.4819277108433735,
+      "flat_probability_count": 11,
+      "similarity_tier_counts": {
+        "SURPRISE_ONLY": 28,
+        "LEVEL_ONLY": 33,
         "LEVEL_AND_MOMENTUM": 33
       }
     },
@@ -233,14 +233,14 @@
       "model": "hierarchical_regime",
       "source_id": "usd_jpy",
       "horizon": "5d",
-      "predictions": 96,
-      "mean_brier": 0.26340015964555197,
-      "directional_predictions": 90,
-      "directional_accuracy": 0.5222222222222223,
+      "predictions": 94,
+      "mean_brier": 0.2629766356992027,
+      "directional_predictions": 88,
+      "directional_accuracy": 0.5227272727272727,
       "flat_probability_count": 6,
       "similarity_tier_counts": {
         "SURPRISE_ONLY": 28,
-        "LEVEL_ONLY": 35,
+        "LEVEL_ONLY": 33,
         "LEVEL_AND_MOMENTUM": 33
       }
     },
@@ -248,13 +248,12 @@
       "model": "surprise_magnitude",
       "source_id": "gold_futures",
       "horizon": "1d",
-      "predictions": 71,
-      "mean_brier": 0.24592181262826185,
-      "directional_predictions": 62,
-      "directional_accuracy": 0.6129032258064516,
-      "flat_probability_count": 9,
+      "predictions": 63,
+      "mean_brier": 0.2646137639023901,
+      "directional_predictions": 55,
+      "directional_accuracy": 0.5454545454545454,
+      "flat_probability_count": 8,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 8,
         "SURPRISE_MAGNITUDE": 63
       }
     },
@@ -262,13 +261,12 @@
       "model": "surprise_magnitude",
       "source_id": "gold_futures",
       "horizon": "20d",
-      "predictions": 71,
-      "mean_brier": 0.27683622340301256,
-      "directional_predictions": 69,
-      "directional_accuracy": 0.5507246376811594,
-      "flat_probability_count": 2,
+      "predictions": 63,
+      "mean_brier": 0.2666987475919109,
+      "directional_predictions": 62,
+      "directional_accuracy": 0.5806451612903226,
+      "flat_probability_count": 1,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 8,
         "SURPRISE_MAGNITUDE": 63
       }
     },
@@ -276,13 +274,12 @@
       "model": "surprise_magnitude",
       "source_id": "gold_futures",
       "horizon": "2d",
-      "predictions": 71,
-      "mean_brier": 0.2544687132690473,
-      "directional_predictions": 66,
-      "directional_accuracy": 0.5909090909090909,
-      "flat_probability_count": 5,
+      "predictions": 63,
+      "mean_brier": 0.2676987003856967,
+      "directional_predictions": 57,
+      "directional_accuracy": 0.543859649122807,
+      "flat_probability_count": 6,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 8,
         "SURPRISE_MAGNITUDE": 63
       }
     },
@@ -290,13 +287,12 @@
       "model": "surprise_magnitude",
       "source_id": "gold_futures",
       "horizon": "5d",
-      "predictions": 71,
-      "mean_brier": 0.28603532042452356,
-      "directional_predictions": 62,
-      "directional_accuracy": 0.5,
-      "flat_probability_count": 9,
+      "predictions": 63,
+      "mean_brier": 0.3071074851636368,
+      "directional_predictions": 57,
+      "directional_accuracy": 0.49122807017543857,
+      "flat_probability_count": 6,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 8,
         "SURPRISE_MAGNITUDE": 63
       }
     },
@@ -304,125 +300,125 @@
       "model": "surprise_magnitude",
       "source_id": "sp500",
       "horizon": "1d",
-      "predictions": 100,
-      "mean_brier": 0.2797420487770918,
-      "directional_predictions": 89,
-      "directional_accuracy": 0.47191011235955055,
-      "flat_probability_count": 11,
+      "predictions": 86,
+      "mean_brier": 0.28119405183058654,
+      "directional_predictions": 73,
+      "directional_accuracy": 0.4520547945205479,
+      "flat_probability_count": 13,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 21,
-        "SURPRISE_MAGNITUDE": 79
+        "SURPRISE_ONLY": 6,
+        "SURPRISE_MAGNITUDE": 80
       }
     },
     {
       "model": "surprise_magnitude",
       "source_id": "sp500",
       "horizon": "20d",
-      "predictions": 100,
-      "mean_brier": 0.270748566783581,
-      "directional_predictions": 95,
-      "directional_accuracy": 0.5894736842105263,
-      "flat_probability_count": 5,
+      "predictions": 86,
+      "mean_brier": 0.25983015054713937,
+      "directional_predictions": 83,
+      "directional_accuracy": 0.6024096385542169,
+      "flat_probability_count": 3,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 21,
-        "SURPRISE_MAGNITUDE": 79
+        "SURPRISE_ONLY": 6,
+        "SURPRISE_MAGNITUDE": 80
       }
     },
     {
       "model": "surprise_magnitude",
       "source_id": "sp500",
       "horizon": "2d",
-      "predictions": 100,
-      "mean_brier": 0.2828227726888478,
-      "directional_predictions": 84,
-      "directional_accuracy": 0.47619047619047616,
-      "flat_probability_count": 16,
+      "predictions": 86,
+      "mean_brier": 0.2902600949816977,
+      "directional_predictions": 73,
+      "directional_accuracy": 0.4657534246575342,
+      "flat_probability_count": 13,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 21,
-        "SURPRISE_MAGNITUDE": 79
+        "SURPRISE_ONLY": 6,
+        "SURPRISE_MAGNITUDE": 80
       }
     },
     {
       "model": "surprise_magnitude",
       "source_id": "sp500",
       "horizon": "5d",
-      "predictions": 100,
-      "mean_brier": 0.28699546898345774,
-      "directional_predictions": 90,
-      "directional_accuracy": 0.4777777777777778,
-      "flat_probability_count": 10,
+      "predictions": 86,
+      "mean_brier": 0.28788388506587653,
+      "directional_predictions": 72,
+      "directional_accuracy": 0.4444444444444444,
+      "flat_probability_count": 14,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 21,
-        "SURPRISE_MAGNITUDE": 79
+        "SURPRISE_ONLY": 6,
+        "SURPRISE_MAGNITUDE": 80
       }
     },
     {
       "model": "surprise_magnitude",
       "source_id": "us10y",
       "horizon": "1d",
-      "predictions": 100,
-      "mean_brier": 0.2853821316486655,
-      "directional_predictions": 91,
-      "directional_accuracy": 0.5494505494505495,
-      "flat_probability_count": 9,
+      "predictions": 86,
+      "mean_brier": 0.2907254077044295,
+      "directional_predictions": 83,
+      "directional_accuracy": 0.5421686746987951,
+      "flat_probability_count": 3,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 21,
-        "SURPRISE_MAGNITUDE": 79
+        "SURPRISE_ONLY": 6,
+        "SURPRISE_MAGNITUDE": 80
       }
     },
     {
       "model": "surprise_magnitude",
       "source_id": "us10y",
       "horizon": "20d",
-      "predictions": 100,
-      "mean_brier": 0.27701914913965664,
-      "directional_predictions": 85,
-      "directional_accuracy": 0.4823529411764706,
+      "predictions": 86,
+      "mean_brier": 0.2852199292166602,
+      "directional_predictions": 71,
+      "directional_accuracy": 0.4507042253521127,
       "flat_probability_count": 15,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 21,
-        "SURPRISE_MAGNITUDE": 79
+        "SURPRISE_ONLY": 6,
+        "SURPRISE_MAGNITUDE": 80
       }
     },
     {
       "model": "surprise_magnitude",
       "source_id": "us10y",
       "horizon": "2d",
-      "predictions": 100,
-      "mean_brier": 0.28694762834565857,
-      "directional_predictions": 86,
-      "directional_accuracy": 0.43023255813953487,
-      "flat_probability_count": 14,
+      "predictions": 86,
+      "mean_brier": 0.2948923946074213,
+      "directional_predictions": 81,
+      "directional_accuracy": 0.4567901234567901,
+      "flat_probability_count": 5,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 21,
-        "SURPRISE_MAGNITUDE": 79
+        "SURPRISE_ONLY": 6,
+        "SURPRISE_MAGNITUDE": 80
       }
     },
     {
       "model": "surprise_magnitude",
       "source_id": "us10y",
       "horizon": "5d",
-      "predictions": 100,
-      "mean_brier": 0.2590647598773949,
-      "directional_predictions": 86,
-      "directional_accuracy": 0.5697674418604651,
-      "flat_probability_count": 14,
+      "predictions": 86,
+      "mean_brier": 0.26383555510362167,
+      "directional_predictions": 78,
+      "directional_accuracy": 0.5384615384615384,
+      "flat_probability_count": 8,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 21,
-        "SURPRISE_MAGNITUDE": 79
+        "SURPRISE_ONLY": 6,
+        "SURPRISE_MAGNITUDE": 80
       }
     },
     {
       "model": "surprise_magnitude",
       "source_id": "usd_jpy",
       "horizon": "1d",
-      "predictions": 97,
-      "mean_brier": 0.2830283292037115,
-      "directional_predictions": 92,
-      "directional_accuracy": 0.4891304347826087,
-      "flat_probability_count": 5,
+      "predictions": 84,
+      "mean_brier": 0.28198789737161944,
+      "directional_predictions": 81,
+      "directional_accuracy": 0.5308641975308642,
+      "flat_probability_count": 3,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 19,
+        "SURPRISE_ONLY": 6,
         "SURPRISE_MAGNITUDE": 78
       }
     },
@@ -430,13 +426,13 @@
       "model": "surprise_magnitude",
       "source_id": "usd_jpy",
       "horizon": "20d",
-      "predictions": 97,
-      "mean_brier": 0.285432492474356,
-      "directional_predictions": 83,
-      "directional_accuracy": 0.42168674698795183,
-      "flat_probability_count": 14,
+      "predictions": 84,
+      "mean_brier": 0.29550265207729637,
+      "directional_predictions": 80,
+      "directional_accuracy": 0.475,
+      "flat_probability_count": 4,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 19,
+        "SURPRISE_ONLY": 6,
         "SURPRISE_MAGNITUDE": 78
       }
     },
@@ -444,13 +440,13 @@
       "model": "surprise_magnitude",
       "source_id": "usd_jpy",
       "horizon": "2d",
-      "predictions": 97,
-      "mean_brier": 0.2664659615543301,
-      "directional_predictions": 91,
-      "directional_accuracy": 0.5494505494505495,
-      "flat_probability_count": 6,
+      "predictions": 84,
+      "mean_brier": 0.2821140267959247,
+      "directional_predictions": 79,
+      "directional_accuracy": 0.5443037974683544,
+      "flat_probability_count": 5,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 19,
+        "SURPRISE_ONLY": 6,
         "SURPRISE_MAGNITUDE": 78
       }
     },
@@ -458,13 +454,13 @@
       "model": "surprise_magnitude",
       "source_id": "usd_jpy",
       "horizon": "5d",
-      "predictions": 97,
-      "mean_brier": 0.2955876042211934,
-      "directional_predictions": 91,
-      "directional_accuracy": 0.46153846153846156,
-      "flat_probability_count": 6,
+      "predictions": 84,
+      "mean_brier": 0.2957509275513306,
+      "directional_predictions": 72,
+      "directional_accuracy": 0.4027777777777778,
+      "flat_probability_count": 12,
       "similarity_tier_counts": {
-        "SURPRISE_ONLY": 19,
+        "SURPRISE_ONLY": 6,
         "SURPRISE_MAGNITUDE": 78
       }
     },
@@ -679,198 +675,198 @@
   ],
   "paired_comparison": {
     "sp500:1d": {
-      "paired_predictions": 98,
-      "challenger_mean_brier": 0.2679777877209635,
-      "baseline_mean_brier": 0.2649616420124122,
-      "brier_difference_challenger_minus_baseline": 0.003016145708551299
+      "paired_predictions": 96,
+      "challenger_mean_brier": 0.271549639014737,
+      "baseline_mean_brier": 0.2650621160358189,
+      "brier_difference_challenger_minus_baseline": 0.006487522978918081
     },
     "sp500:2d": {
-      "paired_predictions": 98,
-      "challenger_mean_brier": 0.2810948516144296,
-      "baseline_mean_brier": 0.26735699230907384,
-      "brier_difference_challenger_minus_baseline": 0.01373785930535576
+      "paired_predictions": 96,
+      "challenger_mean_brier": 0.28438212383298095,
+      "baseline_mean_brier": 0.26751026298217956,
+      "brier_difference_challenger_minus_baseline": 0.01687186085080139
     },
     "sp500:5d": {
-      "paired_predictions": 98,
-      "challenger_mean_brier": 0.2942991307603404,
-      "baseline_mean_brier": 0.26058588175288305,
-      "brier_difference_challenger_minus_baseline": 0.03371324900745737
+      "paired_predictions": 96,
+      "challenger_mean_brier": 0.2982781587944316,
+      "baseline_mean_brier": 0.2603087357708829,
+      "brier_difference_challenger_minus_baseline": 0.037969423023548665
     },
     "sp500:20d": {
-      "paired_predictions": 98,
-      "challenger_mean_brier": 0.2722123547098099,
-      "baseline_mean_brier": 0.2563689256569612,
-      "brier_difference_challenger_minus_baseline": 0.015843429052848745
+      "paired_predictions": 96,
+      "challenger_mean_brier": 0.2733586520445012,
+      "baseline_mean_brier": 0.2576467215618516,
+      "brier_difference_challenger_minus_baseline": 0.015711930482649628
     },
     "gold_futures:1d": {
-      "paired_predictions": 72,
-      "challenger_mean_brier": 0.27390392785158296,
-      "baseline_mean_brier": 0.2675178419246465,
-      "brier_difference_challenger_minus_baseline": 0.006386085926936458
+      "paired_predictions": 70,
+      "challenger_mean_brier": 0.26817772614293334,
+      "baseline_mean_brier": 0.26339051935953706,
+      "brier_difference_challenger_minus_baseline": 0.004787206783396281
     },
     "gold_futures:2d": {
-      "paired_predictions": 72,
-      "challenger_mean_brier": 0.26699101807697856,
-      "baseline_mean_brier": 0.25897906437701423,
-      "brier_difference_challenger_minus_baseline": 0.008011953699964325
+      "paired_predictions": 70,
+      "challenger_mean_brier": 0.2631272693871145,
+      "baseline_mean_brier": 0.25232651626697167,
+      "brier_difference_challenger_minus_baseline": 0.010800753120142836
     },
     "gold_futures:5d": {
-      "paired_predictions": 72,
-      "challenger_mean_brier": 0.29521210946556437,
-      "baseline_mean_brier": 0.2689306645345917,
-      "brier_difference_challenger_minus_baseline": 0.026281444930972675
+      "paired_predictions": 70,
+      "challenger_mean_brier": 0.29695185580302846,
+      "baseline_mean_brier": 0.2655103309337109,
+      "brier_difference_challenger_minus_baseline": 0.03144152486931756
     },
     "gold_futures:20d": {
-      "paired_predictions": 72,
-      "challenger_mean_brier": 0.3077344207187973,
-      "baseline_mean_brier": 0.2936287432951495,
-      "brier_difference_challenger_minus_baseline": 0.014105677423647822
+      "paired_predictions": 70,
+      "challenger_mean_brier": 0.3078919121044137,
+      "baseline_mean_brier": 0.29463342665293896,
+      "brier_difference_challenger_minus_baseline": 0.013258485451474733
     },
     "usd_jpy:1d": {
-      "paired_predictions": 96,
-      "challenger_mean_brier": 0.2834172958931544,
-      "baseline_mean_brier": 0.26684055236776455,
-      "brier_difference_challenger_minus_baseline": 0.016576743525389848
+      "paired_predictions": 94,
+      "challenger_mean_brier": 0.2852659846223739,
+      "baseline_mean_brier": 0.2691981985923469,
+      "brier_difference_challenger_minus_baseline": 0.01606778603002701
     },
     "usd_jpy:2d": {
-      "paired_predictions": 96,
-      "challenger_mean_brier": 0.2523837673805342,
-      "baseline_mean_brier": 0.2584866106909739,
-      "brier_difference_challenger_minus_baseline": -0.006102843310439698
+      "paired_predictions": 94,
+      "challenger_mean_brier": 0.25653682450257476,
+      "baseline_mean_brier": 0.25842253097958456,
+      "brier_difference_challenger_minus_baseline": -0.0018857064770098075
     },
     "usd_jpy:5d": {
-      "paired_predictions": 96,
-      "challenger_mean_brier": 0.26340015964555197,
-      "baseline_mean_brier": 0.2645041663799675,
-      "brier_difference_challenger_minus_baseline": -0.0011040067344155191
+      "paired_predictions": 94,
+      "challenger_mean_brier": 0.2629766356992027,
+      "baseline_mean_brier": 0.2640959103162941,
+      "brier_difference_challenger_minus_baseline": -0.0011192746170913814
     },
     "usd_jpy:20d": {
-      "paired_predictions": 96,
-      "challenger_mean_brier": 0.28153694294682013,
-      "baseline_mean_brier": 0.2608413922354212,
-      "brier_difference_challenger_minus_baseline": 0.020695550711398947
+      "paired_predictions": 94,
+      "challenger_mean_brier": 0.2827934877149871,
+      "baseline_mean_brier": 0.2617719579124424,
+      "brier_difference_challenger_minus_baseline": 0.02102152980254468
     },
     "us10y:1d": {
-      "paired_predictions": 98,
-      "challenger_mean_brier": 0.2473766148580045,
-      "baseline_mean_brier": 0.2588642796271875,
-      "brier_difference_challenger_minus_baseline": -0.011487664769183004
+      "paired_predictions": 96,
+      "challenger_mean_brier": 0.2494862171992267,
+      "baseline_mean_brier": 0.26158078082312425,
+      "brier_difference_challenger_minus_baseline": -0.012094563623897547
     },
     "us10y:2d": {
-      "paired_predictions": 98,
-      "challenger_mean_brier": 0.28083166867378634,
-      "baseline_mean_brier": 0.2589875240618059,
-      "brier_difference_challenger_minus_baseline": 0.02184414461198042
+      "paired_predictions": 96,
+      "challenger_mean_brier": 0.27786345791440753,
+      "baseline_mean_brier": 0.25667476414642687,
+      "brier_difference_challenger_minus_baseline": 0.02118869376798066
     },
     "us10y:5d": {
-      "paired_predictions": 98,
-      "challenger_mean_brier": 0.26508917007973826,
-      "baseline_mean_brier": 0.2529969789024223,
-      "brier_difference_challenger_minus_baseline": 0.01209219117731597
+      "paired_predictions": 96,
+      "challenger_mean_brier": 0.26470965726631684,
+      "baseline_mean_brier": 0.2504870779999265,
+      "brier_difference_challenger_minus_baseline": 0.014222579266390367
     },
     "us10y:20d": {
-      "paired_predictions": 98,
-      "challenger_mean_brier": 0.26427716436598,
-      "baseline_mean_brier": 0.2609777277883485,
-      "brier_difference_challenger_minus_baseline": 0.003299436577631487
+      "paired_predictions": 96,
+      "challenger_mean_brier": 0.2650170984032189,
+      "baseline_mean_brier": 0.26078325336727237,
+      "brier_difference_challenger_minus_baseline": 0.004233845035946537
     }
   },
   "magnitude_paired_comparison": {
     "sp500:1d": {
-      "paired_predictions": 100,
-      "challenger_mean_brier": 0.2797420487770918,
-      "baseline_mean_brier": 0.2653119959490235,
-      "brier_difference_challenger_minus_baseline": 0.014430052828068307
+      "paired_predictions": 86,
+      "challenger_mean_brier": 0.28119405183058654,
+      "baseline_mean_brier": 0.26294063585833277,
+      "brier_difference_challenger_minus_baseline": 0.018253415972253773
     },
     "sp500:2d": {
-      "paired_predictions": 100,
-      "challenger_mean_brier": 0.2828227726888478,
-      "baseline_mean_brier": 0.2676594392397519,
-      "brier_difference_challenger_minus_baseline": 0.015163333449095928
+      "paired_predictions": 86,
+      "challenger_mean_brier": 0.2902600949816977,
+      "baseline_mean_brier": 0.27542807315272855,
+      "brier_difference_challenger_minus_baseline": 0.014832021828969144
     },
     "sp500:5d": {
-      "paired_predictions": 100,
-      "challenger_mean_brier": 0.28699546898345774,
-      "baseline_mean_brier": 0.2599402798203047,
-      "brier_difference_challenger_minus_baseline": 0.027055189163153026
+      "paired_predictions": 86,
+      "challenger_mean_brier": 0.28788388506587653,
+      "baseline_mean_brier": 0.2605810455132556,
+      "brier_difference_challenger_minus_baseline": 0.027302839552620917
     },
     "sp500:20d": {
-      "paired_predictions": 100,
-      "challenger_mean_brier": 0.270748566783581,
-      "baseline_mean_brier": 0.25689113392068147,
-      "brier_difference_challenger_minus_baseline": 0.013857432862899532
+      "paired_predictions": 86,
+      "challenger_mean_brier": 0.25983015054713937,
+      "baseline_mean_brier": 0.25458256408000524,
+      "brier_difference_challenger_minus_baseline": 0.0052475864671341355
     },
     "gold_futures:1d": {
-      "paired_predictions": 71,
-      "challenger_mean_brier": 0.24592181262826185,
-      "baseline_mean_brier": 0.24954246840518088,
-      "brier_difference_challenger_minus_baseline": -0.0036206557769190295
+      "paired_predictions": 63,
+      "challenger_mean_brier": 0.2646137639023901,
+      "baseline_mean_brier": 0.26042351595413604,
+      "brier_difference_challenger_minus_baseline": 0.004190247948254067
     },
     "gold_futures:2d": {
-      "paired_predictions": 71,
-      "challenger_mean_brier": 0.2544687132690473,
-      "baseline_mean_brier": 0.25695145505242184,
-      "brier_difference_challenger_minus_baseline": -0.0024827417833745424
+      "paired_predictions": 63,
+      "challenger_mean_brier": 0.2676987003856967,
+      "baseline_mean_brier": 0.26056352896455476,
+      "brier_difference_challenger_minus_baseline": 0.00713517142114195
     },
     "gold_futures:5d": {
-      "paired_predictions": 71,
-      "challenger_mean_brier": 0.28603532042452356,
-      "baseline_mean_brier": 0.25679546049251484,
-      "brier_difference_challenger_minus_baseline": 0.029239859932008727
+      "paired_predictions": 63,
+      "challenger_mean_brier": 0.3071074851636368,
+      "baseline_mean_brier": 0.2606960674356355,
+      "brier_difference_challenger_minus_baseline": 0.04641141772800128
     },
     "gold_futures:20d": {
-      "paired_predictions": 71,
-      "challenger_mean_brier": 0.27683622340301256,
-      "baseline_mean_brier": 0.2884113211075362,
-      "brier_difference_challenger_minus_baseline": -0.01157509770452364
+      "paired_predictions": 63,
+      "challenger_mean_brier": 0.2666987475919109,
+      "baseline_mean_brier": 0.28249140388557875,
+      "brier_difference_challenger_minus_baseline": -0.01579265629366783
     },
     "usd_jpy:1d": {
-      "paired_predictions": 97,
-      "challenger_mean_brier": 0.2830283292037115,
-      "baseline_mean_brier": 0.27093311826546224,
-      "brier_difference_challenger_minus_baseline": 0.012095210938249279
+      "paired_predictions": 84,
+      "challenger_mean_brier": 0.28198789737161944,
+      "baseline_mean_brier": 0.2611531508978159,
+      "brier_difference_challenger_minus_baseline": 0.020834746473803567
     },
     "usd_jpy:2d": {
-      "paired_predictions": 97,
-      "challenger_mean_brier": 0.2664659615543301,
-      "baseline_mean_brier": 0.25899222155186624,
-      "brier_difference_challenger_minus_baseline": 0.007473740002463869
+      "paired_predictions": 84,
+      "challenger_mean_brier": 0.2821140267959247,
+      "baseline_mean_brier": 0.25718970067494534,
+      "brier_difference_challenger_minus_baseline": 0.024924326120979334
     },
     "usd_jpy:5d": {
-      "paired_predictions": 97,
-      "challenger_mean_brier": 0.2955876042211934,
-      "baseline_mean_brier": 0.26143614264612797,
-      "brier_difference_challenger_minus_baseline": 0.034151461575065434
+      "paired_predictions": 84,
+      "challenger_mean_brier": 0.2957509275513306,
+      "baseline_mean_brier": 0.26388987108443773,
+      "brier_difference_challenger_minus_baseline": 0.031861056466892856
     },
     "usd_jpy:20d": {
-      "paired_predictions": 97,
-      "challenger_mean_brier": 0.285432492474356,
-      "baseline_mean_brier": 0.26133418175163997,
-      "brier_difference_challenger_minus_baseline": 0.02409831072271601
+      "paired_predictions": 84,
+      "challenger_mean_brier": 0.29550265207729637,
+      "baseline_mean_brier": 0.2611409747414798,
+      "brier_difference_challenger_minus_baseline": 0.034361677335816576
     },
     "us10y:1d": {
-      "paired_predictions": 100,
-      "challenger_mean_brier": 0.2853821316486655,
-      "baseline_mean_brier": 0.25990930808423046,
-      "brier_difference_challenger_minus_baseline": 0.025472823564435032
+      "paired_predictions": 86,
+      "challenger_mean_brier": 0.2907254077044295,
+      "baseline_mean_brier": 0.2712687502336398,
+      "brier_difference_challenger_minus_baseline": 0.01945665747078973
     },
     "us10y:2d": {
-      "paired_predictions": 100,
-      "challenger_mean_brier": 0.28694762834565857,
-      "baseline_mean_brier": 0.26003008763015656,
-      "brier_difference_challenger_minus_baseline": 0.02691754071550201
+      "paired_predictions": 86,
+      "challenger_mean_brier": 0.2948923946074213,
+      "baseline_mean_brier": 0.2628685720825728,
+      "brier_difference_challenger_minus_baseline": 0.03202382252484848
     },
     "us10y:5d": {
-      "paired_predictions": 100,
-      "challenger_mean_brier": 0.2590647598773949,
-      "baseline_mean_brier": 0.2541593533739606,
-      "brier_difference_challenger_minus_baseline": 0.004905406503434295
+      "paired_predictions": 86,
+      "challenger_mean_brier": 0.26383555510362167,
+      "baseline_mean_brier": 0.2596432542263506,
+      "brier_difference_challenger_minus_baseline": 0.004192300877271071
     },
     "us10y:20d": {
-      "paired_predictions": 100,
-      "challenger_mean_brier": 0.27701914913965664,
-      "baseline_mean_brier": 0.26290197488547407,
-      "brier_difference_challenger_minus_baseline": 0.014117174254182574
+      "paired_predictions": 86,
+      "challenger_mean_brier": 0.2852199292166602,
+      "baseline_mean_brier": 0.2649165988821889,
+      "brier_difference_challenger_minus_baseline": 0.020303330334471292
     }
   },
   "note": "Walk-forward post-release reaction backtest. Each prediction uses only earlier release events. Lower Brier score is better. This measures historical association, not causal effect or trading profit."

@@ -1,46 +1,28 @@
 {
-  "generated_at": "2026-10-03T05:19:27.588589+00:00",
+  "generated_at": "2026-10-03T05:26:38.179632+00:00",
   "minimum_sample": 5,
-  "release_events": 111,
+  "release_events": 141,
   "status_counts": {
     "INSUFFICIENT_ANALOGS": 10,
-    "OK": 101
+    "OK": 131
   },
   "similarity_tier_counts": {
-    "SURPRISE_ONLY": 41,
-    "LEVEL_ONLY": 36,
-    "LEVEL_AND_MOMENTUM": 34
+    "SURPRISE_ONLY": 63,
+    "LEVEL_ONLY": 38,
+    "LEVEL_AND_MOMENTUM": 40
   },
-  "missing_regime_context_count": 11,
-  "usable_event_count": 101,
-  "usable_event_share": 0.9099099099099099,
+  "missing_regime_context_count": 33,
+  "usable_event_count": 131,
+  "usable_event_share": 0.9290780141843972,
   "prior_analog_count": {
     "min": 0,
-    "max": 30,
-    "mean": 9.73873873873874
+    "max": 42,
+    "mean": 12.25531914893617
   },
   "rows": [
     {
-      "release_event_id": "RTDSM:ROUTPUT:1996Q2:r1",
-      "actual_available_at": "1996-08-01T08:30:00-04:00",
-      "semantic_effect": "stronger_growth",
-      "surprise_direction": "ABOVE",
-      "regime_filters": {},
-      "status": "INSUFFICIENT_ANALOGS",
-      "similarity_tier": "SURPRISE_ONLY",
-      "regime_context_missing": true,
-      "search_attempts": [
-        {
-          "similarity_tier": "SURPRISE_ONLY",
-          "regime_filters": {},
-          "event_count": 0
-        }
-      ],
-      "prior_analog_count": 0
-    },
-    {
-      "release_event_id": "RTDSM:ROUTPUT:1996Q3:r1",
-      "actual_available_at": "1996-10-30T08:30:00-05:00",
+      "release_event_id": "RTDSM:ROUTPUT:1990Q3:r1",
+      "actual_available_at": "1990-12-31T23:59:59-05:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {},
@@ -57,8 +39,98 @@
       "prior_analog_count": 0
     },
     {
-      "release_event_id": "RTDSM:ROUTPUT:1996Q4:r1",
-      "actual_available_at": "1997-01-31T08:30:00-05:00",
+      "release_event_id": "RTDSM:ROUTPUT:1990Q4:r1",
+      "actual_available_at": "1991-03-31T23:59:59-05:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {},
+      "status": "INSUFFICIENT_ANALOGS",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 1
+        }
+      ],
+      "prior_analog_count": 1
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1991Q1:r1",
+      "actual_available_at": "1991-06-30T23:59:59-04:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {},
+      "status": "INSUFFICIENT_ANALOGS",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 2
+        }
+      ],
+      "prior_analog_count": 2
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1991Q2:r1",
+      "actual_available_at": "1991-09-30T23:59:59-04:00",
+      "semantic_effect": "stronger_growth",
+      "surprise_direction": "ABOVE",
+      "regime_filters": {},
+      "status": "INSUFFICIENT_ANALOGS",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 0
+        }
+      ],
+      "prior_analog_count": 0
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1991Q3:r1",
+      "actual_available_at": "1991-12-31T23:59:59-05:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {},
+      "status": "INSUFFICIENT_ANALOGS",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 3
+        }
+      ],
+      "prior_analog_count": 3
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1991Q4:r1",
+      "actual_available_at": "1992-03-31T23:59:59-05:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {},
+      "status": "INSUFFICIENT_ANALOGS",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 4
+        }
+      ],
+      "prior_analog_count": 4
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1992Q1:r1",
+      "actual_available_at": "1992-06-30T23:59:59-04:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {},
@@ -75,8 +147,26 @@
       "prior_analog_count": 1
     },
     {
-      "release_event_id": "RTDSM:ROUTPUT:1997Q1:r1",
-      "actual_available_at": "1997-04-30T08:30:00-04:00",
+      "release_event_id": "RTDSM:ROUTPUT:1992Q2:r1",
+      "actual_available_at": "1992-09-30T23:59:59-04:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 5
+        }
+      ],
+      "prior_analog_count": 5
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1992Q3:r1",
+      "actual_available_at": "1992-12-31T23:59:59-05:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {},
@@ -93,26 +183,8 @@
       "prior_analog_count": 2
     },
     {
-      "release_event_id": "RTDSM:ROUTPUT:1997Q2:r1",
-      "actual_available_at": "1997-07-31T08:30:00-04:00",
-      "semantic_effect": "weaker_growth",
-      "surprise_direction": "BELOW",
-      "regime_filters": {},
-      "status": "INSUFFICIENT_ANALOGS",
-      "similarity_tier": "SURPRISE_ONLY",
-      "regime_context_missing": true,
-      "search_attempts": [
-        {
-          "similarity_tier": "SURPRISE_ONLY",
-          "regime_filters": {},
-          "event_count": 1
-        }
-      ],
-      "prior_analog_count": 1
-    },
-    {
-      "release_event_id": "RTDSM:ROUTPUT:1997Q3:r1",
-      "actual_available_at": "1997-10-31T08:30:00-05:00",
+      "release_event_id": "RTDSM:ROUTPUT:1992Q4:r1",
+      "actual_available_at": "1993-03-31T23:59:59-05:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {},
@@ -129,8 +201,62 @@
       "prior_analog_count": 3
     },
     {
-      "release_event_id": "RTDSM:ROUTPUT:1997Q4:r1",
-      "actual_available_at": "1998-01-30T08:30:00-05:00",
+      "release_event_id": "RTDSM:ROUTPUT:1993Q1:r1",
+      "actual_available_at": "1993-06-30T23:59:59-04:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 6
+        }
+      ],
+      "prior_analog_count": 6
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1993Q2:r1",
+      "actual_available_at": "1993-09-30T23:59:59-04:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 7
+        }
+      ],
+      "prior_analog_count": 7
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1993Q3:r1",
+      "actual_available_at": "1993-12-31T23:59:59-05:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 8
+        }
+      ],
+      "prior_analog_count": 8
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1993Q4:r1",
+      "actual_available_at": "1994-03-31T23:59:59-05:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {},
@@ -147,8 +273,26 @@
       "prior_analog_count": 4
     },
     {
-      "release_event_id": "RTDSM:ROUTPUT:1998Q1:r1",
-      "actual_available_at": "1998-04-30T08:30:00-04:00",
+      "release_event_id": "RTDSM:ROUTPUT:1994Q1:r1",
+      "actual_available_at": "1994-06-30T23:59:59-04:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 9
+        }
+      ],
+      "prior_analog_count": 9
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1994Q2:r1",
+      "actual_available_at": "1994-09-30T23:59:59-04:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {},
@@ -165,26 +309,8 @@
       "prior_analog_count": 5
     },
     {
-      "release_event_id": "RTDSM:ROUTPUT:1998Q2:r1",
-      "actual_available_at": "1998-07-31T08:30:00-04:00",
-      "semantic_effect": "weaker_growth",
-      "surprise_direction": "BELOW",
-      "regime_filters": {},
-      "status": "INSUFFICIENT_ANALOGS",
-      "similarity_tier": "SURPRISE_ONLY",
-      "regime_context_missing": true,
-      "search_attempts": [
-        {
-          "similarity_tier": "SURPRISE_ONLY",
-          "regime_filters": {},
-          "event_count": 2
-        }
-      ],
-      "prior_analog_count": 2
-    },
-    {
-      "release_event_id": "RTDSM:ROUTPUT:1998Q3:r1",
-      "actual_available_at": "1998-10-30T08:30:00-05:00",
+      "release_event_id": "RTDSM:ROUTPUT:1994Q3:r1",
+      "actual_available_at": "1994-12-31T23:59:59-05:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {},
@@ -201,8 +327,8 @@
       "prior_analog_count": 6
     },
     {
-      "release_event_id": "RTDSM:ROUTPUT:1998Q4:r1",
-      "actual_available_at": "1999-01-29T08:30:00-05:00",
+      "release_event_id": "RTDSM:ROUTPUT:1994Q4:r1",
+      "actual_available_at": "1995-03-31T23:59:59-05:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {},
@@ -217,6 +343,276 @@
         }
       ],
       "prior_analog_count": 7
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1995Q1:r1",
+      "actual_available_at": "1995-06-30T23:59:59-04:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 10
+        }
+      ],
+      "prior_analog_count": 10
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1995Q2:r1",
+      "actual_available_at": "1995-09-30T23:59:59-04:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 11
+        }
+      ],
+      "prior_analog_count": 11
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1995Q3:r1",
+      "actual_available_at": "1995-12-31T23:59:59-05:00",
+      "semantic_effect": "stronger_growth",
+      "surprise_direction": "ABOVE",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 8
+        }
+      ],
+      "prior_analog_count": 8
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1996Q1:r1",
+      "actual_available_at": "1996-06-30T23:59:59-04:00",
+      "semantic_effect": "stronger_growth",
+      "surprise_direction": "ABOVE",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 9
+        }
+      ],
+      "prior_analog_count": 9
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1996Q2:r1",
+      "actual_available_at": "1996-08-01T08:30:00-04:00",
+      "semantic_effect": "stronger_growth",
+      "surprise_direction": "ABOVE",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 10
+        }
+      ],
+      "prior_analog_count": 10
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1996Q3:r1",
+      "actual_available_at": "1996-10-30T08:30:00-05:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 12
+        }
+      ],
+      "prior_analog_count": 12
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1996Q4:r1",
+      "actual_available_at": "1997-01-31T08:30:00-05:00",
+      "semantic_effect": "stronger_growth",
+      "surprise_direction": "ABOVE",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 11
+        }
+      ],
+      "prior_analog_count": 11
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1997Q1:r1",
+      "actual_available_at": "1997-04-30T08:30:00-04:00",
+      "semantic_effect": "stronger_growth",
+      "surprise_direction": "ABOVE",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 12
+        }
+      ],
+      "prior_analog_count": 12
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1997Q2:r1",
+      "actual_available_at": "1997-07-31T08:30:00-04:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 13
+        }
+      ],
+      "prior_analog_count": 13
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1997Q3:r1",
+      "actual_available_at": "1997-10-31T08:30:00-05:00",
+      "semantic_effect": "stronger_growth",
+      "surprise_direction": "ABOVE",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 13
+        }
+      ],
+      "prior_analog_count": 13
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1997Q4:r1",
+      "actual_available_at": "1998-01-30T08:30:00-05:00",
+      "semantic_effect": "stronger_growth",
+      "surprise_direction": "ABOVE",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 14
+        }
+      ],
+      "prior_analog_count": 14
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1998Q1:r1",
+      "actual_available_at": "1998-04-30T08:30:00-04:00",
+      "semantic_effect": "stronger_growth",
+      "surprise_direction": "ABOVE",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 15
+        }
+      ],
+      "prior_analog_count": 15
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1998Q2:r1",
+      "actual_available_at": "1998-07-31T08:30:00-04:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 14
+        }
+      ],
+      "prior_analog_count": 14
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1998Q3:r1",
+      "actual_available_at": "1998-10-30T08:30:00-05:00",
+      "semantic_effect": "stronger_growth",
+      "surprise_direction": "ABOVE",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 16
+        }
+      ],
+      "prior_analog_count": 16
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:1998Q4:r1",
+      "actual_available_at": "1999-01-29T08:30:00-05:00",
+      "semantic_effect": "stronger_growth",
+      "surprise_direction": "ABOVE",
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 17
+        }
+      ],
+      "prior_analog_count": 17
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:1999Q1:r1",
@@ -238,10 +634,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 8
+          "event_count": 18
         }
       ],
-      "prior_analog_count": 8
+      "prior_analog_count": 18
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:1999Q2:r1",
@@ -249,7 +645,7 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {},
-      "status": "INSUFFICIENT_ANALOGS",
+      "status": "OK",
       "similarity_tier": "SURPRISE_ONLY",
       "regime_context_missing": false,
       "search_attempts": [
@@ -271,10 +667,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 3
+          "event_count": 15
         }
       ],
-      "prior_analog_count": 3
+      "prior_analog_count": 15
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:1999Q3:r1",
@@ -304,10 +700,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 9
+          "event_count": 19
         }
       ],
-      "prior_analog_count": 9
+      "prior_analog_count": 19
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:1999Q4:r1",
@@ -337,10 +733,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 10
+          "event_count": 20
         }
       ],
-      "prior_analog_count": 10
+      "prior_analog_count": 20
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2000Q1:r1",
@@ -370,10 +766,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 11
+          "event_count": 21
         }
       ],
-      "prior_analog_count": 11
+      "prior_analog_count": 21
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2000Q2:r1",
@@ -403,10 +799,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 12
+          "event_count": 22
         }
       ],
-      "prior_analog_count": 12
+      "prior_analog_count": 22
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2000Q3:r1",
@@ -414,7 +810,7 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {},
-      "status": "INSUFFICIENT_ANALOGS",
+      "status": "OK",
       "similarity_tier": "SURPRISE_ONLY",
       "regime_context_missing": false,
       "search_attempts": [
@@ -436,10 +832,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 4
+          "event_count": 16
         }
       ],
-      "prior_analog_count": 4
+      "prior_analog_count": 16
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2000Q4:r1",
@@ -469,10 +865,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 5
+          "event_count": 17
         }
       ],
-      "prior_analog_count": 5
+      "prior_analog_count": 17
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2001Q1:r1",
@@ -502,10 +898,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 13
+          "event_count": 23
         }
       ],
-      "prior_analog_count": 13
+      "prior_analog_count": 23
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2001Q2:r1",
@@ -535,10 +931,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 6
+          "event_count": 18
         }
       ],
-      "prior_analog_count": 6
+      "prior_analog_count": 18
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2001Q3:r1",
@@ -568,10 +964,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 7
+          "event_count": 19
         }
       ],
-      "prior_analog_count": 7
+      "prior_analog_count": 19
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2001Q4:r1",
@@ -601,10 +997,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 14
+          "event_count": 24
         }
       ],
-      "prior_analog_count": 14
+      "prior_analog_count": 24
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2002Q1:r1",
@@ -634,10 +1030,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 15
+          "event_count": 25
         }
       ],
-      "prior_analog_count": 15
+      "prior_analog_count": 25
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2002Q2:r1",
@@ -667,10 +1063,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 8
+          "event_count": 20
         }
       ],
-      "prior_analog_count": 8
+      "prior_analog_count": 20
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2002Q3:r1",
@@ -700,10 +1096,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 16
+          "event_count": 26
         }
       ],
-      "prior_analog_count": 16
+      "prior_analog_count": 26
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2002Q4:r1",
@@ -733,10 +1129,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 9
+          "event_count": 21
         }
       ],
-      "prior_analog_count": 9
+      "prior_analog_count": 21
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2003Q1:r1",
@@ -766,10 +1162,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 10
+          "event_count": 22
         }
       ],
-      "prior_analog_count": 10
+      "prior_analog_count": 22
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2003Q2:r1",
@@ -799,10 +1195,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 17
+          "event_count": 27
         }
       ],
-      "prior_analog_count": 17
+      "prior_analog_count": 27
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2003Q3:r1",
@@ -832,10 +1228,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 18
+          "event_count": 28
         }
       ],
-      "prior_analog_count": 18
+      "prior_analog_count": 28
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2003Q4:r1",
@@ -865,10 +1261,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 19
+          "event_count": 29
         }
       ],
-      "prior_analog_count": 19
+      "prior_analog_count": 29
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2004Q1:r1",
@@ -982,10 +1378,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 13
+          "event_count": 25
         }
       ],
-      "prior_analog_count": 13
+      "prior_analog_count": 25
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2005Q1:r1",
@@ -1015,10 +1411,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 14
+          "event_count": 26
         }
       ],
-      "prior_analog_count": 14
+      "prior_analog_count": 26
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2005Q2:r1",
@@ -1048,10 +1444,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 21
+          "event_count": 31
         }
       ],
-      "prior_analog_count": 21
+      "prior_analog_count": 31
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2005Q3:r1",
@@ -1111,10 +1507,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 16
+          "event_count": 28
         }
       ],
-      "prior_analog_count": 16
+      "prior_analog_count": 28
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2006Q1:r1",
@@ -1192,10 +1588,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 18
+          "event_count": 30
         }
       ],
-      "prior_analog_count": 18
+      "prior_analog_count": 30
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2006Q4:r1",
@@ -1273,10 +1669,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 24
+          "event_count": 34
         }
       ],
-      "prior_analog_count": 24
+      "prior_analog_count": 34
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2007Q3:r1",
@@ -1438,10 +1834,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 23
+          "event_count": 35
         }
       ],
-      "prior_analog_count": 23
+      "prior_analog_count": 35
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2009Q1:r1",
@@ -1555,10 +1951,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 29
+          "event_count": 39
         }
       ],
-      "prior_analog_count": 29
+      "prior_analog_count": 39
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2010Q1:r1",
@@ -1618,10 +2014,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 25
+          "event_count": 37
         }
       ],
-      "prior_analog_count": 25
+      "prior_analog_count": 37
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2010Q3:r1",
@@ -1768,6 +2164,30 @@
       "prior_analog_count": 7
     },
     {
+      "release_event_id": "RTDSM:ROUTPUT:2011Q4:r1",
+      "actual_available_at": "2012-03-31T23:59:59-04:00",
+      "semantic_effect": "stronger_growth",
+      "surprise_direction": "ABOVE",
+      "regime_filters": {
+        "headline_level": "low",
+        "headline_momentum": "cooling"
+      },
+      "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 9
+        }
+      ],
+      "prior_analog_count": 9
+    },
+    {
       "release_event_id": "RTDSM:ROUTPUT:2012Q1:r1",
       "actual_available_at": "2012-04-27T08:30:00-04:00",
       "semantic_effect": "weaker_growth",
@@ -1825,10 +2245,10 @@
         {
           "similarity_tier": "SURPRISE_ONLY",
           "regime_filters": {},
-          "event_count": 30
+          "event_count": 42
         }
       ],
-      "prior_analog_count": 30
+      "prior_analog_count": 42
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2012Q3:r1",
@@ -1855,10 +2275,40 @@
           "regime_filters": {
             "headline_level": "low"
           },
-          "event_count": 10
+          "event_count": 11
         }
       ],
-      "prior_analog_count": 10
+      "prior_analog_count": 11
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:2012Q4:r1",
+      "actual_available_at": "2013-03-31T23:59:59-04:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {
+        "headline_level": "low"
+      },
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 5
+        }
+      ],
+      "prior_analog_count": 5
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2013Q1:r1",
@@ -1885,10 +2335,10 @@
           "regime_filters": {
             "headline_level": "low"
           },
-          "event_count": 11
+          "event_count": 12
         }
       ],
-      "prior_analog_count": 11
+      "prior_analog_count": 12
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2013Q2:r1",
@@ -1896,10 +2346,11 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
-        "headline_level": "low"
+        "headline_level": "low",
+        "headline_momentum": "cooling"
       },
       "status": "OK",
-      "similarity_tier": "LEVEL_ONLY",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
       "regime_context_missing": false,
       "search_attempts": [
         {
@@ -1907,13 +2358,6 @@
           "regime_filters": {
             "headline_level": "low",
             "headline_momentum": "cooling"
-          },
-          "event_count": 4
-        },
-        {
-          "similarity_tier": "LEVEL_ONLY",
-          "regime_filters": {
-            "headline_level": "low"
           },
           "event_count": 5
         }
@@ -1949,6 +2393,36 @@
         }
       ],
       "prior_analog_count": 7
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:2013Q4:r1",
+      "actual_available_at": "2014-03-31T23:59:59-04:00",
+      "semantic_effect": "stronger_growth",
+      "surprise_direction": "ABOVE",
+      "regime_filters": {
+        "headline_level": "middle"
+      },
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 8
+        }
+      ],
+      "prior_analog_count": 8
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2014Q1:r1",
@@ -2005,10 +2479,10 @@
           "regime_filters": {
             "headline_level": "middle"
           },
-          "event_count": 8
+          "event_count": 9
         }
       ],
-      "prior_analog_count": 8
+      "prior_analog_count": 9
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2014Q3:r1",
@@ -2029,10 +2503,34 @@
             "headline_level": "low",
             "headline_momentum": "cooling"
           },
-          "event_count": 9
+          "event_count": 10
         }
       ],
-      "prior_analog_count": 9
+      "prior_analog_count": 10
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:2014Q4:r1",
+      "actual_available_at": "2015-03-31T23:59:59-04:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {
+        "headline_level": "low",
+        "headline_momentum": "cooling"
+      },
+      "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 6
+        }
+      ],
+      "prior_analog_count": 6
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2015Q1:r1",
@@ -2053,10 +2551,10 @@
             "headline_level": "low",
             "headline_momentum": "cooling"
           },
-          "event_count": 5
+          "event_count": 7
         }
       ],
-      "prior_analog_count": 5
+      "prior_analog_count": 7
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2015Q2:r1",
@@ -2113,8 +2611,8 @@
       "prior_analog_count": 5
     },
     {
-      "release_event_id": "RTDSM:ROUTPUT:2016Q1:r1",
-      "actual_available_at": "2016-04-28T08:30:00-04:00",
+      "release_event_id": "RTDSM:ROUTPUT:2015Q4:r1",
+      "actual_available_at": "2016-03-31T23:59:59-04:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
@@ -2137,10 +2635,40 @@
           "regime_filters": {
             "headline_level": "low"
           },
-          "event_count": 7
+          "event_count": 9
         }
       ],
-      "prior_analog_count": 7
+      "prior_analog_count": 9
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:2016Q1:r1",
+      "actual_available_at": "2016-04-28T08:30:00-04:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {
+        "headline_level": "low"
+      },
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 10
+        }
+      ],
+      "prior_analog_count": 10
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2016Q2:r1",
@@ -2190,21 +2718,21 @@
             "headline_level": "middle",
             "headline_momentum": "mixed"
           },
-          "event_count": 3
+          "event_count": 4
         },
         {
           "similarity_tier": "LEVEL_ONLY",
           "regime_filters": {
             "headline_level": "middle"
           },
-          "event_count": 9
+          "event_count": 10
         }
       ],
-      "prior_analog_count": 9
+      "prior_analog_count": 10
     },
     {
-      "release_event_id": "RTDSM:ROUTPUT:2017Q1:r1",
-      "actual_available_at": "2017-04-28T08:30:00-04:00",
+      "release_event_id": "RTDSM:ROUTPUT:2016Q4:r1",
+      "actual_available_at": "2017-03-31T23:59:59-04:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
@@ -2233,6 +2761,36 @@
       "prior_analog_count": 14
     },
     {
+      "release_event_id": "RTDSM:ROUTPUT:2017Q1:r1",
+      "actual_available_at": "2017-04-28T08:30:00-04:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {
+        "headline_level": "high"
+      },
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 15
+        }
+      ],
+      "prior_analog_count": 15
+    },
+    {
       "release_event_id": "RTDSM:ROUTPUT:2017Q2:r1",
       "actual_available_at": "2017-07-28T08:30:00-04:00",
       "semantic_effect": "weaker_growth",
@@ -2251,10 +2809,10 @@
             "headline_level": "low",
             "headline_momentum": "cooling"
           },
-          "event_count": 6
+          "event_count": 8
         }
       ],
-      "prior_analog_count": 6
+      "prior_analog_count": 8
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2017Q3:r1",
@@ -2281,10 +2839,34 @@
           "regime_filters": {
             "headline_level": "middle"
           },
-          "event_count": 10
+          "event_count": 11
         }
       ],
-      "prior_analog_count": 10
+      "prior_analog_count": 11
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:2017Q4:r1",
+      "actual_available_at": "2018-03-31T23:59:59-04:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {
+        "headline_level": "high",
+        "headline_momentum": "mixed"
+      },
+      "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 5
+        }
+      ],
+      "prior_analog_count": 5
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2018Q1:r1",
@@ -2322,10 +2904,11 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "middle"
+        "headline_level": "middle",
+        "headline_momentum": "mixed"
       },
       "status": "OK",
-      "similarity_tier": "LEVEL_ONLY",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
       "regime_context_missing": false,
       "search_attempts": [
         {
@@ -2334,17 +2917,10 @@
             "headline_level": "middle",
             "headline_momentum": "mixed"
           },
-          "event_count": 4
-        },
-        {
-          "similarity_tier": "LEVEL_ONLY",
-          "regime_filters": {
-            "headline_level": "middle"
-          },
-          "event_count": 11
+          "event_count": 5
         }
       ],
-      "prior_analog_count": 11
+      "prior_analog_count": 5
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2018Q3:r1",
@@ -2365,10 +2941,34 @@
             "headline_level": "middle",
             "headline_momentum": "mixed"
           },
-          "event_count": 5
+          "event_count": 6
         }
       ],
-      "prior_analog_count": 5
+      "prior_analog_count": 6
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:2018Q4:r1",
+      "actual_available_at": "2019-03-31T23:59:59-04:00",
+      "semantic_effect": "weaker_growth",
+      "surprise_direction": "BELOW",
+      "regime_filters": {
+        "headline_level": "low",
+        "headline_momentum": "cooling"
+      },
+      "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 9
+        }
+      ],
+      "prior_analog_count": 9
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2019Q1:r1",
@@ -2395,10 +2995,10 @@
           "regime_filters": {
             "headline_level": "low"
           },
-          "event_count": 13
+          "event_count": 14
         }
       ],
-      "prior_analog_count": 13
+      "prior_analog_count": 14
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2019Q2:r1",
@@ -2443,10 +3043,10 @@
             "headline_level": "low",
             "headline_momentum": "cooling"
           },
-          "event_count": 10
+          "event_count": 11
         }
       ],
-      "prior_analog_count": 10
+      "prior_analog_count": 11
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2019Q4:r1",
@@ -2515,10 +3115,10 @@
             "headline_level": "low",
             "headline_momentum": "cooling"
           },
-          "event_count": 7
+          "event_count": 10
         }
       ],
-      "prior_analog_count": 7
+      "prior_analog_count": 10
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2020Q3:r1",
@@ -2569,10 +3169,10 @@
           "regime_filters": {
             "headline_level": "middle"
           },
-          "event_count": 13
+          "event_count": 14
         }
       ],
-      "prior_analog_count": 13
+      "prior_analog_count": 14
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2021Q1:r1",
@@ -2647,10 +3247,10 @@
           "regime_filters": {
             "headline_level": "high"
           },
-          "event_count": 16
+          "event_count": 18
         }
       ],
-      "prior_analog_count": 16
+      "prior_analog_count": 18
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2021Q4:r1",
@@ -2701,10 +3301,10 @@
           "regime_filters": {
             "headline_level": "high"
           },
-          "event_count": 17
+          "event_count": 19
         }
       ],
-      "prior_analog_count": 17
+      "prior_analog_count": 19
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2022Q2:r1",
@@ -2755,10 +3355,10 @@
           "regime_filters": {
             "headline_level": "middle"
           },
-          "event_count": 14
+          "event_count": 15
         }
       ],
-      "prior_analog_count": 14
+      "prior_analog_count": 15
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2022Q4:r1",
@@ -2839,10 +3439,10 @@
           "regime_filters": {
             "headline_level": "middle"
           },
-          "event_count": 15
+          "event_count": 16
         }
       ],
-      "prior_analog_count": 15
+      "prior_analog_count": 16
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2023Q3:r1",
@@ -2863,10 +3463,10 @@
             "headline_level": "middle",
             "headline_momentum": "mixed"
           },
-          "event_count": 6
+          "event_count": 7
         }
       ],
-      "prior_analog_count": 6
+      "prior_analog_count": 7
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2023Q4:r1",
@@ -2893,10 +3493,10 @@
           "regime_filters": {
             "headline_level": "low"
           },
-          "event_count": 15
+          "event_count": 16
         }
       ],
-      "prior_analog_count": 15
+      "prior_analog_count": 16
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2024Q1:r1",
@@ -2995,10 +3595,10 @@
             "headline_level": "middle",
             "headline_momentum": "mixed"
           },
-          "event_count": 7
+          "event_count": 8
         }
       ],
-      "prior_analog_count": 7
+      "prior_analog_count": 8
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2025Q1:r1",
@@ -3043,10 +3643,10 @@
             "headline_level": "low",
             "headline_momentum": "cooling"
           },
-          "event_count": 11
+          "event_count": 12
         }
       ],
-      "prior_analog_count": 11
+      "prior_analog_count": 12
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2026Q1:r1",

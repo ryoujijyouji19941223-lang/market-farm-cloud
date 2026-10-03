@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T05:19:27.757292+00:00",
+  "generated_at": "2026-10-03T05:26:38.510302+00:00",
   "default_model": "surprise_only_baseline",
   "models": {
     "surprise_only_baseline": {
@@ -11,22 +11,22 @@
       "role": "challenger",
       "status": "RESEARCH_ONLY",
       "description": "Adds point-in-time headline inflation regime similarity with hierarchical fallback.",
-      "paired_prediction_cells": 1456,
+      "paired_prediction_cells": 1424,
       "market_horizon_cells_better": 3,
       "market_horizon_cells_worse": 13,
       "market_horizon_cells_tied": 0,
-      "weighted_brier_difference_vs_default": 0.010887758098177915,
+      "weighted_brier_difference_vs_default": 0.012264641427123493,
       "interpretation": "negative Brier difference is better than default"
     },
     "surprise_magnitude": {
       "role": "challenger",
       "status": "RESEARCH_ONLY",
       "description": "Adds point-in-time surprise magnitude bucket similarity with fallback to the default surprise-only analog set.",
-      "paired_prediction_cells": 1472,
-      "market_horizon_cells_better": 3,
-      "market_horizon_cells_worse": 13,
+      "paired_prediction_cells": 1276,
+      "market_horizon_cells_better": 1,
+      "market_horizon_cells_worse": 15,
       "market_horizon_cells_tied": 0,
-      "weighted_brier_difference_vs_default": 0.015326880692650572,
+      "weighted_brier_difference_vs_default": 0.018987135564626292,
       "interpretation": "negative Brier difference is better than default"
     }
   },
