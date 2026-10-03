@@ -73,6 +73,26 @@ def _series_context(rows: list[dict], indicator: str, cutoff: datetime) -> dict:
             / len(rolling_medians)
         )
 
+    momentum_history = []
+    for end in range(5, len(values)):
+        left = median(values[end - 5:end - 2])
+        right = median(values[end - 2:end + 1])
+        momentum_history.append(right - left)
+
+    momentum_percentile = None
+    if momentum is not None and momentum_history:
+        momentum_percentile = (
+            sum(x <= momentum for x in momentum_history)
+            / len(momentum_history)
+        )
+
+    precision_counts = {}
+    for _, _, item in visible:
+        precision = item.get("availability_precision") or "unknown"
+        precision_counts[precision] = precision_counts.get(precision, 0) + 1
+
+    age_days = (cutoff - latest_time).total_seconds() / 86400.0
+
     return {
         "status": "OK" if len(recent) == 3 else "PARTIAL_HISTORY",
         "observations": len(visible),
@@ -85,6 +105,9 @@ def _series_context(rows: list[dict], indicator: str, cutoff: datetime) -> dict:
         "previous_3m_median": previous_median,
         "three_month_momentum": momentum,
         "expanding_percentile": percentile,
+        "momentum_percentile": momentum_percentile,
+        "latest_age_days": age_days,
+        "availability_precision_counts": precision_counts,
         "unit": latest_row.get("unit"),
         "transformation": latest_row.get("transformation"),
     }
@@ -103,3 +126,58 @@ def inflation_context(
         for name, indicator in SERIES.items()
     })
     return out
+
+
+
+def _third_band(value: float | None, *, labels: tuple[str, str, str]) -> str | None:
+    if value is None:
+        return None
+    if value < 1 / 3:
+        return labels[0]
+    if value < 2 / 3:
+        return labels[1]
+    return labels[2]
+
+
+def regime_signature(context: dict) -> dict:
+    """Mechanical, point-in-time regime tags derived only from prior data.
+
+    These are descriptive lookup keys, not causal or predictive claims.
+    """
+    headline = context.get("headline_cpi", {})
+    core = context.get("core_cpi", {})
+
+    headline_level = _third_band(
+        headline.get("expanding_percentile"),
+        labels=("low", "middle", "high"),
+    )
+    headline_momentum = _third_band(
+        headline.get("momentum_percentile"),
+        labels=("cooling", "mixed", "heating"),
+    )
+    core_level = _third_band(
+        core.get("expanding_percentile"),
+        labels=("low", "middle", "high"),
+    )
+    core_momentum = _third_band(
+        core.get("momentum_percentile"),
+        labels=("cooling", "mixed", "heating"),
+    )
+
+    series_ready = {
+        "headline_cpi": headline.get("status") == "OK",
+        "core_cpi": core.get("status") == "OK",
+    }
+    ready_count = sum(series_ready.values())
+    quality = "FULL" if ready_count == 2 else ("PARTIAL" if ready_count == 1 else "MISSING")
+
+    return {
+        "quality": quality,
+        "series_ready": series_ready,
+        "headline_level": headline_level,
+        "headline_momentum": headline_momentum,
+        "core_level": core_level,
+        "core_momentum": core_momentum,
+        "method": "expanding point-in-time percentile thirds",
+        "causal_claim": None,
+    }
