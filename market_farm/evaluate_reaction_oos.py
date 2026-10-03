@@ -162,10 +162,19 @@ def build_oos_evaluation(
             ),
         }
 
+    def _valid_frozen_prediction(x: dict) -> bool:
+        if int(x.get("policy_epoch", -1)) != epoch:
+            return False
+        if x.get("immutable") is not True:
+            return False
+        expected_version = versions.get(x.get("model"))
+        if expected_version is not None:
+            return x.get("model_specification_version") == expected_version
+        return True
+
     frozen_count = sum(
         1 for x in predictions
-        if int(x.get("policy_epoch", -1)) == epoch
-        and x.get("immutable") is True
+        if _valid_frozen_prediction(x)
     )
 
     return {
