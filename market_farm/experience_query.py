@@ -200,13 +200,27 @@ def release_event_regime_filters(event: dict) -> dict[str, str]:
         .get("regime_signature", {})
     )
     filters = {}
-    # Start with headline CPI only to avoid over-slicing a still-small sample.
-    # Core CPI remains stored on the event and can be added after coverage grows.
     if signature.get("headline_level") is not None:
         filters["headline_level"] = signature["headline_level"]
     if signature.get("headline_momentum") is not None:
         filters["headline_momentum"] = signature["headline_momentum"]
     return filters
+
+
+def _analog_filter_tiers(event: dict) -> list[tuple[str, dict[str, str]]]:
+    strict = release_event_regime_filters(event)
+    tiers: list[tuple[str, dict[str, str]]] = []
+    if (
+        strict.get("headline_level") is not None
+        and strict.get("headline_momentum") is not None
+    ):
+        tiers.append(("LEVEL_AND_MOMENTUM", dict(strict)))
+    if strict.get("headline_level") is not None:
+        tiers.append(("LEVEL_ONLY", {
+            "headline_level": strict["headline_level"],
+        }))
+    tiers.append(("SURPRISE_ONLY", {}))
+    return tiers
 
 
 def analog_report_for_release_event(
@@ -215,39 +229,55 @@ def analog_report_for_release_event(
     events: list[dict] | None = None,
     min_samples: int = 5,
 ) -> dict:
-    """Post-release reaction analogs using only events known before this release.
+    """Post-release reaction analogs using only earlier release events.
 
-    Surprise direction is known at the release timestamp, while all reaction
-    outcomes used for analogs come strictly from earlier releases.
+    Search widens through a fixed hierarchy:
+      1. same headline inflation level + momentum,
+      2. same headline inflation level,
+      3. same surprise/semantic effect only.
+
+    Surprise is known at the release timestamp; reaction outcomes come only
+    from earlier releases.
     """
     cutoff = datetime.fromisoformat(event["actual_available_at"])
     if cutoff.tzinfo is None:
         raise ValueError("event actual_available_at must be timezone-aware")
 
-    regime_filters = release_event_regime_filters(event)
-    if not regime_filters:
-        return {
-            "status": "NO_REGIME_CONTEXT",
-            "release_event_id": event.get("release_event_id"),
-            "as_of": cutoff.isoformat(),
-            "event_count": 0,
-            "minimum_sample": min_samples,
-            "regime_filters": {},
-            "markets": {},
-        }
+    tiers = _analog_filter_tiers(event)
+    attempts = []
+    selected = None
+    last_report = None
 
-    report = analog_report(
-        cutoff=cutoff,
-        indicator=event["indicator"],
-        semantic_effect=event.get("semantic_effect"),
-        surprise_direction=event.get("surprise_direction"),
-        regime_filters=regime_filters,
-        min_samples=min_samples,
-        events=events,
+    for tier, filters in tiers:
+        report = analog_report(
+            cutoff=cutoff,
+            indicator=event["indicator"],
+            semantic_effect=event.get("semantic_effect"),
+            surprise_direction=event.get("surprise_direction"),
+            regime_filters=filters,
+            min_samples=min_samples,
+            events=events,
+        )
+        last_report = report
+        attempts.append({
+            "similarity_tier": tier,
+            "regime_filters": filters,
+            "event_count": report["event_count"],
+        })
+        if report["event_count"] >= min_samples:
+            selected = report
+            selected["status"] = "OK"
+            selected["similarity_tier"] = tier
+            break
+
+    if selected is None:
+        selected = last_report
+        selected["status"] = "INSUFFICIENT_ANALOGS"
+        selected["similarity_tier"] = tiers[-1][0]
+
+    selected["release_event_id"] = event.get("release_event_id")
+    selected["regime_context_missing"] = not bool(
+        release_event_regime_filters(event)
     )
-    report["status"] = (
-        "OK" if report["event_count"] >= min_samples
-        else "INSUFFICIENT_ANALOGS"
-    )
-    report["release_event_id"] = event.get("release_event_id")
-    return report
+    selected["search_attempts"] = attempts
+    return selected
