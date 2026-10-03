@@ -202,9 +202,11 @@ def freeze_predictions() -> dict:
                     )
                     if pid in existing:
                         continue
+                    versions = policy.get("model_specification_versions", {})
                     existing[pid] = {
                         "prediction_id": pid,
                         "policy_epoch": epoch,
+                        "model_specification_version": versions.get(model_name),
                         "frozen_at": datetime.now(timezone.utc).isoformat(),
                         "release_event_id": target["release_event_id"],
                         "actual_available_at": target["actual_available_at"],
