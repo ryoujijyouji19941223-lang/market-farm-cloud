@@ -58,6 +58,7 @@ def similar_events(
     semantic_effect: str | None = None,
     surprise_direction: str | None = None,
     regime_filters: dict[str, str] | None = None,
+    surprise_magnitude_bucket: str | None = None,
     events: list[dict] | None = None,
 ) -> list[dict]:
     rows = visible_events(cutoff, events)
@@ -71,6 +72,14 @@ def similar_events(
             continue
         if not _regime_matches(row, regime_filters):
             continue
+        if surprise_magnitude_bucket is not None:
+            bucket = (
+                row.get("post_release_context", {})
+                .get("surprise_magnitude", {})
+                .get("magnitude_bucket")
+            )
+            if bucket != surprise_magnitude_bucket:
+                continue
         out.append(row)
     return out
 
@@ -158,6 +167,7 @@ def analog_report(
     semantic_effect: str | None = None,
     surprise_direction: str | None = None,
     regime_filters: dict[str, str] | None = None,
+    surprise_magnitude_bucket: str | None = None,
     min_samples: int = 5,
     events: list[dict] | None = None,
 ) -> dict:
@@ -167,6 +177,7 @@ def analog_report(
         semantic_effect=semantic_effect,
         surprise_direction=surprise_direction,
         regime_filters=regime_filters,
+        surprise_magnitude_bucket=surprise_magnitude_bucket,
         events=events,
     )
     markets = {}
@@ -183,6 +194,7 @@ def analog_report(
         "semantic_effect": semantic_effect,
         "surprise_direction": surprise_direction,
         "regime_filters": regime_filters or {},
+        "surprise_magnitude_bucket": surprise_magnitude_bucket,
         "event_count": len(matched),
         "minimum_sample": min_samples,
         "markets": markets,
@@ -281,3 +293,74 @@ def analog_report_for_release_event(
     )
     selected["search_attempts"] = attempts
     return selected
+
+
+
+def release_event_magnitude_bucket(event: dict) -> str | None:
+    return (
+        event.get("post_release_context", {})
+        .get("surprise_magnitude", {})
+        .get("magnitude_bucket")
+    )
+
+
+def analog_report_for_release_event_magnitude(
+    event: dict,
+    *,
+    events: list[dict] | None = None,
+    min_samples: int = 5,
+) -> dict:
+    """Post-release analogs using surprise magnitude, then broad fallback."""
+    cutoff = datetime.fromisoformat(event["actual_available_at"])
+    if cutoff.tzinfo is None:
+        raise ValueError("event actual_available_at must be timezone-aware")
+
+    bucket = release_event_magnitude_bucket(event)
+    attempts = []
+
+    if bucket is not None:
+        report = analog_report(
+            cutoff=cutoff,
+            indicator=event["indicator"],
+            semantic_effect=event.get("semantic_effect"),
+            surprise_direction=event.get("surprise_direction"),
+            regime_filters={},
+            surprise_magnitude_bucket=bucket,
+            min_samples=min_samples,
+            events=events,
+        )
+        attempts.append({
+            "similarity_tier": "SURPRISE_MAGNITUDE",
+            "magnitude_bucket": bucket,
+            "event_count": report["event_count"],
+        })
+        if report["event_count"] >= min_samples:
+            report["status"] = "OK"
+            report["similarity_tier"] = "SURPRISE_MAGNITUDE"
+            report["release_event_id"] = event.get("release_event_id")
+            report["search_attempts"] = attempts
+            return report
+
+    report = analog_report(
+        cutoff=cutoff,
+        indicator=event["indicator"],
+        semantic_effect=event.get("semantic_effect"),
+        surprise_direction=event.get("surprise_direction"),
+        regime_filters={},
+        surprise_magnitude_bucket=None,
+        min_samples=min_samples,
+        events=events,
+    )
+    attempts.append({
+        "similarity_tier": "SURPRISE_ONLY",
+        "magnitude_bucket": None,
+        "event_count": report["event_count"],
+    })
+    report["status"] = (
+        "OK" if report["event_count"] >= min_samples
+        else "INSUFFICIENT_ANALOGS"
+    )
+    report["similarity_tier"] = "SURPRISE_ONLY"
+    report["release_event_id"] = event.get("release_event_id")
+    report["search_attempts"] = attempts
+    return report
