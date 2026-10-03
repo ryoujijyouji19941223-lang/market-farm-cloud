@@ -31,6 +31,11 @@ on:
       - 'market_farm/release_gate.py'
       - 'tests/test_historical_memory.py'
       - 'tests/test_market_experience.py'
+      - 'tests/test_reaction_data.py'
+      - 'tests/test_release_events.py'
+      - 'tests/test_incremental_reactions.py'
+      - 'tests/test_experience_query.py'
+      - 'tests/test_regime_context.py'
       - '.github/workflows/historical-memory.yml'
   workflow_dispatch:
 
