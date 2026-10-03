@@ -1,49 +1,30 @@
 {
-  "generated_at": "2026-10-03T05:05:57.471060+00:00",
+  "generated_at": "2026-10-03T05:07:22.500617+00:00",
   "actual_release_count": 110,
   "eligibility_rule": "exact public release timestamp required",
-  "reaction_rows": 440,
-  "saved": 440,
+  "incremental": true,
+  "pending_reaction_rows": 0,
+  "saved": 0,
   "sources": {
     "usd_jpy": {
-      "status": "ok",
-      "rows": 7745,
-      "first_date": "1996-10-30 00:00:00",
-      "last_date": "2026-09-11 00:00:00",
-      "data_provider": "yfinance_fx_proxy",
-      "fallback": true,
-      "data_provenance_url": "https://finance.yahoo.com/quote/JPY=X/history/",
-      "primary_error": "FRED DEXJPUS failed after 1 attempts for 1996-07-22..2026-09-13: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=8)"
+      "status": "cached",
+      "pending_events": 0,
+      "fetched_rows": 0
     },
     "us10y": {
-      "status": "ok",
-      "rows": 7569,
-      "first_date": "1996-07-22 00:00:00",
-      "last_date": "2026-09-11 00:00:00",
-      "data_provider": "yfinance_tnx_proxy",
-      "fallback": true,
-      "data_provenance_url": "https://finance.yahoo.com/quote/%5ETNX/history/",
-      "primary_error": "FRED DGS10 failed after 1 attempts for 1996-07-22..2026-09-13: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=8)"
+      "status": "cached",
+      "pending_events": 0,
+      "fetched_rows": 0
     },
     "sp500": {
-      "status": "ok",
-      "rows": 7584,
-      "first_date": "1996-07-22 00:00:00",
-      "last_date": "2026-09-11 00:00:00",
-      "data_provider": "yfinance",
-      "fallback": false,
-      "data_provenance_url": "https://finance.yahoo.com/quote/%5EGSPC/history/",
-      "primary_error": null
+      "status": "cached",
+      "pending_events": 0,
+      "fetched_rows": 0
     },
     "gold_futures": {
-      "status": "ok",
-      "rows": 6533,
-      "first_date": "2000-08-30 00:00:00",
-      "last_date": "2026-09-11 00:00:00",
-      "data_provider": "yfinance",
-      "fallback": false,
-      "data_provenance_url": "https://finance.yahoo.com/quote/GC%3DF/history/",
-      "primary_error": null
+      "status": "cached",
+      "pending_events": 0,
+      "fetched_rows": 0
     }
   },
   "reaction_coverage": {
@@ -55,7 +36,11 @@
         "MISSING_MARKET_WINDOW": 1,
         "NO_PRE_RELEASE_BASELINE": 1,
         "OK": 108
-      }
+      },
+      "provider_counts": {
+        "yfinance_fx_proxy": 110
+      },
+      "fallback_count": 110
     },
     "us10y": {
       "total_events": 110,
@@ -63,7 +48,11 @@
       "coverage": 1.0,
       "status_counts": {
         "OK": 110
-      }
+      },
+      "provider_counts": {
+        "yfinance_tnx_proxy": 110
+      },
+      "fallback_count": 110
     },
     "sp500": {
       "total_events": 110,
@@ -71,7 +60,11 @@
       "coverage": 1.0,
       "status_counts": {
         "OK": 110
-      }
+      },
+      "provider_counts": {
+        "yfinance": 110
+      },
+      "fallback_count": 0
     },
     "gold_futures": {
       "total_events": 110,
@@ -80,7 +73,11 @@
       "status_counts": {
         "MISSING_MARKET_WINDOW": 17,
         "OK": 93
-      }
+      },
+      "provider_counts": {
+        "yfinance": 110
+      },
+      "fallback_count": 0
     }
   }
 }
