@@ -200,6 +200,10 @@ def main():
     raw = download(MEDIAN_LEVELS)
     try:
         release_dates = fetch_release_dates()
+        if not release_dates:
+            raise RuntimeError(
+                "Livingston official release-date workbook parsed zero rows"
+            )
     except Exception as exc:
         release_dates = {}
         release_error = repr(exc)
