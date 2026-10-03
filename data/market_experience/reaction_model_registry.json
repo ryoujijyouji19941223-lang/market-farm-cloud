@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-10-03T05:17:12.772136+00:00",
+  "default_model": "surprise_only_baseline",
+  "models": {
+    "surprise_only_baseline": {
+      "role": "default",
+      "status": "ACTIVE_REFERENCE",
+      "description": "Post-release analogs matched by indicator and surprise direction/semantic effect only."
+    },
+    "hierarchical_regime": {
+      "role": "challenger",
+      "status": "RESEARCH_ONLY",
+      "description": "Adds point-in-time headline inflation regime similarity with hierarchical fallback.",
+      "paired_prediction_cells": 1456,
+      "market_horizon_cells_better": 3,
+      "market_horizon_cells_worse": 13,
+      "market_horizon_cells_tied": 0,
+      "weighted_brier_difference_vs_default": 0.010887758098177915,
+      "interpretation": "negative Brier difference is better than default"
+    },
+    "surprise_magnitude": {
+      "role": "challenger",
+      "status": "RESEARCH_ONLY",
+      "description": "Adds point-in-time surprise magnitude bucket similarity with fallback to the default surprise-only analog set.",
+      "paired_prediction_cells": 1472,
+      "market_horizon_cells_better": 3,
+      "market_horizon_cells_worse": 13,
+      "market_horizon_cells_tied": 0,
+      "weighted_brier_difference_vs_default": 0.015326880692650572,
+      "interpretation": "negative Brier difference is better than default"
+    }
+  },
+  "automatic_promotion_enabled": false,
+  "promotion_policy": "Do not promote a challenger using the same historical sample used to design it. Keep challengers research-only until an independently locked out-of-sample evaluation is available.",
+  "live_use_note": "This registry controls research model status only. It does not constitute a trading recommendation."
+}
