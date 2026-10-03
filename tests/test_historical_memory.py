@@ -9,6 +9,8 @@ from market_farm.spf_release_dates import parse_release_dates
 from market_farm.bea_gdp_release_dates import parse_release_timestamp
 from market_farm.bls_cpi_release_dates import parse_schedule
 from market_farm.rtdsm_vintage_dates import conservative_first_visible_dates
+from market_farm.livingston_release_dates import parse_release_dates as parse_livingston_release_dates
+from market_farm.backfill_livingston import target_time
 
 
 def test_spf_suffix_two_is_current_quarter():
@@ -151,3 +153,38 @@ def test_gdp_quarterly_vintage_end_is_safe_visibility_proxy():
     assert q3["available_at"].startswith("1990-12-31T23:59:59")
     assert q2["reaction_eligible"] is False
     assert q2["availability_precision"] == "conservative_vintage_quarter_end"
+
+
+
+def test_livingston_release_date_parser_uses_release_column():
+    frame = pd.DataFrame({
+        "Survey Date": [
+            pd.Timestamp("1990-06-01"),
+            pd.Timestamp("1990-12-01"),
+        ],
+        "Release Date": [
+            pd.Timestamp("1990-06-15"),
+            pd.Timestamp("1990-12-20"),
+        ],
+    })
+    buf = io.BytesIO()
+    with pd.ExcelWriter(buf, engine="openpyxl") as writer:
+        frame.to_excel(writer, sheet_name="Release Dates", index=False, startrow=2)
+
+    rows = parse_livingston_release_dates(buf.getvalue())
+    assert rows["1990-06"]["available_at"].startswith(
+        "1990-06-15T23:59:59"
+    )
+    assert rows["1990-12"]["available_at"].startswith(
+        "1990-12-20T23:59:59"
+    )
+    assert (
+        rows["1990-06"]["availability_precision"]
+        == "official_date_conservative_eod"
+    )
+
+
+def test_livingston_target_time_is_real_month_end():
+    survey = pd.Timestamp("2025-06-01T23:59:59-04:00").to_pydatetime()
+    target = target_time(survey, "12M")
+    assert target.isoformat().startswith("2026-06-30T23:59:59")
