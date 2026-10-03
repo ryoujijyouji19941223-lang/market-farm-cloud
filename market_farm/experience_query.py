@@ -191,3 +191,63 @@ def analog_report(
             "before each event; aggregates are suppressed below the sample threshold."
         ),
     }
+
+
+
+def release_event_regime_filters(event: dict) -> dict[str, str]:
+    signature = (
+        event.get("pre_release_context", {})
+        .get("regime_signature", {})
+    )
+    filters = {}
+    # Start with headline CPI only to avoid over-slicing a still-small sample.
+    # Core CPI remains stored on the event and can be added after coverage grows.
+    if signature.get("headline_level") is not None:
+        filters["headline_level"] = signature["headline_level"]
+    if signature.get("headline_momentum") is not None:
+        filters["headline_momentum"] = signature["headline_momentum"]
+    return filters
+
+
+def analog_report_for_release_event(
+    event: dict,
+    *,
+    events: list[dict] | None = None,
+    min_samples: int = 5,
+) -> dict:
+    """Post-release reaction analogs using only events known before this release.
+
+    Surprise direction is known at the release timestamp, while all reaction
+    outcomes used for analogs come strictly from earlier releases.
+    """
+    cutoff = datetime.fromisoformat(event["actual_available_at"])
+    if cutoff.tzinfo is None:
+        raise ValueError("event actual_available_at must be timezone-aware")
+
+    regime_filters = release_event_regime_filters(event)
+    if not regime_filters:
+        return {
+            "status": "NO_REGIME_CONTEXT",
+            "release_event_id": event.get("release_event_id"),
+            "as_of": cutoff.isoformat(),
+            "event_count": 0,
+            "minimum_sample": min_samples,
+            "regime_filters": {},
+            "markets": {},
+        }
+
+    report = analog_report(
+        cutoff=cutoff,
+        indicator=event["indicator"],
+        semantic_effect=event.get("semantic_effect"),
+        surprise_direction=event.get("surprise_direction"),
+        regime_filters=regime_filters,
+        min_samples=min_samples,
+        events=events,
+    )
+    report["status"] = (
+        "OK" if report["event_count"] >= min_samples
+        else "INSUFFICIENT_ANALOGS"
+    )
+    report["release_event_id"] = event.get("release_event_id")
+    return report
