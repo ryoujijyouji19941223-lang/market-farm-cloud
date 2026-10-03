@@ -1,0 +1,14 @@
+{
+  "policy_epoch": 1,
+  "locked_at": "2026-10-03T05:17:12.720293+00:00",
+  "default_model": "surprise_only_baseline",
+  "challengers": [
+    "hierarchical_regime",
+    "surprise_magnitude"
+  ],
+  "minimum_sample": 5,
+  "primary_metric": "brier_score",
+  "evaluation_rule": "Score only release events whose public actual release timestamp is strictly after locked_at. Models may use only information and completed release events available before each scored release.",
+  "promotion_rule": "No automatic promotion. A new policy epoch must be created explicitly after reviewing genuinely out-of-sample results.",
+  "note": "Epoch 1 was locked after the historical walk-forward research pass. Historical results remain diagnostic and cannot promote a model."
+}
