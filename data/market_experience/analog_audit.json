@@ -1,18 +1,23 @@
 {
-  "generated_at": "2026-10-03T05:07:23.159876+00:00",
+  "generated_at": "2026-10-03T05:09:53.312124+00:00",
   "minimum_sample": 5,
   "release_events": 111,
   "status_counts": {
-    "NO_REGIME_CONTEXT": 11,
-    "INSUFFICIENT_ANALOGS": 66,
-    "OK": 34
+    "INSUFFICIENT_ANALOGS": 10,
+    "OK": 101
   },
-  "usable_event_count": 34,
-  "usable_event_share": 0.3063063063063063,
+  "similarity_tier_counts": {
+    "SURPRISE_ONLY": 41,
+    "LEVEL_ONLY": 36,
+    "LEVEL_AND_MOMENTUM": 34
+  },
+  "missing_regime_context_count": 11,
+  "usable_event_count": 101,
+  "usable_event_share": 0.9099099099099099,
   "prior_analog_count": {
     "min": 0,
-    "max": 15,
-    "mean": 3.4864864864864864
+    "max": 30,
+    "mean": 9.73873873873874
   },
   "rows": [
     {
@@ -21,7 +26,16 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {},
-      "status": "NO_REGIME_CONTEXT",
+      "status": "INSUFFICIENT_ANALOGS",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 0
+        }
+      ],
       "prior_analog_count": 0
     },
     {
@@ -30,7 +44,16 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {},
-      "status": "NO_REGIME_CONTEXT",
+      "status": "INSUFFICIENT_ANALOGS",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 0
+        }
+      ],
       "prior_analog_count": 0
     },
     {
@@ -39,8 +62,17 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {},
-      "status": "NO_REGIME_CONTEXT",
-      "prior_analog_count": 0
+      "status": "INSUFFICIENT_ANALOGS",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 1
+        }
+      ],
+      "prior_analog_count": 1
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:1997Q1:r1",
@@ -48,8 +80,17 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {},
-      "status": "NO_REGIME_CONTEXT",
-      "prior_analog_count": 0
+      "status": "INSUFFICIENT_ANALOGS",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 2
+        }
+      ],
+      "prior_analog_count": 2
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:1997Q2:r1",
@@ -57,8 +98,17 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {},
-      "status": "NO_REGIME_CONTEXT",
-      "prior_analog_count": 0
+      "status": "INSUFFICIENT_ANALOGS",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 1
+        }
+      ],
+      "prior_analog_count": 1
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:1997Q3:r1",
@@ -66,8 +116,17 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {},
-      "status": "NO_REGIME_CONTEXT",
-      "prior_analog_count": 0
+      "status": "INSUFFICIENT_ANALOGS",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 3
+        }
+      ],
+      "prior_analog_count": 3
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:1997Q4:r1",
@@ -75,8 +134,17 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {},
-      "status": "NO_REGIME_CONTEXT",
-      "prior_analog_count": 0
+      "status": "INSUFFICIENT_ANALOGS",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 4
+        }
+      ],
+      "prior_analog_count": 4
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:1998Q1:r1",
@@ -84,8 +152,17 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {},
-      "status": "NO_REGIME_CONTEXT",
-      "prior_analog_count": 0
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 5
+        }
+      ],
+      "prior_analog_count": 5
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:1998Q2:r1",
@@ -93,8 +170,17 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {},
-      "status": "NO_REGIME_CONTEXT",
-      "prior_analog_count": 0
+      "status": "INSUFFICIENT_ANALOGS",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 2
+        }
+      ],
+      "prior_analog_count": 2
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:1998Q3:r1",
@@ -102,8 +188,17 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {},
-      "status": "NO_REGIME_CONTEXT",
-      "prior_analog_count": 0
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 6
+        }
+      ],
+      "prior_analog_count": 6
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:1998Q4:r1",
@@ -111,247 +206,669 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {},
-      "status": "NO_REGIME_CONTEXT",
-      "prior_analog_count": 0
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": true,
+      "search_attempts": [
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 7
+        }
+      ],
+      "prior_analog_count": 7
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:1999Q1:r1",
       "actual_available_at": "1999-04-30T08:30:00-04:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
-      "regime_filters": {
-        "headline_level": "middle"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 0
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 8
+        }
+      ],
+      "prior_analog_count": 8
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:1999Q2:r1",
       "actual_available_at": "1999-07-29T08:30:00-04:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
-      "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "heating"
-      },
+      "regime_filters": {},
       "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 0
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 3
+        }
+      ],
+      "prior_analog_count": 3
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:1999Q3:r1",
       "actual_available_at": "1999-10-28T08:30:00-04:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
-      "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "heating"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 0
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 9
+        }
+      ],
+      "prior_analog_count": 9
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:1999Q4:r1",
       "actual_available_at": "2000-01-28T08:30:00-05:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
-      "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "cooling"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 0
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 10
+        }
+      ],
+      "prior_analog_count": 10
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2000Q1:r1",
       "actual_available_at": "2000-04-27T08:30:00-04:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
-      "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "mixed"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 0
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 11
+        }
+      ],
+      "prior_analog_count": 11
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2000Q2:r1",
       "actual_available_at": "2000-07-28T08:30:00-04:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
-      "regime_filters": {
-        "headline_level": "low",
-        "headline_momentum": "cooling"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 0
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 12
+        }
+      ],
+      "prior_analog_count": 12
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2000Q3:r1",
       "actual_available_at": "2000-10-27T08:30:00-04:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
-      "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "heating"
-      },
+      "regime_filters": {},
       "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 1
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 4
+        }
+      ],
+      "prior_analog_count": 4
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2000Q4:r1",
       "actual_available_at": "2001-01-31T08:30:00-05:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
-      "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "mixed"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 0
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 5
+        }
+      ],
+      "prior_analog_count": 5
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2001Q1:r1",
       "actual_available_at": "2001-04-27T08:30:00-04:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
-      "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "heating"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 1
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 13
+        }
+      ],
+      "prior_analog_count": 13
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2001Q2:r1",
       "actual_available_at": "2001-07-27T08:30:00-04:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
-      "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "mixed"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 0
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 6
+        }
+      ],
+      "prior_analog_count": 6
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2001Q3:r1",
       "actual_available_at": "2001-10-31T08:30:00-05:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
-      "regime_filters": {
-        "headline_level": "low",
-        "headline_momentum": "cooling"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 0
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 7
+        }
+      ],
+      "prior_analog_count": 7
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2001Q4:r1",
       "actual_available_at": "2002-01-30T08:30:00-05:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
-      "regime_filters": {
-        "headline_level": "low",
-        "headline_momentum": "mixed"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 0
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 14
+        }
+      ],
+      "prior_analog_count": 14
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2002Q1:r1",
       "actual_available_at": "2002-04-26T08:30:00-04:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
-      "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "heating"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 0
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "heating"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 15
+        }
+      ],
+      "prior_analog_count": 15
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2002Q2:r1",
       "actual_available_at": "2002-07-31T08:30:00-04:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
-      "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "heating"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 2
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 8
+        }
+      ],
+      "prior_analog_count": 8
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2002Q3:r1",
       "actual_available_at": "2002-10-31T08:30:00-05:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
-      "regime_filters": {
-        "headline_level": "low",
-        "headline_momentum": "cooling"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 1
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 16
+        }
+      ],
+      "prior_analog_count": 16
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2002Q4:r1",
       "actual_available_at": "2003-01-30T08:30:00-05:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
-      "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "mixed"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 1
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 9
+        }
+      ],
+      "prior_analog_count": 9
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2003Q1:r1",
       "actual_available_at": "2003-04-25T23:59:59-04:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
-      "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "heating"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 3
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 10
+        }
+      ],
+      "prior_analog_count": 10
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2003Q2:r1",
       "actual_available_at": "2003-07-31T08:30:00-04:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
-      "regime_filters": {
-        "headline_level": "low",
-        "headline_momentum": "cooling"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 2
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 17
+        }
+      ],
+      "prior_analog_count": 17
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2003Q3:r1",
       "actual_available_at": "2003-10-30T08:30:00-05:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
-      "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "heating"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 1
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "heating"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 18
+        }
+      ],
+      "prior_analog_count": 18
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2003Q4:r1",
       "actual_available_at": "2004-01-30T08:30:00-05:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
-      "regime_filters": {
-        "headline_level": "low",
-        "headline_momentum": "cooling"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 3
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 19
+        }
+      ],
+      "prior_analog_count": 19
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2004Q1:r1",
@@ -359,11 +876,29 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "heating"
+        "headline_level": "high"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 4
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 5
+        }
+      ],
+      "prior_analog_count": 5
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2004Q2:r1",
@@ -375,6 +910,18 @@
         "headline_momentum": "heating"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 5
+        }
+      ],
       "prior_analog_count": 5
     },
     {
@@ -383,47 +930,128 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "low",
-        "headline_momentum": "cooling"
+        "headline_level": "low"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 4
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 5
+        }
+      ],
+      "prior_analog_count": 5
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2004Q4:r1",
       "actual_available_at": "2005-01-28T08:30:00-05:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
-      "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "mixed"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 2
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 13
+        }
+      ],
+      "prior_analog_count": 13
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2005Q1:r1",
       "actual_available_at": "2005-04-28T08:30:00-04:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
-      "regime_filters": {
-        "headline_level": "low",
-        "headline_momentum": "mixed"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 0
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 14
+        }
+      ],
+      "prior_analog_count": 14
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2005Q2:r1",
       "actual_available_at": "2005-07-29T08:30:00-04:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
-      "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "heating"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 2
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 21
+        }
+      ],
+      "prior_analog_count": 21
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2005Q3:r1",
@@ -431,23 +1059,62 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "mixed"
+        "headline_level": "high"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 1
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 7
+        }
+      ],
+      "prior_analog_count": 7
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2005Q4:r1",
       "actual_available_at": "2006-01-27T08:30:00-05:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
-      "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "cooling"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 0
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 16
+        }
+      ],
+      "prior_analog_count": 16
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2006Q1:r1",
@@ -459,6 +1126,18 @@
         "headline_momentum": "cooling"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 5
+        }
+      ],
       "prior_analog_count": 5
     },
     {
@@ -471,6 +1150,18 @@
         "headline_momentum": "heating"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 6
+        }
+      ],
       "prior_analog_count": 6
     },
     {
@@ -478,12 +1169,33 @@
       "actual_available_at": "2006-10-27T08:30:00-04:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
-      "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "cooling"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 1
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 18
+        }
+      ],
+      "prior_analog_count": 18
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2006Q4:r1",
@@ -495,6 +1207,18 @@
         "headline_momentum": "cooling"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 6
+        }
+      ],
       "prior_analog_count": 6
     },
     {
@@ -507,6 +1231,18 @@
         "headline_momentum": "heating"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 7
+        }
+      ],
       "prior_analog_count": 7
     },
     {
@@ -514,12 +1250,33 @@
       "actual_available_at": "2007-07-27T08:30:00-04:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
-      "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "heating"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 3
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 24
+        }
+      ],
+      "prior_analog_count": 24
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2007Q3:r1",
@@ -531,6 +1288,18 @@
         "headline_momentum": "cooling"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 7
+        }
+      ],
       "prior_analog_count": 7
     },
     {
@@ -543,6 +1312,18 @@
         "headline_momentum": "heating"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 8
+        }
+      ],
       "prior_analog_count": 8
     },
     {
@@ -551,11 +1332,29 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "mixed"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 3
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 5
+        }
+      ],
+      "prior_analog_count": 5
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2008Q2:r1",
@@ -563,11 +1362,29 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "mixed"
+        "headline_level": "high"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 1
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 5
+        }
+      ],
+      "prior_analog_count": 5
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2008Q3:r1",
@@ -579,6 +1396,18 @@
         "headline_momentum": "heating"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 9
+        }
+      ],
       "prior_analog_count": 9
     },
     {
@@ -586,12 +1415,33 @@
       "actual_available_at": "2009-01-30T08:30:00-05:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
-      "regime_filters": {
-        "headline_level": "low",
-        "headline_momentum": "cooling"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 1
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 23
+        }
+      ],
+      "prior_analog_count": 23
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2009Q1:r1",
@@ -599,11 +1449,29 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "heating"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 0
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "heating"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 6
+        }
+      ],
+      "prior_analog_count": 6
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2009Q2:r1",
@@ -615,6 +1483,18 @@
         "headline_momentum": "cooling"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 8
+        }
+      ],
       "prior_analog_count": 8
     },
     {
@@ -623,23 +1503,62 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "heating"
+        "headline_level": "high"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 4
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 6
+        }
+      ],
+      "prior_analog_count": 6
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2009Q4:r1",
       "actual_available_at": "2010-01-29T08:30:00-05:00",
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
-      "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "cooling"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 1
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 29
+        }
+      ],
+      "prior_analog_count": 29
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2010Q1:r1",
@@ -647,23 +1566,62 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "mixed"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 0
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 5
+        }
+      ],
+      "prior_analog_count": 5
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2010Q2:r1",
       "actual_available_at": "2010-07-30T08:30:00-04:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
-      "regime_filters": {
-        "headline_level": "low",
-        "headline_momentum": "cooling"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 2
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 25
+        }
+      ],
+      "prior_analog_count": 25
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2010Q3:r1",
@@ -671,11 +1629,29 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "heating"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 1
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "heating"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 7
+        }
+      ],
+      "prior_analog_count": 7
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2010Q4:r1",
@@ -683,11 +1659,29 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "mixed"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 1
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 6
+        }
+      ],
+      "prior_analog_count": 6
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2011Q1:r1",
@@ -699,6 +1693,18 @@
         "headline_momentum": "heating"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 10
+        }
+      ],
       "prior_analog_count": 10
     },
     {
@@ -707,11 +1713,29 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "mixed"
+        "headline_level": "high"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 2
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 13
+        }
+      ],
+      "prior_analog_count": 13
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2011Q3:r1",
@@ -719,11 +1743,29 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "mixed"
+        "headline_level": "high"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 2
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 7
+        }
+      ],
+      "prior_analog_count": 7
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2012Q1:r1",
@@ -731,23 +1773,62 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "heating"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 2
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "heating"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 8
+        }
+      ],
+      "prior_analog_count": 8
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2012Q2:r1",
       "actual_available_at": "2012-07-27T08:30:00-04:00",
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
-      "regime_filters": {
-        "headline_level": "low",
-        "headline_momentum": "cooling"
-      },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 3
+      "regime_filters": {},
+      "status": "OK",
+      "similarity_tier": "SURPRISE_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "SURPRISE_ONLY",
+          "regime_filters": {},
+          "event_count": 30
+        }
+      ],
+      "prior_analog_count": 30
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2012Q3:r1",
@@ -755,11 +1836,29 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "low",
-        "headline_momentum": "mixed"
+        "headline_level": "low"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 1
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 10
+        }
+      ],
+      "prior_analog_count": 10
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2013Q1:r1",
@@ -767,11 +1866,29 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "low",
-        "headline_momentum": "mixed"
+        "headline_level": "low"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 2
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 11
+        }
+      ],
+      "prior_analog_count": 11
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2013Q2:r1",
@@ -779,11 +1896,29 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
-        "headline_level": "low",
-        "headline_momentum": "cooling"
+        "headline_level": "low"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 4
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 5
+        }
+      ],
+      "prior_analog_count": 5
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2013Q3:r1",
@@ -791,11 +1926,29 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "mixed"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 2
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 7
+        }
+      ],
+      "prior_analog_count": 7
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2014Q1:r1",
@@ -803,11 +1956,29 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "mixed"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 4
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 9
+        }
+      ],
+      "prior_analog_count": 9
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2014Q2:r1",
@@ -815,11 +1986,29 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "heating"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 2
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "heating"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 8
+        }
+      ],
+      "prior_analog_count": 8
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2014Q3:r1",
@@ -831,6 +2020,18 @@
         "headline_momentum": "cooling"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 9
+        }
+      ],
       "prior_analog_count": 9
     },
     {
@@ -843,6 +2044,18 @@
         "headline_momentum": "cooling"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 5
+        }
+      ],
       "prior_analog_count": 5
     },
     {
@@ -851,11 +2064,29 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "heating"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 3
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "heating"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 10
+        }
+      ],
+      "prior_analog_count": 10
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2015Q3:r1",
@@ -867,6 +2098,18 @@
         "headline_momentum": "mixed"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 5
+        }
+      ],
       "prior_analog_count": 5
     },
     {
@@ -875,11 +2118,29 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
-        "headline_level": "low",
-        "headline_momentum": "mixed"
+        "headline_level": "low"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 1
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 7
+        }
+      ],
+      "prior_analog_count": 7
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2016Q2:r1",
@@ -887,11 +2148,29 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "heating"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 4
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "heating"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 12
+        }
+      ],
+      "prior_analog_count": 12
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2016Q3:r1",
@@ -899,11 +2178,29 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "mixed"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 3
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 9
+        }
+      ],
+      "prior_analog_count": 9
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2017Q1:r1",
@@ -911,11 +2208,29 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "mixed"
+        "headline_level": "high"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 3
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 14
+        }
+      ],
+      "prior_analog_count": 14
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2017Q2:r1",
@@ -927,6 +2242,18 @@
         "headline_momentum": "cooling"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 6
+        }
+      ],
       "prior_analog_count": 6
     },
     {
@@ -935,11 +2262,29 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "heating"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 3
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "heating"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 10
+        }
+      ],
+      "prior_analog_count": 10
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2018Q1:r1",
@@ -947,11 +2292,29 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "cooling"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 2
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 13
+        }
+      ],
+      "prior_analog_count": 13
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2018Q2:r1",
@@ -959,11 +2322,29 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "mixed"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 4
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 11
+        }
+      ],
+      "prior_analog_count": 11
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2018Q3:r1",
@@ -975,6 +2356,18 @@
         "headline_momentum": "mixed"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 5
+        }
+      ],
       "prior_analog_count": 5
     },
     {
@@ -983,11 +2376,29 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "low",
-        "headline_momentum": "mixed"
+        "headline_level": "low"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 3
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 13
+        }
+      ],
+      "prior_analog_count": 13
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2019Q2:r1",
@@ -999,6 +2410,18 @@
         "headline_momentum": "heating"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 5
+        }
+      ],
       "prior_analog_count": 5
     },
     {
@@ -1011,6 +2434,18 @@
         "headline_momentum": "cooling"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 10
+        }
+      ],
       "prior_analog_count": 10
     },
     {
@@ -1023,6 +2458,18 @@
         "headline_momentum": "heating"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 6
+        }
+      ],
       "prior_analog_count": 6
     },
     {
@@ -1035,6 +2482,18 @@
         "headline_momentum": "mixed"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 6
+        }
+      ],
       "prior_analog_count": 6
     },
     {
@@ -1047,6 +2506,18 @@
         "headline_momentum": "cooling"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 7
+        }
+      ],
       "prior_analog_count": 7
     },
     {
@@ -1059,6 +2530,18 @@
         "headline_momentum": "heating"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 7
+        }
+      ],
       "prior_analog_count": 7
     },
     {
@@ -1067,11 +2550,29 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "cooling"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 2
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 2
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 13
+        }
+      ],
+      "prior_analog_count": 13
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2021Q1:r1",
@@ -1083,6 +2584,18 @@
         "headline_momentum": "heating"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 8
+        }
+      ],
       "prior_analog_count": 8
     },
     {
@@ -1095,6 +2608,18 @@
         "headline_momentum": "heating"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 11
+        }
+      ],
       "prior_analog_count": 11
     },
     {
@@ -1103,11 +2628,29 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "cooling"
+        "headline_level": "high"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 0
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 0
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 16
+        }
+      ],
+      "prior_analog_count": 16
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2021Q4:r1",
@@ -1119,6 +2662,18 @@
         "headline_momentum": "heating"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 9
+        }
+      ],
       "prior_analog_count": 9
     },
     {
@@ -1127,11 +2682,29 @@
       "semantic_effect": "weaker_growth",
       "surprise_direction": "BELOW",
       "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "cooling"
+        "headline_level": "high"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 1
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 1
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 17
+        }
+      ],
+      "prior_analog_count": 17
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2022Q2:r1",
@@ -1143,6 +2716,18 @@
         "headline_momentum": "heating"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 12
+        }
+      ],
       "prior_analog_count": 12
     },
     {
@@ -1151,11 +2736,29 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "cooling"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 3
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 14
+        }
+      ],
+      "prior_analog_count": 14
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2022Q4:r1",
@@ -1167,6 +2770,18 @@
         "headline_momentum": "heating"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 10
+        }
+      ],
       "prior_analog_count": 10
     },
     {
@@ -1175,11 +2790,29 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "mixed"
+        "headline_level": "high"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 3
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 3
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 14
+        }
+      ],
+      "prior_analog_count": 14
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2023Q2:r1",
@@ -1187,11 +2820,29 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "middle",
-        "headline_momentum": "cooling"
+        "headline_level": "middle"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 4
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "middle"
+          },
+          "event_count": 15
+        }
+      ],
+      "prior_analog_count": 15
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2023Q3:r1",
@@ -1203,6 +2854,18 @@
         "headline_momentum": "mixed"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 6
+        }
+      ],
       "prior_analog_count": 6
     },
     {
@@ -1211,11 +2874,29 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "low",
-        "headline_momentum": "mixed"
+        "headline_level": "low"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 4
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "low"
+          },
+          "event_count": 15
+        }
+      ],
+      "prior_analog_count": 15
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2024Q1:r1",
@@ -1227,6 +2908,18 @@
         "headline_momentum": "heating"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 13
+        }
+      ],
       "prior_analog_count": 13
     },
     {
@@ -1235,11 +2928,29 @@
       "semantic_effect": "stronger_growth",
       "surprise_direction": "ABOVE",
       "regime_filters": {
-        "headline_level": "high",
-        "headline_momentum": "mixed"
+        "headline_level": "high"
       },
-      "status": "INSUFFICIENT_ANALOGS",
-      "prior_analog_count": 4
+      "status": "OK",
+      "similarity_tier": "LEVEL_ONLY",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 4
+        },
+        {
+          "similarity_tier": "LEVEL_ONLY",
+          "regime_filters": {
+            "headline_level": "high"
+          },
+          "event_count": 15
+        }
+      ],
+      "prior_analog_count": 15
     },
     {
       "release_event_id": "RTDSM:ROUTPUT:2024Q3:r1",
@@ -1251,6 +2962,18 @@
         "headline_momentum": "cooling"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 5
+        }
+      ],
       "prior_analog_count": 5
     },
     {
@@ -1263,6 +2986,18 @@
         "headline_momentum": "mixed"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 7
+        }
+      ],
       "prior_analog_count": 7
     },
     {
@@ -1275,6 +3010,18 @@
         "headline_momentum": "heating"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 14
+        }
+      ],
       "prior_analog_count": 14
     },
     {
@@ -1287,6 +3034,18 @@
         "headline_momentum": "cooling"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 11
+        }
+      ],
       "prior_analog_count": 11
     },
     {
@@ -1299,6 +3058,18 @@
         "headline_momentum": "mixed"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "middle",
+            "headline_momentum": "mixed"
+          },
+          "event_count": 7
+        }
+      ],
       "prior_analog_count": 7
     },
     {
@@ -1311,6 +3082,18 @@
         "headline_momentum": "heating"
       },
       "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "high",
+            "headline_momentum": "heating"
+          },
+          "event_count": 15
+        }
+      ],
       "prior_analog_count": 15
     }
   ],
