@@ -6,41 +6,36 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .backtest_analog_reactions import (
-    HORIZONS,
-    MARKETS,
-    _actual_value,
-    _broad_report,
-    _score_probability,
-)
-from .experience_query import (
-    analog_report_for_release_event,
-    analog_report_for_release_event_magnitude,
-    load_release_events,
-)
+from .backtest_analog_reactions import _actual_value, _score_probability
+from .experience_query import load_release_events
 
 POLICY = Path("data/market_experience/reaction_oos_policy.json")
+PREDICTIONS = Path("data/market_experience/reaction_oos_predictions.jsonl")
 OUT = Path("data/market_experience/reaction_oos_evaluation.json")
 
 
-def _model_reports(event: dict, events: list[dict], min_samples: int) -> dict:
-    return {
-        "surprise_only_baseline": _broad_report(
-            event, events, min_samples
-        ),
-        "hierarchical_regime": analog_report_for_release_event(
-            event, events=events, min_samples=min_samples
-        ),
-        "surprise_magnitude": analog_report_for_release_event_magnitude(
-            event, events=events, min_samples=min_samples
-        ),
-    }
+def _load_frozen_predictions(epoch: int) -> list[dict]:
+    if not PREDICTIONS.exists():
+        return []
+    out = []
+    for line in PREDICTIONS.read_text(encoding="utf-8").splitlines():
+        try:
+            row = json.loads(line)
+        except Exception:
+            continue
+        if int(row.get("policy_epoch", -1)) != epoch:
+            continue
+        if row.get("immutable") is not True:
+            continue
+        out.append(row)
+    return out
 
 
 def build_oos_evaluation(
     *,
     events: list[dict] | None = None,
     policy: dict | None = None,
+    predictions: list[dict] | None = None,
 ) -> dict:
     events = load_release_events() if events is None else events
     if policy is None:
@@ -48,49 +43,68 @@ def build_oos_evaluation(
             raise RuntimeError("OOS policy lock is missing")
         policy = json.loads(POLICY.read_text(encoding="utf-8"))
 
+    epoch = int(policy["policy_epoch"])
     locked_at = datetime.fromisoformat(policy["locked_at"])
     if locked_at.tzinfo is None:
         raise ValueError("locked_at must be timezone-aware")
-    min_samples = int(policy["minimum_sample"])
 
-    scored_events = []
-    for event in events:
-        released = datetime.fromisoformat(event["actual_available_at"])
-        if released.tzinfo is None:
-            continue
-        if released > locked_at:
-            scored_events.append(event)
+    predictions = (
+        _load_frozen_predictions(epoch)
+        if predictions is None else predictions
+    )
+    event_map = {
+        event.get("release_event_id"): event
+        for event in events
+        if event.get("release_event_id")
+    }
 
     rows = []
-    for event in scored_events:
-        reports = _model_reports(event, events, min_samples)
-        for model_name, report in reports.items():
-            for source_id in MARKETS:
-                for horizon in HORIZONS:
-                    actual = _actual_value(event, source_id, horizon)
-                    if actual is None:
-                        continue
-                    summary = (
-                        report.get("markets", {})
-                        .get(source_id, {})
-                        .get(horizon, {})
-                    )
-                    if summary.get("status") != "OK":
-                        continue
-                    prob = summary.get("positive_share")
-                    if prob is None:
-                        continue
-                    rows.append({
-                        "model": model_name,
-                        "release_event_id": event.get("release_event_id"),
-                        "actual_available_at": event.get("actual_available_at"),
-                        "source_id": source_id,
-                        "horizon": horizon,
-                        "similarity_tier": report.get("similarity_tier"),
-                        "sample_count": summary.get("sample_count"),
-                        "actual_value": actual,
-                        **_score_probability(float(prob), actual),
-                    })
+    scored_event_ids = set()
+    waiting_predictions = 0
+
+    for prediction in predictions:
+        if int(prediction.get("policy_epoch", -1)) != epoch:
+            continue
+        if prediction.get("immutable") is not True:
+            continue
+
+        event = event_map.get(prediction.get("release_event_id"))
+        if event is None:
+            waiting_predictions += 1
+            continue
+
+        released = datetime.fromisoformat(event["actual_available_at"])
+        if released.tzinfo is None or released <= locked_at:
+            continue
+
+        actual = _actual_value(
+            event,
+            prediction["source_id"],
+            prediction["horizon"],
+        )
+        if actual is None:
+            waiting_predictions += 1
+            continue
+
+        prob = prediction.get("prob_positive")
+        if prob is None:
+            continue
+
+        rows.append({
+            "prediction_id": prediction["prediction_id"],
+            "policy_epoch": epoch,
+            "frozen_at": prediction.get("frozen_at"),
+            "model": prediction["model"],
+            "release_event_id": event["release_event_id"],
+            "actual_available_at": event["actual_available_at"],
+            "source_id": prediction["source_id"],
+            "horizon": prediction["horizon"],
+            "similarity_tier": prediction.get("similarity_tier"),
+            "sample_count": prediction.get("sample_count"),
+            "actual_value": actual,
+            **_score_probability(float(prob), actual),
+        })
+        scored_event_ids.add(event["release_event_id"])
 
     by_key = defaultdict(list)
     for row in rows:
@@ -134,34 +148,45 @@ def build_oos_evaluation(
         bc = [x[challenger]["brier"] for x in cells]
         paired[challenger] = {
             "paired_predictions": len(cells),
-            "baseline_mean_brier": (
-                statistics.fmean(b0) if b0 else None
-            ),
-            "challenger_mean_brier": (
-                statistics.fmean(bc) if bc else None
-            ),
+            "baseline_mean_brier": statistics.fmean(b0) if b0 else None,
+            "challenger_mean_brier": statistics.fmean(bc) if bc else None,
             "brier_difference_challenger_minus_baseline": (
                 statistics.fmean(bc) - statistics.fmean(b0)
                 if b0 and bc else None
             ),
         }
 
+    frozen_count = sum(
+        1 for x in predictions
+        if int(x.get("policy_epoch", -1)) == epoch
+        and x.get("immutable") is True
+    )
+
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "policy_epoch": policy["policy_epoch"],
+        "policy_epoch": epoch,
         "locked_at": policy["locked_at"],
         "status": (
-            "ACTIVE" if scored_events else "WAITING_NEW_RELEASES"
+            "ACTIVE"
+            if rows
+            else (
+                "WAITING_OUTCOMES"
+                if frozen_count
+                else "WAITING_NEW_RELEASES"
+            )
         ),
-        "scored_release_events": len(scored_events),
+        "frozen_predictions": frozen_count,
+        "scored_release_events": len(scored_event_ids),
         "rows_scored": len(rows),
+        "waiting_prediction_rows": waiting_predictions,
         "summaries": summaries,
         "paired_comparison": paired,
         "promotion_automatic": False,
+        "scoring_source": "immutable_frozen_prediction_ledger",
         "note": (
-            "Strict out-of-sample ledger. Only release events after the immutable "
-            "epoch lock are scored. Historical pre-lock events may be used as "
-            "prior analog memory but never as OOS score rows."
+            "Strict OOS ledger. Model probabilities are frozen on first ingestion "
+            "of a post-lock release and are never recomputed for scoring. Market "
+            "outcomes are attached later when available."
         ),
     }
 
@@ -176,6 +201,7 @@ def main():
     print(json.dumps({
         "policy_epoch": payload["policy_epoch"],
         "status": payload["status"],
+        "frozen_predictions": payload["frozen_predictions"],
         "scored_release_events": payload["scored_release_events"],
         "rows_scored": payload["rows_scored"],
     }, ensure_ascii=False))
