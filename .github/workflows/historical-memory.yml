@@ -15,6 +15,7 @@ on:
       - 'market_farm/build_market_experiences.py'
       - 'market_farm/build_release_events.py'
       - 'market_farm/build_analog_audit.py'
+      - 'market_farm/backtest_analog_reactions.py'
       - 'market_farm/reaction_*.py'
       - 'market_farm/market_experience.py'
       - 'market_farm/experience_builder.py'
@@ -34,6 +35,7 @@ on:
       - 'tests/test_reaction_data.py'
       - 'tests/test_release_events.py'
       - 'tests/test_incremental_reactions.py'
+      - 'tests/test_analog_backtest.py'
       - 'tests/test_experience_query.py'
       - 'tests/test_regime_context.py'
       - '.github/workflows/historical-memory.yml'
@@ -76,6 +78,7 @@ jobs:
           tests/test_regime_context.py
           tests/test_experience_query.py
           tests/test_incremental_reactions.py
+          tests/test_analog_backtest.py
 
       - name: Backfill expectations
         run: |
@@ -96,6 +99,9 @@ jobs:
 
       - name: Audit walk-forward analog coverage
         run: python -m market_farm.build_analog_audit
+
+      - name: Backtest analog reaction model
+        run: python -m market_farm.backtest_analog_reactions
 
       - name: Build forecast experience cards
         run: python -m market_farm.build_market_experiences
