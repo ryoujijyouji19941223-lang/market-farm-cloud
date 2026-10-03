@@ -158,7 +158,16 @@ def test_release_event_analog_report_cannot_use_itself_or_future():
     assert report["markets"]["sp500"]["1d"]["sample_count"] == 1
 
 
-def test_release_event_analog_report_requires_regime_context():
+def test_release_event_analog_report_marks_missing_regime_and_falls_back():
+    past = {
+        "release_event_id": "past",
+        "actual_available_at": "2007-01-01T08:30:00-05:00",
+        "indicator": "US_REAL_GDP_GROWTH",
+        "semantic_effect": "stronger_growth",
+        "surprise_direction": "ABOVE",
+        "pre_release_context": {"regime_signature": {"quality": "MISSING"}},
+        "reactions": {},
+    }
     event = {
         "release_event_id": "x",
         "actual_available_at": "2008-01-01T08:30:00-05:00",
@@ -167,6 +176,48 @@ def test_release_event_analog_report_requires_regime_context():
         "surprise_direction": "ABOVE",
         "pre_release_context": {"regime_signature": {"quality": "MISSING"}},
     }
-    report = analog_report_for_release_event(event, events=[], min_samples=1)
-    assert report["status"] == "NO_REGIME_CONTEXT"
-    assert report["event_count"] == 0
+    report = analog_report_for_release_event(
+        event, events=[past, event], min_samples=1
+    )
+    assert report["status"] == "OK"
+    assert report["similarity_tier"] == "SURPRISE_ONLY"
+    assert report["regime_context_missing"] is True
+    assert report["event_count"] == 1
+
+
+
+def test_release_event_analog_report_relaxes_regime_hierarchy():
+    def ev(event_id, when, level, momentum):
+        return {
+            "release_event_id": event_id,
+            "actual_available_at": when,
+            "indicator": "US_REAL_GDP_GROWTH",
+            "semantic_effect": "weaker_growth",
+            "surprise_direction": "BELOW",
+            "pre_release_context": {
+                "regime_signature": {
+                    "headline_level": level,
+                    "headline_momentum": momentum,
+                }
+            },
+            "reactions": {},
+        }
+
+    past = [
+        ev("a", "2001-01-01T08:30:00-05:00", "high", "cooling"),
+        ev("b", "2002-01-01T08:30:00-05:00", "high", "mixed"),
+        ev("c", "2003-01-01T08:30:00-05:00", "high", "heating"),
+    ]
+    current = ev(
+        "current", "2004-01-01T08:30:00-05:00", "high", "heating"
+    )
+    report = analog_report_for_release_event(
+        current,
+        events=[*past, current],
+        min_samples=2,
+    )
+    assert report["status"] == "OK"
+    assert report["similarity_tier"] == "LEVEL_ONLY"
+    assert report["event_count"] == 3
+    assert report["search_attempts"][0]["similarity_tier"] == "LEVEL_AND_MOMENTUM"
+    assert report["search_attempts"][0]["event_count"] == 1
