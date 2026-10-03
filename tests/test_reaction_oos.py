@@ -8,23 +8,10 @@ def _event(event_id, when, ret):
         "indicator": "US_REAL_GDP_GROWTH",
         "semantic_effect": "stronger_growth",
         "surprise_direction": "ABOVE",
-        "pre_release_context": {
-            "regime_signature": {
-                "headline_level": "high",
-                "headline_momentum": "heating",
-            }
-        },
-        "post_release_context": {
-            "surprise_magnitude": {
-                "magnitude_bucket": "large",
-            }
-        },
         "reactions": {
             "sp500": {
                 "status": "OK",
                 "preferred_measure": "return",
-                "data_provider": "yfinance",
-                "fallback": False,
                 "horizons": {
                     "1d": {"return": ret},
                     "2d": {"return": ret},
@@ -36,16 +23,24 @@ def _event(event_id, when, ret):
     }
 
 
-def test_oos_scores_only_events_after_lock():
-    events = [
-        _event("a", "2026-01-01T08:30:00-05:00", 0.01),
-        _event("b", "2026-02-01T08:30:00-05:00", 0.02),
-        _event("c", "2026-03-01T08:30:00-05:00", 0.03),
-        _event("d", "2026-04-01T08:30:00-04:00", 0.01),
-        _event("e", "2026-05-01T08:30:00-04:00", 0.02),
-        _event("future", "2026-06-01T08:30:00-04:00", -0.01),
-    ]
-    policy = {
+def _prediction(pid, event_id, model, prob, horizon="1d"):
+    return {
+        "prediction_id": pid,
+        "policy_epoch": 1,
+        "immutable": True,
+        "frozen_at": "2026-05-20T00:00:00+00:00",
+        "release_event_id": event_id,
+        "model": model,
+        "source_id": "sp500",
+        "horizon": horizon,
+        "prob_positive": prob,
+        "sample_count": 5,
+        "similarity_tier": "SURPRISE_ONLY",
+    }
+
+
+def _policy():
+    return {
         "policy_epoch": 1,
         "locked_at": "2026-05-15T00:00:00+00:00",
         "default_model": "surprise_only_baseline",
@@ -53,30 +48,58 @@ def test_oos_scores_only_events_after_lock():
         "minimum_sample": 3,
     }
 
+
+def test_oos_scores_only_frozen_post_lock_predictions():
+    events = [
+        _event("old", "2026-05-01T08:30:00-04:00", 0.01),
+        _event("future", "2026-06-01T08:30:00-04:00", -0.01),
+    ]
+    predictions = [
+        _prediction("p0", "old", "surprise_only_baseline", 0.8),
+        _prediction("p1", "future", "surprise_only_baseline", 0.8),
+        _prediction("p2", "future", "hierarchical_regime", 0.7),
+    ]
+
     payload = module.build_oos_evaluation(
         events=events,
-        policy=policy,
+        policy=_policy(),
+        predictions=predictions,
     )
     assert payload["scored_release_events"] == 1
     assert payload["status"] == "ACTIVE"
-    assert payload["policy_epoch"] == 1
+    assert payload["rows_scored"] == 2
+    assert payload["scoring_source"] == "immutable_frozen_prediction_ledger"
 
 
-def test_oos_waits_when_no_new_release():
+def test_oos_ignores_nonimmutable_prediction():
     events = [
-        _event("a", "2026-01-01T08:30:00-05:00", 0.01),
+        _event("future", "2026-06-01T08:30:00-04:00", 0.01),
     ]
-    policy = {
-        "policy_epoch": 1,
-        "locked_at": "2026-05-15T00:00:00+00:00",
-        "default_model": "surprise_only_baseline",
-        "challengers": ["hierarchical_regime", "surprise_magnitude"],
-        "minimum_sample": 1,
-    }
+    prediction = _prediction(
+        "p1", "future", "surprise_only_baseline", 0.8
+    )
+    prediction["immutable"] = False
+
     payload = module.build_oos_evaluation(
         events=events,
-        policy=policy,
+        policy=_policy(),
+        predictions=[prediction],
     )
-    assert payload["scored_release_events"] == 0
-    assert payload["status"] == "WAITING_NEW_RELEASES"
     assert payload["rows_scored"] == 0
+    assert payload["status"] == "WAITING_NEW_RELEASES"
+
+
+def test_oos_waits_for_outcome_after_prediction_is_frozen():
+    events = []
+    predictions = [
+        _prediction("p1", "future", "surprise_only_baseline", 0.8),
+    ]
+    payload = module.build_oos_evaluation(
+        events=events,
+        policy=_policy(),
+        predictions=predictions,
+    )
+    assert payload["rows_scored"] == 0
+    assert payload["frozen_predictions"] == 1
+    assert payload["waiting_prediction_rows"] == 1
+    assert payload["status"] == "WAITING_OUTCOMES"
