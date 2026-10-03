@@ -9,6 +9,7 @@ from pathlib import Path
 from .experience_query import (
     analog_report,
     analog_report_for_release_event,
+    analog_report_for_release_event_magnitude,
     load_release_events,
 )
 
@@ -77,10 +78,16 @@ def build_backtest(min_samples: int = 5) -> dict:
             events=events,
             min_samples=min_samples,
         )
+        magnitude = analog_report_for_release_event_magnitude(
+            event,
+            events=events,
+            min_samples=min_samples,
+        )
         broad = _broad_report(event, events, min_samples)
 
         for model_name, report in (
             ("hierarchical_regime", hierarchical),
+            ("surprise_magnitude", magnitude),
             ("surprise_only_baseline", broad),
         ):
             for source_id in MARKETS:
@@ -146,30 +153,38 @@ def build_backtest(min_samples: int = 5) -> dict:
         key = (row["release_event_id"], row["source_id"], row["horizon"])
         keyed[key][row["model"]] = row
 
-    paired = [
-        models for models in keyed.values()
-        if {"hierarchical_regime", "surprise_only_baseline"}.issubset(models)
-    ]
-    paired_summary = {}
-    for source_id in MARKETS:
-        for horizon in HORIZONS:
-            subset = [
-                pair for pair in paired
-                if pair["hierarchical_regime"]["source_id"] == source_id
-                and pair["hierarchical_regime"]["horizon"] == horizon
-            ]
-            if not subset:
-                continue
-            hb = [x["hierarchical_regime"]["brier"] for x in subset]
-            bb = [x["surprise_only_baseline"]["brier"] for x in subset]
-            paired_summary[f"{source_id}:{horizon}"] = {
-                "paired_predictions": len(subset),
-                "hierarchical_mean_brier": statistics.fmean(hb),
-                "baseline_mean_brier": statistics.fmean(bb),
-                "brier_difference_hierarchical_minus_baseline": (
-                    statistics.fmean(hb) - statistics.fmean(bb)
-                ),
-            }
+    def paired_summary_for(challenger: str) -> dict:
+        paired = [
+            models for models in keyed.values()
+            if {challenger, "surprise_only_baseline"}.issubset(models)
+        ]
+        out = {}
+        for source_id in MARKETS:
+            for horizon in HORIZONS:
+                subset = [
+                    pair for pair in paired
+                    if pair[challenger]["source_id"] == source_id
+                    and pair[challenger]["horizon"] == horizon
+                ]
+                if not subset:
+                    continue
+                challenger_brier = [x[challenger]["brier"] for x in subset]
+                baseline_brier = [
+                    x["surprise_only_baseline"]["brier"] for x in subset
+                ]
+                out[f"{source_id}:{horizon}"] = {
+                    "paired_predictions": len(subset),
+                    "challenger_mean_brier": statistics.fmean(challenger_brier),
+                    "baseline_mean_brier": statistics.fmean(baseline_brier),
+                    "brier_difference_challenger_minus_baseline": (
+                        statistics.fmean(challenger_brier)
+                        - statistics.fmean(baseline_brier)
+                    ),
+                }
+        return out
+
+    paired_summary = paired_summary_for("hierarchical_regime")
+    magnitude_paired_summary = paired_summary_for("surprise_magnitude")
 
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -178,6 +193,7 @@ def build_backtest(min_samples: int = 5) -> dict:
         "rows_scored": len(rows),
         "summaries": summaries,
         "paired_comparison": paired_summary,
+        "magnitude_paired_comparison": magnitude_paired_summary,
         "note": (
             "Walk-forward post-release reaction backtest. Each prediction uses "
             "only earlier release events. Lower Brier score is better. "
