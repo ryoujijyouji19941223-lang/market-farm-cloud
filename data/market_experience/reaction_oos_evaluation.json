@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-10-03T05:19:27.794663+00:00",
+  "policy_epoch": 1,
+  "locked_at": "2026-10-03T05:17:12.720293+00:00",
+  "status": "WAITING_NEW_RELEASES",
+  "scored_release_events": 0,
+  "rows_scored": 0,
+  "summaries": [],
+  "paired_comparison": {
+    "hierarchical_regime": {
+      "paired_predictions": 0,
+      "baseline_mean_brier": null,
+      "challenger_mean_brier": null,
+      "brier_difference_challenger_minus_baseline": null
+    },
+    "surprise_magnitude": {
+      "paired_predictions": 0,
+      "baseline_mean_brier": null,
+      "challenger_mean_brier": null,
+      "brier_difference_challenger_minus_baseline": null
+    }
+  },
+  "promotion_automatic": false,
+  "note": "Strict out-of-sample ledger. Only release events after the immutable epoch lock are scored. Historical pre-lock events may be used as prior analog memory but never as OOS score rows."
+}
