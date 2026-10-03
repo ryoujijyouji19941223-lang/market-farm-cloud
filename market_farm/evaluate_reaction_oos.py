@@ -62,11 +62,17 @@ def build_oos_evaluation(
     scored_event_ids = set()
     waiting_predictions = 0
 
+    versions = policy.get("model_specification_versions", {})
+
     for prediction in predictions:
         if int(prediction.get("policy_epoch", -1)) != epoch:
             continue
         if prediction.get("immutable") is not True:
             continue
+        expected_version = versions.get(prediction.get("model"))
+        if expected_version is not None:
+            if prediction.get("model_specification_version") != expected_version:
+                continue
 
         event = event_map.get(prediction.get("release_event_id"))
         if event is None:
@@ -183,6 +189,7 @@ def build_oos_evaluation(
         "paired_comparison": paired,
         "promotion_automatic": False,
         "scoring_source": "immutable_frozen_prediction_ledger",
+        "model_specification_versions": versions,
         "note": (
             "Strict OOS ledger. Model probabilities are frozen on first ingestion "
             "of a post-lock release and are never recomputed for scoring. Market "
