@@ -198,11 +198,13 @@ def backfill_one(code: str) -> dict:
         release_dates = fetch_gdp_advance_dates()
     elif code in {"pcpi", "pcpix"}:
         release_dates = fetch_cpi_release_dates()
+
+    if code in {"routput", "pcpi", "pcpix"}:
         try:
             conservative_dates = fetch_conservative_dates(code)
         except Exception:
-            # Exact BLS dates remain preferred. If the fallback itself fails,
-            # leave the row unresolved rather than guessing.
+            # Exact agency release timestamps remain preferred. If the
+            # conservative Philadelphia Fed fallback fails, leave unresolved.
             conservative_dates = {}
 
     for row in rows:
@@ -247,10 +249,10 @@ def main():
         "results": results,
         "errors": errors,
         "note": (
-            "First-release values are archived immediately. GDP uses verified BEA release "
-            "timestamps; CPI/core CPI prefer verified BLS timestamps and otherwise use a "
-            "conservative Philadelphia Fed vintage-month-end visibility proxy. Only exact "
-            "timestamps are eligible for post-release reaction measurement."
+            "First-release values are archived immediately. Exact BEA/BLS timestamps are "
+            "preferred. Where exact timing is unavailable, Philadelphia Fed public vintage "
+            "month/quarter-end proxies deliberately delay visibility. Conservative proxies "
+            "are usable for surprise history but never for same-day market reactions."
         ),
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps({"results": results, "errors": errors}, ensure_ascii=False))
