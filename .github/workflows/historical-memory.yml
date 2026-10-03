@@ -99,5 +99,19 @@ jobs:
             exit 0
           fi
           git commit -m "market farm: refresh historical memory $(date -u +%F)"
-          git pull --rebase origin "${GITHUB_REF_NAME}"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+          # Generated historical-memory files may be updated by an older run
+          # that finishes while this job is working. Rebase the generated
+          # commit onto the latest branch and prefer this run's generated
+          # versions on content conflicts. Retry if another writer lands
+          # between fetch and push.
+          for attempt in 1 2 3; do
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase -X theirs "origin/${GITHUB_REF_NAME}"
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              exit 0
+            fi
+            echo "Push raced with another writer; retrying (${attempt}/3)"
+          done
+          echo "Could not persist historical memory after 3 attempts"
+          exit 1
