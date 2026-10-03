@@ -14,6 +14,7 @@ on:
       - 'market_farm/backfill_reactions.py'
       - 'market_farm/build_market_experiences.py'
       - 'market_farm/build_release_events.py'
+      - 'market_farm/build_analog_audit.py'
       - 'market_farm/reaction_*.py'
       - 'market_farm/market_experience.py'
       - 'market_farm/experience_builder.py'
@@ -86,6 +87,9 @@ jobs:
 
       - name: Build deduplicated release events
         run: python -m market_farm.build_release_events
+
+      - name: Audit walk-forward analog coverage
+        run: python -m market_farm.build_analog_audit
 
       - name: Build forecast experience cards
         run: python -m market_farm.build_market_experiences
