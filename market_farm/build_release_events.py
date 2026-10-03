@@ -10,7 +10,7 @@ from .build_experience_pairs import build_pairs
 from .expectation_memory import load_all_expectations
 from .indicator_semantics import describe_surprise
 from .reaction_archive import load_reactions
-from .regime_context import inflation_context
+from .regime_context import inflation_context, regime_signature
 
 OUT = Path("data/market_experience/release_events.jsonl")
 STATUS = Path("data/market_experience/release_event_status.json")
@@ -70,6 +70,12 @@ def build_release_events() -> list[dict]:
         latest = expectations[latest_pair["expectation_id"]]
         surprise = _surprise(latest, actual)
 
+        inflation = inflation_context(
+            datetime.fromisoformat(actual["available_at"]),
+            all_actual_rows,
+        )
+        signature = regime_signature(inflation)
+
         events.append({
             "release_event_id": actual_id,
             "event_key": actual["event_key"],
@@ -88,10 +94,8 @@ def build_release_events() -> list[dict]:
             "surprise_direction": surprise.get("direction"),
             "semantic_effect": surprise.get("semantic_effect"),
             "pre_release_context": {
-                "inflation": inflation_context(
-                    datetime.fromisoformat(actual["available_at"]),
-                    all_actual_rows,
-                ),
+                "inflation": inflation,
+                "regime_signature": signature,
             },
             "reactions": reaction_map.get(actual_id, {}),
             "causal_claim": None,
@@ -109,10 +113,21 @@ def main():
         + ("\n" if events else ""),
         encoding="utf-8",
     )
+    regime_quality = {}
+    for event in events:
+        quality = (
+            event.get("pre_release_context", {})
+            .get("regime_signature", {})
+            .get("quality", "UNKNOWN")
+        )
+        regime_quality[quality] = regime_quality.get(quality, 0) + 1
+
     STATUS.write_text(json.dumps({
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "release_events": len(events),
         "rule": "one row per actual release; latest eligible public expectation only",
+        "regime_context_quality": regime_quality,
+        "regime_method": "expanding point-in-time percentile thirds",
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"release events={len(events)}")
 
