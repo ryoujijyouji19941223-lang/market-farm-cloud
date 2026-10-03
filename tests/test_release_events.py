@@ -1,4 +1,5 @@
 from market_farm import build_release_events as module
+from market_farm.build_release_events import _attach_surprise_magnitude
 
 
 def test_release_event_uses_latest_public_expectation_once(monkeypatch):
@@ -66,3 +67,26 @@ def test_release_event_uses_latest_public_expectation_once(monkeypatch):
     assert rows[0]["causal_claim"] is None
     assert rows[0]["reactions"]["us10y"]["fallback"] is True
     assert rows[0]["reactions"]["us10y"]["data_provider"] == "yfinance_tnx_proxy"
+
+
+
+def test_surprise_magnitude_uses_only_prior_releases():
+    events = []
+    for i, surprise in enumerate([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], 1):
+        events.append({
+            "release_event_id": f"e{i}",
+            "actual_available_at": f"200{i}-01-01T08:30:00-05:00",
+            "indicator": "US_REAL_GDP_GROWTH",
+            "surprise": surprise,
+        })
+
+    rows = _attach_surprise_magnitude(events)
+    first = rows[0]["post_release_context"]["surprise_magnitude"]
+    last = rows[-1]["post_release_context"]["surprise_magnitude"]
+
+    assert first["prior_sample_count"] == 0
+    assert first["magnitude_bucket"] is None
+    assert last["prior_sample_count"] == 5
+    assert last["status"] == "OK"
+    assert last["expanding_percentile"] == 1.0
+    assert last["magnitude_bucket"] == "large"
