@@ -2,6 +2,7 @@ from datetime import datetime
 
 from market_farm.experience_query import (
     analog_report_for_release_event,
+    analog_report_for_release_event_magnitude,
     reaction_summary,
     similar_events,
 )
@@ -221,3 +222,68 @@ def test_release_event_analog_report_relaxes_regime_hierarchy():
     assert report["event_count"] == 3
     assert report["search_attempts"][0]["similarity_tier"] == "LEVEL_AND_MOMENTUM"
     assert report["search_attempts"][0]["event_count"] == 1
+
+
+
+def test_magnitude_analog_prefers_same_bucket():
+    def ev(event_id, when, bucket):
+        return {
+            "release_event_id": event_id,
+            "actual_available_at": when,
+            "indicator": "US_REAL_GDP_GROWTH",
+            "semantic_effect": "stronger_growth",
+            "surprise_direction": "ABOVE",
+            "post_release_context": {
+                "surprise_magnitude": {"magnitude_bucket": bucket}
+            },
+            "reactions": {},
+        }
+
+    events = [
+        ev("a", "2001-01-01T08:30:00-05:00", "large"),
+        ev("b", "2002-01-01T08:30:00-05:00", "large"),
+        ev("c", "2003-01-01T08:30:00-05:00", "small"),
+    ]
+    current = ev(
+        "current", "2004-01-01T08:30:00-05:00", "large"
+    )
+    report = analog_report_for_release_event_magnitude(
+        current,
+        events=[*events, current],
+        min_samples=2,
+    )
+    assert report["status"] == "OK"
+    assert report["similarity_tier"] == "SURPRISE_MAGNITUDE"
+    assert report["event_count"] == 2
+
+
+def test_magnitude_analog_falls_back_when_bucket_sample_is_small():
+    def ev(event_id, when, bucket):
+        return {
+            "release_event_id": event_id,
+            "actual_available_at": when,
+            "indicator": "US_REAL_GDP_GROWTH",
+            "semantic_effect": "weaker_growth",
+            "surprise_direction": "BELOW",
+            "post_release_context": {
+                "surprise_magnitude": {"magnitude_bucket": bucket}
+            },
+            "reactions": {},
+        }
+
+    events = [
+        ev("a", "2001-01-01T08:30:00-05:00", "large"),
+        ev("b", "2002-01-01T08:30:00-05:00", "small"),
+        ev("c", "2003-01-01T08:30:00-05:00", "small"),
+    ]
+    current = ev(
+        "current", "2004-01-01T08:30:00-05:00", "large"
+    )
+    report = analog_report_for_release_event_magnitude(
+        current,
+        events=[*events, current],
+        min_samples=2,
+    )
+    assert report["status"] == "OK"
+    assert report["similarity_tier"] == "SURPRISE_ONLY"
+    assert report["event_count"] == 3
