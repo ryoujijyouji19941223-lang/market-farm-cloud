@@ -8,17 +8,19 @@ BACKTEST = Path("data/market_experience/analog_backtest.json")
 OUT = Path("data/market_experience/reaction_model_registry.json")
 
 
-def build_registry(backtest: dict) -> dict:
-    paired = backtest.get("paired_comparison", {})
+def _comparison_metrics(comparison: dict) -> dict:
     weighted_n = 0
     weighted_diff = 0.0
     better = 0
     worse = 0
     ties = 0
 
-    for row in paired.values():
+    for row in comparison.values():
         n = int(row.get("paired_predictions", 0))
-        diff = row.get("brier_difference_hierarchical_minus_baseline")
+        diff = row.get("brier_difference_challenger_minus_baseline")
+        if diff is None:
+            # Backward compatibility with the first regime backtest format.
+            diff = row.get("brier_difference_hierarchical_minus_baseline")
         if diff is None or n <= 0:
             continue
         diff = float(diff)
@@ -31,9 +33,23 @@ def build_registry(backtest: dict) -> dict:
         else:
             ties += 1
 
-    mean_diff = (
-        weighted_diff / weighted_n
-        if weighted_n else None
+    return {
+        "paired_prediction_cells": weighted_n,
+        "market_horizon_cells_better": better,
+        "market_horizon_cells_worse": worse,
+        "market_horizon_cells_tied": ties,
+        "weighted_brier_difference_vs_default": (
+            weighted_diff / weighted_n if weighted_n else None
+        ),
+    }
+
+
+def build_registry(backtest: dict) -> dict:
+    regime_metrics = _comparison_metrics(
+        backtest.get("paired_comparison", {})
+    )
+    magnitude_metrics = _comparison_metrics(
+        backtest.get("magnitude_paired_comparison", {})
     )
 
     return {
@@ -55,13 +71,21 @@ def build_registry(backtest: dict) -> dict:
                     "Adds point-in-time headline inflation regime similarity "
                     "with hierarchical fallback."
                 ),
-                "paired_prediction_cells": weighted_n,
-                "market_horizon_cells_better": better,
-                "market_horizon_cells_worse": worse,
-                "market_horizon_cells_tied": ties,
-                "weighted_brier_difference_vs_default": mean_diff,
+                **regime_metrics,
                 "interpretation": (
-                    "negative is better than default; positive is worse"
+                    "negative Brier difference is better than default"
+                ),
+            },
+            "surprise_magnitude": {
+                "role": "challenger",
+                "status": "RESEARCH_ONLY",
+                "description": (
+                    "Adds point-in-time surprise magnitude bucket similarity "
+                    "with fallback to the default surprise-only analog set."
+                ),
+                **magnitude_metrics,
+                "interpretation": (
+                    "negative Brier difference is better than default"
                 ),
             },
         },
@@ -90,11 +114,14 @@ def main():
     )
     print(json.dumps({
         "default_model": registry["default_model"],
-        "challenger_status": (
-            registry["models"]["hierarchical_regime"]["status"]
-        ),
-        "weighted_brier_difference": (
+        "regime_status": registry["models"]["hierarchical_regime"]["status"],
+        "magnitude_status": registry["models"]["surprise_magnitude"]["status"],
+        "regime_brier_difference": (
             registry["models"]["hierarchical_regime"]
+            ["weighted_brier_difference_vs_default"]
+        ),
+        "magnitude_brier_difference": (
+            registry["models"]["surprise_magnitude"]
             ["weighted_brier_difference_vs_default"]
         ),
     }, ensure_ascii=False))
