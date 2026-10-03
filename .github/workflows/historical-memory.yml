@@ -18,6 +18,7 @@ on:
       - 'market_farm/backtest_analog_reactions.py'
       - 'market_farm/build_reaction_model_registry.py'
       - 'market_farm/evaluate_reaction_oos.py'
+      - 'market_farm/freeze_reaction_oos_predictions.py'
       - 'market_farm/reaction_*.py'
       - 'market_farm/market_experience.py'
       - 'market_farm/experience_builder.py'
@@ -96,6 +97,9 @@ jobs:
 
       - name: Build expectation-actual pairs
         run: python -m market_farm.build_experience_pairs
+
+      - name: Freeze post-lock OOS predictions
+        run: python -m market_farm.freeze_reaction_oos_predictions
 
       - name: Measure exact-timestamp market reactions
         run: python -m market_farm.backfill_reactions
