@@ -17,6 +17,7 @@ on:
       - 'market_farm/build_analog_audit.py'
       - 'market_farm/backtest_analog_reactions.py'
       - 'market_farm/build_reaction_model_registry.py'
+      - 'market_farm/evaluate_reaction_oos.py'
       - 'market_farm/reaction_*.py'
       - 'market_farm/market_experience.py'
       - 'market_farm/experience_builder.py'
@@ -38,6 +39,7 @@ on:
       - 'tests/test_incremental_reactions.py'
       - 'tests/test_analog_backtest.py'
       - 'tests/test_reaction_model_registry.py'
+      - 'tests/test_reaction_oos.py'
       - 'tests/test_experience_query.py'
       - 'tests/test_regime_context.py'
       - '.github/workflows/historical-memory.yml'
@@ -82,6 +84,7 @@ jobs:
           tests/test_incremental_reactions.py
           tests/test_analog_backtest.py
           tests/test_reaction_model_registry.py
+          tests/test_reaction_oos.py
 
       - name: Backfill expectations
         run: |
@@ -108,6 +111,9 @@ jobs:
 
       - name: Build reaction model registry
         run: python -m market_farm.build_reaction_model_registry
+
+      - name: Evaluate locked out-of-sample reactions
+        run: python -m market_farm.evaluate_reaction_oos
 
       - name: Build forecast experience cards
         run: python -m market_farm.build_market_experiences
