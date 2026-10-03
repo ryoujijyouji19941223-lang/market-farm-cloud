@@ -103,3 +103,25 @@ def test_oos_waits_for_outcome_after_prediction_is_frozen():
     assert payload["frozen_predictions"] == 1
     assert payload["waiting_prediction_rows"] == 1
     assert payload["status"] == "WAITING_OUTCOMES"
+
+
+def test_oos_rejects_mismatched_model_specification():
+    events = [
+        _event("future", "2026-06-01T08:30:00-04:00", 0.01),
+    ]
+    policy = _policy()
+    policy["model_specification_versions"] = {
+        "surprise_only_baseline": "surprise_only_baseline/v1",
+    }
+    prediction = _prediction(
+        "p1", "future", "surprise_only_baseline", 0.8
+    )
+    prediction["model_specification_version"] = "surprise_only_baseline/v0"
+
+    payload = module.build_oos_evaluation(
+        events=events,
+        policy=policy,
+        predictions=[prediction],
+    )
+    assert payload["rows_scored"] == 0
+    assert payload["status"] == "WAITING_NEW_RELEASES"
