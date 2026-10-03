@@ -1,6 +1,10 @@
 from datetime import datetime
 
-from market_farm.experience_query import reaction_summary, similar_events
+from market_farm.experience_query import (
+    analog_report_for_release_event,
+    reaction_summary,
+    similar_events,
+)
 
 
 EVENTS = [
@@ -104,3 +108,65 @@ def test_small_analog_sample_is_suppressed():
     assert summary["status"] == "INSUFFICIENT_SAMPLE"
     assert summary["mean"] is None
     assert summary["median"] is None
+
+
+
+def test_release_event_analog_report_cannot_use_itself_or_future():
+    base = {
+        "indicator": "US_REAL_GDP_GROWTH",
+        "semantic_effect": "stronger_growth",
+        "surprise_direction": "ABOVE",
+        "pre_release_context": {
+            "regime_signature": {
+                "headline_level": "high",
+                "headline_momentum": "heating",
+            }
+        },
+        "reactions": {
+            "sp500": {
+                "status": "OK",
+                "preferred_measure": "return",
+                "data_provider": "yfinance",
+                "fallback": False,
+                "horizons": {"1d": {"return": 0.01}},
+            }
+        },
+    }
+    past = {
+        **base,
+        "release_event_id": "past",
+        "actual_available_at": "2007-01-01T08:30:00-05:00",
+    }
+    current = {
+        **base,
+        "release_event_id": "current",
+        "actual_available_at": "2008-01-01T08:30:00-05:00",
+    }
+    future = {
+        **base,
+        "release_event_id": "future",
+        "actual_available_at": "2009-01-01T08:30:00-05:00",
+    }
+
+    report = analog_report_for_release_event(
+        current,
+        events=[past, current, future],
+        min_samples=1,
+    )
+    assert report["status"] == "OK"
+    assert report["event_count"] == 1
+    assert report["markets"]["sp500"]["1d"]["sample_count"] == 1
+
+
+def test_release_event_analog_report_requires_regime_context():
+    event = {
+        "release_event_id": "x",
+        "actual_available_at": "2008-01-01T08:30:00-05:00",
+        "indicator": "US_REAL_GDP_GROWTH",
+        "semantic_effect": "stronger_growth",
+        "surprise_direction": "ABOVE",
+        "pre_release_context": {"regime_signature": {"quality": "MISSING"}},
+    }
+    report = analog_report_for_release_event(event, events=[], min_samples=1)
+    assert report["status"] == "NO_REGIME_CONTEXT"
+    assert report["event_count"] == 0
