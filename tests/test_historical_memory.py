@@ -116,6 +116,7 @@ def test_cpi_vintage_month_end_is_safe_visibility_proxy():
     rows = conservative_first_visible_dates(
         buf.getvalue(),
         source_url="https://example.test/pcpi-vintages.xlsx",
+        frequency="monthly",
     )
 
     oct_row = rows["1998M10"]
@@ -124,3 +125,29 @@ def test_cpi_vintage_month_end_is_safe_visibility_proxy():
     assert nov_row["available_at"].startswith("1998-12-31T23:59:59")
     assert oct_row["reaction_eligible"] is False
     assert oct_row["availability_precision"] == "conservative_vintage_month_end"
+
+
+
+def test_gdp_quarterly_vintage_end_is_safe_visibility_proxy():
+    frame = pd.DataFrame({
+        "Date": ["1990:Q2", "1990:Q3"],
+        "ROUTPUT90Q3": [5000.0, None],
+        "ROUTPUT90Q4": [5000.0, 5025.0],
+        "ROUTPUT91Q1": [5000.0, 5025.0],
+    })
+    buf = io.BytesIO()
+    with pd.ExcelWriter(buf, engine="openpyxl") as writer:
+        frame.to_excel(writer, sheet_name="DATA", index=False, startrow=2)
+
+    rows = conservative_first_visible_dates(
+        buf.getvalue(),
+        source_url="https://example.test/routput-vintages.xlsx",
+        frequency="quarterly",
+    )
+
+    q2 = rows["1990Q2"]
+    q3 = rows["1990Q3"]
+    assert q2["available_at"].startswith("1990-09-30T23:59:59")
+    assert q3["available_at"].startswith("1990-12-31T23:59:59")
+    assert q2["reaction_eligible"] is False
+    assert q2["availability_precision"] == "conservative_vintage_quarter_end"
