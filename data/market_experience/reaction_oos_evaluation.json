@@ -1,10 +1,12 @@
 {
-  "generated_at": "2026-10-03T05:31:04.702187+00:00",
+  "generated_at": "2026-10-03T14:47:03.949287+00:00",
   "policy_epoch": 1,
   "locked_at": "2026-10-03T05:17:12.720293+00:00",
   "status": "WAITING_NEW_RELEASES",
+  "frozen_predictions": 0,
   "scored_release_events": 0,
   "rows_scored": 0,
+  "waiting_prediction_rows": 0,
   "summaries": [],
   "paired_comparison": {
     "hierarchical_regime": {
@@ -21,5 +23,6 @@
     }
   },
   "promotion_automatic": false,
-  "note": "Strict out-of-sample ledger. Only release events after the immutable epoch lock are scored. Historical pre-lock events may be used as prior analog memory but never as OOS score rows."
+  "scoring_source": "immutable_frozen_prediction_ledger",
+  "note": "Strict OOS ledger. Model probabilities are frozen on first ingestion of a post-lock release and are never recomputed for scoring. Market outcomes are attached later when available."
 }
