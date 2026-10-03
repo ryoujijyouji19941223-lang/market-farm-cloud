@@ -17,6 +17,7 @@ on:
       - 'market_farm/reaction_*.py'
       - 'market_farm/market_experience.py'
       - 'market_farm/experience_builder.py'
+      - 'market_farm/experience_query.py'
       - 'market_farm/indicator_semantics.py'
       - 'market_farm/event_keys.py'
       - 'market_farm/actual_archive.py'
@@ -67,6 +68,7 @@ jobs:
           tests/test_release_events.py
           tests/test_reaction_data.py
           tests/test_regime_context.py
+          tests/test_experience_query.py
 
       - name: Backfill expectations
         run: |
