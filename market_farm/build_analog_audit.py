@@ -16,6 +16,8 @@ OUT = Path("data/market_experience/analog_audit.json")
 def build_audit(min_samples: int = 5) -> dict:
     events = load_release_events()
     status_counts = Counter()
+    tier_counts = Counter()
+    missing_regime_count = 0
     sample_counts = []
     rows = []
 
@@ -26,7 +28,11 @@ def build_audit(min_samples: int = 5) -> dict:
             min_samples=min_samples,
         )
         status = report["status"]
+        tier = report.get("similarity_tier", "UNKNOWN")
         status_counts[status] += 1
+        tier_counts[tier] += 1
+        if report.get("regime_context_missing"):
+            missing_regime_count += 1
         sample_counts.append(int(report.get("event_count", 0)))
         rows.append({
             "release_event_id": event.get("release_event_id"),
@@ -35,6 +41,9 @@ def build_audit(min_samples: int = 5) -> dict:
             "surprise_direction": event.get("surprise_direction"),
             "regime_filters": report.get("regime_filters", {}),
             "status": status,
+            "similarity_tier": tier,
+            "regime_context_missing": bool(report.get("regime_context_missing")),
+            "search_attempts": report.get("search_attempts", []),
             "prior_analog_count": report.get("event_count", 0),
         })
 
@@ -45,6 +54,8 @@ def build_audit(min_samples: int = 5) -> dict:
         "minimum_sample": min_samples,
         "release_events": total,
         "status_counts": dict(status_counts),
+        "similarity_tier_counts": dict(tier_counts),
+        "missing_regime_context_count": missing_regime_count,
         "usable_event_count": usable,
         "usable_event_share": (usable / total) if total else None,
         "prior_analog_count": {
