@@ -32,6 +32,50 @@ def _surprise(expectation: dict, actual: dict) -> dict:
     return describe_surprise(actual["indicator"], base)
 
 
+def _attach_surprise_magnitude(events: list[dict]) -> list[dict]:
+    history = defaultdict(list)
+    ordered = sorted(
+        events,
+        key=lambda x: (x["actual_available_at"], x["release_event_id"]),
+    )
+
+    for event in ordered:
+        indicator = event.get("indicator")
+        raw_surprise = event.get("surprise")
+        prior = history[indicator]
+        context = {
+            "status": "NO_SURPRISE" if raw_surprise is None else "PARTIAL_HISTORY",
+            "prior_sample_count": len(prior),
+            "absolute_surprise": None,
+            "expanding_percentile": None,
+            "magnitude_bucket": None,
+            "method": "absolute surprise rank versus strictly earlier releases",
+        }
+
+        if raw_surprise is not None:
+            magnitude = abs(float(raw_surprise))
+            context["absolute_surprise"] = magnitude
+            if prior:
+                percentile = sum(x <= magnitude for x in prior) / len(prior)
+                context["expanding_percentile"] = percentile
+                if percentile < 1 / 3:
+                    bucket = "small"
+                elif percentile < 2 / 3:
+                    bucket = "middle"
+                else:
+                    bucket = "large"
+                context["magnitude_bucket"] = bucket
+            if len(prior) >= 5:
+                context["status"] = "OK"
+            prior.append(magnitude)
+
+        event.setdefault("post_release_context", {})[
+            "surprise_magnitude"
+        ] = context
+
+    return ordered
+
+
 def build_release_events() -> list[dict]:
     expectations = {x["expectation_id"]: x for x in load_all_expectations()}
     all_actual_rows = load_rows()
@@ -102,7 +146,7 @@ def build_release_events() -> list[dict]:
             "reaction_note": "Observed after the release; not attributed solely to this release.",
         })
 
-    return sorted(events, key=lambda x: (x["actual_available_at"], x["release_event_id"]))
+    return _attach_surprise_magnitude(events)
 
 
 def main():
