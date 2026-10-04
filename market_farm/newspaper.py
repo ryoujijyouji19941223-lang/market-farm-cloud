@@ -264,6 +264,20 @@ def render_newspaper(cfg, regime, results, out="docs/newspaper.html"):
   <ul>{watches}</ul>
 </article>""")
 
+    market_dates = sorted({
+        str(r.get("market_date"))
+        for r in valid
+        if r.get("market_date")
+    })
+    market_date_label = (
+        market_dates[0]
+        if len(market_dates) == 1
+        else (
+            f"{market_dates[0]}〜{market_dates[-1]}"
+            if market_dates else "不明"
+        )
+    )
+
     html = f"""<!doctype html>
 <html lang='ja'>
 <head>
@@ -305,6 +319,7 @@ nav a{{font-weight:700}}
 <div class='mast'>
   <h1>市場農場 朝刊</h1>
   <p>{now.strftime('%Y年%m月%d日')}｜初心者向け・読むだけ版</p>
+  <p class='muted'>生成 {now.strftime('%Y-%m-%d %H:%M %Z')}｜表示価格日 {market_date_label}</p>
 </div>
 
 <section class='paper'>
@@ -352,10 +367,17 @@ nav a{{font-weight:700}}
 
 def main():
     from .engine import load_config, analyze
+    from .morning_brief import build_morning_brief
     cfg = load_config()
     regime, results = analyze(cfg)
     render_newspaper(cfg, regime, results)
-    print("newspaper generated")
+    build_morning_brief(
+        cfg,
+        regime,
+        results,
+        session="newspaper",
+    )
+    print("newspaper and morning brief generated")
 
 
 if __name__ == "__main__":
