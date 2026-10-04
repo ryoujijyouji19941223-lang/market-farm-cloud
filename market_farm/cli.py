@@ -8,6 +8,7 @@ from .dashboard import render
 from .ledger import create_live_cards, settle_live_cards
 from .newspaper import render_newspaper
 from .research_report import build_report
+from .morning_brief import build_morning_brief
 
 
 def main():
@@ -31,6 +32,13 @@ def main():
     render(cfg, regime, results, state)
     render_newspaper(cfg, regime, results)
     build_report()
+    build_morning_brief(
+        cfg,
+        regime,
+        results,
+        state=state,
+        session=args.session,
+    )
 
     for r in results:
         print(r["name"], r.get("action"), round(r.get("probability_up", .5) * 100, 1))
