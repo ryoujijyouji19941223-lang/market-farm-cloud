@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - 'market_farm/newspaper.py'
+      - 'market_farm/morning_brief.py'
       - 'market_farm/news.py'
       - 'market_farm/data_source.py'
       - 'market_farm/sensors.py'
@@ -45,7 +46,7 @@ jobs:
         run: |
           git config user.name "market-farm-bot"
           git config user.email "market-farm-bot@users.noreply.github.com"
-          git add docs/newspaper.html
+          git add docs/newspaper.html data/morning_brief.json
           if git diff --cached --quiet; then
             echo "No newspaper changes to save"
             exit 0
