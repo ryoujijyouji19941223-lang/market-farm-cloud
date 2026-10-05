@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T07:33:22.228435+00:00",
+  "generated_at": "2026-10-05T01:52:25.954627+00:00",
   "replay_months": [
     "2025-04",
     "2025-05",
@@ -21,7 +21,7 @@
   ],
   "replay_month_count": 17,
   "replay_rows": 12480,
-  "live_settled_rows": 108,
+  "live_settled_rows": 120,
   "note": "Diagnostics only. These findings must not auto-change the production model.",
   "by_asset": {
     "1736.T": {
@@ -2141,160 +2141,162 @@
     "1736.T": {
       "name": "オーテック",
       "summary": {
-        "observations": 8,
-        "signals": 8,
+        "observations": 10,
+        "signals": 10,
         "flat_forecasts": 0,
         "abstained": 0,
         "coverage": 1.0,
         "directional_coverage": 1.0,
         "correct": 5,
-        "accuracy": 0.625,
-        "all_forecast_accuracy": 0.625
+        "accuracy": 0.5,
+        "all_forecast_accuracy": 0.5
       },
       "result_types": {
         "一致": 5,
-        "動くと読んだが横ばい": 2,
-        "方向を逆に読んだ": 1
+        "動くと読んだが横ばい": 3,
+        "方向を逆に読んだ": 2
       }
     },
     "285A.T": {
       "name": "キオクシア",
       "summary": {
-        "observations": 9,
-        "signals": 5,
+        "observations": 10,
+        "signals": 6,
         "flat_forecasts": 4,
         "abstained": 0,
         "coverage": 1.0,
-        "directional_coverage": 0.5555555555555556,
-        "correct": 2,
-        "accuracy": 0.4,
-        "all_forecast_accuracy": 0.2222222222222222
+        "directional_coverage": 0.6,
+        "correct": 3,
+        "accuracy": 0.5,
+        "all_forecast_accuracy": 0.3
       },
       "result_types": {
         "動きを見逃した": 4,
         "方向を逆に読んだ": 3,
-        "一致": 2
+        "一致": 3
       }
     },
     "3656.T": {
       "name": "KLab",
       "summary": {
-        "observations": 9,
+        "observations": 10,
         "signals": 2,
         "flat_forecasts": 6,
-        "abstained": 1,
-        "coverage": 0.8888888888888888,
-        "directional_coverage": 0.2222222222222222,
+        "abstained": 2,
+        "coverage": 0.8,
+        "directional_coverage": 0.2,
         "correct": 1,
         "accuracy": 0.5,
         "all_forecast_accuracy": 0.5
       },
       "result_types": {
         "一致": 4,
-        "動きを見逃した": 4,
+        "動きを見逃した": 5,
         "方向を逆に読んだ": 1
       }
     },
     "5401.T": {
       "name": "日本製鉄",
       "summary": {
-        "observations": 9,
-        "signals": 3,
+        "observations": 10,
+        "signals": 4,
         "flat_forecasts": 6,
         "abstained": 0,
         "coverage": 1.0,
-        "directional_coverage": 0.3333333333333333,
-        "correct": 2,
-        "accuracy": 0.6666666666666666,
-        "all_forecast_accuracy": 0.2222222222222222
+        "directional_coverage": 0.4,
+        "correct": 3,
+        "accuracy": 0.75,
+        "all_forecast_accuracy": 0.3
       },
       "result_types": {
         "動きを見逃した": 6,
-        "一致": 2,
+        "一致": 3,
         "方向を逆に読んだ": 1
       }
     },
     "6522.T": {
       "name": "アスタリスク",
       "summary": {
-        "observations": 9,
-        "signals": 9,
+        "observations": 10,
+        "signals": 10,
         "flat_forecasts": 0,
         "abstained": 0,
         "coverage": 1.0,
         "directional_coverage": 1.0,
         "correct": 4,
-        "accuracy": 0.4444444444444444,
-        "all_forecast_accuracy": 0.4444444444444444
+        "accuracy": 0.4,
+        "all_forecast_accuracy": 0.4
       },
       "result_types": {
-        "方向を逆に読んだ": 5,
+        "方向を逆に読んだ": 6,
         "一致": 4
       }
     },
     "7974.T": {
       "name": "任天堂",
       "summary": {
-        "observations": 9,
-        "signals": 9,
+        "observations": 10,
+        "signals": 10,
         "flat_forecasts": 0,
         "abstained": 0,
         "coverage": 1.0,
         "directional_coverage": 1.0,
         "correct": 8,
-        "accuracy": 0.8888888888888888,
-        "all_forecast_accuracy": 0.8888888888888888
+        "accuracy": 0.8,
+        "all_forecast_accuracy": 0.8
       },
       "result_types": {
         "一致": 8,
-        "方向を逆に読んだ": 1
+        "方向を逆に読んだ": 1,
+        "動くと読んだが横ばい": 1
       }
     },
     "8136.T": {
       "name": "サンリオ",
       "summary": {
-        "observations": 9,
-        "signals": 5,
+        "observations": 10,
+        "signals": 6,
         "flat_forecasts": 4,
         "abstained": 0,
         "coverage": 1.0,
-        "directional_coverage": 0.5555555555555556,
+        "directional_coverage": 0.6,
         "correct": 2,
-        "accuracy": 0.4,
-        "all_forecast_accuracy": 0.2222222222222222
+        "accuracy": 0.3333333333333333,
+        "all_forecast_accuracy": 0.2
       },
       "result_types": {
         "動きを見逃した": 4,
-        "方向を逆に読んだ": 3,
+        "方向を逆に読んだ": 4,
         "一致": 2
       }
     },
     "8316.T": {
       "name": "三井住友FG",
       "summary": {
-        "observations": 9,
+        "observations": 10,
         "signals": 2,
         "flat_forecasts": 7,
-        "abstained": 0,
-        "coverage": 1.0,
-        "directional_coverage": 0.2222222222222222,
+        "abstained": 1,
+        "coverage": 0.9,
+        "directional_coverage": 0.2,
         "correct": 0,
         "accuracy": 0.0,
         "all_forecast_accuracy": 0.0
       },
       "result_types": {
         "動きを見逃した": 7,
-        "方向を逆に読んだ": 2
+        "方向を逆に読んだ": 2,
+        "一致": 1
       }
     },
     "CHFJPY=X": {
       "name": "スイスフラン円",
       "summary": {
-        "observations": 9,
+        "observations": 10,
         "signals": 0,
         "flat_forecasts": 8,
-        "abstained": 1,
-        "coverage": 0.8888888888888888,
+        "abstained": 2,
+        "coverage": 0.8,
         "directional_coverage": 0.0,
         "correct": 0,
         "accuracy": null,
@@ -2302,24 +2304,24 @@
       },
       "result_types": {
         "動きを見逃した": 7,
-        "一致": 2
+        "一致": 3
       }
     },
     "EURJPY=X": {
       "name": "ユーロ円",
       "summary": {
-        "observations": 9,
+        "observations": 10,
         "signals": 0,
         "flat_forecasts": 8,
-        "abstained": 1,
-        "coverage": 0.8888888888888888,
+        "abstained": 2,
+        "coverage": 0.8,
         "directional_coverage": 0.0,
         "correct": 0,
         "accuracy": null,
         "all_forecast_accuracy": 0.125
       },
       "result_types": {
-        "動きを見逃した": 8,
+        "動きを見逃した": 9,
         "一致": 1
       }
     },
@@ -2345,11 +2347,11 @@
     "USDJPY=X": {
       "name": "ドル円",
       "summary": {
-        "observations": 9,
+        "observations": 10,
         "signals": 0,
         "flat_forecasts": 8,
-        "abstained": 1,
-        "coverage": 0.8888888888888888,
+        "abstained": 2,
+        "coverage": 0.8,
         "directional_coverage": 0.0,
         "correct": 0,
         "accuracy": null,
@@ -2357,7 +2359,7 @@
       },
       "result_types": {
         "動きを見逃した": 7,
-        "一致": 2
+        "一致": 3
       }
     }
   },
