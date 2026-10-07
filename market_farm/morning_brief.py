@@ -59,6 +59,8 @@ def _asset_row(result: dict) -> dict:
         "decision_reason": qualification.get("reason"),
         "price_score": result.get("price_score"),
         "news_score": result.get("news_score"),
+        "news_status": result.get("news_status", "UNKNOWN"),
+        "news_error": result.get("news_error"),
         "macro_score": result.get("macro_score"),
         "data_status": "OK" if result.get("price") is not None else "NO_DATA",
         "error": result.get("error"),

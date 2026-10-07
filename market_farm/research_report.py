@@ -6,6 +6,11 @@ from datetime import datetime
 from html import escape
 from pathlib import Path
 
+from .news_quality import historical_news_status
+from .point_in_time import assert_snapshot_metadata
+
+CURRENT_REPLAY = "replay-v2-news-availability"
+
 REPLAY_DIR = Path("data/replay")
 CARDS_DIR = Path("data/cards")
 OUT_JSON = Path("data/research_report.json")
@@ -48,6 +53,8 @@ def summarize_bucket(rows):
 
 
 def consensus_label(row):
+    if any(row.get(key) is None for key in ("price_score", "news_score", "macro_score")):
+        return "thin"
     dirs = [
         factor_direction(row.get("price_score")),
         factor_direction(row.get("news_score")),
@@ -74,6 +81,16 @@ def replay_rows():
         month = data.get("month")
         for symbol, asset in data.get("assets", {}).items():
             for snap in asset.get("snapshots", []):
+                version = snap.get("replay_version", data.get("replay_version", "legacy-date-only"))
+                quality = historical_news_status(asset, snap)
+                timing = "LEGACY_DATE_ONLY"
+                if version == CURRENT_REPLAY:
+                    try:
+                        assert_snapshot_metadata(snap)
+                        proxies = snap.get("proxy_available_at") or {}
+                        timing = "BUFFERED_AVAILABILITY" if snap.get("price_available_at") and proxies and all(proxies.values()) else "UNVERIFIED"
+                    except (ValueError, TypeError, KeyError, RuntimeError):
+                        timing = "INVALID"
                 prediction = snap.get("prediction_direction")
                 prob = snap.get("prediction_probability_up")
                 if prediction is None:
@@ -83,6 +100,10 @@ def replay_rows():
                         continue
                     rows.append({
                         "source": "replay",
+                        "replay_version": version,
+                        "news_status": quality,
+                        "macro_status": snap.get("macro_status", "UNKNOWN"),
+                        "timing_status": timing,
                         "month": month,
                         "symbol": symbol,
                         "name": asset.get("name", symbol),
@@ -114,6 +135,7 @@ def live_rows():
         evidence = card.get("evidence", {})
         rows.append({
             "source": "live",
+            "news_status": evidence.get("news", {}).get("status", "UNKNOWN"),
             "symbol": card.get("symbol"),
             "name": card.get("name"),
             "horizon": "next_day",
@@ -136,11 +158,7 @@ def compare_slice(rows, predicate):
     return summarize_bucket(a)
 
 
-def build_report():
-    replay = replay_rows()
-    live = live_rows()
-    months = sorted({r.get("month") for r in replay if r.get("month")})
-
+def summarize_assets(replay):
     by_asset = {}
     keys = sorted({(r["symbol"], r["name"]) for r in replay})
     for symbol, name in keys:
@@ -158,6 +176,26 @@ def build_report():
                 "mild_calls": compare_slice(h, lambda r: 0.05 <= r["confidence"] < 0.12),
             }
         by_asset[symbol] = {"name": name, "horizons": horizons}
+    return by_asset
+
+
+def build_report():
+    replay = replay_rows()
+    live = live_rows()
+    months = sorted({r.get("month") for r in replay if r.get("month")})
+    # Keep old diagnostic totals, but use only the current reproducible input
+    # policy for comparisons and hypothesis generation.
+    eligible = [r for r in replay if r["replay_version"] == CURRENT_REPLAY
+                and r["news_status"] in {"OK", "EMPTY"}
+                and r["macro_status"] == "OK"
+                and r["timing_status"] == "BUFFERED_AVAILABILITY"]
+    by_asset = summarize_assets(eligible)
+    versions = sorted({r["replay_version"] for r in replay})
+    by_version = {v: {
+        "rows": sum(r["replay_version"] == v for r in replay),
+        "news_status_counts": dict(Counter(r["news_status"] for r in replay if r["replay_version"] == v)),
+        "by_asset": summarize_assets([r for r in replay if r["replay_version"] == v]),
+    } for v in versions}
 
     live_by_asset = {}
     for symbol, name in sorted({(r["symbol"], r["name"]) for r in live}):
@@ -223,6 +261,13 @@ def build_report():
         "replay_months": months,
         "replay_month_count": len(months),
         "replay_rows": len(replay),
+        "current_replay_version": CURRENT_REPLAY,
+        "eligible_replay_rows": len(eligible),
+        "excluded_replay_rows": len(replay) - len(eligible),
+        "news_status_counts": dict(Counter(r["news_status"] for r in replay)),
+        "by_replay_version": by_version,
+        "comparison_rule": "Only current-version rows with complete news collection and buffered market availability enter by_asset and hypotheses. Legacy versions remain separate diagnostics.",
+        "limitations": ["Adjusted daily price histories are not archived as-published vintages.", "Market availability is conservatively buffered rather than verified to dissemination time."],
         "live_settled_rows": len(live),
         "note": "Diagnostics only. These findings must not auto-change the production model.",
         "by_asset": by_asset,
@@ -281,10 +326,14 @@ h1,h2{{margin-top:0}}table{{width:100%;border-collapse:collapse}}th,td{{padding:
 </div>
 <p><a href='./index.html'>研究用市場農場</a> ｜ <a href='./newspaper.html'>朝刊</a></p></section>
 
+<section><h2>過去検証の入力確認</h2>
+<p>蓄積した判定行のうち、現在の修正版でニュース取得と市場データの利用時刻を確認した比較対象は <b>{report.get('eligible_replay_rows',0)}行</b>。旧方式・取得失敗・一部取得などの <b>{report.get('excluded_replay_rows',0)}行</b>は、下の比較に混ぜていません。旧記録は方式別に保存しています。</p>
+<p>日足の利用時刻は余裕を置いた推定です。価格は現在取得できる調整済み履歴なので、当時配信された価格の完全な復元にはまだ制約があります。</p></section>
+
 <section><h2>翌日予測は、どんな時にマシ？</h2>
-<p>「3つ一致」は価格・ニュース・外部環境のうち、少なくとも2つの有効な方向が同じ時。「不一致」は有効な方向がぶつかっている時です。</p>
+<p>修正版で入力を確認できた記録だけを比較します。「一致気味」は価格・ニュース・外部環境のうち、少なくとも2つの有効な方向が同じ時。「不一致」は有効な方向がぶつかっている時です。</p>
 <div style='overflow:auto'><table><thead><tr><th>対象</th><th>全体</th><th>3要素が一致気味</th><th>要素が不一致</th></tr></thead>
-<tbody>{''.join(rows)}</tbody></table></div></section>
+<tbody>{''.join(rows) if rows else "<tr><td colspan='4'>修正版の比較対象を蓄積中です。</td></tr>"}</tbody></table></div></section>
 
 <section><h2>次に調べる候補</h2>
 {''.join(hypotheses) if hypotheses else "<p>まだ十分な回数がないか、強い差は見つかっていません。データを増やします。</p>"}

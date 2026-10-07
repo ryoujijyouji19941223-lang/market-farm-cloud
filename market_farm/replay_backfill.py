@@ -19,6 +19,8 @@ from .dashboard import render
 from .research_report import build_report
 from .point_in_time import assert_market_frame_cutoff, assert_articles_cutoff, assert_snapshot_metadata
 from .decision import forecast_qualification
+from .news_quality import news_quality
+from .point_in_time import align_daily_proxy, daily_available_at
 
 JST = ZoneInfo("Asia/Tokyo")
 UTC = ZoneInfo("UTC")
@@ -82,7 +84,8 @@ def market_frames(cfg):
     return proxies
 
 
-def build_frame(asset, proxies):
+def build_frame(asset, proxies, proxy_symbols=None):
+    proxy_symbols = proxy_symbols or load_config()["market_proxies"]
     df = fetch_history(asset["symbol"], "10y")
     feat = feature_frame(df)
     merged = feat.copy()
@@ -92,13 +95,16 @@ def build_frame(asset, proxies):
     ma20 = close.rolling(20).mean()
     ma60 = close.rolling(60).mean()
     merged["trend60"] = ma20 / ma60 - 1.0
+    cutoffs = [cutoff_for(pd.Timestamp(idx).date(), asset["symbol"]) for idx in merged.index]
+    missing_proxy = pd.Series(False, index=merged.index)
 
     for key in ("oil", "vix", "sp500", "nikkei", "us10y", "dxy"):
         pf = proxies.get(key)
-        if pf is None or pf.empty:
-            merged[key + "_mom5"] = 0.0
-        else:
-            merged[key + "_mom5"] = pf["mom5"].reindex(merged.index, method="ffill").fillna(0.0)
+        values, available = align_daily_proxy(pf, proxy_symbols[key], cutoffs, merged.index)
+        missing_proxy |= values.isna()
+        merged[key + "_mom5"] = values.fillna(0.0)
+        merged[key + "_available_at"] = available
+    merged["macro_status"] = missing_proxy.map({True: "MISSING", False: "OK"})
 
     merged["risk_off"] = clip(4 * merged["vix_mom5"] - 2 * merged["sp500_mom5"])
     merged["oil_pressure"] = clip(5 * merged["oil_mom5"])
@@ -131,11 +137,13 @@ def score_snapshot(price_score, macro, news_score, vol):
     return float(prob), direction(prob)
 
 
-def cutoff_for(anchor_date):
+def cutoff_for(anchor_date, symbol=None):
+    if symbol and not (symbol.endswith(".T") or symbol == "^N225"):
+        anchor_date += timedelta(days=1)
     return datetime.combine(anchor_date, dtime(23, 59, 59), tzinfo=JST)
 
 
-def future_result(frame, pos, steps, flat_band):
+def future_result(frame, pos, steps, flat_band, symbol=None):
     target = pos + steps
     if target >= len(frame.index):
         return None
@@ -147,6 +155,7 @@ def future_result(frame, pos, steps, flat_band):
         "change": float(change),
         "direction": actual_direction(change, flat_band),
         "target_close": target_close,
+        "available_at": daily_available_at(frame.index[target], symbol).isoformat() if symbol else None,
     }
 
 
@@ -157,7 +166,7 @@ def replay_month(month_dt):
     start = month_start(month_dt)
     end = add_month(start)
     news_start = start - timedelta(days=4)
-    news_end = end
+    news_end = end + timedelta(days=1)
 
     try:
         world_articles, world_capped = fetch_gdelt_range(
@@ -181,7 +190,7 @@ def replay_month(month_dt):
             articles, capped, news_error = [], 0, str(exc)
 
         try:
-            frame = build_frame(asset, proxies).dropna(subset=["price_score", "macro", "vol"])
+            frame = build_frame(asset, proxies, cfg["market_proxies"]).dropna(subset=["price_score", "macro", "vol"])
             rows = []
             for pos, idx in enumerate(frame.index):
                 anchor_date = pd.Timestamp(idx).date()
@@ -191,42 +200,54 @@ def replay_month(month_dt):
                 if pos + 20 >= len(frame.index):
                     continue
 
-                cutoff = cutoff_for(anchor_date)
+                cutoff = cutoff_for(anchor_date, asset["symbol"])
                 prediction_frame = frame.iloc[: pos + 1]
                 assert_market_frame_cutoff(prediction_frame, cutoff, f"{asset['symbol']} prediction frame")
                 news72 = window_articles(articles, cutoff, 72)
                 world72 = window_articles(world_articles, cutoff, 72)
                 assert_articles_cutoff(news72, cutoff, f"{asset['symbol']} news")
                 assert_articles_cutoff(world72, cutoff, "world news")
-                news_score = sentiment([{"title": a["title"], "link": a["url"]} for a in news72])
+                quality = news_quality(error=news_error, capped=capped, article_count=len(news72))
+                news_score = sentiment([{"title": a["title"], "link": a["url"]} for a in news72]) if quality["usable"] else None
+                numeric_news = news_score if news_score is not None else 0.0
 
                 f = frame.iloc[pos]
                 prob, pred = score_snapshot(
                     float(f["price_score"]),
                     float(f["macro"]),
-                    float(news_score),
+                    float(numeric_news),
                     float(f["vol"]),
                 )
                 qualification = forecast_qualification(
-                    prob, float(f["price_score"]), float(news_score), float(f["macro"])
+                    prob, float(f["price_score"]), float(numeric_news), float(f["macro"])
                 )
+                if not quality["usable"]:
+                    qualification.update(decision="ABSTAIN", reason="news_unavailable")
+                if f["macro_status"] != "OK":
+                    qualification.update(decision="ABSTAIN", reason="macro_unavailable")
 
-                # First version freezes one evidence-based direction and checks
+                # Freeze one evidence-based direction and check
                 # which horizon that signal actually predicts best.
                 horizons = {
-                    "next_day": future_result(frame, pos, 1, 0.002),
-                    "two_days": future_result(frame, pos, 2, 0.003),
-                    "one_month": future_result(frame, pos, 20, 0.010),
+                    "next_day": future_result(frame, pos, 1, 0.002, asset["symbol"]),
+                    "two_days": future_result(frame, pos, 2, 0.003, asset["symbol"]),
+                    "one_month": future_result(frame, pos, 20, 0.010, asset["symbol"]),
                 }
 
                 row = {
-                    "as_of_date": anchor_date.isoformat(),
+                    "as_of_date": cutoff.date().isoformat(),
+                    "replay_version": "replay-v2-news-availability",
                     "information_cutoff_jst": cutoff.isoformat(),
                     "price_data_through": anchor_date.isoformat(),
                     "price": float(f["close"]),
                     "price_score": float(f["price_score"]),
                     "macro_score": float(f["macro"]),
-                    "news_score": float(news_score),
+                    "news_score": news_score,
+                    "news_status": quality["status"],
+                    "news_error": quality["error"],
+                    "macro_status": f["macro_status"],
+                    "price_available_at": daily_available_at(idx, asset["symbol"]).isoformat(),
+                    "proxy_available_at": {key: f[key + "_available_at"] for key in cfg["market_proxies"]},
                     "asset_news_count_72h": len(news72),
                     "world_news_count_72h": len(world72),
                     "asset_news_examples": [article_public(a) for a in news72[-3:]],
@@ -264,9 +285,11 @@ def replay_month(month_dt):
     out = {
         "month": start.strftime("%Y-%m"),
         "generated_at": datetime.now(UTC).isoformat(),
+        "replay_version": "replay-v2-news-availability",
+        "limitations": ["Daily bars are current adjusted histories, not archived as-published price vintages.", "Availability uses conservative session buffers, not verified exchange dissemination timestamps."],
         "purpose": "Historical replay: freeze only information visible by each date, then score future outcomes.",
         "anti_leakage": {
-            "cutoff": "Each snapshot uses price data through as_of_date and news seen by 23:59:59 JST that date.",
+            "cutoff": "Each snapshot checks availability timestamps, using a next-day buffer for foreign daily bars and only proxy bars available by the displayed JST cutoff.",
             "future_prices": "Future closes are stored only inside horizons for later scoring and are never input features.",
             "news": "News examples are restricted to the 72 hours ending at the displayed cutoff.",
         },

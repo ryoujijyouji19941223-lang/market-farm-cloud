@@ -8,6 +8,7 @@ from .sensors import price_sensor, market_regime, regime_adjustment, risk_adjust
 from .news import fetch_asset_news
 from .state import load_state, save_state
 from .decision import forecast_qualification
+from .news_quality import news_quality
 
 
 def load_config(path="config.json"):
@@ -70,13 +71,20 @@ def analyze(cfg):
             p = price_sensor(fetch_history(asset["symbol"]))
             try:
                 news, nscore = fetch_asset_news(asset)
-            except Exception:
-                news, nscore = [], 0.0
+                quality = news_quality(article_count=len(news))
+            except Exception as exc:
+                news, nscore = [], None
+                quality = news_quality(error=str(exc))
             macro = regime_adjustment(asset["symbol"], asset["kind"], regime)
-            combined = 0.68*p["price_score"] + 0.17*nscore + 0.15*macro
+            # Retain the raw research meter, but never publish a full-model
+            # forecast when a required input failed to load.
+            numeric_news = nscore if nscore is not None else 0.0
+            combined = 0.68*p["price_score"] + 0.17*numeric_news + 0.15*macro
             combined = risk_adjust(combined, p["volatility"])
             prob = probability(combined)
-            qualification = forecast_qualification(prob, p["price_score"], nscore, macro)
+            qualification = forecast_qualification(prob, p["price_score"], numeric_news, macro)
+            if not quality["usable"]:
+                qualification.update(decision="ABSTAIN", reason="news_unavailable")
             # Internal research action follows forecast qualification. A weak
             # signal must never masquerade as a trading instruction.
             if qualification["decision"] == "ABSTAIN":
@@ -84,7 +92,9 @@ def analyze(cfg):
             else:
                 action = qualification["direction"]
             challenger = _challenger_signal(asset["symbol"], p, macro, challengers)
-            results.append({**asset, **p, "news_score": nscore, "macro_score": macro, "score": combined,
+            results.append({**asset, **p, "news_score": nscore, "news_status": quality["status"],
+                            "news_error": quality["error"], "news_input_quality": quality,
+                            "macro_score": macro, "score": combined,
                             "probability_up": prob, "action": action, "forecast_qualification": qualification, "news": news[:5],
                             "challenger": challenger})
         except Exception as e:
@@ -99,7 +109,7 @@ def _settle_prediction_bucket(state, results, prediction_key, score_key):
     }
     for day, preds in list(state.get(prediction_key, {}).items()):
         for pred in preds:
-            if pred.get("settled") or pred["symbol"] not in current:
+            if pred.get("settled") or pred.get("decision") == "ABSTAIN" or pred["symbol"] not in current:
                 continue
             ref = pred.get("reference_price")
             now_info = current[pred["symbol"]]
@@ -145,7 +155,9 @@ def save_run(session, cfg, regime, results, state_path="data/state.json"):
                 continue
             p = r["probability_up"]
             direction = "UP" if p >= .55 else ("DOWN" if p <= .45 else "FLAT")
+            decision = (r.get("forecast_qualification") or {}).get("decision", "FORECAST")
             state["predictions"][key].append({"symbol": r["symbol"], "name":r["name"], "direction":direction,
+                                               "decision": decision,
                                                "probability_up":p, "reference_price":r["price"],
                                                "reference_market_date": r.get("market_date"),
                                                "settled":False})

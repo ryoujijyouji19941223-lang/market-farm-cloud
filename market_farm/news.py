@@ -1,5 +1,8 @@
 from __future__ import annotations
 import urllib.parse
+import re
+from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 import requests
 import feedparser
 
@@ -13,6 +16,8 @@ def google_news_rss(query: str, limit: int = 8):
     r = requests.get(url, timeout=12, headers={"User-Agent":"Mozilla/5.0"})
     r.raise_for_status()
     feed = feedparser.parse(r.text)
+    if feed.get("bozo") or not feed.get("version"):
+        raise RuntimeError("News RSS could not be parsed")
     out = []
     for e in feed.entries[:limit]:
         source = e.get("source", {}) or {}
@@ -43,10 +48,13 @@ def _story_key(title: str):
     return re.sub(r"\s+", " ", title).strip().lower()
 
 
-def fetch_asset_news(asset: dict):
+def fetch_asset_news(asset: dict, *, cutoff: datetime | None = None):
+    cutoff = cutoff or datetime.now(timezone.utc)
+    if cutoff.tzinfo is None:
+        raise ValueError("news cutoff must be timezone-aware")
     query = asset.get("news_query") or " OR ".join(asset.get("keywords", [])[:4])
     if not query:
-        return [], 0.0
+        raise RuntimeError("No news query configured")
     items = google_news_rss(query)
 
     filtered = []
@@ -58,6 +66,15 @@ def fetch_asset_news(asset: dict):
             continue
         ok, reason = is_relevant_item(asset, item)
         if not ok:
+            continue
+        # A frozen morning prediction must not include a later article.
+        try:
+            published = parsedate_to_datetime(item.get("published_at", ""))
+        except (TypeError, ValueError, OverflowError):
+            raise RuntimeError("Relevant news has no verifiable publication timestamp")
+        if published.tzinfo is None:
+            raise RuntimeError("News publication timestamp has no timezone")
+        if published > cutoff:
             continue
         key = _story_key(title)
         if key in seen:
@@ -83,8 +100,14 @@ def is_relevant_item(asset: dict, item: dict):
     required = [x.lower() for x in asset.get("news_required_any", [])]
     trusted = [x.lower() for x in asset.get("news_trusted_sources", [])]
 
-    identity_match = any(term in title.lower() for term in required) if required else True
-    source_match = any(term in source_url.lower() or term in source.lower() for term in trusted) if trusted else False
+    def matches(term):
+        if re.fullmatch(r"[a-z0-9]+", term):
+            return re.search(r"(?<![a-z0-9])" + re.escape(term) + r"(?![a-z0-9])", title.lower()) is not None
+        return term in title.lower()
+
+    identity_match = any(matches(term) for term in required) if required else True
+    host = urllib.parse.urlparse(source_url).hostname or ""
+    source_match = any(host == term or host.endswith("." + term) for term in trusted)
 
     if required or trusted:
         if source_match:

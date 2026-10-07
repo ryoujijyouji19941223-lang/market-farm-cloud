@@ -2,8 +2,9 @@ name: Historical Market Memory
 
 on:
   schedule:
-    # RTDSM is updated at month-end; run on the 2nd at 09:35 JST.
-    - cron: '35 0 2 * *'
+    # Check for new releases and refresh locked OOS evaluation daily at 09:35 JST.
+    # Source vintages may update less often; a successful check can still wait.
+    - cron: '35 0 * * *'
   push:
     branches: [main]
     paths:

@@ -29,6 +29,8 @@ def arrow(prob):
 
 
 def force(v):
+    if v is None:
+        return "未取得・判断保留"
     if v >= .12:
         return "強い追い風"
     if v >= .04:
@@ -230,15 +232,20 @@ def render_newspaper(cfg, regime, results, out="docs/newspaper.html"):
     focus_html = []
     for r in focus:
         a, label = arrow(r.get("probability_up", .5))
+        meter = f"向きメーター {r.get('probability_up', .5)*100:.0f}/100"
+        if r.get("action") == "NO_FORECAST":
+            a, label, meter = "—", "予測を見送り", "入力不足または弱い信号"
         focus_html.append(
             f"<div class='brief'><b>{escape(r['name'])}</b>"
             f"<span class='big'>{a} {escape(label)}</span>"
-            f"<small>向きメーター {r.get('probability_up',.5)*100:.0f}/100</small></div>"
+            f"<small>{meter}</small></div>"
         )
 
     stories = []
     for r in movers:
         a, label = arrow(r.get("probability_up", .5))
+        if r.get("action") == "NO_FORECAST":
+            a, label = "—", "予測を見送り"
         watches = "".join(f"<li>{escape(x)}</li>" for x in next_watch(r))
         causal_news = relevant_news(r, before_market_close=True)
         all_recent_news = relevant_news(r, before_market_close=False)

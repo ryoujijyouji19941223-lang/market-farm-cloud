@@ -8,6 +8,7 @@ from pathlib import Path
 
 from .backtest_analog_reactions import _actual_value, _score_probability
 from .experience_query import load_release_events
+from .point_in_time import reaction_available_at
 
 POLICY = Path("data/market_experience/reaction_oos_policy.json")
 PREDICTIONS = Path("data/market_experience/reaction_oos_predictions.jsonl")
@@ -61,6 +62,7 @@ def build_oos_evaluation(
     rows = []
     scored_event_ids = set()
     waiting_predictions = 0
+    invalid_timing = 0
 
     versions = policy.get("model_specification_versions", {})
 
@@ -89,6 +91,18 @@ def build_oos_evaluation(
             prediction["horizon"],
         )
         if actual is None:
+            waiting_predictions += 1
+            continue
+
+        available = reaction_available_at((event.get("reactions") or {}).get(prediction["source_id"]) or {}, prediction["horizon"])
+        try:
+            frozen_at = datetime.fromisoformat(prediction["frozen_at"])
+        except (ValueError, TypeError, KeyError):
+            frozen_at = None
+        if available is None or frozen_at is None or frozen_at.tzinfo is None or not (locked_at <= released <= frozen_at < available):
+            invalid_timing += 1
+            continue
+        if available > datetime.now(timezone.utc):
             waiting_predictions += 1
             continue
 
@@ -184,6 +198,8 @@ def build_oos_evaluation(
         "status": (
             "ACTIVE"
             if rows
+            else "TIMING_REJECTED"
+            if invalid_timing and not waiting_predictions
             else (
                 "WAITING_OUTCOMES"
                 if frozen_count
@@ -194,6 +210,8 @@ def build_oos_evaluation(
         "scored_release_events": len(scored_event_ids),
         "rows_scored": len(rows),
         "waiting_prediction_rows": waiting_predictions,
+        "excluded_timing_rows": invalid_timing,
+        "timing_rule": "Require lock <= release <= frozen prediction < session-close outcome availability; unverified or late-frozen predictions are excluded.",
         "summaries": summaries,
         "paired_comparison": paired,
         "promotion_automatic": False,

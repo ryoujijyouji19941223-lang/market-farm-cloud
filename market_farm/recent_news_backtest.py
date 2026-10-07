@@ -20,6 +20,8 @@ from .state import load_state
 from .dashboard import render
 from .point_in_time import assert_market_frame_cutoff, assert_articles_cutoff, assert_snapshot_metadata
 from .news_archive import load_range, save_articles, range_status, record_range
+from .news_quality import news_quality
+from .point_in_time import align_daily_proxy, daily_available_at
 
 JST = ZoneInfo("Asia/Tokyo")
 UTC = ZoneInfo("UTC")
@@ -142,7 +144,7 @@ def actual_direction(change: float):
 
 
 def score_rows(rows, key: str):
-    signals = [r for r in rows if r[key] != "FLAT"]
+    signals = [r for r in rows if r.get(key) in {"UP", "DOWN"}]
     correct = sum(r[key] == r["actual_direction"] for r in signals)
     return {
         "signals": len(signals),
@@ -155,12 +157,16 @@ def build_merged(asset, proxy_features):
     df = fetch_history(asset["symbol"], "6mo")
     feat = feature_frame(df)
     merged = feat.copy()
+    cutoffs = [datetime.combine(pd.Timestamp(idx).date(), dtime(23, 59, 59), tzinfo=JST) for idx in merged.index]
+    missing = pd.Series(False, index=merged.index)
+    proxy_symbols = load_config()["market_proxies"]
     for key in ("oil", "vix", "sp500", "nikkei", "us10y", "dxy"):
         pf = proxy_features.get(key)
-        if pf is None or pf.empty:
-            merged[key + "_mom5"] = 0.0
-        else:
-            merged[key + "_mom5"] = pf["mom5"].reindex(merged.index, method="ffill").fillna(0.0)
+        values, available = align_daily_proxy(pf, proxy_symbols[key], cutoffs, merged.index)
+        missing |= values.isna()
+        merged[key + "_mom5"] = values.fillna(0.0)
+        merged[key + "_available_at"] = available
+    merged["macro_status"] = missing.map({True: "MISSING", False: "OK"})
     merged["risk_off"] = clip(4 * merged["vix_mom5"] - 2 * merged["sp500_mom5"])
     merged["oil_pressure"] = clip(5 * merged["oil_mom5"])
     merged["japan_risk"] = clip(-3 * merged["nikkei_mom5"])
@@ -228,31 +234,38 @@ def run_recent_news_backtest():
                 if target_date < cutoff_date:
                     continue
 
-                feature_idx = idx[i - 1]
+                cutoff = strict_cutoff(target_date)
+                known = [x for x in idx[:i] if daily_available_at(x, asset["symbol"]) <= cutoff]
+                if not known:
+                    continue
+                feature_idx = known[-1]
                 feature_date = pd.Timestamp(feature_idx).date()
                 f = merged.loc[feature_idx]
                 if pd.isna(f["price_score"]) or pd.isna(f["vol"]) or pd.isna(f["macro"]):
                     continue
 
-                cutoff = strict_cutoff(target_date)
                 news_window = window_articles(asset_articles, cutoff, 72)
+                assert_articles_cutoff(news_window, cutoff, "asset news")
                 public_news = [{"title": a["title"], "link": a["url"]} for a in news_window]
-                nscore = sentiment(public_news)
+                quality = news_quality(error=news_error, capped=capped_chunks, article_count=len(news_window))
+                nscore = sentiment(public_news) if quality["usable"] else None
 
                 world_window = window_articles(world_articles, cutoff, 72)
                 assert_articles_cutoff(world_window, cutoff, "world news")
 
                 # Baseline: same long-history model that intentionally has no historical news.
-                base_raw = (0.68 / 0.83) * float(f["price_score"]) + (0.15 / 0.83) * float(f["macro"])
+                base_raw = 0.68 * float(f["price_score"]) + 0.15 * float(f["macro"])
                 base_raw = risk_adjust(base_raw, float(f["vol"]))
                 base_prob = probability(base_raw)
                 base_pred = direction(base_prob)
 
                 # News model: same weights as the live prototype.
-                news_raw = 0.68 * float(f["price_score"]) + 0.17 * float(nscore) + 0.15 * float(f["macro"])
+                news_raw = 0.68 * float(f["price_score"]) + 0.17 * float(nscore or 0.0) + 0.15 * float(f["macro"])
                 news_raw = risk_adjust(news_raw, float(f["vol"]))
                 news_prob = probability(news_raw)
                 news_pred = direction(news_prob)
+                if not quality["usable"] or f["macro_status"] != "OK":
+                    news_prob, news_pred = None, None
 
                 previous_close = float(merged.loc[feature_idx, "close"])
                 target_close = float(merged.loc[target_idx, "close"])
@@ -272,16 +285,22 @@ def run_recent_news_backtest():
                     "world_news_examples": [article_public(a) for a in world_window[-2:]],
                     "price_score": float(f["price_score"]),
                     "macro_score": float(f["macro"]),
-                    "news_score": float(nscore),
+                    "news_score": nscore,
+                    "news_status": quality["status"],
+                    "news_error": quality["error"],
+                    "macro_status": f["macro_status"],
+                    "price_available_at": daily_available_at(feature_idx, asset["symbol"]).isoformat(),
+                    "proxy_available_at": {key: f[key + "_available_at"] for key in cfg["market_proxies"]},
                     "baseline_probability_up": float(base_prob),
                     "baseline_direction": base_pred,
-                    "news_probability_up": float(news_prob),
+                    "news_probability_up": news_prob,
                     "news_direction": news_pred,
                     "actual_direction": actual,
                     "actual_change": float(change),
                     "baseline_correct": bool(base_pred == actual),
-                    "news_correct": bool(news_pred == actual),
+                    "news_correct": None if news_pred is None else bool(news_pred == actual),
                 }
+                assert_snapshot_metadata(row)
                 rows.append(row)
                 all_rows.append(row)
 
@@ -292,8 +311,10 @@ def run_recent_news_backtest():
                 "capped_chunks": capped_chunks,
                 "news_error": news_error,
                 "rows": rows,
-                "without_news": score_rows(rows, "baseline_direction"),
+                "without_news": score_rows([r for r in rows if r["news_direction"] is not None], "baseline_direction"),
                 "with_news": score_rows(rows, "news_direction"),
+                "comparison_rows": sum(r["news_direction"] is not None for r in rows),
+                "excluded_news_rows": sum(r["news_direction"] is None for r in rows),
             }
         except Exception as exc:
             assets_out[asset["symbol"]] = {
@@ -310,6 +331,8 @@ def run_recent_news_backtest():
 
     out = {
         "generated_at": datetime.now(UTC).isoformat(),
+        "comparison_version": "news-ablation-v2-availability",
+        "comparison_rule": "Same eligible dates and unchanged price/macro weights; failed or capped news windows are excluded from both arms.",
         "window_days": days,
         "cutoff_rule": "For target date D, use market data through the prior trading day and news seen by 23:59:59 JST on calendar day D-1.",
         "anti_leakage": {
@@ -326,8 +349,10 @@ def run_recent_news_backtest():
             "error": world_error,
         },
         "overall": {
-            "without_news": score_rows(all_rows, "baseline_direction"),
+            "without_news": score_rows([r for r in all_rows if r["news_direction"] is not None], "baseline_direction"),
             "with_news": score_rows(all_rows, "news_direction"),
+            "comparison_rows": sum(r["news_direction"] is not None for r in all_rows),
+            "excluded_news_rows": sum(r["news_direction"] is None for r in all_rows),
         },
         "assets": assets_out,
     }

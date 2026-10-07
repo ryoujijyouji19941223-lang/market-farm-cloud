@@ -56,6 +56,8 @@ def _news_evidence(result: dict):
         items.append({
             "title": item.get("title", ""),
             "link": item.get("link", ""),
+            "published_at": item.get("published_at"),
+            "source_url": item.get("source_url"),
         })
     return items
 
@@ -83,8 +85,10 @@ def create_live_cards(cfg: dict, regime: dict, results: list[dict], now: datetim
                 "volatility": float(r.get("volatility", 0.0)),
             },
             "news": {
-                "score": float(r.get("news_score", 0.0)),
-                "direction": _factor_direction(float(r.get("news_score", 0.0))),
+                "score": r.get("news_score"),
+                "status": r.get("news_status", "UNKNOWN"),
+                "error": r.get("news_error"),
+                "direction": "UNKNOWN" if r.get("news_score") is None else _factor_direction(float(r["news_score"])),
                 "headlines": _news_evidence(r),
             },
             "outside_wind": {
@@ -156,7 +160,7 @@ def _review(card: dict, actual: str, change: float):
         result_type = "方向を逆に読んだ"
 
     supporting = [k for k, d in factor_dirs.items() if d == pred]
-    opposing = [k for k, d in factor_dirs.items() if d not in (pred, "NEUTRAL")]
+    opposing = [k for k, d in factor_dirs.items() if d not in (pred, "NEUTRAL", "UNKNOWN")]
     neutral = [k for k, d in factor_dirs.items() if d == "NEUTRAL"]
 
     return {
@@ -164,6 +168,7 @@ def _review(card: dict, actual: str, change: float):
         "supporting_factors": supporting,
         "opposing_factors": opposing,
         "neutral_factors": neutral,
+        "unknown_factors": [k for k, d in factor_dirs.items() if d == "UNKNOWN"],
         "factor_directions": factor_dirs,
         "actual_change": change,
         "note": "This is a mechanical post-mortem classification, not a causal proof.",

@@ -13,10 +13,8 @@ def _event(event_id, when, ret):
                 "status": "OK",
                 "preferred_measure": "return",
                 "horizons": {
-                    "1d": {"return": ret},
-                    "2d": {"return": ret},
-                    "5d": {"return": ret},
-                    "20d": {"return": ret},
+                    h: {"return": ret, "available_at": "2026-06-02T20:00:00+00:00"}
+                    for h in ("1d", "2d", "5d", "20d")
                 },
             }
         },
@@ -28,7 +26,7 @@ def _prediction(pid, event_id, model, prob, horizon="1d"):
         "prediction_id": pid,
         "policy_epoch": 1,
         "immutable": True,
-        "frozen_at": "2026-05-20T00:00:00+00:00",
+        "frozen_at": "2026-06-01T13:00:00+00:00",
         "release_event_id": event_id,
         "model": model,
         "source_id": "sp500",
@@ -125,3 +123,22 @@ def test_oos_rejects_mismatched_model_specification():
     )
     assert payload["rows_scored"] == 0
     assert payload["status"] == "WAITING_NEW_RELEASES"
+
+
+def test_oos_excludes_predictions_frozen_after_outcome_or_before_release():
+    events = [_event("future", "2026-06-01T08:30:00-04:00", .01)]
+    late = _prediction("late", "future", "surprise_only_baseline", .8)
+    late["frozen_at"] = "2026-06-03T00:00:00+00:00"
+    early = _prediction("early", "future", "surprise_only_baseline", .8)
+    early["frozen_at"] = "2026-05-31T00:00:00+00:00"
+    payload = module.build_oos_evaluation(events=events, policy=_policy(), predictions=[late, early])
+    assert payload["rows_scored"] == 0
+    assert payload["excluded_timing_rows"] == 2
+
+
+def test_oos_excludes_outcome_with_unknown_timestamp():
+    event = _event("future", "2026-06-01T08:30:00-04:00", .01)
+    del event["reactions"]["sp500"]["horizons"]["1d"]["available_at"]
+    payload = module.build_oos_evaluation(events=[event], policy=_policy(), predictions=[_prediction("p", "future", "surprise_only_baseline", .8)])
+    assert payload["rows_scored"] == 0
+    assert payload["excluded_timing_rows"] == 1

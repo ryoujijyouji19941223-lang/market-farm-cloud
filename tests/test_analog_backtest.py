@@ -21,10 +21,8 @@ def _event(event_id, year, ret, level="high", momentum="heating"):
                 "data_provider": "yfinance",
                 "fallback": False,
                 "horizons": {
-                    "1d": {"return": ret},
-                    "2d": {"return": ret},
-                    "5d": {"return": ret},
-                    "20d": {"return": ret},
+                    h: {"return": ret, "available_at": f"{year}-02-15T21:00:00+00:00"}
+                    for h in ("1d", "2d", "5d", "20d")
                 },
             }
         },

@@ -129,7 +129,7 @@ def test_release_event_analog_report_cannot_use_itself_or_future():
                 "preferred_measure": "return",
                 "data_provider": "yfinance",
                 "fallback": False,
-                "horizons": {"1d": {"return": 0.01}},
+                "horizons": {"1d": {"return": 0.01, "available_at": "2007-01-02T21:00:00+00:00"}},
             }
         },
     }
@@ -287,3 +287,15 @@ def test_magnitude_analog_falls_back_when_bucket_sample_is_small():
     assert report["status"] == "OK"
     assert report["similarity_tier"] == "SURPRISE_ONLY"
     assert report["event_count"] == 3
+
+
+def test_training_excludes_prior_release_with_unfinished_or_undated_outcome():
+    from market_farm.experience_query import analog_report
+    event = {**EVENTS[0], "reactions": {"sp500": {"status": "OK", "horizons": {
+        "1d": {"return": .1, "available_at": "2008-01-02T21:00:00+00:00"},
+        "20d": {"return": .2},
+    }}}}
+    report = analog_report(cutoff=datetime.fromisoformat("2008-01-01T12:00:00-05:00"), indicator=event["indicator"], events=[event], min_samples=1)
+    assert report["event_count"] == 1
+    assert report["markets"]["sp500"]["1d"]["sample_count"] == 0
+    assert report["markets"]["sp500"]["20d"]["sample_count"] == 0

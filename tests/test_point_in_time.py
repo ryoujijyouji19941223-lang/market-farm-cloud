@@ -63,3 +63,30 @@ def test_snapshot_accepts_point_in_time_metadata():
         "price_data_through": "2020-01-02",
     }
     assert_snapshot_metadata(snapshot)
+
+
+def test_us_same_date_proxy_is_not_visible_at_japan_end_of_day():
+    from market_farm.point_in_time import align_daily_proxy, daily_available_at
+    frame = pd.DataFrame({"mom5": [.1, .9]}, index=pd.to_datetime(["2020-01-01", "2020-01-02"]))
+    cutoff = datetime(2020, 1, 2, 23, 59, tzinfo=JST)
+    values, stamps = align_daily_proxy(frame, "^GSPC", [cutoff], pd.to_datetime(["2020-01-02"]))
+    assert values.iloc[0] == .1
+    assert datetime.fromisoformat(stamps[0]) <= cutoff
+    assert daily_available_at("2020-01-02", "^GSPC") > cutoff
+
+
+@pytest.mark.parametrize("extra", [
+    {"proxy_available_at": {"sp500": "2020-01-03T12:00:00+09:00"}},
+    {"horizons": {"next_day": {"available_at": "2020-01-02T18:00:00+09:00"}}},
+])
+def test_snapshot_rejects_future_feature_and_already_known_outcome(extra):
+    with pytest.raises(FutureInformationLeak):
+        assert_snapshot_metadata({"information_cutoff_jst": "2020-01-02T23:59:59+09:00", "price_data_through": "2020-01-02", **extra})
+
+
+def test_reaction_session_date_is_resolved_to_close_including_dst():
+    from market_farm.point_in_time import reaction_available_at
+    reaction = {"market_timezone": "America/New_York", "market_close": "16:00",
+                "horizons": {"1d": {"time": "2020-07-01T00:00:00"}}}
+    stamp = reaction_available_at(reaction, "1d")
+    assert stamp.isoformat() == "2020-07-01T16:00:00-04:00"

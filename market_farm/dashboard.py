@@ -3,6 +3,7 @@ from pathlib import Path
 from datetime import datetime
 from html import escape
 import json
+from .news_quality import historical_news_status, news_status_label
 
 
 def pct(x):
@@ -25,6 +26,8 @@ def direction_word(p):
 
 
 def simple_force(v):
+    if v is None:
+        return "取得できず・判断保留"
     if v >= .12:
         return "上がる側へ強め"
     if v >= .04:
@@ -176,6 +179,8 @@ def render(cfg, regime, results, state, out="docs/index.html"):
     focus_cards = []
     for r in focus:
         word, arrow = direction_word(r["probability_up"])
+        if r.get("action") == "NO_FORECAST":
+            word, arrow = "予測を見送り", "—"
         focus_cards.append(
             f"<div class='mini'><b>{escape(r['name'])}</b>"
             f"<div class='big'>{arrow} {escape(word)}</div>"
@@ -190,8 +195,11 @@ def render(cfg, regime, results, state, out="docs/index.html"):
 
         sc = state.get("scores", {}).get(r["symbol"], {})
         word, arrow = direction_word(r["probability_up"])
+        if r.get("action") == "NO_FORECAST":
+            word, arrow = "予測を見送り", "—"
         price_factor = simple_force(r.get("price_score", 0.0))
-        news_factor = simple_force(r.get("news_score", 0.0))
+        news_factor = (simple_force(r.get("news_score")) if r.get("news_status") == "OK"
+                       else news_status_label(r.get("news_status", "UNKNOWN")))
         macro_factor = simple_force(r.get("macro_score", 0.0))
         market_date = r.get("market_date") or backtest.get("assets", {}).get(r["symbol"], {}).get("available_end", "-")
         outside = outside_sources(r["symbol"], r["kind"])
@@ -277,6 +285,9 @@ def render(cfg, regime, results, state, out="docs/index.html"):
         without_news = rr.get("without_news", {})
         aw = with_news.get("accuracy")
         ab = without_news.get("accuracy")
+        current_comparison = recent.get("comparison_version") == "news-ablation-v2-availability"
+        if not current_comparison:
+            with_news, without_news, aw, ab = {}, {}, None, None
         if aw is not None and ab is not None:
             delta = aw - ab
             delta_text = f"{delta*100:+.0f}ポイント"
@@ -293,12 +304,12 @@ def render(cfg, regime, results, state, out="docs/index.html"):
         rows = rr.get("rows", [])
         sample_rows = []
         for item in rows[-5:]:
-            mark = "○" if item.get("news_correct") else "×"
+            mark = "—" if item.get("news_correct") is None else ("○" if item["news_correct"] else "×")
             sample_rows.append(
                 f"<tr><td>{escape(item.get('target_date','-'))}</td>"
                 f"<td>{escape(item.get('information_cutoff_jst','-')[:19].replace('T',' '))}</td>"
                 f"<td>{escape(item.get('price_data_through','-'))}</td>"
-                f"<td>{item.get('asset_news_count',0)}件</td>"
+                f"<td>{escape(news_status_label(historical_news_status(rr, item)))} / {item.get('asset_news_count',0)}件</td>"
                 f"<td>{escape(direction_jp(item.get('news_direction')))}</td>"
                 f"<td>{escape(direction_jp(item.get('actual_direction')))}</td>"
                 f"<td>{mark}</td></tr>"
@@ -328,8 +339,8 @@ def render(cfg, regime, results, state, out="docs/index.html"):
             f"<tr><td>{escape(asset['name'])}</td>"
             f"<td>{escape(item.get('as_of_date','-'))}</td>"
             f"<td>{escape(item.get('information_cutoff_jst','-')[:19].replace('T',' '))}</td>"
-            f"<td>{item.get('asset_news_count_72h',0)}件</td>"
-            f"<td>{escape(direction_jp(item.get('prediction_direction')))}</td>"
+            f"<td>{escape(news_status_label(historical_news_status(rr, item)))} / {item.get('asset_news_count_72h',0)}件</td>"
+            f"<td>{'予測を見送り' if (item.get('forecast_qualification') or {}).get('decision') == 'ABSTAIN' else escape(direction_jp(item.get('prediction_direction')))}</td>"
             f"<td>{escape(direction_jp(h1.get('direction')))}</td>"
             f"<td>{escape(direction_jp(h2.get('direction')))}</td>"
             f"<td>{escape(direction_jp(hm.get('direction')))}</td></tr>"
@@ -488,9 +499,9 @@ details{{margin-top:8px}}summary{{cursor:pointer;font-weight:700}}
 <p><b>こちらは情報の種類が多い代わりに、まだ日数が少ないテストです。</b> 5年テストより「その日に人が見えていた世界」に近づけますが、1か月だけで強い結論は出しません。</p>
 <div class='remember'>
 <b>例：8月20日を予測するなら</b>
-価格は8月19日まで。ニュースも<b>8月19日23:59:59（日本時間）までに確認できた記事だけ</b>。8月20日の値段は、予測を作る時には使わず、最後の答え合わせだけに使います。
+価格は情報締切までに確定した日足だけ。海外市場は時差を考慮して、さらに古い日足を使う場合があります。ニュースも<b>8月19日23:59:59（日本時間）までに確認できた記事だけ</b>。8月20日の値段は最後の答え合わせだけに使います。
 </div>
-<p>「ニュースなし」と「当時のニュースあり」を同じ期間で並べて、<b>ニュースを足したことで本当に良くなったか</b>を比べます。ここで改善しても、次は未来の本番観測で確認します。</p>
+<p>修正版はニュースを取得できた同じ日だけを使い、価格と外部環境の重みもそろえて比較します。取得失敗・一部取得は双方から除外します。旧方式の成績はこの表に表示せず、修正版の更新を待ちます。</p>
 <div style='overflow:auto'><table>
 <thead><tr><th>対象</th><th>ニュースなし</th><th>当時ニュースあり</th><th>差</th><th>取得した記事</th></tr></thead>
 <tbody>{''.join(recent_rows)}</tbody>
@@ -501,7 +512,7 @@ details{{margin-top:8px}}summary{{cursor:pointer;font-weight:700}}
 
 <section class='card'>
 <h2>⑥ 過去を1か月ずつ掘る「歴史再現庫」</h2>
-<p><b>これが今追加した、本格的な積み上げ部分です。</b> 毎日1か月ずつ過去へ戻り、その月の各取引日について「その日の23:59までに見えていた価格・市場指標・ニュース」だけを保存します。</p>
+<p>毎日1か月ずつ過去へ戻ります。修正版は価格・市場指標が利用できる時刻を保守的に見積もり、表示する情報締切までに利用できる日足とニュースだけを使います。海外の日足を使う記録は締切が翌日になる場合があります。</p>
 <div class='remember'>
 <b>1日分の記録に残すもの</b>
 その時点の日付 / 情報の締切 / 価格 / 72時間以内のニュース / 世界ニュース / その時の予測 / 翌日・2取引日後・約1か月後の実際。
@@ -513,6 +524,7 @@ details{{margin-top:8px}}summary{{cursor:pointer;font-weight:700}}
   <div><small>いちばん古い目標</small><br><b>{escape(str(replay_oldest))}</b></div>
 </div>
 <p class='muted'>1日1か月ずつ進めるので、完成した記録はあとから消さずに積み上げます。ニュース取得が上限に当たった月や取得失敗は、その事実も記録します。</p>
+<p class='muted'>この表の方式：{escape(replay_latest.get('replay_version', '旧方式・日付のみの確認'))}。旧方式と修正版の比較対象は<a href='./research.html'>研究レポート</a>で分けています。価格は現在の調整済み履歴を使うため、当時の配信内容の完全な復元にはまだ制約があります。</p>
 {("<div style='overflow:auto'><table><thead><tr><th>対象</th><th>その時点</th><th>情報締切</th><th>ニュース</th><th>当時の予測</th><th>翌日実際</th><th>2日後実際</th><th>約1か月後実際</th></tr></thead><tbody>" + ''.join(replay_examples) + "</tbody></table></div>") if replay_examples else "<p>最初の1か月分を作成中です。</p>"}
 <p class='note'><b>大事：</b>いまは同じ「その時点の向き」を1日後・2日後・20取引日後で採点しています。十分な月数がたまったら、明日用・2日後用・1か月用を別々の予測器に育てます。先に結果を見てルールを作らないためです。</p>
 </section>

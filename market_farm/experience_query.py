@@ -6,6 +6,8 @@ from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
+from .point_in_time import reaction_available_at
+
 STORE = Path("data/market_experience/release_events.jsonl")
 
 
@@ -88,6 +90,8 @@ def reaction_values(
     events: list[dict],
     source_id: str,
     horizon: str,
+    *,
+    cutoff: datetime | None = None,
 ) -> tuple[list[float], str, Counter, int]:
     values = []
     measure = "return"
@@ -100,6 +104,10 @@ def reaction_values(
         point = (reaction.get("horizons") or {}).get(horizon)
         if not point:
             continue
+        if cutoff is not None:
+            available = reaction_available_at(reaction, horizon)
+            if available is None or available >= cutoff:
+                continue
 
         provider = reaction.get("data_provider") or "unknown"
         providers[provider] += 1
@@ -121,12 +129,13 @@ def reaction_summary(
     horizon: str,
     *,
     min_samples: int = 5,
+    cutoff: datetime | None = None,
 ) -> dict:
     if min_samples < 1:
         raise ValueError("min_samples must be >= 1")
 
     values, measure, providers, fallback_count = reaction_values(
-        events, source_id, horizon
+        events, source_id, horizon, cutoff=cutoff
     )
     count = len(values)
     base = {
@@ -184,7 +193,7 @@ def analog_report(
     for source_id in ("sp500", "gold_futures", "usd_jpy", "us10y"):
         markets[source_id] = {
             horizon: reaction_summary(
-                matched, source_id, horizon, min_samples=min_samples
+                matched, source_id, horizon, min_samples=min_samples, cutoff=cutoff
             )
             for horizon in ("1d", "2d", "5d", "20d")
         }
