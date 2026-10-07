@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.5",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-07T11:16:51.009193+09:00",
+  "prediction_date": "2026-10-07",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-07T11:16:51.009193+09:00",
+  "market_data_through": "2026-10-07",
+  "reference_price": 1215.0,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.044553222187630484,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5237173336556857,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.055091117735771085,
+      "direction": "UP",
+      "day_change": 0.01039501039501034,
+      "momentum5": 0.023157894736842044,
+      "trend": -0.004685578134531743,
+      "volatility": 0.3396783700872844
+    },
+    "news": {
+      "score": 0.0,
+      "direction": "NEUTRAL",
+      "headlines": []
+    },
+    "outside_wind": {
+      "score": 0.04727508084870763,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.2954692553044227,
+        "oil_pressure": 0.04922828987773631,
+        "japan_risk": -0.15863617616808834,
+        "usd_rate_pressure": 0.03060308095640707
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

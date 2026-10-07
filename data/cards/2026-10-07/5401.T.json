@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.5",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-07T11:16:51.009193+09:00",
+  "prediction_date": "2026-10-07",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-07T11:16:51.009193+09:00",
+  "market_data_through": "2026-10-07",
+  "reference_price": 643.2999877929688,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.21427100194748674,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.391694588812199,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.30467608797085377,
+      "direction": "DOWN",
+      "day_change": -0.01106842768183125,
+      "momentum5": -0.01935977470584027,
+      "trend": -0.029653380336491786,
+      "volatility": 0.24316209241027317
+    },
+    "news": {
+      "score": 0.0,
+      "direction": "NEUTRAL",
+      "headlines": []
+    },
+    "outside_wind": {
+      "score": 0.04727508084870763,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.2954692553044227,
+        "oil_pressure": 0.04922828987773631,
+        "japan_risk": -0.15863617616808834,
+        "usd_rate_pressure": 0.03060308095640707
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
