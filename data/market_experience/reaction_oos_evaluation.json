@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-10-03T14:50:08.928264+00:00",
-  "policy_epoch": 2,
-  "locked_at": "2026-10-03T14:41:00+00:00",
+  "generated_at": "2026-10-07T15:21:12.184711+00:00",
+  "policy_epoch": 3,
+  "locked_at": "2026-10-07T15:13:00+00:00",
   "status": "WAITING_NEW_RELEASES",
   "frozen_predictions": 0,
   "scored_release_events": 0,
   "rows_scored": 0,
   "waiting_prediction_rows": 0,
+  "excluded_timing_rows": 0,
+  "timing_rule": "Require lock <= release <= frozen prediction < session-close outcome availability; unverified or late-frozen predictions are excluded.",
   "summaries": [],
   "paired_comparison": {
     "hierarchical_regime": {
@@ -25,9 +27,9 @@
   "promotion_automatic": false,
   "scoring_source": "immutable_frozen_prediction_ledger",
   "model_specification_versions": {
-    "surprise_only_baseline": "surprise_only_baseline/v1",
-    "hierarchical_regime": "hierarchical_regime/v1",
-    "surprise_magnitude": "surprise_magnitude/v1"
+    "surprise_only_baseline": "surprise_only_baseline/v2-outcome-availability",
+    "hierarchical_regime": "hierarchical_regime/v2-outcome-availability",
+    "surprise_magnitude": "surprise_magnitude/v2-outcome-availability"
   },
   "note": "Strict OOS ledger. Model probabilities are frozen on first ingestion of a post-lock release and are never recomputed for scoring. Market outcomes are attached later when available."
 }
