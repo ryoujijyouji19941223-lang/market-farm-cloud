@@ -46,10 +46,19 @@ jobs:
           git config user.name "market-farm-bot"
           git config user.email "market-farm-bot@users.noreply.github.com"
           git add data/recent_news_backtest.json docs/index.html
+          if [ -d data/news_archive ]; then
+            git add data/news_archive
+          fi
           if git diff --cached --quiet; then
             echo "No recent-news changes to save"
             exit 0
           fi
           git commit -m "market farm: refresh recent news time machine $(date -u +%F)"
-          git pull --rebase origin "${GITHUB_REF_NAME}"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          for attempt in 1 2 3; do
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase -X theirs "origin/${GITHUB_REF_NAME}"
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              exit 0
+            fi
+          done
+          exit 1
