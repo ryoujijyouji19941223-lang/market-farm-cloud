@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "model_version": "market-farm-live-v0.5",
-  "status": "OPEN",
+  "status": "SETTLED",
   "created_at_jst": "2026-10-07T11:16:51.009193+09:00",
   "prediction_date": "2026-10-07",
   "symbol": "USDJPY=X",
@@ -62,6 +62,34 @@
     "live_news": "Google News RSS headlines",
     "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
   },
-  "outcome": null,
-  "review": null
+  "outcome": {
+    "market_date": "2026-10-08",
+    "price": 158.05299377441406,
+    "change": -0.002058379159125323,
+    "direction": "DOWN",
+    "correct": false,
+    "scored_forecast": false,
+    "settled_at_jst": "2026-10-08T02:39:35.790523+00:00",
+    "target_policy": "FIRST_TRADED_MARKET_DATE_AFTER_REFERENCE",
+    "price_source": "yfinance daily adjusted close"
+  },
+  "review": {
+    "result_type": "動きを見逃した",
+    "supporting_factors": [],
+    "opposing_factors": [
+      "price"
+    ],
+    "neutral_factors": [
+      "news",
+      "outside_wind"
+    ],
+    "unknown_factors": [],
+    "factor_directions": {
+      "price": "UP",
+      "news": "NEUTRAL",
+      "outside_wind": "NEUTRAL"
+    },
+    "actual_change": -0.002058379159125323,
+    "note": "This is a mechanical post-mortem classification, not a causal proof."
+  }
 }

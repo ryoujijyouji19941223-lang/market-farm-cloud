@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-08T11:39:35.827288+09:00",
+  "prediction_date": "2026-10-08",
+  "symbol": "EURJPY=X",
+  "name": "ユーロ円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-08T11:39:35.827288+09:00",
+  "market_data_through": "2026-10-08",
+  "reference_price": 177.11000061035156,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.08489927660389608,
+      "factor_agreement": 0.5,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.47927259828128516,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.0901522586365931,
+      "direction": "DOWN",
+      "day_change": -0.005770806201438883,
+      "momentum5": -0.007586986013888519,
+      "trend": -0.007506218490662686,
+      "volatility": 0.06490061418903982
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀短観から見える物価の頭打ち感 企業の積極的な価格転嫁姿勢に変化の兆しか 野村證券・岩下真理 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5DeWgxLWYwbktfWG1vSGttT2xkT01jS2ptNk1tazVfcmF4N0QwbTJrcm5VNTR1em1iR2VWYkxtZVRMenJsVFcxdU5lNTNpUGxOZFJBRjZKaThQSEdla0tr?oc=5",
+          "published_at": "Thu, 08 Oct 2026 02:31:28 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "日銀、10月会合で基調物価2％到達と判断の可能性＝関係筋 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9OeFNVcElHWVdCcHNMQXFKU1VxZ1ZIazdlMmJ0RDN3M1ppMXE5UkM0YnZaYk5KVjVvTURFR2hpQ2dudVBoUENPQ0VjNGVkekdYTUhYZExPbDNRbk9peWlUMi1RVThubFRsZVk2eU5OTGx4bEV2VXB6U3U2OHkxQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 04:32:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日米介入・日銀利上げでもなぜ円安が止まらないのか？円高転換「3つのシナリオ」の現実味 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBLV0N0UncxYUR4VzdjbWluR2FWRGIyY3BtLUN3dFVFQUQwVGxFRHRMY3FfZVY1dzlBdl9hbDZGQ3FjdEk2LVlwX3B5dHHSAU9BVV95cUxPdmVVM21CcjNrNVQ1ODdLQ0toS052b3BKZFY3TjlobkU4ZERIQzdHbEdFWmtEaXMtRkZhck9yQjFNNUZKanQwY09xb0VVOHU0?oc=5",
+          "published_at": "Wed, 07 Oct 2026 19:30:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "基調物価、２％到達と判断へ 今月会合にも―日銀検討 - 時事ドットコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5EN0lDN05FeWZNUkk0TGI0OFNHU3pkMGFnckdCbzFKZGhwRE1uTjhIZ05uZ3JaZTRXRVlwOXBBcHdQb2tsWl9XZTRnYl9jangxWS1MNjVGbXB0V3FsQ3BVT1dDbw?oc=5",
+          "published_at": "Mon, 05 Oct 2026 23:48:00 GMT",
+          "source_url": "https://www.jiji.com"
+        },
+        {
+          "title": "きょうの主な経済指標・スケジュール＞日銀支店長会議、９月景気ウォッチャー調査など(ウエルスアドバイザー) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPV1RqMzhTRjZ5bHRyMjlvZFBGOGpPYkN0dHQ1Rm9SMi1qTDRzZEhTeXBhT3pQWGJpaUpOVVBSSFVXRDA2RHlGQzhKV2ZFb2tBSHNLZ2pkLWk3RTZFWGJ5cHBLTmttR3dPVDVOb1BrUGRUeFNrUGl5cWJVQjFYTFhxVHp0alRSWFU?oc=5",
+          "published_at": "Wed, 07 Oct 2026 22:45:53 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.01563827154008515,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.3477134923599996,
+        "oil_pressure": -0.04368507694787083,
+        "japan_risk": -0.020535639429623886,
+        "usd_rate_pressure": 0.00908144763027341
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

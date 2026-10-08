@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-08T11:39:35.827288+09:00",
+  "prediction_date": "2026-10-08",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-08T11:39:35.827288+09:00",
+  "market_data_through": "2026-10-08",
+  "reference_price": 632.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.24555941563583522,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.3767156515892174,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.34884454679293414,
+      "direction": "DOWN",
+      "day_change": -0.014348116082163687,
+      "momentum5": -0.027692307692307683,
+      "trend": -0.03166979668964509,
+      "volatility": 0.24462419040464478
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "日本製鉄が開発した耐水素脆化特性に優れた2.0GPa級アルミめっきホットスタンプ用鋼板が日産自動車の新型エルグランドに採用 | 日本製鉄株式会社 - Digital PR Platform",
+          "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBUdVVKWjRjUC1zbllXYURrZVQ0S2psZmpGVXF4djU5UjJKX1FUZE1YZXJVQ3VOeFIxTW1mM0NjTXV2ajA?oc=5",
+          "published_at": "Thu, 08 Oct 2026 02:24:49 GMT",
+          "source_url": "https://digitalpr.jp"
+        },
+        {
+          "title": "日本製鉄 フェロクロム調達価格 2.4％安で合意 10―12月積み（日刊産業新聞） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1Ic2V6akxoR0xmcTh1T1BJd2cyLVVVQ3I3WTBNaTV1ODl0Vi1GNGVndmpyUkREN3hsRml5QU9NVmM2MDY0ZDVkNHd3YUwwUmJIZkRaNFVoSWhCcjY4UDk4TEYzQzdTdTZQV1hFbFd6WVJ4c3Y0ZktDaXBNd2NJeDQ?oc=5",
+          "published_at": "Thu, 08 Oct 2026 01:52:01 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "話題株先取り【特別気配】速報 ＜買いトップ 日本製鉄、売りトップ ティアフォー＞ - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9DeFhhT0hxOHZSUy1MaXhNYXJKYWNxOWlveVRZZ0VUNElMa0FrS1VjQXdybS1wYnV1TUY2TnotcmowZmxEb1l3Qm5GTTNfeEdZcThONzNTaTZ2SnZMUkYyUA?oc=5",
+          "published_at": "Tue, 06 Oct 2026 00:03:23 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "日本製鉄子会社工場で作業員感電死、賠償求め提訴の父「電源切っていれば」 - 産経ニュース",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5YNFdmWHdWZTdEaTVVbjQ4a0MtZzF0UzFISERHZXVIdVpQTGlhUHc1SGcxVHV6VlhCcTVrSGJBUzFQRWV6MWlBZTJ6Q01pS2JKMkNOb3NOM3ZBN1kxeUxoSXBqeE15UWZjakFtQXBEb1JRcHNXcHc?oc=5",
+          "published_at": "Fri, 11 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.sankei.com"
+        },
+        {
+          "title": "日本製鉄室蘭シャークスの道産子左腕・石澤大和がＭＡＸ更新１４８キロで１１Ｋ完投勝利【日本選手権道地区予選】 - 道新スポーツ",
+          "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA0MkhTMXItY0pJbkNuc3gtN1I1XzZZYjg0b253NWVmTnRoMnlld3dUY1lPb2plUlAtOFp3QmdfVHBmQzZWOXZZdURvV09pakVYSWNTN2ZGZHlJVWVOUDZUSGVB?oc=5",
+          "published_at": "Fri, 02 Oct 2026 11:10:02 GMT",
+          "source_url": "https://www.doshinsports.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.05563415877759994,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.3477134923599996,
+        "oil_pressure": -0.04368507694787083,
+        "japan_risk": -0.020535639429623886,
+        "usd_rate_pressure": 0.00908144763027341
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

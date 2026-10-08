@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-08T11:39:35.827288+09:00",
+  "prediction_date": "2026-10-08",
+  "symbol": "6522.T",
+  "name": "アスタリスク",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-08T11:39:35.827288+09:00",
+  "market_data_through": "2026-10-08",
+  "reference_price": 1063.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6385080333332688,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.22637034386341742,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5274602896582077,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5714285714285714,
+    "heldout_signals": 49
+  },
+  "evidence": {
+    "price": {
+      "score": -0.9267101610538657,
+      "direction": "DOWN",
+      "day_change": -0.0898972602739726,
+      "momentum5": -0.16758026624902111,
+      "trend": -0.12053157132781478,
+      "volatility": 0.5404726112073827
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "大手アパレル企業「株式会社ワールド」へRFIDリーダー『AsReader』を導入 - 株式会社アスタリスク",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1DSGs3X2xPdTZka0cxOUdIQ2lDa1NsLUh0R0NJQ0hlc3Jmb0p3bHZSanNhbjFJX3oyLS04SWVmTThiYndpWnN5M2stTFU?oc=5",
+          "published_at": "Tue, 24 Feb 2026 08:00:00 GMT",
+          "source_url": "https://www.asx.co.jp"
+        },
+        {
+          "title": "アスタリスク[6522]：アスタリスク、レジに並ばない次世代ショッピングを実現する「RFIDスマートカート」を開発 2026年8月24日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1OQ1pEN1ZpSVh5bk9Pd2hlaFFPQUVCakNtcGNwMHV3UExwQ3dWSWx3QVpjMUNiMmJTWld6Rl9kdDA5ODVuWnNwZE05SkVaV2Y2RFVVd2I0OEFkRXdtV2QwOUh3MVRWZ0F4RUE?oc=5",
+          "published_at": "Mon, 24 Aug 2026 07:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "スーパーマーケット向け『全商品RFID化ソリューション』の本格展開を開始 | 株式会社アスタリスクのプレスリリース - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5pVEFSb2IzaUdwX01EZzRPN3k3encybV9NOW04UU5yMXdraUhqa0hYRFVYTWJBdHRQc2RFaTNFNkhFTFQ3aW5JSUN0djNSamxfaXRWT0ZiY0hreFFETFN2dTFZVU0tSktsMVE?oc=5",
+          "published_at": "Tue, 30 Jun 2026 07:00:00 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "(株)アスタリスク【6522】：決算情報 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBmYjRpVGhybG5xRWU0UDJzR2lyLU5xWk1BM1JLRjRjZVg3UXhqdnR6RkNaWTF3cy15Skl6Tkh4cWtyeHVicUs3UHdTNUFpTjNjbDB6dFp5N1V0ZThHQkJxag?oc=5",
+          "published_at": "Wed, 15 Jul 2026 07:00:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "アスタリスク[6522]：（訂正）「株主優待（設立20周年記念株主優待）の実施に関するお知らせ」の一部訂正について 2026年8月5日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1sdFJYUUdYSy1Gak1VRHJfRW8tRV9jYkFoa1ZFNjhyUl9DR3RaM1BaOGFpbGhqVy1FU2o0NEdSVVFrQjZsdUJ3ZkxXQV9pQVJRel9aV3JHa0NUSE5WYVZmRmVHNks0bUxrbmc?oc=5",
+          "published_at": "Wed, 05 Aug 2026 07:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.05563415877759994,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.3477134923599996,
+        "oil_pressure": -0.04368507694787083,
+        "japan_risk": -0.020535639429623886,
+        "usd_rate_pressure": 0.00908144763027341
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

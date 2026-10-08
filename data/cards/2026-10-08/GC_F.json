@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-08T11:39:35.827288+09:00",
+  "prediction_date": "2026-10-08",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-08T11:39:35.827288+09:00",
+  "market_data_through": "2026-10-07",
+  "reference_price": 4161.10009765625,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.27849370930961764,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.4637670837317649,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.2376788149096792,
+      "direction": "DOWN",
+      "day_change": -0.0062095482299440175,
+      "momentum5": -0.006114624038499938,
+      "trend": -0.02723175118564769,
+      "volatility": 0.16571313361389728
+    },
+    "news": {
+      "score": 0.625,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "逆クラウディング・アウトに直面する中央銀行 長期金利上昇の背景にＡＩ投資 - 第一ライフ資産運用経済研究所",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9NQjJmbFIyZ003REFGVzFFUFo1RHdEYWxiM3ZFZEg5bWpFVE1jdHZreGpmNWc5WFMzbTNOSFhrWDhJUEZpVG1JX1BWVnBNT3ZlZzRRRHpxOUF5Tk0?oc=5",
+          "published_at": "Thu, 08 Oct 2026 01:41:10 GMT",
+          "source_url": "https://www.dlri.co.jp"
+        },
+        {
+          "title": "日本の金利上昇がフランス国債を直撃、日本勢のレパトリと大統領選への不安が招くユーロ圏の新たな火種 【唐鎌大輔の為替から見る日本】IMFが半年前に警告した資本還流が現実化、ユーロ安は円安抑止の思わぬ援軍か(1/4) - JBpress",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBkOHBiekR2d2I2VC1SbGtrZS1YOUlxb2d5SVlGLXh5TDNoWUhfZ3BzZV9CZDYtenl1WGhGMEtvXzdQMjdvNFV6Zi1YU0NLVDdVN0Z1Y2NB?oc=5",
+          "published_at": "Wed, 07 Oct 2026 21:00:00 GMT",
+          "source_url": "https://jbpress.ismedia.jp"
+        },
+        {
+          "title": "COMMENTARY: コラム：米株高・金利上昇は併存可能、タームプレミアムの行方に不安も - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9WS2FjalpHbEpQWkQ5b3Y3Q0pBemxTZXlpN3hfQThsWGg3X3Yyd2J4T280S2JNZlZFSFNNSHRnZ3BPV3FEd2V2SVFoRk85NDgtOVdTdVB1S2J5eFJ1VnR6WXdwdHAtVWY4QWgzNmdjS0t5Y1U4dDR2dUxOZXBoQQ?oc=5",
+          "published_at": "Thu, 08 Oct 2026 02:22:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "米金利が急上昇する中で発表された9月雇用統計 鈍化は一時的要因が寄与したとみる 野村證券・小清水直和 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBnRm0xWXdiZm1iWXZ6NDhmbTA2Uk1NSnRnY0lzaU8yLTRhQjRDZ2Q0N2VFdG9yeHBxbEhmb19KcGl1NDJXREM3VnJNZ01iUC1MWE4tTXk0bFpUcmxialhz?oc=5",
+          "published_at": "Mon, 05 Oct 2026 08:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "「長期金利3％超え」の原因は「高市政権」による財政不安？ この議論が間違っている6つの証拠 | 何が日本経済を壊したのか - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBpd01wcml4RGRYVjVyUXZOZ0dNaU15VWVmYk5ldjFJY2x0Ulctb3JoVkpqN1kxbDMzSnZFVzZvSzZUS25uRnlBUDVvNmU?oc=5",
+          "published_at": "Wed, 07 Oct 2026 22:10:00 GMT",
+          "source_url": "https://diamond.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.0708141011402382,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": -0.3477134923599996,
+        "oil_pressure": -0.04368507694787083,
+        "japan_risk": -0.020535639429623886,
+        "usd_rate_pressure": 0.00908144763027341
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

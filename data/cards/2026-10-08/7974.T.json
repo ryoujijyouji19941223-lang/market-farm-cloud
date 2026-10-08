@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-08T11:39:35.827288+09:00",
+  "prediction_date": "2026-10-08",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-08T11:39:35.827288+09:00",
+  "market_data_through": "2026-10-08",
+  "reference_price": 7791.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.24196494879619046,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.38138806236854234,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.34355856614639774,
+      "direction": "DOWN",
+      "day_change": 0.0020578778135047493,
+      "momentum5": -0.018765743073047902,
+      "trend": -0.035382349665235235,
+      "volatility": 0.31885433640640465
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "3本のソフトからお好きな1本を選択してダウンロードできるお得な「Nintendo Switch 2（日本語・国内専用） 選べるソフトセット」が登場。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSnhiVFcyUXVfNDdlVXZ4RTdna2hqbEttc2tpaEdEUi1vNElGSm41UHoxa1dlYzNPc3RocDh3UWJ0eEdGUTVDNEZEMnNmakZ1UjgzZy1BeWtBWUoxeDZJcTVqcHVwT24tNlVQbjF2RmFQTnFDSTNlQ1hLcW1xVVJLNVZCcGZvQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 01:23:56 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『Nintendo Today!』の「ゼルダの伝説 コレクション・カード」で「ムジュラの仮面 パック」を配信中。『Nintendo Music』で「ムジュラの仮面」の楽曲も配信予定。アイコンパーツも登場。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNd0VRMXRwU3FaQ0w0UHp1NU53YmxmZVEyTnVjb3MtckVxNWQ1MFE2RXZxdEJXUzIzQnk4QXI4T1oxWmRPclpwZFdyZWxZVUZFenEtQ3JsdWwwa3VTV2Fxbzd2LXdwenc3dVZLX0ZTelMyMnRpN0JVdjJ6UEJlUlBLa29xV2RiUQ?oc=5",
+          "published_at": "Mon, 05 Oct 2026 01:40:24 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "「アニメソング大集合『カラオケJOYSOUND for Nintendo Switch』10日間無料キャンペーン」開催。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOMlRNak9EWmNKVXo4a3lqVHBCeFcxaUFMZXNnR1ptdFRJOHU2R1NUeTVZVHB5d3AybHY3TmY2Mkt1LVhvS1ZDcVBVcWgtd3dmZnNmaVNpZlRiY2dCWUM5RmhwUnp2SXZObXg3a294bmFNVGdnbDd4cTBLZ3VGMXhGU3BmSGhyUQ?oc=5",
+          "published_at": "Fri, 02 Oct 2026 02:30:07 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "Nintendo Switch 2『ゼルダの伝説 時のオカリナ』は11月5日発売。「ゼルダの伝説40周年」特別デザインの「Nintendo Switch 2」や周辺機器も10月29日発売。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNSnRDVjRPVHljRnJtTlB4eHVyeklPYnFZNmNiSkRhM2NyamRFQ1ZuczRvZHowbFdWVFFMaGsxTUtpMW14R0xJNUFhWGNlYy1lTFo1UDdTRmRaOHFYU3ByYTFVYUZ4ZEd0WV9BMjNqalI3ZjZGUk1TTDRaMGR4c3hobmtSYjQtUQ?oc=5",
+          "published_at": "Wed, 09 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "コピー能力で広がる世界を自由に冒険。シリーズ完全新作『星のカービィ ワールドビヨンド』がNintendo Switch 2 で2027年春に発売決定。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNcHk4eTQ2bkx3aTNMLWVSTzlGbGgxRW9Senk0cEV5TWRndXdwWVlmNk9WOWRuNmtEVGozZXZCY1ZvLVlwUmFQb1R6b1dtVHMxQnVIYzAyZER2UUpzdVJ2Sm1UUUdZMzllTGR0a0luRGUzNy1jV0gyUkprY3EtUTdBckxxSGJxdw?oc=5",
+          "published_at": "Thu, 10 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.05563415877759994,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.3477134923599996,
+        "oil_pressure": -0.04368507694787083,
+        "japan_risk": -0.020535639429623886,
+        "usd_rate_pressure": 0.00908144763027341
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

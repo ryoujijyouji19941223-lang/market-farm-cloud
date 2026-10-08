@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-08T11:39:35.827288+09:00",
+  "prediction_date": "2026-10-08",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-08T11:39:35.827288+09:00",
+  "market_data_through": "2026-10-08",
+  "reference_price": 158.03700256347656,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.10945353182638683,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5595246701683284,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.48036703356584487,
+    "direction": "FLAT",
+    "price_coef": -0.5,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5128205128205128,
+    "heldout_signals": 39
+  },
+  "evidence": {
+    "price": {
+      "score": 0.06668815212348203,
+      "direction": "UP",
+      "day_change": -0.0016361921776827382,
+      "momentum5": 0.003040175112227095,
+      "trend": 0.006828322158555,
+      "volatility": 0.06334350466507759
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "米ドル/円【USDJPY】：外国為替相場FXレート・チャートをリアルタイム表示 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzbWxqc1ltSU1ndEE0VElnZldUTGdyRVJpOTdKeXBsc0RDSm40dm9kLTJqaDZlOVpoR2E5eEZIX1o0bFR1SFR2N2k4WjRiTnN5dHVBTHJn?oc=5",
+          "published_at": "Wed, 07 Oct 2026 22:56:13 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日銀短観から見える物価の頭打ち感 企業の積極的な価格転嫁姿勢に変化の兆しか 野村證券・岩下真理 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5DeWgxLWYwbktfWG1vSGttT2xkT01jS2ptNk1tazVfcmF4N0QwbTJrcm5VNTR1em1iR2VWYkxtZVRMenJsVFcxdU5lNTNpUGxOZFJBRjZKaThQSEdla0tr?oc=5",
+          "published_at": "Thu, 08 Oct 2026 02:31:28 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "ドル円午前の為替予想、158円挟みの値動きが続く 2026/10/8 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE84MFJ1MjJuM0FSOXEzeW9MUzNhTC1aR05jQndPSHcxejZlMHY4bkRtdmpIc1hrMUV1MTJMOHM1b3F4NjZyNzdIa3M0ZzkyMkh1V2sxRmJaNlFyUFZCMHA4UER1RQ?oc=5",
+          "published_at": "Wed, 07 Oct 2026 22:32:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "FRB利上げ インフレ上振れに警戒感 多くが追加利上げ支持 - NHKニュース",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE91aDJ6bXBPUHdyZnc5djhtYkgxRzFtTlA5YmJhQ2pFbl9RMlRyb28xSGdWTF90UFo1alJmb0ZMVjNFSTdqWjJKQkpfMncwdmdmazFwMnJlblJ3WWlXdE9J?oc=5",
+          "published_at": "Wed, 07 Oct 2026 22:06:59 GMT",
+          "source_url": "https://news.web.nhk"
+        },
+        {
+          "title": "日米介入・日銀利上げでもなぜ円安が止まらないのか？円高転換「3つのシナリオ」の現実味 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBLV0N0UncxYUR4VzdjbWluR2FWRGIyY3BtLUN3dFVFQUQwVGxFRHRMY3FfZVY1dzlBdl9hbDZGQ3FjdEk2LVlwX3B5dHHSAU9BVV95cUxPdmVVM21CcjNrNVQ1ODdLQ0toS052b3BKZFY3TjlobkU4ZERIQzdHbEdFWmtEaXMtRkZhck9yQjFNNUZKanQwY09xb0VVOHU0?oc=5",
+          "published_at": "Wed, 07 Oct 2026 19:30:00 GMT",
+          "source_url": "https://diamond.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.0023705892161269325,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.3477134923599996,
+        "oil_pressure": -0.04368507694787083,
+        "japan_risk": -0.020535639429623886,
+        "usd_rate_pressure": 0.00908144763027341
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

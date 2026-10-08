@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-08T11:39:35.827288+09:00",
+  "prediction_date": "2026-10-08",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-08T11:39:35.827288+09:00",
+  "market_data_through": "2026-10-08",
+  "reference_price": 189.78900146484375,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.052190282856041145,
+      "factor_agreement": 0.5,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5194402925720435,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.033128012032608976,
+      "direction": "NEUTRAL",
+      "day_change": -0.0018545681520492074,
+      "momentum5": 0.006779444526692213,
+      "trend": 0.0007527951073438288,
+      "volatility": 0.07936983731738853
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀短観から見える物価の頭打ち感 企業の積極的な価格転嫁姿勢に変化の兆しか 野村證券・岩下真理 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5DeWgxLWYwbktfWG1vSGttT2xkT01jS2ptNk1tazVfcmF4N0QwbTJrcm5VNTR1em1iR2VWYkxtZVRMenJsVFcxdU5lNTNpUGxOZFJBRjZKaThQSEdla0tr?oc=5",
+          "published_at": "Thu, 08 Oct 2026 02:31:28 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "外為：スイスフラン、189円48銭前後とフラン安・円高で推移 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFB6M2l2RVlHdk0zc3RTT1dIejRxancxbkNCcVhJVnJxX0UwektXVzM3VjBESTRfc3kyaGJKcklneUhaUkJLcG9kbWFRekFZNlRUQmtObkxTTzJzQnpzV2V5WUpB?oc=5",
+          "published_at": "Thu, 08 Oct 2026 01:31:04 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "日銀、10月会合で基調物価2％到達と判断の可能性＝関係筋 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9OeFNVcElHWVdCcHNMQXFKU1VxZ1ZIazdlMmJ0RDN3M1ppMXE5UkM0YnZaYk5KVjVvTURFR2hpQ2dudVBoUENPQ0VjNGVkekdYTUhYZExPbDNRbk9peWlUMi1RVThubFRsZVk2eU5OTGx4bEV2VXB6U3U2OHkxQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 04:32:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日米介入・日銀利上げでもなぜ円安が止まらないのか？円高転換「3つのシナリオ」の現実味 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBLV0N0UncxYUR4VzdjbWluR2FWRGIyY3BtLUN3dFVFQUQwVGxFRHRMY3FfZVY1dzlBdl9hbDZGQ3FjdEk2LVlwX3B5dHHSAU9BVV95cUxPdmVVM21CcjNrNVQ1ODdLQ0toS052b3BKZFY3TjlobkU4ZERIQzdHbEdFWmtEaXMtRkZhck9yQjFNNUZKanQwY09xb0VVOHU0?oc=5",
+          "published_at": "Wed, 07 Oct 2026 19:30:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "基調物価、２％到達と判断へ 今月会合にも―日銀検討 - 時事ドットコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5EN0lDN05FeWZNUkk0TGI0OFNHU3pkMGFnckdCbzFKZGhwRE1uTjhIZ05uZ3JaZTRXRVlwOXBBcHdQb2tsWl9XZTRnYl9jangxWS1MNjVGbXB0V3FsQ3BVT1dDbw?oc=5",
+          "published_at": "Mon, 05 Oct 2026 23:48:00 GMT",
+          "source_url": "https://www.jiji.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.056088231159113607,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": -0.3477134923599996,
+        "oil_pressure": -0.04368507694787083,
+        "japan_risk": -0.020535639429623886,
+        "usd_rate_pressure": 0.00908144763027341
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

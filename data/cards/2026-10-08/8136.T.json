@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-08T11:39:35.827288+09:00",
+  "prediction_date": "2026-10-08",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-08T11:39:35.827288+09:00",
+  "market_data_through": "2026-10-08",
+  "reference_price": 1186.0,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.03884750239463995,
+      "factor_agreement": 0.5,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.48821903764857755,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.044856439085294054,
+      "direction": "DOWN",
+      "day_change": -0.020239570425443998,
+      "momentum5": -0.004616030214015909,
+      "trend": -0.0033028049772240164,
+      "volatility": 0.34456535502817465
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "【ワークマン】サンリオコラボ第2弾は…ふわもこ防寒グッズで冬支度。大人可愛い〈ハローキティ＆クロミ〉デザインがキュートです！（LIMO） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9VODVnaWVHQTZBNUs3M1J6dlN0dERmSUk5S1dKbW5vcF9DUWFPY0xRY1VqYnR4VHhaMVJCUlF0MzZ6ZXM1TG9nWkdBbm1LckN5WGZPNEhGT3dLb3VUd0F0bENSdlQyS2M1RW05N3MzNTROQms2RUNiMk9DRnRnYVk?oc=5",
+          "published_at": "Thu, 08 Oct 2026 00:31:13 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "レゴグループとサンリオ、複数年にわたるパートナーシップを発表 | 株式会社サンリオのプレスリリース - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5qMC11anFYVDlxTlRaZEl4UEZaemhLMFY2R0MtSVNnWTk2NnhzaHNoWElSRjZVM1Z5V2dubmhvay1kUGNEZVlyb3lwamkteGt0X3JlQ2ZGTHFGQ1d5R3YxaDZ3Y3ZGQUVGanc?oc=5",
+          "published_at": "Tue, 06 Oct 2026 08:00:01 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "「WeatherPlanet」と「サンリオキャラクターズ」の夢のコラボの実現を記念し、グッズの発売及びSHIBUYA TSUTAYA IP書店でのPOPUP STOREの実施が決定！ - SHIBUYA TSUTAYA",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE92Z2ZQZnkzWlByYkJwek15V0tTOGFEdVlPWlBCNllBLUVHaHVFUUNDOUpfSXJ2bW9XNF9uOTdMZUlTcHZnNzJCUWFWTHdYeWR6cll3Tjg5cWVVRnljTHc?oc=5",
+          "published_at": "Sun, 04 Oct 2026 07:00:00 GMT",
+          "source_url": "https://shibuyatsutaya.tsite.jp"
+        },
+        {
+          "title": "サンリオがゲームに参入 デジタル領域でIPの価値をより高める（日経Gaming） - 日経クロストレンド",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1wYTd4cm1FcFVBcGlvRG9UYzRSbXhvVEhyWWhaVjhpSnhUaExzeWprT1E4LXRibXVyMXoyd1M1MWtCSmpMZ3UzNXJ6Wm9Qam0tNmJfNFpnTV95V1B3NHd1WG1GUlNTdw?oc=5",
+          "published_at": "Wed, 07 Oct 2026 15:00:00 GMT",
+          "source_url": "https://xtrend.nikkei.com"
+        },
+        {
+          "title": "「ジェラート ピケ」×「サンリオキャラクターズ」大人気コラボ第二弾がsanrio houseにて発売！ - キャラクター情報サイト",
+          "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE1HcE5wWm9WeHVBcFRreFp6UUo2TUFWakdKaEg0SFZTMFEyM2JaQnFibjJVUjB6ZDEtRnhMMHlKZk9rdw?oc=5",
+          "published_at": "Wed, 07 Oct 2026 09:02:41 GMT",
+          "source_url": "https://charalab.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.05563415877759994,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.3477134923599996,
+        "oil_pressure": -0.04368507694787083,
+        "japan_risk": -0.020535639429623886,
+        "usd_rate_pressure": 0.00908144763027341
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

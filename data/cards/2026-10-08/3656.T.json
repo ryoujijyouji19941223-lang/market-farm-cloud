@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-08T11:39:35.827288+09:00",
+  "prediction_date": "2026-10-08",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-08T11:39:35.827288+09:00",
+  "market_data_through": "2026-10-08",
+  "reference_price": 163.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.41517052263925597,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.32529239334563614,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5289666356242678,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5106382978723404,
+    "heldout_signals": 47
+  },
+  "evidence": {
+    "price": {
+      "score": -0.5625583596130906,
+      "direction": "DOWN",
+      "day_change": -0.05780346820809246,
+      "momentum5": -0.09444444444444444,
+      "trend": -0.03234880450070321,
+      "volatility": 0.3993691061732392
+    },
+    "news": {
+      "score": 0.14285714285714285,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "KLab、『スマグロ』ヒットでゲーム事業が急回復、黒字転換 真田社長「長い長いトンネルを抜けた」 『キャプ翼』黒字化など既存にも好影響 - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE9uSWUwSzlkNHhSZVpab3NPLXd3dUJXREU2d3pDOTIxSnJONzg2b2dmNWdDUkY2WS01Z3JQamhHNl9VM09n?oc=5",
+          "published_at": "Tue, 01 Sep 2026 03:48:31 GMT",
+          "source_url": "https://gamebiz.jp"
+        },
+        {
+          "title": "ＫＬａｂ[3656]：ビットコイン及びゴールドの購入内容及び保有状況に関するご報告 2026年10月2日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9XSlZQQ21GRFo3QlFwUnhKT1c4LWFvY3ZOLW1Ganh4b0thREJ2d3VVN2EzMVh3OG1RTXdYM3ZMNm9xNTZkSGtvU0lJR1pLWVhaSmFldm5vMzRDeGYyY3I4aExlWmZTYi04Y1E?oc=5",
+          "published_at": "Fri, 02 Oct 2026 06:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "HOMMA、KLabとUAEにAIスマートホーム事業の合弁会社を設立 - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFAwTENOdThsWVZOVHJScXNuektYcVlCSUJWQVNlaXlyRTJfaVVCZ3p3SEtsRnFXYkhmdFBUeGE3eDRzdGlha0xtdV9nNWhReXpOU2MtWDF1UElucEVwMUxNZ2g0aEQ1TW9fc3c?oc=5",
+          "published_at": "Thu, 16 Jul 2026 07:00:00 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "ゲーム開発のKLab、暗号資産×金運用で含み損2.8億→含み益3千万に ビットコイン上昇で大きく挽回 (オタク総研) - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPM2JwU21kWllEYVVYWEtOZG5Xajh0NVJBLXNOdlRhZk1zT3daRW9LTFJ4U3VqN241Z1VES1NSbk9zT05BZ2dFSjVHNUdCWUFkRHFnZjZITm9vcG1yRTNoT0Q4ZElyemg3Q05iWGlLVUszVHg0MlA5RTBxM19QdHBFNGQzQzhtLUpZbmdNN3Zn?oc=5",
+          "published_at": "Fri, 02 Oct 2026 10:15:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "アラブ首長国連邦（UAE）子会社の設立に関するお知らせ - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5xY1FjeWdFaVVnNThPMnBuNGx2ZlFiOUxPU055M1dTNFFOTjM0VUJMeWtjYkF0UEJFU01SLUlzNEtHb0Z1VFV6Q3NtU2tZaXdZTll6LVJWMWhzcnVaMVdDZjVORno?oc=5",
+          "published_at": "Mon, 22 Jun 2026 07:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.05563415877759994,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.3477134923599996,
+        "oil_pressure": -0.04368507694787083,
+        "japan_risk": -0.020535639429623886,
+        "usd_rate_pressure": 0.00908144763027341
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
