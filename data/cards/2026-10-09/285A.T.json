@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-09T11:55:01.540258+09:00",
+  "prediction_date": "2026-10-09",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-09T11:55:01.540258+09:00",
+  "market_data_through": "2026-10-09",
+  "reference_price": 17220.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.32787768654165644,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.4109881713391186,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.4299202737752533,
+    "direction": "FLAT",
+    "price_coef": 0.5,
+    "macro_coef": 1.0,
+    "edge": 0.12,
+    "heldout_accuracy": 0.5135135135135135,
+    "heldout_signals": 37
+  },
+  "evidence": {
+    "price": {
+      "score": -0.3790710670231459,
+      "direction": "DOWN",
+      "day_change": -0.03798882681564242,
+      "momentum5": -0.1077720207253886,
+      "trend": 0.004014211867779061,
+      "volatility": 0.6165663807996901
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "株式分割が話題のキオクシアと太陽誘電で評価が分かれる理由とは？ キオクシア元研究開発者の億り人・もふ氏が「AI・半導体株の利益成長予想」をAI需要から読み解く（マネーポストWEB） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGbWtpNWtqS3Y1elhlNGVZYWsxeWxBRkprZVV3S3VYa01wZk9VTmVvVHlaTHkzRGIyZjdkXzNTU0Y4aHEySDRmcU1scmswS3Q2QXJMUnFhRjFWVTAzSDBlRWp1ZEM1Ri1OUjZPR0Znd3BidkwzQV8zT1Z4dzZPMk0?oc=5",
+          "published_at": "Thu, 08 Oct 2026 22:17:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "キオクシア株、100万円買えば年末いくらに？ AIに聞く「押し目買い」の好機 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5lSkRPTlFtcEtIWVE1QVZxcGZiU1JlT2hCSGFOcURXMEdkM1NrUVl6NjM3U3ZzY093WUVoWkJfOGF2UkNLcnRxUEZtbTVIYmZfa2VZTC1mOWEtbkd3d2NjWEtfdVFnMkNGVGZZWXdSd1I?oc=5",
+          "published_at": "Fri, 09 Oct 2026 00:08:00 GMT",
+          "source_url": "https://jp.investing.com"
+        },
+        {
+          "title": "東芝がキオクシア株を売却 保有比率11.8%に - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE40NHVkZVF5WUxPWEN6bjBOMWswVkRzTlhCQVMxLVJjM1otQ1hhVWIyRzVWTzJQUURsTUhscDBDRzFJM1kyTVpET00tUjZkN0FTY1l6SHBZYlQ1ZkVscTMwUkc0RFo1TE1vZjRwcg?oc=5",
+          "published_at": "Thu, 08 Oct 2026 09:35:32 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "キオクシアについて、東芝は保有割合が減少したと報告 [変更報告書No.21] - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE56cjJ6Qm9VZ0s5bnlMblhIVk8tVEp5RW5tQ2NQd3ZuMThJYkc4UGJNRk1pUHpVcDQtTnU2cTJRaThuUXUycWlpSDc5SkZVb3M4WFE?oc=5",
+          "published_at": "Thu, 08 Oct 2026 07:03:02 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "キオクシアHDに2兆円のパッシブ勢買いも、TOPIX浮動株比率50%へ - TBS NEWS DIG",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBLNG9hREU5OTdFQ19BM2JzWU12cXNsQVB3T182NzRvenBPRFF3al9VQlVISVZBNmZ2cWFGNWE0SjllSVR0Wk5jM3dwWDN2S05lSDRaYzY2cjNndnZxVEYtMjNna1BqTzg?oc=5",
+          "published_at": "Wed, 07 Oct 2026 09:13:00 GMT",
+          "source_url": "https://newsdig.tbs.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.04239573977278127,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.26497337357988293,
+        "oil_pressure": -0.11144608773581643,
+        "japan_risk": -0.008908104443347442,
+        "usd_rate_pressure": -0.0065221393034262665
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

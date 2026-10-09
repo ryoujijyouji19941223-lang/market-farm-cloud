@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-09T11:55:01.540258+09:00",
+  "prediction_date": "2026-10-09",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-09T11:55:01.540258+09:00",
+  "market_data_through": "2026-10-09",
+  "reference_price": 158.08700561523438,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.05795134476784873,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5297623992054733,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.47901426003848124,
+    "direction": "FLAT",
+    "price_coef": -0.5,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5128205128205128,
+    "heldout_signals": 39
+  },
+  "evidence": {
+    "price": {
+      "score": 0.0511976806688212,
+      "direction": "UP",
+      "day_change": 0.00017087218181566222,
+      "momentum5": 0.0010131494939469299,
+      "trend": 0.005898735792598142,
+      "volatility": 0.06111858248758938
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "資本の奪い合い・米ドル離れ… ドル円相場は今後どうなる - 毎日新聞",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1pN0ZEUnkxZHJZd0VhSEUxeXVmVnZyVGk0NDJCZHdoX0JPWWtvR29NUWpoWmVIWnVyeWxwaU8xWXF0ZV8wTVp4ZWxodnZSS25FVzV0UmctRE1XRDAwajBmUVBuX2NhZzhFNW5MdUhiQTdJS21ZclJNczdIcjZUZU0?oc=5",
+          "published_at": "Thu, 08 Oct 2026 21:30:00 GMT",
+          "source_url": "https://mainichi.jp"
+        },
+        {
+          "title": "【今日のドル円】昨日の振り返りと今日のドル円相場見通し「158円台の幻影――トランプ発言で急反落、ドル円を揺るがす中東ヘッドライン」 2026年10月9日 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB3Q0JtVEtWQnhBU3hBUHcxZkxyZFpLVmdvX2J2aVlkUXF5TlpDUUc4NWVhdDdOQllqckw1aVRBdk9yMU9SQnY1VlllMGZvU0JzT2EzTUhpdG1PTjhkOFdUcVpuaw?oc=5",
+          "published_at": "Fri, 09 Oct 2026 01:55:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀、10月会合で基調物価2％到達と判断の可能性＝関係筋 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9OeFNVcElHWVdCcHNMQXFKU1VxZ1ZIazdlMmJ0RDN3M1ppMXE5UkM0YnZaYk5KVjVvTURFR2hpQ2dudVBoUENPQ0VjNGVkekdYTUhYZExPbDNRbk9peWlUMi1RVThubFRsZVk2eU5OTGx4bEV2VXB6U3U2OHkxQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 04:32:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀短観から見える物価の頭打ち感 企業の積極的な価格転嫁姿勢に変化の兆しか 野村證券・岩下真理 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5DeWgxLWYwbktfWG1vSGttT2xkT01jS2ptNk1tazVfcmF4N0QwbTJrcm5VNTR1em1iR2VWYkxtZVRMenJsVFcxdU5lNTNpUGxOZFJBRjZKaThQSEdla0tr?oc=5",
+          "published_at": "Thu, 08 Oct 2026 08:30:21 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "東京為替：ドル・円は上げ一服でもみ合い - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9mUmQ3cUl5RFBmZGc5MjVLMk5zTjFmT3hPSjNscUJSRGh3bGhhSzBuVWlrdjFpN2h2Rl9jb2ZIeEFxWXdZR1FoY2xrUEo1QnZxVVE?oc=5",
+          "published_at": "Fri, 09 Oct 2026 00:34:18 GMT",
+          "source_url": "https://s.kabutan.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.012579479420335422,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.26497337357988293,
+        "oil_pressure": -0.11144608773581643,
+        "japan_risk": -0.008908104443347442,
+        "usd_rate_pressure": -0.0065221393034262665
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

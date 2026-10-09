@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-09T11:55:01.540258+09:00",
+  "prediction_date": "2026-10-09",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-09T11:55:01.540258+09:00",
+  "market_data_through": "2026-10-09",
+  "reference_price": 190.39300537109375,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.03656067225088313,
+      "factor_agreement": 0.5,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5131638375699675,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.01323562842609064,
+      "direction": "NEUTRAL",
+      "day_change": 0.003476574239766217,
+      "momentum5": 0.0015166911475514855,
+      "trend": 0.0008962045997249479,
+      "volatility": 0.08012988364178264
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀、10月会合で基調物価2％到達と判断の可能性＝関係筋 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9OeFNVcElHWVdCcHNMQXFKU1VxZ1ZIazdlMmJ0RDN3M1ppMXE5UkM0YnZaYk5KVjVvTURFR2hpQ2dudVBoUENPQ0VjNGVkekdYTUhYZExPbDNRbk9peWlUMi1RVThubFRsZVk2eU5OTGx4bEV2VXB6U3U2OHkxQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 04:32:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀短観から見える物価の頭打ち感 企業の積極的な価格転嫁姿勢に変化の兆しか 野村證券・岩下真理 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5DeWgxLWYwbktfWG1vSGttT2xkT01jS2ptNk1tazVfcmF4N0QwbTJrcm5VNTR1em1iR2VWYkxtZVRMenJsVFcxdU5lNTNpUGxOZFJBRjZKaThQSEdla0tr?oc=5",
+          "published_at": "Thu, 08 Oct 2026 08:30:21 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "外為：スイスフラン、190円01銭前後とフラン高・円安で推移 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9Yc28wYzRJT210N3Q0STJHRGo0OS1KdU9CbGo0R3A1UVFfZk54VEF6eUxJUEJuSF9YZkZjVjMtaF8wdHhuRDkwak13RmFPQlRseUE?oc=5",
+          "published_at": "Fri, 09 Oct 2026 01:31:05 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "日銀「9月利上げ」後も進む円安は市場の“先走り”、日米当局の口先介入は今後も続く!? - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBxa0p3OG4yakRQdVhYOExuN2J6V0J2U1lGRGtsLW9WTGdYTU96QXVCR0doN1ZpVWZ1R012RmRtY0R2Q05hbTlxMUhoZnLSAU9BVV95cUxNcUx2OFFjVUdzR3RaR3dJLXQ3ZkZ1cVdMRlU3TkdJTDZQS1hBeWhBM1JzMGMwSnp3MWxidEU5S1Q1Nmc4RUFBaXJqN1ZMUy1z?oc=5",
+          "published_at": "Thu, 08 Oct 2026 19:25:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "「中国で『ちいかわ』人気、将来不安映す」福本智之・元日銀国際局長 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9xZWU0c3BkOUpRNGJpd1dKTVJ3ZjBSSi0xbDVqU1VNS3pSUWw3SGtEQW5KMWkxXy1TUTFIeGFuVlBqSVNjQU9xb0xvbkZGWEY5TmtpcDdUVS0zaFU1djBod04yYkhLVEYyS3BGaw?oc=5",
+          "published_at": "Thu, 08 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.04206963280760996,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": -0.26497337357988293,
+        "oil_pressure": -0.11144608773581643,
+        "japan_risk": -0.008908104443347442,
+        "usd_rate_pressure": -0.0065221393034262665
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

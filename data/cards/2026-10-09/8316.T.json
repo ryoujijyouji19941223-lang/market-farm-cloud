@@ -1,30 +1,30 @@
 {
   "schema_version": 1,
   "model_version": "market-farm-live-v0.6-news-quality",
-  "status": "SETTLED",
-  "created_at_jst": "2026-10-08T11:39:35.827288+09:00",
-  "prediction_date": "2026-10-08",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-09T11:55:01.540258+09:00",
+  "prediction_date": "2026-10-09",
   "symbol": "8316.T",
   "name": "三井住友FG",
   "kind": "equity",
   "horizon": "NEXT_TRADING_DAY",
-  "information_cutoff_jst": "2026-10-08T11:39:35.827288+09:00",
-  "market_data_through": "2026-10-08",
-  "reference_price": 3299.0,
+  "information_cutoff_jst": "2026-10-09T11:55:01.540258+09:00",
+  "market_data_through": "2026-10-09",
+  "reference_price": 3272.0,
   "prediction": {
     "direction": "FLAT",
     "qualification": {
       "direction": "FLAT",
-      "decision": "FORECAST",
-      "evidence_strength": 0.100004489043917,
-      "factor_agreement": 0.6666666666666666,
-      "reason": null
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.05756546633182506,
+      "factor_agreement": 0.5,
+      "reason": "insufficient_evidence"
     },
-    "direction_score": 0.45522235585959975,
+    "direction_score": 0.4758570231012364,
     "note": "direction_score is a model score, not a calibrated probability"
   },
   "challenger": {
-    "probability_up": 0.5299452917880818,
+    "probability_up": 0.5228253801439346,
     "direction": "FLAT",
     "price_coef": 0.0,
     "macro_coef": 1.0,
@@ -34,18 +34,18 @@
   },
   "evidence": {
     "price": {
-      "score": -0.10354318415776029,
+      "score": -0.07530309612633511,
       "direction": "DOWN",
-      "day_change": -0.02164887307236063,
-      "momentum5": -0.02483003251551874,
-      "trend": -0.0005744360284208883,
-      "volatility": 0.3076694076211851
+      "day_change": -0.0075826508947528515,
+      "momentum5": -0.01475459199036433,
+      "trend": -0.0020534439034343155,
+      "volatility": 0.3083740233097296
     },
     "news": {
-      "score": -0.125,
+      "score": 0.0,
       "status": "OK",
       "error": null,
-      "direction": "DOWN",
+      "direction": "NEUTRAL",
       "headlines": [
         {
           "title": "財務・経理の知識をAIに移植、SMBCグループが目指すビジネスモデル変革 - 日経クロステック（xTECH）",
@@ -80,13 +80,13 @@
       ]
     },
     "outside_wind": {
-      "score": 0.05563415877759994,
+      "score": 0.04239573977278127,
       "direction": "UP",
       "regime_snapshot": {
-        "risk_off": -0.3477134923599996,
-        "oil_pressure": -0.04368507694787083,
-        "japan_risk": -0.020535639429623886,
-        "usd_rate_pressure": 0.00908144763027341
+        "risk_off": -0.26497337357988293,
+        "oil_pressure": -0.11144608773581643,
+        "japan_risk": -0.008908104443347442,
+        "usd_rate_pressure": -0.0065221393034262665
       }
     }
   },
@@ -95,33 +95,6 @@
     "live_news": "Google News RSS headlines",
     "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
   },
-  "outcome": {
-    "market_date": "2026-10-09",
-    "price": 3272.0,
-    "change": -0.008184298272203683,
-    "direction": "DOWN",
-    "correct": false,
-    "scored_forecast": true,
-    "settled_at_jst": "2026-10-09T02:55:01.277942+00:00",
-    "target_policy": "FIRST_TRADED_MARKET_DATE_AFTER_REFERENCE",
-    "price_source": "yfinance daily adjusted close"
-  },
-  "review": {
-    "result_type": "動きを見逃した",
-    "supporting_factors": [],
-    "opposing_factors": [
-      "price",
-      "news",
-      "outside_wind"
-    ],
-    "neutral_factors": [],
-    "unknown_factors": [],
-    "factor_directions": {
-      "price": "DOWN",
-      "news": "DOWN",
-      "outside_wind": "UP"
-    },
-    "actual_change": -0.008184298272203683,
-    "note": "This is a mechanical post-mortem classification, not a causal proof."
-  }
+  "outcome": null,
+  "review": null
 }

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-09T11:55:01.540258+09:00",
+  "prediction_date": "2026-10-09",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-09T11:55:01.540258+09:00",
+  "market_data_through": "2026-10-08",
+  "reference_price": 4200.39990234375,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.2743123701847117,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.4893797939509395,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.20441196162159878,
+      "direction": "DOWN",
+      "day_change": 0.014417780620493481,
+      "momentum5": -0.00045211013779422604,
+      "trend": -0.025690520931824,
+      "volatility": 0.17629018854642028
+    },
+    "news": {
+      "score": 0.75,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "金利・為替は多様な要因で決まる、様々な影響注視し財政運営＝高市首相 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE91SVg2a3FVZkcxczRCcHJfaEx4OVJBeS1pYWNoVlZGeFU3bjc4R1BZRnBTbWpoUC1OQzhMcHpnTThXU1BEUlJ3Z19XN1NFbmxiQ2JaeU5QNGR2Wk9CSHBfSG9EUHlQQmdiblhFYjhIT3VKVXZDdUo1VkN0VnU4UQ?oc=5",
+          "published_at": "Fri, 09 Oct 2026 02:17:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "米長期金利の上昇とイールドカーブの示唆 - マネースクエア",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBHMDBTVjhSR0U2WGNfeFM2RENDZUx4azFtekYzZlFNOGliS0FEd3JEclVqNllURmZyRGwxYjlsOEU0OHQ2R1dMeERPNkl1WGJzWDRBRFRMX0JRQQ?oc=5",
+          "published_at": "Thu, 08 Oct 2026 23:41:00 GMT",
+          "source_url": "https://www.m2j.co.jp"
+        },
+        {
+          "title": "【見通し】週間為替展望（ポンド／加ドル）-ポンド、英金利上昇は両刃の材料 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9tMDFtQzFwY0lVODNxTHFvaG84S3hHYzAwcFRxVkV0X2QzWEJjZngzX2ppbkNVS0cxcHZYRVhHaElDQnQ4S25LT0ZFWmsybllOZmY4czJKYU9Xd0xhY2lWSGRqUQ?oc=5",
+          "published_at": "Fri, 09 Oct 2026 02:13:10 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "金利3%は新常態、転換期の金融経営に好機 銀行・証券トップに聞く - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBnV0MwYlA2OGFOQUF4Z3JaVnBfODNyYVFydzlQOU9ydHdrUVhHNVdoUFNFMXF3c3BtWG5oaHVxNXVOVWo2anlZWXFMVy1IYUZzQkt5QnB5YVBoRld1SHRmZ3NCR05fOWphT2VNYQ?oc=5",
+          "published_at": "Thu, 08 Oct 2026 10:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "米金利が急上昇する中で発表された9月雇用統計 鈍化は一時的要因が寄与したとみる 野村證券・小清水直和 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBnRm0xWXdiZm1iWXZ6NDhmbTA2Uk1NSnRnY0lzaU8yLTRhQjRDZ2Q0N2VFdG9yeHBxbEhmb19KcGl1NDJXREM3VnJNZ01iUC1MWE4tTXk0bFpUcmxialhz?oc=5",
+          "published_at": "Mon, 05 Oct 2026 08:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.05208157521349691,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": -0.26497337357988293,
+        "oil_pressure": -0.11144608773581643,
+        "japan_risk": -0.008908104443347442,
+        "usd_rate_pressure": -0.0065221393034262665
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

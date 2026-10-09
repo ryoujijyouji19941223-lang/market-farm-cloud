@@ -1,37 +1,37 @@
 {
   "schema_version": 1,
   "model_version": "market-farm-live-v0.6-news-quality",
-  "status": "SETTLED",
-  "created_at_jst": "2026-10-08T11:39:35.827288+09:00",
-  "prediction_date": "2026-10-08",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-09T11:55:01.540258+09:00",
+  "prediction_date": "2026-10-09",
   "symbol": "7974.T",
   "name": "任天堂",
   "kind": "equity",
   "horizon": "NEXT_TRADING_DAY",
-  "information_cutoff_jst": "2026-10-08T11:39:35.827288+09:00",
-  "market_data_through": "2026-10-08",
-  "reference_price": 7791.0,
+  "information_cutoff_jst": "2026-10-09T11:55:01.540258+09:00",
+  "market_data_through": "2026-10-09",
+  "reference_price": 8113.0,
   "prediction": {
-    "direction": "DOWN",
+    "direction": "FLAT",
     "qualification": {
-      "direction": "DOWN",
-      "decision": "FORECAST",
-      "evidence_strength": 0.24196494879619046,
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.04472637151318051,
       "factor_agreement": 0.5,
-      "reason": null
+      "reason": "insufficient_evidence"
     },
-    "direction_score": 0.38138806236854234,
+    "direction_score": 0.4830196014140442,
     "note": "direction_score is a model score, not a calibrated probability"
   },
   "challenger": null,
   "evidence": {
     "price": {
-      "score": -0.34355856614639774,
+      "score": -0.056422074334210766,
       "direction": "DOWN",
-      "day_change": 0.0020578778135047493,
-      "momentum5": -0.018765743073047902,
-      "trend": -0.035382349665235235,
-      "volatility": 0.31885433640640465
+      "day_change": 0.03337154502611139,
+      "momentum5": 0.033634857943687146,
+      "trend": -0.023877686627874484,
+      "volatility": 0.3501832150761587
     },
     "news": {
       "score": 0.0,
@@ -46,15 +46,15 @@
           "source_url": "https://www.nintendo.com"
         },
         {
-          "title": "『Nintendo Today!』の「ゼルダの伝説 コレクション・カード」で「ムジュラの仮面 パック」を配信中。『Nintendo Music』で「ムジュラの仮面」の楽曲も配信予定。アイコンパーツも登場。 - Nintendo",
-          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNd0VRMXRwU3FaQ0w0UHp1NU53YmxmZVEyTnVjb3MtckVxNWQ1MFE2RXZxdEJXUzIzQnk4QXI4T1oxWmRPclpwZFdyZWxZVUZFenEtQ3JsdWwwa3VTV2Fxbzd2LXdwenc3dVZLX0ZTelMyMnRpN0JVdjJ6UEJlUlBLa29xV2RiUQ?oc=5",
-          "published_at": "Mon, 05 Oct 2026 01:40:24 GMT",
+          "title": "「マイマリオ」に「のせかえメロディーカー」が登場。「かおルイージ」「かおピーチ」の配信や、キャラクターのつみきを使った「かおあそび」、「コマどりマリオ」最新話もご紹介。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPVFAyMnk4cjZnclNSc2htdXFveTRqYTRZTEZRV0NJZ3dBUTJpVTJzZ3JNUXc0S1J1VzlqRUNFNzIxNVM2OFJtVlppT2g2T1plMWM4WThqX2stWTdIRDctX0xOSzRGRnJ3ZzZ0Z2ZNTUI4S3pYX0VhM2xYSVNhemhMZEI1MFlqdw?oc=5",
+          "published_at": "Tue, 06 Oct 2026 01:18:19 GMT",
           "source_url": "https://www.nintendo.com"
         },
         {
-          "title": "「アニメソング大集合『カラオケJOYSOUND for Nintendo Switch』10日間無料キャンペーン」開催。 - Nintendo",
-          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOMlRNak9EWmNKVXo4a3lqVHBCeFcxaUFMZXNnR1ptdFRJOHU2R1NUeTVZVHB5d3AybHY3TmY2Mkt1LVhvS1ZDcVBVcWgtd3dmZnNmaVNpZlRiY2dCWUM5RmhwUnp2SXZObXg3a294bmFNVGdnbDd4cTBLZ3VGMXhGU3BmSGhyUQ?oc=5",
-          "published_at": "Fri, 02 Oct 2026 02:30:07 GMT",
+          "title": "『Nintendo Today!』の「ゼルダの伝説 コレクション・カード」で「ムジュラの仮面 パック」を配信中。『Nintendo Music』で「ムジュラの仮面」の楽曲も配信予定。アイコンパーツも登場。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNd0VRMXRwU3FaQ0w0UHp1NU53YmxmZVEyTnVjb3MtckVxNWQ1MFE2RXZxdEJXUzIzQnk4QXI4T1oxWmRPclpwZFdyZWxZVUZFenEtQ3JsdWwwa3VTV2Fxbzd2LXdwenc3dVZLX0ZTelMyMnRpN0JVdjJ6UEJlUlBLa29xV2RiUQ?oc=5",
+          "published_at": "Thu, 08 Oct 2026 21:07:00 GMT",
           "source_url": "https://www.nintendo.com"
         },
         {
@@ -72,13 +72,13 @@
       ]
     },
     "outside_wind": {
-      "score": 0.05563415877759994,
+      "score": 0.04239573977278127,
       "direction": "UP",
       "regime_snapshot": {
-        "risk_off": -0.3477134923599996,
-        "oil_pressure": -0.04368507694787083,
-        "japan_risk": -0.020535639429623886,
-        "usd_rate_pressure": 0.00908144763027341
+        "risk_off": -0.26497337357988293,
+        "oil_pressure": -0.11144608773581643,
+        "japan_risk": -0.008908104443347442,
+        "usd_rate_pressure": -0.0065221393034262665
       }
     }
   },
@@ -87,35 +87,6 @@
     "live_news": "Google News RSS headlines",
     "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
   },
-  "outcome": {
-    "market_date": "2026-10-09",
-    "price": 8113.0,
-    "change": 0.041329739442947044,
-    "direction": "UP",
-    "correct": false,
-    "scored_forecast": true,
-    "settled_at_jst": "2026-10-09T02:55:01.094445+00:00",
-    "target_policy": "FIRST_TRADED_MARKET_DATE_AFTER_REFERENCE",
-    "price_source": "yfinance daily adjusted close"
-  },
-  "review": {
-    "result_type": "方向を逆に読んだ",
-    "supporting_factors": [
-      "price"
-    ],
-    "opposing_factors": [
-      "outside_wind"
-    ],
-    "neutral_factors": [
-      "news"
-    ],
-    "unknown_factors": [],
-    "factor_directions": {
-      "price": "DOWN",
-      "news": "NEUTRAL",
-      "outside_wind": "UP"
-    },
-    "actual_change": 0.041329739442947044,
-    "note": "This is a mechanical post-mortem classification, not a causal proof."
-  }
+  "outcome": null,
+  "review": null
 }

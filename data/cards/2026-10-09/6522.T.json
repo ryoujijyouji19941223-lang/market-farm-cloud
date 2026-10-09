@@ -1,30 +1,30 @@
 {
   "schema_version": 1,
   "model_version": "market-farm-live-v0.6-news-quality",
-  "status": "SETTLED",
-  "created_at_jst": "2026-10-08T11:39:35.827288+09:00",
-  "prediction_date": "2026-10-08",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-09T11:55:01.540258+09:00",
+  "prediction_date": "2026-10-09",
   "symbol": "6522.T",
   "name": "アスタリスク",
   "kind": "equity",
   "horizon": "NEXT_TRADING_DAY",
-  "information_cutoff_jst": "2026-10-08T11:39:35.827288+09:00",
-  "market_data_through": "2026-10-08",
-  "reference_price": 1063.0,
+  "information_cutoff_jst": "2026-10-09T11:55:01.540258+09:00",
+  "market_data_through": "2026-10-09",
+  "reference_price": 1110.0,
   "prediction": {
     "direction": "DOWN",
     "qualification": {
       "direction": "DOWN",
       "decision": "FORECAST",
-      "evidence_strength": 0.6385080333332688,
+      "evidence_strength": 0.6168171432216666,
       "factor_agreement": 0.5,
       "reason": null
     },
-    "direction_score": 0.22637034386341742,
+    "direction_score": 0.2397556853630178,
     "note": "direction_score is a model score, not a calibrated probability"
   },
   "challenger": {
-    "probability_up": 0.5274602896582077,
+    "probability_up": 0.5202362644567821,
     "direction": "FLAT",
     "price_coef": 0.0,
     "macro_coef": 1.0,
@@ -34,12 +34,12 @@
   },
   "evidence": {
     "price": {
-      "score": -0.9267101610538657,
+      "score": -0.8977320327290432,
       "direction": "DOWN",
-      "day_change": -0.0898972602739726,
-      "momentum5": -0.16758026624902111,
-      "trend": -0.12053157132781478,
-      "volatility": 0.5404726112073827
+      "day_change": 0.06118546845124273,
+      "momentum5": -0.11128903122498002,
+      "trend": -0.12690662730403834,
+      "volatility": 0.6262118233443232
     },
     "news": {
       "score": 0.0,
@@ -66,27 +66,27 @@
           "source_url": "https://prtimes.jp"
         },
         {
-          "title": "(株)アスタリスク【6522】：決算情報 - Yahoo!ファイナンス",
-          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBmYjRpVGhybG5xRWU0UDJzR2lyLU5xWk1BM1JLRjRjZVg3UXhqdnR6RkNaWTF3cy15Skl6Tkh4cWtyeHVicUs3UHdTNUFpTjNjbDB6dFp5N1V0ZThHQkJxag?oc=5",
-          "published_at": "Wed, 15 Jul 2026 07:00:00 GMT",
-          "source_url": "https://finance.yahoo.co.jp"
-        },
-        {
           "title": "アスタリスク[6522]：（訂正）「株主優待（設立20周年記念株主優待）の実施に関するお知らせ」の一部訂正について 2026年8月5日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
           "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1sdFJYUUdYSy1Gak1VRHJfRW8tRV9jYkFoa1ZFNjhyUl9DR3RaM1BaOGFpbGhqVy1FU2o0NEdSVVFrQjZsdUJ3ZkxXQV9pQVJRel9aV3JHa0NUSE5WYVZmRmVHNks0bUxrbmc?oc=5",
           "published_at": "Wed, 05 Aug 2026 07:00:00 GMT",
           "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "RFIDソリューション販売開始。次世代RFIDソリューション『AsReader BOX-Type』を「coca」旗艦店に導入 ～全国100店舗以上を展開するadapt retailingで店舗DXを実証、中長期の業績拡大へ本格着手～ - 株式会社アスタリスク",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBoNnp1MzhONTZfSElhcFJia0pQUi16eFpCajdyQVIyODlTelhKUGpzQWd4M0czRDgxZ2p4XzBtOXJKYXY0V05NT3BUQVE2c00?oc=5",
+          "published_at": "Mon, 10 Aug 2026 07:00:00 GMT",
+          "source_url": "https://www.asx.co.jp"
         }
       ]
     },
     "outside_wind": {
-      "score": 0.05563415877759994,
+      "score": 0.04239573977278127,
       "direction": "UP",
       "regime_snapshot": {
-        "risk_off": -0.3477134923599996,
-        "oil_pressure": -0.04368507694787083,
-        "japan_risk": -0.020535639429623886,
-        "usd_rate_pressure": 0.00908144763027341
+        "risk_off": -0.26497337357988293,
+        "oil_pressure": -0.11144608773581643,
+        "japan_risk": -0.008908104443347442,
+        "usd_rate_pressure": -0.0065221393034262665
       }
     }
   },
@@ -95,35 +95,6 @@
     "live_news": "Google News RSS headlines",
     "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
   },
-  "outcome": {
-    "market_date": "2026-10-09",
-    "price": 1110.0,
-    "change": 0.04421448730009403,
-    "direction": "UP",
-    "correct": false,
-    "scored_forecast": true,
-    "settled_at_jst": "2026-10-09T02:55:01.001107+00:00",
-    "target_policy": "FIRST_TRADED_MARKET_DATE_AFTER_REFERENCE",
-    "price_source": "yfinance daily adjusted close"
-  },
-  "review": {
-    "result_type": "方向を逆に読んだ",
-    "supporting_factors": [
-      "price"
-    ],
-    "opposing_factors": [
-      "outside_wind"
-    ],
-    "neutral_factors": [
-      "news"
-    ],
-    "unknown_factors": [],
-    "factor_directions": {
-      "price": "DOWN",
-      "news": "NEUTRAL",
-      "outside_wind": "UP"
-    },
-    "actual_change": 0.04421448730009403,
-    "note": "This is a mechanical post-mortem classification, not a causal proof."
-  }
+  "outcome": null,
+  "review": null
 }

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-09T11:55:01.540258+09:00",
+  "prediction_date": "2026-10-09",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-09T11:55:01.540258+09:00",
+  "market_data_through": "2026-10-09",
+  "reference_price": 631.0999755859375,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.22464841269501296,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.38550531021094947,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.3210133113663173,
+      "direction": "DOWN",
+      "day_change": -0.0003168259320429634,
+      "momentum5": -0.017743228660019428,
+      "trend": -0.032725439308003756,
+      "volatility": 0.22826748184524828
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "日本製鉄 日産など2社に採用 2.0ギガパスカル級ホットスタンプ用鋼板 - WEB産業新聞",
+          "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE4wdmhfLW1BTFpnQnE4VWV5dEYzeGNLZmljQ0FOTnk3aEs0bEQ2bnlhVm5Id1lHeG5CTmwwMnpwc1I4Q2Znek1tb2p3SDBnTWwyZFVHUi1nTmJyVEVCdkJrYTFB?oc=5",
+          "published_at": "Thu, 08 Oct 2026 20:51:00 GMT",
+          "source_url": "https://www.japanmetal.com"
+        },
+        {
+          "title": "ラグビー・日本製鉄釜石シーウェイブス ベンジャミン・ニーニー選手 サモア代表に選出 - TBS NEWS DIG",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBtQmJZbmY3R1RlWFlxMEQ4RmhqQnA1SElVOURYNnNqVjh0dk1oMlprdTliNURRcnctNThxOHN0alNkcWVlRWhZUWs3dHoxbzRmOGd6bEE3QQ?oc=5",
+          "published_at": "Thu, 08 Oct 2026 04:19:00 GMT",
+          "source_url": "https://newsdig.tbs.co.jp"
+        },
+        {
+          "title": "日本製鉄 「統合報告書2026」の発行について - Digital PR Platform",
+          "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE5GV2lMaWV4NWRMRGh4VVlXaEJwZThZdEtxcGRvanpvVTZHYkxNVk1MZXNBWXkwRTZRbG44SHkyODRWcWs?oc=5",
+          "published_at": "Wed, 07 Oct 2026 02:27:04 GMT",
+          "source_url": "https://digitalpr.jp"
+        },
+        {
+          "title": "ラグビー・日本製鉄釜石シーウェイブス ベンジャミン・ニーニー選手 サモア代表に選出（IBC岩手放送） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9xa08tQ21RYmxzd3VLVjZWelcxZ3h1LU9lbDJ3a0JBMnIwaU56TVdJa3NqMEczVWEtY0dxNU90OTlwSTFKSzN1U2hxaGZadEZYbU5PTmJTT29oSFRIdGhjUGplbDRuQzd1bmo3dG9SeWlMNWNUd3daNDRTNkNuaEE?oc=5",
+          "published_at": "Thu, 08 Oct 2026 04:20:27 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "日本製鉄、GXスチール活用の新社宅が竣工 - グループの脱炭素技術を結集 - ｄメニューニュース",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBZLVF6dWFwY05IbWEya0tSUnRSalU0RFRTMWhpQjltdDRqVGFwcTVTSi12RDF5UC1Ca3ZQT1F0QnJHM3RaRDFEQkR3MGp3cnFIV1JBQ1VfLTJJOFM4MWJtVjFsZ3NBallHQlRaajBtcmJNMi03LWJB0gF8QVVfeXFMUGs2MjJlNndCal9NTDdYRkxhS1Jsc0hoVWUtVUlhUC1RYXVKc2ZJTzZxekVrTWxyeVk2Q3cxYmR5TFFNWklkRHZMblF5dGlSdHF1RFJpTmxGUGVrSnNjeFI1RVo2UlJ6R1NsbmxlVUdMT2l0WDFsUDE1NWV6Rw?oc=5",
+          "published_at": "Thu, 08 Oct 2026 07:22:00 GMT",
+          "source_url": "https://topics.smt.docomo.ne.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.04239573977278127,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.26497337357988293,
+        "oil_pressure": -0.11144608773581643,
+        "japan_risk": -0.008908104443347442,
+        "usd_rate_pressure": -0.0065221393034262665
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

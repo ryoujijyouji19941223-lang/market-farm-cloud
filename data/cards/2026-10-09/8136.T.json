@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-09T11:55:01.540258+09:00",
+  "prediction_date": "2026-10-09",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-09T11:55:01.540258+09:00",
+  "market_data_through": "2026-10-09",
+  "reference_price": 1227.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.14872140466243883,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5783719257497003,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.2093559466125318,
+      "direction": "UP",
+      "day_change": 0.02079866888519133,
+      "momentum5": 0.03895004233700261,
+      "trend": 0.0070871882429572874,
+      "volatility": 0.34687374145238065
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "【ワークマン】サンリオコラボ第2弾！ 「クロミ」も登場 マフラー、スウェット…防寒＆外出に役立つアイテム計6品 1290円から - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9GbUdySnl2OXdYeHFwOTQxb01RUUhOelM2ZndpdzRTejBLeXI0U0NDRzVfdjJ6aTZtbEdERjFRdWdhNVBQNldjUVJrVU1YX0xKQVVDNFVxUF9KaVlrbEludjVEdjBkaVRwTkRrR053SEo4aHY5NVdxcS1pZUJoUVU?oc=5",
+          "published_at": "Fri, 09 Oct 2026 02:15:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "【Ballelite(バレリット)】サンリオキャラクターズコラボ第三弾！「ポムポムプリン」「マイメロディ＆クロミ」の限定デザインも登場！ - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBSVzVuc3NkU05XTTluVm9KLUVGZldRdlRxZElkdUN4bDdmdEZCUmdCLWxVSE4wcDZmSUUyR0pTMGpKb1hqU2NWQzA0X3M2eVg5RC1XaHpHelZhMlk1d0MteDlRbmxvdDFnY3c?oc=5",
+          "published_at": "Thu, 08 Oct 2026 23:00:01 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "「WeatherPlanet」と「サンリオキャラクターズ」の夢のコラボの実現を記念し、グッズの発売及びSHIBUYA TSUTAYA IP書店でのPOPUP STOREの実施が決定！ - SHIBUYA TSUTAYA",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE92Z2ZQZnkzWlByYkJwek15V0tTOGFEdVlPWlBCNllBLUVHaHVFUUNDOUpfSXJ2bW9XNF9uOTdMZUlTcHZnNzJCUWFWTHdYeWR6cll3Tjg5cWVVRnljTHc?oc=5",
+          "published_at": "Sun, 04 Oct 2026 07:00:00 GMT",
+          "source_url": "https://shibuyatsutaya.tsite.jp"
+        },
+        {
+          "title": "「Sanrio Kawaii Me Live! リリース記念ライブ」出演決定！ - EBiDAN（恵比寿学園男子部）",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5oR1AyM2NQLVh4WHdaczBGUFJhcUhVeHpDSzBMbmlrV1NMdF9IR2pfb2FwaG9kcFVDNzJJTWhYRVRSTDY0SmhXNU9nbU80Y1E?oc=5",
+          "published_at": "Mon, 21 Sep 2026 03:18:22 GMT",
+          "source_url": "https://ebidan.jp"
+        },
+        {
+          "title": "セブン-イレブンで「サンリオキャラクターズ」マスコット付きグミが10月発売！ハローキティ、ポムポムプリンなど集めて楽しい全12種 - インサイド",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5wMmFSVURHQ0hOSnkxUmx6SlFuVW5QWTIzdWg1ZEcwcGMtLXU2OVNnNzBCWU9HeUdrQ05qaGx4TnFRNllWbF9lLU80ZzJDbnI0OUF6MjJVWHhYUlFzNktOZUtUOUd3Z29JOEE?oc=5",
+          "published_at": "Thu, 24 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.inside-games.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.04239573977278127,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.26497337357988293,
+        "oil_pressure": -0.11144608773581643,
+        "japan_risk": -0.008908104443347442,
+        "usd_rate_pressure": -0.0065221393034262665
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
