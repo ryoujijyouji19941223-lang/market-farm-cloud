@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-12T11:17:59.064215+09:00",
+  "prediction_date": "2026-10-12",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-12T11:17:59.064215+09:00",
+  "market_data_through": "2026-10-09",
+  "reference_price": 629.4000244140625,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.2584447830974736,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.36512641338139573,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.3332533848190028,
+      "direction": "DOWN",
+      "day_change": -0.00300960465015776,
+      "momentum5": -0.020389067059824906,
+      "trend": -0.03311592283228171,
+      "volatility": 0.22811209564117108
+    },
+    "news": {
+      "score": -0.16666666666666666,
+      "status": "OK",
+      "error": null,
+      "direction": "DOWN",
+      "headlines": [
+        {
+          "title": "消防車11台が出動 日本製鉄九州製鉄所大分地区の工場で火災 けが人なし 大分 - FNNプライムオンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1oWTdnbHA4eWlONFFrX1FRUnlnbldTVm9KZmxnNXRLbGNMRzllTmlUaVl6c1VBU2dtOVZvakR0VEdsUmxwdENTWTZZcGl4UQ?oc=5",
+          "published_at": "Sun, 11 Oct 2026 09:00:00 GMT",
+          "source_url": "https://www.fnn.jp"
+        },
+        {
+          "title": "OSAKA AICHI GAMES 2026 日本製鉄堺ブレイザーズ vs ジェイテクトSTINGS愛知 - Locipo(ロキポ)",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBiTHY1TVgwSHhSMXhKREVTcWtFYm5NMXdGNEpOd3Q5X0hLNWNEUm9XYVZBYUVGcU9RODlhY1BaX0FNWEczX0U0SVFmbWVSQVc3VU8zNXVVOTduSWt4aUZ6SE9SazhYU1dzVTJuU2lLbjg?oc=5",
+          "published_at": "Sun, 11 Oct 2026 11:24:01 GMT",
+          "source_url": "https://locipo.jp"
+        },
+        {
+          "title": "信用残ランキング【売り残減少】 シンプレクス、ヤマダＨＤ、日本製鉄 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1mdWJMUjZLTzk3Vk0tZVYzVnJRcndxLWt0OC02Uk01WUxEeWFNVWJtYklZSFRqTWh3N2sxaDlabWdsWjVoZEJoQkxTN1lNd0lzcHc?oc=5",
+          "published_at": "Sat, 10 Oct 2026 23:05:00 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "日本製鉄のGXスチール「NSCarbolex Neutral」が使用されたオフィス家具が東京都に初採用 - Digital PR Platform",
+          "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE93bF9MZHZQWmUzdm1HakZ6YzBWRUtsb1lzQzRGNU1lRVROcncydlZRcEFaYl9vYjJXc0VvelZqaFAyNjg?oc=5",
+          "published_at": "Fri, 09 Oct 2026 05:07:08 GMT",
+          "source_url": "https://digitalpr.jp"
+        },
+        {
+          "title": "ラグビー・日本製鉄釜石シーウェイブス ベンジャミン・ニーニー選手 サモア代表に選出 - TBS NEWS DIG",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBtQmJZbmY3R1RlWFlxMEQ4RmhqQnA1SElVOURYNnNqVjh0dk1oMlprdTliNURRcnctNThxOHN0alNkcWVlRWhZUWs3dHoxbzRmOGd6bEE3QQ?oc=5",
+          "published_at": "Thu, 08 Oct 2026 04:19:00 GMT",
+          "source_url": "https://newsdig.tbs.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.02332765391478908,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.14579783696743176,
+        "oil_pressure": 0.04305024267241553,
+        "japan_risk": -0.031684964026876594,
+        "usd_rate_pressure": -0.02598309613820049
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

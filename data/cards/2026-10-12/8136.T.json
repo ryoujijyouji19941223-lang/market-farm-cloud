@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-12T11:17:59.064215+09:00",
+  "prediction_date": "2026-10-12",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-12T11:17:59.064215+09:00",
+  "market_data_through": "2026-10-09",
+  "reference_price": 1237.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.1741119493847964,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5912165018118567,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.2509011783787912,
+      "direction": "UP",
+      "day_change": 0.02911813643926786,
+      "momentum5": 0.047417442845046676,
+      "trend": 0.008338066099465413,
+      "volatility": 0.3547965743810675
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "「サンリオキャラクターズ」新作びっくらたまごのテーマは、”ぷりてぃーぱーてぃ”！キラキラメタリックな帽子＆アイテムを持ったハローキティたち全8種 - インサイド",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE4zNG81ZG1zRU15U0s3dDdYblJ6UVFoQm45a09SbWZCRy10NzJVYWRsU2dYeHZVZ3pUM1lEZlRHRkVpTVFEQTB0dWpPTTR3R29HeXA4Y2xONjRVYkgtaXU1YkQ4RHdLcU5WNEE?oc=5",
+          "published_at": "Sun, 11 Oct 2026 21:30:03 GMT",
+          "source_url": "https://www.inside-games.jp"
+        },
+        {
+          "title": "「ジェラピケ」×サンリオキャラクターズ第2弾！ハローキティ、マイメロディ、クロミらのもこもこルームウェアが登場 - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9nLXMyNlhkSUtOeGJfTnhSTVFSMS1mZV9CV3p4Y0I2U3pGWHlxSUtTSk5RWFp4TEZjeUNIbmtRM2o4TE11VVp6a2RubVpqdmN4bjA1d21PY2FQaXh3VzBOZDVmOWFuQXhIcFdXMF9GNG1EaFdRTDRfZk1INGpYNGs?oc=5",
+          "published_at": "Sat, 10 Oct 2026 04:00:04 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "『サンリオキャラクターズ』×『グランブルーファンタジー』 『グラブルフェス2026』にてコラボレーション決定！ - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE03XzZ0dlJfMHF5TkR2dWl2b193S2ZxUndCdFBOUTZsaF9IMWhWaG1pNldfWFVQUUY2a2dIUEZoZm5qVHZHVTF4UEd4dEx0WUl1NGZzMXd1bS1Wdk40TW54dGFVMUE0Q0Qwa3c?oc=5",
+          "published_at": "Fri, 09 Oct 2026 09:00:02 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "サンリオくじ「クロミ当りくじ」 ｜商品情報 - ファミリーマート",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1VMmFLMVdmeGpSd2x4d0J4YVJwUWFNNDh3MXFvM3lhYkJOSTRPWExjbkhBZlRmTDROMkFaVkY2XzZyOXRhbTRhajNtc3RlQmVKWHlKdXY0VjFnd0NnbExnNDRCMA?oc=5",
+          "published_at": "Mon, 28 Sep 2026 15:07:15 GMT",
+          "source_url": "https://www.family.co.jp"
+        },
+        {
+          "title": "ジェラピケ×サンリオ第2弾解禁！マイメロ＆クロミ参戦に喜びの声「全身揃えたくなる！」（ふたまん＋） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1IZ1V4V0NtYVNPM2pQX09qMWJMbHd6S1ZFQWJuRnZIVU1mUkpnYk13dmJROXU0OXgwMV9tdTlObUE1NjJMajZpQVZhMjE0dU9xb2RZckJ6NjB5VkI4VGoteXlCUkY3WllZaUhsb0xON2w3REhXejhLSGdnSWFQMjA?oc=5",
+          "published_at": "Sat, 10 Oct 2026 22:00:35 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.02332765391478908,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.14579783696743176,
+        "oil_pressure": 0.04305024267241553,
+        "japan_risk": -0.031684964026876594,
+        "usd_rate_pressure": -0.02598309613820049
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

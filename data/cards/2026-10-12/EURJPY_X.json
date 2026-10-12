@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-12T11:17:59.064215+09:00",
+  "prediction_date": "2026-10-12",
+  "symbol": "EURJPY=X",
+  "name": "ユーロ円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-12T11:17:59.064215+09:00",
+  "market_data_through": "2026-10-12",
+  "reference_price": 177.35299682617188,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.1506557764360885,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.535441748455634,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.06331469294529153,
+      "direction": "DOWN",
+      "day_change": 0.0006940196445184288,
+      "momentum5": -0.0009407809952096668,
+      "trend": -0.007454547163633696,
+      "volatility": 0.05693737938696335
+    },
+    "news": {
+      "score": 0.625,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀は「普通」の利上げペースへ 2027年の利上げ局面終了後、超長期金利の低下を予想 野村證券・宍戸知暁 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9MZWVXNWxHQ1VPREtUZmFGQ3Q2U0M2Wmx1QmJtTXpNaGR6OGNFanlwMVdqUDdXcHpKWVEtd3ktZ3ZBRHVCLWVldGd3WHE0QzVkN01rVENmVUpqREdGOTZZ?oc=5",
+          "published_at": "Fri, 09 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "強まる利上げ観測、でもなぜ円高にならない？ 根強い日銀への疑念 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9DYld5N1FQdE04cERLRVhVWThRQVNEQjZjZjdnWU8yX2dGNWY0dlQzWVJEMFl0aEgtbExSWnZGeFh6cTZVNXEwNHhuUEllMDhFX3U3dVFxOTJ3X3VNQzBYYTNLZnNJbm8?oc=5",
+          "published_at": "Fri, 09 Oct 2026 08:00:00 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "日銀は「10月の連続利上げ」を示唆するか 総裁と審議委員の発信に注目 - 日経ビジネス電子版",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE40eVZnQV92WGlkWHhmMmpDaGVveWlseWpmN3k1VHpER1h3M1N4dE1TLWJFS0RPVjMzQ2R1ak1ONWtBUFVNVm5CX05zRFhuSzAzblBwU25JTnFMRnFUdklJWUc1NWxhODA?oc=5",
+          "published_at": "Fri, 09 Oct 2026 08:00:00 GMT",
+          "source_url": "https://business.nikkei.com"
+        },
+        {
+          "title": "日銀、10月会合で基調物価2％到達と判断の可能性＝関係筋 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9OeFNVcElHWVdCcHNMQXFKU1VxZ1ZIazdlMmJ0RDN3M1ppMXE5UkM0YnZaYk5KVjVvTURFR2hpQ2dudVBoUENPQ0VjNGVkekdYTUhYZExPbDNRbk9peWlUMi1RVThubFRsZVk2eU5OTGx4bEV2VXB6U3U2OHkxQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 04:32:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀「9月利上げ」後も進む円安は市場の“先走り”、日米当局の口先介入は今後も続く!? - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBxa0p3OG4yakRQdVhYOExuN2J6V0J2U1lGRGtsLW9WTGdYTU96QXVCR0doN1ZpVWZ1R012RmRtY0R2Q05hbTlxMUhoZnLSAU9BVV95cUxNcUx2OFFjVUdzR3RaR3dJLXQ3ZkZ1cVdMRlU3TkdJTDZQS1hBeWhBM1JzMGMwSnp3MWxidEU5S1Q1Nmc4RUFBaXJqN1ZMUy1z?oc=5",
+          "published_at": "Thu, 08 Oct 2026 19:25:00 GMT",
+          "source_url": "https://diamond.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.009011901555268209,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.14579783696743176,
+        "oil_pressure": 0.04305024267241553,
+        "japan_risk": -0.031684964026876594,
+        "usd_rate_pressure": -0.02598309613820049
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

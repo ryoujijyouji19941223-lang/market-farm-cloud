@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-12T11:17:59.064215+09:00",
+  "prediction_date": "2026-10-12",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-12T11:17:59.064215+09:00",
+  "market_data_through": "2026-10-09",
+  "reference_price": 17505.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.2874691911180059,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.435522289928404,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.43687323334541694,
+    "direction": "FLAT",
+    "price_coef": 0.5,
+    "macro_coef": 1.0,
+    "edge": 0.12,
+    "heldout_accuracy": 0.5142857142857142,
+    "heldout_signals": 35
+  },
+  "evidence": {
+    "price": {
+      "score": -0.3104601473141833,
+      "direction": "DOWN",
+      "day_change": -0.02206703910614527,
+      "momentum5": -0.0930051813471503,
+      "trend": 0.006370770858066699,
+      "volatility": 0.6076396977487121
+    },
+    "news": {
+      "score": 0.42857142857142855,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "キオクシアも4位､信用買いの｢含み損｣に投資家が苦しむ20銘柄 - 四季報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFA5MlA5ZWdOSS1oZXBvXzZQcExDR0czTlVBQ2s1R1FQRXhBOGtGWWZ1X2kya3htWk5XU0RuMzhRWGI3dktoRzBENzdiRDcxZkNid3pIMkNPMA?oc=5",
+          "published_at": "Sun, 11 Oct 2026 22:00:00 GMT",
+          "source_url": "https://shikiho.toyokeizai.net"
+        },
+        {
+          "title": "キオクシアHDの売買、2カ月ぶり低水準 ピークの1割に - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9yc2VXVUlfSXpOSjNTTjlJSDZ4MUpvR19fWFJGdnYzZGhTMmVPOFJPWjVLZG84OXZEVEhRc0NlSmIzR193YlVuU0ZkamtjRlJpRE91Z04yX2d0SDFFLXFPcTZlY05aOTlxYU9oNg?oc=5",
+          "published_at": "Fri, 09 Oct 2026 11:10:48 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "「キオクシアに手を出すのは大谷翔平と戦うようなもの」──10年以上負けなしの専業トレーダーが選ぶ“二軍銘柄”の実名 - SmartNews",
+          "link": "https://news.google.com/rss/articles/CBMiggZBVV95cUxPejdRTnhjR0ZrUjlsQk0zZDdESFZ3cC1hb2ctLS1hQjRBbENFdExTQjVnclo2UEpBRC1Xa2JndG9aQzAtdEhUMzdVVnA2NGhzNjhKWWRpRlZtX283czJqNHhmZXRTa2FvblZUdThaLVRfUUFnRUR6aWtvOXh2a3FsQnZQeThYbTRzc2ZYczhld1QwQXVjQlhZUXNjU0J5b2p3UWJibTZsMl9vVWI5UUxkOGZHbFg2RnctdF9QcER5TVByLXVyT082UEo3enp0M3o0NFBkZVpKekd5ZHBoUTRybnBMUnN2dUxtX3NENDZORnFhRWcwSU0yR3NVeF9odEdERTRFcGI2S0RlMHNxeFhvd3NEZUx2SmM0QnR5Nm5Xb3UwdjQ5c1lHeFJXLXlqTTdzcHhDUFNmaG5pUXdLMVpvVWhEUllGczNRT2EwRVVsc1Iwa21MdWFjVWxvaHBKb0tKQWkyNGZ1Nk5McFZVcW9SQmtBN0FKOURtejc2bndmbmxMUDEzdi12Vm1GQ1NwcjlKRjZnUjZPc0J4QlFSM2Y3Sk9YeDMwaVhfd3FTQXNBcmlaQm0tUWpjeEdFZTRtaFBvcW13YlFWc3dhejdULU1mOFRsemJJamhPVVFoNTFsNkJBZG9WVVg2Z1JpZW9xN2paUUxOMG0xekR3b2xuRGVrNGNnWmwzWW40RmJNZTl6dkcxS1hjdXZ2U04xMVJ1V1J1YmR2Q1A5bDhFVXRzMTFzMnlOVTNNbVBIZm80eG1QZVQ2eGgwSDlfMEpPQWRkNEFVRDRMZ0VzTlVLSllXMGcxdkt3dGpNbkVvdnN1clpCZ3duNkVjZ2w5TENZaUhJTW5xZGQ0NUR5YVJ3MWY4TVJwR1RtMG9PRmNPMEdpa0pEMkxPemV2eWFfLWpoSTB5SE5qY2pvODhVTVE3MkVsWll4RVVhT2pvdFRYREh6TUEzeHRkWFRvODQ3eFhqam12cmgyUDMwNncwbV8takdnM1V4a3d4cm5iVEZqek9FZ3hkZ1Qydw?oc=5",
+          "published_at": "Sun, 11 Oct 2026 23:10:26 GMT",
+          "source_url": "https://www.smartnews.com"
+        },
+        {
+          "title": "キオクシア：ハイパースケールデータセンター向けE1.L QLCベースSSD の開発について - Business Wire",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE90RFNqUS1rN2ZKbUlwSjhnR0hxaFRYTlNCaUFENEgxOEJCdmJNRWZPYVF3VWw2U2N2SHVMWWMwX3ZpUzRVM00yWkZ5bE1rN0haX2hFQXROeFZuRWQ2Nko3Vm41ZHpRcFE?oc=5",
+          "published_at": "Fri, 09 Oct 2026 05:16:00 GMT",
+          "source_url": "https://www.businesswire.com"
+        },
+        {
+          "title": "【北浜流一郎のズバリ株先見！】 ─将来のファストリ、キオクシアを探せ！成長株候補にフォーカス - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE56ZDg2dlRULWVwblBhWFpFMnVocmlIaTRsOEtsbTZTQlNxblB4TklPOGtrQmN4UkhaTVBiTG1kZVJnZFFmdUt1ZkJ5UDdERjJqZms4X3pyc3VQSHc3VzhvdA?oc=5",
+          "published_at": "Sun, 11 Oct 2026 00:30:00 GMT",
+          "source_url": "https://kabutan.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.02332765391478908,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.14579783696743176,
+        "oil_pressure": 0.04305024267241553,
+        "japan_risk": -0.031684964026876594,
+        "usd_rate_pressure": -0.02598309613820049
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

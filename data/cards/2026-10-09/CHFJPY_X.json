@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "model_version": "market-farm-live-v0.6-news-quality",
-  "status": "OPEN",
+  "status": "SETTLED",
   "created_at_jst": "2026-10-09T11:55:01.540258+09:00",
   "prediction_date": "2026-10-09",
   "symbol": "CHFJPY=X",
@@ -87,6 +87,34 @@
     "live_news": "Google News RSS headlines",
     "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
   },
-  "outcome": null,
-  "review": null
+  "outcome": {
+    "market_date": "2026-10-12",
+    "price": 190.64999389648438,
+    "change": 0.0013497792363208472,
+    "direction": "FLAT",
+    "correct": true,
+    "scored_forecast": false,
+    "settled_at_jst": "2026-10-12T02:17:58.680333+00:00",
+    "target_policy": "FIRST_TRADED_MARKET_DATE_AFTER_REFERENCE",
+    "price_source": "yfinance daily adjusted close"
+  },
+  "review": {
+    "result_type": "一致",
+    "supporting_factors": [],
+    "opposing_factors": [
+      "news",
+      "outside_wind"
+    ],
+    "neutral_factors": [
+      "price"
+    ],
+    "unknown_factors": [],
+    "factor_directions": {
+      "price": "NEUTRAL",
+      "news": "UP",
+      "outside_wind": "DOWN"
+    },
+    "actual_change": 0.0013497792363208472,
+    "note": "This is a mechanical post-mortem classification, not a causal proof."
+  }
 }

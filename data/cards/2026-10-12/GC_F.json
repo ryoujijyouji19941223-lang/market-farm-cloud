@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-12T11:17:59.064215+09:00",
+  "prediction_date": "2026-10-12",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-12T11:17:59.064215+09:00",
+  "market_data_through": "2026-10-11",
+  "reference_price": 4233.10009765625,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.11309059085950116,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.5079245114038882,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.06692985407261826,
+      "direction": "DOWN",
+      "day_change": 0.003984605874105984,
+      "momentum5": 0.018355537084732365,
+      "trend": -0.017556526458290422,
+      "volatility": 0.1738006776413377
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "米、金利急上昇に危機感 日本発の市場混乱も警戒 - 時事ドットコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9MMmhPZmxYRk5ZWjhWMHhiVHAwdm1FdnQ3NGF6SW1BNkZuSEI0UGZyd0VKRkhGYk1fd25sMnUtWkpObUlpanVUMVctY21WOTljMEJNLW9uaVl1Z0gzSDVaZE9aZw?oc=5",
+          "published_at": "Sun, 11 Oct 2026 22:16:00 GMT",
+          "source_url": "https://www.jiji.com"
+        },
+        {
+          "title": "米金利が急上昇する中で発表された9月雇用統計 鈍化は一時的要因が寄与したとみる 野村證券・小清水直和 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBnRm0xWXdiZm1iWXZ6NDhmbTA2Uk1NSnRnY0lzaU8yLTRhQjRDZ2Q0N2VFdG9yeHBxbEhmb19KcGl1NDJXREM3VnJNZ01iUC1MWE4tTXk0bFpUcmxialhz?oc=5",
+          "published_at": "Fri, 09 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "金利ある世界が到来、投資対象として国債をどう見ればいいのか - JBpress",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9qaHhMUnBMb1psb00zU2ZzNkpkTVpDNWhObzlJQ0RuVTY4MC1sYTZtV1BwZThXanYxbmxoWHE3ZmpodnZmS19GYUpnRFBkR0Yyb29ZVDlB?oc=5",
+          "published_at": "Sun, 11 Oct 2026 21:00:00 GMT",
+          "source_url": "https://jbpress.ismedia.jp"
+        },
+        {
+          "title": "フランス今や「欧州の病人」 金利はPIIGS超え、政治不安で国債売り - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE04cXM5NG9KeUJHS3U0Um5XcjJqS09hUXVsNHNhYVZiY184bEZmVFFqbzhZd09ZdG5RTm9LWHp4cjZpdE9YcUFLOUJiczJ5YUgyYnBQbVh0ZEVwUXRNXzZqTVVyNnVSNlNSaDl1eQ?oc=5",
+          "published_at": "Mon, 12 Oct 2026 02:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "金価格、約4,200ドルに小幅上昇――エネルギー停戦と中東リスクを注視 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1QenhOeDJKSk1RR1hWSkhCenBac0dYMFBxMTR5SExkOUx3UWZmZldpeWJJYTUzZGducDdLTEswUGxYTFFqdC1fRHdfU2hjLWdLQjFFa3h1VTQxTDNGelZVa2VLR0F1SnVNNDNUQi04Zw?oc=5",
+          "published_at": "Mon, 12 Oct 2026 01:17:00 GMT",
+          "source_url": "https://jp.investing.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.025521933934138284,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.14579783696743176,
+        "oil_pressure": 0.04305024267241553,
+        "japan_risk": -0.031684964026876594,
+        "usd_rate_pressure": -0.02598309613820049
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

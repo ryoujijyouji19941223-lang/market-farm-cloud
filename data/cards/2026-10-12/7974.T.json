@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-12T11:17:59.064215+09:00",
+  "prediction_date": "2026-10-12",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-12T11:17:59.064215+09:00",
+  "market_data_through": "2026-10-09",
+  "reference_price": 8146.0,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.02709120576558381,
+      "factor_agreement": 0.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.48936175285308525,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.03469420246818448,
+      "direction": "NEUTRAL",
+      "day_change": 0.03757483123169014,
+      "momentum5": 0.03783921518664801,
+      "trend": -0.023258124200618457,
+      "volatility": 0.3563235873332385
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "3タイトルから1本選べる お得なNintendo Switch 2本体セット 予約受付中 - BCN Retail",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9yQmRtMFU5LVIySkNsVnl2ZldrYXRITERnTGppUGp3bVJ1NkN2X3RNVHNBWXpFLVlpSlVLOUFTSTN3MkFUSW5aRVYzVERnVnZkRkhoUlNSZHlUUUM3M2JjTEFMcW5jZGVpN1E?oc=5",
+          "published_at": "Thu, 08 Oct 2026 22:00:00 GMT",
+          "source_url": "https://www.bcnretail.com"
+        },
+        {
+          "title": "『牧場物語 Let's！風のグランドバザール』が8月24日から期間限定で遊び放題。Nintendo Switch Online加入者限定イベント「いっせいトライアル」開催。 | トピックス - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOa0FuQXEyV3FKWTUwbGpaSzQzWlhiVjRqeUVVSEEtX0hjaXFLN0J5eWNZYmxuV1lmOUdGWG42SmtaYWVvSVQ1aGJQOG93dTdGaTlfNGtXUERQY1dyNzZ0Sll0Q2dRYnN0Q2NodVZSMEJILWVGMzhSbHZLaFFBMmhJMFR2VktkZw?oc=5",
+          "published_at": "Fri, 21 Aug 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "Nintendo Switch 2『ゼルダの伝説 時のオカリナ』は11月5日発売。「ゼルダの伝説40周年」特別デザインの「Nintendo Switch 2」や周辺機器も10月29日発売。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNSnRDVjRPVHljRnJtTlB4eHVyeklPYnFZNmNiSkRhM2NyamRFQ1ZuczRvZHowbFdWVFFMaGsxTUtpMW14R0xJNUFhWGNlYy1lTFo1UDdTRmRaOHFYU3ByYTFVYUZ4ZEd0WV9BMjNqalI3ZjZGUk1TTDRaMGR4c3hobmtSYjQtUQ?oc=5",
+          "published_at": "Wed, 09 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『Nintendo Today!』の「ゼルダの伝説 コレクション・カード」で「ムジュラの仮面 パック」を配信中。『Nintendo Music』で「ムジュラの仮面」の楽曲も配信予定。アイコンパーツも登場。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNd0VRMXRwU3FaQ0w0UHp1NU53YmxmZVEyTnVjb3MtckVxNWQ1MFE2RXZxdEJXUzIzQnk4QXI4T1oxWmRPclpwZFdyZWxZVUZFenEtQ3JsdWwwa3VTV2Fxbzd2LXdwenc3dVZLX0ZTelMyMnRpN0JVdjJ6UEJlUlBLa29xV2RiUQ?oc=5",
+          "published_at": "Mon, 05 Oct 2026 01:40:24 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "コピー能力で広がる世界を自由に冒険。シリーズ完全新作『星のカービィ ワールドビヨンド』がNintendo Switch 2 で2027年春に発売決定。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNcHk4eTQ2bkx3aTNMLWVSTzlGbGgxRW9Senk0cEV5TWRndXdwWVlmNk9WOWRuNmtEVGozZXZCY1ZvLVlwUmFQb1R6b1dtVHMxQnVIYzAyZER2UUpzdVJ2Sm1UUUdZMzllTGR0a0luRGUzNy1jV0gyUkprY3EtUTdBckxxSGJxdw?oc=5",
+          "published_at": "Thu, 10 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.02332765391478908,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.14579783696743176,
+        "oil_pressure": 0.04305024267241553,
+        "japan_risk": -0.031684964026876594,
+        "usd_rate_pressure": -0.02598309613820049
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

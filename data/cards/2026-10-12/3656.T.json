@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-12T11:17:59.064215+09:00",
+  "prediction_date": "2026-10-12",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-12T11:17:59.064215+09:00",
+  "market_data_through": "2026-10-09",
+  "reference_price": 166.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.362170076751034,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.31837382037596224,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5124971909264199,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5106382978723404,
+    "heldout_signals": 47
+  },
+  "evidence": {
+    "price": {
+      "score": -0.527457248035023,
+      "direction": "DOWN",
+      "day_change": 0.012195121951219523,
+      "momentum5": -0.062146892655367214,
+      "trend": -0.04225352112676062,
+      "volatility": 0.323579766227076
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "KLab、『スマグロ』ヒットでゲーム事業が急回復、黒字転換 真田社長「長い長いトンネルを抜けた」 『キャプ翼』黒字化など既存にも好影響 - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE9uSWUwSzlkNHhSZVpab3NPLXd3dUJXREU2d3pDOTIxSnJONzg2b2dmNWdDUkY2WS01Z3JQamhHNl9VM09n?oc=5",
+          "published_at": "Tue, 01 Sep 2026 03:48:31 GMT",
+          "source_url": "https://gamebiz.jp"
+        },
+        {
+          "title": "ＫＬａｂ[3656]：主要株主及び主要株主である筆頭株主の異動に関するお知らせ 2026年10月9日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE10Tk0yQ0FkOEIxQUNWOFZHZi1XLUh5Q0ZsV05abElJV2ZBQTktcF9vSHlVMHJpSGl3bWh6OGgtZ0NCMzcxQzVSZGFwU3ZBTDJ3ZkRya1hzMWM1U19EY1RUVUFWX2ROZmt3bFE?oc=5",
+          "published_at": "Fri, 09 Oct 2026 07:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "ＫＬａｂ(株)【3656】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9lTndiVlkzRWNtdnpudzVoR3lqdHJjZXZoNFo4WFBFMUNwcU13YUE0RDBpXzN4VW5qaVR3ZE1nMXRRZExscGZVbzh1YUg0Z1dySm5yN1p1LUN3TmlkQ3h3?oc=5",
+          "published_at": "Fri, 09 Oct 2026 06:55:11 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "Webカメラ1台で3D配信をもっと手軽に。「ゆめかいろプロダクション」が独自開発した3D配信システムの裏側 - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBSLW1SdE4tX2t4cHl1NXUyX2hQNGgtZWFTNGE2dHN5amtzWGw0OW80UE9sWkUwZFNoZHU1YkV0bGJ1SnJlQjdwOHdtdlRHOXJLRmVOMlROUVVUN2NSQlpMUlRn?oc=5",
+          "published_at": "Fri, 09 Oct 2026 06:05:03 GMT",
+          "source_url": "https://www.klab.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.02332765391478908,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.14579783696743176,
+        "oil_pressure": 0.04305024267241553,
+        "japan_risk": -0.031684964026876594,
+        "usd_rate_pressure": -0.02598309613820049
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
