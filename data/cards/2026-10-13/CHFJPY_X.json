@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-13T12:30:22.907813+09:00",
+  "prediction_date": "2026-10-13",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-13T12:30:22.907813+09:00",
+  "market_data_through": "2026-10-13",
+  "reference_price": 189.9810028076172,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.0536475272117004,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5172370266525976,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.013781688440354701,
+      "direction": "NEUTRAL",
+      "day_change": -0.0003893076794372341,
+      "momentum5": -0.0025573367935328717,
+      "trend": -0.00044415173838052713,
+      "volatility": 0.06778081311123932
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "銀行貸し出し、高い伸び保つ 日銀の利上げ継続後押し - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4ta1NMYjNsX0dwZVRaQmRpR1NsZ2l0cVpleTdaNWp0dzVSWEtRM0JUZlZpUDg3VUY0bXhNal95YV9VbkpOczMtc1dfTkNNRzdQUHNUSUdMTlNmUk83UnloNUJncTFmdWotN2Rjcw?oc=5",
+          "published_at": "Tue, 13 Oct 2026 02:17:36 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "植田日銀総裁、午後1時から衆院予算委に出席＝国会筋 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNb1doTFRmSklhc0E1Rk9LcjdzeVNwMGxPZS1ESGJwNVpWMjNmalJMQzlRSXZNZVVwQWVyQTdzQmFPM0lNSEtXckJNeFEwM25GNGxaQklLNWNxa3ZTQmpTSHVqd1FUN2YwV3lGZlhYY1p2NHEtTi1venhjVEQ4dktjc0VMS01UQzd3eGF1X3EzYUs?oc=5",
+          "published_at": "Mon, 12 Oct 2026 23:29:43 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "13日のスイスフラン・円、売り・買い要因＆支持抵抗ライン(フィスコ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOYmlQM0VzaDNGSlZ3VXVrdGZxWWdVcTZyaWRTU05faFNKLVZ0WW92OXBsOEVmVUZkLXNSRGNDbkJpRGJkX1RHS0J6QkIwTVNIQTR6WTdUYlZsb0RwVFpSbFcxTFdBeFc2SzJCMDhIU01RQkdNZklBdzFPSTduamZmVVpzTURLTXM?oc=5",
+          "published_at": "Tue, 13 Oct 2026 01:33:01 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "９月の企業物価、６．８％上昇 コメ値下がりで伸び縮小―日銀 - 時事ドットコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9TdUlkVV96RzRfcTZqVl9iOGFrQjE5a1JFU2tYaFRfZWJTZWJLdW5TYUk5MVZlQ25iQTZBUUdRRzN2eVljcUtfTmpCX3pxZUVjdkNQMTVqR2QzTGcxUXJiaTRTOA?oc=5",
+          "published_at": "Tue, 13 Oct 2026 02:39:00 GMT",
+          "source_url": "https://www.jiji.com"
+        },
+        {
+          "title": "外為：スイスフラン、190円05銭前後とフラン安・円高で推移 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5sWDF1b2pReUNsSTBiSHZtYUF0ZjFlajFfT0Y5UVF0WS1EQ1F0TmdiLWZmVWdyZ2J1VkRtLWU1anEycTBDbThkQnU5VThXeDQ3aXc?oc=5",
+          "published_at": "Tue, 13 Oct 2026 01:31:04 GMT",
+          "source_url": "https://s.kabutan.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.01183986048172801,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.08846152351509051,
+        "oil_pressure": 0.17052460255785662,
+        "japan_risk": 0.11384937538519757,
+        "usd_rate_pressure": -0.046279665613729426
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

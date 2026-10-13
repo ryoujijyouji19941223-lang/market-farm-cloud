@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-13T12:30:22.907813+09:00",
+  "prediction_date": "2026-10-13",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-13T12:30:22.907813+09:00",
+  "market_data_through": "2026-10-12",
+  "reference_price": 4201.2001953125,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.13775757223534665,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.4943585746784394,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.10636117574673859,
+      "direction": "DOWN",
+      "day_change": -0.003581246608273192,
+      "momentum5": 0.010681387776945828,
+      "trend": -0.018686318594460127,
+      "volatility": 0.17280698409641534
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "金利上昇“節目”を超えても堅調な株式市場、金利高と株高の両立「今回は違う」論の危うさ - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5iOW1xRzNQUFFuTWwwZS00ampPMHp2MFUtWU5nblZLcWt5VGFYTUpxUEE1ZHpuTWw4YlpJaUtZMWYxanJRYUY1NnBBZDLSAU9BVV95cUxOZzU1QUpxLWI5aWFfdkkwalpYSm42aGRqUEdoX3hFRmdQZzMtT3dNSmMwTXVubngwY0pyanF6dXJ2eVdfZ0Z1WktNMG0wQjVr?oc=5",
+          "published_at": "Mon, 12 Oct 2026 19:30:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "【債券市場】かみ合わない市場との対話、長期金利は年内に3.2％台半ばへ(週刊 金融財政事情) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRXVmd1JrNkpVMGtuSUpGaThVelV5ck1qQkJPSWl0RFVtOHNvamFRczR5eUdINWFQZG9QS2ZFVERoYlRTSHZoRzBpam9Zc3k1eDZNVlRFd08xOXRTaGY5OXRkVFlueFN0TW5NZ2c3UGN5TnJvZnRyOFYzUnhRbzhEaUxmeDdPQWc?oc=5",
+          "published_at": "Tue, 13 Oct 2026 00:30:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "「場」を設けて関わりをつなぐ ― TECTURE AWARD 2025 Gold〈KURUTO〉の現在地 - TECTURE MAG（テクチャーマガジン）",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5sTXdlaWYtdF9IdUJzNjlHVFdtUWZHMkVBc09neDBZbm03YWdoSzFmQlBSTFBSTE1SME55a0ZaX2NVWXo0UzNYWkRycmx2eDRYcFJMbnNxVkYtbEk?oc=5",
+          "published_at": "Tue, 13 Oct 2026 01:00:44 GMT",
+          "source_url": "https://mag.tecture.jp"
+        },
+        {
+          "title": "米国株、金利高はね返す業績相場 企業利益3割増で高値更新期待 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0tLUNwTXpJX1pSTGFuc0FIclM0MjBOTVZ5UnhFVzI1NWhvVklVVWtpTWlDVmFYMG1MV2xuOHE1eGlHYVhneVZwVm9zRXd1RlFOTWZXb3R2blRuX19ab2ZtOXpOWUdaNVhpRjdGdA?oc=5",
+          "published_at": "Mon, 12 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "米金利が急上昇する中で発表された9月雇用統計 鈍化は一時的要因が寄与したとみる 野村證券・小清水直和 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBnRm0xWXdiZm1iWXZ6NDhmbTA2Uk1NSnRnY0lzaU8yLTRhQjRDZ2Q0N2VFdG9yeHBxbEhmb19KcGl1NDJXREM3VnJNZ01iUC1MWE4tTXk0bFpUcmxialhz?oc=5",
+          "published_at": "Fri, 09 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.011213151517095985,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.08846152351509051,
+        "oil_pressure": 0.17052460255785662,
+        "japan_risk": 0.11384937538519757,
+        "usd_rate_pressure": -0.046279665613729426
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

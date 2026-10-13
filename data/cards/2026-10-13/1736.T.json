@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-13T12:30:22.907813+09:00",
+  "prediction_date": "2026-10-13",
+  "symbol": "1736.T",
+  "name": "オーテック",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-13T12:30:22.907813+09:00",
+  "market_data_through": "2026-10-13",
+  "reference_price": 2527.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.15023027713386128,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5818826376763622,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.2178047067198516,
+      "direction": "UP",
+      "day_change": 0.01323175621491579,
+      "momentum5": 0.01079999999999992,
+      "trend": 0.02226879069279608,
+      "volatility": 0.12246823659344344
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "(株)オーテック【1736】：決算情報 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9VUVVTdVZxR3Q5aExEckpxSC1tQkNsa3IwUm9xd0d5eHl5RFVXUURmWXkyVTNOY2ZmbVBjVFpNTnNaTEpXZTQ4N1gwVXFXNmJ4Zm5mX3NrcGtXZy1qd0M2Vg?oc=5",
+          "published_at": "Fri, 07 Aug 2026 07:00:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "オーテック（1736）のプロフィール - 四季報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9WY1BtLUxaTlpwSVcxRXZQSVdZZkNobVJSTnIzM1FXbW5qeVkzcFVseWZ5LTMxTWFDQ1F3WTRDanFsa2JROURTZlhuS2JGNFBBYk5walU0MVI3a01naTR4LThB?oc=5",
+          "published_at": "Fri, 29 Apr 2022 06:27:43 GMT",
+          "source_url": "https://shikiho.toyokeizai.net"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.014153843762414482,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.08846152351509051,
+        "oil_pressure": 0.17052460255785662,
+        "japan_risk": 0.11384937538519757,
+        "usd_rate_pressure": -0.046279665613729426
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-13T12:30:22.907813+09:00",
+  "prediction_date": "2026-10-13",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-13T12:30:22.907813+09:00",
+  "market_data_through": "2026-10-13",
+  "reference_price": 171.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.2880573854066117,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.35161975845258403,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5076287030279089,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5106382978723404,
+    "heldout_signals": 47
+  },
+  "evidence": {
+    "price": {
+      "score": -0.42049163065036693,
+      "direction": "DOWN",
+      "day_change": 0.030120481927710774,
+      "momentum5": -0.02285714285714291,
+      "trend": -0.044607566346696825,
+      "volatility": 0.30700585406903264
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "KLab、『スマグロ』ヒットでゲーム事業が急回復、黒字転換 真田社長「長い長いトンネルを抜けた」 『キャプ翼』黒字化など既存にも好影響 - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE9uSWUwSzlkNHhSZVpab3NPLXd3dUJXREU2d3pDOTIxSnJONzg2b2dmNWdDUkY2WS01Z3JQamhHNl9VM09n?oc=5",
+          "published_at": "Tue, 01 Sep 2026 03:48:31 GMT",
+          "source_url": "https://gamebiz.jp"
+        },
+        {
+          "title": "ＫＬａｂ[3656]：臨時報告書 主要株主の異動 (有価証券報告書) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE04WDFqUDNwSndIcjJGbWpCa2NmU3VBSnNhMWlhMkFzSEN6MEtRRjlMQm1jSkxlZTAyV2VoU1BYdGtTZG02ZG1SRTJ3eVUyZDZnVndoVnhaclhjYVZjbUpYZ05pTlpNQnA2ZlhYbg?oc=5",
+          "published_at": "Fri, 09 Oct 2026 11:57:25 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "ＫＬａｂ(株)【3656】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9lTndiVlkzRWNtdnpudzVoR3lqdHJjZXZoNFo4WFBFMUNwcU13YUE0RDBpXzN4VW5qaVR3ZE1nMXRRZExscGZVbzh1YUg0Z1dySm5yN1p1LUN3TmlkQ3h3?oc=5",
+          "published_at": "Fri, 09 Oct 2026 06:55:11 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "HOMMA、KLabとUAEにAIスマートホーム事業の合弁会社を設立 - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFAwTENOdThsWVZOVHJScXNuektYcVlCSUJWQVNlaXlyRTJfaVVCZ3p3SEtsRnFXYkhmdFBUeGE3eDRzdGlha0xtdV9nNWhReXpOU2MtWDF1UElucEVwMUxNZ2g0aEQ1TW9fc3c?oc=5",
+          "published_at": "Thu, 16 Jul 2026 07:00:00 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "アラブ首長国連邦（UAE）子会社の設立に関するお知らせ - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5xY1FjeWdFaVVnNThPMnBuNGx2ZlFiOUxPU055M1dTNFFOTjM0VUJMeWtjYkF0UEJFU01SLUlzNEtHb0Z1VFV6Q3NtU2tZaXdZTll6LVJWMWhzcnVaMVdDZjVORno?oc=5",
+          "published_at": "Mon, 22 Jun 2026 07:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.014153843762414482,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.08846152351509051,
+        "oil_pressure": 0.17052460255785662,
+        "japan_risk": 0.11384937538519757,
+        "usd_rate_pressure": -0.046279665613729426
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

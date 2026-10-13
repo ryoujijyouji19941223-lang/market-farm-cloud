@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-13T12:30:22.907813+09:00",
+  "prediction_date": "2026-10-13",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-13T12:30:22.907813+09:00",
+  "market_data_through": "2026-10-13",
+  "reference_price": 15330.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.5405949419409428,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.2736413845377111,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.33929157860732834,
+    "direction": "DOWN",
+    "price_coef": 0.5,
+    "macro_coef": 1.0,
+    "edge": 0.12,
+    "heldout_accuracy": 0.5142857142857142,
+    "heldout_signals": 35
+  },
+  "evidence": {
+    "price": {
+      "score": -0.7606203902596774,
+      "direction": "DOWN",
+      "day_change": -0.12425021422450733,
+      "momentum5": -0.19822175732217573,
+      "trend": -0.025599802791164028,
+      "volatility": 0.7433354855405432
+    },
+    "news": {
+      "score": -0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "DOWN",
+      "headlines": [
+        {
+          "title": "キオクシアHD株価が一時10%安 中国企業との競争激化懸念で - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE56YTdKdmoyZnhWRklyb2FYSl9XaV9yS3dnVHZ5WHkyeVVJOS1NQkNrVTE3Z3lBR09GV3p4SmRLWlNKQXZ5NnpGY082MGFuVXgtUW1oSXpkTFBkd0M2ZXhzTXJyelM3VVpqRlo4aw?oc=5",
+          "published_at": "Tue, 13 Oct 2026 01:01:10 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "キオクシアHDが大幅続落､12日の米半導体株安が波及 - 四季報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9aTVliRDZuY1Q5bW15OUNEckpfT1p5b2pJeGFrZEtQMzRuQS1PQ2h4d3dvcEhFWjNZNndwdjdOM1VNRDM4eXVncWxNNzl6M24yYjFtOGwxVQ?oc=5",
+          "published_at": "Tue, 13 Oct 2026 00:54:40 GMT",
+          "source_url": "https://shikiho.toyokeizai.net"
+        },
+        {
+          "title": "キオクシア株の3分割で変わる資産運用 「株式分割ラッシュ」と新NISA時代の投資術 - 産経ニュース",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA2dTZXYWc1WHRpcE9nZTZnaGdYb0lxNjU1Q3dlVG9fTEsyaFgxQkVXZUMwWWFFQkVLWnBEelJUYjlTLU5fWUlfQ293UUhHbU1aSjBxdzhTTEQtMDZPYlFVYV9RS2dwM2d0V2JoY1c4LWl0aVF0akE?oc=5",
+          "published_at": "Mon, 12 Oct 2026 23:00:00 GMT",
+          "source_url": "https://www.sankei.com"
+        },
+        {
+          "title": "資産10億円超の元キオクシア研究開発者が見通す「日の丸AI・半導体銘柄」の今後 中国メモリ勢の台頭でキオクシアほか日本企業は太刀打ちできるのか（マネーポストWEB） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5lRFJjWkh5QXRWeWdrTlU3T3M1cGd0QUhIOXpiOWxIVm9yNmRoYmxwczZlazBNQ2daNEFjWks0SERXYVBtakFMRGE0bE56V3BSbnFUWlBJUk1IN1JSOGRqNDVkYWhVZFJ3b2ZlaWYxLVJzT1ZWNkYtcERldjY3bEk?oc=5",
+          "published_at": "Mon, 12 Oct 2026 07:15:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "【プライム感謝祭】キオクシアの960GB SATA SSDが税込18,680円に - エルミタージュ秋葉原",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1IUFk4SGw3TDloV1MwR01RRTlOR3N2UFV5YUpjVkhESU5DaGZsVndjYU0zbmhnWUJhZVdFMnRsMkNDSzFJYms4bzZLc3FLNGdSTDN6aG0yWXBKSk8zOEFWMw?oc=5",
+          "published_at": "Mon, 12 Oct 2026 15:26:00 GMT",
+          "source_url": "https://www.gdm.or.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.014153843762414482,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.08846152351509051,
+        "oil_pressure": 0.17052460255785662,
+        "japan_risk": 0.11384937538519757,
+        "usd_rate_pressure": -0.046279665613729426
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

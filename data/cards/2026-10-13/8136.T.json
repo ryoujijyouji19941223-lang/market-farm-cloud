@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-13T12:30:22.907813+09:00",
+  "prediction_date": "2026-10-13",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-13T12:30:22.907813+09:00",
+  "market_data_through": "2026-10-13",
+  "reference_price": 1242.5,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.22775760435519282,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.6203464004854313,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.33181548204533917,
+      "direction": "UP",
+      "day_change": 0.004446240905416232,
+      "momentum5": 0.05341246290801194,
+      "trend": 0.01640214071067425,
+      "volatility": 0.30729464339622187
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "【サンリオ】ハローキティたちが牛乳びんのフタになっちゃった！？透け感があって可愛い新食玩を開封レポ！（jsc） - エキスパート - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNaWdOMmo5eXpIQWZnR3BGVG5OQXJGY1pQaEtnc3ZhSGtESEdZdE5WaWllY1BlWU5BSHN5cTZRWVJsdE9lREM5ajREOC1Mc1d1YzhBQlBNU3lDNUEtS3lhZ0hLWFNJZ2MzbGtYbjRCVF8zbXRIN1pzZGg1cGZ1R3Q4aUZWOTVBRkVE?oc=5",
+          "published_at": "Mon, 12 Oct 2026 11:20:34 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "【sanrio house（サンリオハウス)】フラッフィーハローキティチャーム第3弾！ベアシリーズのシークレットカラー含む全6種のラインアップで登場 - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9EWWJsQjdzWGxDbUhvQkJCY3d4OGs4UVkyclZHUHFGQzBiX0Q3YlVaeGV1UHJHcW9rMjdqN0Z4X3hPVnNTNGRiTGg4WnRLNUhWQzhmX0NZQnF2MnhteXNJdDgtdjI5emhjNlE?oc=5",
+          "published_at": "Tue, 13 Oct 2026 03:00:01 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "ふわふわのベア姿で全6種・シークレットカラーも登場！sanrio house【sanrio house シークレットコレクション】フラッフィーハローキティベアチャーム - Dtimes",
+          "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9uT1pPdXBGc0pLU19wUVkwbzVFTlBBZHlhbFMzdVV5WmZwRnNtYTZzczhpWHpBQjI1RVRocVlOV3JCeEtRblE?oc=5",
+          "published_at": "Tue, 13 Oct 2026 03:11:03 GMT",
+          "source_url": "https://dtimes.jp"
+        },
+        {
+          "title": "サンリオくじ「クロミ当りくじ」 ｜商品情報 - ファミリーマート",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1VMmFLMVdmeGpSd2x4d0J4YVJwUWFNNDh3MXFvM3lhYkJOSTRPWExjbkhBZlRmTDROMkFaVkY2XzZyOXRhbTRhajNtc3RlQmVKWHlKdXY0VjFnd0NnbExnNDRCMA?oc=5",
+          "published_at": "Mon, 28 Sep 2026 15:07:15 GMT",
+          "source_url": "https://www.family.co.jp"
+        },
+        {
+          "title": "PR1DEグッズ サンリオキーホルダーにおけるJANシールの価格誤表記に関するお詫びとお知らせ - 埼玉西武ライオンズ",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBBVG1LUUZ5VVBWZTRyWTFLbmNDR3htcm9QdVNrbi0wUVZIal9GbUhnWnJlNS1MM2dLdFE3VnEzQk4tR1hERUc0UHZETUVYZzJQSW1xSTVjX0kzNW8zcV9CaWxrY3RMdw?oc=5",
+          "published_at": "Fri, 04 Sep 2026 02:02:21 GMT",
+          "source_url": "https://www.seibulions.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.014153843762414482,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.08846152351509051,
+        "oil_pressure": 0.17052460255785662,
+        "japan_risk": 0.11384937538519757,
+        "usd_rate_pressure": -0.046279665613729426
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
