@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-14T10:49:13.116994+09:00",
+  "prediction_date": "2026-10-14",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-14T10:49:13.116994+09:00",
+  "market_data_through": "2026-10-14",
+  "reference_price": 8219.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.12702838984811854,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5668952908872048,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.18423932958040862,
+      "direction": "UP",
+      "day_change": 0.005751346059716056,
+      "momentum5": 0.05169545745361481,
+      "trend": -0.002551796501989778,
+      "volatility": 0.27719119180030205
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "『牧場物語 Let's！風のグランドバザール』が8月24日から期間限定で遊び放題。Nintendo Switch Online加入者限定イベント「いっせいトライアル」開催。 | トピックス - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOa0FuQXEyV3FKWTUwbGpaSzQzWlhiVjRqeUVVSEEtX0hjaXFLN0J5eWNZYmxuV1lmOUdGWG42SmtaYWVvSVQ1aGJQOG93dTdGaTlfNGtXUERQY1dyNzZ0Sll0Q2dRYnN0Q2NodVZSMEJILWVGMzhSbHZLaFFBMmhJMFR2VktkZw?oc=5",
+          "published_at": "Fri, 21 Aug 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "3本のソフトからお好きな1本を選択してダウンロードできるお得な「Nintendo Switch 2（日本語・国内専用） 選べるソフトセット」が登場。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSnhiVFcyUXVfNDdlVXZ4RTdna2hqbEttc2tpaEdEUi1vNElGSm41UHoxa1dlYzNPc3RocDh3UWJ0eEdGUTVDNEZEMnNmakZ1UjgzZy1BeWtBWUoxeDZJcTVqcHVwT24tNlVQbjF2RmFQTnFDSTNlQ1hLcW1xVVJLNVZCcGZvQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 01:23:56 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "Nintendo Switch 2『ゼルダの伝説 時のオカリナ』は11月5日発売。「ゼルダの伝説40周年」特別デザインの「Nintendo Switch 2」や周辺機器も10月29日発売。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNSnRDVjRPVHljRnJtTlB4eHVyeklPYnFZNmNiSkRhM2NyamRFQ1ZuczRvZHowbFdWVFFMaGsxTUtpMW14R0xJNUFhWGNlYy1lTFo1UDdTRmRaOHFYU3ByYTFVYUZ4ZEd0WV9BMjNqalI3ZjZGUk1TTDRaMGR4c3hobmtSYjQtUQ?oc=5",
+          "published_at": "Wed, 09 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "コピー能力で広がる世界を自由に冒険。シリーズ完全新作『星のカービィ ワールドビヨンド』がNintendo Switch 2 で2027年春に発売決定。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNcHk4eTQ2bkx3aTNMLWVSTzlGbGgxRW9Senk0cEV5TWRndXdwWVlmNk9WOWRuNmtEVGozZXZCY1ZvLVlwUmFQb1R6b1dtVHMxQnVIYzAyZER2UUpzdVJ2Sm1UUUdZMzllTGR0a0luRGUzNy1jV0gyUkprY3EtUTdBckxxSGJxdw?oc=5",
+          "published_at": "Thu, 10 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "メトロイド ラヴェナス - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBpMjItcDBaMHNPd0NXYTNfOFc4aGQ5LWdBLVI5TXBQcE5zeVRsNFRfeHdEeDBPd0w2UFpnMHBfemZmREFOcVNMd1ZMQ0tTR0NDbkYzNjJRbjRoc2hkRldrdkRhNkd2U3hLWXc?oc=5",
+          "published_at": "Thu, 10 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.011637638222937775,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.07273523889336109,
+        "oil_pressure": 0.32927097656929694,
+        "japan_risk": 0.11381701276224077,
+        "usd_rate_pressure": -0.029813190324114114
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

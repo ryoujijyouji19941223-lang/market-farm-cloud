@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-14T10:49:13.116994+09:00",
+  "prediction_date": "2026-10-14",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-14T10:49:13.116994+09:00",
+  "market_data_through": "2026-10-14",
+  "reference_price": 1276.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.28162603440656936,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.645457466932411,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.411588806872248,
+      "direction": "UP",
+      "day_change": 0.025723472668810254,
+      "momentum5": 0.06112266112266118,
+      "trend": 0.02412899136629454,
+      "volatility": 0.30960596557470904
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "“おめめうるうる”なクロミたちが可愛い！「サンリオキャラクターズ」めじるしアクセサリー全5種が、ガシャポンオフィシャル限定再販 - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9GTkt3dUdVUmJwUUZpNk9xX0gxUFJSbnU4eUI0YWZFeWR2Qm9rZ3JTSmptSGN1eHBBVlBQd3lpMWFDS3ZOaFpiSTJIUnJiUFB2TmFoUU5XZFVPb29CRnAzWFNsb1ZMY2l6TURFY0VJUUhCVG8tcmZWS0RWbWo2Ylk?oc=5",
+          "published_at": "Tue, 13 Oct 2026 06:45:03 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "【サンリオキャラクターズ】人気キャラクターが日焼けしたデザインのジュートランチバッグ3柄をスケーターから10月2日（金）に新発売 - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFA2SlV2SVAzTFkyeGcyQVZIT2NPVUtiLXJoc2tJQ1NyWnV0T1RZUEpSMmd6ZGl6blFrWkpDVUF1eEdHNWlKRk1iTHgteE9US0F5TW5UMVFNNG9qbTJHZWt2Wm9YbThveC1UR2c?oc=5",
+          "published_at": "Tue, 13 Oct 2026 08:10:02 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "自社IPや家電はゲームに向くか サンリオやパナソニックなど4社の挑戦 - 日経クロストレンド",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1xd05WSzRKMFNPRlNDYk9VX2UtTHlQTDE4YjA2TDRLOWdRRThvZXNzdERoWjNqQzRqdVNzMW9FOW9mZzl3UEFWeHBQVG9QckRsR2Z2T2Rjem81bmxNM2dCYXUwa3NkMXpmb1JuenNyVFlCd3VzdWwtX29JUjl2dw?oc=5",
+          "published_at": "Tue, 13 Oct 2026 15:00:00 GMT",
+          "source_url": "https://xtrend.nikkei.com"
+        },
+        {
+          "title": "アベイルにて「サンリオキャラクターズ」ペットグッズが10月17日発売！ハローキティたちになりきれるお洋服、お散歩に便利な2WAYトートバッグなど - インサイド",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE90eVlzS0ZsamVlVlUzTFJkcTJDNXdpMWI5Tl9haGJMX0lZbFoyRS1wY1VEdEsxekozcFoxTm1ON2FjWTFfMUo3UkZ4Zjg3MXpsN2NiUHluRXNIVHRIU1lDS3hBLWNaNXpIcmc?oc=5",
+          "published_at": "Tue, 13 Oct 2026 09:30:03 GMT",
+          "source_url": "https://www.inside-games.jp"
+        },
+        {
+          "title": "サンリオハウス「ハローキティ」ふわふわ”くま姿”チャーム、カフェオレ風ボックス入り - ファッションプレス",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE95ODBqaWozSUYwNC1BRzA4SzJvSVU3QU9Ld3IxQ09RQ19ud0d3RzE0TkdFd0d6M09ZUGREb3NBY09uV3M5MXFGay1FVGpGSWV2SWFz?oc=5",
+          "published_at": "Tue, 13 Oct 2026 04:25:00 GMT",
+          "source_url": "https://www.fashion-press.net"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.011637638222937775,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.07273523889336109,
+        "oil_pressure": 0.32927097656929694,
+        "japan_risk": 0.11381701276224077,
+        "usd_rate_pressure": -0.029813190324114114
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

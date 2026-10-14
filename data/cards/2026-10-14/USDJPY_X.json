@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-14T10:49:13.116994+09:00",
+  "prediction_date": "2026-10-14",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-14T10:49:13.116994+09:00",
+  "market_data_through": "2026-10-14",
+  "reference_price": 158.41400146484375,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.13115710055641144,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5716400397036302,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5060290322544346,
+    "direction": "FLAT",
+    "price_coef": -0.5,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5135135135135135,
+    "heldout_signals": 37
+  },
+  "evidence": {
+    "price": {
+      "score": 0.030811575277305495,
+      "direction": "NEUTRAL",
+      "day_change": -0.0006687030328045296,
+      "momentum5": 0.0007454149941097388,
+      "trend": 0.00347995890176489,
+      "volatility": 0.04814715085342578
+    },
+    "news": {
+      "score": 0.625,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "米ドル/円【USDJPY】：外国為替相場FXレート・チャートをリアルタイム表示 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzbWxqc1ltSU1ndEE0VElnZldUTGdyRVJpOTdKeXBsc0RDSm40dm9kLTJqaDZlOVpoR2E5eEZIX1o0bFR1SFR2N2k4WjRiTnN5dHVBTHJn?oc=5",
+          "published_at": "Tue, 13 Oct 2026 23:23:50 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日銀の利上げペースは加速している？ 背景とリスクシナリオを解説 野村證券・岡崎康平 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9pMHAtSG5sc1Z2RTA5aDVScnB2MGg2Y0dBbTFQN3dsQ255N0hBX3hXNWlnTkk3ZDNvdmI1Uk1tUmRRbFRFdlZHWXhxYjFVT0pSV3hWekNoNkNlMmNmd1Nn?oc=5",
+          "published_at": "Tue, 13 Oct 2026 08:58:32 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜米CPIで159円台へ？ 利上げ観測の行方に注目」 外為どっとコム トゥデイ 2026年10月14日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBvRWFfYkgwMGQtQWozOEJOekhjSklFZnNlaVRHc0xJSEZzZVJraTJUUFBsbV94VnJ3MUJoVlN0TmhMcEt3NDRnU1YzZ3V2VTJXMnVkUkd6eTZGWm9remYxdkJhWQ?oc=5",
+          "published_at": "Tue, 13 Oct 2026 23:34:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "米ＦＲＢ、１０月利上げ後退 議長に代わり高官発信強める - 時事ドットコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5lZjlDRXlBd2lWemtBT3NVSTVNMFdDUkJiZy1RU3AweTFUVGlqb3VmT29KOGRUbTlRZFFVNEY0OGJaLTUwYnJTelJKNS13b2ZhbFd0T1Q1cU41NHMwMDlSMWJGOA?oc=5",
+          "published_at": "Tue, 13 Oct 2026 23:03:00 GMT",
+          "source_url": "https://www.jiji.com"
+        },
+        {
+          "title": "マネーストックＭ３、9月は1.2％増 貸出増加傾向で1％台の伸び続く - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPUUxZYXQ5NE0xVnZabmNreG1IX3hjREROdHlLTTJBaEM5V0t3Xzkxb2VpQTVSMVdTdkUwcDRKMVFSdlhPT1cteHE4MWtobkpTRC1KNlBzRzlNWlpJek1DLXBXM0h0QUM2dXNpNTJBWDZ2M1B0d0xTNjBSS3Bma1prWkFNWjJWVU1QS0lGbG1lelA?oc=5",
+          "published_at": "Wed, 14 Oct 2026 00:43:00 GMT",
+          "source_url": "https://www.reuters.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.02636819578562459,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.07273523889336109,
+        "oil_pressure": 0.32927097656929694,
+        "japan_risk": 0.11381701276224077,
+        "usd_rate_pressure": -0.029813190324114114
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

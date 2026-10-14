@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-14T10:49:13.116994+09:00",
+  "prediction_date": "2026-10-14",
+  "symbol": "1736.T",
+  "name": "オーテック",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-14T10:49:13.116994+09:00",
+  "market_data_through": "2026-10-14",
+  "reference_price": 2529.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.11711961864380745,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5621721491785557,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.16966760722112761,
+      "direction": "UP",
+      "day_change": 0.000791452314998109,
+      "momentum5": 0.003969829297340244,
+      "trend": 0.019430635175478495,
+      "volatility": 0.12292033256812926
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "(株)オーテック【1736】：決算情報 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9VUVVTdVZxR3Q5aExEckpxSC1tQkNsa3IwUm9xd0d5eHl5RFVXUURmWXkyVTNOY2ZmbVBjVFpNTnNaTEpXZTQ4N1gwVXFXNmJ4Zm5mX3NrcGtXZy1qd0M2Vg?oc=5",
+          "published_at": "Fri, 07 Aug 2026 07:00:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.011637638222937775,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.07273523889336109,
+        "oil_pressure": 0.32927097656929694,
+        "japan_risk": 0.11381701276224077,
+        "usd_rate_pressure": -0.029813190324114114
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

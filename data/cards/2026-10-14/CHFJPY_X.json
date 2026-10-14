@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-14T10:49:13.116994+09:00",
+  "prediction_date": "2026-10-14",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-14T10:49:13.116994+09:00",
+  "market_data_through": "2026-10-14",
+  "reference_price": 190.31199645996094,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.04564006585039943,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5250809679915865,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.0017217958669528092,
+      "direction": "NEUTRAL",
+      "day_change": 0.0015894003571172988,
+      "momentum5": 0.0008959867337787752,
+      "trend": -0.00023276867083643626,
+      "volatility": 0.06613398126665206
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀の利上げペースは加速している？ 背景とリスクシナリオを解説 野村證券・岡崎康平 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9pMHAtSG5sc1Z2RTA5aDVScnB2MGg2Y0dBbTFQN3dsQ255N0hBX3hXNWlnTkk3ZDNvdmI1Uk1tUmRRbFRFdlZHWXhxYjFVT0pSV3hWekNoNkNlMmNmd1Nn?oc=5",
+          "published_at": "Tue, 13 Oct 2026 08:58:32 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "14日のスイスフラン・円、売り・買い要因＆支持抵抗ライン(フィスコ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWThRUk1aRlF3ZkZjMGViUTdqWTFUMnktaDFURnpKa0ZsRlRYQ1pjN1VkWjVteWwzdDFzS2d4eldhOTNGSklJT0s3SkdiQXZLQy00bHBNQldyYmJUNUR0UnBERFEwSHp2ZUdnNkRjRThzSThZY3E1M3RyRnJDT0lwZ2dwSnBIOVU?oc=5",
+          "published_at": "Wed, 14 Oct 2026 01:37:32 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日銀は今月会合で利上げ見送る公算大、12月の可能性排除せず－関係者 - Bloomberg.com",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBlNEFTRDFZeUVUVWM2S3FwQjZVU05yQThBejRxVzkzRm5CeEJXZXBIZHc3MG5RVGlKaFVQMTVNdm5XR00wRk00YXBBSjFzLTZwb2R6SlU1QVRhWl80Z3NEdE9Cbm93MkdOUlp5SXBkQmlQeTN1WjY4?oc=5",
+          "published_at": "Tue, 13 Oct 2026 08:45:09 GMT",
+          "source_url": "https://www.bloomberg.com"
+        },
+        {
+          "title": "NHK前会長・日銀元理事の稲葉延雄さん死去、75歳 肺がん公表 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9PZTZkb0UweTBCTngxWUxfSVpqMEhvRHVtREU1bnQ5aEtQcW9GUy1hZDM1aFpCRnoxT3lzNjY3VV9abk85ZGJOVmJYa2dWajRIZVBBWElxVlZ0M0xDR3c3bXBZSEFpNjQ?oc=5",
+          "published_at": "Tue, 13 Oct 2026 08:05:00 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "外為：スイスフラン、190円37銭前後とフラン高・円安で推移 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE03c1F4eERsbTJrQ2NMdlJ0SEs5OG00bU9qTzJXQzktSkNacTBGTDIyZy1QYlpMSEpMOERDUGVHRFhaX3hBdDUxNFpGblFQOVJDWFE?oc=5",
+          "published_at": "Wed, 14 Oct 2026 01:31:04 GMT",
+          "source_url": "https://s.kabutan.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.01312829773914348,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.07273523889336109,
+        "oil_pressure": 0.32927097656929694,
+        "japan_risk": 0.11381701276224077,
+        "usd_rate_pressure": -0.029813190324114114
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

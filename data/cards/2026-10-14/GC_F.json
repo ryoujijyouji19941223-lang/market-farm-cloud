@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-14T10:49:13.116994+09:00",
+  "prediction_date": "2026-10-14",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-14T10:49:13.116994+09:00",
+  "market_data_through": "2026-10-13",
+  "reference_price": 4170.2001953125,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.15318483928651755,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.46564152019500604,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.1586422134160446,
+      "direction": "DOWN",
+      "day_change": -0.004868014572700363,
+      "momentum5": -0.004036183026340789,
+      "trend": -0.017981101824282586,
+      "volatility": 0.17350081312294713
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀の利上げペースは加速している？ 背景とリスクシナリオを解説 野村證券・岡崎康平 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9pMHAtSG5sc1Z2RTA5aDVScnB2MGg2Y0dBbTFQN3dsQ255N0hBX3hXNWlnTkk3ZDNvdmI1Uk1tUmRRbFRFdlZHWXhxYjFVT0pSV3hWekNoNkNlMmNmd1Nn?oc=5",
+          "published_at": "Tue, 13 Oct 2026 08:58:32 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "債券15時 長期金利が低下、一時3%割れ 米債高で買い - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1aVC1qMmt2VVdfeGdwVkJiUnV4TG9KWHJ1QkpTcWNJWUdXby03cGZkZzZNdWl1dlgtTkgyNDZHeTh1cWpQd29GTFMwWm9zX1FpQ3NvdENObkswZlhyOTVNY1hTLTFhd21KQXZXUg?oc=5",
+          "published_at": "Tue, 13 Oct 2026 06:40:10 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "「長期金利上昇」日本だけじゃない、政府と中銀を悩ませるインフレ圧力と財政・金融政策の“ジレンマ” - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5TYWxtZEEzTGdfM2NnVndRMnZQbndnMmNCQ3JBajB1TTBPLWJjNDJUa1N3ai1CLU1pTVZ4bkdUR2pqclhBV0FEQlZWVTHSAU9BVV95cUxPek5lVWktVF9Ydnhod3pGMzNMQkM2em00N21qbzgzQi0yM0VfX196QW81YzhEQkdiZ2hSdTluVndvU3RnQnU2ZjJfanFoVDFB?oc=5",
+          "published_at": "Tue, 13 Oct 2026 19:35:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "［地政学ウォッチ］レアアース 世界を縛る鎖…政治部次長 前中国総局長 大木聖馬 - 読売新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE92WHQxdXV0NXJpSklkaEFxMmgzUm5vUnRhbGhrWGNMRU9hMS1FZ2dfTUg1ejVpQ09pLWtNalVBUXVTRV9Wa1hLRjRRTzl2cGxxMnhqeU05Y2pXZXEzSlVYMWVnOGV4Zw?oc=5",
+          "published_at": "Tue, 13 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.yomiuri.co.jp"
+        },
+        {
+          "title": "日本の株式市場下落、AI関連株の下落と地政学的リスクが重し - アラブニュース",
+          "link": "https://news.google.com/rss/articles/CBMijgNBVV95cUxNR19EaDVPakIwQWw2a1IxSnFCMWdMN09vQ29aWXpiSkhPQnUzVHNFbnlwNU93bkFOWTJyUHhBbHBLa29nZVNJMFk4ZTZ2bkV0Wi1qZjdDc2k3b1FJeEZ6eG11Q2RnMHN3cWxYY0NKakJIcVJtdlNyZTU3THRSTXc5NzViNkk3bEROY3VEb0VFaHItWFNON2UxajZ2bWl5bEVCVndTOEUwYTlvWGZyVENuQ2sybmxEblZIUUZtRGJNSXpkLXR3ejdRblhOYlpGbGtMN2Yxb21DZUJOMUJjU2o5c2pEeGZQRkJ4ek9OcjlZajFIMnNtbGEwT0pRRU4xUlItbTlrUDhsMWkzVk5WbEl4U1dKTEw0VHF0bGdhc3ZKNWZFV3NlLVgybGtKT1d2ME1XMHlfWjRxd21rSGRpVExKc25lcmNTeFhKMmZBMHJLYzRUSUtZQzZlNHBVYy12VTJteGhPQmxqWWd0TzBRZXBmZ0ZDX3pJWkxHZm5iQkd6UHc4aDAyS3g5ZlBabnZzQQ?oc=5",
+          "published_at": "Tue, 13 Oct 2026 14:03:11 GMT",
+          "source_url": "https://www.arabnews.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.018720894424048194,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.07273523889336109,
+        "oil_pressure": 0.32927097656929694,
+        "japan_risk": 0.11381701276224077,
+        "usd_rate_pressure": -0.029813190324114114
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

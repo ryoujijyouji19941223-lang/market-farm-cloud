@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-14T10:49:13.116994+09:00",
+  "prediction_date": "2026-10-14",
+  "symbol": "EURJPY=X",
+  "name": "ユーロ円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-14T10:49:13.116994+09:00",
+  "market_data_through": "2026-10-14",
+  "reference_price": 177.5050048828125,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.11670093634963864,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.5075120424417221,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.07576591879694569,
+      "direction": "DOWN",
+      "day_change": 0.0033576737149150215,
+      "momentum5": -0.003553400193859191,
+      "trend": -0.007712224607765106,
+      "volatility": 0.054867218865054905
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀の利上げペースは加速している？ 背景とリスクシナリオを解説 野村證券・岡崎康平 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9pMHAtSG5sc1Z2RTA5aDVScnB2MGg2Y0dBbTFQN3dsQ255N0hBX3hXNWlnTkk3ZDNvdmI1Uk1tUmRRbFRFdlZHWXhxYjFVT0pSV3hWekNoNkNlMmNmd1Nn?oc=5",
+          "published_at": "Tue, 13 Oct 2026 08:58:32 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "14日のユーロ・円、売り・買い要因＆支持抵抗ライン(フィスコ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQSlNjdmFRV1lCMzgwcmp1T1RGZm1uMExUZzlELUJ5aW1xWkltSC1UMXdOMTNwWVY3RjlwcmhoVUNKRDFHR2xBVm1TUWlBd0U4c21nWHFKSzNRbzluUVMzVmpSVFFNc3g5czhqUW10ZWthUE5CSVZzRU5FZXRadldlQ2FtSFVpcEE?oc=5",
+          "published_at": "Wed, 14 Oct 2026 01:35:59 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日銀は今月会合で利上げ見送る公算大、12月の可能性排除せず－関係者 - Bloomberg.com",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBlNEFTRDFZeUVUVWM2S3FwQjZVU05yQThBejRxVzkzRm5CeEJXZXBIZHc3MG5RVGlKaFVQMTVNdm5XR00wRk00YXBBSjFzLTZwb2R6SlU1QVRhWl80Z3NEdE9Cbm93MkdOUlp5SXBkQmlQeTN1WjY4?oc=5",
+          "published_at": "Tue, 13 Oct 2026 08:45:09 GMT",
+          "source_url": "https://www.bloomberg.com"
+        },
+        {
+          "title": "NHK前会長・日銀元理事の稲葉延雄さん死去、75歳 肺がん公表 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9PZTZkb0UweTBCTngxWUxfSVpqMEhvRHVtREU1bnQ5aEtQcW9GUy1hZDM1aFpCRnoxT3lzNjY3VV9abk85ZGJOVmJYa2dWajRIZVBBWElxVlZ0M0xDR3c3bXBZSEFpNjQ?oc=5",
+          "published_at": "Tue, 13 Oct 2026 08:05:00 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "米外為市場サマリー：日銀利上げ思惑などから一時１５８円２０銭台に軟化 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5ld0NTUjVIMDRWQ2p5MUg5Z3YyM2VCU1lMb2Q0YzRXaXl1bWt3SDQxSjBUTTFTZGZsYnlXUDFlX2dZSG9Xb242OWt2Zk4zVWU1czA4a1lhcjJVdER0M08xeQ?oc=5",
+          "published_at": "Tue, 13 Oct 2026 22:55:00 GMT",
+          "source_url": "https://kabutan.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.009534077118103824,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.07273523889336109,
+        "oil_pressure": 0.32927097656929694,
+        "japan_risk": 0.11381701276224077,
+        "usd_rate_pressure": -0.029813190324114114
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

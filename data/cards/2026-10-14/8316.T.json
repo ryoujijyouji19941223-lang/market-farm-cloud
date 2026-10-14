@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-14T10:49:13.116994+09:00",
+  "prediction_date": "2026-10-14",
+  "symbol": "8316.T",
+  "name": "三井住友FG",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-14T10:49:13.116994+09:00",
+  "market_data_through": "2026-10-14",
+  "reference_price": 3277.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.186615722233415,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.4013542718750544,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.4937668928163754,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5428571428571428,
+    "heldout_signals": 70
+  },
+  "evidence": {
+    "price": {
+      "score": -0.2718677595587858,
+      "direction": "DOWN",
+      "day_change": -0.020914251568568853,
+      "momentum5": -0.04432779235928841,
+      "trend": -0.01269604727200202,
+      "volatility": 0.32466633948413626
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "(株)三井住友フィナンシャルグループ【8316】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFB6WDI1N2txZWkzTUpCWEhZOGRsMnQxTWJGYTVsQnlVdzAzV1lNUVBIZVhNYlhrbE1mQ2o1a0FHM3piQjhFWHViZ1ozcFk5c0xIdTZpUXZfc0dyeF9yb0VB?oc=5",
+          "published_at": "Tue, 13 Oct 2026 06:53:19 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "SMBCグループ、システム全体のリアルタイム把握・統制・保護の基盤として「Datadog」採用 - EnterpriseZine",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9tVjJuM1NvcmxFNmM1NWo0M1doT21iWG54d3lGWTBhMVdieHN3dk95b3l4Yk1qZGhmX0hHd1FQV3VLQk02YnB4UlFNTFZZeXk5eWlKT3NB?oc=5",
+          "published_at": "Fri, 09 Oct 2026 11:37:20 GMT",
+          "source_url": "https://enterprisezine.jp"
+        },
+        {
+          "title": "財務・経理の知識をAIに移植、SMBCグループが目指すビジネスモデル変革 - 日経クロステック",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE96dVFETVRYakFBeEFXMWtkVkcwTlF0blFwMktxRVJ6a1ZwdTV2WWV4dHlYdGdTY0s0WWQ2bEZnS3VTTFM0UHRDTEJObHMyLUNma3Y2WXBJdGJLLVFrc2lBM0RJXzZzekJnTWhNZQ?oc=5",
+          "published_at": "Mon, 05 Oct 2026 07:00:00 GMT",
+          "source_url": "https://xtech.nikkei.com"
+        },
+        {
+          "title": "SMBCグループが進めるグローバル人事改革―「One Global HR」への挑戦 - - SAP News Center",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9BSUtYdkZjM0pOUmI0ZDdxalJDU21YdG0zVEpOQ2ZSUW90NjAySi11Y1U3Z2ZNMTVIQk5vbWVaaEotU3Znd25XazNfSmF0QTMxU2NmTElqcTA0by1GVlhHMQ?oc=5",
+          "published_at": "Mon, 28 Sep 2026 08:00:14 GMT",
+          "source_url": "https://news.sap.com"
+        },
+        {
+          "title": "SMBCグループ、富士通、ソフトバンク、健康・医療分野での業務提携に合意し、持続可能な医療の実現に向けて国産ヘルスケア基盤を構築〜国民の健康寿命延伸と医療機関の経営効率化、国の医療費抑制に寄与〜 | 企業・IR - ソフトバンク",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9Xd1lzblUxbmh1OFNEd3Q2S2R0QS1oR0E5MHplb3FVeng2QVk3al80b25FTjF6cVQ1WmQ3ZDctbE5udFdPZHhTLXFIeDdBNi1NSFlLcktSa2hNNDhHZ0IwVWx4VjZnV0NwdUFxNkw2QQ?oc=5",
+          "published_at": "Tue, 19 May 2026 07:00:00 GMT",
+          "source_url": "https://www.softbank.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.011637638222937775,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.07273523889336109,
+        "oil_pressure": 0.32927097656929694,
+        "japan_risk": 0.11381701276224077,
+        "usd_rate_pressure": -0.029813190324114114
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

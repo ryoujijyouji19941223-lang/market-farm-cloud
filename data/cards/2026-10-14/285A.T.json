@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-14T10:49:13.116994+09:00",
+  "prediction_date": "2026-10-14",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-14T10:49:13.116994+09:00",
+  "market_data_through": "2026-10-14",
+  "reference_price": 15095.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.5953743289654131,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.2685720825557816,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.31351150612795714,
+    "direction": "DOWN",
+    "price_coef": 0.5,
+    "macro_coef": 1.0,
+    "edge": 0.12,
+    "heldout_accuracy": 0.5142857142857142,
+    "heldout_signals": 35
+  },
+  "evidence": {
+    "price": {
+      "score": -0.841733357694077,
+      "direction": "DOWN",
+      "day_change": -0.005599472990777343,
+      "momentum5": -0.19428876434480913,
+      "trend": -0.05624194465506516,
+      "volatility": 0.7537292099546401
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "キオクシアＨＤ、Ｓ＆Ｐ格付け「ＢＢＢ」に 収益力評価で格上げ - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9qa2xRSFJmbENoUEdrSWtTRksyMXpzWTZjdFhMZ0xRZ2JTM0xxNzYtYjNMREkyOWs2V1pUY01oRzFaTkdXckFkLXd0WDBNZ2FBUnhmdnp6SFA4VjNPUlRZSzVQbFNUXy05X1dRMVBRTFVDRjJRaEZWbGcxMA?oc=5",
+          "published_at": "Tue, 13 Oct 2026 10:03:04 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "キオクシア株が急落 中国企業との競争激化懸念で（13日の株式市場） - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE16blJnMlRVekVqUUMxWF9WTW1MTkoxRk15Yk1KR1k0cUhsdWRGVmJ0V29kRS1jUjBvaWlWaEw2cnp3SjYtTnFYdUk2dmNKMnhxV1FmMTFtQXhBX1BDbElYNjZvTWhTSGZRaXBwZQ?oc=5",
+          "published_at": "Tue, 13 Oct 2026 07:34:23 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "キオクシアＨＤ、Ｓ＆Ｐ格付け「ＢＢＢ」に 収益力評価で格上げ（ロイター） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9vRFlvb2F2TmpHOWVWanNRNWw3X0dEdU1mZjNFcnNSWmdpbFBfblpxRWVxN1RKcFFZckZoRS1kS3ZKQ3JwcGQtX2dLNkluNjZOU2RrUzdDSkdqZTlod3lJVXAwWkxTc0U2eWRFNUJESnpqeWVhbU56aExaU2VGUTQ?oc=5",
+          "published_at": "Tue, 13 Oct 2026 10:02:52 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "話題株ピックアップ【夕刊】（3）：キオクシア、Ｓａｎｓａｎ、サイバーセキュリティー関連 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1UWkFhQjhCOTRXVlZDeVNOa2hOeTBpUUxUOGNaMEVHOVFuTkhoQVN5TjVXRDdPWDhuejlPZDZwZ0hQR2xISFUxaVNWZlh6NXBjTzNKYWd0TTh3VGxOSDhIcg?oc=5",
+          "published_at": "Tue, 13 Oct 2026 06:52:48 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "キオクシアHDが大幅続落､12日の米半導体株安が波及 - 四季報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9aTVliRDZuY1Q5bW15OUNEckpfT1p5b2pJeGFrZEtQMzRuQS1PQ2h4d3dvcEhFWjNZNndwdjdOM1VNRDM4eXVncWxNNzl6M24yYjFtOGwxVQ?oc=5",
+          "published_at": "Tue, 13 Oct 2026 00:54:40 GMT",
+          "source_url": "https://shikiho.toyokeizai.net"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.011637638222937775,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.07273523889336109,
+        "oil_pressure": 0.32927097656929694,
+        "japan_risk": 0.11381701276224077,
+        "usd_rate_pressure": -0.029813190324114114
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
