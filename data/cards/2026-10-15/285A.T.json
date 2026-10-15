@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-15T10:24:37.246266+09:00",
+  "prediction_date": "2026-10-15",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-15T10:24:37.246266+09:00",
+  "market_data_through": "2026-10-15",
+  "reference_price": 13175.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.7024026340225236,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.22293081263045716,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.2712850649712013,
+    "direction": "DOWN",
+    "price_coef": 0.5,
+    "macro_coef": 1.0,
+    "edge": 0.12,
+    "heldout_accuracy": 0.5142857142857142,
+    "heldout_signals": 35
+  },
+  "evidence": {
+    "price": {
+      "score": -0.9529379334673086,
+      "direction": "DOWN",
+      "day_change": -0.10313138189244386,
+      "momentum5": -0.2639664804469274,
+      "trend": -0.10086818822754007,
+      "volatility": 0.7984290557568113
+    },
+    "news": {
+      "score": -0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "DOWN",
+      "headlines": [
+        {
+          "title": "キオクシア－急落 米ハイテク株安を嫌気 KOSPIは6％下落(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOTllXSC1XUzBsX0pBcEtxZDFycTlsTEVqVXk1TFRNSkl2blFzYnF1bDFEamZqOWxYQWx6bk4yNF8xYzRzc1JEXzdwWEp5NmlRZFZzQTYxQ3JmZGFxVmhoVWRkM1ZKekUwMjh3bEJ3Q2ZPYjVYbjRiVzF2ZFVVbHg4bnBjMHRBa28?oc=5",
+          "published_at": "Thu, 15 Oct 2026 00:24:02 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "信用評価損益率、3週連続で悪化 キオクシア株下落で含み損膨らむ - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8xN1Q2dEpoOEpPNWVUekNubDdCdmVYNDJOQmNuV3F3QXUyVW1EQzZ0ZkJtemQ5bDRVSXlmWndHck4tazFJeXM5SDQ4TXFsSHB0ZVZZMC1mT1k3eVZja3dYcmFDcFJsaWc4MmQ2eA?oc=5",
+          "published_at": "Wed, 14 Oct 2026 11:18:26 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "ＡＩ・半導体株が大幅安、キオクシアの分割後下げ率30％超 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNMFdKalhEc0lRWklKRWlWLTE0c2pCM0tqVkhLLTktUzVWY255UzBlS01qbm0xOU1NSXVnaVlvNmsyNVZaSzBOZ0tTSlBQQU03QjdpQUNESlZ4cG9TaWJpTW9BMDY0SDc0bTN5bklzbU1jM1JnSDBnNUlOaFJPQ2drX0t0T01rZw?oc=5",
+          "published_at": "Thu, 15 Oct 2026 00:44:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "＜特別気配＞ キオクシア、ＳＢＧ、フジクラが売り気配 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE56aThUQ21VSkZMUTduYmxsNUxYVi0xZFM2djBPZmtFYnZEOEdZYU93ck1ZUXY0dGxuVG41U011RlVaYjlZbDlUMW5mZGRqaVFMbHozbmQ3MUxVcFhka3RtSQ?oc=5",
+          "published_at": "Thu, 15 Oct 2026 00:03:42 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "キオクシアHDが大幅続落､12日の米半導体株安が波及 - 四季報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9aTVliRDZuY1Q5bW15OUNEckpfT1p5b2pJeGFrZEtQMzRuQS1PQ2h4d3dvcEhFWjNZNndwdjdOM1VNRDM4eXVncWxNNzl6M24yYjFtOGwxVQ?oc=5",
+          "published_at": "Tue, 13 Oct 2026 00:54:40 GMT",
+          "source_url": "https://shikiho.toyokeizai.net"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.07936559509835782,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.49603496936473634,
+        "oil_pressure": 0.33586318459297826,
+        "japan_risk": 0.20962018149000106,
+        "usd_rate_pressure": -0.07069985277993074
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

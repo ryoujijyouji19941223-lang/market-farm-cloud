@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-15T10:24:37.246266+09:00",
+  "prediction_date": "2026-10-15",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-15T10:24:37.246266+09:00",
+  "market_data_through": "2026-10-15",
+  "reference_price": 643.7999877929688,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.13325890685903302,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.4272280753960462,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.1784618641092343,
+      "direction": "DOWN",
+      "day_change": -0.008623400693811956,
+      "momentum5": 0.004054858915220949,
+      "trend": -0.0245766171764219,
+      "volatility": 0.2395222242876332
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "日本製鉄(株)【5401】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBkU2Jjek9TYXNYM3pQUlhyTWc2NGwwRG5tZFRIQVNNYUpEZldqdEFEYjNVcGVkdlQ0N2hBNGQ5cFhXYnNZZkdKOEtZa05mLTNSWG93V0cyemF0TEZpQ084?oc=5",
+          "published_at": "Wed, 14 Oct 2026 06:53:52 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "鉄鋼大手 日本製鉄とJFEの決算比較 米国巨額買収で稼ぐ日本製鉄と事業多角化・構造改革を進めるJFEの違い - SmartNews",
+          "link": "https://news.google.com/rss/articles/CBMinwVBVV95cUxQajZmTWQ3QVdnMEJ2VWpWSUZtUFFyc3N3VWJpRDlTeDlnMTJ0eVh1UkFHNkt3c25HaThmSHBSTDZlU3VIVmFvSUlqUHBFaWpCVzVXMjJGZ08xc0wyLW9zbzI1UERVdkpOdFJqWXZLTnFUWmpZbTJBa0twQzZCWVBkY09XWk15TXhZcEJJaWxfSnE1NjJwZm9WMHRHc2Z3VHEwcng1azFGMDJXYzFpd0dJSzhIdjNFb1oxalRkY1ZSZTBucXY1V1dTVWkyM1QzWGo2azd5TG9BUTBQOGpPcDQxSGVfX3RGSW5EbGxiRVk4NkZ0S3dUM3JFWHU3cWlJclFvLTgxOGFubTZzZF9GX2FuNFM2Wm9tVWhiT1IwdFAtZ2JGbWowdzdVcG5KcnRmUFZQdkpHaVl4TGx3Y1lvOTB0Q1RsaFRxa3d6cks2X09DUThici1OeFhwNVFiWWJKUlI3dTM4SXI0dktUXzZMRWF6cXlQZ2hsRXVaOFhEa0NQUjR0bUdMRm9INjlrRzFpNk1sUGpNeV9NLVlac2VsVnUyZm9TX3g2c1RvUXBqeGEtQzMwWWE5eXJrbXZlTWdwUTdaeVBrMXFGUjRTd1k0YnkxZUIzMi1Va2hacmJuamE5eFl5c1lyRzFtc2hyWFRvWFFTS3puNnJsWWZPNUxhVlh4dHZYYjJaTWdzaEVrNDhBLXk4a0hVVUhWVWdMRk9FQU9rbUpEUVNQeFRXMFJFZnpwWUttWkI4UmNqR2owWjh1RHZaLXJqaWJnWGZJTHU1UTlhQVNBWE5BNmt2U1kxVjdmem9CaVg4RHdzUjZWMDJmOVRyakdFdkFjT0NlVUR5R2lKU2tabDZlTGh5NmpNdW1IMkZjSGhJYXVqX1BXNkpJRQ?oc=5",
+          "published_at": "Mon, 12 Oct 2026 21:30:00 GMT",
+          "source_url": "https://www.smartnews.com"
+        },
+        {
+          "title": "日本製鉄 世界鉄鋼協会「Steelie Awards 2026」で2部門受賞 - Digital PR Platform",
+          "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBXb1d4R2dMQ2J0YXAwMTNodmtjZGRQM1ZzNzdYb21vb1pPcU9WLUtNYWxCY0o5VHhSdFlkYUVJS25rRkU?oc=5",
+          "published_at": "Tue, 13 Oct 2026 05:28:50 GMT",
+          "source_url": "https://digitalpr.jp"
+        },
+        {
+          "title": "日本製鉄のアルミめっきホットスタンプ用鋼板が新型エルグランドで採用：材料技術 - MONOist",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5nY1Jpd1FGVWR3eVRnRW91eHlDSUxNZXJuLTRyaWY1c01BSFFnV0x3VFVXbjAzNGZHNmhmcU8ycFZoRG0yU2RnV3duaWxsOUxESklOb0FBZFppdHhFYjhTcTdZcHYxMjFQSnpjQ0JmVQ?oc=5",
+          "published_at": "Tue, 13 Oct 2026 22:00:00 GMT",
+          "source_url": "https://monoist.itmedia.co.jp"
+        },
+        {
+          "title": "日本製鉄---大幅反発、メタルスプレッド転換期待で欧州系証券が目標株価上げ - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE83R1NyVG1FcElCLUhLeDhvcHFLSnF0VEJhWmtRVWFRTUdDZnU3RHlKNU5SZXB3aTJwVmVvby1Yb3dISTEyTXNsWWJ0d0RoNDZfMmtXcjZJdWlRWnFHb3g3UA?oc=5",
+          "published_at": "Tue, 01 Sep 2026 07:00:00 GMT",
+          "source_url": "https://kabutan.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.07936559509835782,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.49603496936473634,
+        "oil_pressure": 0.33586318459297826,
+        "japan_risk": 0.20962018149000106,
+        "usd_rate_pressure": -0.07069985277993074
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

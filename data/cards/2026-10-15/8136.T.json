@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-15T10:24:37.246266+09:00",
+  "prediction_date": "2026-10-15",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-15T10:24:37.246266+09:00",
+  "market_data_through": "2026-10-15",
+  "reference_price": 1294.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.34935226993640234,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.6683411911763179,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.4962462215759539,
+      "direction": "UP",
+      "day_change": 0.011332551778038269,
+      "momentum5": 0.06897976042957454,
+      "trend": 0.033549314646467154,
+      "volatility": 0.31184140614432915
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "「歯」になったサンリオキャラクターズのガチャ第2弾が10月中旬登場！（HOBBY Watch） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5IRHl0cTBxdlZNV2dUcFhyVVhzTEJmOHhHWHgzeUk4SWV3VjZEU3lXT2cxbzNRVXNIdzM2YXBKOEFhYnFiNlNVckdDckVOMXRIbU1MMDBEZ2Z2S29nVXM5NmxrZ3BIWWVhcVEtU1VFN0hudkp6T0N1NjAtbWdncnM?oc=5",
+          "published_at": "Wed, 14 Oct 2026 15:00:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "「歯」になったサンリオキャラクターズのガチャ第2弾が10月中旬登場！ 銀歯風のハローキティやタキシードサムたちがラインナップ - hobby Watch",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1FamFVTzJ2X3ZUY3VELWhVWkxNZTd1Wm1CZzFZNUk2c2pFOUJoZnMxR2cxc1JCTFJES3VURXBuWFIzaThreGcxQ2FabTU3dEJSMWlheUpwLUg1TGEwaDZQUnJoSGhCZG8?oc=5",
+          "published_at": "Wed, 14 Oct 2026 15:00:00 GMT",
+          "source_url": "https://hobby.watch.impress.co.jp"
+        },
+        {
+          "title": "『ソニックレーシング クロスワールド』シーズン2 新情報発表！ 新コラボDLC「バーチャルサンリオピューロランド」「ファイナルファンタジーVII リメイクシリーズ」などが新たに参戦決定！ - SEGA",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8xdVAxYlBFX3BWTk9jUXA2TjdmdjBDMHFzOFB5VE0weldBR2xsS09SMG5RN0poc21YMWFJM2FISHNkQWd3UzNzQTU3ZVp6TkNIR1UzSVRB?oc=5",
+          "published_at": "Tue, 13 Oct 2026 02:48:22 GMT",
+          "source_url": "https://www.sega.jp"
+        },
+        {
+          "title": "『サンリオキャラクターズ』×『グランブルーファンタジー』 『グラブルフェス2026』にてコラボレーション決定！ - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE03XzZ0dlJfMHF5TkR2dWl2b193S2ZxUndCdFBOUTZsaF9IMWhWaG1pNldfWFVQUUY2a2dIUEZoZm5qVHZHVTF4UEd4dEx0WUl1NGZzMXd1bS1Wdk40TW54dGFVMUE0Q0Qwa3c?oc=5",
+          "published_at": "Fri, 09 Oct 2026 09:00:02 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "「サンリオ」ハローキティ、ポムポムプリン、シナモロール、クロミのパーカーが登場！ラメロゴ＆ふわふわ刺繍がかわいい♪ 1枚目の写真・画像 - アニメ！アニメ！",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBnRXNIRVlUdFhHVzJzb0thWTRmMXBNaWRHbU01QzIzT1dIVEZxZmx3WnU4UVh2WGZHeExKZ25YV0dtal9fSjNQRDRPSEh5WlN3WTJfQjhaR0NtT1YwdEJ1ejB6MTZQLUl5TjNPRU1adm4?oc=5",
+          "published_at": "Wed, 14 Oct 2026 08:30:03 GMT",
+          "source_url": "https://animeanime.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.07936559509835782,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.49603496936473634,
+        "oil_pressure": 0.33586318459297826,
+        "japan_risk": 0.20962018149000106,
+        "usd_rate_pressure": -0.07069985277993074
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

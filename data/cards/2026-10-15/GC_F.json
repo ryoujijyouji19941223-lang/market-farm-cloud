@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-15T10:24:37.246266+09:00",
+  "prediction_date": "2026-10-15",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-15T10:24:37.246266+09:00",
+  "market_data_through": "2026-10-14",
+  "reference_price": 4165.39990234375,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.1398525203393882,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.5112065573063299,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.08784819757362874,
+      "direction": "DOWN",
+      "day_change": -0.0028487067962890134,
+      "momentum5": 0.005965103935612559,
+      "trend": -0.013991956164090436,
+      "volatility": 0.1646579553073602
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "米CPIは上振れ、ベージュブックは弱め、長期金利は上へ往って来い！ - マネースクエア",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAxOFFfb3lIbWtPUWc0bmRBRDZNNHlYMUdzbXpJMFhPR3RfTHhYc21TWVduTlNBWk4wSWFWTmtMUHlHaXlvRGZtc0VOQzZxR3d0bUpmWUg1V1h4Zw?oc=5",
+          "published_at": "Wed, 14 Oct 2026 23:24:00 GMT",
+          "source_url": "https://www.m2j.co.jp"
+        },
+        {
+          "title": "10 月の金融政策決定会合は利上げ見送りへ 政策金利の２％超えは？ - 第一ライフ資産運用経済研究所",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5DVFktajMyblhwNjFHYzVlZEZ3OTQ2Ul91T1VYbHZ1SmxRM0VzeUtqak0ydE9QMUMtVS1XM24wRXpOS3FNSGRkMENfbFh6QkFNR09FRGNDaFJBcTA?oc=5",
+          "published_at": "Wed, 14 Oct 2026 03:33:34 GMT",
+          "source_url": "https://www.dlri.co.jp"
+        },
+        {
+          "title": "ミライノカード（Mastercard・Travelers Gold）のカード切替およびスマプロランク獲得条件の変更について - 住信SBIネット銀行",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9XTE9GR2NEaEZXc3FILVFZRUNmaDk2MkFPZnhPSk1KQkdyYXE2RkZrbTBaeFZLYzhVRlhuU21PUVhRejBuZWM1LVZBZnBXRVBJVjROSFBCSkxQdm83WmdqQXUzYVRXYmprZG05dzN4SDZDblFmV0E?oc=5",
+          "published_at": "Thu, 15 Oct 2026 00:55:21 GMT",
+          "source_url": "https://www.netbk.co.jp"
+        },
+        {
+          "title": "米大手銀の好調ムード、金利上昇が水を差す恐れ - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1aTDdTeDdkYzZ1YVRpYlJSak9TNklJZVhiZTFpZGg5MGNYVGFFZVRWOTBFMEM1azZrNXFHdlZUU0E3Q2N0WWI0VGE4YTE?oc=5",
+          "published_at": "Wed, 14 Oct 2026 19:10:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "奨学金の金利が高騰、1000倍超えで返済額100万円増のケースも 学生不安「人生設計が狂う」 - 福井新聞社",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1RTWVzMDN0c3Z0SjdrR2JjcnMxcEFqdlZ0dVpBSzNibTlwbUpFVnQzQXdkcWc2Y05Ra3VMTUh2ZWtyMDk1TU9nZzc0Q1RKNkdISjhwLUhpQ0RMdmlvTEE?oc=5",
+          "published_at": "Wed, 14 Oct 2026 22:30:00 GMT",
+          "source_url": "https://www.fukuishimbun.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.10910497326213758,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 0.49603496936473634,
+        "oil_pressure": 0.33586318459297826,
+        "japan_risk": 0.20962018149000106,
+        "usd_rate_pressure": -0.07069985277993074
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-15T10:24:37.246266+09:00",
+  "prediction_date": "2026-10-15",
+  "symbol": "EURJPY=X",
+  "name": "ユーロ円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-15T10:24:37.246266+09:00",
+  "market_data_through": "2026-10-15",
+  "reference_price": 176.80999755859375,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.13130115236818984,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.521271519064296,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.06558245471398849,
+      "direction": "DOWN",
+      "day_change": -0.002853643892676283,
+      "momentum5": -0.001344305421227432,
+      "trend": -0.007537437634440147,
+      "volatility": 0.05463193451875868
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀の利上げペースは加速している？ 背景とリスクシナリオを解説 野村證券・岡崎康平 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9pMHAtSG5sc1Z2RTA5aDVScnB2MGg2Y0dBbTFQN3dsQ255N0hBX3hXNWlnTkk3ZDNvdmI1Uk1tUmRRbFRFdlZHWXhxYjFVT0pSV3hWekNoNkNlMmNmd1Nn?oc=5",
+          "published_at": "Tue, 13 Oct 2026 08:58:32 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "債券市場、日銀利上げの「ゴール」意識 5年入札に一定の需要 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE50MlZla1lleVh1X05uWW50V0RjcHMyYk1qb2ltTkc2ZEFwTGlnbll1Z0QzNEVMV0pyY2txM2Q1ODFXQURnMVBVempScXU5US1FbEFJMzJ3TFZkMGYtby1xbFZHeEo3NFVxUE92SA?oc=5",
+          "published_at": "Wed, 14 Oct 2026 19:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "どこまで進む日銀の利上げ 2％を超える可能性は？ #エキスパートトピ（藤代宏一） - エキスパート - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxONHNtcjBhakowZFdlSzBRZUVMR0t0T2RYY3JTbl96NkhHTFhHdXNzeGlnR1VzV2dfQXNQMml3OEV4b2FEZVN1UGZLVUwwQ3o1bkpwV3JaX1RiV0JQOW5kemlramhid1BnZ3VGN1Q0dUY0RjBIT1V5Ry1UUGlYWFQtb1BTZU9ZMkNB?oc=5",
+          "published_at": "Wed, 14 Oct 2026 05:00:26 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "10 月の金融政策決定会合は利上げ見送りへ 政策金利の２％超えは？ - 第一ライフ資産運用経済研究所",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5DVFktajMyblhwNjFHYzVlZEZ3OTQ2Ul91T1VYbHZ1SmxRM0VzeUtqak0ydE9QMUMtVS1XM24wRXpOS3FNSGRkMENfbFh6QkFNR09FRGNDaFJBcTA?oc=5",
+          "published_at": "Wed, 14 Oct 2026 03:33:34 GMT",
+          "source_url": "https://www.dlri.co.jp"
+        },
+        {
+          "title": "【眼光紙背】 ECBが迎える〝熱い〟冬 - ニッキンONLINE",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5fZFV0bS1Ic0FWWV92ajdaVl96d1BqcWJvN25xeHNoaXgwUmdEa1dWQkp2Q09odWpWUU1WVm85MUFHUTVLeExuZG1PeEJLQmJtZTc3WmhB?oc=5",
+          "published_at": "Wed, 14 Oct 2026 20:07:32 GMT",
+          "source_url": "https://www.nikkinonline.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.011367221084517688,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.49603496936473634,
+        "oil_pressure": 0.33586318459297826,
+        "japan_risk": 0.20962018149000106,
+        "usd_rate_pressure": -0.07069985277993074
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

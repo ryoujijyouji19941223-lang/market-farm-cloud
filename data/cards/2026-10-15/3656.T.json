@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-15T10:24:37.246266+09:00",
+  "prediction_date": "2026-10-15",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-15T10:24:37.246266+09:00",
+  "market_data_through": "2026-10-15",
+  "reference_price": 174.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.21592481136139097,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.3872177241291825,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.45792004580135576,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5106382978723404,
+    "heldout_signals": 47
+  },
+  "evidence": {
+    "price": {
+      "score": -0.30002937073034897,
+      "direction": "DOWN",
+      "day_change": -0.011363636363636354,
+      "momentum5": 0.005780346820809301,
+      "trend": -0.04158415841584151,
+      "volatility": 0.34630588810545154
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "ＫＬａｂ(株)【3656】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9lTndiVlkzRWNtdnpudzVoR3lqdHJjZXZoNFo4WFBFMUNwcU13YUE0RDBpXzN4VW5qaVR3ZE1nMXRRZExscGZVbzh1YUg0Z1dySm5yN1p1LUN3TmlkQ3h3?oc=5",
+          "published_at": "Wed, 14 Oct 2026 06:55:53 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "【株式】KLabが3日続伸 企画するAIゲームが経産省のコンテンツ産業成長投資支援事業「IP360」のIP新規創出支援に採択で - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE16VlIwZWhFVkVCOWhtTDlLb043NkhTVnQ3ckFpbVdzSjNNY2VPX3pwRUVyUHdJYmVDcEs1Q053aFNzNkgz?oc=5",
+          "published_at": "Wed, 14 Oct 2026 05:22:06 GMT",
+          "source_url": "https://gamebiz.jp"
+        },
+        {
+          "title": "KLabで企画中のAIゲームが、経済産業省「IP360」IP新規創出支援に採択 - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5fMDR1N1dzNkQ3c2lNQ1hyYVhnekNIV0Vfdl9hNWxUVFlRM2MwaDAyMEhWY1RQYjhUZ09pNHc1RFdwclJZOFIwTFlQUWs0Zi1LSHdOYkxJNmE2dkRKdHhHQ3VPSXNOajZCa1E?oc=5",
+          "published_at": "Tue, 13 Oct 2026 23:30:01 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "KLab、企画中のAIゲームが経済産業省「IP360」のIP新規創出支援に採択 | ニュース | IT×エンタメの最前線を届ける - MEDIAMIXI",
+          "link": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE52ckFyblhOVGp5ck1jTlduMThva0FpVnFEczQ1SWZfc1FmTkVwelFXazNzRU1lX05WNUFXVFk0ZUllVjNTZDhV?oc=5",
+          "published_at": "Wed, 14 Oct 2026 01:44:16 GMT",
+          "source_url": "https://mediamixi.jp"
+        },
+        {
+          "title": "KLabのAIゲーム企画、経産省「IP360」新規IP創出支援に採択 - Koubo",
+          "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1CT1FHX0dySWVFN3ZyT3g3NzdMX1Z6MFhPVVNUcHg1Q2w0c3ZWQVROdHp5MUZ5NVFscUZ4Z21fMnNlblFTd1E?oc=5",
+          "published_at": "Wed, 14 Oct 2026 00:04:42 GMT",
+          "source_url": "https://koubo.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.07936559509835782,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.49603496936473634,
+        "oil_pressure": 0.33586318459297826,
+        "japan_risk": 0.20962018149000106,
+        "usd_rate_pressure": -0.07069985277993074
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

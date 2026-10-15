@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-15T10:24:37.246266+09:00",
+  "prediction_date": "2026-10-15",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-15T10:24:37.246266+09:00",
+  "market_data_through": "2026-10-15",
+  "reference_price": 157.7239990234375,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.18010329490076907,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5977808795506536,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5069253329651705,
+    "direction": "FLAT",
+    "price_coef": -0.5,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5135135135135135,
+    "heldout_signals": 37
+  },
+  "evidence": {
+    "price": {
+      "score": 0.010880062167076597,
+      "direction": "NEUTRAL",
+      "day_change": -0.00377715780898058,
+      "momentum5": -0.002125765787334588,
+      "trend": 0.002422944332344912,
+      "volatility": 0.04902990189155932
+    },
+    "news": {
+      "score": 1.0,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜米CPI上振れを受けた上昇続かず」 外為どっとコム トゥデイ 2026年10月15日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9zWkdxOVUxaDN3ZFB3ZFI4NEhSMnlRcTVPei1iTFV1V3R6OWNsVmNnRUdLakJXc2pmSU5BLUVMeVlta0hMOHNET1UzUnJhRGY3alBNZ3ljUy1ySHZpdmJqRXBwaw?oc=5",
+          "published_at": "Wed, 14 Oct 2026 23:31:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀の利上げペースは加速している？ 背景とリスクシナリオを解説 野村證券・岡崎康平 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9pMHAtSG5sc1Z2RTA5aDVScnB2MGg2Y0dBbTFQN3dsQ255N0hBX3hXNWlnTkk3ZDNvdmI1Uk1tUmRRbFRFdlZHWXhxYjFVT0pSV3hWekNoNkNlMmNmd1Nn?oc=5",
+          "published_at": "Tue, 13 Oct 2026 08:58:32 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "米シティ、ＣＰＩ上振れでタカ派に転換 ＦＲＢの12月利上げ予想 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPNGJGMC1rQ1VCLWU1NnlMWk1Jdkk2Q010OTBuNW96X1J5Vm5NQXVCYmpGQmpPdnk2ck54M0IzUkY0eG8wZjdfc0J4eEwxOVZ3LVlTaXBaNkJDaUE4MldXODJjLTNRTlV4RGFZUGRWRjV3eFlMSlJXUGQ2ZGtjSi13YXlSV0p5Zw?oc=5",
+          "published_at": "Wed, 14 Oct 2026 16:49:43 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "債券市場、日銀利上げの「ゴール」意識 5年入札に一定の需要 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE50MlZla1lleVh1X05uWW50V0RjcHMyYk1qb2ltTkc2ZEFwTGlnbll1Z0QzNEVMV0pyY2txM2Q1ODFXQURnMVBVempScXU5US1FbEFJMzJ3TFZkMGYtby1xbFZHeEo3NFVxUE92SA?oc=5",
+          "published_at": "Wed, 14 Oct 2026 19:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "10 月の金融政策決定会合は利上げ見送りへ 政策金利の２％超えは？ - 第一ライフ資産運用経済研究所",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5DVFktajMyblhwNjFHYzVlZEZ3OTQ2Ul91T1VYbHZ1SmxRM0VzeUtqak0ydE9QMUMtVS1XM24wRXpOS3FNSGRkMENfbFh6QkFNR09FRGNDaFJBcTA?oc=5",
+          "published_at": "Wed, 14 Oct 2026 03:33:34 GMT",
+          "source_url": "https://www.dlri.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.018032350847713062,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.49603496936473634,
+        "oil_pressure": 0.33586318459297826,
+        "japan_risk": 0.20962018149000106,
+        "usd_rate_pressure": -0.07069985277993074
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
