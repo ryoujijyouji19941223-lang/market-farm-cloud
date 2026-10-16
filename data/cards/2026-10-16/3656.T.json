@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-16T10:12:56.309680+09:00",
+  "prediction_date": "2026-10-16",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-16T10:12:56.309680+09:00",
+  "market_data_through": "2026-10-16",
+  "reference_price": 175.0,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.015117679961851743,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5009342114357732,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.4765633413529105,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5106382978723404,
+    "heldout_signals": 47
+  },
+  "evidence": {
+    "price": {
+      "score": 0.012418848839315669,
+      "direction": "NEUTRAL",
+      "day_change": 0.023391812865497075,
+      "momentum5": 0.06707317073170738,
+      "trend": -0.03198414944806116,
+      "volatility": 0.3683297682359605
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "KLab、AIゲームが経産省支援に採択 27年2月以降実用化へ補助金活用 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1OY3AtXzVvNlY4Q1B1QTBQMVE0T2tSYjBXZU9scGRJUGxyY1NIYVpOWGh3WlRaam9OV2NXbjF5RVRRRmpvTVZtaVNsWEM5Mmc2UUs0RkpoWDlFX0tRdDRUcGNlRVp4S2pEUlc4Xw?oc=5",
+          "published_at": "Thu, 15 Oct 2026 11:54:36 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "KLab、『スマグロ』ヒットでゲーム事業が急回復、黒字転換 真田社長「長い長いトンネルを抜けた」 『キャプ翼』黒字化など既存にも好影響 - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE9uSWUwSzlkNHhSZVpab3NPLXd3dUJXREU2d3pDOTIxSnJONzg2b2dmNWdDUkY2WS01Z3JQamhHNl9VM09n?oc=5",
+          "published_at": "Tue, 01 Sep 2026 03:48:31 GMT",
+          "source_url": "https://gamebiz.jp"
+        },
+        {
+          "title": "KLabで企画中のAIゲームが、経済産業省「IP360」IP新規創出支援に採択 - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5fMDR1N1dzNkQ3c2lNQ1hyYVhnekNIV0Vfdl9hNWxUVFlRM2MwaDAyMEhWY1RQYjhUZ09pNHc1RFdwclJZOFIwTFlQUWs0Zi1LSHdOYkxJNmE2dkRKdHhHQ3VPSXNOajZCa1E?oc=5",
+          "published_at": "Tue, 13 Oct 2026 23:30:01 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "KLabがAIキャラクターゲームを企画 IP創出支援に採択 - PlusWeb3",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1rb2NBZ1BxNWd4Z3o2dUI5dE9DWnZTam9zVGZibUlXajdMYnZLbVB4OGRmeWE5aHZGbkxUVWhuOHVBdmhYWnloVVc1VE9rM3BONWlrQmRvd0dhU3lXUTBF?oc=5",
+          "published_at": "Thu, 15 Oct 2026 09:30:00 GMT",
+          "source_url": "https://plus-web3.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.044485751674113914,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.27803594796321196,
+        "oil_pressure": 0.23718461409013902,
+        "japan_risk": 0.15155866155052578,
+        "usd_rate_pressure": -0.11093336751097405
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-16T10:12:56.309680+09:00",
+  "prediction_date": "2026-10-16",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-16T10:12:56.309680+09:00",
+  "market_data_through": "2026-10-16",
+  "reference_price": 638.9000244140625,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.10900099002003552,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.4403351014198178,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.11476825438706491,
+      "direction": "DOWN",
+      "day_change": -0.003276092957780863,
+      "momentum5": 0.012038708645732088,
+      "trend": -0.02042887610501154,
+      "volatility": 0.2415310656026641
+    },
+    "news": {
+      "score": -0.14285714285714285,
+      "status": "OK",
+      "error": null,
+      "direction": "DOWN",
+      "headlines": [
+        {
+          "title": "日本製鉄(株)【5401】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9CVmx5TUl6TGxMX0lYTnVadHZ1b256QUpCY1ctQWx5ZFFaOEtGZ0ZkV0FuYlFvM3hDVF91b0J6Tk9kOFZNSVpPSWxBTUNkOUN0S1Y3TmszM2dNMmVHU2xB?oc=5",
+          "published_at": "Thu, 15 Oct 2026 06:53:47 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "［福岡県］6人の連携同僚の命救う 日本製鉄八幡地区に感謝状 心肺停止状態に…「手震えた」 - 西日本新聞me",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5WMjRSRC1JMnY4VVJvd0EwQ0JsX0ZRVVMxNjF2ZnNjdmx0MmxJWjJRc2pEU21PWV9vQzY3emR5MktKVWtQTnh4S1JlUVY2SWhSNllMN2t3?oc=5",
+          "published_at": "Thu, 15 Oct 2026 21:00:00 GMT",
+          "source_url": "https://www.nishinippon.co.jp"
+        },
+        {
+          "title": "NSSOL、ロックウェル オートメーションのクラウド型MES「PLEX」の販売を開始｜プレスルーム - 日鉄ソリューションズ",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9MYktIVlpUbFhjYklFN0pvYmNMdVcwazdjZzdZSEpyWkFVZEs0WkRlMW1JcHkxSlpsSUpSdnpuRW00Z3dFUm9KMDZ0bFNIQ1hwRnZOeDJ4c2RBbEtoQWdZX3JhTmJUNW5KUTQtdTRxUVpTbk0?oc=5",
+          "published_at": "Thu, 15 Oct 2026 02:02:32 GMT",
+          "source_url": "https://www.nssol.nipponsteel.com"
+        },
+        {
+          "title": "日本製鉄 世界鉄鋼協会「Steelie Awards 2026」で2部門受賞 - Digital PR Platform",
+          "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBXb1d4R2dMQ2J0YXAwMTNodmtjZGRQM1ZzNzdYb21vb1pPcU9WLUtNYWxCY0o5VHhSdFlkYUVJS25rRkU?oc=5",
+          "published_at": "Tue, 13 Oct 2026 05:28:50 GMT",
+          "source_url": "https://digitalpr.jp"
+        },
+        {
+          "title": "日本製鉄のアルミめっきホットスタンプ用鋼板が新型エルグランドで採用：材料技術 - MONOist",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5nY1Jpd1FGVWR3eVRnRW91eHlDSUxNZXJuLTRyaWY1c01BSFFnV0x3VFVXbjAzNGZHNmhmcU8ycFZoRG0yU2RnV3duaWxsOUxESklOb0FBZFppdHhFYjhTcTdZcHYxMjFQSnpjQ0JmVQ?oc=5",
+          "published_at": "Tue, 13 Oct 2026 22:00:00 GMT",
+          "source_url": "https://monoist.itmedia.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.044485751674113914,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.27803594796321196,
+        "oil_pressure": 0.23718461409013902,
+        "japan_risk": 0.15155866155052578,
+        "usd_rate_pressure": -0.11093336751097405
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-16T10:12:56.309680+09:00",
+  "prediction_date": "2026-10-16",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-16T10:12:56.309680+09:00",
+  "market_data_through": "2026-10-16",
+  "reference_price": 191.04299926757812,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.14957472368537578,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5815317116307086,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.02142626570283293,
+      "direction": "NEUTRAL",
+      "day_change": 0.005998373232630083,
+      "momentum5": 0.005198530056415462,
+      "trend": 7.942815067085718e-05,
+      "volatility": 0.06830516431596541
+    },
+    "news": {
+      "score": 0.75,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "6月日銀利上げに議決延期請求検討した事実ない＝城内経財相 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOWjZ0dTRCQS01ZDFDSVBtV1c0MWp3YTlXenBFaHFoUVE0MmRwWktZbjZWRWpRRFdoVE9YeUhuYUswV0NjZDRFTXBxN0d6LWE1dDRSRlRvNEtCdEVZYUxEOXlKM05LSmxaOUlmTU1pcThJMlZIdncwSXhlWWlLaExNQWg0a1FUcW1FeU1qTUJZWlY?oc=5",
+          "published_at": "Fri, 16 Oct 2026 00:00:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀の利上げペースは加速している？ 背景とリスクシナリオを解説 野村證券・岡崎康平 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9pMHAtSG5sc1Z2RTA5aDVScnB2MGg2Y0dBbTFQN3dsQ255N0hBX3hXNWlnTkk3ZDNvdmI1Uk1tUmRRbFRFdlZHWXhxYjFVT0pSV3hWekNoNkNlMmNmd1Nn?oc=5",
+          "published_at": "Tue, 13 Oct 2026 08:58:32 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "日銀利上げ継続を強調、小枝審議委員「過度に慎重になることはない」 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9LcWNSVnlKVXlKTlV0VUhLR2tqeHBqdE5vSGRuWUFaOVZyY0c1S0pOc1Y5emFzRnBXUDNBOXBROTV1RjBtZExHQmVKNnJoakdGMU5xVVpjWEktWHpmZWxhOVFOMVFDcWp3TTBFZQ?oc=5",
+          "published_at": "Thu, 15 Oct 2026 03:26:56 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "日銀の「2％到達」宣言は事実上のリフレ脱却宣言、それでも利上げ終了とはなりそうにない円安防衛のジレンマ 【唐鎌大輔の為替から見る日本】アベノミクスから13年、中立金利への接近と通貨防衛の両立を迫られる日銀 - JBpress",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1wSHU5Mkk2RmhyX2F0Sk5rcTdsQ3hkZ0p4SDI1RVVNdFpfNFFwYUVJWWJLWXBrb1lGZVgzLTlWeFZhbFVfQnVndjV2bklpcnZsY3FhTWh3?oc=5",
+          "published_at": "Thu, 15 Oct 2026 21:00:00 GMT",
+          "source_url": "https://jbpress.ismedia.jp"
+        },
+        {
+          "title": "【要人発言】経済財政相「6月の日銀の利上げで議決延期請求権を検討した事実はない」(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOaGx6Q2hyTWtTa1N4REF3VGFMMENBdWJDRnRtNjZ0TC1vOEctM0xKbHNSVXBvRXlxTDE2YXU5dGtoWHZQM0d3VXpUdzBYdmxGNGc0WW9DZ2ZRU1ZXMXlyamxFMHZoYXVfUFVxTERRUkFCem9POUpKQWdSd05wejFaTjJaajZpT2c?oc=5",
+          "published_at": "Thu, 15 Oct 2026 23:39:47 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.050032420049662615,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 0.27803594796321196,
+        "oil_pressure": 0.23718461409013902,
+        "japan_risk": 0.15155866155052578,
+        "usd_rate_pressure": -0.11093336751097405
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

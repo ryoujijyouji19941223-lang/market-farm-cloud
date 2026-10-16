@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-16T10:12:56.309680+09:00",
+  "prediction_date": "2026-10-16",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-16T10:12:56.309680+09:00",
+  "market_data_through": "2026-10-16",
+  "reference_price": 8457.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.31608131484206137,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.6587864333748698,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.4550124295455062,
+      "direction": "UP",
+      "day_change": 0.027831793874574684,
+      "momentum5": 0.07718761941153995,
+      "trend": 0.022781611188880557,
+      "volatility": 0.28486591354526175
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "Nintendo Switch 2『ゼルダの伝説 時のオカリナ』の紹介映像を公開。新要素「万魔殿」などもご紹介。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOUtvZ2U3amdlNXVNcDc1dTN0VGF6aTBJVmJmakVXOFRnTklfWXptMGNOcVlsRWRuckpIcGpVVU1fdUxCdUlMQkZMYVRwd3hlU2ZUeFdnbnR2RnZhV0pKSlQ1WFBFeUs0a0JoVWRWbS0yTDBDeFZDM1BnQ0k1LXFVQnZfSjhIdw?oc=5",
+          "published_at": "Thu, 15 Oct 2026 01:10:48 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "【10月14日追加】「ゲームボーイアドバンス Nintendo Classics」に3タイトルを追加。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxONXJNQXFGZ2txSVRWUzFEclhzSVkta1BFOHVELUU5MzdRZExXdktIY1dsSDFMcnRZRHV6R1FtSDFnbFZvejBHbnB3VUxyOGdoUTVYTkNBWjQ1QlJHUVp4NmVOX1NqYWpUeDJ5TGNVTEY4TWN5UEVnYmZ0VklSV2VKb29adW1zdw?oc=5",
+          "published_at": "Wed, 14 Oct 2026 01:17:54 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "3本のソフトからお好きな1本を選択してダウンロードできるお得な「Nintendo Switch 2（日本語・国内専用） 選べるソフトセット」が登場。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSnhiVFcyUXVfNDdlVXZ4RTdna2hqbEttc2tpaEdEUi1vNElGSm41UHoxa1dlYzNPc3RocDh3UWJ0eEdGUTVDNEZEMnNmakZ1UjgzZy1BeWtBWUoxeDZJcTVqcHVwT24tNlVQbjF2RmFQTnFDSTNlQ1hLcW1xVVJLNVZCcGZvQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "コピー能力で広がる世界を自由に冒険。シリーズ完全新作『星のカービィ ワールドビヨンド』がNintendo Switch 2 で2027年春に発売決定。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNcHk4eTQ2bkx3aTNMLWVSTzlGbGgxRW9Senk0cEV5TWRndXdwWVlmNk9WOWRuNmtEVGozZXZCY1ZvLVlwUmFQb1R6b1dtVHMxQnVIYzAyZER2UUpzdVJ2Sm1UUUdZMzllTGR0a0luRGUzNy1jV0gyUkprY3EtUTdBckxxSGJxdw?oc=5",
+          "published_at": "Thu, 10 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "メトロイド ラヴェナス - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBpMjItcDBaMHNPd0NXYTNfOFc4aGQ5LWdBLVI5TXBQcE5zeVRsNFRfeHdEeDBPd0w2UFpnMHBfemZmREFOcVNMd1ZMQ0tTR0NDbkYzNjJRbjRoc2hkRldrdkRhNkd2U3hLWXc?oc=5",
+          "published_at": "Thu, 10 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.044485751674113914,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.27803594796321196,
+        "oil_pressure": 0.23718461409013902,
+        "japan_risk": 0.15155866155052578,
+        "usd_rate_pressure": -0.11093336751097405
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-16T10:12:56.309680+09:00",
+  "prediction_date": "2026-10-16",
+  "symbol": "1736.T",
+  "name": "オーテック",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-16T10:12:56.309680+09:00",
+  "market_data_through": "2026-10-16",
+  "reference_price": 2510.0,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.0849823040862697,
+      "factor_agreement": 0.5,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5393187688905512,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.11516094313993029,
+      "direction": "UP",
+      "day_change": 0.0040000000000000036,
+      "momentum5": 0.004401760704281665,
+      "trend": 0.01225838497824805,
+      "volatility": 0.12779730424033126
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "(株)オーテック【1736】：決算情報 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9VUVVTdVZxR3Q5aExEckpxSC1tQkNsa3IwUm9xd0d5eHl5RFVXUURmWXkyVTNOY2ZmbVBjVFpNTnNaTEpXZTQ4N1gwVXFXNmJ4Zm5mX3NrcGtXZy1qd0M2Vg?oc=5",
+          "published_at": "Fri, 07 Aug 2026 07:00:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "(株)オーテック【1736】：決算説明会書き起こし - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1PTTgxbzZFUnlxMUUtTHF3WUtZbEtnVTktUDdFTUdPczN2TXVtb0VCbWt1dVRuZXlhN2xiM1loQVRUUFVJWUx0cFlEZDNTZWdZcUU0VGVLNzB0bGR0bnEtNC0wSjhpRnFWSFVmd19XcU4ySU9icmJwaw?oc=5",
+          "published_at": "Wed, 17 Jun 2026 07:00:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.044485751674113914,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.27803594796321196,
+        "oil_pressure": 0.23718461409013902,
+        "japan_risk": 0.15155866155052578,
+        "usd_rate_pressure": -0.11093336751097405
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

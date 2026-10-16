@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-16T10:12:56.309680+09:00",
+  "prediction_date": "2026-10-16",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-16T10:12:56.309680+09:00",
+  "market_data_through": "2026-10-16",
+  "reference_price": 13330.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.7126590839010786,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.2494720541978454,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.2820799459554746,
+    "direction": "DOWN",
+    "price_coef": 0.5,
+    "macro_coef": 1.0,
+    "edge": 0.12,
+    "heldout_accuracy": 0.5142857142857142,
+    "heldout_signals": 35
+  },
+  "evidence": {
+    "price": {
+      "score": -0.9757150311028845,
+      "direction": "DOWN",
+      "day_change": 0.03493788819875787,
+      "momentum5": -0.2553072625698324,
+      "trend": -0.14727312232925327,
+      "volatility": 0.8281532136453764
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "キオクシア、4カ月で時価総額3分の1 中国メモリー台頭に警戒 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBzQ1Q1ZjNKZWpWOHQ0TFBvOUZxLWIwZVhDQmcwMTh2cHdBdHlqMjZRXzJPZThFNWJvSWJ5ejZ2YUdUS2F6SGhiNDA1aDZWd0IybElzZUF6Ti1PQW80cndZUkdLOEZINVViMzI5cw?oc=5",
+          "published_at": "Thu, 15 Oct 2026 03:04:03 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "ＡＩ・半導体株が大幅安、キオクシアの分割後下げ率30％超 | ロイター - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNMFdKalhEc0lRWklKRWlWLTE0c2pCM0tqVkhLLTktUzVWY255UzBlS01qbm0xOU1NSXVnaVlvNmsyNVZaSzBOZ0tTSlBQQU03QjdpQUNESlZ4cG9TaWJpTW9BMDY0SDc0bTN5bklzbU1jM1JnSDBnNUlOaFJPQ2drX0t0T01rZw?oc=5",
+          "published_at": "Thu, 15 Oct 2026 00:44:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "女子プロゴルファー松原柊亜選手との所属スポンサー契約を締結 - KIOXIA Corporation",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBLS0Nzdm9EMVNVVlpmZlkxRlhacmxNZHpLbklUVDVQTTFDUHFzdEJPRHcza0t1SWRIa2tJeHY3MVlQaUMwNGc1d2dsNkZTQ2ZVZWltZE1vRm9mb2ItNTZIOUFpY20wcW9WSFJiWg?oc=5",
+          "published_at": "Wed, 14 Oct 2026 07:06:04 GMT",
+          "source_url": "https://www.kioxia.com"
+        },
+        {
+          "title": "月初から35％急落の「キオクシア株」はどこまで下がる？ 買い場はいくらか？ 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9FejJyRk9iUmxmN2UzbnNiaEJRQzdQODJmUzVJUDJJLWtvREpWbXczTENlSlJjaEpZbTNWNmFILVRKN19PQU5KUXlhZ29Pb0phdkhId0pxNTBBRXlvZUJmM1p3X25EdENVTzctMjlPUW4?oc=5",
+          "published_at": "Thu, 15 Oct 2026 06:42:34 GMT",
+          "source_url": "https://jp.investing.com"
+        },
+        {
+          "title": "キオクシア株「浮動株比率引き上げ」で“2兆円超の買い需要”でも株価が勢いづかない3つの事情（マネーポストWEB） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE42cDRRb1hVX2pScmhTbTZ6VzBzSElwVjRpeldaTEQxTTc3blJiZHRheUFsaFAtZFBXYlJBX1RsZ0pjTkdCVGJibnBnLTU4dU11UXJXM2dRTTJTN2c5UV9sUE9zNjlKN3FLQkVNM3RTQWpzNE9VdktrZjBuMExrMm8?oc=5",
+          "published_at": "Wed, 14 Oct 2026 22:15:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.044485751674113914,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.27803594796321196,
+        "oil_pressure": 0.23718461409013902,
+        "japan_risk": 0.15155866155052578,
+        "usd_rate_pressure": -0.11093336751097405
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-16T10:12:56.309680+09:00",
+  "prediction_date": "2026-10-16",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-16T10:12:56.309680+09:00",
+  "market_data_through": "2026-10-15",
+  "reference_price": 4177.2001953125,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.12903630739114483,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.5108910550588238,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.08031710034487942,
+      "direction": "DOWN",
+      "day_change": 0.01687000526210758,
+      "momentum5": 0.004859320498556752,
+      "trend": -0.012490969756276504,
+      "volatility": 0.18536262265549613
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "長期金利が急低下、2.89% リスク回避の国債買い - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9EeEFleS1xM0VYaWR3bmVCNGdELVN1azRoZFBHaFBUYVl2V1RhTFBMLTJXeWRKNWJaOVdMWlV4aWVhZUJyN0pScTNoTlUwS2ItOVNxWlpjdERYeGZhalhoTzUxaHBJZmhWRUhBZg?oc=5",
+          "published_at": "Thu, 15 Oct 2026 11:34:42 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "2027年に金利はどこまで上がるのか？インフレだけでは説明できない世界の「金利上昇」の構造 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFB3NFFnc0JodTNCUy1aVHo5c1pyb0w4OWlRQmdHMEJBWmZtOHRCQVpfNTdFV293RDhHa0gwWDJPaEVtOVAtYmNDODlLenHSAU9BVV95cUxNQU1FTndGWVdJNS01VkxQOUtheWxubE03OHNkcDRQdmtBbXJab3JzaGNOUkNNaFVWUDBBM3BTdDZQNWtNd1NONllfUTZZRklr?oc=5",
+          "published_at": "Thu, 15 Oct 2026 19:00:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "長期金利低下2.920％ 1カ月ぶり低水準 米長期金利の低下、日本国債にも波及 - 産経ニュース",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1XUkRtdlNKdDloWjUzcUtKcnQ4dGxRUTZUSHRXQzZ4bFdWMTNRaGVUUGNRU1owbXM4Q2gtV1REdWdRcF9tQ2VuVUR3dmRfZ3JmV3k0TUdQV0k2QjU0Q0swRzlkMFhVWkMyRVZwaVBaUEJRMldyV2c?oc=5",
+          "published_at": "Thu, 15 Oct 2026 09:13:15 GMT",
+          "source_url": "https://www.sankei.com"
+        },
+        {
+          "title": "Market Insights：《長期金利》当面は3％前後で高止まりか 宮嶋貴之 - 週刊エコノミスト Online",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1vQ3pFVU9nM0JSU1pJMXMyX3pxc3RqUDZTOFV3cDdPNFNsa0Y3SjhrdkdjUzVkRVFUU3RZeHo0WGZCNTlTR21relFWWWxIWmFjTUdjLVJwN2NjV3J1NFkybmpIQjNCOHhRWUV3X25mXzh1bUhzUVVobXRxaW1aenM?oc=5",
+          "published_at": "Thu, 15 Oct 2026 22:09:23 GMT",
+          "source_url": "https://weekly-economist.mainichi.jp"
+        },
+        {
+          "title": "米国株式市場は反発、長期金利の低下を好感（15日）(フィスコ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRGdOUzFqbjZMXzJRcVVVTGM2T2g3bmxzenNUOUxrSDBwVkNyZE9DaFdTTENnWEd6MjMyQUd6Q1duWUhwU0ktWHRWeklTaTJTaDM1bG9YUHpuMVU0dzIzV3FHVVR4S2wycTk2SmhpTUVOeEx6OVV5WnJ4dXVKSUk1dkdJQTFLczQ?oc=5",
+          "published_at": "Thu, 15 Oct 2026 21:12:47 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.07113786104417877,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 0.27803594796321196,
+        "oil_pressure": 0.23718461409013902,
+        "japan_risk": 0.15155866155052578,
+        "usd_rate_pressure": -0.11093336751097405
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

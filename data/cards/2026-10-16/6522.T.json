@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-16T10:12:56.309680+09:00",
+  "prediction_date": "2026-10-16",
+  "symbol": "6522.T",
+  "name": "アスタリスク",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-16T10:12:56.309680+09:00",
+  "market_data_through": "2026-10-16",
+  "reference_price": 912.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6511605734714624,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.22727042482707013,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.4791105813650862,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5714285714285714,
+    "heldout_signals": 49
+  },
+  "evidence": {
+    "price": {
+      "score": -0.9477760451769782,
+      "direction": "DOWN",
+      "day_change": -0.11024390243902438,
+      "momentum5": -0.12810707456978965,
+      "trend": -0.1621278512633605,
+      "volatility": 0.6663689011229129
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "アスタリスク[6522]：2026年８月期 決算説明資料 2026年10月15日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPRGhvM2pvUmtnYVo4SHliSDhCWEdzNzJyS2xBZVRXTVBQOWgyMjJNdWE4TVFydG85bk1oVFB4SC1zWFRhN1BwS0RRM2lzVmJjVi15U0Z3cXYwRl9ZeXpjaEJ3enRwZDh1aDZUWldEVUdOczhqcnBxUUlrNHhURXh0NjRBZE94cW5RRXVFTndzckJmY2FUVXpOTVNmWERIdlFLZzBCQjhha3ZuMi1hZmtDbm10dEp5aUNTNWR4SFZqRVJfWlRjMHgtbnl5dnM?oc=5",
+          "published_at": "Thu, 15 Oct 2026 06:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "(株)アスタリスク【6522】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAwMkxkZUtHa2N5SjlGLUtpQjhndzZ2X19KUDNIa0lnS1BnM3RwUEJwbEJQZmh3UnBKUG9ENm94TF9vM0tpdE1WSkhKcWd5dGZkd2U4S251c2ttZ18yTjRJ?oc=5",
+          "published_at": "Thu, 15 Oct 2026 06:56:35 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "アスタリスク[6522]：個別業績の前期実績値との差異に関するお知らせ 2026年10月15日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNOGtUVnBvRFVDdzhGRFV2dG84RlFqaU1jVjQ5X1lkbWcza19aOFFBTGFGV2pNV3BPYXBxT1hVY1RDay1ITlhjb0NIX2xQeXRVLVF4cnBpMFA1Z2JHOThPR2Y4YkdpdkVyTUI3MW5fRlpUQ2ZSeUNOWjhmVU1qWHh3NDRmbF83Wkd3QkhSMC1vM2JENFhvZTBra3dEUEJfd0IxZGhBeWMwNldvaHJnbDhoSzJzQmNRQTVHNEhoUGNydTFYc1g2YWVBVmx4QUI?oc=5",
+          "published_at": "Thu, 15 Oct 2026 06:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "大手アパレル企業「株式会社ワールド」へRFIDリーダー『AsReader』を導入 - 株式会社アスタリスク",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1DSGs3X2xPdTZka0cxOUdIQ2lDa1NsLUh0R0NJQ0hlc3Jmb0p3bHZSanNhbjFJX3oyLS04SWVmTThiYndpWnN5M2stTFU?oc=5",
+          "published_at": "Tue, 24 Feb 2026 08:00:00 GMT",
+          "source_url": "https://www.asx.co.jp"
+        },
+        {
+          "title": "スーパーマーケット向け『全商品RFID化ソリューション』の本格展開を開始 | 株式会社アスタリスクのプレスリリース - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5pVEFSb2IzaUdwX01EZzRPN3k3encybV9NOW04UU5yMXdraUhqa0hYRFVYTWJBdHRQc2RFaTNFNkhFTFQ3aW5JSUN0djNSamxfaXRWT0ZiY0hreFFETFN2dTFZVU0tSktsMVE?oc=5",
+          "published_at": "Tue, 30 Jun 2026 07:00:00 GMT",
+          "source_url": "https://prtimes.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.044485751674113914,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.27803594796321196,
+        "oil_pressure": 0.23718461409013902,
+        "japan_risk": 0.15155866155052578,
+        "usd_rate_pressure": -0.11093336751097405
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

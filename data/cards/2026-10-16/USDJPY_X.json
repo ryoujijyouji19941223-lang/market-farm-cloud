@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-16T10:12:56.309680+09:00",
+  "prediction_date": "2026-10-16",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-16T10:12:56.309680+09:00",
+  "market_data_through": "2026-10-16",
+  "reference_price": 158.14700317382812,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.09802502739969655,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5535937542535594,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.4943966439028386,
+    "direction": "FLAT",
+    "price_coef": -0.5,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5135135135135135,
+    "heldout_signals": 37
+  },
+  "evidence": {
+    "price": {
+      "score": 0.01900293453409777,
+      "direction": "NEUTRAL",
+      "day_change": 0.0012028744564991367,
+      "momentum5": 0.0005314313400845982,
+      "trend": 0.0021099371327941707,
+      "volatility": 0.047607195693131446
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "米ドル/円【USDJPY】：外国為替相場FXレート・チャートをリアルタイム表示 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzbWxqc1ltSU1ndEE0VElnZldUTGdyRVJpOTdKeXBsc0RDSm40dm9kLTJqaDZlOVpoR2E5eEZIX1o0bFR1SFR2N2k4WjRiTnN5dHVBTHJn?oc=5",
+          "published_at": "Thu, 15 Oct 2026 20:34:38 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜10月利上げめぐり、ウォーシュFRB議長発言に注目集まる」 外為どっとコム トゥデイ 2026年10月16日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE10S3B3a0RhNjBBRnlZb2ZvdEtMOG8xOTJHWVFaNkN6X05XdmFzX1JzV09jTFBFOGp4Skh4aUhqMVhiRUdfLWRTdEpLbGpkQzQwSmNHOExJQlVRa2FRbkphbzRPTQ?oc=5",
+          "published_at": "Thu, 15 Oct 2026 23:52:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "6月日銀利上げに議決延期請求検討した事実ない＝城内経財相 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOWjZ0dTRCQS01ZDFDSVBtV1c0MWp3YTlXenBFaHFoUVE0MmRwWktZbjZWRWpRRFdoVE9YeUhuYUswV0NjZDRFTXBxN0d6LWE1dDRSRlRvNEtCdEVZYUxEOXlKM05LSmxaOUlmTU1pcThJMlZIdncwSXhlWWlLaExNQWg0a1FUcW1FeU1qTUJZWlY?oc=5",
+          "published_at": "Fri, 16 Oct 2026 00:00:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀の利上げペースは加速している？ 背景とリスクシナリオを解説 野村證券・岡崎康平 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9pMHAtSG5sc1Z2RTA5aDVScnB2MGg2Y0dBbTFQN3dsQ255N0hBX3hXNWlnTkk3ZDNvdmI1Uk1tUmRRbFRFdlZHWXhxYjFVT0pSV3hWekNoNkNlMmNmd1Nn?oc=5",
+          "published_at": "Tue, 13 Oct 2026 08:58:32 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "FRBのコミュニケーション改革、主要中銀には広がらず - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5UX0JiTE1XaUxwNmo1c3pGRU54ZlVTNUdIU2ZVc3NLUGF3VmdnM01VREpZVmxuOG03M3NSLURsUnp6SzFrMFplMnVSWU0zOHh5Um9WcE9kdHRiZll5eUZ3QW5qS3ZIazlZOGdHX2E1V0lxRDF0WVJpYm1iTzNLQQ?oc=5",
+          "published_at": "Thu, 15 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.0006868794434003872,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.27803594796321196,
+        "oil_pressure": 0.23718461409013902,
+        "japan_risk": 0.15155866155052578,
+        "usd_rate_pressure": -0.11093336751097405
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

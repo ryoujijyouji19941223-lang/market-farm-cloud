@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-16T10:12:56.309680+09:00",
+  "prediction_date": "2026-10-16",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-16T10:12:56.309680+09:00",
+  "market_data_through": "2026-10-16",
+  "reference_price": 1331.5,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.4629584420917121,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.7237556431661385,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.6710082049126397,
+      "direction": "UP",
+      "day_change": 0.047188360204482915,
+      "momentum5": 0.10773710482529109,
+      "trend": 0.04770329929074535,
+      "volatility": 0.3250428680879062
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "【sanrio house(サンリオハウス)】名古屋PARCO店併設のカフェメニューがいよいよ公開！限定柄やコラボレーションアイテムなど豊富なラインアップを揃え10月29日(木)オープン！ - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1OTWQtSGJPUVFJRVdrczJ4dlFFbm1OdUpIbTlLWHFicGUxV0RvOVBTOEVxNldvZDhySXdMTkE3Q05ncXM5OENXNlktSDVoajY3S2ZXdFlyUWtGZ2J3RTdDSlFtQ0lRNE9LcFE?oc=5",
+          "published_at": "Thu, 15 Oct 2026 06:00:33 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "キョロちゃんとサンリオキャラクターズが夢のコラボレーション！ 「チョコボール＜ダブルチョコレート＞」 11月4日（水）新発売 ～「チョコボール」期間限定コラボパッケージ発売 オリジナルグッズが当たるキャンペーンも実施～ ｜ 2026年 ｜ ニュースリリース - 森永製菓株式会社",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBVeGFyYUIweDVaR2xyT05tTTd6M3plUWJaMzJzVXJldi1JN1BiZTF3bFdjeVNLalp1UjYxRFA3REU3SG1yaU5OUnZhejVsZUxHak5PLXlxdGQwZjlJNFRHWV9ldC1rbnZNaXhIR0dHdXJoN0U?oc=5",
+          "published_at": "Thu, 15 Oct 2026 02:04:35 GMT",
+          "source_url": "https://www.morinaga.co.jp"
+        },
+        {
+          "title": "【サンリオ】無料でもらえる！本日から開始！セブン−イレブン限定カードミラーをGET！ハローキティ - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWFJtUVF2NXNndDNHd0tFV2ItMUNoT3ZReHZCdnozZThEVktCZl9jaWV6c0tRQ3lERGsxZWFLSjlxN1NGN2ZQUXdBcTBQZUhvcWJaOUxXV3RFRm1IUDU4VGlGM1ROZnR1R0pMeTNkSEJZUE9DNFZvRDlUVDVZX0E1R09WZ1dCbm1G?oc=5",
+          "published_at": "Thu, 15 Oct 2026 06:09:50 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "ふわふわで可愛い！ 【サンリオハウス】大人気「ハローキティチャーム」新作が10/15より発売 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5ZWjJUZ2xEVWRaNGF1b0lDWFlnZzJ0RXJKb21xdTJMLXhVVHoxQUJQMlpDVGlJRGxiaUQ1eTZObzhrcmk5Vm9tV3EteXFWMmdrTG4tUDlyelpaQ1hNbGtRc1ZWYw?oc=5",
+          "published_at": "Thu, 15 Oct 2026 08:02:14 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "セブン限定で再販！サンリオの人気食玩「マスコット」が細部まで可愛すぎる～♪《5個開封レビュー》 - ウレぴあ総研",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1vN2lwcVMzb2JJS1QzTjhSRi1lYk1nOEw2N0c1ZENGSHJzLV9zQXp1dHprWThvS0UyeTUtODB4aG5MXzY3N1U0OFBxb2Y4NThlM1E?oc=5",
+          "published_at": "Thu, 15 Oct 2026 12:11:00 GMT",
+          "source_url": "https://ure.pia.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.044485751674113914,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.27803594796321196,
+        "oil_pressure": 0.23718461409013902,
+        "japan_risk": 0.15155866155052578,
+        "usd_rate_pressure": -0.11093336751097405
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
