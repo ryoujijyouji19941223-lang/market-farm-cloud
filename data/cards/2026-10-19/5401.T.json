@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-19T10:07:24.532442+09:00",
+  "prediction_date": "2026-10-19",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-19T10:07:24.532442+09:00",
+  "market_data_through": "2026-10-19",
+  "reference_price": 641.4000244140625,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.047438796803576766,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.47393231850506484,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.4128975104578304,
+    "direction": "DOWN",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5,
+    "heldout_signals": 70
+  },
+  "evidence": {
+    "price": {
+      "score": -0.034468818828789355,
+      "direction": "NEUTRAL",
+      "day_change": -0.0032633653239122484,
+      "momentum5": 0.019065776190859474,
+      "trend": -0.013843198015842328,
+      "volatility": 0.24124114990839685
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "日本製鉄---大幅反発、メタルスプレッド転換期待で欧州系証券が目標株価上げ - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE83R1NyVG1FcElCLUhLeDhvcHFLSnF0VEJhWmtRVWFRTUdDZnU3RHlKNU5SZXB3aTJwVmVvby1Yb3dISTEyTXNsWWJ0d0RoNDZfMmtXcjZJdWlRWnFHb3g3UA?oc=5",
+          "published_at": "Tue, 01 Sep 2026 07:00:00 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "NSSOL、ロックウェル オートメーションのクラウド型MES「PLEX」の販売を開始｜プレスルーム - 日鉄ソリューションズ",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9MYktIVlpUbFhjYklFN0pvYmNMdVcwazdjZzdZSEpyWkFVZEs0WkRlMW1JcHkxSlpsSUpSdnpuRW00Z3dFUm9KMDZ0bFNIQ1hwRnZOeDJ4c2RBbEtoQWdZX3JhTmJUNW5KUTQtdTRxUVpTbk0?oc=5",
+          "published_at": "Thu, 15 Oct 2026 02:02:32 GMT",
+          "source_url": "https://www.nssol.nipponsteel.com"
+        },
+        {
+          "title": "日本製鉄(株)【5401】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9CVmx5TUl6TGxMX0lYTnVadHZ1b256QUpCY1ctQWx5ZFFaOEtGZ0ZkV0FuYlFvM3hDVF91b0J6Tk9kOFZNSVpPSWxBTUNkOUN0S1Y3TmszM2dNMmVHU2xB?oc=5",
+          "published_at": "Fri, 16 Oct 2026 06:53:29 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日本製鉄のアルミめっきホットスタンプ用鋼板が新型エルグランドで採用：材料技術 - MONOist",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5nY1Jpd1FGVWR3eVRnRW91eHlDSUxNZXJuLTRyaWY1c01BSFFnV0x3VFVXbjAzNGZHNmhmcU8ycFZoRG0yU2RnV3duaWxsOUxESklOb0FBZFppdHhFYjhTcTdZcHYxMjFQSnpjQ0JmVQ?oc=5",
+          "published_at": "Tue, 13 Oct 2026 22:00:00 GMT",
+          "source_url": "https://monoist.itmedia.co.jp"
+        },
+        {
+          "title": "日本製鉄 世界鉄鋼協会「Steelie Awards 2026」で2部門受賞 - Digital PR Platform",
+          "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBXb1d4R2dMQ2J0YXAwMTNodmtjZGRQM1ZzNzdYb21vb1pPcU9WLUtNYWxCY0o5VHhSdFlkYUVJS25rRkU?oc=5",
+          "published_at": "Tue, 13 Oct 2026 05:24:00 GMT",
+          "source_url": "https://digitalpr.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": 0.20375505557274187,
+        "japan_risk": 0.2104366046103886,
+        "usd_rate_pressure": -0.13335785962923308
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

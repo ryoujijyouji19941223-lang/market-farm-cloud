@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-19T10:07:24.532442+09:00",
+  "prediction_date": "2026-10-19",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-19T10:07:24.532442+09:00",
+  "market_data_through": "2026-10-18",
+  "reference_price": 4192.60009765625,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.14529835157648527,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.5262672682816395,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.07168799488863438,
+      "direction": "DOWN",
+      "day_change": 0.0027504722994904363,
+      "momentum5": 0.00047725861532788016,
+      "trend": -0.009215026872630205,
+      "volatility": 0.18080996478457007
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "ドル／円は株・金利にらみ、レンジ突破は困難か＝今週の外為市場 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1QcnpyRjNNN2FUNGlObE81ZU1jVWxtV3hacDB4V1NhbTBnTEJOcmF2TmNPaEJmTVBaZWc0YnpYbmhaVlB1YkF6UERzblpHa2Z6YkM5czJhZ0xFT3BlUDhVbXZHbFp6VlFvOW9mRTNOUDIxUUZoNlFVai1DcWt5dw?oc=5",
+          "published_at": "Sun, 18 Oct 2026 22:36:09 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "【動画】グロイン｜金利高騰と米中間選挙 公益株の真価＜田中 純平＞ - ピクテ・ジャパン",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOemF6ZlUzaUVJNFZFbko0SVQwaVVjcnBlNEVTTVR2RFdoRnhiQ1hMTi1qQzRMOVVwVVFJZTYtajBjd3lubWZLWkJmeVNxZFotYXVuLW1saWRuY3FYZjhjM1k0U0d5SmFMaS0ycTZWZ3BWc3FCM1RxekVWdEE1ZEQtcmlLcTRUWXNJQUpUcVAzay0yNnd2ZVJUYWxJYw?oc=5",
+          "published_at": "Sun, 18 Oct 2026 23:55:15 GMT",
+          "source_url": "https://www.pictet.co.jp"
+        },
+        {
+          "title": "AIトレードの高リスク銘柄、金利上昇で打撃 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1TTGdyNVBYOEEtZk9WMWhGUTNQY3F0b0VhamdRb1ZKNG9wZjhQRGhmeWNvT2NjM0FHeUNmYVhMQTBvS243OFFoT2xvbVE?oc=5",
+          "published_at": "Sun, 18 Oct 2026 19:05:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "金利上昇に直面するREIT市場 含み益還元と資本効率の向上が必要に - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAzdjZUeW5WR1hwRXByX0tqRFJwbmNQRkFHV2dOMGVPNkcwYzlDQlk2OXBIQjRoOVNjRXhTMUpKZ0EtTUtMRkRYYnJQRmV2SDJFVGJ3OGVidVFJRzlZQzFXTVFwUzM0MDhRSFdRalNSZDVSQTFhWTRKUGVDa0tWdw?oc=5",
+          "published_at": "Sun, 18 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "米金利が急上昇する中で発表された9月雇用統計 鈍化は一時的要因が寄与したとみる 野村證券・小清水直和 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBnRm0xWXdiZm1iWXZ6NDhmbTA2Uk1NSnRnY0lzaU8yLTRhQjRDZ2Q0N2VFdG9yeHBxbEhmb19KcGl1NDJXREM3VnJNZ01iUC1MWE4tTXk0bFpUcmxialhz?oc=5",
+          "published_at": "Fri, 16 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.21867010034809264,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": 0.20375505557274187,
+        "japan_risk": 0.2104366046103886,
+        "usd_rate_pressure": -0.13335785962923308
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

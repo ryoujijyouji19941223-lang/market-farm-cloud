@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-19T10:07:24.532442+09:00",
+  "prediction_date": "2026-10-19",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-19T10:07:24.532442+09:00",
+  "market_data_through": "2026-10-19",
+  "reference_price": 1316.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.42697489276875517,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.6945776620077923,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.5926101364246399,
+      "direction": "UP",
+      "day_change": 0.006500956022944537,
+      "momentum5": 0.06386418755052548,
+      "trend": 0.053277838836578884,
+      "volatility": 0.29158969722699835
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "サンリオ---8月高値が射程に入る(フィスコ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdTVZMzRkQlN2ODAyZFo2eFJQUjVBejMtTDdYOTUydmwzeFRmcGJNQ19jdkRBMmJlWGV0NEtrUGswa0NUcmFINXZGQUxZX1h4Y0JXT1JpOS1MOC1YcEdlTldubmZYY2xrWkdOT2hzNG9Nc3c0YzV6QjhJazl6VWlSWmVtSzNNLUk?oc=5",
+          "published_at": "Sun, 18 Oct 2026 23:31:34 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "キョロちゃんとサンリオキャラクターズが夢のコラボレーション！ 「チョコボール＜ダブルチョコレート＞」 11月4日（水）新発売 ～「チョコボール」期間限定コラボパッケージ発売 オリジナルグッズが当たるキャンペーンも実施～ ｜ 2026年 ｜ ニュースリリース - 森永製菓株式会社",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBVeGFyYUIweDVaR2xyT05tTTd6M3plUWJaMzJzVXJldi1JN1BiZTF3bFdjeVNLalp1UjYxRFA3REU3SG1yaU5OUnZhejVsZUxHak5PLXlxdGQwZjlJNFRHWV9ldC1rbnZNaXhIR0dHdXJoN0U?oc=5",
+          "published_at": "Thu, 15 Oct 2026 02:04:35 GMT",
+          "source_url": "https://www.morinaga.co.jp"
+        },
+        {
+          "title": "ファミマで発見、即購入！超かわいい「サンリオ新作食玩」を開封レビュー - ぴあエンタメ情報",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1tY04xaE5qdXRoSGRLWWN0R1o5YzBVRUJPSEZVd0ptYTNBWlpFRlJIZkR5bGZmNjZtZWRIT3ByVDQ1b3o2eE8zLXdzUkxjRVlCUHRLMXp5Y2ZxYjNDSzk0?oc=5",
+          "published_at": "Sat, 17 Oct 2026 05:00:00 GMT",
+          "source_url": "https://lp.p.pia.jp"
+        },
+        {
+          "title": "セブンイレブンで『サンリオキャラクター大賞 2026 ウェファーチョコ』(サンリオ ウェファーチョコ7)が2026年10月21日店頭発売、キャラ大で上位に入賞したキャラの“ビジュアルカード”(全16種)付き - コンビニ チェッカー",
+          "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9JRV9hUnh4dnlmUmRubWpaR19oeEg4LWt5R1BQeXlTQXNncGxTX3pxa01tcUsyaWs0N1ZfMUlDelkzb2prdmViWm1jR01famU4bEVzcmtLNV9ra1hGa3d4V3h3?oc=5",
+          "published_at": "Mon, 19 Oct 2026 00:01:40 GMT",
+          "source_url": "https://convenicheck.com"
+        },
+        {
+          "title": "長山智美 デザイン狩人｜〈サンリオハウス〉のコスメティックス♡ - Casa BRUTUS",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE03VDBhRGphbmZDa3BNaVRrMmRzclcwSUh3TlMybmNnWFJBbFU5THdFRFdpR1hVUThTSU5DMDlpWV9aRjRUc1U3eVo0QkU4blZPM3Vvdmhvc0JKZUE?oc=5",
+          "published_at": "Sun, 18 Oct 2026 07:25:38 GMT",
+          "source_url": "https://casabrutus.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": 0.20375505557274187,
+        "japan_risk": 0.2104366046103886,
+        "usd_rate_pressure": -0.13335785962923308
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

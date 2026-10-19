@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-19T10:07:24.532442+09:00",
+  "prediction_date": "2026-10-19",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-19T10:07:24.532442+09:00",
+  "market_data_through": "2026-10-19",
+  "reference_price": 191.53900146484375,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.06747033742817543,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5370407011252948,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.026741822345943977,
+      "direction": "NEUTRAL",
+      "day_change": 0.00266355596303125,
+      "momentum5": 0.0049107550996456695,
+      "trend": 0.0008881474082989005,
+      "volatility": 0.06198302035036026
+    },
+    "news": {
+      "score": 0.14285714285714285,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "植田日銀総裁、午前9時から参院予算委に出席＝国会筋 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQbFFrbkhtYUJHbTFYSWhBdDJScmx3QkNiblZYa0VFc1VVTnhFVTFPc0o1ZFY4bzhTVmVHbU1kOHFMRXBNb2tyUzQ4OEp6SGU0RU0tRkhmQ0lMdF9TLXp0OW1DaFF4TDRWTnJINTFFZ0ZmeFRXdFo3WDl4d1dWaDdDNWthaUNxWURNazNoZkNzbE4?oc=5",
+          "published_at": "Mon, 19 Oct 2026 00:09:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀の2%物価目標、「到達より安定」に重心 政府との足並みに苦慮 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8yMkp2TWxIRFdRdklTd3dyUkVFVndFZEtwOVZXM1hNVU9RZXZQLWdET3hxUm5ZYjc3NDhkNFVUM2Z1Ry1sVGk5c05wX29haHBOeHZzUmhBUU9ZczNxb194NVl0SkpHQlg0VXI3ZQ?oc=5",
+          "published_at": "Sun, 18 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "日銀短観から見える物価の頭打ち感 企業の積極的な価格転嫁姿勢に変化の兆しか 野村證券・岩下真理 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5DeWgxLWYwbktfWG1vSGttT2xkT01jS2ptNk1tazVfcmF4N0QwbTJrcm5VNTR1em1iR2VWYkxtZVRMenJsVFcxdU5lNTNpUGxOZFJBRjZKaThQSEdla0tr?oc=5",
+          "published_at": "Fri, 16 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "植田日銀総裁と中村日銀理事、9時から参院予算委員会に出席へ - みんかぶ FX/為替",
+          "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE91SFJzVkg5UnNiZXNaWFJsRDZYQ0FRTEFRQWpPcnVHRlI5WFZ4QU9DcE53d3doVkcwYkQ2S1dybFppbllBcE9zaA?oc=5",
+          "published_at": "Sun, 18 Oct 2026 23:59:29 GMT",
+          "source_url": "https://fx.minkabu.jp"
+        },
+        {
+          "title": "植田・日銀総裁「引き続き政策金利を引き上げる」あいさつ文で強調 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9YanBVdHdVWVNJbFNLb1lVN1JrT0ZwZUFZcmpqVDk3ekNYRGl0czgzWmtjS0h0cUMycDJJVVNfVU8td2RMUnRWUDdSUlFQNndBcTFLVFNDVXRQNllyeUJGeEZUc1o0N1k?oc=5",
+          "published_at": "Fri, 16 Oct 2026 09:41:09 GMT",
+          "source_url": "https://www.asahi.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.16666789298146165,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": 0.20375505557274187,
+        "japan_risk": 0.2104366046103886,
+        "usd_rate_pressure": -0.13335785962923308
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
