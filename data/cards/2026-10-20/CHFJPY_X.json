@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-20T10:43:19.717614+09:00",
+  "prediction_date": "2026-10-20",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-20T10:43:19.717614+09:00",
+  "market_data_through": "2026-10-20",
+  "reference_price": 191.92799377441406,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.1496647344560109,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5815799004297086,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.06297815884508366,
+      "direction": "UP",
+      "day_change": 0.0019433164324706986,
+      "momentum5": 0.010094202005300978,
+      "trend": 0.002835601484119321,
+      "volatility": 0.06100510155984321
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "20日のスイスフラン・円、売り・買い要因＆支持抵抗ライン(フィスコ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOWjVpa1dUSF9TM3VEZzk3SWc1U1VOWHo2MHpTek1kekhuZUpMVVh6Vjl1aE1qWmhONzRvYTdqcFc4aExvQUJZOFo4bTlBRXN0UnY0Q0xyNWxxcGFlbHVzSENkV2pYUmgxNDhUcElUbF9UbGk3TDJjZkZqVlZIWHRQcUN2MWtnbEU?oc=5",
+          "published_at": "Tue, 20 Oct 2026 01:23:27 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日銀、利上げゴールはどこに？ 元理事とスピード解説 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE10STU1RVQtb0ZDRXplOFFoVXZ4RnlhNUUzZXZiTWlqTXhONlF6Slg5b1NFMlVOOE1CaENVLTZkTjNUdFk2bWdGQmV6eHhGOTBKTXhHclI3ZzlWdw?oc=5",
+          "published_at": "Mon, 19 Oct 2026 17:05:43 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "城内経財相、今月の日銀会合も「都合つけば出席」 利上げけん制改めて否定 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRzF2U2VIWFYzd3BVeU5HdXQ3eFBURkx0ZGxHQkF6ZnE1d0FQVWtOVGRETE0wLTN0QWRUaHRGSk9lRTc3T0FvTjJJRjk4bTVJLVh3c2ZsczBoZnp6ZHVwdzBTQ18zejE3a0V0ZHZsdmE2alp3NGNhNEtsdTgzNi1xSEV0U1B3UTU3SGNrVk1YUDU?oc=5",
+          "published_at": "Tue, 20 Oct 2026 01:35:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "外為：スイスフラン、191円96銭前後とフラン高・円安で推移 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1PYU9KeWVMZmt0ZVJXS1RKeFNncUJQelpmckU5cEdXNkI3YUl5VGdiZl8tVGZSaWYwWXdWSnRTZWZZM0t1SnkzVnluRTg4RjMxUFE?oc=5",
+          "published_at": "Tue, 20 Oct 2026 01:31:04 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "【ドル/円、今週の見通し】ドル/円、FOMC・日銀会合を控え158円を中心とした推移継続？日本9月CPIは2％超え予想＿2026/10/19 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5kV21GYXZfWHNmbjNsLUZBNG12Rm9VeFE2d1A1TUFZeUhwSjRfcV81SS1nalRkejhMN0k0VHpCMzNpM0xDbzB3OUNzbnNZUzVZcmVZcFFpOTQ5M0FfVWwyMEtzaw?oc=5",
+          "published_at": "Mon, 19 Oct 2026 07:35:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.14559724294235998,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 0.8792880047238212,
+        "oil_pressure": 0.26669512022319486,
+        "japan_risk": 0.15731328243841913,
+        "usd_rate_pressure": -0.09822324373097147
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-20T10:43:19.717614+09:00",
+  "prediction_date": "2026-10-20",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-20T10:43:19.717614+09:00",
+  "market_data_through": "2026-10-19",
+  "reference_price": 4141.89990234375,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.20450651410074147,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.5123043936119771,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.1339193909421712,
+      "direction": "DOWN",
+      "day_change": -0.009375569681882023,
+      "momentum5": -0.011621293890518802,
+      "trend": -0.01103044128301478,
+      "volatility": 0.18155851305661633
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "今日のFX予想：原油、金利上昇でじり高 200日線を巡る攻防 2026/10/20 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1LdXVQdVhZcHJScjRPNHZSZS1CUXR5OXJJMU03VHBXR2VGc0tsbU9Gb2JTUzNKQlFjTE1fSDlSLWF0VVFfVHZLMmhVdUNOcmFSZEZnVTdpTUVxQXROWVMxcXRIcw?oc=5",
+          "published_at": "Tue, 20 Oct 2026 00:09:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "東証寄り付き 日経平均は続落で始まる 金利上昇が重荷、半導体が安い - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE04TWJMNHB3OEtGRmlVY05YM25VQVZuV1FzQ3JlZ2RUTDJJci1KU1JZVDQ0TlREZ3pZMkJuNEpZc1N2NENCVi1tcFd3dzFxSWxhQnBIVmJjVDRwa1lVLWRaMmRyVWswSlFZaTNBVA?oc=5",
+          "published_at": "Tue, 20 Oct 2026 00:35:50 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "中国人民銀、最優遇貸出金利据え置き 17カ月連続 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOUDN1cHNlMEtRN2tjTUFHSVhKS2pCTVktVHFtTFNGTWJmR0NfWW02WGhEU0dJWFhndS05TVdac2JicjhsV096LU0xekVocWN3cFBNX0tzZUdWQzRWOUVWcmZKSmcwbDZ1OC1haXNMNmllSW1yd3owcHdRUUpmR3hDTGJKYjRxUQ?oc=5",
+          "published_at": "Tue, 20 Oct 2026 01:24:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "米金利5％超えは「リーマン前夜」の再来か？共通点と相違点を整理（窪田真之） - トウシル",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5aSFNueGpxZWJCa3M3NUtESE90SlJJTm9jWVA1SnBXWmdmMjRZWFlDYW5jZDdCelFHakg0NkQwbXZ5TGRzRjN4Q3NGTkJGaEJtSVhIMWt2UnJKdw?oc=5",
+          "published_at": "Mon, 19 Oct 2026 23:00:00 GMT",
+          "source_url": "https://media.rakuten-sec.net"
+        },
+        {
+          "title": "長期金利3％到達で日本株はどう動く？ 金利上昇に強い属性を備える銘柄リスト 野村證券ストラテジストが解説 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBkVWJ3Y0NkRVVTWVRXX2dYdkJDZHlvZ1FlMTBNUm5IT3RZTnVrbF81b3BEN1FxVmZOVHloSTNIYWZPRk9ialJzeUVpTXNBX3ZLdVl0cGJuczJKMU41R3FZ?oc=5",
+          "published_at": "Fri, 16 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.18960885506710023,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 0.8792880047238212,
+        "oil_pressure": 0.26669512022319486,
+        "japan_risk": 0.15731328243841913,
+        "usd_rate_pressure": -0.09822324373097147
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

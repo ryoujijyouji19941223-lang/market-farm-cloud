@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-20T10:43:19.717614+09:00",
+  "prediction_date": "2026-10-20",
+  "symbol": "EURJPY=X",
+  "name": "ユーロ円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-20T10:43:19.717614+09:00",
+  "market_data_through": "2026-10-20",
+  "reference_price": 177.83599853515625,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.07845288773953622,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5269497683607974,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.014277056508009901,
+      "direction": "NEUTRAL",
+      "day_change": 0.003929090820288694,
+      "momentum5": 0.005228635163293749,
+      "trend": -0.004399070916414449,
+      "volatility": 0.05248353924537242
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "ユーロ/円【EURJPY】：外国為替相場FXレート・チャートをリアルタイム表示 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1pREZlRmliZXhfWS15YlhsbFYzdjdIYkVVeXpwU0Z1T2U0S1lVYzB4U0RkUGtFcEhxeUhZa2M4Y1JRcVJGNTFEdkpBaU9nLTV4NXVKaW5R?oc=5",
+          "published_at": "Mon, 19 Oct 2026 22:56:21 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日銀、利上げゴールはどこに？ 元理事とスピード解説 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE10STU1RVQtb0ZDRXplOFFoVXZ4RnlhNUUzZXZiTWlqTXhONlF6Slg5b1NFMlVOOE1CaENVLTZkTjNUdFk2bWdGQmV6eHhGOTBKTXhHclI3ZzlWdw?oc=5",
+          "published_at": "Mon, 19 Oct 2026 17:05:43 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "城内経財相、今月の日銀会合も「都合つけば出席」 利上げけん制改めて否定 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRzF2U2VIWFYzd3BVeU5HdXQ3eFBURkx0ZGxHQkF6ZnE1d0FQVWtOVGRETE0wLTN0QWRUaHRGSk9lRTc3T0FvTjJJRjk4bTVJLVh3c2ZsczBoZnp6ZHVwdzBTQ18zejE3a0V0ZHZsdmE2alp3NGNhNEtsdTgzNi1xSEV0U1B3UTU3SGNrVk1YUDU?oc=5",
+          "published_at": "Tue, 20 Oct 2026 01:35:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "ECBの政策金利が3％に達しても、欧州経済に及ぼす影響は深刻ではないと考える理由 野村證券・岸田英樹 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9vTVZSeTNrbUJiZDUzXzNOeldQODVLT2Nsc0pHbkFURGZOVmZ2MkhhNWRvWUhNLXBGaUpNQWVNc2NLQmczOWRZc1JLQkVJR1IyVDlQSmFfOUV5bGdOTXdJ?oc=5",
+          "published_at": "Fri, 16 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "今日の為替市場ポイント：今月末の日銀金融政策決定会合に向けた思惑も相場を左右しそう - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBqWU5iT2RoTnoxMEFQdFQzcUZaM1dLRklZTk14UC0zVlVOSDhxY2YwSlFDRklLbkw0aGROdnY2VUNaMnBWUHJPdktaN3VxMXVpLTdaaFFreEhKcWdsc3VNZg?oc=5",
+          "published_at": "Mon, 19 Oct 2026 23:20:38 GMT",
+          "source_url": "https://kabutan.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.033296595427263265,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.8792880047238212,
+        "oil_pressure": 0.26669512022319486,
+        "japan_risk": 0.15731328243841913,
+        "usd_rate_pressure": -0.09822324373097147
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

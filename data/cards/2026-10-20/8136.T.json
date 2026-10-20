@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-20T10:43:19.717614+09:00",
+  "prediction_date": "2026-10-20",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-20T10:43:19.717614+09:00",
+  "market_data_through": "2026-10-20",
+  "reference_price": 1341.5,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.48142082585855894,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.7227121690957827,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.6769381084488046,
+      "direction": "UP",
+      "day_change": 0.010546139359698614,
+      "momentum5": 0.07837620578778126,
+      "trend": 0.06374195557191298,
+      "volatility": 0.2745953397879453
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "ファミマ＆セブンで発見！新作「サンリオ食玩」がレトロかわいい良品でした♪（開封レビュー）（ぴあ） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9aYWV4cnZoTlNGSmg3YW9aR3VRUk1DRlQ2eWhQTC1wLTVoVTZSSjR4cm5peXlfTjNmTUVBSE9NNURVVEVqbnVBejcwUHhUZHpTUndxdF9oTXFWTlFZM3duTGF0N3JzOVd6bGpWQUtfZ1BYYXRXakVLTkxteU56ZTA?oc=5",
+          "published_at": "Mon, 19 Oct 2026 10:00:16 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "ペコ×サンリオキャラクターズうるつやシールグミ（不二家）2026年9月15日発売 - 日本食糧新聞・電子版",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1iNXBrOVl5YWp5anE5TVh0VmpYV0RTeWdPRlJMdTVWRllXZ2RWd052Z1FjaWNTOVdISHI5T3BwMV94YjZ1Y05ndFdGemx0WkhUNFBIbEJYMEVGTlU?oc=5",
+          "published_at": "Mon, 19 Oct 2026 22:47:01 GMT",
+          "source_url": "https://news.nissyoku.co.jp"
+        },
+        {
+          "title": "キョロちゃんとサンリオキャラクターズが夢のコラボレーション！ 「チョコボール＜ダブルチョコレート＞」 11月4日（水）新発売 ～「チョコボール」期間限定コラボパッケージ発売 オリジナルグッズが当たるキャンペーンも実施～ ｜ 2026年 ｜ ニュースリリース - 森永製菓株式会社",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBVeGFyYUIweDVaR2xyT05tTTd6M3plUWJaMzJzVXJldi1JN1BiZTF3bFdjeVNLalp1UjYxRFA3REU3SG1yaU5OUnZhejVsZUxHak5PLXlxdGQwZjlJNFRHWV9ldC1rbnZNaXhIR0dHdXJoN0U?oc=5",
+          "published_at": "Thu, 15 Oct 2026 02:04:35 GMT",
+          "source_url": "https://www.morinaga.co.jp"
+        },
+        {
+          "title": "ファミマで発見、即購入！超かわいい「サンリオ新作食玩」を開封レビュー - ぴあエンタメ情報",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1tY04xaE5qdXRoSGRLWWN0R1o5YzBVRUJPSEZVd0ptYTNBWlpFRlJIZkR5bGZmNjZtZWRIT3ByVDQ1b3o2eE8zLXdzUkxjRVlCUHRLMXp5Y2ZxYjNDSzk0?oc=5",
+          "published_at": "Sat, 17 Oct 2026 05:00:00 GMT",
+          "source_url": "https://lp.p.pia.jp"
+        },
+        {
+          "title": "シナモロールも「やすみたい」…！ガシャポン「サンリオキャラクターズ がんばれないチャーム」ゆるーい言葉入りプレート付き全5種 - インサイド",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5lZXR4VkNPUkRIX3BQeTNmRC1hQ2NYS09tZ3M2QkJIUjNXdnlPOU1NQ043amVxczJoa2RUam9LZXdXU05RcmY2UnFOM2d0WENBaFpVYkhCbldvaDAtNmNGT0JMdGttN09Cc2c?oc=5",
+          "published_at": "Mon, 19 Oct 2026 08:10:03 GMT",
+          "source_url": "https://www.inside-games.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.1406860807558114,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.8792880047238212,
+        "oil_pressure": 0.26669512022319486,
+        "japan_risk": 0.15731328243841913,
+        "usd_rate_pressure": -0.09822324373097147
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-20T10:43:19.717614+09:00",
+  "prediction_date": "2026-10-20",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-20T10:43:19.717614+09:00",
+  "market_data_through": "2026-10-20",
+  "reference_price": 158.54600524902344,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.0705158604662988,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5387061265460362,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.008833530450107261,
+      "direction": "NEUTRAL",
+      "day_change": 0.004689336871278149,
+      "momentum5": 0.00016402331479770105,
+      "trend": 0.001022208370689004,
+      "volatility": 0.04665990554586113
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜原油一段高なら159円を試す可能性」 外為どっとコム トゥデイ 2026年10月20日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE51MWxjejMzNWRwLXdMVEVySFdlN3A2eVROV0xnaFFXQm14X2xBXzF3bDhoYmN6X01aZHg0ZnNZOXBZRXU3dmFIOFIwMENyQ0lhakhqakVEaDFfa0RSV01UZVFjNA?oc=5",
+          "published_at": "Mon, 19 Oct 2026 23:14:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀、利上げゴールはどこに？ 元理事とスピード解説 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE10STU1RVQtb0ZDRXplOFFoVXZ4RnlhNUUzZXZiTWlqTXhONlF6Slg5b1NFMlVOOE1CaENVLTZkTjNUdFk2bWdGQmV6eHhGOTBKTXhHclI3ZzlWdw?oc=5",
+          "published_at": "Mon, 19 Oct 2026 17:05:43 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "城内経財相、今月の日銀会合も「都合つけば出席」 利上げけん制改めて否定 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRzF2U2VIWFYzd3BVeU5HdXQ3eFBURkx0ZGxHQkF6ZnE1d0FQVWtOVGRETE0wLTN0QWRUaHRGSk9lRTc3T0FvTjJJRjk4bTVJLVh3c2ZsczBoZnp6ZHVwdzBTQ18zejE3a0V0ZHZsdmE2alp3NGNhNEtsdTgzNi1xSEV0U1B3UTU3SGNrVk1YUDU?oc=5",
+          "published_at": "Tue, 20 Oct 2026 01:35:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "20日のNZドル・円、売り・買い要因＆支持抵抗ライン(フィスコ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxObkl0TlNBQUJpbW5OZXE3V19wYXhKa1Z1VnpwazJKVXpiMWRnb1o4TG5wRTFKWENyaDQtNVY5RWEzOWZEMlNZZjhCa3JocnlmVVl4S1hqb1FTMG9CUU5mTERXLWMzRkFvZFFTWTloeHViYUNCNzVfUmIxSVRSalRsR2FPNDBmX3c?oc=5",
+          "published_at": "Tue, 20 Oct 2026 01:22:48 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "今日の為替市場ポイント：今月末の日銀金融政策決定会合に向けた思惑も相場を左右しそう - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBqWU5iT2RoTnoxMEFQdFQzcUZaM1dLRklZTk14UC0zVlVOSDhxY2YwSlFDRklLbkw0aGROdnY2VUNaMnBWUHJPdktaN3VxMXVpLTdaaFFreEhKcWdsc3VNZg?oc=5",
+          "published_at": "Mon, 19 Oct 2026 23:20:38 GMT",
+          "source_url": "https://kabutan.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.005060398401505763,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.8792880047238212,
+        "oil_pressure": 0.26669512022319486,
+        "japan_risk": 0.15731328243841913,
+        "usd_rate_pressure": -0.09822324373097147
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-20T10:43:19.717614+09:00",
+  "prediction_date": "2026-10-20",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-20T10:43:19.717614+09:00",
+  "market_data_through": "2026-10-20",
+  "reference_price": 13280.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.722616231647057,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.21963488322984157,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.2503063210850727,
+    "direction": "DOWN",
+    "price_coef": 0.5,
+    "macro_coef": 1.0,
+    "edge": 0.12,
+    "heldout_accuracy": 0.5135135135135135,
+    "heldout_signals": 37
+  },
+  "evidence": {
+    "price": {
+      "score": -0.9691372346083607,
+      "direction": "DOWN",
+      "day_change": -0.02352941176470591,
+      "momentum5": -0.12516469038208167,
+      "trend": -0.19715517481091005,
+      "volatility": 0.8286340002944375
+    },
+    "news": {
+      "score": -0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "DOWN",
+      "headlines": [
+        {
+          "title": "変わる潮目2026 企業のトップに聞く（20）キオクシアHD社長・太田裕雄氏 - 日刊工業新聞",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5FZ01tdjBCQmgwQlA2bG01TWlseHpKUV9jQTNnMjk5Z3FYOVJOdncyQk5VREwzZjFNcXNOSHNKQ3BidEVNSWVZdzhnS2psR0IwQkJaTjF4Z2I?oc=5",
+          "published_at": "Mon, 19 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkan.co.jp"
+        },
+        {
+          "title": "キオクシアHD株価反落 米サンディスク反発でも戻り待ちの売り - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9GU3M1Zk12VWZXQVZLaDh3UjhUWVk2Yjh3bnU4c0ZnZ2swQUpjU29JTFI5Y1h2WmpUU01VLU5oRzlOOHEyRXJGck5mT2pvenM4ZHdJWUtPV1pfbUdTNFByVjBCa0g1SXVzMThpcA?oc=5",
+          "published_at": "Tue, 20 Oct 2026 01:18:37 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "寄前【成行注文】売り越しランキング ランド、ソニーＧ、キオクシア [08:35](株探ニュース) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRmVpeWxXbzVtZXhDNmFVSVYwSUFvY1pIS0ZacEprVWlBLWZTWDZjSWJFeDBsSlAzcFNUZ25ZYV9Nd0dIajlHemwwLW5BQVVqbmE4cS1OcVNFaGtyNWI1UG9mcVR1aGZteTlhZnVpczZmNHlYSHRJVnUtcFYtUDlIYkpYNlZja0k?oc=5",
+          "published_at": "Mon, 19 Oct 2026 23:51:06 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "キオクシアＨＤ---52週線水準での攻防 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBob3I1R2xiRUFGMklwYmlOR2NsVFBMNjRVMGpqaFkzbkFuY0kzeDZWZzFMTTE2SVBweXg5RlkyS0hXRnJlalRqTWE2VEhUTGg0SFE?oc=5",
+          "published_at": "Sun, 18 Oct 2026 23:25:12 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "1Uサーバ向けのQLCフラッシュメモリ搭載SSD、キオクシア：最大122.88TBの大容量化 - EDN Japan",
+          "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE55aF9wU0xlT0Zib3p5czk0Wk44Tk5LTm5CRG9hUDh6emF4R0F2YnpWOEVtVjFka3JiVkFUOFRyN1ZrYnhwRWVYRjRLU2VIUHJ0UGE4Y3FUd29GYm54QTk2SHA0Wml3dXNxeHl3?oc=5",
+          "published_at": "Tue, 20 Oct 2026 00:00:00 GMT",
+          "source_url": "https://edn.itmedia.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.1406860807558114,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.8792880047238212,
+        "oil_pressure": 0.26669512022319486,
+        "japan_risk": 0.15731328243841913,
+        "usd_rate_pressure": -0.09822324373097147
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

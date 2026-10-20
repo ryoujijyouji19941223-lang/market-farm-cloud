@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-20T10:43:19.717614+09:00",
+  "prediction_date": "2026-10-20",
+  "symbol": "8316.T",
+  "name": "三井住友FG",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-20T10:43:19.717614+09:00",
+  "market_data_through": "2026-10-20",
+  "reference_price": 3229.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.2290118600585517,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.37949372627534067,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.425054304197156,
+    "direction": "DOWN",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5454545454545454,
+    "heldout_signals": 66
+  },
+  "evidence": {
+    "price": {
+      "score": -0.3057484528605588,
+      "direction": "DOWN",
+      "day_change": -0.013744654856444716,
+      "momentum5": -0.03525545264415897,
+      "trend": -0.02185335666292032,
+      "volatility": 0.3187790722864713
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "(株)三井住友フィナンシャルグループ【8316】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFB6WDI1N2txZWkzTUpCWEhZOGRsMnQxTWJGYTVsQnlVdzAzV1lNUVBIZVhNYlhrbE1mQ2o1a0FHM3piQjhFWHViZ1ozcFk5c0xIdTZpUXZfc0dyeF9yb0VB?oc=5",
+          "published_at": "Mon, 19 Oct 2026 06:52:59 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "SMBCグループ、新テレビCM-日々の生活を営む人々のすぐそばでTHE - ニコニコニュース",
+          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9sN0NUQ0I4RWVLS3c2MER0X0dRZnhrczRuNlRSZnFNZmY1cjBzNU1YdG0zVVg0OHdHZ3ltTnpJNEgtX01SMmJrNWdBcXdVd2o2YzdSY2hhcl9rR3lHOG9GXzRMcnVLSFAwajJGaHJFOWZ5dnVfaWRKdHdEQQ?oc=5",
+          "published_at": "Tue, 20 Oct 2026 00:30:37 GMT",
+          "source_url": "https://news.nicovideo.jp"
+        },
+        {
+          "title": "○三井住友フィナンシャルグループ人事 - 時事通信ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBqT0tmRmhPTzdMU3dLMEJjTkNyUk5EcW9CaWhIeW93LTd2SHhMMV9pdzF3Tk1iak1UcXFoV2lKQkdHVEZnakJycFg1YzR4VWVxSE94dQ?oc=5",
+          "published_at": "Mon, 19 Oct 2026 06:39:00 GMT",
+          "source_url": "https://sp.m.jiji.com"
+        },
+        {
+          "title": "SMBCグループ、システム全体のリアルタイム把握・統制・保護の基盤として「Datadog」採用 - EnterpriseZine",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9tVjJuM1NvcmxFNmM1NWo0M1doT21iWG54d3lGWTBhMVdieHN3dk95b3l4Yk1qZGhmX0hHd1FQV3VLQk02YnB4UlFNTFZZeXk5eWlKT3NB?oc=5",
+          "published_at": "Thu, 15 Oct 2026 04:44:30 GMT",
+          "source_url": "https://enterprisezine.jp"
+        },
+        {
+          "title": "財務・経理の知識をAIに移植、SMBCグループが目指すビジネスモデル変革 - 日経クロステック",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE96dVFETVRYakFBeEFXMWtkVkcwTlF0blFwMktxRVJ6a1ZwdTV2WWV4dHlYdGdTY0s0WWQ2bEZnS3VTTFM0UHRDTEJObHMyLUNma3Y2WXBJdGJLLVFrc2lBM0RJXzZzekJnTWhNZQ?oc=5",
+          "published_at": "Mon, 05 Oct 2026 07:00:00 GMT",
+          "source_url": "https://xtech.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.1406860807558114,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.8792880047238212,
+        "oil_pressure": 0.26669512022319486,
+        "japan_risk": 0.15731328243841913,
+        "usd_rate_pressure": -0.09822324373097147
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

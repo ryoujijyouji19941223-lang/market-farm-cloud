@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-20T10:43:19.717614+09:00",
+  "prediction_date": "2026-10-20",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-20T10:43:19.717614+09:00",
+  "market_data_through": "2026-10-20",
+  "reference_price": 174.0,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.07636540275045124,
+      "factor_agreement": 0.5,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5179895281754321,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.42641644918943217,
+    "direction": "DOWN",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5454545454545454,
+    "heldout_signals": 44
+  },
+  "evidence": {
+    "price": {
+      "score": 0.08126836858394049,
+      "direction": "UP",
+      "day_change": 0.0,
+      "momentum5": 0.041916167664670656,
+      "trend": -0.010777084515031232,
+      "volatility": 0.3702106655863679
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "KLab、『スマグロ』ヒットでゲーム事業が急回復、黒字転換 真田社長「長い長いトンネルを抜けた」 『キャプ翼』黒字化など既存にも好影響 - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE9uSWUwSzlkNHhSZVpab3NPLXd3dUJXREU2d3pDOTIxSnJONzg2b2dmNWdDUkY2WS01Z3JQamhHNl9VM09n?oc=5",
+          "published_at": "Tue, 01 Sep 2026 03:48:31 GMT",
+          "source_url": "https://gamebiz.jp"
+        },
+        {
+          "title": "ＫＬａｂ[3656]：（訂正）「主要株主及び主要株主である筆頭株主の異動に関するお知らせ」の訂正につきまして 2026年10月16日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBQVm52SXROMVBVRy1lTnc0QUdQU2k5dE1tMTdZSkJZUFFSSEdleFZlYzBrUGtXVTFEUDY5aEttN3lDVERsUWEwOFFZS0ktWmJ0SDJzWUZmdHZnVXZoakRYVFNILXV0N1NPTVE?oc=5",
+          "published_at": "Fri, 16 Oct 2026 09:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "KLabで企画中のAIゲームが、経済産業省「IP360」IP新規創出支援に採択 - www.tv-tokyo.co.jp",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBXT3VXWFJhdlE0bTNfdkNKSXlZVTZNelBMM1hjRVpXdjRLWU1vamlFY3VQSE1lMDlkdWlNUVV5ZmI3SWJhbzJCWWdDWHNPajctbUhrdnpKVV9IRU5UWDU0VTY5YS04ZHA1TXdtQWRB?oc=5",
+          "published_at": "Wed, 14 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.tv-tokyo.co.jp"
+        },
+        {
+          "title": "KLabで企画中のAIゲームが、経済産業省「IP360」IP新規創出支援に採択 - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5fMDR1N1dzNkQ3c2lNQ1hyYVhnekNIV0Vfdl9hNWxUVFlRM2MwaDAyMEhWY1RQYjhUZ09pNHc1RFdwclJZOFIwTFlQUWs0Zi1LSHdOYkxJNmE2dkRKdHhHQ3VPSXNOajZCa1E?oc=5",
+          "published_at": "Tue, 13 Oct 2026 23:30:01 GMT",
+          "source_url": "https://prtimes.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.1406860807558114,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.8792880047238212,
+        "oil_pressure": 0.26669512022319486,
+        "japan_risk": 0.15731328243841913,
+        "usd_rate_pressure": -0.09822324373097147
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
