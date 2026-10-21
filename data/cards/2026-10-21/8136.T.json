@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-21T10:29:18.051419+09:00",
+  "prediction_date": "2026-10-21",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-21T10:29:18.051419+09:00",
+  "market_data_through": "2026-10-21",
+  "reference_price": 1352.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.4642093265350402,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.7235854153276052,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.6629603138168896,
+      "direction": "UP",
+      "day_change": 0.00036995930447658587,
+      "momentum5": 0.05666275889019157,
+      "trend": 0.07142824106262835,
+      "volatility": 0.24892314247005062
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "サンリオ×なにわ男子のコラボが実現！ 大橋和也は「ポムポムプリン」に親近感を抱くが……（TVガイドWeb） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBZMjQzVTdWLXVpR3BQeHp5S1duZnNzUHVoWmo1RHd5VWR0QTRqOXlubU9VQ21rV244bDlXYmdNa3BXbkRLV1dVajc3M1BwaFFnS2dBS0JfTy02Z1pEZU5PWkNDVllNSlNwVDZpeHYxUXMyTlBYMi1QS2tiTVRHZlk?oc=5",
+          "published_at": "Tue, 20 Oct 2026 05:50:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "カフェ併設『サンリオハウス』東海エリア初店舗が名古屋パルコに10月29日オープン！予約方法・注目商品を公開 - 名古屋情報通",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFA2U25BYkRsdDl5Mk9FZUtBNmlQeUQwREhaQ2VmZ05wZkhMdWlnTXlINTJEdEZvUEhaSGo4eUxDR1NTams4WTVDOWJQMA?oc=5",
+          "published_at": "Tue, 20 Oct 2026 12:28:37 GMT",
+          "source_url": "https://jouhou.nagoya"
+        },
+        {
+          "title": "【sanrio house(サンリオハウス)】都内2店舗目となる新店が渋谷PARCOにオープン！＜11月13日＞ - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFByQWxtTG9hNDRfVXEyUDNpZXA0TUtnZ2R1VkhxZm1KTEg4dWp2Vll5R0lHM2lCMjZ1SGotMTI1UGNrS1ctaDFCSUlLZlZvSUpvcm9PUHV1TzFiR0FUZHVTZmE3N0MxT2F0eXc?oc=5",
+          "published_at": "Tue, 20 Oct 2026 03:00:01 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "「これは神コラボ」【サンリオハウス】ジェラピケ秋冬コレクションが10/21発売。マイメロ・クロミ・キキララも仲間入り - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5HZHRUY19oUTlOWUZXZ2JqSU1sV1IzN24tZzUxNlNteW05M1NxaGZZOHZGZGpGNVBvd3YxMm5HbDVCYUNGdHZZQjJZbzQ0U3M3bi1pWDZ6bGs0UW54OW9qZFMzNA?oc=5",
+          "published_at": "Tue, 20 Oct 2026 10:07:25 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "サンリオハウスが渋谷パルコにオープン、”女子高生風”ハローキティのタンブラーやふわふわファーコート - ファッションプレス",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE91cnpYVlBsbDNzemQ1UlpsZG9tVHI2cHNMWG40cncwWEJ0cTR3dmp2Y21ZbEVmbGUtOXhsRDdKeFUwbzVvS2F6YWQ0VlpRaWpuMFYw?oc=5",
+          "published_at": "Tue, 20 Oct 2026 04:25:00 GMT",
+          "source_url": "https://www.fashion-press.net"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.08930875426370151,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.5581797141481344,
+        "oil_pressure": 0.25812622911945526,
+        "japan_risk": 0.13613042104909912,
+        "usd_rate_pressure": -0.08832870396707215
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-21T10:29:18.051419+09:00",
+  "prediction_date": "2026-10-21",
+  "symbol": "6522.T",
+  "name": "アスタリスク",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-21T10:29:18.051419+09:00",
+  "market_data_through": "2026-10-21",
+  "reference_price": 896.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6739523909478523,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.21716715536874714,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.45762253283563287,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5555555555555556,
+    "heldout_signals": 45
+  },
+  "evidence": {
+    "price": {
+      "score": -0.9714059967769074,
+      "direction": "DOWN",
+      "day_change": 0.03344867358708181,
+      "momentum5": -0.15710253998118529,
+      "trend": -0.18603030830865708,
+      "volatility": 0.6362530067567925
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "(株)アスタリスク【6522】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAwMkxkZUtHa2N5SjlGLUtpQjhndzZ2X19KUDNIa0lnS1BnM3RwUEJwbEJQZmh3UnBKUG9ENm94TF9vM0tpdE1WSkhKcWd5dGZkd2U4S251c2ttZ18yTjRJ?oc=5",
+          "published_at": "Tue, 20 Oct 2026 06:56:10 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "アスタリスク[6522]：2026年８月期 決算説明資料 2026年10月15日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5KS0g5Q2YzdXZTbGIzTGhtLVM5dVhBaWM0NlVwX1R4cGphcjlrbDYtODREdVNPN3hPWHhJTXZxal9nTGtzdlJ6RTJlNGlfM3VrUmwycVJvV0I5Ujl4VWpPMk83RVl2dmt0N2c?oc=5",
+          "published_at": "Thu, 15 Oct 2026 06:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "大手アパレル企業「株式会社ワールド」へRFIDリーダー『AsReader』を導入 - 株式会社アスタリスク",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1DSGs3X2xPdTZka0cxOUdIQ2lDa1NsLUh0R0NJQ0hlc3Jmb0p3bHZSanNhbjFJX3oyLS04SWVmTThiYndpWnN5M2stTFU?oc=5",
+          "published_at": "Tue, 24 Feb 2026 08:00:00 GMT",
+          "source_url": "https://www.asx.co.jp"
+        },
+        {
+          "title": "アスタリスク[6522]：個別業績の前期実績値との差異に関するお知らせ 2026年10月15日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9MeGo1ajNrRm5Ta1RyekxibGcyVFJTaXZMbU1IR0pjWm1WdXJERVJSU09TREVMNFV1TzFSdG96dkp2Z1lmSGxLeFFJSGZmekVRdHpBOTNnclhMV29HWWpDYUpPN2JPSFJ5cGc?oc=5",
+          "published_at": "Thu, 15 Oct 2026 06:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "スーパーマーケット向け『全商品RFID化ソリューション』の本格展開を開始 | 株式会社アスタリスクのプレスリリース - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5pVEFSb2IzaUdwX01EZzRPN3k3encybV9NOW04UU5yMXdraUhqa0hYRFVYTWJBdHRQc2RFaTNFNkhFTFQ3aW5JSUN0djNSamxfaXRWT0ZiY0hreFFETFN2dTFZVU0tSktsMVE?oc=5",
+          "published_at": "Tue, 30 Jun 2026 07:00:00 GMT",
+          "source_url": "https://prtimes.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.08930875426370151,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.5581797141481344,
+        "oil_pressure": 0.25812622911945526,
+        "japan_risk": 0.13613042104909912,
+        "usd_rate_pressure": -0.08832870396707215
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

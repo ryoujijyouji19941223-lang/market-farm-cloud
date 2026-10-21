@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-21T10:29:18.051419+09:00",
+  "prediction_date": "2026-10-21",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-21T10:29:18.051419+09:00",
+  "market_data_through": "2026-10-21",
+  "reference_price": 158.34100341796875,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.09034522076034304,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5495269305143721,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.006453197874212625,
+      "direction": "NEUTRAL",
+      "day_change": -0.0011480452861368784,
+      "momentum5": 0.00011999085178171498,
+      "trend": 0.0007466655059755745,
+      "volatility": 0.04678155829440194
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀、27年度物価見通し引き上げの可能性 政策金利は据え置く公算＝関係筋 | ロイター - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE90SEd0QlowRmFOWkVRNXJ2NGNRQWd4U0lLTzZUVDIxbWVMTG9iRXI4b3ZJSkc1X0pEM2xEdm1PN3lES3psbXpGMl85Z2FTV0dLMFNhN0VIbW9MT1RsbHYtanV1N2pwX3hZLVNuMFVHLVVSNDUyQ0pmVnJuclBvZw?oc=5",
+          "published_at": "Tue, 20 Oct 2026 05:54:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀利上げは中立金利「1.75％～2.0％」に向け仕上げの段階、植田総裁の“局面変化”強調の真意 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBCbnFaa09EbzVVb3ExcjhaTXVJdkY2eGd5NUVvNzJ1TVpQaEV2dnJxaU1NSVRqYkw0N2ZDMzFwcUZEaFF5RGNHbUNRZzPSAU9BVV95cUxNeDJCUEw2WUU1WWQyaVZYa1N1enYtTGdVYndia3RDLXM2U1hpZzFrdTBOTVQzWlViRFU4S19mZ0pFYTlRdzM0NlVYbTZEWWpV?oc=5",
+          "published_at": "Tue, 20 Oct 2026 19:25:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜警戒材料多数も決定打に欠ける」 外為どっとコム トゥデイ 2026年10月21日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9Gc25lMWYtM3p1TWhFNWswMFh0OFI0Y1BPQmZab29fcUFpTk83R1NWMVk1VzJuejh4WFNjSnJGaGhYbVZnMlhjQVlseGxpdEN0NkoxVnhwbXVLdGxZYkhBem1jOA?oc=5",
+          "published_at": "Tue, 20 Oct 2026 23:29:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀総裁に「国債買い入れ」求めた高市首相 アベノミクス回帰の思惑 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1kdll4V1Q0VmlQanJKWG96YUpmOER5aFptb1RVNzN6b2g3cXJyS0VKZHM3bC1FcHRHVHhoTW1KejR1TmxBVE0wWjVTVkFTTWE5Q0RvWjMwbUNzeG92VTBXS0l3d3pSYk0?oc=5",
+          "published_at": "Tue, 20 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "日銀の金融政策：審議委員人事と企業金融が鍵に - 第一ライフ資産運用経済研究所",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE91V01IcDFzeFZBWjBmbDUwVE9WWm9JNjNzd1NqR2tWZUdvd055Vk8zeHJMWXJvdnZEUHJrX2xmWF8yckwyQ29KZnhldnBBUnk5YlJCUllnRjJscDQ?oc=5",
+          "published_at": "Tue, 20 Oct 2026 10:30:23 GMT",
+          "source_url": "https://www.dlri.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.006380308039189653,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.5581797141481344,
+        "oil_pressure": 0.25812622911945526,
+        "japan_risk": 0.13613042104909912,
+        "usd_rate_pressure": -0.08832870396707215
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

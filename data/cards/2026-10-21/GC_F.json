@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-21T10:29:18.051419+09:00",
+  "prediction_date": "2026-10-21",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-21T10:29:18.051419+09:00",
+  "market_data_through": "2026-10-20",
+  "reference_price": 4127.2001953125,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.16797442832035978,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.498199395836223,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.1259178442832459,
+      "direction": "DOWN",
+      "day_change": -0.007908440078709944,
+      "momentum5": -0.011993299910813549,
+      "trend": -0.009827067086825236,
+      "volatility": 0.1810663280482817
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀、27年度物価見通し引き上げの可能性 政策金利は据え置く公算＝関係筋 | ロイター - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE90SEd0QlowRmFOWkVRNXJ2NGNRQWd4U0lLTzZUVDIxbWVMTG9iRXI4b3ZJSkc1X0pEM2xEdm1PN3lES3psbXpGMl85Z2FTV0dLMFNhN0VIbW9MT1RsbHYtanV1N2pwX3hZLVNuMFVHLVVSNDUyQ0pmVnJuclBvZw?oc=5",
+          "published_at": "Tue, 20 Oct 2026 05:54:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀利上げは中立金利「1.75％～2.0％」に向け仕上げの段階、植田総裁の“局面変化”強調の真意 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBCbnFaa09EbzVVb3ExcjhaTXVJdkY2eGd5NUVvNzJ1TVpQaEV2dnJxaU1NSVRqYkw0N2ZDMzFwcUZEaFF5RGNHbUNRZzPSAU9BVV95cUxNeDJCUEw2WUU1WWQyaVZYa1N1enYtTGdVYndia3RDLXM2U1hpZzFrdTBOTVQzWlViRFU4S19mZ0pFYTlRdzM0NlVYbTZEWWpV?oc=5",
+          "published_at": "Tue, 20 Oct 2026 19:25:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "協調為替介入を受け利上げペースは加速するか 高市政権から9月利上げ容認メッセージが出るかに注目 野村證券・宍戸知暁 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA5dXlZVjZyWmdQUHpqNGx1TXFnUS04aG00amJvMTJLbE5QMGVGMjUwZzJKSXlDbWw3aXJNLVpBeHN2QjhJbTFXamZXbjFMYjVUOG41Q1pCVF93bWpndHVN?oc=5",
+          "published_at": "Tue, 20 Oct 2026 07:16:46 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "トルコ中銀の会合で何が決まるのか？ 政策金利37%とトルコリラのスワップポイントの関係 2026年10月21日 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE83M291TW9IdXlTNlFaYWVZNmJkQzVPbWZLYkFZNl9WOHRNSFlsem5HUzNHTzFWRzNLN2RMZ3RmelYydE5nSjl3QXFwM1ZSMlBMM09Ccks4N0tRQlBoZ3ZmT2lLOA?oc=5",
+          "published_at": "Wed, 21 Oct 2026 01:00:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "9月の米住宅着工、3カ月連続で下落 金利上昇が影響 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5rRzRma3VaaHhGb1Y1akR0OGM2LTgwU096MzZXVkZNOTdHLUQybU9sOFVMMTdCd2R4dzBBVTRXSnJnWW05cEdjTDJQOEhXTFdhTWVOTExjZFBCZ2xJa2dJenhUMzFqQV8tdFJ3Zw?oc=5",
+          "published_at": "Tue, 20 Oct 2026 18:21:36 GMT",
+          "source_url": "https://www.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.12400196138501698,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 0.5581797141481344,
+        "oil_pressure": 0.25812622911945526,
+        "japan_risk": 0.13613042104909912,
+        "usd_rate_pressure": -0.08832870396707215
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

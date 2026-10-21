@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-21T10:29:18.051419+09:00",
+  "prediction_date": "2026-10-21",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-21T10:29:18.051419+09:00",
+  "market_data_through": "2026-10-21",
+  "reference_price": 660.5999755859375,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.10682162056557663,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.5439025960108376,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.45103759636218604,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5,
+    "heldout_signals": 70
+  },
+  "evidence": {
+    "price": {
+      "score": 0.06596158655087181,
+      "direction": "UP",
+      "day_change": -0.0043707979111717865,
+      "momentum5": 0.01724661341363576,
+      "trend": -0.0003661189772540263,
+      "volatility": 0.22978645932972455
+    },
+    "news": {
+      "score": 0.2857142857142857,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日本製鉄(株)【5401】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9CVmx5TUl6TGxMX0lYTnVadHZ1b256QUpCY1ctQWx5ZFFaOEtGZ0ZkV0FuYlFvM3hDVF91b0J6Tk9kOFZNSVpPSWxBTUNkOUN0S1Y3TmszM2dNMmVHU2xB?oc=5",
+          "published_at": "Mon, 19 Oct 2026 06:53:29 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日本製鉄の株価続伸 米同業が好決算、USスチールの貢献期待広がる - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5xOU1GRnYwR2ZNZ0FlUFBiemRhRkVaWWZQOWVvaTFGeVhfOEYyVGpMU2U0X3UxM1BpYTh5VG1HWEhYQ3d3Z3NzWkUtR2FBeENQZ1M3NzlMdHpTRk1tLWJxMHo5MXhsQkNBVE94OA?oc=5",
+          "published_at": "Tue, 20 Oct 2026 04:38:44 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "日本製鉄堺ブレイザーズが10月24・25日にホーム開幕戦 大浜だいしんアリーナで開催 - サカイタイムズ",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9xeTFQNEFENndTQXFWV0hWdzg3WFE0ZTcwMVNqWVp0a0NqbHdKalN5U0MtS3QtZXhtLWVqaWh3ZUdsZlJ5VGJmczB1RQ?oc=5",
+          "published_at": "Tue, 20 Oct 2026 20:50:03 GMT",
+          "source_url": "https://sakai-times.com"
+        },
+        {
+          "title": "話題株ピックアップ【昼刊】：コーテクＨＤ、日本製鉄、ファストリ - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE95amdzZ2hGdDBHSml2OUxBZE40UnhoZW9jTEpMbmxfejlPQ2hlbXh3ZHhzQTFmS3hZazY3ejNQcGlnLU5naTR5R3dXa3gyRGtqLTNkc0ZyOS11c3B6d2RXSg?oc=5",
+          "published_at": "Tue, 20 Oct 2026 02:38:32 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "日本製鉄---続伸、米国の鋼材価格上昇基調などを材料視も 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9HZktUUlRLZnZ0QU1ycC1Md1dudi1QVWhyUkloMHBDVVBDazR3aThYRTBKZXZsYTJiOC12UzI5WUI5S3IyQnp4ak85U2ZWM2tsN3lpNXFlcUUtVy1qNDVOZGVQSDZFM29yamdDdHluWDU?oc=5",
+          "published_at": "Tue, 20 Oct 2026 05:30:00 GMT",
+          "source_url": "https://jp.investing.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.08930875426370151,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.5581797141481344,
+        "oil_pressure": 0.25812622911945526,
+        "japan_risk": 0.13613042104909912,
+        "usd_rate_pressure": -0.08832870396707215
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

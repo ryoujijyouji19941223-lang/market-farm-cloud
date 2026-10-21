@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-21T10:29:18.051419+09:00",
+  "prediction_date": "2026-10-21",
+  "symbol": "EURJPY=X",
+  "name": "ユーロ円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-21T10:29:18.051419+09:00",
+  "market_data_through": "2026-10-21",
+  "reference_price": 177.76300048828125,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.07725350048335594,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5276074677738195,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.015979279414649494,
+      "direction": "NEUTRAL",
+      "day_change": 0.0,
+      "momentum5": 0.0025209582894349936,
+      "trend": -0.003258059102064781,
+      "volatility": 0.052083371784359754
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀、27年度物価見通し引き上げの可能性 政策金利は据え置く公算＝関係筋 | ロイター - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE90SEd0QlowRmFOWkVRNXJ2NGNRQWd4U0lLTzZUVDIxbWVMTG9iRXI4b3ZJSkc1X0pEM2xEdm1PN3lES3psbXpGMl85Z2FTV0dLMFNhN0VIbW9MT1RsbHYtanV1N2pwX3hZLVNuMFVHLVVSNDUyQ0pmVnJuclBvZw?oc=5",
+          "published_at": "Tue, 20 Oct 2026 05:54:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀利上げは中立金利「1.75％～2.0％」に向け仕上げの段階、植田総裁の“局面変化”強調の真意 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBCbnFaa09EbzVVb3ExcjhaTXVJdkY2eGd5NUVvNzJ1TVpQaEV2dnJxaU1NSVRqYkw0N2ZDMzFwcUZEaFF5RGNHbUNRZzPSAU9BVV95cUxNeDJCUEw2WUU1WWQyaVZYa1N1enYtTGdVYndia3RDLXM2U1hpZzFrdTBOTVQzWlViRFU4S19mZ0pFYTlRdzM0NlVYbTZEWWpV?oc=5",
+          "published_at": "Tue, 20 Oct 2026 19:25:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "協調為替介入を受け利上げペースは加速するか 高市政権から9月利上げ容認メッセージが出るかに注目 野村證券・宍戸知暁 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA5dXlZVjZyWmdQUHpqNGx1TXFnUS04aG00amJvMTJLbE5QMGVGMjUwZzJKSXlDbWw3aXJNLVpBeHN2QjhJbTFXamZXbjFMYjVUOG41Q1pCVF93bWpndHVN?oc=5",
+          "published_at": "Tue, 20 Oct 2026 07:16:46 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "日銀総裁に「国債買い入れ」求めた高市首相 アベノミクス回帰の思惑 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1kdll4V1Q0VmlQanJKWG96YUpmOER5aFptb1RVNzN6b2g3cXJyS0VKZHM3bC1FcHRHVHhoTW1KejR1TmxBVE0wWjVTVkFTTWE5Q0RvWjMwbUNzeG92VTBXS0l3d3pSYk0?oc=5",
+          "published_at": "Tue, 20 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "植田日銀総裁が午後1時から衆院財務金融委員会に出席＝関係筋(ロイター) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTUk2RWhFZ1pUMW03X05TenItdjRoWDhYdzBXUTdTeUpGZDk5N0FLWHRib25Wb2NpM25xRFVUTHU4Znl1ZmcydXFSazJpNU1Wbm5WMUNaNHRnU0F1bE5DYmI4WHphZ3NWTmhKRjhOSVl4UE84SXFmUUk1ZnlvRERSNkVmR3pQWTg?oc=5",
+          "published_at": "Tue, 20 Oct 2026 23:22:02 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.01758393654262851,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.5581797141481344,
+        "oil_pressure": 0.25812622911945526,
+        "japan_risk": 0.13613042104909912,
+        "usd_rate_pressure": -0.08832870396707215
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
