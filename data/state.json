@@ -25861,6 +25861,636 @@
           }
         }
       ]
+    },
+    {
+      "timestamp": "2026-10-22T00:55:14.866369+09:00",
+      "session": "evening",
+      "regime": {
+        "risk_off": -0.08203841770906362,
+        "oil_pressure": 0.11147348975852678,
+        "japan_risk": 0.163864126692996,
+        "usd_rate_pressure": -0.08673918420265325
+      },
+      "results": [
+        {
+          "symbol": "USDJPY=X",
+          "name": "ドル円",
+          "kind": "fx",
+          "keywords": [
+            "ドル円",
+            "USDJPY",
+            "FRB",
+            "日銀"
+          ],
+          "history_news_query": "(yen OR USDJPY OR \"Bank of Japan\" OR \"Federal Reserve\")",
+          "price": 158.14100646972656,
+          "market_date": "2026-10-21",
+          "day_change": -0.0024096726497149223,
+          "momentum5": -0.001143238139627134,
+          "trend": 0.0005568734748548909,
+          "volatility": 0.0475018295122506,
+          "price_score": -0.0001179647591222221,
+          "news_score": 0.75,
+          "news_status": "OK",
+          "news_error": null,
+          "news_input_quality": {
+            "status": "OK",
+            "error": null,
+            "article_count": 8,
+            "usable": true
+          },
+          "macro_score": -0.007935271548731037,
+          "score": 0.12622949323148722,
+          "probability_up": 0.5689834563665597,
+          "action": "UP",
+          "forecast_qualification": {
+            "direction": "UP",
+            "decision": "FORECAST",
+            "evidence_strength": 0.12877050676851276,
+            "factor_agreement": 1.0,
+            "reason": null
+          },
+          "challenger": null
+        },
+        {
+          "symbol": "EURJPY=X",
+          "name": "ユーロ円",
+          "kind": "fx",
+          "keywords": [
+            "ユーロ円",
+            "EURJPY",
+            "ECB",
+            "日銀"
+          ],
+          "history_news_query": "(euro OR EURJPY OR ECB OR \"Bank of Japan\")",
+          "price": 177.3990020751953,
+          "market_date": "2026-10-21",
+          "day_change": -0.00204766127982825,
+          "momentum5": 0.0004681349409294544,
+          "trend": -0.003565261990073343,
+          "volatility": 0.052228592133244024,
+          "price_score": -0.026643249120576612,
+          "news_score": 0.75,
+          "news_status": "OK",
+          "news_error": null,
+          "news_input_quality": {
+            "status": "OK",
+            "error": null,
+            "article_count": 8,
+            "usable": true
+          },
+          "macro_score": 0.008560860475794251,
+          "score": 0.11066671966937705,
+          "probability_up": 0.5605678058291302,
+          "action": "UP",
+          "forecast_qualification": {
+            "direction": "UP",
+            "decision": "FORECAST",
+            "evidence_strength": 0.14690153847336124,
+            "factor_agreement": 1.0,
+            "reason": null
+          },
+          "challenger": null
+        },
+        {
+          "symbol": "CHFJPY=X",
+          "name": "スイスフラン円",
+          "kind": "fx",
+          "keywords": [
+            "スイスフラン",
+            "CHFJPY",
+            "SNB",
+            "日銀"
+          ],
+          "history_news_query": "(\"Swiss franc\" OR CHFJPY OR SNB OR \"Bank of Japan\")",
+          "price": 191.55999755859375,
+          "market_date": "2026-10-21",
+          "day_change": -0.0005630854311178268,
+          "momentum5": 0.008067300009177991,
+          "trend": 0.00430974344373003,
+          "volatility": 0.060557276890605756,
+          "price_score": 0.0666482003569055,
+          "news_score": 0.75,
+          "news_status": "OK",
+          "news_error": null,
+          "news_input_quality": {
+            "status": "OK",
+            "error": null,
+            "article_count": 8,
+            "usable": true
+          },
+          "macro_score": -0.008789187623317516,
+          "score": 0.1715023980991981,
+          "probability_up": 0.5932230041709086,
+          "action": "UP",
+          "forecast_qualification": {
+            "direction": "UP",
+            "decision": "FORECAST",
+            "evidence_strength": 0.17413915438619337,
+            "factor_agreement": 1.0,
+            "reason": null
+          },
+          "challenger": null
+        },
+        {
+          "symbol": "GC=F",
+          "name": "金",
+          "kind": "commodity",
+          "keywords": [
+            "金価格",
+            "gold",
+            "金利",
+            "地政学"
+          ],
+          "history_news_query": "(gold OR \"gold price\" OR bullion)",
+          "price": 4149.89990234375,
+          "market_date": "2026-10-21",
+          "day_change": 0.0017621311532411976,
+          "momentum5": 0.010224202390140213,
+          "trend": -0.005270373891044122,
+          "volatility": 0.17632864722188632,
+          "price_score": -0.0012661808911384753,
+          "news_score": 0.375,
+          "news_status": "OK",
+          "news_error": null,
+          "news_input_quality": {
+            "status": "OK",
+            "error": null,
+            "article_count": 8,
+            "usable": true
+          },
+          "macro_score": -0.004264197753441267,
+          "score": 0.06224936733100964,
+          "probability_up": 0.5341837426078729,
+          "action": "NO_FORECAST",
+          "forecast_qualification": {
+            "direction": "FLAT",
+            "decision": "ABSTAIN",
+            "evidence_strength": 0.06525063266899035,
+            "factor_agreement": 1.0,
+            "reason": "insufficient_evidence"
+          },
+          "challenger": null
+        },
+        {
+          "symbol": "7974.T",
+          "name": "任天堂",
+          "kind": "equity",
+          "keywords": [
+            "任天堂",
+            "Nintendo",
+            "Nintendo Switch 2"
+          ],
+          "history_news_query": "(Nintendo OR \"Nintendo Switch\")",
+          "news_query": "(\"任天堂\" OR \"Nintendo\")",
+          "news_required_any": [
+            "任天堂",
+            "Nintendo",
+            "7974",
+            "Nintendo Switch 2"
+          ],
+          "news_trusted_sources": [
+            "nintendo.co.jp",
+            "nintendo.com"
+          ],
+          "news_exclude_terms": [],
+          "price": 8680.0,
+          "market_date": "2026-10-20",
+          "day_change": 0.016274440931975276,
+          "momentum5": 0.06216348507097402,
+          "trend": 0.03926867555172531,
+          "volatility": 0.28343397817946303,
+          "price_score": 0.5100544363554353,
+          "news_score": 0.0,
+          "news_status": "OK",
+          "news_error": null,
+          "news_input_quality": {
+            "status": "OK",
+            "error": null,
+            "article_count": 8,
+            "usable": true
+          },
+          "macro_score": 0.013126146833450179,
+          "score": 0.34472424919598993,
+          "probability_up": 0.6810048107093732,
+          "action": "UP",
+          "forecast_qualification": {
+            "direction": "UP",
+            "decision": "FORECAST",
+            "evidence_strength": 0.34880593874671356,
+            "factor_agreement": 1.0,
+            "reason": null
+          },
+          "challenger": null
+        },
+        {
+          "symbol": "8316.T",
+          "name": "三井住友FG",
+          "kind": "equity",
+          "keywords": [
+            "三井住友FG",
+            "SMFG",
+            "SMBCグループ"
+          ],
+          "history_news_query": "(\"Sumitomo Mitsui\" OR SMFG)",
+          "news_query": "(\"三井住友フィナンシャルグループ\" OR \"SMFG\" OR \"SMBCグループ\")",
+          "news_required_any": [
+            "三井住友フィナンシャルグループ",
+            "SMFG",
+            "SMBCグループ",
+            "8316"
+          ],
+          "news_trusted_sources": [
+            "smfg.co.jp"
+          ],
+          "news_exclude_terms": [],
+          "price": 3148.0,
+          "market_date": "2026-10-20",
+          "day_change": -0.038485033598045226,
+          "momentum5": -0.05945622945921725,
+          "trend": -0.025533091067070024,
+          "volatility": 0.34269396027720656,
+          "price_score": -0.41537504805854947,
+          "news_score": 0.0,
+          "news_status": "OK",
+          "news_error": null,
+          "news_input_quality": {
+            "status": "OK",
+            "error": null,
+            "article_count": 8,
+            "usable": true
+          },
+          "macro_score": 0.013126146833450179,
+          "score": -0.2713863317150258,
+          "probability_up": 0.35501891299989646,
+          "action": "DOWN",
+          "forecast_qualification": {
+            "direction": "DOWN",
+            "decision": "FORECAST",
+            "evidence_strength": 0.2844239547048312,
+            "factor_agreement": 1.0,
+            "reason": null
+          },
+          "challenger": {
+            "probability_up": 0.5069847088147537,
+            "direction": "FLAT",
+            "price_coef": 0.0,
+            "macro_coef": 1.0,
+            "edge": 0.05,
+            "heldout_accuracy": 0.5454545454545454,
+            "heldout_signals": 66
+          }
+        },
+        {
+          "symbol": "285A.T",
+          "name": "キオクシア",
+          "kind": "equity",
+          "keywords": [
+            "キオクシア",
+            "Kioxia",
+            "285A"
+          ],
+          "history_news_query": "(Kioxia OR NAND OR SSD)",
+          "news_query": "(\"キオクシア\" OR \"Kioxia\" OR \"285A\")",
+          "news_required_any": [
+            "キオクシア",
+            "Kioxia",
+            "285A"
+          ],
+          "news_trusted_sources": [
+            "kioxia-holdings.com",
+            "kioxia.com"
+          ],
+          "news_exclude_terms": [],
+          "price": 13140.0,
+          "market_date": "2026-10-20",
+          "day_change": -0.0338235294117647,
+          "momentum5": -0.13438735177865613,
+          "trend": -0.1984802896979998,
+          "volatility": 0.8315459853641892,
+          "price_score": -0.971894464014408,
+          "news_score": 0.0,
+          "news_status": "OK",
+          "news_error": null,
+          "news_input_quality": {
+            "status": "OK",
+            "error": null,
+            "article_count": 7,
+            "usable": true
+          },
+          "macro_score": 0.013126146833450179,
+          "score": -0.5248021549981087,
+          "probability_up": 0.23965630242374467,
+          "action": "DOWN",
+          "forecast_qualification": {
+            "direction": "DOWN",
+            "decision": "FORECAST",
+            "evidence_strength": 0.662857157554815,
+            "factor_agreement": 1.0,
+            "reason": null
+          },
+          "challenger": {
+            "probability_up": 0.30396621501378895,
+            "direction": "DOWN",
+            "price_coef": 0.5,
+            "macro_coef": 1.0,
+            "edge": 0.12,
+            "heldout_accuracy": 0.5135135135135135,
+            "heldout_signals": 37
+          }
+        },
+        {
+          "symbol": "8136.T",
+          "name": "サンリオ",
+          "kind": "equity",
+          "keywords": [
+            "サンリオ",
+            "Sanrio",
+            "8136"
+          ],
+          "history_news_query": "(Sanrio OR \"Hello Kitty\")",
+          "news_query": "(\"サンリオ\" OR \"Sanrio\" OR \"8136\")",
+          "news_required_any": [
+            "サンリオ",
+            "Sanrio",
+            "8136"
+          ],
+          "news_trusted_sources": [
+            "corporate.sanrio.co.jp",
+            "sanrio.co.jp"
+          ],
+          "news_exclude_terms": [
+            "サンリオ掲示板"
+          ],
+          "price": 1351.5,
+          "market_date": "2026-10-20",
+          "day_change": 0.01807909604519775,
+          "momentum5": 0.08641479099678451,
+          "trend": 0.06493772305035339,
+          "volatility": 0.27737291973241623,
+          "price_score": 0.698907179499197,
+          "news_score": 0.0,
+          "news_status": "OK",
+          "news_error": null,
+          "news_input_quality": {
+            "status": "OK",
+            "error": null,
+            "article_count": 8,
+            "usable": true
+          },
+          "macro_score": 0.013126146833450179,
+          "score": 0.47265373181416676,
+          "probability_up": 0.738818787386569,
+          "action": "UP",
+          "forecast_qualification": {
+            "direction": "UP",
+            "decision": "FORECAST",
+            "evidence_strength": 0.4772258040844715,
+            "factor_agreement": 1.0,
+            "reason": null
+          },
+          "challenger": null
+        },
+        {
+          "symbol": "5401.T",
+          "name": "日本製鉄",
+          "kind": "equity",
+          "keywords": [
+            "日本製鉄",
+            "Nippon Steel",
+            "US Steel"
+          ],
+          "history_news_query": "(\"Nippon Steel\" OR \"US Steel\")",
+          "news_query": "(\"日本製鉄\" OR \"Nippon Steel\" OR \"U.S. Steel\" OR \"US Steel\")",
+          "news_required_any": [
+            "日本製鉄",
+            "Nippon Steel",
+            "U.S. Steel",
+            "US Steel",
+            "5401"
+          ],
+          "news_trusted_sources": [
+            "nipponsteel.com",
+            "ussteel.com"
+          ],
+          "news_exclude_terms": [],
+          "price": 663.5,
+          "market_date": "2026-10-20",
+          "day_change": 0.019357774025711372,
+          "momentum5": 0.025502318392581103,
+          "trend": -0.006060762033464506,
+          "volatility": 0.2548216515276012,
+          "price_score": 0.05347212597481753,
+          "news_score": 0.14285714285714285,
+          "news_status": "OK",
+          "news_error": null,
+          "news_input_quality": {
+            "status": "OK",
+            "error": null,
+            "article_count": 7,
+            "usable": true
+          },
+          "macro_score": 0.013126146833450179,
+          "score": 0.06251001312408379,
+          "probability_up": 0.5343264249349983,
+          "action": "NO_FORECAST",
+          "forecast_qualification": {
+            "direction": "FLAT",
+            "decision": "ABSTAIN",
+            "evidence_strength": 0.06261568197360773,
+            "factor_agreement": 1.0,
+            "reason": "insufficient_evidence"
+          },
+          "challenger": {
+            "probability_up": 0.5072066983735234,
+            "direction": "FLAT",
+            "price_coef": 0.0,
+            "macro_coef": 1.0,
+            "edge": 0.05,
+            "heldout_accuracy": 0.5,
+            "heldout_signals": 70
+          }
+        },
+        {
+          "symbol": "6522.T",
+          "name": "アスタリスク",
+          "kind": "equity",
+          "keywords": [
+            "株式会社アスタリスク",
+            "AsReader",
+            "RFID",
+            "バーコード"
+          ],
+          "history_news_query": "(\"Asterisk Inc\" OR AsReader OR AsCode OR \"RFID barcode\" OR \"stock 6522\")",
+          "news_required_any": [
+            "株式会社アスタリスク",
+            "AsReader",
+            "AsCode",
+            "6522"
+          ],
+          "news_exclude_terms": [
+            "学戦都市アスタリスク",
+            "アニメ",
+            "ABEMA"
+          ],
+          "news_query": "(\"株式会社アスタリスク\" OR \"AsReader\" OR \"AsCode\" OR \"6522\")",
+          "news_trusted_sources": [
+            "asx.co.jp",
+            "asreader.jp"
+          ],
+          "price": 867.0,
+          "market_date": "2026-10-20",
+          "day_change": -0.06067172264355358,
+          "momentum5": -0.1590688651794374,
+          "trend": -0.17434322756738319,
+          "volatility": 0.6071737945595834,
+          "price_score": -0.9661549568322121,
+          "news_score": 0.0,
+          "news_status": "OK",
+          "news_error": null,
+          "news_input_quality": {
+            "status": "OK",
+            "error": null,
+            "article_count": 7,
+            "usable": true
+          },
+          "macro_score": 0.013126146833450179,
+          "score": -0.5731322999623841,
+          "probability_up": 0.22082053935570184,
+          "action": "DOWN",
+          "forecast_qualification": {
+            "direction": "DOWN",
+            "decision": "FORECAST",
+            "evidence_strength": 0.6589542926709218,
+            "factor_agreement": 1.0,
+            "reason": null
+          },
+          "challenger": {
+            "probability_up": 0.5063165439298526,
+            "direction": "FLAT",
+            "price_coef": 0.0,
+            "macro_coef": 1.0,
+            "edge": 0.05,
+            "heldout_accuracy": 0.5555555555555556,
+            "heldout_signals": 45
+          }
+        },
+        {
+          "symbol": "1736.T",
+          "name": "オーテック",
+          "kind": "equity",
+          "keywords": [
+            "オーテック 1736",
+            "空調自動制御",
+            "管工機材"
+          ],
+          "history_news_query": "(\"Otec Corporation\" OR オーテック)",
+          "news_query": "(\"オーテック\" 1736 OR \"オーテック\" \"空調自動制御\" OR \"オーテック\" \"管工機材\")",
+          "news_required_any": [
+            "1736",
+            "オーテック---",
+            "オーテック[1736]",
+            "オーテック（1736）",
+            "オーテック<1736>"
+          ],
+          "news_trusted_sources": [
+            "o-tec.co.jp"
+          ],
+          "news_exclude_terms": [
+            "自動車部品のオーテック",
+            "e-autec",
+            "有限会社オーテック",
+            "ootech.co.jp",
+            "otech.jp"
+          ],
+          "price": 2493.0,
+          "market_date": "2026-10-20",
+          "day_change": -0.012673267326732685,
+          "momentum5": -0.01345468935496641,
+          "trend": 0.008975251975730236,
+          "volatility": 0.1462754069150715,
+          "price_score": 0.0179813200559558,
+          "news_score": 0.25,
+          "news_status": "OK",
+          "news_error": null,
+          "news_input_quality": {
+            "status": "OK",
+            "error": null,
+            "article_count": 3,
+            "usable": true
+          },
+          "macro_score": 0.013126146833450179,
+          "score": 0.056696219663067475,
+          "probability_up": 0.5311425549765174,
+          "action": "NO_FORECAST",
+          "forecast_qualification": {
+            "direction": "FLAT",
+            "decision": "ABSTAIN",
+            "evidence_strength": 0.056696219663067475,
+            "factor_agreement": 1.0,
+            "reason": "insufficient_evidence"
+          },
+          "challenger": null
+        },
+        {
+          "symbol": "3656.T",
+          "name": "KLab",
+          "kind": "equity",
+          "keywords": [
+            "KLab",
+            "KLab株式会社",
+            "KLab HOMMA"
+          ],
+          "history_news_query": "(KLab OR \"KLab Inc\")",
+          "news_query": "(\"KLab\" OR \"KLab株式会社\" OR \"3656\" OR \"KLab HOMMA\")",
+          "news_required_any": [
+            "KLab",
+            "KLab株式会社",
+            "3656",
+            "KLab HOMMA"
+          ],
+          "news_trusted_sources": [
+            "klab.com"
+          ],
+          "news_exclude_terms": [],
+          "price": 175.0,
+          "market_date": "2026-10-20",
+          "day_change": 0.005747126436781658,
+          "momentum5": 0.0479041916167664,
+          "trend": -0.00992344768925435,
+          "volatility": 0.37095285654706117,
+          "price_score": 0.11176035672490221,
+          "news_score": 0.0,
+          "news_status": "OK",
+          "news_error": null,
+          "news_input_quality": {
+            "status": "OK",
+            "error": null,
+            "article_count": 6,
+            "usable": true
+          },
+          "macro_score": 0.013126146833450179,
+          "score": 0.0746653924519018,
+          "probability_up": 0.5409738753896631,
+          "action": "NO_FORECAST",
+          "forecast_qualification": {
+            "direction": "FLAT",
+            "decision": "ABSTAIN",
+            "evidence_strength": 0.07796596459795103,
+            "factor_agreement": 1.0,
+            "reason": "insufficient_evidence"
+          },
+          "challenger": {
+            "probability_up": 0.5069133185007524,
+            "direction": "FLAT",
+            "price_coef": 0.0,
+            "macro_coef": 1.0,
+            "edge": 0.05,
+            "heldout_accuracy": 0.5454545454545454,
+            "heldout_signals": 44
+          }
+        }
+      ]
     }
   ],
   "predictions": {
@@ -29404,7 +30034,10 @@
         "probability_up": 0.498199395836223,
         "reference_price": 4127.2001953125,
         "reference_market_date": "2026-10-20",
-        "settled": false
+        "settled": true,
+        "actual_direction": "UP",
+        "actual_price": 4149.89990234375,
+        "correct": false
       },
       {
         "symbol": "7974.T",
@@ -29503,7 +30136,7 @@
     },
     "GC=F": {
       "correct": 10,
-      "total": 24
+      "total": 25
     },
     "7974.T": {
       "correct": 14,
