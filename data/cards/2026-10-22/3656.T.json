@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-22T10:26:44.902120+09:00",
+  "prediction_date": "2026-10-22",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-22T10:26:44.902120+09:00",
+  "market_data_through": "2026-10-22",
+  "reference_price": 185.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.2958540312325827,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.6505824935154579,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5046184555614697,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5454545454545454,
+    "heldout_signals": 44
+  },
+  "evidence": {
+    "price": {
+      "score": 0.3974255481032137,
+      "direction": "UP",
+      "day_change": 0.02777777777777768,
+      "momentum5": 0.08187134502923987,
+      "trend": 0.011637808685779127,
+      "volatility": 0.37852189125465185
+    },
+    "news": {
+      "score": 0.14285714285714285,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "ゲーム開発のKLab、暗号資産×金運用で含み損2.8億→含み益3千万に ビットコイン上昇で大きく挽回（オタク総研） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE52U29FTHh1OXFvSTF1RHZrSkpGR2F1NlU5UmY1Nl81VUxvNElSU3BYVFY2MUIyTlUtWldjbVJKTm5LV1ZxMFpsWlZIV2Z1Uk1YYzFtZkEybzd6T05CR0gyZnJuQ0toYm45c0h4MkdINWliY2JiT2RQc3ZEWW1rOEU?oc=5",
+          "published_at": "Fri, 02 Oct 2026 07:00:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "KLab HOMMA Middle Eastが グローバルに活躍する空間デザイナー秋葉達雄氏(株式会社T&C JAPAN)とのパートナーシップを発表 〜建築、デジタル、LED技術が融合するコンセプト動画を公開〜 - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5nMEZUTFhPT1hXdmZCdnZNMEVmZnh5N3JiM2NPTXBjNzBrM1dwWWhkTVN3WC1aSTJXU2I5YjVkMjg1S3pUZnItR1lsc2VfdVd3VHRFQVg3V0VlMi11NmM3NllXZ2s?oc=5",
+          "published_at": "Wed, 19 Aug 2026 07:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        },
+        {
+          "title": "KLab、AIゲームが経産省支援に採択 27年2月以降実用化へ補助金活用 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1OY3AtXzVvNlY4Q1B1QTBQMVE0T2tSYjBXZU9scGRJUGxyY1NIYVpOWGh3WlRaam9OV2NXbjF5RVRRRmpvTVZtaVNsWEM5Mmc2UUs0RkpoWDlFX0tRdDRUcGNlRVp4S2pEUlc4Xw?oc=5",
+          "published_at": "Thu, 15 Oct 2026 11:54:36 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "KLab HOMMA Middle EastUAEにオフィスを開設し中東展開を本格始動 - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBlQWVydDZ1M1FmRGNWZXFVOWNkQ05DTTZ0Zy1uSHJxNmxUcE9IV2xuMjdhR3E5ejA3dmc2bTA1bTdyWlZ1S01TQW5HZU9jSnVnZDI0VTFpcGhWc2VlTmk0WTJwaFROTkk3YXc?oc=5",
+          "published_at": "Wed, 09 Sep 2026 07:00:00 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "KLab、HOMMAとドバイに合弁会社設立…100兆円規模へ拡大見込むスマートホーム市場に参入 - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE8xYUVDT3p2dll5MEU1WTlTWTZiVlhVaV85WDBreDVBOTFiOTM0MnVjMXFXdlB1eEQxMzJab2lONHllMmdm?oc=5",
+          "published_at": "Thu, 16 Jul 2026 07:00:00 GMT",
+          "source_url": "https://gamebiz.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.008792961577886942,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.05495600986179339,
+        "oil_pressure": 0.15511645237393012,
+        "japan_risk": 0.009125847789276942,
+        "usd_rate_pressure": -0.0588068171310705
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

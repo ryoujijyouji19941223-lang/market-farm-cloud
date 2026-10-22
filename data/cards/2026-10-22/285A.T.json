@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-22T10:26:44.902120+09:00",
+  "prediction_date": "2026-10-22",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-22T10:26:44.902120+09:00",
+  "market_data_through": "2026-10-22",
+  "reference_price": 13095.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6353455127216638,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.24096357941127095,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.3106443498887631,
+    "direction": "DOWN",
+    "price_coef": 0.5,
+    "macro_coef": 1.0,
+    "edge": 0.12,
+    "heldout_accuracy": 0.5135135135135135,
+    "heldout_signals": 37
+  },
+  "evidence": {
+    "price": {
+      "score": -0.8966777267636271,
+      "direction": "DOWN",
+      "day_change": -0.030717986676535913,
+      "momentum5": 0.016692546583850998,
+      "trend": -0.1902216545346198,
+      "volatility": 0.7519712765201644
+    },
+    "news": {
+      "score": -0.14285714285714285,
+      "status": "OK",
+      "error": null,
+      "direction": "DOWN",
+      "headlines": [
+        {
+          "title": "キオクシア---大幅反発、米AI関連企業の決算期待で国内AI・半導体関連買われる(フィスコ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPaHpmWnhqaXJTUHprb3V4NC0xRnRkZTNsdmRJSFNWZ2lDNlFQU0hGRGIzX3J1RVdRVXN2c1lFTGdNbWZTVS02VnVKR2xCUlYzeFJvMXBHQTRpTEJBNDZqWkNTLVJPd0VSV1NybDJaUjlWdU9XMW0zTkhnT2xydlRQQmdZMXpGajQ?oc=5",
+          "published_at": "Wed, 21 Oct 2026 01:38:07 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "直接液冷対応のエンタープライズSSD、キオクシア：CM9シリーズ新モデル - EDN Japan",
+          "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1xc2RVYXliTDBraDMtNjFwRG95RVVMeGwzWmxoRklwMnRCajZNRUhjeXdxYU4tX1l2aUg0RzVvVWRMMFBDTldRN2MzWHlzbWJDOWpwYlpXdW1waUlXMHZPNDNoQkJQNGtOel9F?oc=5",
+          "published_at": "Thu, 22 Oct 2026 00:00:00 GMT",
+          "source_url": "https://edn.itmedia.co.jp"
+        },
+        {
+          "title": "キオクシアは一進一退、メタがＡＩ投資へ種類株発行方針も半導体・ＤＣ関連株の反応限られる - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBrb1ZxVTUxUG9WNkduWVZ0UTVtRFRPc2RpRlBxUDluLVdwZlVzcGlpLVJ0dTVLa1luc01KMjg4VVRBQkVJT0NBNXplbm9yc1J6VjdOUlUxeXJfMWppUU84UQ?oc=5",
+          "published_at": "Thu, 22 Oct 2026 00:39:00 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "キオクシアHD株価反落 米サンディスク反発でも戻り待ちの売り - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9GU3M1Zk12VWZXQVZLaDh3UjhUWVk2Yjh3bnU4c0ZnZ2swQUpjU29JTFI5Y1h2WmpUU01VLU5oRzlOOHEyRXJGck5mT2pvenM4ZHdJWUtPV1pfbUdTNFByVjBCa0g1SXVzMThpcA?oc=5",
+          "published_at": "Tue, 20 Oct 2026 01:18:37 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "変わる潮目2026 企業のトップに聞く（20）キオクシアHD社長・太田裕雄氏 - 日刊工業新聞 電子版",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5FZ01tdjBCQmgwQlA2bG01TWlseHpKUV9jQTNnMjk5Z3FYOVJOdncyQk5VREwzZjFNcXNOSHNKQ3BidEVNSWVZdzhnS2psR0IwQkJaTjF4Z2I?oc=5",
+          "published_at": "Mon, 19 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkan.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.008792961577886942,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.05495600986179339,
+        "oil_pressure": 0.15511645237393012,
+        "japan_risk": 0.009125847789276942,
+        "usd_rate_pressure": -0.0588068171310705
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-22T10:26:44.902120+09:00",
+  "prediction_date": "2026-10-22",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-22T10:26:44.902120+09:00",
+  "market_data_through": "2026-10-22",
+  "reference_price": 665.7999877929688,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.15358241399313932,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5836757763697128,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5048359780627201,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5,
+    "heldout_signals": 70
+  },
+  "evidence": {
+    "price": {
+      "score": 0.22391686728890628,
+      "direction": "UP",
+      "day_change": 0.004071802603589969,
+      "momentum5": 0.03868952853817276,
+      "trend": 0.009127229334444653,
+      "volatility": 0.22809336449077608
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "日本製鉄(株)【5401】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9CVmx5TUl6TGxMX0lYTnVadHZ1b256QUpCY1ctQWx5ZFFaOEtGZ0ZkV0FuYlFvM3hDVF91b0J6Tk9kOFZNSVpPSWxBTUNkOUN0S1Y3TmszM2dNMmVHU2xB?oc=5",
+          "published_at": "Tue, 20 Oct 2026 06:53:32 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "「自転車の交通ルール守ります」企業が宣言 日本製鉄広畑が第1号 ヘルメット着用、交通安全教育を促進 - 神戸新聞",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBIQm93YjI3Ti1JY2lwSzM4S0VwZmQwTTRmQU1oYVVlc2pnTzJ5TEpheUN1X3E2TEVwZnp5TmRnWF9vcjM1VGcxR01JX0dqeHNqTG5jLVhlOGZSS1ZxX0g0WklGTVBSQ1BaUnhFOFB3?oc=5",
+          "published_at": "Wed, 21 Oct 2026 08:00:00 GMT",
+          "source_url": "http://www.kobe-np.co.jp"
+        },
+        {
+          "title": "武藤祐介 むとうゆうすけ（日本製鉄山口）｜プロ注目ドラフト候補選手査定2026 最速148キロ右腕の評価・特徴・プロフィール - ベースボールチャンネル",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFA4NjNuOFVHTVN0VWVwZElWRmhadkpTLWFYQWM4bDh0NFVHaWNfek1VWGVvb1BtMC0yQnpTMzJVS0MyeXhQU2hDNDdvUUpiM0JOT1BHNA?oc=5",
+          "published_at": "Thu, 22 Oct 2026 01:15:26 GMT",
+          "source_url": "https://www.baseballchannel.jp"
+        },
+        {
+          "title": "10月28日開催「第6回 HR Leaders 未来会議 2026 人財戦略編」への協賛および講演のお知らせ｜プレスルーム - 日鉄ソリューションズ",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE03NnMybnZmbkNsMzNWNTdEU2I2NWVXeTc5MDIxREdVMnE0Ykh5X3FEQjlNbmZHMGJPa0trSV9TM05NZXRBSGZHZWNFNmNZX2RFelpfWnZHZDNIeFl2dWxLZTNxcUpzUFNJWGt0NFBYeHZ0c1E?oc=5",
+          "published_at": "Wed, 21 Oct 2026 04:13:21 GMT",
+          "source_url": "https://www.nssol.nipponsteel.com"
+        },
+        {
+          "title": "日本製鉄／「国内造船業再生に貢献」／造船ブロックの加工能力拡大検討／日鉄溶接工業と連携、溶接生産性向上も - 日刊鉄鋼新聞 Japan Metal Daily",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5wVjRSdmNNX2ZZWksyVmJDbmRfQVI3aU9CX0JXdGJlemhPNkFnYjVtTnQ1ZmZKVG9Ma19iT0VrQXlVbWFrUFd1dEl0a0wxS1owaC1rTTZLbnhoTVlfTkE?oc=5",
+          "published_at": "Wed, 21 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.japanmetaldaily.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.008792961577886942,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.05495600986179339,
+        "oil_pressure": 0.15511645237393012,
+        "japan_risk": 0.009125847789276942,
+        "usd_rate_pressure": -0.0588068171310705
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

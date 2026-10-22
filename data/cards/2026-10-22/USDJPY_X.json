@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-22T10:26:44.902120+09:00",
+  "prediction_date": "2026-10-22",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-22T10:26:44.902120+09:00",
+  "market_data_through": "2026-10-22",
+  "reference_price": 158.11900329589844,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.11447731765062484,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5626318207580961,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.011531170338737065,
+      "direction": "NEUTRAL",
+      "day_change": -0.0009414541798636877,
+      "momentum5": 0.001025611797675241,
+      "trend": 0.0009286542850761581,
+      "volatility": 0.043525897761543184
+    },
+    "news": {
+      "score": 0.625,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "米ドル/円【USDJPY】：外国為替相場FXレート・チャートをリアルタイム表示 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzbWxqc1ltSU1ndEE0VElnZldUTGdyRVJpOTdKeXBsc0RDSm40dm9kLTJqaDZlOVpoR2E5eEZIX1o0bFR1SFR2N2k4WjRiTnN5dHVBTHJn?oc=5",
+          "published_at": "Thu, 22 Oct 2026 00:08:17 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "今日のFX予想：ドル円158円挟みの値動き FOMC控え小動き続く？ 2026/10/22 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9pNHVsRFFvYkxZUkJRVXRabkhiam9OZHNfbHdWRGp6VlRkcHVINDYxWFh4cVp6WUczcHZqektuSDdnV0tMX1h1VDU3WUZGa0p1M25HNzhmUmFpOFlmYlFkN0pDWQ?oc=5",
+          "published_at": "Thu, 22 Oct 2026 00:03:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "企業の資金需要ＤＩ、10月はプラス3 段階的利上げでも上昇＝日銀調査 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQMl84YUpuc0s2SXhIa1pfQWhrSFpJRkdyTE9rVUJaaURIMzdxbWsxQndmczlvX1oya1J1bU42Y3Brelh4Rm5iLUZsQVk4ZVpwQ2JkaWFEMmVpNVJtWjVMVjVIVzh6M2NFclV5bHNUMnFValNYTElJQmtfcnFTa2lkQm8yMHprdG94MmpwMXcwanY?oc=5",
+          "published_at": "Thu, 22 Oct 2026 00:36:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日本の10年国債金利、上昇局面終了の可能性 FRB利上げの効果確認で日銀の追随大幅利上げリスク後退 野村證券・宍戸知暁 | NOMURA ウェルスタイル – 野村の投資＆マネーライフ - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBMWEgxVk5faC1EYklKM1VHZVhSeFRwTUJkQjAwTm9wRzhHbHYxa3Q5Tm5WdTlJVEhJYndIT2M1TldvM0NRSVRnTzhNUFhKNk8tRWp2YlNlT3FBTUZ2UVB3?oc=5",
+          "published_at": "Wed, 21 Oct 2026 06:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "今日の為替市場ポイント：29-30日の日銀金融政策決定会合に向けた思惑も相場を左右しそう - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE00Ylpwc2JkRHJGdGhaQUNsb1JmZ1hwVlE1YVBoMmFYRVRnQ3YyaXA5Zy1ISkhaUTIzZHVVZFRLM29YNXl3MXlDU1V3c05MQ2pGT21JUVhZZXd2NzZ6bkhrdg?oc=5",
+          "published_at": "Wed, 21 Oct 2026 23:18:26 GMT",
+          "source_url": "https://kabutan.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.0025741454685575035,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.05495600986179339,
+        "oil_pressure": 0.15511645237393012,
+        "japan_risk": 0.009125847789276942,
+        "usd_rate_pressure": -0.0588068171310705
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

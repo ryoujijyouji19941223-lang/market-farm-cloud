@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-22T10:26:44.902120+09:00",
+  "prediction_date": "2026-10-22",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-22T10:26:44.902120+09:00",
+  "market_data_through": "2026-10-22",
+  "reference_price": 191.76400756835938,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.18951456902411237,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.6018236158725658,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.08990687634692994,
+      "direction": "UP",
+      "day_change": 0.00040135630091175933,
+      "momentum5": 0.009795074396524717,
+      "trend": 0.006371250868581146,
+      "volatility": 0.060546938253279316
+    },
+    "news": {
+      "score": 0.75,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "企業の資金需要ＤＩ、10月はプラス3 段階的利上げでも上昇＝日銀調査 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQMl84YUpuc0s2SXhIa1pfQWhrSFpJRkdyTE9rVUJaaURIMzdxbWsxQndmczlvX1oya1J1bU42Y3Brelh4Rm5iLUZsQVk4ZVpwQ2JkaWFEMmVpNVJtWjVMVjVIVzh6M2NFclV5bHNUMnFValNYTElJQmtfcnFTa2lkQm8yMHprdG94MmpwMXcwanY?oc=5",
+          "published_at": "Thu, 22 Oct 2026 00:36:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "22日のスイスフラン・円、売り・買い要因＆支持抵抗ライン(フィスコ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQSVAtWFBHQ1JXYVNuaFZibGdFN20yNXQ4WTFvNnBwdW5sMGJhbTIyRG1zY0Fkc3c0NllGdV8zSGZUTmZtTVZvNjcyN2ZNV0lRbUF4ZThFVWVmQTBjd2dtd1NQY3FTN2pQVDRHT19hM3FsQWFFd3BwREg1eDVUc3p1UmdqSmR4VTA?oc=5",
+          "published_at": "Thu, 22 Oct 2026 01:20:12 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "今日の為替市場ポイント：29-30日の日銀金融政策決定会合に向けた思惑も相場を左右しそう - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE00Ylpwc2JkRHJGdGhaQUNsb1JmZ1hwVlE1YVBoMmFYRVRnQ3YyaXA5Zy1ISkhaUTIzZHVVZFRLM29YNXl3MXlDU1V3c05MQ2pGT21JUVhZZXd2NzZ6bkhrdg?oc=5",
+          "published_at": "Wed, 21 Oct 2026 23:18:26 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "日銀、利上げゴールはどこに？ 元理事とスピード解説 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE10STU1RVQtb0ZDRXplOFFoVXZ4RnlhNUUzZXZiTWlqTXhONlF6Slg5b1NFMlVOOE1CaENVLTZkTjNUdFk2bWdGQmV6eHhGOTBKTXhHclI3ZzlWdw?oc=5",
+          "published_at": "Wed, 21 Oct 2026 13:59:25 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "国スポ効果 個人消費が改善／日銀青森支店｜青森県,経済・産業｜青森ニュース｜Web東奥 - 東奥日報社",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1weUM0WEc0WE1BRzhKaDg5UHdKSHlQNEd2Vm9aRUQzNlhXTDBpV0tfWWcxMXpHUkVhTDBieUszQURscU5JemFiNnhDelQ2aE1URTh4MGpNXy0?oc=5",
+          "published_at": "Wed, 21 Oct 2026 23:59:52 GMT",
+          "source_url": "https://www.toonippo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.005852620721333416,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.05495600986179339,
+        "oil_pressure": 0.15511645237393012,
+        "japan_risk": 0.009125847789276942,
+        "usd_rate_pressure": -0.0588068171310705
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

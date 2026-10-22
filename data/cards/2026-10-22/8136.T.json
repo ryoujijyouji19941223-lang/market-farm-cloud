@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-22T10:26:44.902120+09:00",
+  "prediction_date": "2026-10-22",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-22T10:26:44.902120+09:00",
+  "market_data_through": "2026-10-22",
+  "reference_price": 1343.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.4655717757746003,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.7358011578586587,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.682724752261643,
+      "direction": "UP",
+      "day_change": -0.0029695619896065173,
+      "momentum5": 0.05623279591034214,
+      "trend": 0.07615859881951015,
+      "volatility": 0.22655723767753305
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "「キョロちゃん×サンリオ」夢のコラボが実現！ 限定チョコボールにファン熱望「めちゃくちゃ嬉しい」（ふたまん＋） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAwcHpYWGZ1a1RIRmhzYVZNd0luajQxUHhFM0hONmhiWllVT2dIbEZmbndORGVMYWo0R3ZFQjk3amU4Ri1vX1RoVGNjcmg1WDdLOXRnOUt3bEpsTkNLcWNsVVdQb2J3ZmhDRG1RYjgzakZoV2g0VXRiRkV1MU00cEE?oc=5",
+          "published_at": "Wed, 21 Oct 2026 21:30:35 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "【sanrio house(サンリオハウス)】都内2店舗目となる新店が渋谷PARCOにオープン！＜11月13日＞ - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFByQWxtTG9hNDRfVXEyUDNpZXA0TUtnZ2R1VkhxZm1KTEg4dWp2Vll5R0lHM2lCMjZ1SGotMTI1UGNrS1ctaDFCSUlLZlZvSUpvcm9PUHV1TzFiR0FUZHVTZmE3N0MxT2F0eXc?oc=5",
+          "published_at": "Tue, 20 Oct 2026 03:00:01 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "【サーティワン】ポケモンやサンリオの限定商品登場！ Xmas限定アイスクリームケーキが今年も充実だよ - ぴあエンタメ情報",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBPRXZ0Y056Ull3UjVKUFZMenRoRWJ3M2xyOUV4WHYxanRxMlZEeEVtdC1Md3JFUldwTmVxUi1oOHk1U2FvRk11cEVJN1lEOUFuUDZUWW1sc19XVW1jODQ4?oc=5",
+          "published_at": "Wed, 21 Oct 2026 08:00:00 GMT",
+          "source_url": "https://lp.p.pia.jp"
+        },
+        {
+          "title": "サンリオハウスが渋谷パルコにオープン、”女子高生風”ハローキティのタンブラーやふわふわファーコート - ファッションプレス",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE91cnpYVlBsbDNzemQ1UlpsZG9tVHI2cHNMWG40cncwWEJ0cTR3dmp2Y21ZbEVmbGUtOXhsRDdKeFUwbzVvS2F6YWQ0VlpRaWpuMFYw?oc=5",
+          "published_at": "Tue, 20 Oct 2026 04:25:00 GMT",
+          "source_url": "https://www.fashion-press.net"
+        },
+        {
+          "title": "「2026年サンリオキャラクター大賞」の上位20キャラクターが輝くツインチャームになってキャンディトイに登場!! - 電撃ホビーウェブ",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9uZ3lrWmdVLWIxSmo0ZjdBUFpvV01LWkFXWE5jSlJ2ZndRWUp5R1hVTlpXY0xRdWFZel94LVB2UEpCV1VOSU9hTHhNTlNDRHky?oc=5",
+          "published_at": "Sat, 03 Oct 2026 07:00:00 GMT",
+          "source_url": "https://hobby.dengeki.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.008792961577886942,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.05495600986179339,
+        "oil_pressure": 0.15511645237393012,
+        "japan_risk": 0.009125847789276942,
+        "usd_rate_pressure": -0.0588068171310705
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

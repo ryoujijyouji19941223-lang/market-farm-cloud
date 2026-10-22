@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-22T10:26:44.902120+09:00",
+  "prediction_date": "2026-10-22",
+  "symbol": "8316.T",
+  "name": "三井住友FG",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-22T10:26:44.902120+09:00",
+  "market_data_through": "2026-10-22",
+  "reference_price": 3216.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.14674983989605322,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.42419451235661026,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5046610569411963,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5454545454545454,
+    "heldout_signals": 66
+  },
+  "evidence": {
+    "price": {
+      "score": -0.21386896420495613,
+      "direction": "DOWN",
+      "day_change": -0.001552312946289991,
+      "momentum5": -0.0018621973929237035,
+      "trend": -0.026221684917531185,
+      "volatility": 0.3533511993291165
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "- SMBCグループ、新テレビCM-日々の生活を営む人々のすぐそばでTHE HIGH-LOWSの名曲「日曜日よりの使者」が響き渡る。新テレビCM『挑戦の伴奏者』篇2026年10月24日（土）から放映 - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1rTTJIdkptaHM0djZLaFJMR2VYQzh2NWkyMmowcWRsRy15c184SXhnTlRkVm9HMC1tc2pzWW5MWm9RTUxyQkZWamlHSGRWbm5mdEVXRHd6X3YzOWV6NjF6clBqUjB3Q1dSZUE?oc=5",
+          "published_at": "Mon, 19 Oct 2026 15:00:02 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "(株)三井住友フィナンシャルグループ【8316】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1jLXRKN2NNazhTOUtEbDNsT2VLSU1aX0pFcFNzOXdQdndvb2tnR2hLTXAxT0N4dHJ4c0dPdUxmak9pRTNKQm1TQUpLcnQ3UXVwNFhyY3pzQXRxeVFjZWxr?oc=5",
+          "published_at": "Mon, 19 Oct 2026 06:52:59 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "○三井住友フィナンシャルグループ人事 - 時事通信ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBqT0tmRmhPTzdMU3dLMEJjTkNyUk5EcW9CaWhIeW93LTd2SHhMMV9pdzF3Tk1iak1UcXFoV2lKQkdHVEZnakJycFg1YzR4VWVxSE94dQ?oc=5",
+          "published_at": "Mon, 19 Oct 2026 06:39:00 GMT",
+          "source_url": "https://sp.m.jiji.com"
+        },
+        {
+          "title": "SMBCグループが描く日常の挑戦者たちと寄り添う新テレビCM「挑戦の伴奏者」 - ニュースメディアVOIX",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9VQWlPZExtMzk0ZmZZQkE5bUNjOEtCTWszMFFvd3pDWS1qZU9WVnR0QXVOalpjTVQxNFFuWENOVkVjRVRyRUt6YUREd1c?oc=5",
+          "published_at": "Tue, 20 Oct 2026 05:32:43 GMT",
+          "source_url": "https://voix.jp"
+        },
+        {
+          "title": "財務・経理の知識をAIに移植、SMBCグループが目指すビジネスモデル変革 - 日経クロステック",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE96dVFETVRYakFBeEFXMWtkVkcwTlF0blFwMktxRVJ6a1ZwdTV2WWV4dHlYdGdTY0s0WWQ2bEZnS3VTTFM0UHRDTEJObHMyLUNma3Y2WXBJdGJLLVFrc2lBM0RJXzZzekJnTWhNZQ?oc=5",
+          "published_at": "Mon, 05 Oct 2026 07:00:00 GMT",
+          "source_url": "https://xtech.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.008792961577886942,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.05495600986179339,
+        "oil_pressure": 0.15511645237393012,
+        "japan_risk": 0.009125847789276942,
+        "usd_rate_pressure": -0.0588068171310705
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

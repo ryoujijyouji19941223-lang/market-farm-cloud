@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-22T10:26:44.902120+09:00",
+  "prediction_date": "2026-10-22",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-22T10:26:44.902120+09:00",
+  "market_data_through": "2026-10-21",
+  "reference_price": 4131.7998046875,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.08054436381720892,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5258026581373385,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.024089156883981767,
+      "direction": "NEUTRAL",
+      "day_change": -0.0026071290286650006,
+      "momentum5": 0.005818034253978199,
+      "trend": -0.005920744383533627,
+      "volatility": 0.17579690066967588
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日本の10年国債金利、上昇局面終了の可能性 FRB利上げの効果確認で日銀の追随大幅利上げリスク後退 野村證券・宍戸知暁 | NOMURA ウェルスタイル – 野村の投資＆マネーライフ - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBMWEgxVk5faC1EYklKM1VHZVhSeFRwTUJkQjAwTm9wRzhHbHYxa3Q5Tm5WdTlJVEhJYndIT2M1TldvM0NRSVRnTzhNUFhKNk8tRWp2YlNlT3FBTUZ2UVB3?oc=5",
+          "published_at": "Wed, 21 Oct 2026 06:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "金価格は中東危機でも4100ドル台へ急落！米金利上昇が招くさらなる「下落リスク」 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1FaVNPMFhtSExBRWlRTTlCdG1fZjNfZThzX0FYYy03MVhRUEJWSFBDM2Y0Zmp1YklxSmRtSzVIX1RWdWJwMndrTkRmVGnSAU9BVV95cUxQd0pnTVY0RmpkRy1OSXNkX0tiR1hpZXJzb2JsSEhNdG5wV2VKVWJmZE1PVkFaRTVqYmZfZVVRRXZ0LWRrZVlBa014a29qeUtR?oc=5",
+          "published_at": "Wed, 21 Oct 2026 19:25:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "日銀、27年度物価見通し引き上げの可能性 政策金利は据え置く公算＝関係筋 | ロイター - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE90SEd0QlowRmFOWkVRNXJ2NGNRQWd4U0lLTzZUVDIxbWVMTG9iRXI4b3ZJSkc1X0pEM2xEdm1PN3lES3psbXpGMl85Z2FTV0dLMFNhN0VIbW9MT1RsbHYtanV1N2pwX3hZLVNuMFVHLVVSNDUyQ0pmVnJuclBvZw?oc=5",
+          "published_at": "Tue, 20 Oct 2026 05:54:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "トランプ氏、中間選前のインフレ対策迷走 住宅金利の上昇招く悪循環 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9RWmhkOE1DcFBvLVA5MEsxRzVWWGt5cnhqZXN6QWMtNmIyRFhFazZHNmZDTXJJRzlhNHRSeVVtS2ZGajAyRHEzQVNmUzBRcllxNnZQTzJxbnlpTnpPbmYxZGtUODRZUDVOV0F5WQ?oc=5",
+          "published_at": "Wed, 21 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "【今日のドル円】昨日の振り返りと今日のドル円相場見通し「中東情勢と米金利に翻弄され小幅続落――157円台後半で底堅さ維持、米指標とFOMC控え見極めへ」 2026年10月22日 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9UY3daZU9udk81UzFjNHI2OVpNSEZRVERxeW1SS0dsOVZLU0gzbk5jbEZlcmZPYjNFT0d4bjQ0QV9qb3F3dGZ6X0gyRnZ6RFVjb2hGY1V6eDVlY0s2bjRkQ3pxWQ?oc=5",
+          "published_at": "Wed, 21 Oct 2026 22:05:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.0027582475740088076,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.05495600986179339,
+        "oil_pressure": 0.15511645237393012,
+        "japan_risk": 0.009125847789276942,
+        "usd_rate_pressure": -0.0588068171310705
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
