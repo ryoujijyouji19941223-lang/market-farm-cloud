@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-23T10:26:02.835777+09:00",
+  "prediction_date": "2026-10-23",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-23T10:26:02.835777+09:00",
+  "market_data_through": "2026-10-23",
+  "reference_price": 190.6929931640625,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.2161489632000276,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.6166912560900519,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.04376050069527125,
+      "direction": "UP",
+      "day_change": -0.005989314663675804,
+      "momentum5": -0.0017651070494532073,
+      "trend": 0.0063561118184523036,
+      "volatility": 0.06425388215226263
+    },
+    "news": {
+      "score": 1.0,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日本の10年国債金利、上昇局面終了の可能性 FRB利上げの効果確認で日銀の追随大幅利上げリスク後退 野村證券・宍戸知暁 | NOMURA ウェルスタイル – 野村の投資＆マネーライフ - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBMWEgxVk5faC1EYklKM1VHZVhSeFRwTUJkQjAwTm9wRzhHbHYxa3Q5Tm5WdTlJVEhJYndIT2M1TldvM0NRSVRnTzhNUFhKNk8tRWp2YlNlT3FBTUZ2UVB3?oc=5",
+          "published_at": "Thu, 22 Oct 2026 23:07:10 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "日銀10月会合、連続利上げ見送りへ 2%物価目標は事実上到達 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oN2VFMlV0eGM0QUhNaDV0LUd3cEZMTVV5akdVVDBST240eU1jaU5UeTFvNS1LMHZxUktZdU93QXF6LTMwejBKTnRTcEMyNlJxa0dnNW80bDNtUkoya3hjMnZXZmNtdGN1Z015ag?oc=5",
+          "published_at": "Thu, 22 Oct 2026 06:47:41 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "日銀物価目標達成で共同声明変更の有無、「仮定の質問に答えない」＝城内経財相 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOYU9CTGRZbDA0bTFVc01lUm9NLTVyY1FjTThIVlpRSnFRTV9JM0VKVy05a0xTbHJFRkZSNDRNYkh0TkVSYlUtWGlUazdtdmRoay1MU1ljeTlLWDZNdVc3LVpRUUFNV3RReHVZUDVQLXRwMXpsNE9VSjlSaWJNT3NwQWw2ajVaSC1UTWhTYUdJVEE?oc=5",
+          "published_at": "Fri, 23 Oct 2026 00:30:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "不動産株に買い、長期金利低下と日銀利上げ見送り観測が追い風(ウエルスアドバイザー) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZm1VczU1RmhKWHBkaDdGWFZnR1ozd0U4aUJWcTVUWDhzZC10eERZclIyQ1F5U1JjNDdSY084UEhVSm9zVFhOVk0xZ1ZNVXVZdVJ5RmdPSVBTNVY3bGsxNG5QMTYxbURacVdTWmpibDRDS3FocXltRGxCdWNNZTRTNWVGVEZjckE?oc=5",
+          "published_at": "Fri, 23 Oct 2026 00:22:51 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日銀政策金利は来春1.75%へ、次の利上げは12月の可能性－前田元理事 | TBS CROSS DIG with Bloomberg - TBS NEWS DIG",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5zWVEwRE5wbVVBazdlNFhkYVJnVnJacFNXSlZhYTcxeU43Qmw0c0h5TE5Ec3JZYV81Y3R2dXNCYmswWFlNcWhiOFB4LVlWaG0yU3Mzdko0NHdSZmhiNmxlZUhILVRYWDQ?oc=5",
+          "published_at": "Wed, 21 Oct 2026 03:40:00 GMT",
+          "source_url": "https://newsdig.tbs.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.10927881818162094,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 0.6453684458996898,
+        "oil_pressure": 0.10870660543422783,
+        "japan_risk": 0.15608432640567638,
+        "usd_rate_pressure": -0.12039733675341135
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-23T10:26:02.835777+09:00",
+  "prediction_date": "2026-10-23",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-23T10:26:02.835777+09:00",
+  "market_data_through": "2026-10-23",
+  "reference_price": 8625.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.3491801888077497,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.6681978616873148,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.4907225678031722,
+      "direction": "UP",
+      "day_change": -0.008506724910909313,
+      "momentum5": 0.017219011675905227,
+      "trend": 0.058516950707757864,
+      "volatility": 0.22599643686174065
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "子供から大人まで、世代を超えて、体感スポーツ。Nintendo Switch 2 ソフト『Nintendo Switch Sports Resort』は本日発売。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQ1Q4cHYxRUU1ZG03WUhMamRDa2JFX2JYRUFaYk84clRwZFZDeWZ4Q2tkZ3BNcVROYkJmT3pMdUUyRmlTTUt5Q0tfRXlEb0szT1Q0ZUdMOFVIVHlYUjVmNTVyYnJUZ0FjZ3Y0T3M1YlFCdFhwRzItQ0tPNTU4SXdJQlMwUzdHQQ?oc=5",
+          "published_at": "Thu, 22 Oct 2026 01:34:11 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "Nintendo Switch 2『ゼルダの伝説 時のオカリナ』は11月5日発売。「ゼルダの伝説40周年」特別デザインの「Nintendo Switch 2」や周辺機器も10月29日発売。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNSnRDVjRPVHljRnJtTlB4eHVyeklPYnFZNmNiSkRhM2NyamRFQ1ZuczRvZHowbFdWVFFMaGsxTUtpMW14R0xJNUFhWGNlYy1lTFo1UDdTRmRaOHFYU3ByYTFVYUZ4ZEd0WV9BMjNqalI3ZjZGUk1TTDRaMGR4c3hobmtSYjQtUQ?oc=5",
+          "published_at": "Wed, 09 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "3本のソフトからお好きな1本を選択してダウンロードできるお得な「Nintendo Switch 2（日本語・国内専用） 選べるソフトセット」が登場。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSnhiVFcyUXVfNDdlVXZ4RTdna2hqbEttc2tpaEdEUi1vNElGSm41UHoxa1dlYzNPc3RocDh3UWJ0eEdGUTVDNEZEMnNmakZ1UjgzZy1BeWtBWUoxeDZJcTVqcHVwT24tNlVQbjF2RmFQTnFDSTNlQ1hLcW1xVVJLNVZCcGZvQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "ゼルダの伝説40周年 Direct 2026.9.8 | 任天堂 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE85Mk05d3M2VDBwMXZuZTlNLVR6UnliWUNEZ1pUTGh3SWVJLTk1MlFfSy1TUG04N2Y0SWNUSFg5bEROZlhoYlp0emNzUWVXcnNhRXVjanUwM0N4dzlVQUZjS0ZseE1ydHhoVnZMN3NMNWs?oc=5",
+          "published_at": "Tue, 08 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "メトロイド ラヴェナス - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBpMjItcDBaMHNPd0NXYTNfOFc4aGQ5LWdBLVI5TXBQcE5zeVRsNFRfeHdEeDBPd0w2UFpnMHBfemZmREFOcVNMd1ZMQ0tTR0NDbkYzNjJRbjRoc2hkRldrdkRhNkd2U3hLWXc?oc=5",
+          "published_at": "Thu, 10 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.10325895134395037,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6453684458996898,
+        "oil_pressure": 0.10870660543422783,
+        "japan_risk": 0.15608432640567638,
+        "usd_rate_pressure": -0.12039733675341135
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

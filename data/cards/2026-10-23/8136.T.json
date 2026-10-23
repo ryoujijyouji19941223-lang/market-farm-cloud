@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-23T10:26:02.835777+09:00",
+  "prediction_date": "2026-10-23",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-23T10:26:02.835777+09:00",
+  "market_data_through": "2026-10-23",
+  "reference_price": 1313.5,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.37184505516565164,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.6791586990227171,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.5240532536236162,
+      "direction": "UP",
+      "day_change": -0.009800226159065173,
+      "momentum5": 0.004588910133843216,
+      "trend": 0.07044446420473638,
+      "volatility": 0.24264805467226427
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "雲の上の浮世絵 ～サンリオキャラクターズとめぐる北斎展～ in TOKYO SKYTREE® - tokyo-skytree.jp",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBHM1NzMHRkaEU5QzlBY0xMQ2xoU1Q2TkNnLUxXbHZvenBtQm9EaTRuMXVzMmxENDdKMlFPd3pRYmRqam05YTA4Q1dWUkhweTgtNW81ek1GUm11cTc3M2h2MjJmb1R3UjZBS0E?oc=5",
+          "published_at": "Thu, 22 Oct 2026 05:04:34 GMT",
+          "source_url": "https://www.tokyo-skytree.jp"
+        },
+        {
+          "title": "なにわ男子「アイドル界のサンリオ」仲の良さでサンリオゲームブランド第１弾門出を祝福…西畑「世界で一番平和な空間」 - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBReG5FSW0zLXRNeHd4X1JSMXFSOG9tSUs4YW1CUnBmLTE0MnZDTDFoekY4LTRteFBfaEc1THBELS1RZ3p2cnZyNjlJcEdqVUROOV9qZXpuOGUwd29MTDVIZkxHOVNBc09YbVFnNzdPb19DbElSVE1kM0hURTB2TVk?oc=5",
+          "published_at": "Tue, 20 Oct 2026 02:57:19 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "「サンリオ」自転車キーホルダー＆おでかけタグが登場！ キティやクロミたちのアイテムが100円ショップで発売 - アニメ！アニメ！",
+          "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9KY1JuLVJkZVJWN29BUjkyRHg1V28tWFdlcnhHa0x1VUtWRVJ3QmxWUkFxOUZoREtQeVYwLWhYMEpHVlBtYllxNEN0QTgwMEJocWpDLTNCeC1JMEw1MUJTcUlB?oc=5",
+          "published_at": "Thu, 22 Oct 2026 10:00:03 GMT",
+          "source_url": "https://animeanime.jp"
+        },
+        {
+          "title": "サンリオキャラクターズと北斎の世界へ！ 東京スカイツリーで浮世絵展＆限定グッズも - 推し楽",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1yYWh6b0I1UWhpQkxSZXRqNEpqVmx0QzlPVUx2cnZhc1JwWTlabi1OaEV0NllhVkZ6YW5NbFZEUjZmMWZsZERlSXFFeVdtSVQwR3p2X2xOYlNCWFA5NjhscUF2ZnF0ZktKNFFpQ1JPdldWdEU?oc=5",
+          "published_at": "Thu, 22 Oct 2026 08:26:21 GMT",
+          "source_url": "https://fan.books.rakuten.co.jp"
+        },
+        {
+          "title": "サンリオ、ゲーム事業本格化で新CM なにわ男子起用のキーワードは「なかよし」 - AdverTimes.（アドタイ） by 宣伝会議",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1CTHRHVG5QYTZmVDRtdlRyMjJBdllsYmJPdTFsNEtrR3VjdXJtYWVlbWNpM3RsU0xCVDY1Nno1NDZvTUItaTEtbGsxY2I0ZG5EdkFuM3h4NUJyb2Z6WVRz?oc=5",
+          "published_at": "Thu, 22 Oct 2026 04:53:10 GMT",
+          "source_url": "https://www.advertimes.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.10325895134395037,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6453684458996898,
+        "oil_pressure": 0.10870660543422783,
+        "japan_risk": 0.15608432640567638,
+        "usd_rate_pressure": -0.12039733675341135
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

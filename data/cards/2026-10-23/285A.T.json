@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-23T10:26:02.835777+09:00",
+  "prediction_date": "2026-10-23",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-23T10:26:02.835777+09:00",
+  "market_data_through": "2026-10-23",
+  "reference_price": 12230.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6898720557183763,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.23988896782740826,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.2601219096453653,
+    "direction": "DOWN",
+    "price_coef": 0.5,
+    "macro_coef": 1.0,
+    "edge": 0.12,
+    "heldout_accuracy": 0.5135135135135135,
+    "heldout_signals": 37
+  },
+  "evidence": {
+    "price": {
+      "score": -0.9560257334280432,
+      "direction": "DOWN",
+      "day_change": -0.028979753870583602,
+      "momentum5": -0.08560747663551405,
+      "trend": -0.1943878488365215,
+      "volatility": 0.7716125372424112
+    },
+    "news": {
+      "score": 0.14285714285714285,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "キオクシア---大幅反発、米AI関連企業の決算期待で国内AI・半導体関連買われる(フィスコ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPaHpmWnhqaXJTUHprb3V4NC0xRnRkZTNsdmRJSFNWZ2lDNlFQU0hGRGIzX3J1RVdRVXN2c1lFTGdNbWZTVS02VnVKR2xCUlYzeFJvMXBHQTRpTEJBNDZqWkNTLVJPd0VSV1NybDJaUjlWdU9XMW0zTkhnT2xydlRQQmdZMXpGajQ?oc=5",
+          "published_at": "Wed, 21 Oct 2026 01:38:07 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "キオクシアは一進一退、メタがＡＩ投資へ種類株発行方針も半導体・ＤＣ関連株の反応限られる - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBrb1ZxVTUxUG9WNkduWVZ0UTVtRFRPc2RpRlBxUDluLVdwZlVzcGlpLVJ0dTVLa1luc01KMjg4VVRBQkVJT0NBNXplbm9yc1J6VjdOUlUxeXJfMWppUU84UQ?oc=5",
+          "published_at": "Thu, 22 Oct 2026 00:39:00 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "キオクシアＨＤ---7月安値とのダブルボトム形成を見極め 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBET3M4TXFVRGZIUVpKVUl4RGsxVkVYclhVc0hpTW9tNS15S21aMzlfSXowMWljNlBKRHFwTGIwVzdqZTBrSmxhTkEwVWROS1RZVWZvZ0liWndnQ3IzSUt6RW9HTC0yMi1PZWJ0TmhzTm8?oc=5",
+          "published_at": "Thu, 22 Oct 2026 23:23:00 GMT",
+          "source_url": "https://jp.investing.com"
+        },
+        {
+          "title": "キオクシアHD株価反落 米サンディスク反発でも戻り待ちの売り - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9GU3M1Zk12VWZXQVZLaDh3UjhUWVk2Yjh3bnU4c0ZnZ2swQUpjU29JTFI5Y1h2WmpUU01VLU5oRzlOOHEyRXJGck5mT2pvenM4ZHdJWUtPV1pfbUdTNFByVjBCa0g1SXVzMThpcA?oc=5",
+          "published_at": "Tue, 20 Oct 2026 01:18:37 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "キオクシア株の戻り阻む信用買い残9200億円、全銘柄最大－売買減で解消に時間 - TBS NEWS DIG",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB3M0M2U0VHTWxkTGlJTnJ6NW5vamFpZWlDVEMzdUJWVkJmVDhRZWRmUFVjdDUtaU96QXBQYmFRckVDTmI0SWhMblh0cnh0cE1BR194MW1jUmNSX0xDTDBJVnc3YVc1TVE?oc=5",
+          "published_at": "Sun, 18 Oct 2026 21:00:00 GMT",
+          "source_url": "https://newsdig.tbs.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.10325895134395037,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6453684458996898,
+        "oil_pressure": 0.10870660543422783,
+        "japan_risk": 0.15608432640567638,
+        "usd_rate_pressure": -0.12039733675341135
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

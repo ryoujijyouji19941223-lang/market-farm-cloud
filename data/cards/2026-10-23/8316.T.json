@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-23T10:26:02.835777+09:00",
+  "prediction_date": "2026-10-23",
+  "symbol": "8316.T",
+  "name": "三井住友FG",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-23T10:26:02.835777+09:00",
+  "market_data_through": "2026-10-23",
+  "reference_price": 3022.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.3960110543003226,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.303640162812392,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.4461035637707458,
+    "direction": "DOWN",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5454545454545454,
+    "heldout_signals": 66
+  },
+  "evidence": {
+    "price": {
+      "score": -0.5595914876451912,
+      "direction": "DOWN",
+      "day_change": -0.04698833175654371,
+      "momentum5": -0.07753357753357748,
+      "trend": -0.040262990339788196,
+      "volatility": 0.3851172784102229
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "三井住友FGなど、SMBCグループ共通のウェルスマネジメントビジネスブランド「SMBC Wealth」を本格展開 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB1QWh6VzRfTEM5aTc3RUZRbzhBXzdpVjlaUThuaE9DbWg1ZWNMaEU3YUp5WVY0Q21vNE5DdW5QX1FGaTU4b3Q2aWg1S05oOXdLLU5mUVUyNWROUE1HWWp3Qmc5YkJaTFVheW5DNw?oc=5",
+          "published_at": "Thu, 22 Oct 2026 02:03:22 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "(株)三井住友フィナンシャルグループ【8316】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1jLXRKN2NNazhTOUtEbDNsT2VLSU1aX0pFcFNzOXdQdndvb2tnR2hLTXAxT0N4dHJ4c0dPdUxmak9pRTNKQm1TQUpLcnQ3UXVwNFhyY3pzQXRxeVFjZWxr?oc=5",
+          "published_at": "Thu, 22 Oct 2026 06:53:10 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "○三井住友フィナンシャルグループ人事 - 時事通信ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBqT0tmRmhPTzdMU3dLMEJjTkNyUk5EcW9CaWhIeW93LTd2SHhMMV9pdzF3Tk1iak1UcXFoV2lKQkdHVEZnakJycFg1YzR4VWVxSE94dQ?oc=5",
+          "published_at": "Mon, 19 Oct 2026 06:39:00 GMT",
+          "source_url": "https://sp.m.jiji.com"
+        },
+        {
+          "title": "SMBCグループの個人外貨預金残高、合計3兆円に到達 - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1ZV0ZEWERuUzdXcy1NNUhSamg1cElZSmE4UjFrR0kzbXdfeW90R0VHN3pjMDFDaWJ0Mm9CWEc5SFExanBvRklscG9QM2JPUlY4NzJrTFdaYk5RM0tGYmRjcjM0eXItWkZGQnc?oc=5",
+          "published_at": "Thu, 22 Oct 2026 09:29:25 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "SMBCグループ、富士通、ソフトバンク、健康・医療分野での業務提携に合意し、持続可能な医療の実現に向けて国産ヘルスケア基盤を構築〜国民の健康寿命延伸と医療機関の経営効率化、国の医療費抑制に寄与〜 | 企業・IR - ソフトバンク",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9Xd1lzblUxbmh1OFNEd3Q2S2R0QS1oR0E5MHplb3FVeng2QVk3al80b25FTjF6cVQ1WmQ3ZDctbE5udFdPZHhTLXFIeDdBNi1NSFlLcktSa2hNNDhHZ0IwVWx4VjZnV0NwdUFxNkw2QQ?oc=5",
+          "published_at": "Tue, 19 May 2026 07:00:00 GMT",
+          "source_url": "https://www.softbank.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.10325895134395037,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6453684458996898,
+        "oil_pressure": 0.10870660543422783,
+        "japan_risk": 0.15608432640567638,
+        "usd_rate_pressure": -0.12039733675341135
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

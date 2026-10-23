@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-23T10:26:02.835777+09:00",
+  "prediction_date": "2026-10-23",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-23T10:26:02.835777+09:00",
+  "market_data_through": "2026-10-22",
+  "reference_price": 4027.699951171875,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.30979884966623394,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.5173070528345668,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.2046462532609141,
+      "direction": "DOWN",
+      "day_change": -0.029469891283885552,
+      "momentum5": -0.03414789648920158,
+      "trend": -0.008873192813438457,
+      "volatility": 0.20160728862737373
+    },
+    "news": {
+      "score": 0.875,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日本の10年国債金利、上昇局面終了の可能性 FRB利上げの効果確認で日銀の追随大幅利上げリスク後退 野村證券・宍戸知暁 | NOMURA ウェルスタイル – 野村の投資＆マネーライフ - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBMWEgxVk5faC1EYklKM1VHZVhSeFRwTUJkQjAwTm9wRzhHbHYxa3Q5Tm5WdTlJVEhJYndIT2M1TldvM0NRSVRnTzhNUFhKNk8tRWp2YlNlT3FBTUZ2UVB3?oc=5",
+          "published_at": "Thu, 22 Oct 2026 23:07:10 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "米長期金利が急低下、5%割れ AI株安で「安全資産」に逃避 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBfejdUZ04wdFFmSGlqZzA0RGFWN2c5T3FMR2NnTHNlck1PREVlZV9XSHFkZV9MMXRPaDJuNkVmZkJFSkV1LVlJT3U4cTJwOHVIbUlGSUJJVl9Semp1Y1NLYU5HQWlkc2pwWEp0bA?oc=5",
+          "published_at": "Thu, 22 Oct 2026 21:00:17 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "米長期金利が急低下、AI懸念で株安！ - マネースクエア",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE12TFlNUHpHM2tnbnFnbk5KRE5RR1hRLVdzZlg2OWQ0Nl9EZHB4emNWOFdBamRiTEZkaGxnSnhYT0ZVeEhuV05vTDJpR1BHc1lkU1lPWkkxeDNydw?oc=5",
+          "published_at": "Thu, 22 Oct 2026 23:14:00 GMT",
+          "source_url": "https://www.m2j.co.jp"
+        },
+        {
+          "title": "不動産株に買い、長期金利低下と日銀利上げ見送り観測が追い風(ウエルスアドバイザー) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZm1VczU1RmhKWHBkaDdGWFZnR1ozd0U4aUJWcTVUWDhzZC10eERZclIyQ1F5U1JjNDdSY084UEhVSm9zVFhOVk0xZ1ZNVXVZdVJ5RmdPSVBTNVY3bGsxNG5QMTYxbURacVdTWmpibDRDS3FocXltRGxCdWNNZTRTNWVGVEZjckE?oc=5",
+          "published_at": "Fri, 23 Oct 2026 00:22:51 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "高市政権1年で円安・金利上昇が止まらない、利上げしても為替介入しても円高に転じない根本原因は「政策発信」と「貿易赤字」 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9GX1Z3M25yaFhnYlU0UFBwcU8wSEllbFpjY2F2UTJSWGNqZTA3UjRqNHN0aHRqTk1sOW1BbDZscTQzSWlHWXFYM29TVHTSAU9BVV95cUxNbEtveWVaTmx2SGh5YWZPZDJ4OVZGR1dZVGpnWW8zWW9ZUUZ4XzBMa1NaT0N1SHRLekwwZGJNREUxd05KRzJ2WFA4TWl6NldB?oc=5",
+          "published_at": "Thu, 22 Oct 2026 19:30:00 GMT",
+          "source_url": "https://diamond.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.14592931632541556,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 0.6453684458996898,
+        "oil_pressure": 0.10870660543422783,
+        "japan_risk": 0.15608432640567638,
+        "usd_rate_pressure": -0.12039733675341135
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

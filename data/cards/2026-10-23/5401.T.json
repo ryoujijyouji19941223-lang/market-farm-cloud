@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-23T10:26:02.835777+09:00",
+  "prediction_date": "2026-10-23",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-23T10:26:02.835777+09:00",
+  "market_data_through": "2026-10-23",
+  "reference_price": 655.7999877929688,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.1442025171796355,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.5619536459188177,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.4434505590463312,
+    "direction": "DOWN",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5,
+    "heldout_signals": 70
+  },
+  "evidence": {
+    "price": {
+      "score": 0.18928481540888667,
+      "direction": "UP",
+      "day_change": -0.0179694522601882,
+      "momentum5": 0.019114200144473514,
+      "trend": 0.014392312924030426,
+      "volatility": 0.22697083690279507
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "日本製鉄傘下のUSスチール 4700億円余の投資計画を発表 - NHKニュース",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBNX196VjByUFFoMjYxTEw5UmlFbVZHMnV4bHppVi0xOW0xa2dmc282LVlkeE0wMjJNdjRqY1dtazVrODd5aU5PbnN0RGw1M2VUMGpmOUVkNXFwWTdrNlZn?oc=5",
+          "published_at": "Fri, 23 Oct 2026 00:15:04 GMT",
+          "source_url": "https://news.web.nhk"
+        },
+        {
+          "title": "テクニカルで選ぶ注目銘柄：日本製鉄＝５日線と２５日線のミニ・ゴールデンクロスが形成寸前(ウエルスアドバイザー) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWU5DRTVLMmx5UW1wc2ZxQ1pRNmRqME9oR1k1ME9fNlJ1bEplSGxuLVZjZFJHcU05UmgzOWlkUkFXdTBvV3RQbTVNU1U4S09saTc0MDBxQzFVQ3ZuTWRfN0xnMDYwaENJamp2SDVFVjhKY1Z5TFpoTzZidWx3RU1OUEpUWXRxRlU?oc=5",
+          "published_at": "Fri, 23 Oct 2026 00:42:10 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "【速報】日本製鉄はＵＳスチールのペンシルベニア州の製鉄所に約４７００億円の投資を決めた - 時事ドットコム",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1YNGlxRm1VLTJHbjBXS1dzWnRNN3JZZnVYdjRvSDJhQm5JVWFDemI0MkZtVVh2MVZrcWlUams2cmdkczlqRXJpc3hkRGNDRkhfUzF0bThjMDlKTU05OGx3ZzQ3TnhmUQ?oc=5",
+          "published_at": "Thu, 22 Oct 2026 19:23:00 GMT",
+          "source_url": "https://www.jiji.com"
+        },
+        {
+          "title": "日本製鉄、厚鋼板を値上げ 今年度3回目 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE90b2d2U0RpZDk3ZnZrZG8yVlIwbWh4WDhVVXZKSFZxZVBfZWJZcHhiU0RLNWtwOHVfTkhBc2g3NXJLeVJwaXZZdzZqYk9XVlhDLWhQeHZlZGo0VkRJSHV0emVpeE1jUWhSRDBIYw?oc=5",
+          "published_at": "Thu, 22 Oct 2026 17:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "日本製鉄 USスチールがモンバレー製鉄所における30億ドルの新熱延設備投資を決定 - 河北新報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5CUW9NN3VydVBOanI1bjk4eTNmaUMzQXdDR3R2T0YzV0pCRDlTQTNEYmxuSGhPMzIzM1hkV1dpaDB2RHFrV19CNzVDS1RzS0RWMVVfeg?oc=5",
+          "published_at": "Fri, 23 Oct 2026 01:01:15 GMT",
+          "source_url": "https://kahoku.news"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.10325895134395037,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6453684458996898,
+        "oil_pressure": 0.10870660543422783,
+        "japan_risk": 0.15608432640567638,
+        "usd_rate_pressure": -0.12039733675341135
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

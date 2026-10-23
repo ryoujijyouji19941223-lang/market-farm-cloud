@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-23T10:26:02.835777+09:00",
+  "prediction_date": "2026-10-23",
+  "symbol": "6522.T",
+  "name": "アスタリスク",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-23T10:26:02.835777+09:00",
+  "market_data_through": "2026-10-23",
+  "reference_price": 779.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6861754095129484,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.21198036218321945,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.4507623592226067,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5555555555555556,
+    "heldout_signals": 45
+  },
+  "evidence": {
+    "price": {
+      "score": -0.9863037747225821,
+      "direction": "DOWN",
+      "day_change": -0.039457459926017235,
+      "momentum5": -0.19022869022869027,
+      "trend": -0.21594256259204725,
+      "volatility": 0.6220159838785708
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "(株)アスタリスク【6522】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAwMkxkZUtHa2N5SjlGLUtpQjhndzZ2X19KUDNIa0lnS1BnM3RwUEJwbEJQZmh3UnBKUG9ENm94TF9vM0tpdE1WSkhKcWd5dGZkd2U4S251c2ttZ18yTjRJ?oc=5",
+          "published_at": "Thu, 22 Oct 2026 06:57:05 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "アスタリスク[6522]：通期連結業績予想と実績値の差異に関するお知らせ 2026年10月15日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9FWGdCOXpTNG1BMkhhYXdUMGlwYl9uOWN0SWtFUzFTdWlySmFnODVqV3oxTHpGbXN0U0dqWktJU054bktIbm5GdjY5eUFIaENMcHV2ZUhfYzludXRJWEZPNVdnN1hmcDJURGc?oc=5",
+          "published_at": "Thu, 15 Oct 2026 06:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "大手アパレル企業「株式会社ワールド」へRFIDリーダー『AsReader』を導入 - 株式会社アスタリスク",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1DSGs3X2xPdTZka0cxOUdIQ2lDa1NsLUh0R0NJQ0hlc3Jmb0p3bHZSanNhbjFJX3oyLS04SWVmTThiYndpWnN5M2stTFU?oc=5",
+          "published_at": "Tue, 24 Feb 2026 08:00:00 GMT",
+          "source_url": "https://www.asx.co.jp"
+        },
+        {
+          "title": "アスタリスク[6522]：個別業績の前期実績値との差異に関するお知らせ 2026年10月15日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9MeGo1ajNrRm5Ta1RyekxibGcyVFJTaXZMbU1IR0pjWm1WdXJERVJSU09TREVMNFV1TzFSdG96dkp2Z1lmSGxLeFFJSGZmekVRdHpBOTNnclhMV29HWWpDYUpPN2JPSFJ5cGc?oc=5",
+          "published_at": "Thu, 15 Oct 2026 06:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "(株)アスタリスク【6522】：企業情報（決算時期・代表者名・大株主情報・IR動画など） - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB1VlJWeU5DYnl2aWVsNG9LbDV4RGhSNlFMczBMT3ZxWVRXVmxmelNTSTFiMTlwYVo2dUZyVkZIWWg5LTVDaDc2Zy00RGVYbkotZ1Q4SkxnX3V6UGZiUUpzV1g1ZzFsTVVROTF3cFpmMDlOTGJGWkE?oc=5",
+          "published_at": "Mon, 12 Oct 2026 01:20:13 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.10325895134395037,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6453684458996898,
+        "oil_pressure": 0.10870660543422783,
+        "japan_risk": 0.15608432640567638,
+        "usd_rate_pressure": -0.12039733675341135
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

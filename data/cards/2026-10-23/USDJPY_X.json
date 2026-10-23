@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-23T10:26:02.835777+09:00",
+  "prediction_date": "2026-10-23",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-23T10:26:02.835777+09:00",
+  "market_data_through": "2026-10-23",
+  "reference_price": 156.38699340820312,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.16282028687619687,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.5505258006135002,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.04849672624242312,
+      "direction": "DOWN",
+      "day_change": -0.011035149964697677,
+      "momentum5": -0.01110394961048089,
+      "trend": -0.0005148752356317621,
+      "volatility": 0.056532875994414866
+    },
+    "news": {
+      "score": 0.75,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日本の10年国債金利、上昇局面終了の可能性 FRB利上げの効果確認で日銀の追随大幅利上げリスク後退 野村證券・宍戸知暁 | NOMURA ウェルスタイル – 野村の投資＆マネーライフ - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBMWEgxVk5faC1EYklKM1VHZVhSeFRwTUJkQjAwTm9wRzhHbHYxa3Q5Tm5WdTlJVEhJYndIT2M1TldvM0NRSVRnTzhNUFhKNk8tRWp2YlNlT3FBTUZ2UVB3?oc=5",
+          "published_at": "Thu, 22 Oct 2026 23:07:10 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "日銀10月会合、連続利上げ見送りへ 2%物価目標は事実上到達 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oN2VFMlV0eGM0QUhNaDV0LUd3cEZMTVV5akdVVDBST240eU1jaU5UeTFvNS1LMHZxUktZdU93QXF6LTMwejBKTnRTcEMyNlJxa0dnNW80bDNtUkoya3hjMnZXZmNtdGN1Z015ag?oc=5",
+          "published_at": "Thu, 22 Oct 2026 06:47:41 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "今日のFX予想：リスク回避の円買い復活！ドル円は株価動向に注目 2026/10/23 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1pYjJpODBzVV9sU1J6aUN1VHdyVExyRGJPMzJvTkc3MEowMGViRnl2SXFEREstY0hlcW05ZmVobEY0WEZad1BmcmtzekpoQVhQVlBYeHdtMFprcUw3X0JzTE1JTQ?oc=5",
+          "published_at": "Fri, 23 Oct 2026 00:11:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀物価目標達成で共同声明変更の有無、「仮定の質問に答えない」＝城内経財相 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOYU9CTGRZbDA0bTFVc01lUm9NLTVyY1FjTThIVlpRSnFRTV9JM0VKVy05a0xTbHJFRkZSNDRNYkh0TkVSYlUtWGlUazdtdmRoay1MU1ljeTlLWDZNdVc3LVpRUUFNV3RReHVZUDVQLXRwMXpsNE9VSjlSaWJNT3NwQWw2ajVaSC1UTWhTYUdJVEE?oc=5",
+          "published_at": "Fri, 23 Oct 2026 00:30:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "東京為替：ドル・円は一段安、リスク回避の円買いが優勢(フィスコ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQb1J0UkVFM3cwSDNmTjFBRkFhNFJFYzBnbi0zZi1MYmxySkN4VGdkZkVRd1NFa3dnaXotSmd1dlQxT0lpMEJzZmE4RmZaNUEzczZvWXRYNy05cHBiLUxvSWNjbUxBYW9pYVlqbDJRc1ZoSTdqRGY3RkxsVDR1UzVuendYZzRtM2c?oc=5",
+          "published_at": "Fri, 23 Oct 2026 00:28:35 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.015616753542327715,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.6453684458996898,
+        "oil_pressure": 0.10870660543422783,
+        "japan_risk": 0.15608432640567638,
+        "usd_rate_pressure": -0.12039733675341135
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
