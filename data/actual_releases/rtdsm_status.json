@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T01:12:26.078940-04:00",
+  "generated_at": "2026-10-24T00:55:54.985936-04:00",
   "results": [
     {
       "code": "routput",
@@ -12,16 +12,6 @@
       "conservative_vintage_dates_promoted": 130
     },
     {
-      "code": "pcpi",
-      "workbook_url": "https://www.philadelphiafed.org/-/media/FRBP/Assets/Surveys-And-Data/real-time-data/data-files/xlsx/pcpi_first_second_third.xlsx?sc_lang=en&hash=3AD2A1024E65EFCDA2FF94C017C540E6",
-      "parsed": 333,
-      "saved": 333,
-      "spf_equivalent": false,
-      "release_dates_promoted": 333,
-      "exact_release_dates_promoted": 0,
-      "conservative_vintage_dates_promoted": 333
-    },
-    {
       "code": "pcpix",
       "workbook_url": "https://www.philadelphiafed.org/-/media/FRBP/Assets/Surveys-And-Data/real-time-data/data-files/xlsx/pcpix_first_second_third.xlsx?sc_lang=en&hash=D73EBCACD3BEA899569AE4E330847B3E",
       "parsed": 333,
@@ -32,6 +22,11 @@
       "conservative_vintage_dates_promoted": 333
     }
   ],
-  "errors": [],
+  "errors": [
+    {
+      "code": "pcpi",
+      "error": "ConnectionError(ProtocolError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))"
+    }
+  ],
   "note": "First-release values are archived immediately. Exact BEA/BLS timestamps are preferred. Where exact timing is unavailable, Philadelphia Fed public vintage month/quarter-end proxies deliberately delay visibility. Conservative proxies are usable for surprise history but never for same-day market reactions."
 }
