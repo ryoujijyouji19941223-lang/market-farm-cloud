@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-26T10:06:11.366890+09:00",
+  "prediction_date": "2026-10-26",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-26T10:06:11.366890+09:00",
+  "market_data_through": "2026-10-26",
+  "reference_price": 12395.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.7717997240880614,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.27987351854073206,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.9529440576643149,
+      "direction": "DOWN",
+      "day_change": -0.028224225793806346,
+      "momentum5": -0.0886029411764706,
+      "trend": -0.18855828752342996,
+      "volatility": 0.7657109617086943
+    },
+    "news": {
+      "score": 0.7142857142857143,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "キオクシア決算、高いハードル 10〜12月期純利益の市場予想は18倍 - 日経ヴェリタス - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE4wWjJzOGRndmtDSE1PanVDQl9tNTBGTUxhUHhuWVd6TVpBV3BOMTFKZ2Y5aTMzeVZnR1RqV2pIcmdieXk5bWZsNmZkekFZSTg4LVNIbmZKcGwxRzdDUGFxWXRPVlVObkpmT25sTDJTcWVqN19MMUVrWmpTWEZnUQ?oc=5",
+          "published_at": "Fri, 23 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "キオクシア、イビデンほか、大幅増益・株価上昇に期待したい主力11銘柄 - SBI証券",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA5TmRNQkhWTVBLeWhwTGFCcHJRbjgtZWtoV01aRy1RQ19nY0NfM0R2dmNyQUt2c0xQSFBFOUE3TWluVEhLeE1wQU1XMDdwQVdadEQzZmpkeUhTbFhQcGt5U2oyZE05Uk43bHlnUlNMNS01alFrakxhU2d0ZkpYcms?oc=5",
+          "published_at": "Fri, 23 Oct 2026 00:00:00 GMT",
+          "source_url": "https://go.sbisec.co.jp"
+        },
+        {
+          "title": "キオクシアHD株1兆円超え大商い 18万TICKはTOPIX浮動株比率｢2段階調整｣の前哨戦 - QUICK Money World",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE50N09samJqNEFuME53R1IxMUtyemJjMlNuNmF4N21TYTRMNXowWnJMV2h5azlneDhCS1hnS1VFMFM4ZHhycTU5aDd4a2ZvNlRad1FWelpn?oc=5",
+          "published_at": "Sat, 24 Oct 2026 04:30:00 GMT",
+          "source_url": "https://moneyworld.jp"
+        },
+        {
+          "title": "キオクシアHD株の買い残減少期待が後退、東証が信用取引データ修正 - Bloomberg.com",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9acFlBUHNySjNtcDJOcXNuSzg1NlZ2QUpkRmJKTndueDdiMmRsRTZTeFNRaHZKZHNkSVFaYV9DOUJaeWZLTm14bkpSbmNpY3BGTUhHeWh1eGtaQzJETkpQbHplTTRhb2lzWHFsZXlPbVRzYzQ3Yklz?oc=5",
+          "published_at": "Fri, 23 Oct 2026 05:19:00 GMT",
+          "source_url": "https://www.bloomberg.com"
+        },
+        {
+          "title": "キオクシアＨＤ---7月安値とのダブルボトム形成を見極め - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBwLVlya0NJY3Q5T3pJS0gwWTJNZmlKSk5jVzRTTVlUTDQyNTU3cWtCbUxlUmtpU2lZOHo0M3J3R05ybVZTZjNKdHdHVVJncWN2WVE?oc=5",
+          "published_at": "Thu, 22 Oct 2026 23:23:26 GMT",
+          "source_url": "https://s.kabutan.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.015794622985038274,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.09871639365648921,
+        "oil_pressure": -0.08730489697300114,
+        "japan_risk": 0.10775353630779838,
+        "usd_rate_pressure": -0.09442772766409246
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

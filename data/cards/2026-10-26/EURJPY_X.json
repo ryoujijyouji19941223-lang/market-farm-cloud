@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-26T10:06:11.366890+09:00",
+  "prediction_date": "2026-10-26",
+  "symbol": "EURJPY=X",
+  "name": "ユーロ円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-26T10:06:11.366890+09:00",
+  "market_data_through": "2026-10-26",
+  "reference_price": 176.1840057373047,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.07085454314329936,
+      "factor_agreement": 0.5,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5080175119332577,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.04137941113634366,
+      "direction": "DOWN",
+      "day_change": 0.0033429136877412002,
+      "momentum5": -0.005396825424171303,
+      "trend": -0.0024769688887279484,
+      "volatility": 0.059910358627287205
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀10月会合 政策を維持する見通し 2%物価到達が焦点 - NHKニュース",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE00eF80WWs0RVdkTF9nU1NscmtrcHQyVTR0aWFTdVdjZ1luZ3g2cHNHbTRrN2l6d0dUWGFBakZjbWtDS0o0WFk3VFVlaFFGU25BWnBJUTRtYTE1OVpxcWpN?oc=5",
+          "published_at": "Sun, 25 Oct 2026 21:03:35 GMT",
+          "source_url": "https://news.web.nhk"
+        },
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜FOMC、日銀会合控え様子見ムードも株価動向には注意」 外為どっとコム トゥデイ 2026年10月26日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAzQjNQc2lLOUFLdXZob2hUY1pITXlRbnNzVnNqYU1yUmtpdWFyRHVCT21XeFFYOFgtM1U0TkNTRTA3b29WbWVJRF9USFRsaTc5LWdXcF9Bb2htTXIxQ3lnUU5hTQ?oc=5",
+          "published_at": "Sun, 25 Oct 2026 23:20:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "Ｎｅｗｓモーニングサテライト【フランス売りにＥＣＢはどう動く？】 - テレビ東京",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPTnNId2s4WS1oNG5MbmVCajdrY0IxTmRmdGpCUEpLNVNZaHFLaXpxRjA0eTRaMUtMcU1NYzVleVdGVDVGU3d6cGVkekFnUjRkRzFRMExXSHAyek0zdEZkNWx2OHQzQzktcG1ObVVVNXJPeURTdmI4ZWNOSk45X3h5eWp5RFNaZVl1RllJTDFkZ19nUQ?oc=5",
+          "published_at": "Sun, 25 Oct 2026 22:12:53 GMT",
+          "source_url": "https://www.tv-tokyo.co.jp"
+        },
+        {
+          "title": "ECB、利上げ見送りの公算 仏金利上昇で「抜かずの宝刀」の出番は - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9YdVNvZ1c4WHNjLXZxUVlicjRqVmpoSURSNE90cXAzOHA1QWNMbVM3MVIxV05kTVFxZDFPNXAxNnhHUzR1VTdubUtON1JSUmZ5a29BdmZuakg4QUdRWWVoVnBPNC1SVWNYT3hFRw?oc=5",
+          "published_at": "Sun, 25 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "協調為替介入を受け利上げペースは加速するか 高市政権から9月利上げ容認メッセージが出るかに注目 野村證券・宍戸知暁 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA5dXlZVjZyWmdQUHpqNGx1TXFnUS04aG00amJvMTJLbE5QMGVGMjUwZzJKSXlDbWw3aXJNLVpBeHN2QjhJbTFXamZXbjFMYjVUOG41Q1pCVF93bWpndHVN?oc=5",
+          "published_at": "Fri, 23 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.0014436238039044155,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.09871639365648921,
+        "oil_pressure": -0.08730489697300114,
+        "japan_risk": 0.10775353630779838,
+        "usd_rate_pressure": -0.09442772766409246
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

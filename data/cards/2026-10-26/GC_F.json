@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-26T10:06:11.366890+09:00",
+  "prediction_date": "2026-10-26",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-26T10:06:11.366890+09:00",
+  "market_data_through": "2026-10-25",
+  "reference_price": 3998.0,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.3693734989039727,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.48385019529501727,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.29175733731650577,
+      "direction": "DOWN",
+      "day_change": -0.0024700972042641656,
+      "momentum5": -0.038965432045150794,
+      "trend": -0.018078038253306894,
+      "volatility": 0.14895410674901216
+    },
+    "news": {
+      "score": 1.0,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "金利上昇で急増する「超長期住宅ローン」のメリットとデメリットは？ 月々の負担軽減の一方で専門家が鳴らす警鐘 - TOKYO MX",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9IVzNRYXMxTHVSenRfVDRpU0ZMakdER1RQbHljQklaZ2FtQ1pJVU9pTFF4ckJVTFM2TzlSc01QczduWlNGZjRMT0pxWG5tZnpKZXdjVFcwRlBZRElzbHNOeDBmV0FKcHdEbzVERUxR?oc=5",
+          "published_at": "Sun, 25 Oct 2026 21:50:00 GMT",
+          "source_url": "https://s.mxtv.jp"
+        },
+        {
+          "title": "生保各社 長期金利上昇で国債入れ替え方針 | NHKニュース | 金利、金融、日本銀行（日銀） - NHKニュース",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5SdzFGN0xsMnM3Q3dnczVDZzVMZzcxbUN4T2pMUnlYcUJzNHBGWlhzZkdhTTNscFZUY0U4eTlJd3dYUlJoQmYydkJrMWRHSE1rMVhPZ0xqY21uYUhSYzFn?oc=5",
+          "published_at": "Sun, 25 Oct 2026 21:09:18 GMT",
+          "source_url": "https://news.web.nhk"
+        },
+        {
+          "title": "日本の10年国債金利、上昇局面終了の可能性 FRB利上げの効果確認で日銀の追随大幅利上げリスク後退 野村證券・宍戸知暁 | NOMURA ウェルスタイル – 野村の投資＆マネーライフ - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBMWEgxVk5faC1EYklKM1VHZVhSeFRwTUJkQjAwTm9wRzhHbHYxa3Q5Tm5WdTlJVEhJYndIT2M1TldvM0NRSVRnTzhNUFhKNk8tRWp2YlNlT3FBTUZ2UVB3?oc=5",
+          "published_at": "Fri, 23 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "米外為市場サマリー：原油高や米金利上昇を受け一時１５７円００銭に上伸 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB3NGRMSHhFeDRILUdKTXFvMEJrYzdRUGNYZzBKTV9Ka2FFOUFSemxNNVVza3ZJUDV5MjJnaTQ1X3NwVzlhd2sxZHFrczl2cExDZ3duSkZWN1lfdVgzemZGSA?oc=5",
+          "published_at": "Sun, 25 Oct 2026 22:50:00 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "ECB、利上げ見送りの公算 仏金利上昇で「抜かずの宝刀」の出番は - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9YdVNvZ1c4WHNjLXZxUVlicjRqVmpoSURSNE90cXAzOHA1QWNMbVM3MVIxV05kTVFxZDFPNXAxNnhHUzR1VTdubUtON1JSUmZ5a29BdmZuakg4QUdRWWVoVnBPNC1SVWNYT3hFRw?oc=5",
+          "published_at": "Sun, 25 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.006523396858324898,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.09871639365648921,
+        "oil_pressure": -0.08730489697300114,
+        "japan_risk": 0.10775353630779838,
+        "usd_rate_pressure": -0.09442772766409246
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

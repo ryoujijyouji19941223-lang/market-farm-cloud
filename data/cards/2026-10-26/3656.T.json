@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-26T10:06:11.366890+09:00",
+  "prediction_date": "2026-10-26",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-26T10:06:11.366890+09:00",
+  "market_data_through": "2026-10-26",
+  "reference_price": 159.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.28968371079862426,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.35954958496858475,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5079995763082135,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5555555555555556,
+    "heldout_signals": 45
+  },
+  "evidence": {
+    "price": {
+      "score": -0.4225213490453948,
+      "direction": "DOWN",
+      "day_change": -0.030487804878048808,
+      "momentum5": -0.08620689655172409,
+      "trend": -0.013241220495106454,
+      "volatility": 0.47588113578951663
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "ＫＬａｂ[3656]：第21回新株予約権（時価総額及び業績目標達成型有償ストック・オプション）の発行要項の一部変更（行使の条件）に関するお知らせ 2026年10月21日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5rMExwLWVIVW0yZGpzcnRuSU9RRzZhRGdkN2l5S0x5TUhmLWx1ZTVaTG04bG5TckVWOTRRU2JkVWc2Tk5xUDg0bWdNclRyYXNVdkJjNi0tdGxzemhacDdGRzV4dUQyV0gzNmc?oc=5",
+          "published_at": "Wed, 21 Oct 2026 06:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "ＫＬａｂ(株)【3656】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9lTndiVlkzRWNtdnpudzVoR3lqdHJjZXZoNFo4WFBFMUNwcU13YUE0RDBpXzN4VW5qaVR3ZE1nMXRRZExscGZVbzh1YUg0Z1dySm5yN1p1LUN3TmlkQ3h3?oc=5",
+          "published_at": "Fri, 23 Oct 2026 06:56:32 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "KLabで企画中のAIゲームが、経済産業省「IP360」IP新規創出支援に採択 - www.tv-tokyo.co.jp",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBXT3VXWFJhdlE0bTNfdkNKSXlZVTZNelBMM1hjRVpXdjRLWU1vamlFY3VQSE1lMDlkdWlNUVV5ZmI3SWJhbzJCWWdDWHNPajctbUhrdnpKVV9IRU5UWDU0VTY5YS04ZHA1TXdtQWRB?oc=5",
+          "published_at": "Wed, 14 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.tv-tokyo.co.jp"
+        },
+        {
+          "title": "KLab、企画するAIゲームが経産省のコンテンツ産業成長投資支援事業「IP360」のIP新規創出支援（新規IP企画支援）に採択 - gamebiz",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE45b2tIdjlLYXhjSUM1dmQwZkdaYV9tUmFINVU2MDlKQ21fQ1hISDhFa3lxQlJIdklBeWZ4WG05S1hUb3NE?oc=5",
+          "published_at": "Wed, 14 Oct 2026 00:10:00 GMT",
+          "source_url": "https://gamebiz.jp"
+        },
+        {
+          "title": "アラブ首長国連邦（UAE）子会社の設立に関するお知らせ - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5xY1FjeWdFaVVnNThPMnBuNGx2ZlFiOUxPU055M1dTNFFOTjM0VUJMeWtjYkF0UEJFU01SLUlzNEtHb0Z1VFV6Q3NtU2tZaXdZTll6LVJWMWhzcnVaMVdDZjVORno?oc=5",
+          "published_at": "Mon, 22 Jun 2026 07:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.015794622985038274,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.09871639365648921,
+        "oil_pressure": -0.08730489697300114,
+        "japan_risk": 0.10775353630779838,
+        "usd_rate_pressure": -0.09442772766409246
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

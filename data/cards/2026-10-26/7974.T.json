@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-26T10:06:11.366890+09:00",
+  "prediction_date": "2026-10-26",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-26T10:06:11.366890+09:00",
+  "market_data_through": "2026-10-26",
+  "reference_price": 8596.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.2985043829005014,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.6585208683951476,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.4354929256658024,
+      "direction": "UP",
+      "day_change": 0.006675254713666812,
+      "momentum5": 0.006439526987472188,
+      "trend": 0.05511215249810819,
+      "volatility": 0.2296245241409633
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "【10月27日追加】「ファミリーコンピュータ＆スーパーファミコン＆ゲームボーイ Nintendo Classics」に追加タイトルを配信開始。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQcFhfRGZWbVZZTTE4Q3BWa3gzOE5HbXNRNnlMMk5IS1hRRnVSSlpyYll2ZXdhNFpuakpJQ0V6bElzbFJESjhLYVZ0Rm5IR0gwTUJSUlZOd3V6LVZFMUd5UVRZLTljRWVLNTdrYzN5dG9nWmdmSXhWVlJQeWNMZ19PRzA0TFFUQQ?oc=5",
+          "published_at": "Fri, 23 Oct 2026 01:17:52 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『オバケイドロ２』が10月26日から期間限定で遊び放題。Nintendo Switch Online加入者限定イベント「いっせいトライアル」開催。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPUGpVTWkxUFZrem5HQWFaSFVyc1pFY1hhU0ZwQkcyTUx0azd3QVZmMHVrTVBZN2FmU1E2UzAwWFJ1UlNicmpHWmlWOHlmSVJDUzA3b2RGRFNENVY1NUswS3FZZ3lTbkFGY3FlakMwcE9yUWRMVW5vOU1qRWRTYmlrNUV6SHZYZw?oc=5",
+          "published_at": "Fri, 23 Oct 2026 01:58:19 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "ニンテンドーeショップ新作ソフト情報 10/23（金）号。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQeGo5MVZQcEZ2QUhGXzVtLVRpNjBKYllZMWJEcnczSXhkWlAzaGFVV3V0ZHlXTEZXLXRoV1dCazhpb2xNbm9keWVZTThoWlltbkdlN0ptdnh0S0dHR2lqa0dwWGt5eVBHQ3RMdG53UzhyQzZOOTgtSWRGWWVtNzg3YVJPdmtLQQ?oc=5",
+          "published_at": "Fri, 23 Oct 2026 01:58:19 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "ゼルダの伝説40周年 Direct 2026.9.8 | 任天堂 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE85Mk05d3M2VDBwMXZuZTlNLVR6UnliWUNEZ1pUTGh3SWVJLTk1MlFfSy1TUG04N2Y0SWNUSFg5bEROZlhoYlp0emNzUWVXcnNhRXVjanUwM0N4dzlVQUZjS0ZseE1ydHhoVnZMN3NMNWs?oc=5",
+          "published_at": "Tue, 08 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "メトロイド ラヴェナス - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBpMjItcDBaMHNPd0NXYTNfOFc4aGQ5LWdBLVI5TXBQcE5zeVRsNFRfeHdEeDBPd0w2UFpnMHBfemZmREFOcVNMd1ZMQ0tTR0NDbkYzNjJRbjRoc2hkRldrdkRhNkd2U3hLWXc?oc=5",
+          "published_at": "Thu, 10 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.015794622985038274,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.09871639365648921,
+        "oil_pressure": -0.08730489697300114,
+        "japan_risk": 0.10775353630779838,
+        "usd_rate_pressure": -0.09442772766409246
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

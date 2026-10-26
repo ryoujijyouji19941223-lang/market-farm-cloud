@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-26T10:06:11.366890+09:00",
+  "prediction_date": "2026-10-26",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-26T10:06:11.366890+09:00",
+  "market_data_through": "2026-10-26",
+  "reference_price": 1293.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.24564703591597492,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.6317761954565672,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.35776153304149877,
+      "direction": "UP",
+      "day_change": -0.007674597083653145,
+      "momentum5": -0.025988700564971712,
+      "trend": 0.05978391356542612,
+      "volatility": 0.25306207764584665
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "雲の上の浮世絵 ～サンリオキャラクターズとめぐる北斎展～ in TOKYO SKYTREE® - tokyo-skytree.jp",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBHM1NzMHRkaEU5QzlBY0xMQ2xoU1Q2TkNnLUxXbHZvenBtQm9EaTRuMXVzMmxENDdKMlFPd3pRYmRqam05YTA4Q1dWUkhweTgtNW81ek1GUm11cTc3M2h2MjJmb1R3UjZBS0E?oc=5",
+          "published_at": "Thu, 22 Oct 2026 05:04:34 GMT",
+          "source_url": "https://www.tokyo-skytree.jp"
+        },
+        {
+          "title": "【サンリオキャラクターズ】プレゼントBOXイメージのダンボールウォッチ！（アニメージュプラス） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5pemJvUzdFX2g2REVEWkZCWThNMEJGTlVOZmJtT0NjU1V0VzZLS0U3NklmZWFkRGdDNU9Lekp5Uy1xd2c2enRPUkFYcm95blNCU1J6b0RFZWczQ092SHlBWGE5cjN6UjZ5akh5TDdrY040cjFGaUZ1UFl5bkhPSWc?oc=5",
+          "published_at": "Sun, 25 Oct 2026 22:35:48 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "11/23(月・祝)ファイターズOBやサンリオキャラクターも参加！「北広島市スポーツフェスティバル Supported by Sanrio」開催 - 北海道日本ハムファイターズ",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9HeGJnM29VSUc0b3VNVTNROHlyRnl4bXNZaGl4MjBaWjh1TVJDbVE1b2tpcm1MV1pBSVpQM21nN2REeEFkWEFsdlE3cHBtSEZ3MHhZVjhsNUVRVlhtWDc0Q1JydlBQZDg?oc=5",
+          "published_at": "Fri, 23 Oct 2026 01:50:57 GMT",
+          "source_url": "https://www.fighters.co.jp"
+        },
+        {
+          "title": "サンリオ---8月高値が射程に入る - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE4wVGZkS0NmSVZ1N2U4WlVKYUFPUWVIcmF6LW9FWkxGZnhySThiNGtialJiS2JjUGRKOFZaaWNrZERETEU4T1BZakZuY2wwNTk0NWtpRlp5eUkta1RTY1lTcA?oc=5",
+          "published_at": "Sun, 18 Oct 2026 23:31:34 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "ファミマで発見、即購入！超かわいい「サンリオ新作食玩」を開封レビュー - ぴあエンタメ情報",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1tY04xaE5qdXRoSGRLWWN0R1o5YzBVRUJPSEZVd0ptYTNBWlpFRlJIZkR5bGZmNjZtZWRIT3ByVDQ1b3o2eE8zLXdzUkxjRVlCUHRLMXp5Y2ZxYjNDSzk0?oc=5",
+          "published_at": "Sat, 17 Oct 2026 07:00:00 GMT",
+          "source_url": "https://lp.p.pia.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.015794622985038274,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.09871639365648921,
+        "oil_pressure": -0.08730489697300114,
+        "japan_risk": 0.10775353630779838,
+        "usd_rate_pressure": -0.09442772766409246
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

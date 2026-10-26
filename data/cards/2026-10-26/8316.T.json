@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-26T10:06:11.366890+09:00",
+  "prediction_date": "2026-10-26",
+  "symbol": "8316.T",
+  "name": "三井住友FG",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-26T10:06:11.366890+09:00",
+  "market_data_through": "2026-10-26",
+  "reference_price": 3167.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.2876560797033048,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.3533510890637397,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5084339356965031,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5606060606060606,
+    "heldout_signals": 66
+  },
+  "evidence": {
+    "price": {
+      "score": -0.4195395386111015,
+      "direction": "DOWN",
+      "day_change": 0.017019910083493794,
+      "momentum5": -0.032681734880879665,
+      "trend": -0.039550766428896655,
+      "volatility": 0.33298300627851035
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "SMBCグループ、「SMBC Wealth」を本格展開 銀証信の融合で富裕層向け提案を強化 - ペイメントナビ",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9YOS0xSmh1aDZ6X0M2alFjQTdZLVN5NWJzMTZmdk42S2JXbFF5cVBRNjVSWFJEak1tNzdyZXdMTjRoc0tWOVQ4ZExnN3ZCNEt1Yld3X3dhTlc3MlU?oc=5",
+          "published_at": "Sun, 25 Oct 2026 23:30:00 GMT",
+          "source_url": "https://paymentnavi.com"
+        },
+        {
+          "title": "三井住友FGなど、SMBCグループ共通のウェルスマネジメントビジネスブランド「SMBC Wealth」を本格展開 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB1QWh6VzRfTEM5aTc3RUZRbzhBXzdpVjlaUThuaE9DbWg1ZWNMaEU3YUp5WVY0Q21vNE5DdW5QX1FGaTU4b3Q2aWg1S05oOXdLLU5mUVUyNWROUE1HWWp3Qmc5YkJaTFVheW5DNw?oc=5",
+          "published_at": "Thu, 22 Oct 2026 02:03:22 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "三井住友フィナンシャルグループ (8316) の株価・株式 - QUICK Money World",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBPY0VNbldlR1JER2lJZVozYkdSSm5CUHZwcTJ3a1BHalhmZ2xNdDFyM21SU285d3VrS1BuajB6RVR1WUNjRHNNblIzaWthNmUzanZjdHVhNA?oc=5",
+          "published_at": "Fri, 23 Oct 2026 07:00:00 GMT",
+          "source_url": "https://moneyworld.jp"
+        },
+        {
+          "title": "(株)三井住友フィナンシャルグループ【8316】：株主優待 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1mODUtSWQ5NjA1QzJJR3dCTmlKOU5fSGh4Y0J4c3h2V0pSV0RsX0t1Z05wS2RjQjNVLXhuYzFQcnh4MTdYTDU0bUNwd2g5NU9ESjdYMTdCRE9NM29QQlU0?oc=5",
+          "published_at": "Fri, 23 Oct 2026 07:00:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "円安・物価高時代の受け皿に！SMBCグループの個人外貨預金残高が合計3兆円の大台に到達 - DXマガジン",
+          "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBSQ0xSRXNuWmR3djNrZXVidUtMV1RBNGhEMTZ3c2dTN0pFZjNZUURGU0xhaXN1eG9scE5URjRLOUFxT2ZWMWlvbGQxeDBxdw?oc=5",
+          "published_at": "Sat, 24 Oct 2026 11:27:38 GMT",
+          "source_url": "https://dxmagazine.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.015794622985038274,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.09871639365648921,
+        "oil_pressure": -0.08730489697300114,
+        "japan_risk": 0.10775353630779838,
+        "usd_rate_pressure": -0.09442772766409246
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

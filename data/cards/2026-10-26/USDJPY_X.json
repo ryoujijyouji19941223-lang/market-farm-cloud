@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-26T10:06:11.366890+09:00",
+  "prediction_date": "2026-10-26",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-26T10:06:11.366890+09:00",
+  "market_data_through": "2026-10-26",
+  "reference_price": 157.03500366210938,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.06703271203449811,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5098807218906589,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.029569152304394164,
+      "direction": "NEUTRAL",
+      "day_change": 0.0034570038136734205,
+      "momentum5": -0.0048857210431974,
+      "trend": -0.001254361304328877,
+      "volatility": 0.04854469166796307
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "米ドル/円【USDJPY】：外国為替相場FXレート・チャートをリアルタイム表示 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzbWxqc1ltSU1ndEE0VElnZldUTGdyRVJpOTdKeXBsc0RDSm40dm9kLTJqaDZlOVpoR2E5eEZIX1o0bFR1SFR2N2k4WjRiTnN5dHVBTHJn?oc=5",
+          "published_at": "Sun, 25 Oct 2026 21:27:20 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜FOMC、日銀会合控え様子見ムードも株価動向には注意」 外為どっとコム トゥデイ 2026年10月26日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAzQjNQc2lLOUFLdXZob2hUY1pITXlRbnNzVnNqYU1yUmtpdWFyRHVCT21XeFFYOFgtM1U0TkNTRTA3b29WbWVJRF9USFRsaTc5LWdXcF9Bb2htTXIxQ3lnUU5hTQ?oc=5",
+          "published_at": "Sun, 25 Oct 2026 23:20:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀10月会合 政策を維持する見通し 2%物価到達が焦点 - NHKニュース",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE00eF80WWs0RVdkTF9nU1NscmtrcHQyVTR0aWFTdVdjZ1luZ3g2cHNHbTRrN2l6d0dUWGFBakZjbWtDS0o0WFk3VFVlaFFGU25BWnBJUTRtYTE1OVpxcWpN?oc=5",
+          "published_at": "Sun, 25 Oct 2026 21:03:35 GMT",
+          "source_url": "https://news.web.nhk"
+        },
+        {
+          "title": "ドル/円見通し(為替/FX ニュース )：先週末のドル円は円安で156円台後半｜レンジ相場模様で取引されて4営業日ぶりの円安(2026年10月26日) - OANDA証券",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE8yVzZqaFBNRDFYVmhwZkMzRW5lSUFET3J6RG9qTURVMGJVVi1xZlhxNGZaY0loV3d4UnlMRVJDMlBmTkViamptbEZqLXVlSjJWd3ZDeVM3TnRIa3lkUThEVmdENFVHbkcyZlZoU2dlNEJ1dzA?oc=5",
+          "published_at": "Sun, 25 Oct 2026 23:14:44 GMT",
+          "source_url": "https://www.oanda.jp"
+        },
+        {
+          "title": "日銀10月会合、連続利上げ見送りへ 2%物価目標は事実上到達 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oN2VFMlV0eGM0QUhNaDV0LUd3cEZMTVV5akdVVDBST240eU1jaU5UeTFvNS1LMHZxUktZdU93QXF6LTMwejBKTnRTcEMyNlJxa0dnNW80bDNtUkoya3hjMnZXZmNtdGN1Z015ag?oc=5",
+          "published_at": "Thu, 22 Oct 2026 06:47:41 GMT",
+          "source_url": "https://www.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.029504589783400457,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.09871639365648921,
+        "oil_pressure": -0.08730489697300114,
+        "japan_risk": 0.10775353630779838,
+        "usd_rate_pressure": -0.09442772766409246
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

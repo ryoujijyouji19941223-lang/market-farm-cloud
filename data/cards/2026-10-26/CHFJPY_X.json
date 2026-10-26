@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-26T10:06:11.366890+09:00",
+  "prediction_date": "2026-10-26",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-26T10:06:11.366890+09:00",
+  "market_data_through": "2026-10-26",
+  "reference_price": 190.5959930419922,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.08035091341298299,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.542264820181275,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.021970482239276376,
+      "direction": "NEUTRAL",
+      "day_change": -0.0013466059661287888,
+      "momentum5": -0.0050102769703859185,
+      "trend": 0.005251890776362567,
+      "volatility": 0.05110726314864195
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "ドル円午前の為替予想、FOMC、日銀会合控え様子見ムードも株価動向には注意 2026/10/26 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE83dFZqV1VBT092QXh1SFZua1FKZlRuSWdDZDdPcXJmcW5PMHZ1UkRMUDBsZEVZRXdicURJQzNlRnFreEdERzhvOHdpWnp6djJwM2JmMGNEaXVmSktGTHpad1BMNA?oc=5",
+          "published_at": "Sun, 25 Oct 2026 22:41:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀10月会合 政策を維持する見通し 2%物価到達が焦点 - NHKニュース",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE00eF80WWs0RVdkTF9nU1NscmtrcHQyVTR0aWFTdVdjZ1luZ3g2cHNHbTRrN2l6d0dUWGFBakZjbWtDS0o0WFk3VFVlaFFGU25BWnBJUTRtYTE1OVpxcWpN?oc=5",
+          "published_at": "Sun, 25 Oct 2026 21:03:35 GMT",
+          "source_url": "https://news.web.nhk"
+        },
+        {
+          "title": "日銀10月会合、連続利上げ見送りへ 2%物価目標は事実上到達 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oN2VFMlV0eGM0QUhNaDV0LUd3cEZMTVV5akdVVDBST240eU1jaU5UeTFvNS1LMHZxUktZdU93QXF6LTMwejBKTnRTcEMyNlJxa0dnNW80bDNtUkoya3hjMnZXZmNtdGN1Z015ag?oc=5",
+          "published_at": "Thu, 22 Oct 2026 06:47:41 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "FOMCや日銀会合に注目、国内外で重要イベントが続く（朝の材料チェック） - QUICK Money World",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE51T1RHWVFBVWVHM2F3ZC1XeEROR29FZ1Y4NHFaUnkzUVhwN3Vhek0tcDY5SEJQanJYekNVbHhhcUhRdmJWZzNNcFlvaVhLWTBuZ2JGejFB?oc=5",
+          "published_at": "Sun, 25 Oct 2026 22:20:00 GMT",
+          "source_url": "https://moneyworld.jp"
+        },
+        {
+          "title": "日銀の物価目標、ついに「到達」か 識者「金融緩和の限界が露呈」 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1wRGVXTkFmMkg2c3BVN3YwU21CLTlKOGx1alQzQ0tQR3pWVnJWd2FjVlhXUk05aTJvcGc5enNUZjFqdlp2N3VCMExrc1lfNzZySS1wLU4zQ1RyaVM5ZDFWX1VUTlBtVUk?oc=5",
+          "published_at": "Fri, 23 Oct 2026 11:12:01 GMT",
+          "source_url": "https://www.asahi.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.01107323660183365,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.09871639365648921,
+        "oil_pressure": -0.08730489697300114,
+        "japan_risk": 0.10775353630779838,
+        "usd_rate_pressure": -0.09442772766409246
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-26T10:06:11.366890+09:00",
+  "prediction_date": "2026-10-26",
+  "symbol": "1736.T",
+  "name": "オーテック",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-26T10:06:11.366890+09:00",
+  "market_data_through": "2026-10-23",
+  "reference_price": 2529.0,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.06466463527604577,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5355056876718874,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.02911094386513239,
+      "direction": "NEUTRAL",
+      "day_change": 0.0011876484560569,
+      "momentum5": -0.004330708661417271,
+      "trend": 0.005805250752811908,
+      "volatility": 0.1516549820699491
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "(株)オーテック【1736】：決算情報 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9VUVVTdVZxR3Q5aExEckpxSC1tQkNsa3IwUm9xd0d5eHl5RFVXUURmWXkyVTNOY2ZmbVBjVFpNTnNaTEpXZTQ4N1gwVXFXNmJ4Zm5mX3NrcGtXZy1qd0M2Vg?oc=5",
+          "published_at": "Fri, 07 Aug 2026 07:00:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "オーテック---2026年3月期は大幅な増益を達成、環境システム事業の採算改善が全体を牽引 | マーケット速報 | 企業情報FISCO - 投資情報のフィスコ",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOUGpWWlNaeUJQZk1ZbUg4VF81cHhjNWh1S1JtSlNVb05nLWhqQ0p4Sm9Zd0c1ZFlmWUZfQncwYXMwYVdYT3RucWFPMnFRUFVfSjNqNm40ekx4ZkROZ0c2Q3lNQzdsSnJ6SVc2aS0zOThtbTVlOFdRal9VRlBEUml3MFBQZlNWSnJ0Zm5sUFdhNkRxdDNTVmhpTjhUU2lpV0Z3?oc=5",
+          "published_at": "Thu, 28 May 2026 07:00:00 GMT",
+          "source_url": "https://web.fisco.jp"
+        },
+        {
+          "title": "オーテック[1736]：当社株式の大規模買付行為等への対応方針（買収への対応方針）の導入に関するお知らせ 2024年5月13日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE4xNUlRY2dxY0t4RnI1UnBjdUN0YnRGR2hYYmN3aVVDNDFKcldkS21UYWlLQlJERHBHYTg1V25pLVVIbW9ZZUtGMmFRWk1HVkhRTmZ3YU1MT2FBOWhmR25JTTZZcFR5MHY5WHc?oc=5",
+          "published_at": "Mon, 13 May 2024 07:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.015794622985038274,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.09871639365648921,
+        "oil_pressure": -0.08730489697300114,
+        "japan_risk": 0.10775353630779838,
+        "usd_rate_pressure": -0.09442772766409246
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
