@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-27T11:00:12.772669+09:00",
+  "prediction_date": "2026-10-27",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-27T11:00:12.772669+09:00",
+  "market_data_through": "2026-10-27",
+  "reference_price": 8483.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.18828277205825827,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.6020998254669294,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.2766317506569303,
+      "direction": "UP",
+      "day_change": -0.010844216417910446,
+      "momentum5": -0.02269585253456219,
+      "trend": 0.04685180227322516,
+      "volatility": 0.22790605007822654
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "『オバケイドロ２』が10月26日から期間限定で遊び放題。Nintendo Switch Online加入者限定イベント「いっせいトライアル」開催。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPUGpVTWkxUFZrem5HQWFaSFVyc1pFY1hhU0ZwQkcyTUx0azd3QVZmMHVrTVBZN2FmU1E2UzAwWFJ1UlNicmpHWmlWOHlmSVJDUzA3b2RGRFNENVY1NUswS3FZZ3lTbkFGY3FlakMwcE9yUWRMVW5vOU1qRWRTYmlrNUV6SHZYZw?oc=5",
+          "published_at": "Fri, 23 Oct 2026 01:58:19 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "【10月27日追加】「ファミリーコンピュータ＆スーパーファミコン＆ゲームボーイ Nintendo Classics」に追加タイトルを配信開始。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQcFhfRGZWbVZZTTE4Q3BWa3gzOE5HbXNRNnlMMk5IS1hRRnVSSlpyYll2ZXdhNFpuakpJQ0V6bElzbFJESjhLYVZ0Rm5IR0gwTUJSUlZOd3V6LVZFMUd5UVRZLTljRWVLNTdrYzN5dG9nWmdmSXhWVlJQeWNMZ19PRzA0TFFUQQ?oc=5",
+          "published_at": "Fri, 23 Oct 2026 01:17:52 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "コピー能力で広がる世界を自由に冒険。シリーズ完全新作『星のカービィ ワールドビヨンド』がNintendo Switch 2 で2027年春に発売決定。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNcHk4eTQ2bkx3aTNMLWVSTzlGbGgxRW9Senk0cEV5TWRndXdwWVlmNk9WOWRuNmtEVGozZXZCY1ZvLVlwUmFQb1R6b1dtVHMxQnVIYzAyZER2UUpzdVJ2Sm1UUUdZMzllTGR0a0luRGUzNy1jV0gyUkprY3EtUTdBckxxSGJxdw?oc=5",
+          "published_at": "Thu, 10 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "Nintendo Switch 2『ゼルダの伝説 時のオカリナ』の紹介映像を公開。新要素「万魔殿」などもご紹介。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOUtvZ2U3amdlNXVNcDc1dTN0VGF6aTBJVmJmakVXOFRnTklfWXptMGNOcVlsRWRuckpIcGpVVU1fdUxCdUlMQkZMYVRwd3hlU2ZUeFdnbnR2RnZhV0pKSlQ1WFBFeUs0a0JoVWRWbS0yTDBDeFZDM1BnQ0k1LXFVQnZfSjhIdw?oc=5",
+          "published_at": "Thu, 15 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "3本のソフトからお好きな1本を選択してダウンロードできるお得な「Nintendo Switch 2（日本語・国内専用） 選べるソフトセット」が登場。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSnhiVFcyUXVfNDdlVXZ4RTdna2hqbEttc2tpaEdEUi1vNElGSm41UHoxa1dlYzNPc3RocDh3UWJ0eEdGUTVDNEZEMnNmakZ1UjgzZy1BeWtBWUoxeDZJcTVqcHVwT24tNlVQbjF2RmFQTnFDSTNlQ1hLcW1xVVJLNVZCcGZvQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.0011545440769710426,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.007215900481069015,
+        "oil_pressure": -0.13216310034559697,
+        "japan_risk": 0.028371533351687295,
+        "usd_rate_pressure": -0.11393959506690421
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

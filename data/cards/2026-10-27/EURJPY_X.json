@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-27T11:00:12.772669+09:00",
+  "prediction_date": "2026-10-27",
+  "symbol": "EURJPY=X",
+  "name": "ユーロ円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-27T11:00:12.772669+09:00",
+  "market_data_through": "2026-10-27",
+  "reference_price": 176.09800720214844,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.13174824969382792,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.5210260554824385,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.06766086815494463,
+      "direction": "DOWN",
+      "day_change": 0.001028892876742571,
+      "momentum5": -0.00936636578792771,
+      "trend": -0.0037873674837799465,
+      "volatility": 0.05910859344799194
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀利上げ到達点「2%」予想が増える 経済見通し小幅に上方修正か - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9zbzl2R2pxQUNNQkk3YTJ3bjRzRF9VVHBRTGpWUU9DcnhiY19STDZwOTV6XzVCWHB0VDlrSDk2UFlRdFZFUi1nQXZHZEFSOXNTbTdYbG1UYTNrTWgzeGY0XzZ3NEVUNjUzMjRLXw?oc=5",
+          "published_at": "Mon, 26 Oct 2026 19:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "27日のユーロ・円、売り・買い要因＆支持抵抗ライン(フィスコ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZ25iTG96NkotMzNhVnZ0U1RZdDZNNVJXMm1kZDRIUDlwd0NHMWZiQVQ3LWtvYkxPQXd2bFYxcFhYaE1MTHM1QUt5NVNxLWJQUnFtREx1d185MTNYbUhfUm1xNTRvc2JRU2dHLVdaMTJqQTFoT3VjaUx6MUU4VnV6d0t6bDZORkU?oc=5",
+          "published_at": "Tue, 27 Oct 2026 01:19:54 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "ユーロ/円見通し(為替/FX ニュース)：ユーロ円は円安で176円付近｜上窓を開けて取引が始まる(2026年10月27日) - OANDA証券",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBBY01tQWRIY3ZqX2h2aGMwM2lQc0llTFI3bVlSMWNabGt2QTdlV2hZVm9GanNBbHN3WEdRWExkMkVJOTUtTGFjc2l6Z0tzUVEyOXNvUXJuU3M0bjFlNnZrR1FLX1hjS0h2dnI5NVhQNzhscWs?oc=5",
+          "published_at": "Mon, 26 Oct 2026 23:16:52 GMT",
+          "source_url": "https://www.oanda.jp"
+        },
+        {
+          "title": "企業向けサービス価格9月は前年比3.7％上昇、中東情勢・秋の大型連休で - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPTDRPdWpJOFczLVRIV3c3MFRabXc1cXlhVy01TFJJZm5JTFA3ZnRpc1NDdHpVcko2ODBqUi11MDhYUFN6RzFkRDc1NUN1Ul9jQWpOaS1UUDBPbHpnS0dId3lxNDBxdlV0aDVwMUhCc0FOeEl6MjZqSUsxQWE0bGZ3djVxbw?oc=5",
+          "published_at": "Mon, 26 Oct 2026 23:57:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日本の9月CPI、日銀の利上げ路線を支持する内容 - ピクテ・ジャパン",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9XQXFfcS1qLVVWcU1yejNsWk5BeVFWbElOemNqNFNNZDFlZkduRjZQajVHY0thWXpGOE13ZUI0TjA2VFhRMmhOVGdaR0Njb2dPdG1CUE5KS3hzekp1Q0RKZHpSLXdMWFY0QU5icmRfTGYyaUFodmtCWVZ1cVBPOVU?oc=5",
+          "published_at": "Mon, 26 Oct 2026 15:30:15 GMT",
+          "source_url": "https://www.pictet.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.004925728989770429,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.007215900481069015,
+        "oil_pressure": -0.13216310034559697,
+        "japan_risk": 0.028371533351687295,
+        "usd_rate_pressure": -0.11393959506690421
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

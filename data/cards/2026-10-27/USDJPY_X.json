@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-27T11:00:12.772669+09:00",
+  "prediction_date": "2026-10-27",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-27T11:00:12.772669+09:00",
+  "market_data_through": "2026-10-27",
+  "reference_price": 157.65499877929688,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.14123843935042635,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.5391137778710183,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.04300880324710961,
+      "direction": "DOWN",
+      "day_change": 0.0052604536033284965,
+      "momentum5": -0.005475522436647395,
+      "trend": -0.0026416576981412865,
+      "volatility": 0.05121240675658172
+    },
+    "news": {
+      "score": 0.625,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜157円台半ばへ上昇 関心は日米金融政策に」 外為どっとコム トゥデイ 2026年10月27日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE00Y0IxMHVDRmYwUVFySkk3YXZ5c2lrZDQwY1U2c3FRZHFhaGNHTV9mc0RGVGNLYUprZlNrZ1Yxb0RQU0tKZ0o4alJOclk4WXlMd3JZOC14MG1OMWhMY1AzVDhvOA?oc=5",
+          "published_at": "Mon, 26 Oct 2026 23:22:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "アメリカ ドル / 日本 円【USDJPY=X】：為替レート・相場 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBQa1U5NTk2aS1xRjBZb0dxSzJocWtGel9GdVBUTEx4TVhJY0R1cHB1aGlFZnltb1dpQ3lYVmd2M09TUnMxXzV2cE1GR1kxbGhHWXNGUQ?oc=5",
+          "published_at": "Tue, 27 Oct 2026 00:00:04 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日銀利上げ到達点「2%」予想が増える 経済見通し小幅に上方修正か - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9zbzl2R2pxQUNNQkk3YTJ3bjRzRF9VVHBRTGpWUU9DcnhiY19STDZwOTV6XzVCWHB0VDlrSDk2UFlRdFZFUi1nQXZHZEFSOXNTbTdYbG1UYTNrTWgzeGY0XzZ3NEVUNjUzMjRLXw?oc=5",
+          "published_at": "Mon, 26 Oct 2026 19:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "東京為替：ドル・円は底堅い、157円台半ばで小幅な値動き - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4tTVVDQVpEa1M3RnprTE1pQS03cVRfaWxtVDdKaUMwVVJsTGRoRmFzYm5EWXhKR1p6a0pCZy1NeklpS0NyU2s5TUotSU5XODlqQXc?oc=5",
+          "published_at": "Tue, 27 Oct 2026 00:32:23 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "豪ドル/円見通し(為替/FX ニュース)：豪ドル円は円安で110円台半ば｜昼から夕刻にかけて円安が進む(2026年10月27日) - OANDA証券",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBzZVdlY1FhbnJaLXZaRFJfS1pabHFHa19VLW1OZHYwY0tSdlZmNFN6YmhkT1pxUU1vTG9rbV9JaURuSDRHSnluTGRkUW10SXlpdmNldUhMc2NPaVFJS3h6Y2VXZVV2UVlXZjd3MF9kcFJmXzQ?oc=5",
+          "published_at": "Mon, 26 Oct 2026 23:20:56 GMT",
+          "source_url": "https://www.oanda.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.03828302094927862,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.007215900481069015,
+        "oil_pressure": -0.13216310034559697,
+        "japan_risk": 0.028371533351687295,
+        "usd_rate_pressure": -0.11393959506690421
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

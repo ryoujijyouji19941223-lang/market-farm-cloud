@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-27T11:00:12.772669+09:00",
+  "prediction_date": "2026-10-27",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-27T11:00:12.772669+09:00",
+  "market_data_through": "2026-10-27",
+  "reference_price": 190.38800048828125,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.08594940947896573,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5471318274383957,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.0003941825404553013,
+      "direction": "NEUTRAL",
+      "day_change": 0.00019551370203152452,
+      "momentum5": -0.006677812674620753,
+      "trend": 0.003388179157419291,
+      "volatility": 0.05029524257607576
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀利上げ到達点「2%」予想が増える 経済見通し小幅に上方修正か - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9zbzl2R2pxQUNNQkk3YTJ3bjRzRF9VVHBRTGpWUU9DcnhiY19STDZwOTV6XzVCWHB0VDlrSDk2UFlRdFZFUi1nQXZHZEFSOXNTbTdYbG1UYTNrTWgzeGY0XzZ3NEVUNjUzMjRLXw?oc=5",
+          "published_at": "Mon, 26 Oct 2026 19:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "27日のスイスフラン・円、売り・買い要因＆支持抵抗ライン(フィスコ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNWXpiNHItajlfTkNSRDVzTE9KanJWclpTSl82ck4ybEZKQWFRYnlLalByaFhQbnN3UWs1MTNzcHhGYURmTWE1bjlYV1ZHLVNHQ2Rqekg4WG1YcHNZd0xybkdQN1J3d0JlNFpFS0ZLRUFQbGVlZHBleXdoX2l3VmI3N0J6dzBWblk?oc=5",
+          "published_at": "Tue, 27 Oct 2026 01:21:26 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "企業向けサービス価格9月は前年比3.7％上昇、中東情勢・秋の大型連休で - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPTDRPdWpJOFczLVRIV3c3MFRabXc1cXlhVy01TFJJZm5JTFA3ZnRpc1NDdHpVcko2ODBqUi11MDhYUFN6RzFkRDc1NUN1Ul9jQWpOaS1UUDBPbHpnS0dId3lxNDBxdlV0aDVwMUhCc0FOeEl6MjZqSUsxQWE0bGZ3djVxbw?oc=5",
+          "published_at": "Mon, 26 Oct 2026 23:57:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "今日のFX予想：AI関連株反発で ドル円157円台 FOMCと日銀会合に注目 2026/10/27 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBOc2trX3hnSVR0aXZ4b0lkcWZWWXNTb0JNbUJ5MWZ0ZEZtN0RmTmdLMnVJU0M2WXJTb1gtQW5TUC0yLW5BZG9zYWp3dUNqT3NGSVpEMngtUDBwUlBZZ1RLOFVhSQ?oc=5",
+          "published_at": "Tue, 27 Oct 2026 00:05:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日本の9月CPI、日銀の利上げ路線を支持する内容 - ピクテ・ジャパン",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9XQXFfcS1qLVVWcU1yejNsWk5BeVFWbElOemNqNFNNZDFlZkduRjZQajVHY0thWXpGOE13ZUI0TjA2VFhRMmhOVGdaR0Njb2dPdG1CUE5KS3hzekp1Q0RKZHpSLXdMWFY0QU5icmRfTGYyaUFodmtCWVZ1cVBPOVU?oc=5",
+          "published_at": "Mon, 26 Oct 2026 15:30:15 GMT",
+          "source_url": "https://www.pictet.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.004542435676374168,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.007215900481069015,
+        "oil_pressure": -0.13216310034559697,
+        "japan_risk": 0.028371533351687295,
+        "usd_rate_pressure": -0.11393959506690421
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

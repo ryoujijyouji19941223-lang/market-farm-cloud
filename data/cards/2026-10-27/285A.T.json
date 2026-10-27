@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-27T11:00:12.772669+09:00",
+  "prediction_date": "2026-10-27",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-27T11:00:12.772669+09:00",
+  "market_data_through": "2026-10-27",
+  "reference_price": 12625.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6904758183452203,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.2659297986078467,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.9214009363730509,
+      "direction": "DOWN",
+      "day_change": 0.005976095617529875,
+      "momentum5": -0.03919330289193301,
+      "trend": -0.18018147774737148,
+      "volatility": 0.7633883270867609
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "キオクシア－買い気配 アンソロピックがIPOに向け目論見書公開 AI・半導体関連に買い(トレーダーズ・ウェブ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdDhMZm03N2REd0I1dUE4R1JQek5WLVc0dkRyd2Y3ZFZiWnlBSThlSk1CT0wyb0wtN2U3bFI0aWtYdFF5YmRIV0hab0pGMVl0blFLVDBlaUJWQWFkcWhKTE1GY3ZfTU9EUDI4MzE1MlNhN2MzVDNDeVhYVVRPNktna256bEt2XzA?oc=5",
+          "published_at": "Tue, 27 Oct 2026 00:01:03 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "キオクシア、イビデンほか、大幅増益・株価上昇に期待したい主力11銘柄 - SBI証券",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA5TmRNQkhWTVBLeWhwTGFCcHJRbjgtZWtoV01aRy1RQ19nY0NfM0R2dmNyQUt2c0xQSFBFOUE3TWluVEhLeE1wQU1XMDdwQVdadEQzZmpkeUhTbFhQcGt5U2oyZE05Uk43bHlnUlNMNS01alFrakxhU2d0ZkpYcms?oc=5",
+          "published_at": "Fri, 23 Oct 2026 00:00:00 GMT",
+          "source_url": "https://go.sbisec.co.jp"
+        },
+        {
+          "title": "キオクシア決算、高いハードル 10〜12月期純利益の市場予想は18倍 - 日経ヴェリタス - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE4wWjJzOGRndmtDSE1PanVDQl9tNTBGTUxhUHhuWVd6TVpBV3BOMTFKZ2Y5aTMzeVZnR1RqV2pIcmdieXk5bWZsNmZkekFZSTg4LVNIbmZKcGwxRzdDUGFxWXRPVlVObkpmT25sTDJTcWVqN19MMUVrWmpTWEZnUQ?oc=5",
+          "published_at": "Fri, 23 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "キオクシア株高は「お家芸」復活ののろしか 日本の半導体関連企業の勝ち筋はどこに？ 野村證券・小山晃弘 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBoVURsSUdUWWdlZ1VfUzVmbV9aQUpiWDdRejBnZHJaZ3czZUdJSzFSZDBmUzFYb2Qxc2JTVUF3Sm8zLTFkdlBIb2ZWdkNRTUhSMW5UZDdsZUVFNEUtUm9r?oc=5",
+          "published_at": "Fri, 23 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "キオクシアHD株1兆円超え大商い 18万TICKはTOPIX浮動株比率｢2段階調整｣の前哨戦 - QUICK Money World",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE50N09samJqNEFuME53R1IxMUtyemJjMlNuNmF4N21TYTRMNXowWnJMV2h5azlneDhCS1hnS1VFMFM4ZHhycTU5aDd4a2ZvNlRad1FWelpn?oc=5",
+          "published_at": "Sat, 24 Oct 2026 04:30:00 GMT",
+          "source_url": "https://moneyworld.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.0011545440769710426,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.007215900481069015,
+        "oil_pressure": -0.13216310034559697,
+        "japan_risk": 0.028371533351687295,
+        "usd_rate_pressure": -0.11393959506690421
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

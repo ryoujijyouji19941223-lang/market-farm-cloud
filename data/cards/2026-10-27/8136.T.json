@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-27T11:00:12.772669+09:00",
+  "prediction_date": "2026-10-27",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-27T11:00:12.772669+09:00",
+  "market_data_through": "2026-10-27",
+  "reference_price": 1284.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.10299106664506807,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5564039841606884,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.1512027721081212,
+      "direction": "UP",
+      "day_change": -0.005807200929152101,
+      "momentum5": -0.049944506104328545,
+      "trend": 0.04401864319005688,
+      "volatility": 0.23002257843145335
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "雲の上の浮世絵 ～サンリオキャラクターズとめぐる北斎展～ in TOKYO SKYTREE® - tokyo-skytree.jp",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBHM1NzMHRkaEU5QzlBY0xMQ2xoU1Q2TkNnLUxXbHZvenBtQm9EaTRuMXVzMmxENDdKMlFPd3pRYmRqam05YTA4Q1dWUkhweTgtNW81ek1GUm11cTc3M2h2MjJmb1R3UjZBS0E?oc=5",
+          "published_at": "Thu, 22 Oct 2026 05:04:34 GMT",
+          "source_url": "https://www.tokyo-skytree.jp"
+        },
+        {
+          "title": "【サンリオ】シャカシャカ動くサンリオキャラが可愛い新食玩を開封レポ！欲しいキャラは出たけれど…（jsc） - エキスパート - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNZ1R6Wm1yanY4UE8wdUNFRzYyZlJjZFAxQ05TY3pzeXNPem94RE5naGt3OG1CM2tKTG56SkZMX0QxUF9Zd0NrUDV4eGF4M0dmcjdYeWRRZEFWZnBOd1E4blF6OUJINGdvc2V3ZDlUOWFUdTd3WVE2ODRMYUxoV3EzZ0ZVclhPcUtq?oc=5",
+          "published_at": "Mon, 26 Oct 2026 11:05:20 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "サンリオ人事企画部長が求める新卒「外向きに発想できる人」 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB4X1Y3WlpyQTU3S2R6d1FtcFJCVmhzeEtsQmt4WXRrVXdzMzBVNnNIWHl4ZE1Mc3JPZFhxN0ducUlPNjlkdmFuVmFOYTNQaUhRTWNpQTZ3ZkpiQ0hCMkx2X1pjVUF2OWw3OUt5OQ?oc=5",
+          "published_at": "Mon, 26 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "サンリオ---8月高値が射程に入る - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE4wVGZkS0NmSVZ1N2U4WlVKYUFPUWVIcmF6LW9FWkxGZnhySThiNGtialJiS2JjUGRKOFZaaWNrZERETEU4T1BZakZuY2wwNTk0NWtpRlp5eUkta1RTY1lTcA?oc=5",
+          "published_at": "Sun, 18 Oct 2026 23:31:34 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "11/23(月・祝)ファイターズOBやサンリオキャラクターも参加！「北広島市スポーツフェスティバル Supported by Sanrio」開催 - 北海道日本ハムファイターズ",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9HeGJnM29VSUc0b3VNVTNROHlyRnl4bXNZaGl4MjBaWjh1TVJDbVE1b2tpcm1MV1pBSVpQM21nN2REeEFkWEFsdlE3cHBtSEZ3MHhZVjhsNUVRVlhtWDc0Q1JydlBQZDg?oc=5",
+          "published_at": "Fri, 23 Oct 2026 01:50:57 GMT",
+          "source_url": "https://www.fighters.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.0011545440769710426,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.007215900481069015,
+        "oil_pressure": -0.13216310034559697,
+        "japan_risk": 0.028371533351687295,
+        "usd_rate_pressure": -0.11393959506690421
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

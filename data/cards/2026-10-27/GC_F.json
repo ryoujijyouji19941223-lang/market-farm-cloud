@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-27T11:00:12.772669+09:00",
+  "prediction_date": "2026-10-27",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-27T11:00:12.772669+09:00",
+  "market_data_through": "2026-10-26",
+  "reference_price": 4028.300048828125,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.30420794337205365,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.47534951196434017,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.2566642483677658,
+      "direction": "DOWN",
+      "day_change": 0.005089984026907857,
+      "momentum5": -0.031681941716349415,
+      "trend": -0.016975794035490432,
+      "volatility": 0.15106879736511655
+    },
+    "news": {
+      "score": 0.75,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "大手生保、国債の入れ替え加速 長期金利上昇で―今年度下期 - 時事ドットコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8yVFV2UzhjOW1xbzJkeXlWUW8xWklGY2dtdmJQbUg0NGUtMVBwbkJaVGNpUmI3S0pNN3hhOEQta2hoNzVqaWxuZ1I4U0FVRElrSGVDRmhuSDVvTHRUeEN4NktnYw?oc=5",
+          "published_at": "Tue, 27 Oct 2026 00:36:00 GMT",
+          "source_url": "https://www.jiji.com"
+        },
+        {
+          "title": "【普通預金の金利】がまた利上げへ！いつから？メガバンクはどれくらい？2026年冬のボーナス定期の金利はどうなる？（LEE） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0weXdOQ1VfdmtvM3F0cXVZSU5xRGgzN3pTWHZWaU45RjlmTlNZMXdCWGJzTzgzVG8tSDZQLWRHQ0c5Z0dZLVdGelQ2V1lDdktJM2tSaENtd1o0WVBZYldXeTB1bmtmVXhNcTZOeFo4QjgzQllvTkhNVUN2WkZkX0U?oc=5",
+          "published_at": "Mon, 26 Oct 2026 11:50:12 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "【動画】ノアリザーブ｜金利上昇でも「金」保有を継続する理由＜松元 浩＞ - ピクテ・ジャパン",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNaEc3ejZwX2lWVVZKT0ZkZ1NSakhOcmcxS29zVk8wYndETENKS0RJQkpEX0xvQ1NvNEkxQ2h4SUxGR3RPM05uSXJYbEV3c0RaNGVUbDdNRE9OTjl2TXVtVXZ4MkN1aWtLVmlBLTh6clh5RFRSMFRvekQ4UUZIVzNoc010ekdacWN0OGpLVkJXRXZHV3lORDhxcWpB?oc=5",
+          "published_at": "Tue, 27 Oct 2026 00:11:15 GMT",
+          "source_url": "https://www.pictet.co.jp"
+        },
+        {
+          "title": "長期金利3％到達で日本株はどう動く？ 金利上昇に強い属性を備える銘柄リスト 野村證券ストラテジストが解説 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBkVWJ3Y0NkRVVTWVRXX2dYdkJDZHlvZ1FlMTBNUm5IT3RZTnVrbF81b3BEN1FxVmZOVHloSTNIYWZPRk9ialJzeUVpTXNBX3ZLdVl0cGJuczJKMU41R3FZ?oc=5",
+          "published_at": "Fri, 23 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "原油価格と長期金利の低下が後押しとなり買い優勢の展開 - 海外マーケット解説＆米国株ピックアップ - 日経CNBC online",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9KOXJVaG81VHFYRzB4eFRkRzEyQnZHZjhKQUh1S3J0bzNfLUdqUkdXMEpmbVRYczRmeTg1bW1HLW54cWRkakRETWtTdnVveWEzOHdFQw?oc=5",
+          "published_at": "Mon, 26 Oct 2026 23:37:23 GMT",
+          "source_url": "https://online.nikkei-cnbc.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.014508363213152787,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.007215900481069015,
+        "oil_pressure": -0.13216310034559697,
+        "japan_risk": 0.028371533351687295,
+        "usd_rate_pressure": -0.11393959506690421
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
