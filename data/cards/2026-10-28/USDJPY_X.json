@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-28T11:07:51.620547+09:00",
+  "prediction_date": "2026-10-28",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-28T11:07:51.620547+09:00",
+  "market_data_through": "2026-10-28",
+  "reference_price": 157.92999267578125,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.06946090265571325,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5085456712901032,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.03538083787948169,
+      "direction": "NEUTRAL",
+      "day_change": 0.0025518815585996446,
+      "momentum5": -0.002135698207101022,
+      "trend": -0.0033566024296547425,
+      "volatility": 0.050975776530006005
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "アメリカ ドル / 日本 円【USDJPY=X】：為替レート・相場 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBQa1U5NTk2aS1xRjBZb0dxSzJocWtGel9GdVBUTEx4TVhJY0R1cHB1aGlFZnltb1dpQ3lYVmd2M09TUnMxXzV2cE1GR1kxbGhHWXNGUQ?oc=5",
+          "published_at": "Tue, 27 Oct 2026 21:23:05 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "【今日のドル円】昨日の振り返りと今日のドル円相場見通し「ドル円3日続伸で158円目前、米指標改善が下支えもFOMC待ちで伸び悩み」 2026年10月28日 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1nUVBSMjRKQVpvaDk0eHdFckhUWThwS0FqVWZLWnhmb2lZMFF5eUtybXBvOW9odHpWQkxVdHYyRndHMndKRmFLcjdzcTFNekM3c0NqWjVNcVBET3RUSk4wdHF6VQ?oc=5",
+          "published_at": "Tue, 27 Oct 2026 22:08:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀、利上げゴールはどこに？ 元理事とスピード解説 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5mM1ZTTGhETXBGai1Tazh1cHo3QXItTEVRLXFmODZhZnotSDVNOEpUZVJEOENHX25YcldXYncyR1ctOGRiSm94Q09OZDlJQmpLeXJxazQwenNTYnM?oc=5",
+          "published_at": "Tue, 27 Oct 2026 17:22:30 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "【為替】FRB利上げは株安次第なのか？ - マネクリ",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1ER1hpc1lFVDZrMlVBZlBrUmI1OXBOMXNtS0lsU1I5YWxSangzLUpKM2QyYVNmeHJyZmZNS3VTTXJVSmZTQW1qNm1SaDNicDdXY3N3Y9IBV0FVX3lxTE44bTU3RHRjNkZNQ3FyblM2aDBpNmZSWjZUTzNCSGY1X3lnbWlTTGdEV3dCTEI2Y3dwYzNvVTJXa2h5WWJyQl9sMnpEUjVQaWllSkQzckpCRQ?oc=5",
+          "published_at": "Wed, 28 Oct 2026 00:20:00 GMT",
+          "source_url": "https://media.monex.co.jp"
+        },
+        {
+          "title": "特殊要因除くＣＰＩ、9月は伸び急加速 日銀の基調2％判断後押しか | ロイター - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPanJMSkd6S3BpOHVoemZYSXhINVFlZ3NYc1hzNW9kUVNJdGxfQnBEZHp1YVZnYjFDM0RIb0x4QkNOcGxBWW41M0tmM0NjcVJBSXNnNTlpLUV3U3FjemdTZllfYkkwUHR4dTA5RDRtRXdGR214anoxMGw0RS1rY2pOS1FtOVk1T3pGZWFfOWNjU3g?oc=5",
+          "published_at": "Tue, 27 Oct 2026 05:25:00 GMT",
+          "source_url": "https://www.reuters.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.019346219317771324,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.045926073965553815,
+        "oil_pressure": -0.024069056850493653,
+        "japan_risk": 0.02451297183219736,
+        "usd_rate_pressure": -0.07699688014873618
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-28T11:07:51.620547+09:00",
+  "prediction_date": "2026-10-28",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-28T11:07:51.620547+09:00",
+  "market_data_through": "2026-10-28",
+  "reference_price": 13870.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6770839065279216,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.3096157664083917,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.8378407069893357,
+      "direction": "DOWN",
+      "day_change": 0.1003570011900039,
+      "momentum5": 0.02664692820133241,
+      "trend": -0.16505893224818013,
+      "volatility": 0.8654602583969141
+    },
+    "news": {
+      "score": 0.625,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "特別気配＞ アドテスト、キオクシア、太陽誘電が買い気配(株探ニュース) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSTRiRGJRVFR6eUZTYnNhVEVsVERqZkJWZV8weGxwZW5UODJTRTJIenUxVVhLcnZLZjhHX2dZbFcycVRXcmNIN0l1MWZXREl0SVg5NlViTXZ3WWtJaHhFbDh1UEJEZ2xEYnZvLVM4ZnJ5YzV0RFdfckNPa2NFTkxGbFIwUy02TTA?oc=5",
+          "published_at": "Wed, 28 Oct 2026 00:04:12 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "キオクシアが一時１０００円超の上昇、決算発表とＴＯＰＩＸ絡みの買い需要に思惑 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE04VlRYUGFJdjhHcllsMkx6UVBwZkhxN3lrSEQ3dnBWSXJUUndDalg0Z1ZOUVVIaUJ0d1dFendEVFFDbGhVcm56UXkybkNSQlROSnMxWWJPQnVJZUdfVWFXZw?oc=5",
+          "published_at": "Wed, 28 Oct 2026 00:40:00 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "キオクシア決算、高いハードル 10〜12月期純利益の市場予想は18倍 - 日経ヴェリタス - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE4wWjJzOGRndmtDSE1PanVDQl9tNTBGTUxhUHhuWVd6TVpBV3BOMTFKZ2Y5aTMzeVZnR1RqV2pIcmdieXk5bWZsNmZkekFZSTg4LVNIbmZKcGwxRzdDUGFxWXRPVlVObkpmT25sTDJTcWVqN19MMUVrWmpTWEZnUQ?oc=5",
+          "published_at": "Fri, 23 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "キオクシア、イビデンほか、大幅増益・株価上昇に期待したい主力11銘柄 - SBI証券",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA5TmRNQkhWTVBLeWhwTGFCcHJRbjgtZWtoV01aRy1RQ19nY0NfM0R2dmNyQUt2c0xQSFBFOUE3TWluVEhLeE1wQU1XMDdwQVdadEQzZmpkeUhTbFhQcGt5U2oyZE05Uk43bHlnUlNMNS01alFrakxhU2d0ZkpYcms?oc=5",
+          "published_at": "Fri, 23 Oct 2026 00:00:00 GMT",
+          "source_url": "https://go.sbisec.co.jp"
+        },
+        {
+          "title": "桐谷広人氏、優待なしのキオクシア株100株を購入 - SmartNews",
+          "link": "https://news.google.com/rss/articles/CBMi6wJBVV95cUxNN0dvODZLQndyOHUybjZtQzRVQTF0aE9FSElBSHExalM1SHpNclZBdG0tb1prTm5teEFWMHhhQTA4QWhPalpaTVVoWGNEaWlvTFhzOVVTbEZBZnpxTUFkWkpndTdYLVBDUlA3ZXozendjQmFQOXBoZlpVV2xCNWxNN29CLWR0d1J1d00xWXY4cG1NaUJvNy1LajJCNzBaSXk2Q2tVNnAzSmhUbHlwbFd0Ylg5TUxCOUM4Q0xBNHlvYkJWMjhzRXdwRXRyLU05ZVN0eng2VXVFRUJmbnZWSmhvZi1OakJyS24tS3JzQ09aRjN5czA1aVktdzJMT0hFb0xmWjUwdWFEZ1lFaVhQMTJKZWlxc0piYU9sVFJMWnZKWmlqZzFrLWdUUjNodDAwLVFaTWVhUjE4N2dhWGF1T1VkcWtLSGF2czZuVkxKQlhtNERqREdpMFd2clpfOUlWeXNaVUVVRlNyQ3hEZnM?oc=5",
+          "published_at": "Mon, 26 Oct 2026 17:10:00 GMT",
+          "source_url": "https://www.smartnews.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.007348171834488611,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.045926073965553815,
+        "oil_pressure": -0.024069056850493653,
+        "japan_risk": 0.02451297183219736,
+        "usd_rate_pressure": -0.07699688014873618
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

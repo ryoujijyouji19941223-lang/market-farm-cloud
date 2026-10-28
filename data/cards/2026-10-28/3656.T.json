@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-28T11:07:51.620547+09:00",
+  "prediction_date": "2026-10-28",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-28T11:07:51.620547+09:00",
+  "market_data_through": "2026-10-28",
+  "reference_price": 163.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.4095649048969067,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.33338804076433487,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.49627343052994244,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5555555555555556,
+    "heldout_signals": 45
+  },
+  "evidence": {
+    "price": {
+      "score": -0.5506804104731373,
+      "direction": "DOWN",
+      "day_change": 0.0,
+      "momentum5": -0.09444444444444444,
+      "trend": -0.030197444831591147,
+      "volatility": 0.4725881208492263
+    },
+    "news": {
+      "score": 0.2,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "KLabで企画中のAIゲームが、 経済産業省「IP360」IP新規創出支援に採択 | ニュース | KLab株式会社 - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9QVVB6a2stancwV3d1clo0aDZOanFLQm5xSDJENW8yUTdUeUM3d2ZNN2ZLRVFYbThoUTBMc3NMWVM5MzNjNGFYdEt5Yi1sSVlEaDlLVzR3Y3dUYl9IRWZwVU1UREU?oc=5",
+          "published_at": "Wed, 14 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        },
+        {
+          "title": "ＫＬａｂ[3656]：KLab、HOMMAとUAEにAIスマートホーム事業の合弁会社を設立 2026年7月16日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5BdjA0Zl9icWxORVJJTWFqQTZfTm1lY0J1WEtGeFJmblZvd05qMTZIT0ZIU2diN1JkczdkM0wtdVBtc0pIWVlNTFdCbmJ6TXBiMlcwWkVMY0p1OTViS2ZmUGNCcEQ0QXJxUmc?oc=5",
+          "published_at": "Thu, 16 Jul 2026 07:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "KLab（3656）、IP／エンターテインメント・AI・ブロックチェーンの多角化経営を推進 AI自動取引システムは実運用間近 - ログミーFinance",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5WSFJEczFlMWo4WTVUOVVKdzVfajlDZndkTWU2amlMaG1QcnNFME12R0NBZmtLY3J4ZG14Z2JsNFR6NTZESmxUdjhfTTZmRjN6c0E?oc=5",
+          "published_at": "Tue, 16 Jun 2026 07:00:00 GMT",
+          "source_url": "https://finance.logmi.jp"
+        },
+        {
+          "title": "KLab、HOMMAとドバイに合弁会社設立…100兆円規模へ拡大見込むスマートホーム市場に参入 - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE8xYUVDT3p2dll5MEU1WTlTWTZiVlhVaV85WDBreDVBOTFiOTM0MnVjMXFXdlB1eEQxMzJab2lONHllMmdm?oc=5",
+          "published_at": "Thu, 16 Jul 2026 07:00:00 GMT",
+          "source_url": "https://gamebiz.jp"
+        },
+        {
+          "title": "ゲーム開発のKLab、暗号資産×金運用で含み損2.8億→含み益3千万に ビットコイン上昇で大きく挽回（オタク総研） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE52U29FTHh1OXFvSTF1RHZrSkpGR2F1NlU5UmY1Nl81VUxvNElSU3BYVFY2MUIyTlUtWldjbVJKTm5LV1ZxMFpsWlZIV2Z1Uk1YYzFtZkEybzd6T05CR0gyZnJuQ0toYm45c0h4MkdINWliY2JiT2RQc3ZEWW1rOEU?oc=5",
+          "published_at": "Fri, 02 Oct 2026 07:00:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.007348171834488611,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.045926073965553815,
+        "oil_pressure": -0.024069056850493653,
+        "japan_risk": 0.02451297183219736,
+        "usd_rate_pressure": -0.07699688014873618
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-28T11:07:51.620547+09:00",
+  "prediction_date": "2026-10-28",
+  "symbol": "1736.T",
+  "name": "オーテック",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-28T11:07:51.620547+09:00",
+  "market_data_through": "2026-10-28",
+  "reference_price": 2580.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.14793678240639704,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5794731814726771,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.1534331715165055,
+      "direction": "UP",
+      "day_change": 0.0015527950310558758,
+      "momentum5": 0.015748031496062964,
+      "trend": 0.011457796455615732,
+      "volatility": 0.13782144470788815
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "オーテック[1736]：アズビル株式会社との資本業務提携契約の締結並びに主要株主及びその他の関係会社の異動に関するお知らせ 2026年10月26日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE4wNWlnRlhkUFo5YTFNYU5DNlVhN1FrT2lsZ2NFOFMtOG1Idm9rc3B0a3VDYnNlUVRLLXZpS2hYM3BtbFdacTJBU05DejNJRk9qcXljWkpKTXB5bkZVV2VVWnlSSnZpaFp6YlE?oc=5",
+          "published_at": "Mon, 26 Oct 2026 06:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "(株)オーテック【1736】：決算情報 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9VUVVTdVZxR3Q5aExEckpxSC1tQkNsa3IwUm9xd0d5eHl5RFVXUURmWXkyVTNOY2ZmbVBjVFpNTnNaTEpXZTQ4N1gwVXFXNmJ4Zm5mX3NrcGtXZy1qd0M2Vg?oc=5",
+          "published_at": "Fri, 07 Aug 2026 07:00:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "オーテック---2026年3月期は大幅な増益を達成、環境システム事業の採算改善が全体を牽引 | マーケット速報 | 企業情報FISCO - 投資情報のフィスコ",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOUGpWWlNaeUJQZk1ZbUg4VF81cHhjNWh1S1JtSlNVb05nLWhqQ0p4Sm9Zd0c1ZFlmWUZfQncwYXMwYVdYT3RucWFPMnFRUFVfSjNqNm40ekx4ZkROZ0c2Q3lNQzdsSnJ6SVc2aS0zOThtbTVlOFdRal9VRlBEUml3MFBQZlNWSnJ0Zm5sUFdhNkRxdDNTVmhpTjhUU2lpV0Z3?oc=5",
+          "published_at": "Thu, 28 May 2026 07:00:00 GMT",
+          "source_url": "https://web.fisco.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.007348171834488611,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.045926073965553815,
+        "oil_pressure": -0.024069056850493653,
+        "japan_risk": 0.02451297183219736,
+        "usd_rate_pressure": -0.07699688014873618
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

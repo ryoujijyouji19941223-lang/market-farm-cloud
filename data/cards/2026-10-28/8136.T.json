@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-28T11:07:51.620547+09:00",
+  "prediction_date": "2026-10-28",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-28T11:07:51.620547+09:00",
+  "market_data_through": "2026-10-28",
+  "reference_price": 1268.0,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.008726956880865713,
+      "factor_agreement": 0.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.4952003211500802,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.011212839861312383,
+      "direction": "NEUTRAL",
+      "day_change": -0.013613380007779119,
+      "momentum5": -0.05864884929472902,
+      "trend": 0.02792276092004231,
+      "volatility": 0.23822110914016228
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "「2026年 サンリオキャラクター大賞当りくじ」にワクワク！「ポムポムプリン」をはじめ、上位メンバーのスペシャルなグッズがズラリ - インサイド",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5zVWhPTkdtUzdQa0RwSEgtYi0yY3N0eVNXVkVDYmZfRnY3WU8wci1zVjFHVEZDRUdiUUVCdzNlVEdvWlpDR0tROEVHWXRwZU1vR09xSm5ISzlralpSN29OR1g4ZWdHZzNJS1E?oc=5",
+          "published_at": "Fri, 23 Oct 2026 08:10:02 GMT",
+          "source_url": "https://www.inside-games.jp"
+        },
+        {
+          "title": "ワークマンの「サンリオ＆PEANUTS新作アイテム」が可愛すぎる！この冬買うべき充実ラインナップ（ぴあ） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1Kek1teXdObV9BdzE5aTFqbU80YzlFcTVtbGZrQ1hyZ3BuQXlua21GWUYtbThyc0QxSmJuSlZaWG1PX1ZHeTc3QVVVN0Y1cVZWNG8zZHQ3cXBpSWhWc3NBbUtIbF9mT1p2d3VnbDRiMHpyWjlJWjF2ejRwZ0QwSTg?oc=5",
+          "published_at": "Tue, 27 Oct 2026 11:00:30 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "『CoComelon Playdates with Sanrio Friends』日本盤アルバム配信スタート！ - UNIVERSAL MUSIC JAPAN",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9VMlNSTmEzb2ZrUUhXMy1mcG1tcmtxT0RfQjFSU2RwYXppaXhSYW9wUkRCYnNvSDVDc0VUaGJwdkJHaEx6ZklYX3dXMnlQT3dyZGlySXVHNENVeGhWcjk3cDg3Y2JjUUk2SUFzSg?oc=5",
+          "published_at": "Tue, 27 Oct 2026 19:09:02 GMT",
+          "source_url": "https://www.universal-music.co.jp"
+        },
+        {
+          "title": "【Sanrio Games】『サンリオ パーティランド』発売目前、レッドオーシャンのゲーム市場でサンリオが描く“勝ち筋”とは？ - オリコンニュース",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBGRUIxSWdWdFp0T2dVVEtEWGJoRmFud1RiVldSZU1CSlpBS05tUGNvSTEyVjl5WmsyNTFMT2FfbUFyMW9EZXN4V25yN2RkdVNi?oc=5",
+          "published_at": "Tue, 27 Oct 2026 23:40:00 GMT",
+          "source_url": "https://www.oricon.co.jp"
+        },
+        {
+          "title": "サンリオのキャラクターたちがキラキラした宝石モチーフのフィギュアになって登場！バリエーションは全部で24種類 - アニメ！アニメ！",
+          "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9Zby1QcUdFM2VsdGJVX05SeUFyc1c2LXZQMVB3bnZjRTVvZEotZjA4c3NxTGhRZnE0TmcySnFvWkpCMU9iX0gwQ01KMXRiY2pha3h3UVlBSVdaNFFkWXpiNElR?oc=5",
+          "published_at": "Tue, 27 Oct 2026 10:45:03 GMT",
+          "source_url": "https://animeanime.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.007348171834488611,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.045926073965553815,
+        "oil_pressure": -0.024069056850493653,
+        "japan_risk": 0.02451297183219736,
+        "usd_rate_pressure": -0.07699688014873618
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

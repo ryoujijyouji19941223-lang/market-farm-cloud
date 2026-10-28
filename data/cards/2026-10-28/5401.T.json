@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-28T11:07:51.620547+09:00",
+  "prediction_date": "2026-10-28",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-28T11:07:51.620547+09:00",
+  "market_data_through": "2026-10-28",
+  "reference_price": 662.2000122070312,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.09348213421623756,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5500347008413744,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.13585280653097687,
+      "direction": "UP",
+      "day_change": -0.0024103278327213262,
+      "momentum5": -0.0013572061710770411,
+      "trend": 0.017765846964597154,
+      "volatility": 0.20581240789708705
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "日本製鉄の投資活用しUSスチールが熱延設備を建設、生産能力を100万トン以上拡大（MONOist） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE05cG9xU3lzbEg3VzBrOUFZZUhwWkhsMEJFX1FwRXE4SjhSZ1dTeFctODBLbU1aUmY2QTJ3cUNZZHVxeXN2d1oyQzMyN2w1eXpuRzR3ZnlHeUdqMGFUVnlXdExFekZmZk9ySENxS2N1QlpEc2RpYlBhbUV1VmRHZUk?oc=5",
+          "published_at": "Tue, 27 Oct 2026 21:38:31 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "日本製鉄、ｐＨ基準値外排水 - 47NEWS",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE4wVGVrM0Q5dnkzVWhrT0xhV3dBZ3ZJRWlZXzI0bFh4VXZHbHNZUGplSmplVTI5OVdYWlZsUE9yU3ROUGZYY3lkRWpHVQ?oc=5",
+          "published_at": "Wed, 28 Oct 2026 00:15:25 GMT",
+          "source_url": "https://www.47news.jp"
+        },
+        {
+          "title": "日産『エルグランド』新型、日本製鉄の2.0GPa級鋼板を車体補強部品に採用 - レスポンス（Response.jp）",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1fTUFvb191T011Rjd3a24zRHpzcTRacURMYV9uM3loYVg1d0xQYjZlZkcwME56enB5TGZGOVg2Q2M4Nmx0TlVjRjNLNjR3TG0zZWF3aVVicW44UWFFamxJ?oc=5",
+          "published_at": "Tue, 27 Oct 2026 05:00:04 GMT",
+          "source_url": "https://response.jp"
+        },
+        {
+          "title": "鉄鋼大手 日本製鉄とJFEの決算比較 米国巨額買収で稼ぐ日本製鉄と事業多角化・構造改革を進めるJFEの違い - SmartNews",
+          "link": "https://news.google.com/rss/articles/CBMinwVBVV95cUxQajZmTWQ3QVdnMEJ2VWpWSUZtUFFyc3N3VWJpRDlTeDlnMTJ0eVh1UkFHNkt3c25HaThmSHBSTDZlU3VIVmFvSUlqUHBFaWpCVzVXMjJGZ08xc0wyLW9zbzI1UERVdkpOdFJqWXZLTnFUWmpZbTJBa0twQzZCWVBkY09XWk15TXhZcEJJaWxfSnE1NjJwZm9WMHRHc2Z3VHEwcng1azFGMDJXYzFpd0dJSzhIdjNFb1oxalRkY1ZSZTBucXY1V1dTVWkyM1QzWGo2azd5TG9BUTBQOGpPcDQxSGVfX3RGSW5EbGxiRVk4NkZ0S3dUM3JFWHU3cWlJclFvLTgxOGFubTZzZF9GX2FuNFM2Wm9tVWhiT1IwdFAtZ2JGbWowdzdVcG5KcnRmUFZQdkpHaVl4TGx3Y1lvOTB0Q1RsaFRxa3d6cks2X09DUThici1OeFhwNVFiWWJKUlI3dTM4SXI0dktUXzZMRWF6cXlQZ2hsRXVaOFhEa0NQUjR0bUdMRm9INjlrRzFpNk1sUGpNeV9NLVlac2VsVnUyZm9TX3g2c1RvUXBqeGEtQzMwWWE5eXJrbXZlTWdwUTdaeVBrMXFGUjRTd1k0YnkxZUIzMi1Va2hacmJuamE5eFl5c1lyRzFtc2hyWFRvWFFTS3puNnJsWWZPNUxhVlh4dHZYYjJaTWdzaEVrNDhBLXk4a0hVVUhWVWdMRk9FQU9rbUpEUVNQeFRXMFJFZnpwWUttWkI4UmNqR2owWjh1RHZaLXJqaWJnWGZJTHU1UTlhQVNBWE5BNmt2U1kxVjdmem9CaVg4RHdzUjZWMDJmOVRyakdFdkFjT0NlVUR5R2lKU2tabDZlTGh5NmpNdW1IMkZjSGhJYXVqX1BXNkpJRQ?oc=5",
+          "published_at": "Tue, 13 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.smartnews.com"
+        },
+        {
+          "title": "｢子供が将来製鉄所で働くと言っている!｣日本製鉄のUSスチール買収で一変した｢瀕死だった鉄鋼町｣の現在地 - PRESIDENT Online（プレジデントオンライン）",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1ZLXVCSnlraHN3YjZtaDI0ek9XLVloZ0o4LW1scHIxdHQyNTNUQThCY1gzYnlCZE9fRHNGLWNoM3RRMmtJbTBpVWdOODBiRHVBUnBsMjhoWmQ?oc=5",
+          "published_at": "Thu, 01 Oct 2026 07:00:00 GMT",
+          "source_url": "https://president.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.007348171834488611,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.045926073965553815,
+        "oil_pressure": -0.024069056850493653,
+        "japan_risk": 0.02451297183219736,
+        "usd_rate_pressure": -0.07699688014873618
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
