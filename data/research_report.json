@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T07:36:28.779024+00:00",
+  "generated_at": "2026-10-28T17:07:10.547219+00:00",
   "replay_months": [
     "2023-03",
     "2023-04",
@@ -4132,7 +4132,7 @@
     "Adjusted daily price histories are not archived as-published vintages.",
     "Market availability is conservatively buffered rather than verified to dissemination time."
   ],
-  "live_settled_rows": 324,
+  "live_settled_rows": 325,
   "note": "Diagnostics only. These findings must not auto-change the production model.",
   "by_asset": {
     "1736.T": {
@@ -5039,20 +5039,21 @@
     "GC=F": {
       "name": "金",
       "summary": {
-        "observations": 27,
-        "signals": 11,
+        "observations": 28,
+        "signals": 12,
         "flat_forecasts": 15,
         "abstained": 1,
-        "coverage": 0.9629629629629629,
-        "directional_coverage": 0.4074074074074074,
+        "coverage": 0.9642857142857143,
+        "directional_coverage": 0.42857142857142855,
         "correct": 8,
-        "accuracy": 0.7272727272727273,
-        "all_forecast_accuracy": 0.34615384615384615
+        "accuracy": 0.6666666666666666,
+        "all_forecast_accuracy": 0.3333333333333333
       },
       "result_types": {
         "動きを見逃した": 15,
         "一致": 9,
-        "方向を逆に読んだ": 3
+        "方向を逆に読んだ": 3,
+        "動くと読んだが横ばい": 1
       }
     },
     "USDJPY=X": {
