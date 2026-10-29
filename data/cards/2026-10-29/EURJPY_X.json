@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-29T11:21:45.477752+09:00",
+  "prediction_date": "2026-10-29",
+  "symbol": "EURJPY=X",
+  "name": "ユーロ円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-29T11:21:45.477752+09:00",
+  "market_data_through": "2026-10-29",
+  "reference_price": 175.86000061035156,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.06372267243627495,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.46604355735495034,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.09232120535976054,
+      "direction": "DOWN",
+      "day_change": 0.0003867818853100502,
+      "momentum5": -0.010114980517359484,
+      "trend": -0.006515615462235891,
+      "volatility": 0.05883066332330177
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "日銀、利上げゴールはどこに？ 元理事とスピード解説 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE10STU1RVQtb0ZDRXplOFFoVXZ4RnlhNUUzZXZiTWlqTXhONlF6Slg5b1NFMlVOOE1CaENVLTZkTjNUdFk2bWdGQmV6eHhGOTBKTXhHclI3ZzlWdw?oc=5",
+          "published_at": "Wed, 28 Oct 2026 23:35:15 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "どうなる10月日銀会合と展望レポート？！ 気になるドル円と日本株の動き方 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9QRnFzbTlidWd3MmhnQ0EyU0FzWTY2czNRc0JvY3gzSEdFYjdXU0VPWnlMc2ZLZjU2MFVXLUNWQUFsMnRreFNxYkdZLW85RFBXckdxNlVwcVMzUlQtLWJwZ21Idw?oc=5",
+          "published_at": "Thu, 29 Oct 2026 01:00:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "29日のユーロ・円、売り・買い要因＆支持抵抗ライン(フィスコ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTG1nLUJnaW5lWEUzX0oxYXZNc3pqLVZxajJiM1JnaHQwYjFoOWNNN080bEFqOVZUcV9DUDhuMEJzWUZBbUdVNmJBVlJjQ0NMV0U1aUNYbnFQVk1QMDFCcUdyV0tPeGpvMEhKNjk5ZUZFV1RWdVhNd1ptRzF6dVJQeUVkN2tyUFE?oc=5",
+          "published_at": "Thu, 29 Oct 2026 00:57:08 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "フランス財政不安で「ユーロ急落」危機！日米利上げ・ECB据え置きなら1.10ドル割れ、対円でも下落加速か - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1SbjllaWlSeko5dEdvSUVPSnJBS090SnZhWVFXT3NPaElTTWM5czkyWVBOcmloLWdYcEZyY2Nxd1RqNzFEbG92aS1fZlfSAU9BVV95cUxNUURTcF8zX1FqYTAtdVpOZ3VpT3Fma19vaGFRLXlWZEpQa2R5bXA5ZDJLRE8yOTZ3SWZ5YjY2MHVHSy1ET28yYXl0ZFFfeDdV?oc=5",
+          "published_at": "Wed, 28 Oct 2026 19:20:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "円高への転換は近いか 原油価格が下がれば米ドル円の下落傾向が鮮明に 野村證券・後藤祐二朗 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBIaWxUNUpBVWNqZkNZVVhhUDVubTYwRVMwdWgyTlRjWllIZWFUMWliZHJsUkFvNGpfY2pyWExibUNYc2NCUWJIWDl6NjBJZElnOEg3RlY5Q1BRcGdJN21n?oc=5",
+          "published_at": "Thu, 29 Oct 2026 00:33:04 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.006295018610918535,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.058556474191278296,
+        "oil_pressure": 0.23057105801206124,
+        "japan_risk": -0.05692050629371215,
+        "usd_rate_pressure": -0.06913426833979952
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

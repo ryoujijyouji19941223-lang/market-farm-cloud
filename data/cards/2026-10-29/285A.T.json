@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-29T11:21:45.477752+09:00",
+  "prediction_date": "2026-10-29",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-29T11:21:45.477752+09:00",
+  "market_data_through": "2026-10-29",
+  "reference_price": 14835.0,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.2833361764018341,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.4705720981048719,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.2583541485606521,
+      "direction": "DOWN",
+      "day_change": 0.03451882845188292,
+      "momentum5": 0.17784835252084163,
+      "trend": -0.12196718093025538,
+      "volatility": 0.9465363713639914
+    },
+    "news": {
+      "score": 0.625,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "TOPIX入れ替え、売買需要9.6兆円 キオクシアは9748億円の買い - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB3d09taDhtN1hrNWNoMDVpV3pZVF9OQlh0VEtyNGQwc3FtNTAwMlhQWExhakdJWElVN2I4MDA1bHZJanFQM1JaZzg4bnJDdXU0eW5jbkRIOE9uY0hCMnI2a3l3LThzOVVRLUUwag?oc=5",
+          "published_at": "Wed, 28 Oct 2026 11:33:39 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "【生成AI特需の行方】10月30日のキオクシア決算で注目すべきポイント 7～9月期に「売上2兆3900億円」を見込んでいた根拠、当日に確かめたい数字は（マネーポストWEB） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBmNV9zVkxWMGtKeVZRRmxRaDM3azlOWFhLRjR1SzU4ajdMVFBYZ3IyTXlCZ1ZiSHFPUl93R0JwUWstUk1IME16TDB0N2d5bU05LTFLU2hiTjNCY3ZiZnozazdkMjZsZE5TSHQwU2R6dVNZUVU4R216b1p1QmpLUEU?oc=5",
+          "published_at": "Wed, 28 Oct 2026 07:15:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "桐谷広人氏がキオクシア株購入 株価上昇で含み益に絶賛の声 | スマートニュース - SmartNews",
+          "link": "https://news.google.com/rss/articles/CBMiuwNBVV95cUxPTzBjRERkeUg2LU52aUJmRTFabW1TWDY2T1NlSnNrdzVlYkxfbWl2THZlR1hWWVc3MGVxSUJfYmQxYTJ0Q2pBYWRFSWFqNjVsZXFVUFRvLUZlNk1jTkhCekRPZzE2RmozN2RUaXVZVzd1aU9qR2Zxa1Yzb0Y2OUJqb3NDYmFIV1Y3bzB4V0I2VjdYdW03bUJ6WDZzY3VHMTZGQ2V0eXpfNEM5YnVaSE1PT0dKTjduSVJ3V3RCdnE1Y1k3S2V2a2tCNnVvNWg4V1NyMkhYSk9VeWRaaHBybTFQQzlNcENucURvcWVEYmhCOS1fY0dMcDBmcV9XcGc4WEVHckdPLURtektFS0xuc3NKZVlDS2Yza2NmU0NxQ3ZKdUZaQTJmVXVpVVgwQUh4TjJ1Zmc3QXo1SlpfQjl6YTdLQW5DNVVhVFl3R0VXeXVfVS15T0hNbEMzcG8yQThzUnREQlNBSUpqUDNXZkMzY01MSkpQY3l4bFBlSGY3MzhoQkdVSlBKdF9TOHJRMDdTb2dWRC1aYmpXSnlrbnk2SjlQVnVTZjlWLTA1UE83eFlRUHF3MFdYcHN6VU4tMA?oc=5",
+          "published_at": "Wed, 28 Oct 2026 09:44:00 GMT",
+          "source_url": "https://www.smartnews.com"
+        },
+        {
+          "title": "キオクシアＨＤ---200日線突破を試す展開へ - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE50WTFzZzNZbUFDZkJ2bmFuSjFUazRZNVNqMEpQVXFzb2ROQ24zR0xMNUExQkNlWnd5N2t0dnlWc2pRci1tUTh0NDY4S05DRWhkRkE?oc=5",
+          "published_at": "Wed, 28 Oct 2026 23:36:16 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "キオクシアを脅かす「中国半導体メモリー企業」の実力 - 毎日新聞",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9xVk80QUtaRWRUU3MzckxqRHFYcXVOdGlXNmdTS3hhbDNXb2QzWGtzbWtPbWFWZ0NKeTFIUHVrZW1wZlZvMzdDSkp3dkF1Wmo4cXozck5HRkNjZi1RWTMtMFZDWmtpSjROQlVCZndYU0tEbXh6b3dSX2drTU42TGM?oc=5",
+          "published_at": "Wed, 28 Oct 2026 22:30:00 GMT",
+          "source_url": "https://mainichi.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.009369035870604527,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.058556474191278296,
+        "oil_pressure": 0.23057105801206124,
+        "japan_risk": -0.05692050629371215,
+        "usd_rate_pressure": -0.06913426833979952
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

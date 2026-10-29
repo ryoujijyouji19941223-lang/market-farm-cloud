@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-29T11:21:45.477752+09:00",
+  "prediction_date": "2026-10-29",
+  "symbol": "8316.T",
+  "name": "三井住友FG",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-29T11:21:45.477752+09:00",
+  "market_data_through": "2026-10-29",
+  "reference_price": 3189.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.15743059964471876,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.4159867342565949,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.49495249352786885,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5606060606060606,
+    "heldout_signals": 66
+  },
+  "evidence": {
+    "price": {
+      "score": -0.22944888862371776,
+      "direction": "DOWN",
+      "day_change": 0.009496676163342821,
+      "momentum5": 0.0056764427625355385,
+      "trend": -0.032039177758332205,
+      "volatility": 0.30838063938333315
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "SMBCグループ、「SMBC Wealth」を本格展開 銀証信の融合で富裕層向け提案を強化 - ペイメントナビ",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9YOS0xSmh1aDZ6X0M2alFjQTdZLVN5NWJzMTZmdk42S2JXbFF5cVBRNjVSWFJEak1tNzdyZXdMTjRoc0tWOVQ4ZExnN3ZCNEt1Yld3X3dhTlc3MlU?oc=5",
+          "published_at": "Sun, 25 Oct 2026 23:30:00 GMT",
+          "source_url": "https://paymentnavi.com"
+        },
+        {
+          "title": "三井住友FGなど、SMBCグループ共通のウェルスマネジメントビジネスブランド「SMBC Wealth」を本格展開 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB1QWh6VzRfTEM5aTc3RUZRbzhBXzdpVjlaUThuaE9DbWg1ZWNMaEU3YUp5WVY0Q21vNE5DdW5QX1FGaTU4b3Q2aWg1S05oOXdLLU5mUVUyNWROUE1HWWp3Qmc5YkJaTFVheW5DNw?oc=5",
+          "published_at": "Thu, 22 Oct 2026 02:03:22 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "SMBCグループの財務部門変革 - EY",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbFlGYm5aNW5YT2FDcXJkb1pXalMwSi1idFQ0Sl80NGhybzVHcllReUJiaG5uX2w3ekI4amEtNVlXX1QxOFZMX3ZHeDZ0NTNZd18yQzFMdXptSDVuRXAwOHROTkl6VGRudExBSnBMZF9OYnJOSUtMYUFNMVJBSmxXZ0VxT3hkcjNGZnU2NkhvaWxsdVF6WWlXOVhFaVM5N3JxaFVUMWFhMEh1MUgxaXc?oc=5",
+          "published_at": "Mon, 29 Jun 2026 07:00:00 GMT",
+          "source_url": "https://www.ey.com"
+        },
+        {
+          "title": "三井住友フィナンシャルグループ・髙梨雅之執行役員「社会的価値創造（シャカカチ）で変革へ」 - 日経BP",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBZSWF5OGU5NDhmYm1GV3VQeWttM2VuYWlLWlpfbU92b0wtaGg4VDFfWldFaEItWmpNX2cyNEJiSW9fTkFDNnVEMWwzbGw4T1NGRThHVkM2QUFkMU1ORDJvemFvQmRJMzV6SlpHSWZZRVU?oc=5",
+          "published_at": "Thu, 17 Sep 2026 07:00:00 GMT",
+          "source_url": "https://project.nikkeibp.co.jp"
+        },
+        {
+          "title": "持続可能な医療の実現へ。SMBCグループ、富士通、ソフトバンクが「国産ヘルスケア基盤」で日本の医療課題に挑む - ソフトバンク",
+          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9ZQVZXSk5IZ24xRmUwSWFVSHR3d2lEZDdVYmFjeDdxd0w4aXRBWkxiZXcwdUR3QXpRaG1DRTd2WktWSDUwYW1XR0ZScjN5eDNVaUtodUdmekdLZ21l?oc=5",
+          "published_at": "Fri, 14 Aug 2026 07:00:00 GMT",
+          "source_url": "https://www.softbank.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.009369035870604527,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.058556474191278296,
+        "oil_pressure": 0.23057105801206124,
+        "japan_risk": -0.05692050629371215,
+        "usd_rate_pressure": -0.06913426833979952
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

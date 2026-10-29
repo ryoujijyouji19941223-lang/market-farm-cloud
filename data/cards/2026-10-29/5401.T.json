@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-29T11:21:45.477752+09:00",
+  "prediction_date": "2026-10-29",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-29T11:21:45.477752+09:00",
+  "market_data_through": "2026-10-29",
+  "reference_price": 656.9000244140625,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.029154306141177276,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.514484923250334,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.04080728053027441,
+      "direction": "UP",
+      "day_change": -0.000912510396863131,
+      "momentum5": -0.016322197631254642,
+      "trend": 0.013264843117453573,
+      "volatility": 0.20705863915481112
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "日本製鉄(株)【5401】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9CVmx5TUl6TGxMX0lYTnVadHZ1b256QUpCY1ctQWx5ZFFaOEtGZ0ZkV0FuYlFvM3hDVF91b0J6Tk9kOFZNSVpPSWxBTUNkOUN0S1Y3TmszM2dNMmVHU2xB?oc=5",
+          "published_at": "Wed, 28 Oct 2026 06:53:23 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "生産ライン 競争力の源泉（136）日本製鉄・名古屋製鉄所 圧延・温度の制御性向上 - 日刊工業新聞",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9oWlB3TEFvNERMcnRBZkFGdzJHT08wNmpCZnlXakRSVHRKckZ0ZFNXZU1fcFJTOXZmck1qd3dDMDU4RUp0eGI5UjJBLUlBN2JNVXVmTE5oc2w?oc=5",
+          "published_at": "Wed, 28 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkan.co.jp"
+        },
+        {
+          "title": "機械を切断する解体作業中に鉄板が落下 男性会社員(31)が死亡 日本製鉄呉地区跡地で - TBS NEWS DIG",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9ldUdQY3ZsQkR1Tjg1QUg5MjBjdGhZMUtpdmdEODdKcnpNXzhOaUdKYUZ5WV8xaW9PY2xfeUdoTUpGRm1CNkJEZHBXU3MxWTBhajdFaXh3SQ?oc=5",
+          "published_at": "Thu, 29 Oct 2026 01:37:00 GMT",
+          "source_url": "https://newsdig.tbs.co.jp"
+        },
+        {
+          "title": "鉄鋼大手 日本製鉄とJFEの決算比較 米国巨額買収で稼ぐ日本製鉄と事業多角化・構造改革を進めるJFEの違い - SmartNews",
+          "link": "https://news.google.com/rss/articles/CBMinwVBVV95cUxQajZmTWQ3QVdnMEJ2VWpWSUZtUFFyc3N3VWJpRDlTeDlnMTJ0eVh1UkFHNkt3c25HaThmSHBSTDZlU3VIVmFvSUlqUHBFaWpCVzVXMjJGZ08xc0wyLW9zbzI1UERVdkpOdFJqWXZLTnFUWmpZbTJBa0twQzZCWVBkY09XWk15TXhZcEJJaWxfSnE1NjJwZm9WMHRHc2Z3VHEwcng1azFGMDJXYzFpd0dJSzhIdjNFb1oxalRkY1ZSZTBucXY1V1dTVWkyM1QzWGo2azd5TG9BUTBQOGpPcDQxSGVfX3RGSW5EbGxiRVk4NkZ0S3dUM3JFWHU3cWlJclFvLTgxOGFubTZzZF9GX2FuNFM2Wm9tVWhiT1IwdFAtZ2JGbWowdzdVcG5KcnRmUFZQdkpHaVl4TGx3Y1lvOTB0Q1RsaFRxa3d6cks2X09DUThici1OeFhwNVFiWWJKUlI3dTM4SXI0dktUXzZMRWF6cXlQZ2hsRXVaOFhEa0NQUjR0bUdMRm9INjlrRzFpNk1sUGpNeV9NLVlac2VsVnUyZm9TX3g2c1RvUXBqeGEtQzMwWWE5eXJrbXZlTWdwUTdaeVBrMXFGUjRTd1k0YnkxZUIzMi1Va2hacmJuamE5eFl5c1lyRzFtc2hyWFRvWFFTS3puNnJsWWZPNUxhVlh4dHZYYjJaTWdzaEVrNDhBLXk4a0hVVUhWVWdMRk9FQU9rbUpEUVNQeFRXMFJFZnpwWUttWkI4UmNqR2owWjh1RHZaLXJqaWJnWGZJTHU1UTlhQVNBWE5BNmt2U1kxVjdmem9CaVg4RHdzUjZWMDJmOVRyakdFdkFjT0NlVUR5R2lKU2tabDZlTGh5NmpNdW1IMkZjSGhJYXVqX1BXNkpJRQ?oc=5",
+          "published_at": "Tue, 13 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.smartnews.com"
+        },
+        {
+          "title": "【事故】鉄板の下敷き、解体作業の男性死亡 日本製鉄の呉地区跡地 - 47NEWS",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBwTnZOZHBfTnlSNmNwLUhLQWJrdWlJdjlOYWhpMXdTWEN0bFc4UG01cEExcHFBMC1fd3pHVHh0a001MXp1Zlh4Vm1QWQ?oc=5",
+          "published_at": "Wed, 28 Oct 2026 12:23:00 GMT",
+          "source_url": "https://www.47news.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.009369035870604527,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.058556474191278296,
+        "oil_pressure": 0.23057105801206124,
+        "japan_risk": -0.05692050629371215,
+        "usd_rate_pressure": -0.06913426833979952
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

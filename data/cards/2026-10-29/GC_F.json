@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-29T11:21:45.477752+09:00",
+  "prediction_date": "2026-10-29",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-29T11:21:45.477752+09:00",
+  "market_data_through": "2026-10-28",
+  "reference_price": 4067.60009765625,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.23295039403014334,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.44574609301398654,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.24410570613127822,
+      "direction": "DOWN",
+      "day_change": -0.0017179600039832765,
+      "momentum5": -0.019855398155120496,
+      "trend": -0.021214219609005824,
+      "volatility": 0.15631653340980398
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "米ＦＲＢ、10対2で金利据え置き 議長「物価安定は未達成」 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNNGJ3MUl1T2tzZDRoLTJBNFV0WmpTV28yRHE0S0U2LXVkUThRckM1ZERjV1JGUHJ3Q3djTjl6akkweGpvaE5Oem9NV0ZQeFJlU0tZaTd0ZlREcDBZU29UQm9TZzVmd3ZMM014OWZzSWpsallYQnZnV3N5blB0VGNlem1pUjUtQQ?oc=5",
+          "published_at": "Wed, 28 Oct 2026 18:17:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "米長期金利、一時5.05%台 FOMC受け約1週間ぶり高水準 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1KbTM5bXh6ZDlSZ0o2X2dzdW56QkxnTEZhdjUyYzNfXzFJa3FaTWh6aDJyVnlzRml0MHFDZVFobzJlZC1ZNHp2aW9Lc0pQS20tVHRBWUF0SGVqbHpZY1pSQ0N6TVBaRjBUWV8xOQ?oc=5",
+          "published_at": "Wed, 28 Oct 2026 19:28:46 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "米FRBが政策金利を据え置き - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9xLUczWElJNzBFX2dENVVFWFBNTGxzVi1BUWZKREQ4NjRFX0xreEtGbldUQUVFZVR6NVVwblFuRnZFX3YwN3JZbjl0Uk5xZWVB?oc=5",
+          "published_at": "Thu, 29 Oct 2026 00:13:09 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "米ＦＲＢ、金利据え置き インフレ加速も様子見―利上げ主張で２人反対 - 時事ドットコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1qMDNFRFplTkR4N1VvSGVTVWNEQXhlYW5SWTdaN2VSQ3FEcUZQSEVJNHFJWUotdHlWYm1nSXpnVDJrdDBpVXo5N1A0S2k3b2J2aEhhZWE1c29SX1diWklFNU5Naw?oc=5",
+          "published_at": "Wed, 28 Oct 2026 22:14:00 GMT",
+          "source_url": "https://www.jiji.com"
+        },
+        {
+          "title": "FRBが政策金利を据え置き、2会合ぶり 2人が利上げ主張し反対 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8wbGdGTzQ1b0x4ZTNXWGw2b0ZZMjZFZE5vc3pZa29ibUpIU3I0bmpYTWkyZnhkMGc1SEx2U1Z1NkpJZGdROC1PRlFUSWtPam9CN2VSODdWemg2aWhHWHY0WWl1Zy1SSGc?oc=5",
+          "published_at": "Wed, 28 Oct 2026 18:13:56 GMT",
+          "source_url": "https://www.asahi.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.021390092405827593,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.058556474191278296,
+        "oil_pressure": 0.23057105801206124,
+        "japan_risk": -0.05692050629371215,
+        "usd_rate_pressure": -0.06913426833979952
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

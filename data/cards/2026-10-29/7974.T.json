@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-29T11:21:45.477752+09:00",
+  "prediction_date": "2026-10-29",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-29T11:21:45.477752+09:00",
+  "market_data_through": "2026-10-29",
+  "reference_price": 8224.0,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.03783808183281286,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.47920106417052394,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.05357753890032674,
+      "direction": "DOWN",
+      "day_change": -0.010468054385753822,
+      "momentum5": -0.054603977468674514,
+      "trend": 0.02059837709756218,
+      "volatility": 0.23909754692002078
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "『Minecraft』が、より鮮やかなグラフィックにアップデートしてNintendo Switch 2 に登場。本日より発売開始。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOSmdSZDB2dDMzU2VxbG9sY3V2SElxQ2Rnby1TSGFxeEpEeDAyNXVnVTlzaFMtODlpTkpKbEtuYjFtYjloZWRvOGFla3hBWktwT21zYkVJZHh2X1hBZjlReTJIWGF0X0t6ZVRNMExoWTJVLV9tNGV2ZEVBV0xMWVNDR0ZIbGUyZw?oc=5",
+          "published_at": "Wed, 28 Oct 2026 01:08:14 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "Indie World（インディーワールド） 2026.10.28 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5QcDJWNzlrSVBpUkp3aGZxdVZUQ3ZCZVB4Um1yRkl5MmNQZjR0VEQ4dU1pc2xPQ1F0N3g1VHVsNVFfbHJ3djdMLXdMSkJubThiWW5JQV9SMlNUeW9qdWttVk9GVWRnQ3NCMTk0?oc=5",
+          "published_at": "Tue, 27 Oct 2026 14:04:19 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『オバケイドロ２』が10月26日から期間限定で遊び放題。Nintendo Switch Online加入者限定イベント「いっせいトライアル」開催。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPUGpVTWkxUFZrem5HQWFaSFVyc1pFY1hhU0ZwQkcyTUx0azd3QVZmMHVrTVBZN2FmU1E2UzAwWFJ1UlNicmpHWmlWOHlmSVJDUzA3b2RGRFNENVY1NUswS3FZZ3lTbkFGY3FlakMwcE9yUWRMVW5vOU1qRWRTYmlrNUV6SHZYZw?oc=5",
+          "published_at": "Fri, 23 Oct 2026 01:58:19 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "【10月27日追加】「ファミリーコンピュータ＆スーパーファミコン＆ゲームボーイ Nintendo Classics」に追加タイトルを配信開始。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQcFhfRGZWbVZZTTE4Q3BWa3gzOE5HbXNRNnlMMk5IS1hRRnVSSlpyYll2ZXdhNFpuakpJQ0V6bElzbFJESjhLYVZ0Rm5IR0gwTUJSUlZOd3V6LVZFMUd5UVRZLTljRWVLNTdrYzN5dG9nWmdmSXhWVlJQeWNMZ19PRzA0TFFUQQ?oc=5",
+          "published_at": "Fri, 23 Oct 2026 01:17:52 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "Nintendo Switch 2『ゼルダの伝説 時のオカリナ』の紹介映像を公開。新要素「万魔殿」などもご紹介。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOUtvZ2U3amdlNXVNcDc1dTN0VGF6aTBJVmJmakVXOFRnTklfWXptMGNOcVlsRWRuckpIcGpVVU1fdUxCdUlMQkZMYVRwd3hlU2ZUeFdnbnR2RnZhV0pKSlQ1WFBFeUs0a0JoVWRWbS0yTDBDeFZDM1BnQ0k1LXFVQnZfSjhIdw?oc=5",
+          "published_at": "Thu, 15 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.009369035870604527,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.058556474191278296,
+        "oil_pressure": 0.23057105801206124,
+        "japan_risk": -0.05692050629371215,
+        "usd_rate_pressure": -0.06913426833979952
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

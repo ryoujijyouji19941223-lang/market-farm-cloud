@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-29T11:21:45.477752+09:00",
+  "prediction_date": "2026-10-29",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-29T11:21:45.477752+09:00",
+  "market_data_through": "2026-10-29",
+  "reference_price": 158.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.4798234382877233,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.2743465826411764,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.4952520020735668,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5555555555555556,
+    "heldout_signals": 45
+  },
+  "evidence": {
+    "price": {
+      "score": -0.7035560042751949,
+      "direction": "DOWN",
+      "day_change": -0.012499999999999956,
+      "momentum5": -0.11731843575418999,
+      "trend": -0.0506292069066433,
+      "volatility": 0.4744636731041843
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "KLab HOMMA Middle Eastが グローバルに活躍する空間デザイナー秋葉達雄氏(株式会社T&C JAPAN)とのパートナーシップを発表 〜建築、デジタル、LED技術が融合するコンセプト動画を公開〜 - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5nMEZUTFhPT1hXdmZCdnZNMEVmZnh5N3JiM2NPTXBjNzBrM1dwWWhkTVN3WC1aSTJXU2I5YjVkMjg1S3pUZnItR1lsc2VfdVd3VHRFQVg3V0VlMi11NmM3NllXZ2s?oc=5",
+          "published_at": "Wed, 19 Aug 2026 07:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        },
+        {
+          "title": "KLab（3656）、IP／エンターテインメント・AI・ブロックチェーンの多角化経営を推進 AI自動取引システムは実運用間近 - ログミーFinance",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5WSFJEczFlMWo4WTVUOVVKdzVfajlDZndkTWU2amlMaG1QcnNFME12R0NBZmtLY3J4ZG14Z2JsNFR6NTZESmxUdjhfTTZmRjN6c0E?oc=5",
+          "published_at": "Tue, 16 Jun 2026 07:00:00 GMT",
+          "source_url": "https://finance.logmi.jp"
+        },
+        {
+          "title": "KLab、HOMMAとドバイに合弁会社設立…100兆円規模へ拡大見込むスマートホーム市場に参入 - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE8xYUVDT3p2dll5MEU1WTlTWTZiVlhVaV85WDBreDVBOTFiOTM0MnVjMXFXdlB1eEQxMzJab2lONHllMmdm?oc=5",
+          "published_at": "Thu, 16 Jul 2026 07:00:00 GMT",
+          "source_url": "https://gamebiz.jp"
+        },
+        {
+          "title": "ＫＬａｂ[3656]：KLab、RF技術企業とUAEにおける対ドローン防衛システムの導入推進に向け覚書を締結 2026年7月6日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5FanN3bUhQR1NaeHlCSEwwZHZncFlwLWVOcHhrZExaLU13UUZ4Tm8zUXVRTWY0bmZVZU5aMU5tMW5ULUV6UWFFNFEzZEM4SmlEVzNDSzUzZUJVaC1RNklTMUtDV0FNcHh3LVE?oc=5",
+          "published_at": "Mon, 06 Jul 2026 07:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "KLab HOMMA Middle East UAEにオフィスを開設し中東展開を本格始動 | ニュース | KLab株式会社 - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5NR0pJU2hSbXg4M1ZHUUtXQklwTHBHZjZQaUpuSUdvZkJiT2pxckVjYWs3VHdRMGRoX01nZG9wLXFyU3JtRkVUUDV3dEtQSUFtd003WEFxTG1RQi1zZjBwNDJVVjE?oc=5",
+          "published_at": "Wed, 09 Sep 2026 07:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.009369035870604527,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.058556474191278296,
+        "oil_pressure": 0.23057105801206124,
+        "japan_risk": -0.05692050629371215,
+        "usd_rate_pressure": -0.06913426833979952
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

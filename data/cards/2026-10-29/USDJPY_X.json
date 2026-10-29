@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-29T11:21:45.477752+09:00",
+  "prediction_date": "2026-10-29",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-29T11:21:45.477752+09:00",
+  "market_data_through": "2026-10-29",
+  "reference_price": 157.62100219726562,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.11650939061156539,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.5306761072666311,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.044606258230290935,
+      "direction": "DOWN",
+      "day_change": -0.002354496892042812,
+      "momentum5": -0.0032314874578550645,
+      "trend": -0.003963741049653247,
+      "volatility": 0.051925070919845294
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "どうなる10月日銀会合と展望レポート？！ 気になるドル円と日本株の動き方 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9QRnFzbTlidWd3MmhnQ0EyU0FzWTY2czNRc0JvY3gzSEdFYjdXU0VPWnlMc2ZLZjU2MFVXLUNWQUFsMnRreFNxYkdZLW85RFBXckdxNlVwcVMzUlQtLWJwZ21Idw?oc=5",
+          "published_at": "Thu, 29 Oct 2026 01:00:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "米ＦＲＢ、金利据え置き インフレ加速も様子見―利上げ主張で２人反対 - 時事ドットコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1qMDNFRFplTkR4N1VvSGVTVWNEQXhlYW5SWTdaN2VSQ3FEcUZQSEVJNHFJWUotdHlWYm1nSXpnVDJrdDBpVXo5N1A0S2k3b2J2aEhhZWE1c29SX1diWklFNU5Naw?oc=5",
+          "published_at": "Wed, 28 Oct 2026 22:14:00 GMT",
+          "source_url": "https://www.jiji.com"
+        },
+        {
+          "title": "米FRBが政策金利を据え置き - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9xLUczWElJNzBFX2dENVVFWFBNTGxzVi1BUWZKREQ4NjRFX0xreEtGbldUQUVFZVR6NVVwblFuRnZFX3YwN3JZbjl0Uk5xZWVB?oc=5",
+          "published_at": "Thu, 29 Oct 2026 00:13:09 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "FRBが政策金利を据え置き、2会合ぶり 2人が利上げ主張し反対 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8wbGdGTzQ1b0x4ZTNXWGw2b0ZZMjZFZE5vc3pZa29ibUpIU3I0bmpYTWkyZnhkMGc1SEx2U1Z1NkpJZGdROC1PRlFUSWtPam9CN2VSODdWemg2aWhHWHY0WWl1Zy1SSGc?oc=5",
+          "published_at": "Wed, 28 Oct 2026 18:13:56 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "東京為替：ドル・円は反発、158円台を回復 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9NQTNSMS12TlFMbS1RYkxZejRQNGlLSTNMekxvNWtpR2dNSGxNYkxfUlVhZ01tc3lYQ1NfeTBJQV9lX3JReXNjcGd1Vi05c0c0cUE?oc=5",
+          "published_at": "Thu, 29 Oct 2026 00:32:20 GMT",
+          "source_url": "https://s.kabutan.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.007847566766450228,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.058556474191278296,
+        "oil_pressure": 0.23057105801206124,
+        "japan_risk": -0.05692050629371215,
+        "usd_rate_pressure": -0.06913426833979952
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
