@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-30T11:33:01.825992+09:00",
+  "prediction_date": "2026-10-30",
+  "symbol": "EURJPY=X",
+  "name": "ユーロ円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-30T11:33:01.825992+09:00",
+  "market_data_through": "2026-10-30",
+  "reference_price": 176.36099243164062,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.06288570757641711,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5169353898559598,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.02358993126833358,
+      "direction": "NEUTRAL",
+      "day_change": 0.001692512825579584,
+      "momentum5": 0.004350827799103563,
+      "trend": -0.005124702467443898,
+      "volatility": 0.05782252020421138
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "ユーロ/円【EURJPY】：外国為替相場FXレート・チャートをリアルタイム表示 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1pREZlRmliZXhfWS15YlhsbFYzdjdIYkVVeXpwU0Z1T2U0S1lVYzB4U0RkUGtFcEhxeUhZa2M4Y1JRcVJGNTFEdkpBaU9nLTV4NXVKaW5R?oc=5",
+          "published_at": "Thu, 29 Oct 2026 23:34:46 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "ラガルドＥＣＢ総裁、来年2月に早期退任 「金融政策以外の自由な発言」目指す - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1vOGVBUnpyQm12aWlKaXRKYjVBTFhPbHZDeXNNN1dxdU1vUHNXRnZ5dnZjeWh2N3N2OHhWRE5QeU9Tc1hBUC12YmM1ZEVMaF8zSkEzb1lXUzA5S2NieWJBcV9BSlYzVWxfZXFuSTJqVkNiUDFwWHZZQUJWal9Cdw?oc=5",
+          "published_at": "Thu, 29 Oct 2026 16:44:09 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀会合、2%物価目標に到達と表明へ 政策金利は据え置きの公算 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBBSU1JTFFNMFVxUWhTZ0VVRGF5aHI3aldFMXh5OHFZbDdJUUt6ZnJEVUY1R0ctaUxXdks1OUtZYmhRNzJCMWJua2duNGFTQkdhbzBuSXF3bGVpRkIxQ2V6NzdOVU1tb1Ixb09xWA?oc=5",
+          "published_at": "Thu, 29 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "ドル円午前の為替予想、日銀は金利据え置き濃厚 焦点は12月利上げ示唆の有無 2026/10/30 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9BUF9weDVDWWgzT1h3MnpvbmJBaFFfeTRhTXEtUV9TcGtmMGE4dU5zdWhhdWhVZ0luOHdKZXN2TlJKUmpwTGt3dkRjV200V0cySmdja0c1Qlctck53QUFQRldwRQ?oc=5",
+          "published_at": "Thu, 29 Oct 2026 22:38:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀、昼すぎに金融政策発表 物価「2%到達」の言及の仕方に注目 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9uRzJpX2N2ZVRKWGVjTVNmeTExdlpsaXdUQlJqRm94cFRGS2JKUmZ2ZnBtZEZTdUEwVHVCUmNwUkVfcEU1Ykh6MEplZ2ExLTNiY3RXQkE3WTBheFhlSGsxX0xGSzg4Slk?oc=5",
+          "published_at": "Thu, 29 Oct 2026 21:00:00 GMT",
+          "source_url": "https://www.asahi.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.028963695426335125,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.39952117239130747,
+        "oil_pressure": 0.22469092016924375,
+        "japan_risk": -0.007162488880459339,
+        "usd_rate_pressure": 0.03314752326812087
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

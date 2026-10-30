@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-30T11:33:01.825992+09:00",
+  "prediction_date": "2026-10-30",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-30T11:33:01.825992+09:00",
+  "market_data_through": "2026-10-29",
+  "reference_price": 4018.800048828125,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.24108485934185944,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.46098281458280127,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.21088695026689658,
+      "direction": "DOWN",
+      "day_change": -0.008095579039772205,
+      "momentum5": -0.010245260200014483,
+      "trend": -0.02163979452091791,
+      "volatility": 0.15734004433223187
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀会合、2%物価目標に到達と表明へ 政策金利は据え置きの公算 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBBSU1JTFFNMFVxUWhTZ0VVRGF5aHI3aldFMXh5OHFZbDdJUUt6ZnJEVUY1R0ctaUxXdks1OUtZYmhRNzJCMWJua2duNGFTQkdhbzBuSXF3bGVpRkIxQ2V6NzdOVU1tb1Ixb09xWA?oc=5",
+          "published_at": "Thu, 29 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "初級- ニュースが分かる！利上げ・利下げとは？政策金利と身近なお金のつながり - SBI証券",
+          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNTHpPUUdvRVdjMmRFVFdBdVllakFER213ZE5NNThzWUNmUkNTWGZLQUs0cnlIWGROOG13TENwZ1RQMUx4a3V2ZmFWVmRGaUxlR0phTHJnX2xaWm11WWhId3RCeVhuUU52WGpMc2ZCVG5SVFI0LV81ZG9zODcxb2JHQUxPa2FFdWUySGF6cA?oc=5",
+          "published_at": "Thu, 29 Oct 2026 04:06:32 GMT",
+          "source_url": "https://go.sbisec.co.jp"
+        },
+        {
+          "title": "ＥＣＢ金利据え置き、インフレ上振れリスク警戒 12月利上げに含み | ロイター - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQMDc1WWhObFByaC1kX3JrMFFuakw0cmFOVlF4cVRzTjZ3eTF5RFdEUFNadlB5UUtWSWctVGM4Y0phWllRV0dpVVZTdndYaTdQR1ZwSzVhbnJ4c0xtdHduTzNkNnRZZXZzbVl0dUtsQlliOG95MEprdzBrLWZnUm05Y084Z3FrUQ?oc=5",
+          "published_at": "Thu, 29 Oct 2026 15:40:27 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "定期預金金利を引き上げ みずほ、三井住友信託：時事ドットコム - 時事ドットコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBqQTNsdEZncFZRTDlMcy1ONUFoRDh1dXBtcTJ0NS1NclRVU2pUWjUxM0ZZY3RpaXpZZzBnd1d6eHdISjZSYVpJZmxYN05NLTZUbDJOVG5WVG90eUlvaTFVeDFmQQ?oc=5",
+          "published_at": "Thu, 29 Oct 2026 10:01:00 GMT",
+          "source_url": "https://www.jiji.com"
+        },
+        {
+          "title": "ドル円午前の為替予想、日銀は金利据え置き濃厚 焦点は12月利上げ示唆の有無 2026/10/30 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9BUF9weDVDWWgzT1h3MnpvbmJBaFFfeTRhTXEtUV9TcGtmMGE4dU5zdWhhdWhVZ0luOHdKZXN2TlJKUmpwTGt3dkRjV200V0cySmdja0c1Qlctck53QUFQRldwRQ?oc=5",
+          "published_at": "Thu, 29 Oct 2026 22:38:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.08454488773579842,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": -0.39952117239130747,
+        "oil_pressure": 0.22469092016924375,
+        "japan_risk": -0.007162488880459339,
+        "usd_rate_pressure": 0.03314752326812087
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

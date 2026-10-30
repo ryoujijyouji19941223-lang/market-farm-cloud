@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-30T11:33:01.825992+09:00",
+  "prediction_date": "2026-10-30",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-30T11:33:01.825992+09:00",
+  "market_data_through": "2026-10-30",
+  "reference_price": 1252.5,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.11731835262449311,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.4466199793853718,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.15842624189279667,
+      "direction": "DOWN",
+      "day_change": 0.019121236777868145,
+      "momentum5": -0.03875671527244817,
+      "trend": -0.000593143263869722,
+      "volatility": 0.27082937253743516
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "カフェ併設『サンリオハウス』東海エリア初店舗が名古屋パルコにオープン！予約方法・注目商品を公開 - 名古屋情報通",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1HMTlEOWlCTHVXZ2E4UHprREFqUTFzLThtc01uR0E4TU1GZXhBdW92eG83Si14ZjZLUmxkRkFDN2x0d3hLY1o1cUJuaEhfb0tCVHc?oc=5",
+          "published_at": "Fri, 30 Oct 2026 01:13:49 GMT",
+          "source_url": "https://jouhou.nagoya"
+        },
+        {
+          "title": "サンリオがドラマ「VIVANT」とコラボ終了を発表 声明で謝罪 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE04bzBJLUdtREdNdGUzdGVHanl4U3VqZGZTTjNHRHUwLW13VHlsRkZLM1F5ZjN6TjZkTFB0MzQxOUZTZ2hMOGJJV2E0aWQzdXQ1LXMzeDlrdXBxZVEyN1hlYzkxZFBqc1k?oc=5",
+          "published_at": "Thu, 29 Oct 2026 08:50:52 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "サンリオ、「VIVANT」とのコラボを中止　中国でドラマへの批判が強まり - BBC",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBZWVF0VjlyZk1zSjRIRERSRzJNbW9rUWFIUG1USldDRmdWZ1psZTVpamRGY1hvaUJic3gxbGsyN2h5ay1paU5ZWG50WGppSEtfMmJWRDViZDhncFFmTnJyTNIBZkFVX3lxTE96b1REOTlldlhyZ3NHWXpZbVlrYXVWa2ZRc3FfaXdMOGg4REg4cVZHcDlSTFpURU1OcUR6MzNNVS01anhOdkt5a0ZSQjhBNm5WdEM2Skh2dnNwU3NKRHZNZG9YOW9BZw?oc=5",
+          "published_at": "Thu, 29 Oct 2026 08:15:47 GMT",
+          "source_url": "https://www.bbc.com"
+        },
+        {
+          "title": "サンリオ、「ＶＩＶＡＮＴ」とのコラボ終了 中国で強まる批判に対応 - 時事ドットコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBzeXpGNHRrelMzdGtJblRFejJWY3NnLWkzV1NPZ3hBWktwV1ZzSDVlN0FUbUZjbF9BYW4zUW1KaXFSMTRueHluX0VobDkyQXZIS292aERjWVA1Vl9uV09CRFliYw?oc=5",
+          "published_at": "Thu, 29 Oct 2026 09:53:00 GMT",
+          "source_url": "https://www.jiji.com"
+        },
+        {
+          "title": "サンリオ中国法人、VIVANTコラボ中止 「理念にそぐわない」 - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBfeFlVYXltdDVBaUZtUVV4TGtycDRUUGpiZjFhd0x0OHJ4SjJ6Y29uOWNQYlFFQms3TlJadzdsOG5tVm9uTkpKY29jRzh4azhC?oc=5",
+          "published_at": "Thu, 29 Oct 2026 10:06:41 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.0639233875826092,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.39952117239130747,
+        "oil_pressure": 0.22469092016924375,
+        "japan_risk": -0.007162488880459339,
+        "usd_rate_pressure": 0.03314752326812087
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

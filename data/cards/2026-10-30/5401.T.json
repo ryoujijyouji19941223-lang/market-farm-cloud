@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-30T11:33:01.825992+09:00",
+  "prediction_date": "2026-10-30",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-30T11:33:01.825992+09:00",
+  "market_data_through": "2026-10-30",
+  "reference_price": 656.2999877929688,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.09491202985535888,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.552012773254089,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.12547576723230514,
+      "direction": "UP",
+      "day_change": -0.004399308799089785,
+      "momentum5": 0.00351680090667994,
+      "trend": 0.014009169855742742,
+      "volatility": 0.20498870284857926
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "日本製鉄(株)【5401】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9CVmx5TUl6TGxMX0lYTnVadHZ1b256QUpCY1ctQWx5ZFFaOEtGZ0ZkV0FuYlFvM3hDVF91b0J6Tk9kOFZNSVpPSWxBTUNkOUN0S1Y3TmszM2dNMmVHU2xB?oc=5",
+          "published_at": "Thu, 29 Oct 2026 06:53:36 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日本製鉄、ＪＦＥなど鉄鋼株に資金流入、米鋼材市況が４年半ぶりの高値圏突入 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1PalhFcW1NNmdHM29RWjk3bGpUWDUwV0JYS1BkajZCSXRMZ3JwRXI2aW9Sdl9TUHdiRnJXRnpzWHY2cTdrTmNEcDJYb1Y3cVVsRW5zcF9ydGRsWEJhOEV1WQ?oc=5",
+          "published_at": "Tue, 20 Oct 2026 02:15:00 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "生産ライン 競争力の源泉（136）日本製鉄・名古屋製鉄所 圧延・温度の制御性向上 - 日刊工業新聞",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9oWlB3TEFvNERMcnRBZkFGdzJHT08wNmpCZnlXakRSVHRKckZ0ZFNXZU1fcFJTOXZmck1qd3dDMDU4RUp0eGI5UjJBLUlBN2JNVXVmTE5oc2w?oc=5",
+          "published_at": "Wed, 28 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkan.co.jp"
+        },
+        {
+          "title": "鉄鋼大手 日本製鉄とJFEの決算比較 米国巨額買収で稼ぐ日本製鉄と事業多角化・構造改革を進めるJFEの違い - SmartNews",
+          "link": "https://news.google.com/rss/articles/CBMinwVBVV95cUxQajZmTWQ3QVdnMEJ2VWpWSUZtUFFyc3N3VWJpRDlTeDlnMTJ0eVh1UkFHNkt3c25HaThmSHBSTDZlU3VIVmFvSUlqUHBFaWpCVzVXMjJGZ08xc0wyLW9zbzI1UERVdkpOdFJqWXZLTnFUWmpZbTJBa0twQzZCWVBkY09XWk15TXhZcEJJaWxfSnE1NjJwZm9WMHRHc2Z3VHEwcng1azFGMDJXYzFpd0dJSzhIdjNFb1oxalRkY1ZSZTBucXY1V1dTVWkyM1QzWGo2azd5TG9BUTBQOGpPcDQxSGVfX3RGSW5EbGxiRVk4NkZ0S3dUM3JFWHU3cWlJclFvLTgxOGFubTZzZF9GX2FuNFM2Wm9tVWhiT1IwdFAtZ2JGbWowdzdVcG5KcnRmUFZQdkpHaVl4TGx3Y1lvOTB0Q1RsaFRxa3d6cks2X09DUThici1OeFhwNVFiWWJKUlI3dTM4SXI0dktUXzZMRWF6cXlQZ2hsRXVaOFhEa0NQUjR0bUdMRm9INjlrRzFpNk1sUGpNeV9NLVlac2VsVnUyZm9TX3g2c1RvUXBqeGEtQzMwWWE5eXJrbXZlTWdwUTdaeVBrMXFGUjRTd1k0YnkxZUIzMi1Va2hacmJuamE5eFl5c1lyRzFtc2hyWFRvWFFTS3puNnJsWWZPNUxhVlh4dHZYYjJaTWdzaEVrNDhBLXk4a0hVVUhWVWdMRk9FQU9rbUpEUVNQeFRXMFJFZnpwWUttWkI4UmNqR2owWjh1RHZaLXJqaWJnWGZJTHU1UTlhQVNBWE5BNmt2U1kxVjdmem9CaVg4RHdzUjZWMDJmOVRyakdFdkFjT0NlVUR5R2lKU2tabDZlTGh5NmpNdW1IMkZjSGhJYXVqX1BXNkpJRQ?oc=5",
+          "published_at": "Tue, 13 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.smartnews.com"
+        },
+        {
+          "title": "日本製鉄の株価続伸 米同業が好決算、USスチールの貢献期待広がる - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5xOU1GRnYwR2ZNZ0FlUFBiemRhRkVaWWZQOWVvaTFGeVhfOEYyVGpMU2U0X3UxM1BpYTh5VG1HWEhYQ3d3Z3NzWkUtR2FBeENQZ1M3NzlMdHpTRk1tLWJxMHo5MXhsQkNBVE94OA?oc=5",
+          "published_at": "Tue, 20 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.0639233875826092,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.39952117239130747,
+        "oil_pressure": 0.22469092016924375,
+        "japan_risk": -0.007162488880459339,
+        "usd_rate_pressure": 0.03314752326812087
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

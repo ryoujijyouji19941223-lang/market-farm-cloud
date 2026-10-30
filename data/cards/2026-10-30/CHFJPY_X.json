@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-30T11:33:01.825992+09:00",
+  "prediction_date": "2026-10-30",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-30T11:33:01.825992+09:00",
+  "market_data_through": "2026-10-30",
+  "reference_price": 191.83099365234375,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.04703499632874045,
+      "factor_agreement": 0.5,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5150438798878296,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.02345276730417377,
+      "direction": "NEUTRAL",
+      "day_change": 0.006422793548146899,
+      "momentum5": 0.0051243461849468375,
+      "trend": 0.0003699604888089958,
+      "volatility": 0.045108802509833554
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀会合、2%物価目標に到達と表明へ 政策金利は据え置きの公算 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBBSU1JTFFNMFVxUWhTZ0VVRGF5aHI3aldFMXh5OHFZbDdJUUt6ZnJEVUY1R0ctaUxXdks1OUtZYmhRNzJCMWJua2duNGFTQkdhbzBuSXF3bGVpRkIxQ2V6NzdOVU1tb1Ixb09xWA?oc=5",
+          "published_at": "Thu, 29 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "ドル円午前の為替予想、日銀は金利据え置き濃厚 焦点は12月利上げ示唆の有無 2026/10/30 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9BUF9weDVDWWgzT1h3MnpvbmJBaFFfeTRhTXEtUV9TcGtmMGE4dU5zdWhhdWhVZ0luOHdKZXN2TlJKUmpwTGt3dkRjV200V0cySmdja0c1Qlctck53QUFQRldwRQ?oc=5",
+          "published_at": "Thu, 29 Oct 2026 22:38:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "情報BOX：日銀決定会合の公表内容と総裁会見・声明のポイント（2020年以降） - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5LUEJVYlhpRE45QlpUUXo1SU9WZTlyYkh6Y2Nwc3BGWFFxdFBuSFRwOWdCWVBWSkd5MEhISzk0Qmptdk5LeUZ0UktTcDRRWTl6Z1J3U3dNR0dSc1VRUGd1TFZnUF9Tc1EzbDZORG5TS2tHNG1oOTJibWl2Tldidw?oc=5",
+          "published_at": "Fri, 30 Oct 2026 00:27:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀、昼すぎに金融政策発表 物価「2%到達」の言及の仕方に注目 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9uRzJpX2N2ZVRKWGVjTVNmeTExdlpsaXdUQlJqRm94cFRGS2JKUmZ2ZnBtZEZTdUEwVHVCUmNwUkVfcEU1Ykh6MEplZ2ExLTNiY3RXQkE3WTBheFhlSGsxX0xGSzg4Slk?oc=5",
+          "published_at": "Thu, 29 Oct 2026 21:00:00 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "【為替】米ドル／円「日銀相場」の特徴 | 吉田恒の為替デイリー - マネクリ",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5oRUhvT0ctUzJOSUFXN19nQW9pSDBkZ0d4S29FZXFFbGZkSnNFNlFWUWFkZzk3c082bXNnWjBBb2lBaG5Tak9iSXVFSVhvVkF5ZTFxTA?oc=5",
+          "published_at": "Fri, 30 Oct 2026 00:13:00 GMT",
+          "source_url": "https://media.monex.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.06558076374601524,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": -0.39952117239130747,
+        "oil_pressure": 0.22469092016924375,
+        "japan_risk": -0.007162488880459339,
+        "usd_rate_pressure": 0.03314752326812087
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

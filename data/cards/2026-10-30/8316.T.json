@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-10-30T11:33:01.825992+09:00",
+  "prediction_date": "2026-10-30",
+  "symbol": "8316.T",
+  "name": "三井住友FG",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-10-30T11:33:01.825992+09:00",
+  "market_data_through": "2026-10-30",
+  "reference_price": 3209.0,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.0407895978590856,
+      "factor_agreement": 0.5,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.48838804248164736,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5342968431341932,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5606060606060606,
+    "heldout_signals": 66
+  },
+  "evidence": {
+    "price": {
+      "score": -0.04588395547307973,
+      "direction": "DOWN",
+      "day_change": -0.011093990755007721,
+      "momentum5": 0.030507385998715497,
+      "trend": -0.020993217575860146,
+      "volatility": 0.3155880684237948
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "SMBCグループ、「SMBC Wealth」を本格展開 銀証信の融合で富裕層向け提案を強化 - ペイメントナビ",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9YOS0xSmh1aDZ6X0M2alFjQTdZLVN5NWJzMTZmdk42S2JXbFF5cVBRNjVSWFJEak1tNzdyZXdMTjRoc0tWOVQ4ZExnN3ZCNEt1Yld3X3dhTlc3MlU?oc=5",
+          "published_at": "Sun, 25 Oct 2026 23:30:00 GMT",
+          "source_url": "https://paymentnavi.com"
+        },
+        {
+          "title": "SMBCグループの個人外貨預金残高、合計3兆円に到達（株式会社SMBC信託銀行） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1nWE5GVEFpOVl2Vjh3V0R1TnZPQUhPblBfMi04VEV1NDVOR2tHWTQyLUQzM2Exd3AxSFZ1ejY4OXpPOF92SkRRUXRyMUdZOC1GTkc4WHpZdFFCM1FTcXhETjF1YTcwVFNwZUtBcTVuUXVETFRjNU1sSlhOamE4R28?oc=5",
+          "published_at": "Mon, 26 Oct 2026 01:45:07 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "三井住友FGなど、SMBCグループ共通のウェルスマネジメントビジネスブランド「SMBC Wealth」を本格展開 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB1QWh6VzRfTEM5aTc3RUZRbzhBXzdpVjlaUThuaE9DbWg1ZWNMaEU3YUp5WVY0Q21vNE5DdW5QX1FGaTU4b3Q2aWg1S05oOXdLLU5mUVUyNWROUE1HWWp3Qmc5YkJaTFVheW5DNw?oc=5",
+          "published_at": "Thu, 22 Oct 2026 02:03:22 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "SMBCグループ、富士通、ソフトバンク、健康・医療分野での業務提携に合意し、持続可能な医療の実現に向けて国産ヘルスケア基盤を構築〜国民の健康寿命延伸と医療機関の経営効率化、国の医療費抑制に寄与〜 | 企業・IR | ソフトバンク - ソフトバンク",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9Xd1lzblUxbmh1OFNEd3Q2S2R0QS1oR0E5MHplb3FVeng2QVk3al80b25FTjF6cVQ1WmQ3ZDctbE5udFdPZHhTLXFIeDdBNi1NSFlLcktSa2hNNDhHZ0IwVWx4VjZnV0NwdUFxNkw2QQ?oc=5",
+          "published_at": "Tue, 19 May 2026 07:00:00 GMT",
+          "source_url": "https://www.softbank.jp"
+        },
+        {
+          "title": "SMBCグループの財務部門変革 - EY",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbFlGYm5aNW5YT2FDcXJkb1pXalMwSi1idFQ0Sl80NGhybzVHcllReUJiaG5uX2w3ekI4amEtNVlXX1QxOFZMX3ZHeDZ0NTNZd18yQzFMdXptSDVuRXAwOHROTkl6VGRudExBSnBMZF9OYnJOSUtMYUFNMVJBSmxXZ0VxT3hkcjNGZnU2NkhvaWxsdVF6WWlXOVhFaVM5N3JxaFVUMWFhMEh1MUgxaXc?oc=5",
+          "published_at": "Mon, 29 Jun 2026 07:00:00 GMT",
+          "source_url": "https://www.ey.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.0639233875826092,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.39952117239130747,
+        "oil_pressure": 0.22469092016924375,
+        "japan_risk": -0.007162488880459339,
+        "usd_rate_pressure": 0.03314752326812087
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
