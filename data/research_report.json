@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T08:28:28.735340+00:00",
+  "generated_at": "2026-11-02T20:43:50.783695+00:00",
   "replay_months": [
     "2022-10",
     "2022-11",
@@ -4137,7 +4137,7 @@
     "Adjusted daily price histories are not archived as-published vintages.",
     "Market availability is conservatively buffered rather than verified to dissemination time."
   ],
-  "live_settled_rows": 360,
+  "live_settled_rows": 361,
   "note": "Diagnostics only. These findings must not auto-change the production model.",
   "by_asset": {
     "1736.T": {
@@ -5044,20 +5044,20 @@
     "GC=F": {
       "name": "金",
       "summary": {
-        "observations": 30,
-        "signals": 13,
+        "observations": 31,
+        "signals": 14,
         "flat_forecasts": 16,
         "abstained": 1,
-        "coverage": 0.9666666666666667,
-        "directional_coverage": 0.43333333333333335,
+        "coverage": 0.967741935483871,
+        "directional_coverage": 0.45161290322580644,
         "correct": 9,
-        "accuracy": 0.6923076923076923,
-        "all_forecast_accuracy": 0.3448275862068966
+        "accuracy": 0.6428571428571429,
+        "all_forecast_accuracy": 0.3333333333333333
       },
       "result_types": {
         "動きを見逃した": 16,
         "一致": 10,
-        "方向を逆に読んだ": 3,
+        "方向を逆に読んだ": 4,
         "動くと読んだが横ばい": 1
       }
     },
