@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-02T11:22:59.195130+09:00",
+  "prediction_date": "2026-11-02",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-02T11:22:59.195130+09:00",
+  "market_data_through": "2026-11-02",
+  "reference_price": 1233.5,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.18113549934529494,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.402590007784911,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.26618970065161157,
+      "direction": "DOWN",
+      "day_change": -0.016347687400319,
+      "momentum5": -0.044909020518776654,
+      "trend": -0.011640295150534663,
+      "volatility": 0.2773395133539071
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "姉にもらった“サンリオまんじゅう”→1個だけよく見ると……「いや誰よww」 謎のキャラに「今年1番笑いました」（ねとらぼ） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBudDNSMDdUYTczQ0ZKYWw2SkY4ZmJRcE1qbmNPallFZ3hncmREWC1wRVo2RFdLcHAyMW1jQWlSblVfcmF5Tnc5MkJxNVBtbWREMGN5d3BSVzZ3LUtsT2xiRWNkc0dzc0hmRkg1UUZ3N1ZaWmg3VjhlcTk0R2JMWEE?oc=5",
+          "published_at": "Sun, 01 Nov 2026 22:00:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "全国初となるカフェブースを併設した「サンリオハウス」が、名古屋パルコ西館に10月29日誕生！ - ウォーカープラス",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1pZmJoeE9zTVBmNzEzUTZwSXpkR0ZIbVE4WWs5OFNSdTRxWVI2X1N3NFFaUDFRVWlKbWRYODRNaHlsR0ZsTFdhVGdLMEc2VmxqRmVvSXJn0gFbQVVfeXFMTlg0bkdOS1A1RVllZDNBODVreGNybGVScE5aeDFDNEJrdUVEbWhLWWRRaC0yQTlBMjFNZEdkWXRVa2xHMnZ5dDk0b0c3WjVKamJjNGVJdHFmdEdUMA?oc=5",
+          "published_at": "Thu, 29 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.walkerplus.com"
+        },
+        {
+          "title": "アベイルで「サンリオキャラクターズ」ソックスが11月7日発売！ハローキティたちをデザイン、巾着セットやぬいぐるみ付などさまざま用意 - インサイド",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5uUzJDSUh0MnFZbjF0WEVhbmVRN21wdDFHWFhOdWoxdnlrM1Q2STd6ZG9zNU91b0FpZEtUUjF3Y0lPQnFvNm5kTG9HZFQ4VERrOHh1aGpCNmRacG5NX1BiUUE3cnZfTVVYN2c?oc=5",
+          "published_at": "Mon, 02 Nov 2026 01:30:03 GMT",
+          "source_url": "https://www.inside-games.jp"
+        },
+        {
+          "title": "み～んなあつまれ、サンリオキャラクターの世界へ。『サンリオ パーティランド』がNintendo Switch 2 / Nintendo Switchで本日発売。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOWVaQzlEaDFsTXZLUVhMLWpiTE5MTlU5UjJjVERLWFk5S1VLVmFUYTdNWUdpOFR1SUMzYXpqVm5kRU9oZGRCM3lMUDVOTmpfUURubElvejhHMThQMWhXcktYZWszVHM0QmFxREU3dTJTQlR1Nzk2akZPanhNbTQ0YW5wQU83UQ?oc=5",
+          "published_at": "Thu, 29 Oct 2026 01:19:33 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "「逆張り」のサンリオ…450超キャラを「一発屋」で終わらせないIPの神髄とは - ビジネス+IT",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFAxYkFGdWVaZGVqWmJxeWZXbUpKVUlKRFBwaGFpdWU0Q2FfQ3VsZzVqSTgyRVhoejdVR0ZoU2d0OGNkOXFBR2ZILVdiR2E5bFNOVnEw?oc=5",
+          "published_at": "Sun, 01 Nov 2026 22:10:00 GMT",
+          "source_url": "https://www.sbbit.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.0008433526813270475,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.005270954258294047,
+        "oil_pressure": -0.017197251708609973,
+        "japan_risk": -0.04565099823812613,
+        "usd_rate_pressure": -0.04772549001194348
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

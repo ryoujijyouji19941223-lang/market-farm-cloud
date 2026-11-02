@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-02T11:22:59.195130+09:00",
+  "prediction_date": "2026-11-02",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-02T11:22:59.195130+09:00",
+  "market_data_through": "2026-11-01",
+  "reference_price": 3918.39990234375,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.2600732594139033,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.40611349445497064,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.31825425808221125,
+      "direction": "DOWN",
+      "day_change": 0.00500141077955818,
+      "momentum5": -0.029714739228860476,
+      "trend": -0.026355557423893727,
+      "volatility": 0.19161506206902795
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "長期金利3％到達で日本株はどう動く？ 金利上昇に強い属性を備える銘柄リスト 野村證券ストラテジストが解説 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBkVWJ3Y0NkRVVTWVRXX2dYdkJDZHlvZ1FlMTBNUm5IT3RZTnVrbF81b3BEN1FxVmZOVHloSTNIYWZPRk9ialJzeUVpTXNBX3ZLdVl0cGJuczJKMU41R3FZ?oc=5",
+          "published_at": "Fri, 30 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "長期金利、月間で8カ月ぶり低下 懸念は物価より景気に - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ZWV90aHJoR1FScnZyMXU5TXAwNHhYdUMweXcxVjhNZEM5UEU1RkZzM2RWQ0wySzNuNHRERjBscnljQWxpM0o0d0lVaGluVWxmTzlOcVVITmZpZ0pzYUFyUWFIMmVaODFheFVFQw?oc=5",
+          "published_at": "Mon, 02 Nov 2026 01:42:12 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "【ゆうちょ銀行】11月9日の改定で通常貯金と1年の定期貯金が同じ年0.500％に。2年未満で払い戻す定額貯金は「年0.475％」まで（LIMO） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE50d0x3SDNzSUxfeGd2U25ha2ktdEVTU3V6WkJnZkdQcWdNN3RDOTRxcFI0cFNuT19ZaG5aMXNrWmJuOUxHQzMxS2RPVjVoTHNWZEdGUHotZHo1a0NyUXYwSi1yekJTbDhJU2RyNzFhVnFtbmdZaFk1eGpuN0dDTVE?oc=5",
+          "published_at": "Mon, 02 Nov 2026 00:46:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "初級- ニュースが分かる！利上げ・利下げとは？政策金利と身近なお金のつながり - SBI証券",
+          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNTHpPUUdvRVdjMmRFVFdBdVllakFER213ZE5NNThzWUNmUkNTWGZLQUs0cnlIWGROOG13TENwZ1RQMUx4a3V2ZmFWVmRGaUxlR0phTHJnX2xaWm11WWhId3RCeVhuUU52WGpMc2ZCVG5SVFI0LV81ZG9zODcxb2JHQUxPa2FFdWUySGF6cA?oc=5",
+          "published_at": "Thu, 29 Oct 2026 04:06:32 GMT",
+          "source_url": "https://go.sbisec.co.jp"
+        },
+        {
+          "title": "金利上昇を主導する「期間プレミアム」はどこまで拡大するのか？供給インフレ時代の“新常態” - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1pckI1TE0wTWQ4Ykt6U3Nsc21HemkxVFlUMXdKOTZYaHh3M3JJdXE4UXN4eWxSVzlpblN0VVA3XzJQQ1ZMdUVtbXptZG7SAU9BVV95cUxPdUJkMnI1U0R0R29GUXVzV0otS1pnQjFOcDJDaU0xckY0SGdGSHh5MUkxZ05LNnFnbm53S2lieW9kY2xLNTF6clFEQTAwbFo4?oc=5",
+          "published_at": "Sun, 01 Nov 2026 19:20:00 GMT",
+          "source_url": "https://diamond.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.007735759453330898,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.005270954258294047,
+        "oil_pressure": -0.017197251708609973,
+        "japan_risk": -0.04565099823812613,
+        "usd_rate_pressure": -0.04772549001194348
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-02T11:22:59.195130+09:00",
+  "prediction_date": "2026-11-02",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-02T11:22:59.195130+09:00",
+  "market_data_through": "2026-11-02",
+  "reference_price": 11540.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.5705142227509987,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.2861209251806296,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.7763054703658818,
+      "direction": "DOWN",
+      "day_change": -0.14328136599851526,
+      "momentum5": -0.08047808764940234,
+      "trend": -0.0892615495297967,
+      "volatility": 1.025860193229171
+    },
+    "news": {
+      "score": -0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "DOWN",
+      "headlines": [
+        {
+          "title": "決算:キオクシア株が大幅続落 10〜12月期の業績予想に失望売り - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9oRFY0Y0VsLVZCcVIzbWhuV3NuY2xHYnFiUFBZVmNIcHUtZmJEbWpFY3NYOUNfTjVvV2RKVUlydXFoS3Z4RWwxQUVYZEZwblU4QV85aVBOZllhZ2dFMzU0ZlZWc3FQeGNva2VPQg?oc=5",
+          "published_at": "Mon, 02 Nov 2026 00:32:37 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "相場の波に乗って利益を抜く。億超え投資家がキオクシアの決算を前に用意した“3つのシナリオ”（SPA!） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1vZnhlUHRoUkxzU3RULVBBSUFIUHNORHpsTzFSYnhJUUxBQTNud2dfaTZfT1ZpYVdMZHVJc0xfTlcyanVuejh3TjhyZGV1Sl95clh2WWZsVjBrcklBWmlGdEhvOUpGblNxYmczQ1RpQXlSNnpwOTVRd2ljd2xtZWs?oc=5",
+          "published_at": "Sun, 01 Nov 2026 23:51:03 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "話題株先取り【特別気配】速報 ＜買いトップ Ｇセキュリ、売りトップ キオクシア＞ - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9xbGwtN1l1SEN3LUlXUmVubnJjSFYxWXBoUzJlOUxJd0hEM1hFT3FiZEU5Wms4ZXVDOURGSTRoaE9YZHg5VWFFNVhFUDdNQUFsREJ3TlZuN0kyZ3FsMkdNZA?oc=5",
+          "published_at": "Mon, 02 Nov 2026 00:03:22 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "キオクシアHDが大幅続落､3Q予想は市場予想に届かず - 四季報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBZbko3Tk5Lczk2Rktib292STRFdlZSZmpCcER1cWRGZzlWSGRSZFVkV3lhMWNoMmhEV002czVtUC1Ba3VqZ2F1UUEzQm1WalpHbU56dTY5Zw?oc=5",
+          "published_at": "Mon, 02 Nov 2026 00:54:46 GMT",
+          "source_url": "https://shikiho.toyokeizai.net"
+        },
+        {
+          "title": "トヨタ超えで日本騒然、「キオクシア」純利益2.2兆円だが…裏に潜む「3つのリスク」 - ビジネス+IT",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9Hb0FsRHltcjZWSDJPN0lfQkZzOW50VlpDaUZ5SjNOVmJTODJWZzhTNE0xdFBvLWtQdWp4aFlTVkdiWUV0VTFoQ0dxeU1QZ3NwTnVZdW1Sd0FXZw?oc=5",
+          "published_at": "Sun, 01 Nov 2026 21:50:00 GMT",
+          "source_url": "https://www.sbbit.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.0008433526813270475,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.005270954258294047,
+        "oil_pressure": -0.017197251708609973,
+        "japan_risk": -0.04565099823812613,
+        "usd_rate_pressure": -0.04772549001194348
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

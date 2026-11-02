@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-02T11:22:59.195130+09:00",
+  "prediction_date": "2026-11-02",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-02T11:22:59.195130+09:00",
+  "market_data_through": "2026-11-02",
+  "reference_price": 157.9080047607422,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.10142463178514281,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.553561061575746,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.021458429175175778,
+      "direction": "NEUTRAL",
+      "day_change": 0.0006590701483284445,
+      "momentum5": 0.006873703482123128,
+      "trend": -0.0007541362787973904,
+      "volatility": 0.050489134542771485
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "ドル円午前の為替予想、FRBの12月利上げ巡りISM製造業に注目も レンジブレイクは困難か 2026/11/2 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1iWWFjUmdTX193NHF2ajl2TjBTQ1JucXF3QzQ2WnEtNzFRS3Q5RXF3cUdHaGM4TFJncjBONzJteEpENVBPc29iLVlqZDd4LTN0cjhoeTBFbjZxVGIyRG1DcU14TQ?oc=5",
+          "published_at": "Sun, 01 Nov 2026 23:17:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀会合出席「そのときの状況次第」と城内経財相、デフレ脱却宣言に慎重 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQYmxIbXdEM2RfRWhvdXRZUUVGMWJGVUtrVzhfOVhCYV9KYmlscE03MGtEUWtfVHk0d2IxemtsV29XR0RlMkd5M3VFT25yUGthR1NtaXpxOUtBM3J3YWN5azJobUViWi1NNGxfYnVHZFVZT040UWVCWUJXTm9wVTgyTzIyN054Q2V1X0VfdS1QOEk?oc=5",
+          "published_at": "Mon, 02 Nov 2026 01:12:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "野村證券の日銀見通しを変更 9月利上げをメインシナリオに、年内2回利上げのリスクシナリオも 野村證券・森田京平 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1qcWlQazVUY21CSFBwZXVoLTc1Ylp5WXBHSW9ZdkJMemR2eU11TG9GV1RpYUFNVF9GUkV2UXhPaFVmeHlEZXhiUXo3TGVRU3VhQXR1TXVkN09FalE1R3pV?oc=5",
+          "published_at": "Fri, 30 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "避けたい「デフレ脱却宣言」 政府と日銀、緩和出口で苦悩 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB2aUNoNTJMNWZfaGxQTlhXUHNJQ1Y5b1hPTHEwSUptLS1vSnp2MHluajBWT0NuSEJNNzE2MnBHWkw5ZkhocS1IOEYtR1NlQXJnTHE1b25ZUkViTkpOejhDVENfNXQ2Y2ZnUm9oSw?oc=5",
+          "published_at": "Sun, 01 Nov 2026 17:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "東京為替：ドル・円は小動き、円はやや弱含み - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5kZW9nMEhzM3V0WXAwaWlkWUN1aU9mNDI3Tk1MR3FhMVc0bnpJbnZVd3Q5MHd5Mk9pbEkxbGVqa0p3NVNnTzRHcDNqWVZscjlOclE?oc=5",
+          "published_at": "Mon, 02 Nov 2026 01:05:54 GMT",
+          "source_url": "https://s.kabutan.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.012219332973488563,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.005270954258294047,
+        "oil_pressure": -0.017197251708609973,
+        "japan_risk": -0.04565099823812613,
+        "usd_rate_pressure": -0.04772549001194348
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-02T11:22:59.195130+09:00",
+  "prediction_date": "2026-11-02",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-02T11:22:59.195130+09:00",
+  "market_data_through": "2026-11-02",
+  "reference_price": 149.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.509706059882754,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.26324770102306605,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.49957429310535945,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5555555555555556,
+    "heldout_signals": 45
+  },
+  "evidence": {
+    "price": {
+      "score": -0.7493817014419925,
+      "direction": "DOWN",
+      "day_change": -0.019736842105263164,
+      "momentum5": -0.10240963855421692,
+      "trend": -0.07023809523809532,
+      "volatility": 0.48491259562200095
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "KLabで企画中のAIゲームが、 経済産業省「IP360」IP新規創出支援に採択 | ニュース | KLab株式会社 - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9QVVB6a2stancwV3d1clo0aDZOanFLQm5xSDJENW8yUTdUeUM3d2ZNN2ZLRVFYbThoUTBMc3NMWVM5MzNjNGFYdEt5Yi1sSVlEaDlLVzR3Y3dUYl9IRWZwVU1UREU?oc=5",
+          "published_at": "Wed, 14 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        },
+        {
+          "title": "KLab（3656）、IP／エンターテインメント・AI・ブロックチェーンの多角化経営を推進 AI自動取引システムは実運用間近 - ログミーFinance",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5WSFJEczFlMWo4WTVUOVVKdzVfajlDZndkTWU2amlMaG1QcnNFME12R0NBZmtLY3J4ZG14Z2JsNFR6NTZESmxUdjhfTTZmRjN6c0E?oc=5",
+          "published_at": "Tue, 16 Jun 2026 07:00:00 GMT",
+          "source_url": "https://finance.logmi.jp"
+        },
+        {
+          "title": "KLab、HOMMAとドバイに合弁会社設立…100兆円規模へ拡大見込むスマートホーム市場に参入 - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE8xYUVDT3p2dll5MEU1WTlTWTZiVlhVaV85WDBreDVBOTFiOTM0MnVjMXFXdlB1eEQxMzJab2lONHllMmdm?oc=5",
+          "published_at": "Thu, 16 Jul 2026 07:00:00 GMT",
+          "source_url": "https://gamebiz.jp"
+        },
+        {
+          "title": "ＫＬａｂ[3656]：コーポレート・ガバナンスに関する報告書 2026/03/27 2026年3月27日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFA4S0VNYWZydXVWMTZxekY0MGxtOVFGRURTaHJMNVE5eXNxOUR3M0piTXMwVTFrTHBBRnF2X1Y3U0UyeDdSd09DR29ZaWxfTnhWX2Ribk1Ya3hqMTdsYlV3SnFWaXY1NU81QWc?oc=5",
+          "published_at": "Fri, 27 Mar 2026 07:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.0008433526813270475,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.005270954258294047,
+        "oil_pressure": -0.017197251708609973,
+        "japan_risk": -0.04565099823812613,
+        "usd_rate_pressure": -0.04772549001194348
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

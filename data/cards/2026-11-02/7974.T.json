@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-02T11:22:59.195130+09:00",
+  "prediction_date": "2026-11-02",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-02T11:22:59.195130+09:00",
+  "market_data_through": "2026-11-02",
+  "reference_price": 8211.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.11382847124708378,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.43771947654204973,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.16720877697777164,
+      "direction": "DOWN",
+      "day_change": -0.009410061527325375,
+      "momentum5": -0.042560634328358216,
+      "trend": 0.00018109599294935386,
+      "volatility": 0.24992327677608425
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "ニンテンドーeショップ新作ソフト情報 10/30（金）号。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWGUtNDF0aDdHMnAxdm5YYUxub24wenlSOFNQc19MY0RfYk50YWwxVV9MMnZ2OFcxQ1FGbUF6a3NuaEtUNWIydFNBYk5jeXpPYTNrdHYzenlwTDBRTW8wWGptazZ5TDFWNUxWOW5QdWFGdHpQNW5qRFFpOVlRdzRkT25VRkRkUQ?oc=5",
+          "published_at": "Fri, 30 Oct 2026 02:01:22 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "「ゼルダの伝説 40周年 アニバーサリーエディション」のNintendo Switch 2 や周辺機器は本日発売。「ゼルダの伝説」に関するさまざまな取り組みもご紹介。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQT3UwN041aXJ0SUpZM2Z3c3BVLTNXSlhEUTRuM0xmSHNpUlFiSzFiNEVQMzZUdHRHb2FfZ2o0QnJ4ME92cU1PWGtkeTZMb0lIdkg4WEFGdzFpbzZlSEVMeWtxNGZnUHpEb2hSWndGclluaF91bUNyMWplLXRmeXRpbjJfM3JEdw?oc=5",
+          "published_at": "Thu, 29 Oct 2026 01:19:33 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『Minecraft』が、より鮮やかなグラフィックにアップデートしてNintendo Switch 2 に登場。本日より発売開始。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOSmdSZDB2dDMzU2VxbG9sY3V2SElxQ2Rnby1TSGFxeEpEeDAyNXVnVTlzaFMtODlpTkpKbEtuYjFtYjloZWRvOGFla3hBWktwT21zYkVJZHh2X1hBZjlReTJIWGF0X0t6ZVRNMExoWTJVLV9tNGV2ZEVBV0xMWVNDR0ZIbGUyZw?oc=5",
+          "published_at": "Wed, 28 Oct 2026 01:08:14 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『あつまれ どうぶつの森』で「ゼルダの伝説」のマイデザインを配布中。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOSEFYS0p6TEpjTnBHZTIwYURDcmNVdEhMazFycnk4N183WlphSlcwWF95cHBsTnVFUlhTYU9ocXV5VGhOMjFrc0t6SzlyQXhldmg3MnpyMXZDWk5JNXJmYU9wR2JTcEt4cTg5WjVXaGxkTlVvUGEtVXAyRFpaaWVJcGstYnVadw?oc=5",
+          "published_at": "Thu, 29 Oct 2026 02:21:39 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "「Indie World 2026.10.28」を公開しました。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNRE8yYjVGRl95Q2JiWGFIdk5WaE5keGFBWmdnajZKM1pORzl6S3gyV0F0MkczekJPMk9hcDJjTkRNQldNVVplSGN4YUJMYTdkNEhIeDZEQUZpX216dFpkSTRpdG1EV2kwcjNiMlRhZkRpTHJoOU13SlphTFppNmU2ZzhreFZiUQ?oc=5",
+          "published_at": "Thu, 29 Oct 2026 01:19:33 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.0008433526813270475,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.005270954258294047,
+        "oil_pressure": -0.017197251708609973,
+        "japan_risk": -0.04565099823812613,
+        "usd_rate_pressure": -0.04772549001194348
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
