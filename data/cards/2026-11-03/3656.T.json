@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-03T12:54:29.631439+09:00",
+  "prediction_date": "2026-11-03",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-03T12:54:29.631439+09:00",
+  "market_data_through": "2026-11-02",
+  "reference_price": 150.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.5152488104582842,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.26096581259514434,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.4488164296259688,
+    "direction": "DOWN",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5555555555555556,
+    "heldout_signals": 45
+  },
+  "evidence": {
+    "price": {
+      "score": -0.7352861165168226,
+      "direction": "DOWN",
+      "day_change": -0.013157894736842146,
+      "momentum5": -0.09638554216867468,
+      "trend": -0.06932460577209165,
+      "volatility": 0.48338267945185426
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "ＫＬａｂ[3656]：第21回新株予約権（時価総額及び業績目標達成型有償ストック・オプション）の発行要項の一部変更（行使の条件）に関するお知らせ 2026年10月21日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5rMExwLWVIVW0yZGpzcnRuSU9RRzZhRGdkN2l5S0x5TUhmLWx1ZTVaTG04bG5TckVWOTRRU2JkVWc2Tk5xUDg0bWdNclRyYXNVdkJjNi0tdGxzemhacDdGRzV4dUQyV0gzNmc?oc=5",
+          "published_at": "Wed, 21 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "KLab、企画するAIゲームが経産省のコンテンツ産業成長投資支援事業「IP360」のIP新規創出支援（新規IP企画支援）に採択 - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE45b2tIdjlLYXhjSUM1dmQwZkdaYV9tUmFINVU2MDlKQ21fQ1hISDhFa3lxQlJIdklBeWZ4WG05S1hUb3NE?oc=5",
+          "published_at": "Wed, 14 Oct 2026 07:00:00 GMT",
+          "source_url": "https://gamebiz.jp"
+        },
+        {
+          "title": "KLabで企画中のAIゲームが、経済産業省「IP360」IP新規創出支援に採択 - www.tv-tokyo.co.jp",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBXT3VXWFJhdlE0bTNfdkNKSXlZVTZNelBMM1hjRVpXdjRLWU1vamlFY3VQSE1lMDlkdWlNUVV5ZmI3SWJhbzJCWWdDWHNPajctbUhrdnpKVV9IRU5UWDU0VTY5YS04ZHA1TXdtQWRB?oc=5",
+          "published_at": "Wed, 14 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.tv-tokyo.co.jp"
+        },
+        {
+          "title": "アラブ首長国連邦（UAE）子会社の設立に関するお知らせ - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5xY1FjeWdFaVVnNThPMnBuNGx2ZlFiOUxPU055M1dTNFFOTjM0VUJMeWtjYkF0UEJFU01SLUlzNEtHb0Z1VFV6Q3NtU2tZaXdZTll6LVJWMWhzcnVaMVdDZjVORno?oc=5",
+          "published_at": "Mon, 22 Jun 2026 07:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        },
+        {
+          "title": "KLab（3656）、IP／エンターテインメント・AI・ブロックチェーンの多角化経営を推進 AI自動取引システムは実運用間近 - ログミーFinance",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5WSFJEczFlMWo4WTVUOVVKdzVfajlDZndkTWU2amlMaG1QcnNFME12R0NBZmtLY3J4ZG14Z2JsNFR6NTZESmxUdjhfTTZmRjN6c0E?oc=5",
+          "published_at": "Tue, 16 Jun 2026 07:00:00 GMT",
+          "source_url": "https://finance.logmi.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.10169500817896526,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6355938011185329,
+        "oil_pressure": -0.25353791046512864,
+        "japan_risk": -0.043039844728982146,
+        "usd_rate_pressure": -0.0789556072882388
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

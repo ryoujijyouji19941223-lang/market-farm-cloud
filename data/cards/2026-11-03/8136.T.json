@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-03T12:54:29.631439+09:00",
+  "prediction_date": "2026-11-03",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-03T12:54:29.631439+09:00",
+  "market_data_through": "2026-11-02",
+  "reference_price": 1224.5,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.21905162199560854,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.38318740346263275,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.29970201583641726,
+      "direction": "DOWN",
+      "day_change": -0.023524720893141948,
+      "momentum5": -0.051877661633759176,
+      "trend": -0.012710191837057017,
+      "volatility": 0.28481654283296093
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "み～んなあつまれ、サンリオキャラクターの世界へ。『サンリオ パーティランド』がNintendo Switch 2 / Nintendo Switchで本日発売。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOWVaQzlEaDFsTXZLUVhMLWpiTE5MTlU5UjJjVERLWFk5S1VLVmFUYTdNWUdpOFR1SUMzYXpqVm5kRU9oZGRCM3lMUDVOTmpfUURubElvejhHMThQMWhXcktYZWszVHM0QmFxREU3dTJTQlR1Nzk2akZPanhNbTQ0YW5wQU83UQ?oc=5",
+          "published_at": "Sun, 01 Nov 2026 14:08:01 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "全国初となるカフェブースを併設した「サンリオハウス」が、名古屋パルコ西館に10月29日誕生！ - ウォーカープラス",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1pZmJoeE9zTVBmNzEzUTZwSXpkR0ZIbVE4WWs5OFNSdTRxWVI2X1N3NFFaUDFRVWlKbWRYODRNaHlsR0ZsTFdhVGdLMEc2VmxqRmVvSXJn0gFbQVVfeXFMTlg0bkdOS1A1RVllZDNBODVreGNybGVScE5aeDFDNEJrdUVEbWhLWWRRaC0yQTlBMjFNZEdkWXRVa2xHMnZ5dDk0b0c3WjVKamJjNGVJdHFmdEdUMA?oc=5",
+          "published_at": "Thu, 29 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.walkerplus.com"
+        },
+        {
+          "title": "【サンリオ×ジェラピケ】「かわいすぎて癒やされる」「もこもこで幸せ」「秋の新作ルームウェア」3選【2026年9月版】 - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9CZjNieWE1YlNGVzA0TmZjaTNPcjVWQ3dGM1AzYU9PWDZKV2I4dFg5NGZpYzE2TlpQSDh3SzZmNzBQZlBDYjRCZUF4V2paNlIyY3Y5cy1PZE80ckZMQng0OU5LUmFJYTIzbmZoNS1fQm9JbGNCbGJVbUEweWFsLTA?oc=5",
+          "published_at": "Tue, 03 Nov 2026 00:15:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "サンリオ、「VIVANT」とのコラボを中止　中国でドラマへの批判が強まり - BBC",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBZWVF0VjlyZk1zSjRIRERSRzJNbW9rUWFIUG1USldDRmdWZ1psZTVpamRGY1hvaUJic3gxbGsyN2h5ay1paU5ZWG50WGppSEtfMmJWRDViZDhncFFmTnJyTNIBZkFVX3lxTE96b1REOTlldlhyZ3NHWXpZbVlrYXVWa2ZRc3FfaXdMOGg4REg4cVZHcDlSTFpURU1OcUR6MzNNVS01anhOdkt5a0ZSQjhBNm5WdEM2Skh2dnNwU3NKRHZNZG9YOW9BZw?oc=5",
+          "published_at": "Thu, 29 Oct 2026 08:15:47 GMT",
+          "source_url": "https://www.bbc.com"
+        },
+        {
+          "title": "サンリオがドラマ「VIVANT」とコラボ終了を発表 声明で謝罪 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE04bzBJLUdtREdNdGUzdGVHanl4U3VqZGZTTjNHRHUwLW13VHlsRkZLM1F5ZjN6TjZkTFB0MzQxOUZTZ2hMOGJJV2E0aWQzdXQ1LXMzeDlrdXBxZVEyN1hlYzkxZFBqc1k?oc=5",
+          "published_at": "Thu, 29 Oct 2026 08:50:52 GMT",
+          "source_url": "https://www.asahi.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.10169500817896526,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6355938011185329,
+        "oil_pressure": -0.25353791046512864,
+        "japan_risk": -0.043039844728982146,
+        "usd_rate_pressure": -0.0789556072882388
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

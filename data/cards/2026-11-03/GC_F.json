@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-03T12:54:29.631439+09:00",
+  "prediction_date": "2026-11-03",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-03T12:54:29.631439+09:00",
+  "market_data_through": "2026-11-02",
+  "reference_price": 3938.199951171875,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.2852108159856858,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.4364038395484646,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.29519843264570117,
+      "direction": "DOWN",
+      "day_change": 0.010079778863904876,
+      "momentum5": -0.024811795165140094,
+      "trend": -0.025625533279269197,
+      "volatility": 0.195199518175082
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "長期金利3％到達で日本株はどう動く？ 金利上昇に強い属性を備える銘柄リスト 野村證券ストラテジストが解説 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBkVWJ3Y0NkRVVTWVRXX2dYdkJDZHlvZ1FlMTBNUm5IT3RZTnVrbF81b3BEN1FxVmZOVHloSTNIYWZPRk9ialJzeUVpTXNBX3ZLdVl0cGJuczJKMU41R3FZ?oc=5",
+          "published_at": "Fri, 30 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "住宅ローン「フラット３５」適用金利４か月ぶり低下、３・８１％に…前月まで３か月連続で最高更新 - 読売新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5GNkRRWlJvZnZDcWZHenBFZFN5d1RJeTVLYjJnanVTV1hNejVBTVZSWHZqQVdCWE5tXzY1NjJ2QUZNejFlNk5HSmN5NTJ5T01sdWwwb1Z2UGUwSk5IN0ZETGZNUzg?oc=5",
+          "published_at": "Tue, 03 Nov 2026 02:55:00 GMT",
+          "source_url": "https://www.yomiuri.co.jp"
+        },
+        {
+          "title": "円定期預金金利の改定について - 住信SBIネット銀行",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE0wUU84Sk1yTHJaRThGcERaaFAxaDZ2VG9nUW9MeWltNnkxTEpudURsdktackpyVFR2T0R6Z19JaWxSZnNzQTB1NUh6SEhVRGNHeXpCdXE0NHdHYXZsQWZ2NzRMUXdhcnk0UkFhcFpMNmZNX1NsS2Jv?oc=5",
+          "published_at": "Mon, 02 Nov 2026 01:04:58 GMT",
+          "source_url": "https://www.netbk.co.jp"
+        },
+        {
+          "title": "金価格、約1年ぶりとなる安値の背景と今後の見通し - ピクテ・ジャパン",
+          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQZ3R0LTVVT0kxdmJKdFR2RWd0Zm9KZWZiN3N5OG1KWDcxVHd4M3NOa05xX3EyZGNEVmR6YWpBRFZtYXJPV1J5ZTI1TGtlcGxoVlZHZGxRX0RxSmcxdE9iVFdNSVUtd0RsTVc4eUpoUW5BNXpmZFNGYUo4dVRFN25KRnJWbTRtOWNGNDdiVkQwRVVndkd3Wnc?oc=5",
+          "published_at": "Mon, 02 Nov 2026 07:14:33 GMT",
+          "source_url": "https://www.pictet.co.jp"
+        },
+        {
+          "title": "10月の長期金利、8カ月ぶり低下 懸念は物価より景気に - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ZWV90aHJoR1FScnZyMXU5TXAwNHhYdUMweXcxVjhNZEM5UEU1RkZzM2RWQ0wySzNuNHRERjBscnljQWxpM0o0d0lVaGluVWxmTzlOcVVITmZpZ0pzYUFyUWFIMmVaODFheFVFQw?oc=5",
+          "published_at": "Mon, 02 Nov 2026 01:42:12 GMT",
+          "source_url": "https://www.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.13817254524406,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 0.6355938011185329,
+        "oil_pressure": -0.25353791046512864,
+        "japan_risk": -0.043039844728982146,
+        "usd_rate_pressure": -0.0789556072882388
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

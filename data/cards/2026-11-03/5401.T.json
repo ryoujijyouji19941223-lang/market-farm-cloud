@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-03T12:54:29.631439+09:00",
+  "prediction_date": "2026-11-03",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-03T12:54:29.631439+09:00",
+  "market_data_through": "2026-11-02",
+  "reference_price": 657.2999877929688,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.058228155261165294,
+      "factor_agreement": 0.5,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5152410859273419,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.06319691769753015,
+      "direction": "UP",
+      "day_change": 0.001218564802694111,
+      "momentum5": -0.0070997163248206485,
+      "trend": 0.011460014774294258,
+      "volatility": 0.1998311173354372
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "東芝―日本製鉄鹿島（1回戦）｜社会人野球日本選手権2026 - 毎日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5sd0NqclFTUWZIYUVSY0thWXhfU244TFVwTDMzUzRJRmZBWklNN1VXLU0tYllraW9Cc0xIRVM0WUNYZ2tfMk5LcEs4VGthYmJUdzI1eFVtYmhXMkZaOFd0b3dXQWgzMnJvbGc?oc=5",
+          "published_at": "Sun, 01 Nov 2026 03:54:16 GMT",
+          "source_url": "https://mainichi.jp"
+        },
+        {
+          "title": "【アナリスト評価】日本製鉄、レーティング強気を継続、目標株価760円に引上げ（米系大手証券）(アイフィス株予報) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxORG4tdnRjeURHelcwUFNhcDE5aGFYakpxYVBtbm1xZ1dNY1B6LVN0aUQ1MU9BYThVZUZhNnZJS3RlVlU4NjlQdFJ0bDYtVWFSRWVxanZqRjdGUmhDUHk5ZlBoVDZwZEV6cnItME9laU1TMS1BOXNOOFR4NzJhVU1aSlRuWVNuaXc?oc=5",
+          "published_at": "Mon, 02 Nov 2026 09:26:19 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "＜日本製鉄鹿島・東芝＞9回、最後の打者を打ち取り雄叫びを上げる東芝・松山（撮影・大森 寛明） - スポニチ Sponichi Annex",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNYzhqdlZONnRSaWE5bjdISHdaLUdUWndxcDUzZE5qSmlGZlZtVEVtUEZoZGljMlRMWkFFNThnX3pjNVdCV1Z2dWZKSzN5TDFjTTFBcmplQjhsT3RxWER0NWFXcGFtWkJwTmZGVTVaeGZrU1VoYUtMQm1sUnBMSXBMbFh1WXRhT1F0cWxlWmpBWQ?oc=5",
+          "published_at": "Mon, 02 Nov 2026 11:19:15 GMT",
+          "source_url": "https://www.sponichi.co.jp"
+        },
+        {
+          "title": "日本製鉄、USスチールの新設備起工 電炉用の鉄鋼原料を安定調達 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBOb2FKYUZOQWxaWnkxeFJrN25aazhESnVEN2VxbHIxUl9uNE42amI1T1hiTWlwa0l2SmxoaHEtSmM2SHhtX2VBbE5CZWVOWmNFWEpYSE1OZEQyOVhIM0FfMTJfdDNBX0x0bUlzZw?oc=5",
+          "published_at": "Sat, 31 Oct 2026 00:06:25 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "東芝、2大会ぶり初戦突破　日本製鉄鹿島降す　日本選手権 - ｄメニューニュース",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPaUdZU0xrcnd4QUtwMnh4My1oZ1J5NFpJMDNqVDhEWUFtclBodWdJazdCNldQQ2xDcUpnNFNQM1VKVEgyM2dpYlZjQ3ByaHhZTENkUUhsVUlZZExPTUJ1LWtFZnUySk1FZjRsM0tvX0VxdXk1cV9LWXBZRU1IaHdDaU0zYXl1WjVMWlNER3BReXdHQVnSAZgBQVVfeXFMT01CRzMwb01uQS04X0FxUTkwQlotcndTRmduZ05UdXNDbjRuSnBhV0h6WGlFaFJYaVVacVZiN0JQM1pGMW11S1FnbmdoT2tmcE9nSHlyT3MzOEU4bDlGam5YYnJYcXdLZThRZkd4X1NXV2w0aWk4SzYwZ2l4NExjVTVYV0JzcUNZMm1DS1hvdTlBZHdvSS14bjY?oc=5",
+          "published_at": "Sun, 01 Nov 2026 03:40:00 GMT",
+          "source_url": "https://topics.smt.docomo.ne.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.10169500817896526,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6355938011185329,
+        "oil_pressure": -0.25353791046512864,
+        "japan_risk": -0.043039844728982146,
+        "usd_rate_pressure": -0.0789556072882388
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

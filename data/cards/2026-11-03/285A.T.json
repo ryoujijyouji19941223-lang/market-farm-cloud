@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-03T12:54:29.631439+09:00",
+  "prediction_date": "2026-11-03",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-03T12:54:29.631439+09:00",
+  "market_data_through": "2026-11-02",
+  "reference_price": 11345.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.5843867555700993,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.2976256591872961,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.8057095652106685,
+      "direction": "DOWN",
+      "day_change": -0.15775798069784708,
+      "momentum5": -0.09601593625498006,
+      "trend": -0.09132670551936917,
+      "volatility": 1.0493256594894393
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "キオクシア株急落 失望売り促す「保守的」見通し、株主還元も期待薄 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9UTjNzTkF0RUowZGxiSEFqVjVZSGN3OExrR1kwdHZySV9OYzZhWG90YlZ4ZHFhNFpwbXpIWE56QkgydzJnWWUyLTI0SFd1LVVGbGtsaGFkcjNma0ZIT3IxVUpPeHdZNEo2T0oxZQ?oc=5",
+          "published_at": "Mon, 02 Nov 2026 19:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "明日の株式相場に向けて＝キオクシア安値更新とスーパーサイクル突入の矛盾 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9PSWNOTU1FcEh1Qk5TaXl2RUhZay1RSlJLS1ZGNnppeUpYYWRELU12MjZRaFNaWG5ablBkVHVUOUczUjl5Q2RaZHZVTHp0TWFKcWRXaWF0eldpejdNSmZubQ?oc=5",
+          "published_at": "Mon, 02 Nov 2026 08:30:00 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "〈AIバブル崩壊の兆し？〉キオクシア絶好調決算に現れた\"変調\"､株価大幅下落でも｢基本的に業績は上昇傾向｣の背景 - 東洋経済オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBkYWpwUW1DbW9rWTJ4UlBKbWpZUlJjMWlVQWRrUm9wcHQtWnZjLTNVWlVNMUswTmNDN0VRUjYxdENUU0E5QV9aNUktMFBPVkQyMFhWV0steUJBZUhZVlNj?oc=5",
+          "published_at": "Mon, 02 Nov 2026 09:00:00 GMT",
+          "source_url": "https://toyokeizai.net"
+        },
+        {
+          "title": "キオクシア「明らかにスーパーサイクル」、純利益は半期で2兆円超（EE Times Japan） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1Md09mc3hRZGk0US1tM05Na08tMHdqNG40Ui1PRzdOWGY4ZEVNdUJoY2VaWVAzVjlRS3pQY1p6emVyU2JZZHFrYnVNdUZaRDU3czRNNzVqbGdtenM3X0dZVk9ycUZTdHFGUXZUeEdLcWZneGJyZHd2WC16MnMxcnM?oc=5",
+          "published_at": "Mon, 02 Nov 2026 08:42:59 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "キオクシア「明らかにスーパーサイクル」、純利益は半期で2兆円超：27年の生産能力は既に「SOLD OUT」（1/3 ページ） - EE Times Japan",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE85SmxvWEhiRHB2bHRXb2NjQ2luVm04VW1BVktmTmlvWV9WMU1tNHpxVHh5TEZXdmRaQ09QdHhwbUlfc0JtZlZWcVk3NU5mSW50ZTNYaXNTSUJmMVJLUHJwQ0x2UVN6SE5xV0x4N3hZbw?oc=5",
+          "published_at": "Mon, 02 Nov 2026 02:00:00 GMT",
+          "source_url": "https://eetimes.itmedia.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.10169500817896526,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6355938011185329,
+        "oil_pressure": -0.25353791046512864,
+        "japan_risk": -0.043039844728982146,
+        "usd_rate_pressure": -0.0789556072882388
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

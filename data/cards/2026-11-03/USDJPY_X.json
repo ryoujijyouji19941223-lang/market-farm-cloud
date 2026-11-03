@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-03T12:54:29.631439+09:00",
+  "prediction_date": "2026-11-03",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-03T12:54:29.631439+09:00",
+  "market_data_through": "2026-11-03",
+  "reference_price": 157.86900329589844,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.11576134787173756,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.5563785030607442,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.004562859079777556,
+      "direction": "NEUTRAL",
+      "day_change": 0.0012176876804805836,
+      "momentum5": 0.0021647162297051548,
+      "trend": -0.0005119967716109564,
+      "volatility": 0.05044283737141468
+    },
+    "news": {
+      "score": 0.625,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "【テクニカル】日足テクニカル・NZドル円＝年初来安値は維持 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE4xd2ZNcjVEWUJnTW9SaXNpY3JKS3h5dXY4NHh6ajZsRVZpRUpiTGplek93ckg4bkZ1b096ZjBTYWhnWGlHVE10LV9SSy1Pdl9Hb3FVcFdURXdvN0c1QzBlVFp2Zw?oc=5",
+          "published_at": "Tue, 03 Nov 2026 02:16:10 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "コラム：2027年は円高に転じるか、日銀の利上げ継続と円相場の行方＝内田稔氏 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNWmJvUEFNRHZMOHNKX2N2MGR0SWRRM3ZoeVFBR3Nkc2M3bXh5NUhRYjlHRzhZVGtBRzh2dkJ0TXFkeU1PcWdpeWxWZDNxWVhTOUYwZi1xLW1FVnZpaUZjZ3kxVFhGWDJVM1cweEJGMXc2X3VxcHVCTEpOMlFpYjB0WHBMVTVUQzlIa2dteGN3?oc=5",
+          "published_at": "Mon, 02 Nov 2026 04:35:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "野村證券の日銀見通しを変更 9月利上げをメインシナリオに、年内2回利上げのリスクシナリオも 野村證券・森田京平 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1qcWlQazVUY21CSFBwZXVoLTc1Ylp5WXBHSW9ZdkJMemR2eU11TG9GV1RpYUFNVF9GUkV2UXhPaFVmeHlEZXhiUXo3TGVRU3VhQXR1TXVkN09FalE1R3pV?oc=5",
+          "published_at": "Fri, 30 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "日銀、利上げ継続「未知の世界」へ 近づく引き締め領域 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ic1BQa1YwYkRaaVpnOWVCbUVLU0FDSk9wbUFmTkVpRHBXdHphN2tyYVdzRHJyenlsc3k0WHZpYXg0bS1GOGdjSkJSNGs3WTNZUzdZQWZlUm1BcjZualJQT3I3R0FPdWtabnlWbA?oc=5",
+          "published_at": "Fri, 30 Oct 2026 17:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "日銀、１２月利上げを視野 物価上振れ、中立金利目指す - 時事ドットコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8tQzJRd3lvOU5WV1RJRVRRNWlUUHZRUm5tVEYwdFIxS1NteWd3RWJqdFR5dUE0QUMySnRSckhtSEJ1ZjBidHFvRFNBOGtUeGhqbXN2Y0tXVm5ycC03TkVZaThFdw?oc=5",
+          "published_at": "Fri, 30 Oct 2026 22:05:00 GMT",
+          "source_url": "https://www.jiji.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.042724024649925404,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6355938011185329,
+        "oil_pressure": -0.25353791046512864,
+        "japan_risk": -0.043039844728982146,
+        "usd_rate_pressure": -0.0789556072882388
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
