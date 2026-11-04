@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-04T11:59:15.634210+09:00",
+  "prediction_date": "2026-11-04",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-04T11:59:15.634210+09:00",
+  "market_data_through": "2026-11-03",
+  "reference_price": 3950.60009765625,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.3561809800118428,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.44885896684998416,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.3305080740532672,
+      "direction": "DOWN",
+      "day_change": -0.004786376343354659,
+      "momentum5": -0.030432434356276072,
+      "trend": -0.02770859867197706,
+      "volatility": 0.20105917426511377
+    },
+    "news": {
+      "score": 0.625,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "長期金利3%、個人向け国債の販売好調 西日本シティ銀行は3年で17倍 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9mVkdTeVJROFF6LV91ckhYQmkzU19sQU0wNGlSLS12ZE5qQ3VORENyczlsQktjaDM3N2F6Q0IzVTVid0J0aW00SnNNdS1TNUhFcWNxQl8xeVF2RTVIa240blIyVE4tajdrVlpYWA?oc=5",
+          "published_at": "Tue, 03 Nov 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "【論考】利上げ後、なぜ長期金利は下がらなかったのか ―「金利ある世界」の財政運営 ― - 東京財団",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1IaURDVHlBeWNrdW9VbjNUODVPdFRoemdHUDZFU2VLUHJWTHdNcy0tcnlGaWp2SUowdWptZHFocHlSQ1hyX01JNG12UEpCLS1nY2hROUxSQXQteEVnYWNj?oc=5",
+          "published_at": "Wed, 04 Nov 2026 01:07:36 GMT",
+          "source_url": "https://www.tkfd.or.jp"
+        },
+        {
+          "title": "FOMCは金利据え置き、12月に追加利上げか 雇用とインフレで利上げリスク続く 野村證券・小清水直和 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBGaklTdm93Vk5YZHpOMVBkeDZ1VmFuRnN6QlhXZWpjTXlieU5kSUMxX1NKOGVJa3pNTXgtM0pXaG5yMXc5ODB0WE9QVWpDd2xQNE1qWE1jMi1XbFdzQUVz?oc=5",
+          "published_at": "Mon, 02 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "円定期預金金利の改定について - 住信SBIネット銀行",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE0wUU84Sk1yTHJaRThGcERaaFAxaDZ2VG9nUW9MeWltNnkxTEpudURsdktackpyVFR2T0R6Z19JaWxSZnNzQTB1NUh6SEhVRGNHeXpCdXE0NHdHYXZsQWZ2NzRMUXdhcnk0UkFhcFpMNmZNX1NsS2Jv?oc=5",
+          "published_at": "Mon, 02 Nov 2026 01:04:58 GMT",
+          "source_url": "https://www.netbk.co.jp"
+        },
+        {
+          "title": "高市政権1年で「長期金利1.5％」上昇…日銀けん制の“逆効果”と、アベノミクス時代の終わりの認識を - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5VR1hXZTh0alpzTFJiMld4bEVmbHphUkJJcG55OTlYLUY0TEhzUFB3TjhEdUo2N3YtdnJLMDNpdU1hZURXOU5TcFhVZETSAU9BVV95cUxNbDFydF8tSTlfNkJHX3lFUGtwd1J1YnlFcVVwX0kwN1hWaThNaUx4V2YwXzdTSndkYUZWcjB1NW1jNzl6eFJZRXo4UDV2aHJn?oc=5",
+          "published_at": "Tue, 03 Nov 2026 19:25:00 GMT",
+          "source_url": "https://diamond.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.16790326437080702,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 0.7955077332363325,
+        "oil_pressure": -0.2412412222824445,
+        "japan_risk": 0.11536625694747882,
+        "usd_rate_pressure": -0.06286941231100363
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

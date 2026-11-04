@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-04T11:59:15.634210+09:00",
+  "prediction_date": "2026-11-04",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-04T11:59:15.634210+09:00",
+  "market_data_through": "2026-11-04",
+  "reference_price": 1239.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.23169226322889372,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.3767921541974543,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.31264717298709077,
+      "direction": "DOWN",
+      "day_change": 0.011841567986933477,
+      "momentum5": -0.03617269544924151,
+      "trend": -0.022348238722507685,
+      "volatility": 0.28663959581478476
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "『ガルショ☆』で「2026年サンリオキャラクター大賞」期間限定コラボレーションキャンペーンを開催！ - 株式会社enish",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5WdzlmYzZXdFBLWDlHcnFkTERKUWh2aFR6RlVZd0x2dVlIaXpud0JEYlI1dkNNajZxeGl1bkp0TlozLXNlaWRqTm5UWng?oc=5",
+          "published_at": "Wed, 04 Nov 2026 02:17:19 GMT",
+          "source_url": "https://www.enish.jp"
+        },
+        {
+          "title": "「サンリオキャラクターズ」新作めじるしアクセサリーは“バレリーナ衣装”に変身！オーロラ塗装が綺麗なハローキティ、クロミなど全6種（インサイド） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9pWFBrR1RGVlJYblVzREItRWMwMnMwdngxVzcxT01BbFczS0dTZWhSSDhaeUltVzhhRjFFbktRcTBpYW8tOE1zMmNHazhZWERuXzQzSEgybmVsUENBeWVsTjdSR0lDWmc0UllVSmg3aHVyZVZsMVplU29QSFhQV1k?oc=5",
+          "published_at": "Wed, 04 Nov 2026 01:45:03 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "雪印メグミルク「牧場の朝ヨーグルト」×サンリオコラボパッケージ登場 - JAcom 農業協同組合新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5ZYTZYMi1Dam1DM3Z0M1dwd3lDRmwxQi1OMmdHdWpfOVdaeUZwaE5oc0djcU5NekpNM1NnSHhNcXdVek15YjR0MlluUVlaLWFyNWdSbHFnUW9vNjBiTmJHLTZ4bTg?oc=5",
+          "published_at": "Tue, 03 Nov 2026 15:00:00 GMT",
+          "source_url": "https://www.jacom.or.jp"
+        },
+        {
+          "title": "み～んなあつまれ、サンリオキャラクターの世界へ。『サンリオ パーティランド』がNintendo Switch 2 / Nintendo Switchで本日発売。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOWVaQzlEaDFsTXZLUVhMLWpiTE5MTlU5UjJjVERLWFk5S1VLVmFUYTdNWUdpOFR1SUMzYXpqVm5kRU9oZGRCM3lMUDVOTmpfUURubElvejhHMThQMWhXcktYZWszVHM0QmFxREU3dTJTQlR1Nzk2akZPanhNbTQ0YW5wQU83UQ?oc=5",
+          "published_at": "Thu, 29 Oct 2026 01:19:33 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "サンリオキャラクターズの新コンセプトチャームがガチャに登場！チャイルドシートにちょこんと座った姿がかわいい - 電撃ホビーウェブ",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB4ckJrSk9Mc2ZMdlNsRE9DLW9nbjZEQlU1dkhvRGJIR1JXUnM1SDZzOTZVTXJCLUZqdTdFdl9IYkI2eTdLWnlGSWxwbzJ0NjIt?oc=5",
+          "published_at": "Tue, 03 Nov 2026 23:00:00 GMT",
+          "source_url": "https://hobby.dengeki.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.1272812373178132,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.7955077332363325,
+        "oil_pressure": -0.2412412222824445,
+        "japan_risk": 0.11536625694747882,
+        "usd_rate_pressure": -0.06286941231100363
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

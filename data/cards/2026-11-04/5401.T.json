@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-04T11:59:15.634210+09:00",
+  "prediction_date": "2026-11-04",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-04T11:59:15.634210+09:00",
+  "market_data_through": "2026-11-04",
+  "reference_price": 649.5999755859375,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.043097696511301395,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.4763140087619248,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.03530222193180795,
+      "direction": "NEUTRAL",
+      "day_change": -0.01171460877838404,
+      "momentum5": -0.021392004320825775,
+      "trend": 0.00628138991016991,
+      "volatility": 0.20380102505082662
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "日本製鉄 水素100%による低品位鉄鉱石からの直接還元鉄の試験製造に成功 - Digital PR Platform",
+          "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE5IV0VGZjVZS2piLXRjMHlwLWFfcU5NZV9KWFl2ZFk0M3dpTnRBU3RvTlItdFlud2Q4WlBJM3hzdVJYYU0?oc=5",
+          "published_at": "Wed, 04 Nov 2026 02:12:46 GMT",
+          "source_url": "https://digitalpr.jp"
+        },
+        {
+          "title": "東芝―日本製鉄鹿島（1回戦）｜社会人野球日本選手権2026 - 毎日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5sd0NqclFTUWZIYUVSY0thWXhfU244TFVwTDMzUzRJRmZBWklNN1VXLU0tYllraW9Cc0xIRVM0WUNYZ2tfMk5LcEs4VGthYmJUdzI1eFVtYmhXMkZaOFd0b3dXQWgzMnJvbGc?oc=5",
+          "published_at": "Sun, 01 Nov 2026 03:54:16 GMT",
+          "source_url": "https://mainichi.jp"
+        },
+        {
+          "title": "日本製鉄、USスチールの新設備起工 電炉用の鉄鋼原料を安定調達 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBOb2FKYUZOQWxaWnkxeFJrN25aazhESnVEN2VxbHIxUl9uNE42amI1T1hiTWlwa0l2SmxoaHEtSmM2SHhtX2VBbE5CZWVOWmNFWEpYSE1OZEQyOVhIM0FfMTJfdDNBX0x0bUlzZw?oc=5",
+          "published_at": "Sat, 31 Oct 2026 00:06:25 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "日本製鉄瀬戸内・井川 5日の日本選手権初戦へ「苦しい練習をしっかりやってきた」同日に本紙特別号外配布 - スポニチ Sponichi Annex",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUktVZzIyb2duMUp2aTZqZXkwYmhIUHM3QzVibVFZeEJ2S2o2WDlDMEtfZ2U1MkM0MVgxR2x3VURpQzRDZGR3UEhVS0VQT1NwUV92Z2MtNnkycWRFYjJTbWN3cUFfM091UGNPc1VfX3JJWVg2cU5zNDJXTEN0U2pSajFkWEpmYm5rLUdzcml2RGdIbGF0?oc=5",
+          "published_at": "Mon, 02 Nov 2026 04:59:00 GMT",
+          "source_url": "https://www.sponichi.co.jp"
+        },
+        {
+          "title": "日本製鉄、ｐＨ基準値外排水 - 千葉日報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1NRzZiOVFBTWNvYUEyT0FzN2UyMnJHLU1CRlNYNVdfTkszTktUMENEUUNERHg1eE5aQmRRdGxOTllTU0k3bXlOc2JnWDJyS1V6SUMwRzlyUXM?oc=5",
+          "published_at": "Mon, 26 Oct 2026 20:00:00 GMT",
+          "source_url": "https://www.chibanippo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.1272812373178132,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.7955077332363325,
+        "oil_pressure": -0.2412412222824445,
+        "japan_risk": 0.11536625694747882,
+        "usd_rate_pressure": -0.06286941231100363
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
