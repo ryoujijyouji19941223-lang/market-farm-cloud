@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-05T12:26:56.525047+09:00",
+  "prediction_date": "2026-11-05",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-05T12:26:56.525047+09:00",
+  "market_data_through": "2026-11-05",
+  "reference_price": 142.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.5689183449971237,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.24237212719819573,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5045624806730414,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5555555555555556,
+    "heldout_signals": 45
+  },
+  "evidence": {
+    "price": {
+      "score": -0.8346446406006883,
+      "direction": "DOWN",
+      "day_change": -0.03401360544217691,
+      "momentum5": -0.11250000000000004,
+      "trend": -0.09415682712685447,
+      "volatility": 0.4929471481672892
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "KLabで企画中のAIゲームが、 経済産業省「IP360」IP新規創出支援に採択 | ニュース | KLab株式会社 - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9QVVB6a2stancwV3d1clo0aDZOanFLQm5xSDJENW8yUTdUeUM3d2ZNN2ZLRVFYbThoUTBMc3NMWVM5MzNjNGFYdEt5Yi1sSVlEaDlLVzR3Y3dUYl9IRWZwVU1UREU?oc=5",
+          "published_at": "Wed, 14 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        },
+        {
+          "title": "ＫＬａｂ[3656]：KLab、HOMMAとUAEにAIスマートホーム事業の合弁会社を設立 2026年7月16日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5BdjA0Zl9icWxORVJJTWFqQTZfTm1lY0J1WEtGeFJmblZvd05qMTZIT0ZIU2diN1JkczdkM0wtdVBtc0pIWVlNTFdCbmJ6TXBiMlcwWkVMY0p1OTViS2ZmUGNCcEQ0QXJxUmc?oc=5",
+          "published_at": "Thu, 16 Jul 2026 07:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "KLab（3656）、IP／エンターテインメント・AI・ブロックチェーンの多角化経営を推進 AI自動取引システムは実運用間近 - ログミーFinance",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5WSFJEczFlMWo4WTVUOVVKdzVfajlDZndkTWU2amlMaG1QcnNFME12R0NBZmtLY3J4ZG14Z2JsNFR6NTZESmxUdjhfTTZmRjN6c0E?oc=5",
+          "published_at": "Tue, 16 Jun 2026 07:00:00 GMT",
+          "source_url": "https://finance.logmi.jp"
+        },
+        {
+          "title": "KLab、2Q(1～6月)決算は売上高57％増、3900万円の営業黒字に転換 新作『ドラクエ スマグロ』の順調な立ち上がりで 新規事業のGPUサーバー販売も進捗 - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE9nSlp3MFBsQUcySkNSVWlnTERjcl83dTQ4dVpXODJQeC03cmpselhUbmhVcnNjNm1pY1BmbDYyOHhnZVpj?oc=5",
+          "published_at": "Thu, 06 Aug 2026 06:49:25 GMT",
+          "source_url": "https://gamebiz.jp"
+        },
+        {
+          "title": "KLab HOMMA Middle Eastが グローバルに活躍する空間デザイナー秋葉達雄氏(株式会社T&C JAPAN)とのパートナーシップを発表 〜建築、デジタル、LED技術が融合するコンセプト動画を公開〜 - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5nMEZUTFhPT1hXdmZCdnZNMEVmZnh5N3JiM2NPTXBjNzBrM1dwWWhkTVN3WC1aSTJXU2I5YjVkMjg1S3pUZnItR1lsc2VfdVd3VHRFQVg3V0VlMi11NmM3NllXZ2s?oc=5",
+          "published_at": "Wed, 19 Aug 2026 07:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.009066595924370091,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.05666622452731307,
+        "oil_pressure": -0.7554971280280415,
+        "japan_risk": 0.09572537667799708,
+        "usd_rate_pressure": -0.14690724270678113
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

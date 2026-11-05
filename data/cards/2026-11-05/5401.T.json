@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-05T12:26:56.525047+09:00",
+  "prediction_date": "2026-11-05",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-05T12:26:56.525047+09:00",
+  "market_data_through": "2026-11-05",
+  "reference_price": 665.7999877929688,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.08986468089180841,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5492652131012683,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.1301539580928719,
+      "direction": "UP",
+      "day_change": 0.008635074106724039,
+      "momentum5": 0.012623555578659795,
+      "trend": 0.010050279452044064,
+      "volatility": 0.19094907865430388
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "鷲宮製作所vs日本製鉄瀬戸内 スタメン発表 日本選手権（毎日新聞） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0tWVdlZ0J6QWJhdVBNVmJTa2dXay1yeUZHZThOb0JnUDRHbU5wRkFsTTdPeFltQWZidG5pOWMtZ0o1WjNDSXhiSTlTcXFScGZhYVJiaG1CcWFsMEpiZzVMT2Vrbm1IQlRNNHBNWGFZMlVWVkM4U2pIS0k3TXItbFU?oc=5",
+          "published_at": "Thu, 05 Nov 2026 00:34:35 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "鷲宮製作所－日本製鉄瀬戸内（1回戦）社会人野球日本選手権2026​ [写真特集1/12] - 毎日新聞",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOeUhEbXFkdzVuU3NJeEF5dnVzbW0xeFZpZFFqNm95T3BRWHhaYzUtazdQT0dSOFVEWkRqUUZUdEFxa3hlblhzZGF6OFROdWNfdWtTb1hBeE5fT1piLTZOTEFhbDc5bjhZa0FjYUV4eXV1ZTBuZllKX21TMGJPZ25pLXdvNEZTQ1k?oc=5",
+          "published_at": "Thu, 05 Nov 2026 01:30:57 GMT",
+          "source_url": "https://mainichi.jp"
+        },
+        {
+          "title": "日本製鉄の利益4割超がUSスチール 7〜9月見通し、米中間選がリスクに - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE41WXFIdVJWTWZmd0M3WDlhNmV6OGV5UmMzZzBaN09TdmRhRHZHak10b25ldVZpSk5rR3lzd3ZxcDdtWTMtdWtDUG5sWTgweUtYRWwxZkFacmFyeXhmR0poUFRPdnlOVF9OMzhnQw?oc=5",
+          "published_at": "Wed, 04 Nov 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "日本製鉄 水素還元鉄 1000トン超製造 300時間連続操業 吸熱・粉化など課題克服 - WEB産業新聞",
+          "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1sdVJsZmFha0ZZMkQ1UUxpZ3pzZXI0QUYtWlFROHczUFBnMWZXcWp0Rk50RUx3YjZHWUpjOHk4M2g1NGpLVHFBRDlMSlFoOWtuak9BWkZ0OEtsVGI5WjBGeUZ3?oc=5",
+          "published_at": "Wed, 04 Nov 2026 20:50:00 GMT",
+          "source_url": "https://www.japanmetal.com"
+        },
+        {
+          "title": "日本製鉄の“架空発注”で初公判 元社員2人は起訴内容認める 取引先の役員は「共謀していない」と主張 福岡地裁小倉支部 - FNNプライムオンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1iU0o3Rm00XzJtMHFtSXl3cVBLcGhxcFJrQmlpdHEzbHlLSjJZOHVYSWplLVZVN0Q4VDI5RThCaGVUQW9PaVA2Ykp0UXFoQQ?oc=5",
+          "published_at": "Wed, 04 Nov 2026 08:50:00 GMT",
+          "source_url": "https://www.fnn.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.009066595924370091,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.05666622452731307,
+        "oil_pressure": -0.7554971280280415,
+        "japan_risk": 0.09572537667799708,
+        "usd_rate_pressure": -0.14690724270678113
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

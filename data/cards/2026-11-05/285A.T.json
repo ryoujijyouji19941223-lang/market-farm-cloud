@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-05T12:26:56.525047+09:00",
+  "prediction_date": "2026-11-05",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-05T12:26:56.525047+09:00",
+  "market_data_through": "2026-11-05",
+  "reference_price": 10085.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6854589630955574,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.2541765288620431,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.9747779025101497,
+      "direction": "DOWN",
+      "day_change": -0.06054960409874244,
+      "momentum5": -0.29672245467224545,
+      "trend": -0.12416944277574504,
+      "volatility": 1.0595083664009703
+    },
+    "news": {
+      "score": -0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "DOWN",
+      "headlines": [
+        {
+          "title": "損切り苦手な個人投資家、キオクシアは含み損26% 信用取引データ解剖 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ycEpBcVdDdG81VWpDdGl5V1Q4aGphc3FzMC1BWVZTVHB3WjZXZkdCQ1NuUTB5Sl9GQ3lmX0pVYnVEbTJQRHE1RUt6cVBZRVZiVkhVMDI0dldyc3FNMDdVcnVFbkxqWWpqWHZscw?oc=5",
+          "published_at": "Thu, 05 Nov 2026 02:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "キオクシアについて、東芝は保有割合が減少したと報告 [変更報告書No.22] - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE94dktuY3hHdVAxdTFoc1FPdThiVkVlVG91bWNmRGNVcERpQWxLSTI4b3dNVURwbGd1ZDNMbmpadUIxTzkyZEEyS2dyV2JCNHZ4TWc?oc=5",
+          "published_at": "Wed, 04 Nov 2026 07:03:02 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "東芝、キオクシアＨＤ株を一部売却 保有比率10.46％に - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNWF9nV25kQzY3d2ZaaUNCTnJ1b0VBMUN2QldpR1NxcE0wTUxpXzhKSkMzTEtjRElFNzB0cDdZV1BvdWpKUjItWVV6bEZkSnFHcTBuV2RTQWdxYjNaaDItdUVpQWJWTUN3WjJVOXlGY0FiNFpLV1hpOHYxLVhBMlVEQl9kdEJzQQ?oc=5",
+          "published_at": "Wed, 04 Nov 2026 07:31:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "東芝、キオクシアＨＤ株を一部売却 保有比率10.46％に（ロイター） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1mc21XekdMbjlwc0RVbjF2NEp6TFQtSmtlUk1ZMnJQWW82QUowNmtkNnRGZXF0XzVlQzNKWEdteWdkdDNhMlZBNWRaX0EtZ0JMU0pWaXR4Y1M0Ymw3YmlCeDZxd2I1UWloZVdKczQyUWp2Y0lFVVpUUF81cVcwR28?oc=5",
+          "published_at": "Wed, 04 Nov 2026 07:31:35 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "キオクシア株が本日大幅下落した理由とは 執筆 - Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5pazUybnhoUFlRZ1Q4LVJyTzJ1eS1XU3JIT1NsX0xUaHhDUnVqRTYxaHNHRGtIT1RIbW85bExqclRRSlpLQndaZlNvVUFFVFhnOV81bnRXTmpMN2dCZEEySW5EX2NJbFpqcXpJOHRWVU9xd0VacDlZ?oc=5",
+          "published_at": "Wed, 04 Nov 2026 08:33:00 GMT",
+          "source_url": "https://jp.investing.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.009066595924370091,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.05666622452731307,
+        "oil_pressure": -0.7554971280280415,
+        "japan_risk": 0.09572537667799708,
+        "usd_rate_pressure": -0.14690724270678113
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

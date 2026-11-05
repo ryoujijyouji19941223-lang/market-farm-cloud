@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-05T12:26:56.525047+09:00",
+  "prediction_date": "2026-11-05",
+  "symbol": "EURJPY=X",
+  "name": "ユーロ円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-05T12:26:56.525047+09:00",
+  "market_data_through": "2026-11-05",
+  "reference_price": 177.802001953125,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.16000612599112188,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5827173255503806,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.041761970451335985,
+      "direction": "UP",
+      "day_change": 0.0011655774712071576,
+      "momentum5": 0.009877137036858885,
+      "trend": 0.00028471577906641343,
+      "volatility": 0.056692013724271774
+    },
+    "news": {
+      "score": 0.75,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "ユーロ/円【EURJPY】：外国為替相場FXレート・チャートをリアルタイム表示 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1pREZlRmliZXhfWS15YlhsbFYzdjdIYkVVeXpwU0Z1T2U0S1lVYzB4U0RkUGtFcEhxeUhZa2M4Y1JRcVJGNTFEdkpBaU9nLTV4NXVKaW5R?oc=5",
+          "published_at": "Thu, 05 Nov 2026 00:44:26 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日銀、政策金利「早めにゴールに近づけるべき」 9月議事要旨 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5PRnpCdl9xa0d6VXN1Z1llZGZBTHhxNkpfVnV5OWw0Y2g1dXNLYWFGWFAxUGJld2xhUzZqdFIzdlc0TU9FTC1Jb095YzNqclUyU0lVZkhEYWphTGFaSkNaaE9ZUk12eHNLLXA0Sw?oc=5",
+          "published_at": "Thu, 05 Nov 2026 01:46:24 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "速いペースでの利上げ継続意識した意見が複数＝9月日銀会合要旨 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPaHVKZ0hscFVQdHZ2Rjl6WWk2LW9ScTg0Z1pHNjZ5NmY1c0NXZk4tcXo0X0NUc3pTX28taUZGaW80NVpuVHFlcm9GNTZiekxXQ1dtaVFqU3haV3NtUERFQkJMRC10VExSbk5veU5EMnVSVi0ycGwtdkZ4bTJrNUJmNzd4YlhZR0M5Snl5OTlZbVU?oc=5",
+          "published_at": "Thu, 05 Nov 2026 00:42:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "物価上振れリスク、利上げ適当 政策は「局面変化」―日銀９月会合 - 時事ドットコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8tY0VNT1QxM21VUFZZTkQxWDNtaml0QUJ1RkwxWHgzV0c0TGdsZEw2bWVfVjR5RVlHc2JaM0UxdDJ5LVFzaGUzXzZqRTNqbU9acjVUWk81bHUyUE44NjNGbHZXbw?oc=5",
+          "published_at": "Thu, 05 Nov 2026 01:56:00 GMT",
+          "source_url": "https://www.jiji.com"
+        },
+        {
+          "title": "日銀、基調インフレ2%到達と判断 野村證券は12月追加利上げのメインシナリオ維持 野村證券・森田京平 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9QWF9CWlVUME14Z3VLNmtJOHRoVkQ1c3RtSEtpQ3ppQzRqMDlFQUN3VFQwYmVyenZzWWxZaV9KZkVfMnRKS2tXV0FwZFdsdmVTNmVlclNhTXZMTW5XTFhr?oc=5",
+          "published_at": "Mon, 02 Nov 2026 07:30:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.027386573894756006,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.05666622452731307,
+        "oil_pressure": -0.7554971280280415,
+        "japan_risk": 0.09572537667799708,
+        "usd_rate_pressure": -0.14690724270678113
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

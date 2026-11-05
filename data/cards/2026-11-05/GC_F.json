@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-05T12:26:56.525047+09:00",
+  "prediction_date": "2026-11-05",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-05T12:26:56.525047+09:00",
+  "market_data_through": "2026-11-04",
+  "reference_price": 4143.5,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.1105163719281126,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.48760896259456266,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.09798721553983761,
+      "direction": "DOWN",
+      "day_change": 0.0515430166200761,
+      "momentum5": 0.022682372427849318,
+      "trend": -0.023629016537300207,
+      "volatility": 0.27668804941480757
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀、政策金利「早めにゴールに近づけるべき」 9月議事要旨 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5PRnpCdl9xa0d6VXN1Z1llZGZBTHhxNkpfVnV5OWw0Y2g1dXNLYWFGWFAxUGJld2xhUzZqdFIzdlc0TU9FTC1Jb095YzNqclUyU0lVZkhEYWphTGFaSkNaaE9ZUk12eHNLLXA0Sw?oc=5",
+          "published_at": "Thu, 05 Nov 2026 01:46:24 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "【金利1％上昇で35年ローンは587万円負担増】住宅購入者が知らない「変動金利のリスク」 金利上昇が不動産価格下落につながる構造的問題が一気に表面化へ（マネーポストWEB） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5PTFh4c3FLWHd6bXVFUWpJdVBqcEV2QUlfbkZyRjJ2c2JSWWV0ODJUWXpRaHVJRXIxTGJ0a1ROc1lfUjl5SUNTYVNudDB2QUZMMnlSdTM1LXF0S3V2SXcyVnpjLTJ0Ulc1RDRfSnZ6WkpzcU9jLXM0S3lCWmQ0Rzg?oc=5",
+          "published_at": "Wed, 04 Nov 2026 22:15:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "【募集】ウェビナー「長期金利の見通しと財政、政治」― 『財政危機時の緊急対応プラン2025』執筆メンバーが読み解く - 東京財団",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1kOXM1MWdKQnRoSDhiU0NOV0NQX052X2ZCSzRiSkFUSDNxSkNuRkMyZzZOTFozY2hkQnE5TDRDV2hjR1RrUlk5eXdNV3ZFMy0tNnJicmhXYTY2bk1iMmMweFUzSnE?oc=5",
+          "published_at": "Thu, 05 Nov 2026 02:52:49 GMT",
+          "source_url": "https://www.tkfd.or.jp"
+        },
+        {
+          "title": "月20万円！住宅ローンの金利上昇で慌てる人､冷静な人の差 - 四季報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5SbTZfakl6SmZLcFpnYm52S2FMT1l3UlY5WlhOVWZOblNDMW82S3pmODZZVzFLbWFLbFJCU2QzSFAzeUFoTG96dks1SXNCRmNydjdXTEM2aw?oc=5",
+          "published_at": "Wed, 04 Nov 2026 22:00:00 GMT",
+          "source_url": "https://shikiho.toyokeizai.net"
+        },
+        {
+          "title": "円定期預金金利の改定について - 住信SBIネット銀行",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE0wUU84Sk1yTHJaRThGcERaaFAxaDZ2VG9nUW9MeWltNnkxTEpudURsdktackpyVFR2T0R6Z19JaWxSZnNzQTB1NUh6SEhVRGNHeXpCdXE0NHdHYXZsQWZ2NzRMUXdhcnk0UkFhcFpMNmZNX1NsS2Jv?oc=5",
+          "published_at": "Mon, 02 Nov 2026 01:04:58 GMT",
+          "source_url": "https://www.netbk.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.009233769073486747,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.05666622452731307,
+        "oil_pressure": -0.7554971280280415,
+        "japan_risk": 0.09572537667799708,
+        "usd_rate_pressure": -0.14690724270678113
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-05T12:26:56.525047+09:00",
+  "prediction_date": "2026-11-05",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-05T12:26:56.525047+09:00",
+  "market_data_through": "2026-11-05",
+  "reference_price": 1303.0,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.0085758854307588,
+      "factor_agreement": 0.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.4968592764211346,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.01061161182662248,
+      "direction": "NEUTRAL",
+      "day_change": 0.044070512820512775,
+      "momentum5": 0.03412698412698423,
+      "trend": -0.018389993334117616,
+      "volatility": 0.3209540195324626
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "VIVANTが中国で批判→コラボ中止のサンリオが明かした背景「ストーリーを把握していなかった」（ピンズバNEWS） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA5blNtb1ZhOWhFekVicE9xUzh6bjF4d3ZzWTlsWUlIRzM1dW9YNTducncxRDBBU2UwNE9XaFNtaWlVcGI5YWZqblpSc0k0YXpMZjBWWTRwcW42WUU0RHV4X0daUVZTSkU3dWl0RmE4dHc2M1dRVEFjMnVILVNOelU?oc=5",
+          "published_at": "Wed, 04 Nov 2026 21:45:32 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "新作「サンリオ当りくじ」をセブンで引いたよ！ “激かわ景品”を徹底レビュー - ぴあエンタメ情報",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1MUDZfWEoyR2dJT2dGSDQtaTFDOVR1V0NHbGZ5ZDVkN3NyVmgtcWVpbERxeUNqNUV1SlpzRDhENTdqLUpXdGZDbkJRRjZYZndiUC01c3llekh6N3FOM2Rj?oc=5",
+          "published_at": "Sun, 01 Nov 2026 10:30:00 GMT",
+          "source_url": "https://lp.p.pia.jp"
+        },
+        {
+          "title": "「サンリオキャラクターズ」オーナメントチャーム全10種が11月16日発売！ボールチェーン付きでクリスマスツリーの飾りにもピッタリ - インサイド",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1VY3UzeHJwUjdxMzV0WHZ0NGlMSktlWnA4OTd5NWpRNk5oMTdYczVjR0pqU1Z3Z1haZHdGSlRMTUZYdEhSR3lreWJMdGJ0SkVEQVpjeHQxWEtBa0lpUFFtSmY1aFBpMC1ZSHc?oc=5",
+          "published_at": "Sun, 01 Nov 2026 04:15:02 GMT",
+          "source_url": "https://www.inside-games.jp"
+        },
+        {
+          "title": "シナモロールやクロミがドット絵のガラケーに。『サンリオキャラクターズ』ぱかぱかガラケー風キーホルダー第2弾・第3弾、11月11日より「かぷえぼ」で展開 - ファミ通",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE41YUZ4M1V0dGc1Y1ppaWdzUF9GZkVlZ2VFY2Z0Y1ZSU1NfNnQ4WEY3VU8yeDhtUnJwY3F5bE1XQ0tsTHhlY0JCRVo4V3NYTGFISkxnbVFLbw?oc=5",
+          "published_at": "Mon, 02 Nov 2026 04:00:00 GMT",
+          "source_url": "https://www.famitsu.com"
+        },
+        {
+          "title": "み～んなあつまれ、サンリオキャラクターの世界へ。『サンリオ パーティランド』がNintendo Switch 2 / Nintendo Switchで本日発売。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOWVaQzlEaDFsTXZLUVhMLWpiTE5MTlU5UjJjVERLWFk5S1VLVmFUYTdNWUdpOFR1SUMzYXpqVm5kRU9oZGRCM3lMUDVOTmpfUURubElvejhHMThQMWhXcktYZWszVHM0QmFxREU3dTJTQlR1Nzk2akZPanhNbTQ0YW5wQU83UQ?oc=5",
+          "published_at": "Thu, 29 Oct 2026 01:19:33 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.009066595924370091,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.05666622452731307,
+        "oil_pressure": -0.7554971280280415,
+        "japan_risk": 0.09572537667799708,
+        "usd_rate_pressure": -0.14690724270678113
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

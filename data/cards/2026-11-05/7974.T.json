@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-05T12:26:56.525047+09:00",
+  "prediction_date": "2026-11-05",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-05T12:26:56.525047+09:00",
+  "market_data_through": "2026-11-05",
+  "reference_price": 8755.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.13416979954863018,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5718801829029888,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.1953085443529039,
+      "direction": "UP",
+      "day_change": 0.04812642164491798,
+      "momentum5": 0.0534231741066058,
+      "trend": -0.0019802927961616312,
+      "volatility": 0.30466191222682387
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "開発者に訊きました : ゼルダの伝説 時のオカリナ｜任天堂 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAzZURSNndtbEZFRzhrY1VsMUZaS1l4X3lsTkZ4bVlZbkNTU0FHUURhMDBaWmlQMFExSkVHZWdyR000QVNwNkFWOE1EdW9jeUJqWVZTd1dzbGhfTUd2QTMzdkpUdnc?oc=5",
+          "published_at": "Mon, 02 Nov 2026 13:00:28 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『ピクミン4 Nintendo Switch 2 Edition + だれでもチャレンジ! ダンドリ検定』の体験版が配信開始。「Pikmin Day Direct」で公開した情報もご紹介。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQTlQzeWFfUXBOY0R2OFBpZ2dQZ2ZfY25HUjY5dUZ4Rm5RUHRPbUh0NUJhOHhQMFVvQXdXZ29zTkV5U0xfd01xNmpsRDlvUm1fcDRkVXlDVXI2bW51eTZ1b1J2OVNqQVFlVkVwOE16Nm5oNlQxcFZWZHdFLUs3RkV2QWVEazFJZw?oc=5",
+          "published_at": "Mon, 02 Nov 2026 02:59:45 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "「ゼルダの伝説 40周年 アニバーサリーエディション」のNintendo Switch 2 や周辺機器は本日発売。「ゼルダの伝説」に関するさまざまな取り組みもご紹介。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQT3UwN041aXJ0SUpZM2Z3c3BVLTNXSlhEUTRuM0xmSHNpUlFiSzFiNEVQMzZUdHRHb2FfZ2o0QnJ4ME92cU1PWGtkeTZMb0lIdkg4WEFGdzFpbzZlSEVMeWtxNGZnUHpEb2hSWndGclluaF91bUNyMWplLXRmeXRpbjJfM3JEdw?oc=5",
+          "published_at": "Thu, 29 Oct 2026 01:19:33 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『Minecraft』が、より鮮やかなグラフィックにアップデートしてNintendo Switch 2 に登場。本日より発売開始。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOSmdSZDB2dDMzU2VxbG9sY3V2SElxQ2Rnby1TSGFxeEpEeDAyNXVnVTlzaFMtODlpTkpKbEtuYjFtYjloZWRvOGFla3hBWktwT21zYkVJZHh2X1hBZjlReTJIWGF0X0t6ZVRNMExoWTJVLV9tNGV2ZEVBV0xMWVNDR0ZIbGUyZw?oc=5",
+          "published_at": "Wed, 28 Oct 2026 01:08:14 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "3本のソフトからお好きな1本を選択してダウンロードできるお得な「Nintendo Switch 2（日本語・国内専用） 選べるソフトセット」が登場。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSnhiVFcyUXVfNDdlVXZ4RTdna2hqbEttc2tpaEdEUi1vNElGSm41UHoxa1dlYzNPc3RocDh3UWJ0eEdGUTVDNEZEMnNmakZ1UjgzZy1BeWtBWUoxeDZJcTVqcHVwT24tNlVQbjF2RmFQTnFDSTNlQ1hLcW1xVVJLNVZCcGZvQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.009066595924370091,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.05666622452731307,
+        "oil_pressure": -0.7554971280280415,
+        "japan_risk": 0.09572537667799708,
+        "usd_rate_pressure": -0.14690724270678113
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

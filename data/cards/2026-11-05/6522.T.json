@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-05T12:26:56.525047+09:00",
+  "prediction_date": "2026-11-05",
+  "symbol": "6522.T",
+  "name": "アスタリスク",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-05T12:26:56.525047+09:00",
+  "market_data_through": "2026-11-05",
+  "reference_price": 703.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6415271620871174,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.22354172182638327,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5044179729086358,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5909090909090909,
+    "heldout_signals": 44
+  },
+  "evidence": {
+    "price": {
+      "score": -0.9414223127918555,
+      "direction": "DOWN",
+      "day_change": -0.03830369357045149,
+      "momentum5": -0.11460957178841313,
+      "trend": -0.16149660627138618,
+      "volatility": 0.5757511292457337
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "アスタリスク[6522]：2026年定時株主総会招集通知 2026年11月5日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQbFJEaUNzVlB5WUQycmM1TE5wMjAzWkpGSGZPMV9UcG50X0VKMWxHckVfQmRfRHp0V24za09kdVZ4QS04S2dxc1hvdWtOY19SZzVxZ2pEQ2RVeEllZktkTDhwNmpzSDRzd3cyZkRraVVrUDNMcm5GYVRhdDNidnp2NVNrN092LWpsa3Z0b2xEV2NvbFhIdTBtNEk5WFU0RllaUmRJRGxHdXd0UVdCV1RhdU1IMnFFVHp0XzJCQUFNeUc4SHVxblBFSXlBVHk?oc=5",
+          "published_at": "Wed, 04 Nov 2026 23:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "大手アパレル企業「株式会社ワールド」へRFIDリーダー『AsReader』を導入 - 株式会社アスタリスク",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1DSGs3X2xPdTZka0cxOUdIQ2lDa1NsLUh0R0NJQ0hlc3Jmb0p3bHZSanNhbjFJX3oyLS04SWVmTThiYndpWnN5M2stTFU?oc=5",
+          "published_at": "Tue, 24 Feb 2026 08:00:00 GMT",
+          "source_url": "https://www.asx.co.jp"
+        },
+        {
+          "title": "RFIDソリューション販売開始。次世代RFIDソリューション『AsReader BOX-Type』を「coca」旗艦店に導入 ～全国100店舗以上を展開するadapt retailingで店舗DXを実証、中長期の業績拡大へ本格着手～ - 株式会社アスタリスク",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBoNnp1MzhONTZfSElhcFJia0pQUi16eFpCajdyQVIyODlTelhKUGpzQWd4M0czRDgxZ2p4XzBtOXJKYXY0V05NT3BUQVE2c00?oc=5",
+          "published_at": "Mon, 10 Aug 2026 07:00:00 GMT",
+          "source_url": "https://www.asx.co.jp"
+        },
+        {
+          "title": "アスタリスク[6522]：スーパーマーケット向け『全商品RFID化ソリューション』の本格展開を開始 2026年6月30日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1PR0luLWVLbGZOUGVQNTNaMDExRlc2UEpuSXFOcF9mVDIyVUVjdTM3OTZlR3NXWW5zLWFIc0RiZWhNeXRWdkpwV3ZaemZSbXRMM3J6cGhKTkZWV3RkYWZjU3ZDZXg5MEU3RHc?oc=5",
+          "published_at": "Tue, 30 Jun 2026 07:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "アスタリスク[6522]：株主優待（設立20 周年記念株主優待）の実施に関するお知らせ 2026年8月5日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5pZC0wM1Jtem9LT1lIZ1BIbWlteVNlMDJhQUItc3RBWFQ2UVJjdG9uX2hKeW8zYW1MRUczTW41QmVDSXJLS3BqVW9tTFdfU18zN2lKZnFwRS1zSVRGRjhuSWdwQk8wTVI4aUE?oc=5",
+          "published_at": "Wed, 05 Aug 2026 07:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.009066595924370091,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.05666622452731307,
+        "oil_pressure": -0.7554971280280415,
+        "japan_risk": 0.09572537667799708,
+        "usd_rate_pressure": -0.14690724270678113
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
