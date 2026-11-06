@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-06T12:22:23.279331+09:00",
+  "prediction_date": "2026-11-06",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-06T12:22:23.279331+09:00",
+  "market_data_through": "2026-11-06",
+  "reference_price": 157.83200073242188,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.08053644479263118,
+      "factor_agreement": 0.5,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5308568266325102,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.0067729071426268495,
+      "direction": "NEUTRAL",
+      "day_change": -0.0033152554941741075,
+      "momentum5": 0.00017743452496810086,
+      "trend": 0.0007579090760603258,
+      "volatility": 0.052736878452219214
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀の追加利上げ「27年末に2.25%」「12月以降ペース減速」 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9XN3p5WV8yUzVWTEFULVNkU2hDRWhFVW9hOHBkTmkwa2NKUDVRemh3V3VDelkxNF9EbVRVY1A5UmlKcE83SnhVenliOGZ0ZTBKRkJWSTNyQmpBRm1ncjJ2X0tiaFhtWHdMQWFDMA?oc=5",
+          "published_at": "Thu, 05 Nov 2026 17:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜米政局不安でリスク回避 米雇用統計の反応は限定的か」 外為どっとコム トゥデイ 2026年11月6日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1TcWdkZm1uQVVGajNFTHBRRm9fZ0J4NzBjVENIQW1SMWU5TVhESWl1d0c2ck1HeEpPSzFQUFhtUHhWaE9Nczc2U24xT21PbFc5T3ItblcweE5nRjYtTk9JSlhKUQ?oc=5",
+          "published_at": "Thu, 05 Nov 2026 23:42:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "利上げはどこまで続く? 日銀が最終到達点を議論 9月会合議事要旨 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4xNExmWjFMaDZIV3NPb21aaWwyRm83R3BKSHRoOXBXQXNrY1p1UUVZZGdDaVI3aXB2VHRxcjRNZ0o4ejN4ajR4SXBVVmN2QU9zRHNvQ0k3MDZCOHYtVVI0MEw3cHNTYVE?oc=5",
+          "published_at": "Thu, 05 Nov 2026 06:41:25 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "日銀のＥＴＦ追加売却益、再投資でさらなる成長につなげる＝高市首相 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPYzVlSWFpbDZ3Tjl6SmtiazJPaFlFTzdXYUVrLWw2NVJDX2hVZkF0LXNHS0VtWFk3TXU2eE84MVE5SnpJc1VZMFJ6eU5hdnNVYWs3TnZTaFdRbFFidldVVFRSaGJyVWI1VnJ4VGJUeHVHQXQ4NUJaWW14ZEI0ZnlKLWNIcw?oc=5",
+          "published_at": "Fri, 06 Nov 2026 01:41:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "東京為替：ドル・円は戻り一服、157円70銭台で推移 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9zYjNSbThKemtMRFBBTEZpc1Q5V1p6SjcxUmFrR254ZzIxTWpqVVlpc2lSdUxZWERmaUI4TGVYVTRCbkx2YVBvYThJWVZ2UUVrTFE?oc=5",
+          "published_at": "Fri, 06 Nov 2026 01:02:13 GMT",
+          "source_url": "https://s.kabutan.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.0812057862376328,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.5215685975317863,
+        "japan_risk": 0.31553890743960067,
+        "usd_rate_pressure": -0.13204057492933718
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-06T12:22:23.279331+09:00",
+  "prediction_date": "2026-11-06",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-06T12:22:23.279331+09:00",
+  "market_data_through": "2026-11-05",
+  "reference_price": 4063.300048828125,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.15978202697562024,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.47157570215245076,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.15552819838544726,
+      "direction": "DOWN",
+      "day_change": -0.0023815249624048462,
+      "momentum5": 0.007912920389224976,
+      "trend": -0.023556553193150753,
+      "volatility": 0.2365040371610115
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "長期金利2.665%に低下、4カ月ぶり水準 米金利低下が波及 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1PQTZxOVQ4NWhtY2pIcUlYMVY3SnNHYUJySjNXVm1lYy05a1FNVk92c3hzUGE3aGU5RkNUMk1Wb1ljWDE5dklLUEp1a2piTmNtMG82allNdDUxSTJzUV96WVh5eXY4OU1EZUM5Vw?oc=5",
+          "published_at": "Fri, 06 Nov 2026 00:39:38 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "米国中間選挙で民主党勝利が米金利に与える影響 3つの金利低下要因と今後の注目点を解説 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9UUW9YZXNPRTE5T1VEcWFuSjhDTW9HLTdpblBKTkZuYXpYbWMyLTJqZ2pDTHY2blFXZ2FaZHMwZWNneDdPakFCLVFBRGQ2MUd2aktQMWNjczhiaFZ5Z3pV?oc=5",
+          "published_at": "Thu, 05 Nov 2026 09:43:41 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "個人向け国債の変動10年、5月・11月募集分は12月16日から1.85％となる見通し。100万円で半年の利子900円増（LIMO） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0xZXpKeHlIN0k5d3JoMXdlWXhCRlNjU2Y5TTVJeVNIaHVVX1RCcXI1X3hraG1RV0JBOXNoX2ZxLUVZU0J1STZrempvRnY4UG5xWjcwdjBLR20ydFZtY09iUHF0Ym1OemY3cUhjVDhnUWc4TWd2Y1hKa2FZZHhjRzA?oc=5",
+          "published_at": "Thu, 05 Nov 2026 23:01:04 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "外為サマリー：日米金利差縮小などが意識され一時１５７円２０銭台に軟化 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5saXp1RTRmNUJENEQzNkVFcG41Nm95T2VpZlEwUVlEUnZkTURxVnZRMU95Rzh5ZXdoTFA5ZVJabHQ2NnZjdll2aTBRY1VFMFJmOUFHemhTRElUdG5RNXBndg?oc=5",
+          "published_at": "Fri, 06 Nov 2026 01:13:00 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "英中銀、政策金利4.00%に 3年3カ月ぶり利上げ、インフレ加速 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1iZUZkWTVFVWtVRVFDSFVnTFhtQk4xSGFGbkhtX0k2WFNXd2VqTzZTenljQnJ0TzJnT3ZDcjNnWDFNSHhuNVcyV29lMldPR0QyWkpSMHdScUw5blQzQmp4XzNidUpSV2c?oc=5",
+          "published_at": "Thu, 05 Nov 2026 12:27:47 GMT",
+          "source_url": "https://www.asahi.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.21848568049010722,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.5215685975317863,
+        "japan_risk": 0.31553890743960067,
+        "usd_rate_pressure": -0.13204057492933718
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

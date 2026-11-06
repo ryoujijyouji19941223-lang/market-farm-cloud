@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-06T12:22:23.279331+09:00",
+  "prediction_date": "2026-11-06",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-06T12:22:23.279331+09:00",
+  "market_data_through": "2026-11-06",
+  "reference_price": 1236.5,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.10798711946076175,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.44330938880610615,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.12351046979523785,
+      "direction": "DOWN",
+      "day_change": -0.04884615384615387,
+      "momentum5": 0.0061025223759154645,
+      "trend": -0.018569301888270773,
+      "volatility": 0.3682194114299465
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "サンリオ「ガラケー風キーホルダー」新作がカプセルトイに登場！ シナモロールやポチャッコなどデザイン（クランクイン！） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9qU3BiMm5jSWdQZ0hRZHpJUURVOF9fM2FPVEt5bkFsX2dxbk9jUXN6enh0cU9qV2pQbVdTUFNSMmhnSHJBeDkya3FzcWNvUVRndi1VQkVhXzZMYW5DMFB3VUIybjV6bzNvdzVVeWlHc0FQQTRBdHdKRjRiYmZ4eGs?oc=5",
+          "published_at": "Fri, 06 Nov 2026 00:57:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "サンリオ「クロミ」のBIGぬいぐるみなどが当たる！ Happyくじコラボ第2弾が12月4日発売 - GAME Watch",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE55OVBZbmZGdm1GaGtfN3BzYVZrSC1qU3h0TDdQNGcwTEpoRUZia2tWTmttRnZzMkZ3aUZVeWt3TkxpN2x0Q0ZsOG9kbkY1WWdkMlREVXlkQUE4bi1rS3JhX3lkaFBkZw?oc=5",
+          "published_at": "Fri, 06 Nov 2026 03:00:00 GMT",
+          "source_url": "https://game.watch.impress.co.jp"
+        },
+        {
+          "title": "サンリオキャラクターズが“バレエコア”に クロミ＆キティの40センチのぬいぐるみ登場 - オリコンニュース",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5WaEx6dHppdE1CYlF1TTZvby1RdUVpNnVUME1HVFJBRkh1UWczTW1FUG95S2J2MWh0cjNyVmRSR3FmQktGWm1OaEtiZEhMY1k?oc=5",
+          "published_at": "Fri, 06 Nov 2026 03:00:00 GMT",
+          "source_url": "https://www.oricon.co.jp"
+        },
+        {
+          "title": "明日の決算発表予定 三菱重、サンリオなど255社 (11月5日) - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8zblpCalUtTTdrZHZWQTd5YkRYakI1dk4tM2hqdkJNUE9lYkRHVGUwbHM5SmdHQ3RyLWh4cWpKU3B5cV9YN3gzNVI1dnV2ZmQ4YUEzN2FnMW1TZEFocDRJeQ?oc=5",
+          "published_at": "Thu, 05 Nov 2026 06:41:00 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "「購入できてよかった」ファミマ×サンリオの“キティちゃんエコバッグ”が可愛すぎる！「レトロ柄ずるいって！」「ダッシュしてGETできた」《購入レビュー》 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE82Q2xidXp5WjZ5aFU2blI1bWtydVFoYUh1OWZ6cktNSkVMQmh5MkxHaHVyRjRxM1ZWMS1XV1c3RTRaSTFSTFdrTjF2Y0k?oc=5",
+          "published_at": "Thu, 05 Nov 2026 08:11:00 GMT",
+          "source_url": "https://diamond.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.5215685975317863,
+        "japan_risk": 0.31553890743960067,
+        "usd_rate_pressure": -0.13204057492933718
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

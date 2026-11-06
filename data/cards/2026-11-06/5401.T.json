@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-06T12:22:23.279331+09:00",
+  "prediction_date": "2026-11-06",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-06T12:22:23.279331+09:00",
+  "market_data_through": "2026-11-06",
+  "reference_price": 660.2999877929688,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.16216028457328982,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.562460181082416,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.07817688907836735,
+      "direction": "UP",
+      "day_change": -0.008558576887434333,
+      "momentum5": 0.001668652253592473,
+      "trend": 0.008957766159180869,
+      "volatility": 0.18593331011200762
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "本日注目すべき【好決算】銘柄 日本製鉄、ソニーＧ、太陽誘電 (5日引け後 発表分) - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE94NUVOZFcwaTBsUnpENmxGbUNTQnhmemN5QWRiM3V1NThFWFJveXpvbkMyVFpHc1VXWjVhaDlNdDFDQ2FCNmFMZG1HSk5oZUxqN2hIV2ZTYWRfVlJaV2Z3Ug?oc=5",
+          "published_at": "Thu, 05 Nov 2026 22:01:00 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "日本製鉄が一時逆行高、大幅上方修正で買い安心感(ウエルスアドバイザー) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeXprTk1aU3lxWG1waklNU2x5ajU3MEc0dFlFbXppaVhLS09DNE5FcTU0cDJLSUhxX0pnX3N1d1gydkwzcTdqcGg5MEpJNEM3SnBGdTV6Q2hKallidm0zcUZOTzZIMDh4SEVUZ3VmS3FadDNRVDM1VVgtZENoRjZtOFNzTnpRT2c?oc=5",
+          "published_at": "Fri, 06 Nov 2026 01:21:55 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日本製鉄は底堅い､27年3月期業績予想を上方修正 - 四季報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE12a0syMGRZdUE4cC0zSUh6TTN5M1gzeWxLaXlJRHF5M3JoYlg1UU5yaC10aWIyZkpvSTQtekYwaURndEczSFlTTVBQcHp1Nm5xTzl5cm9yUQ?oc=5",
+          "published_at": "Fri, 06 Nov 2026 02:23:07 GMT",
+          "source_url": "https://shikiho.toyokeizai.net"
+        },
+        {
+          "title": "日本製鉄 事業利益3割増 買収したUSスチールが業績押し上げ - テレ朝NEWS",
+          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFB0QTc0a2tGN2haQ0k2WEpHSGlqMXAySzFSb2RjQjRieEVnNDZvaHdnOHdqSHN6MmY3YWpUQmI0ZWZ2bzkyNWc2MkZBMk1KOXQ2X2hXaFJsWlJ1NDdhRjJHZjVqWVlnZzY5TzRHRWxLTHJWQQ?oc=5",
+          "published_at": "Thu, 05 Nov 2026 11:20:29 GMT",
+          "source_url": "https://news.tv-asahi.co.jp"
+        },
+        {
+          "title": "【日本選手権】日本製鉄瀬戸内 現チーム名で初勝利 先発・杉本「ゲーム作れた」都市対抗の雪辱果たす - スポニチ Sponichi Annex",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQbGhucEhtZjAzY3lLN0dIcTVmQnpVNjZxQUdqZTVOc3RaZ0Uxa0NlRnJENDVtSHg5NkQ0THNVZUh5QnZfUDV6RnAtQXBKY0pLLVRiYURUU3VkUXR3czFCM1B2andsb2pDWTBiNWowMTVQTG1MWHVUbzVkYnRZdm1UaDBqWHNQWnZkSFdwaXF0TQ?oc=5",
+          "published_at": "Thu, 05 Nov 2026 20:30:00 GMT",
+          "source_url": "https://www.sponichi.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.5215685975317863,
+        "japan_risk": 0.31553890743960067,
+        "usd_rate_pressure": -0.13204057492933718
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
