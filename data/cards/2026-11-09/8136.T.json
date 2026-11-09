@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-09T11:35:25.295061+09:00",
+  "prediction_date": "2026-11-09",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-09T11:35:25.295061+09:00",
+  "market_data_through": "2026-11-09",
+  "reference_price": 1137.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.4453223940042682,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.3083106640589799,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.583877470174344,
+      "direction": "DOWN",
+      "day_change": -0.06496710526315785,
+      "momentum5": -0.09330143540669855,
+      "trend": -0.03688999823116701,
+      "volatility": 0.46218822436040435
+    },
+    "news": {
+      "score": 0.14285714285714285,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "【株式】サンリオが続落 2Q決算は売上高と営業利益で過去最高を記録も市場の期待には届かなかったとの見方が優勢に - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNZG82S3BmbmJRaGsyMmN6MDBSN3lHeVI4YXdxd2ZvRkpZVTVWcHJkY2UzOFRfNjF0aE5GRC1qdHN6WGY0dHQ5VGJlLXNLVTRYOEVOT0pQOGE0UDlFNXZJOXRMbEdxSkNUbk1zRm45eFhFbkMyU1k5MzdibHJOU29YdzU5M0otNTQ?oc=5",
+          "published_at": "Mon, 09 Nov 2026 00:45:52 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "サンリオ株価が一時8%安 4〜9月最高益でも短期的売り先行 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBfMmd4alBoMTRjNzQwRjBNRUVIdTBUTkl2ZnVxUnFKUy13OEZaZkVuYmtqelBTRVNYU3VIWXJ1emR4V0gyekFVVzh4elRBUXYtTVM2NGl6LVJGeW9pM3poRVJlMGw3M0pzUk5qcQ?oc=5",
+          "published_at": "Mon, 09 Nov 2026 01:32:19 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "「サンリオキャラクターズ」新作UTがユニクロに登場！デコレーションシール風デザインのキッズ向け合計7種 - インサイド",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBfM2lKWS1wOUJWV2VmZHJCTXBzYk1saEVrVUg5Vi1VNUZlaWEzVWM0MEIyQlplUFEtMVFySnhSaTVsaWxmbFIyOU5ubkw0bEZOVU9lb0oyQUtLeDczZlFyLWtmd3d6a3dkTlE?oc=5",
+          "published_at": "Sun, 08 Nov 2026 21:25:02 GMT",
+          "source_url": "https://www.inside-games.jp"
+        },
+        {
+          "title": "かわいすぎて全種類買っちゃった！セリアでみつけた「サンリオの食器」毎日出番が止まりません！《購入レビュー》 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5IWG5oQnh4czMtYTltRV9mWlZUeHhLT1FzRG9SUDBybW9RZG9MeWpFUmtxVXpuS201cHI3MHM5N25fcU9yTzc0dmxLckY?oc=5",
+          "published_at": "Sun, 08 Nov 2026 01:00:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "【きょう発売】サンリオキャラ145以上が登場『サンリオ パーティランド』 マイメロディら3キャラの甚兵衛風衣装も配信 - オリコンニュース",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1VY3ljbnhnRzBzT2xMVWxJRl9VMFZyRG9VZ0FiR240aXNsbUtFaEQtcDZjdUdPOVhaYjZsR3ZXYUxPM2xFWndtUWZla0k3Rnd0ZlV1VWwyaExmQQ?oc=5",
+          "published_at": "Mon, 09 Nov 2026 00:02:37 GMT",
+          "source_url": "https://www.oricon.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.29649602296253186,
+        "japan_risk": 0.18495206967320876,
+        "usd_rate_pressure": -0.0448948798631581
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

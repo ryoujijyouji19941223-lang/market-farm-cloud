@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-09T11:35:25.295061+09:00",
+  "prediction_date": "2026-11-09",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-09T11:35:25.295061+09:00",
+  "market_data_through": "2026-11-09",
+  "reference_price": 668.2999877929688,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.14463186073928846,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.5529482590666227,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.14168550949055025,
+      "direction": "UP",
+      "day_change": 0.017974086508711018,
+      "momentum5": 0.017974086508711018,
+      "trend": 0.008843606443834195,
+      "volatility": 0.18916932389420776
+    },
+    "news": {
+      "score": 0.14285714285714285,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日本製鉄グループの脱炭素・防災技術、CO2削減から堤防のかさ上げまで - 建設技術展2026近畿(前編) - Infoseek",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9iRnFfY0RZZUUwVm4tX3M4dFhxVk80YlNoYVZHMW5zT0NOUFVRbXdJS1A0VnhCVDRhZXRXYk1QT2dZQkRfX0U4VFlsOWd4N0trOFZzbkpoSHh3bkdraVd2aw?oc=5",
+          "published_at": "Sun, 08 Nov 2026 23:30:30 GMT",
+          "source_url": "https://news.infoseek.co.jp"
+        },
+        {
+          "title": "社会人野球日本選手権2026 日本製鉄瀬戸内―Honda（2回戦）ダイジェスト - 毎日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1aZkxNeVNZMmczb0R5cHJGMDR0cV94MmdqenBkQkVVS3FucEZNLS00UHN6cU92OUdtSmM1RkczLTliUG9VX1VDTmFXaFIxT0FBZ210c0dmZ09Bek1NU3BZalpSVFN3UQ?oc=5",
+          "published_at": "Sat, 07 Nov 2026 13:35:13 GMT",
+          "source_url": "https://mainichi.jp"
+        },
+        {
+          "title": "日本製鉄は底堅い､27年3月期業績予想を上方修正 - 四季報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE12a0syMGRZdUE4cC0zSUh6TTN5M1gzeWxLaXlJRHF5M3JoYlg1UU5yaC10aWIyZkpvSTQtekYwaURndEczSFlTTVBQcHp1Nm5xTzl5cm9yUQ?oc=5",
+          "published_at": "Fri, 06 Nov 2026 02:23:07 GMT",
+          "source_url": "https://shikiho.toyokeizai.net"
+        },
+        {
+          "title": "本日注目すべき【好決算】銘柄 日本製鉄、ソニーＧ、太陽誘電 (5日引け後 発表分) - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE94NUVOZFcwaTBsUnpENmxGbUNTQnhmemN5QWRiM3V1NThFWFJveXpvbkMyVFpHc1VXWjVhaDlNdDFDQ2FCNmFMZG1HSk5oZUxqN2hIV2ZTYWRfVlJaV2Z3Ug?oc=5",
+          "published_at": "Thu, 05 Nov 2026 22:01:00 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "日本製鉄釜石シーウェイブス、2026-27シーズン 新ジャージー決定のお知らせ - ジャパンラグビーリーグワン",
+          "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1jaFJzR2o3TlNqX0JFakQyNjA2bDVVNzlEM0VsNWo3Wk1hb3dJaE5TNi1ORV9Ca08zRW9VYlFhYV9QUnBwLUE?oc=5",
+          "published_at": "Fri, 06 Nov 2026 03:32:28 GMT",
+          "source_url": "https://league-one.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.29649602296253186,
+        "japan_risk": 0.18495206967320876,
+        "usd_rate_pressure": -0.0448948798631581
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

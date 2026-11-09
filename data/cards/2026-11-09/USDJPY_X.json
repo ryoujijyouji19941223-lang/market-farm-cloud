@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-09T11:35:25.295061+09:00",
+  "prediction_date": "2026-11-09",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-09T11:35:25.295061+09:00",
+  "market_data_through": "2026-11-09",
+  "reference_price": 158.2449951171875,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.08571266807768993,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5405309704076258,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.023578965732011382,
+      "direction": "NEUTRAL",
+      "day_change": 0.004742879359382446,
+      "momentum5": 0.0036022575076062324,
+      "trend": 0.0011467883592095607,
+      "volatility": 0.05757370519773075
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜強い米雇用統計でもレンジブレイクならず」 外為どっとコム トゥデイ 2026年11月9日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBUTDg3c2lMa1YtN1pQazRkNV9CazdNWTBSTjM5TFZGUzRreFR0NFB6OFlVOHRGeEEtWE1NSlYzSXhWNGNQZFctMmFpUzhuZTgtYXoxeGd3M3ZDZ0hITGlWOGY2bw?oc=5",
+          "published_at": "Sun, 08 Nov 2026 23:18:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "ドル／円はレンジ継続、株動向を注視 米物価指標も＝今週の外為市場 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBWcjhMWkNoaThyaV9BOXJDZXRNTzN5QzZna2s4S0xMX2RnT1pkdFFGWnhiaG9YZ0UwNWZ1NEdheUZ6QU1yS19ud0NOUFJMUWN5bU8yREo5R0pwdG5rQWV1ZnJPNDF1Z0p5Y1lfSnFQNS1CZHdkbWVxeVExT3BfQQ?oc=5",
+          "published_at": "Sun, 08 Nov 2026 22:39:12 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "東京為替：ドル・円は下げ渋り、158円30銭付近に戻す - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBSVXZsRll0alJaNEtkSDZZWXBnczEtNjN1aWpZeHBqZ1NkU3VUcnBxcFo3Sml5SjZNMjBnUFVCeVBpV2diZkMwLTBZamNFWURCMkE?oc=5",
+          "published_at": "Mon, 09 Nov 2026 01:02:22 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "【速報】政府・日銀は７月３０日、１日当たりの円買い介入としては過去最大の７兆９７５６億円に上る為替介入を実施した - 時事ドットコム",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9FdG9xWU9HN3NySXllRnExRnpBdTY5NzAydmo1dHlzMk93VkZyaGZjSmFfTlpGQmNfZVplWnNvT0pya3N6OW51dmdGYl9FZlRtRTU2VzlvQ0h4aThSQzlHUmdUcVRRdw?oc=5",
+          "published_at": "Sun, 08 Nov 2026 23:53:00 GMT",
+          "source_url": "https://www.jiji.com"
+        },
+        {
+          "title": "【為替市場】利上げ＝円高の図式が復活し、ドル円は155～165円で推移(週刊 金融財政事情) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPaWZRNl83N1BYaWZYTGZDdXNGSHZVVDFpQWJVTDR6YlhUMC13MnVPcjhtTXE4dUlQRWM4X2xmTHdSREF1VEk3cWlwSV9NN09LZlBQV1FGSXZnUFo3cWN2ZGZ1b2lOdUJyTEtvanRNeGpxQmFQZklQcHhJMVJFd3FJUDhUMFNHWkE?oc=5",
+          "published_at": "Mon, 09 Nov 2026 00:30:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.039526475866147964,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.29649602296253186,
+        "japan_risk": 0.18495206967320876,
+        "usd_rate_pressure": -0.0448948798631581
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-09T11:35:25.295061+09:00",
+  "prediction_date": "2026-11-09",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-09T11:35:25.295061+09:00",
+  "market_data_through": "2026-11-08",
+  "reference_price": 4139.5,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.15461817226507818,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5842293832196233,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.1506255585116939,
+      "direction": "UP",
+      "day_change": 0.015853174115784796,
+      "momentum5": 0.04280025649033581,
+      "trend": -0.0024275713678773014,
+      "volatility": 0.24227330571625713
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "金利低下は続くのか 日米金利・金融政策の行方 - 日経CNBC online",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5SLUJrZ2pmMTVZNGtyTUQwaVJsNkc4Zmo1NTdRQTdPTUxTNndHM3RvbjEtZ3FRYV9UZTRzRFNELWpNREFrRHA2aEZTbXR3S1lrNnY5ZQ?oc=5",
+          "published_at": "Mon, 09 Nov 2026 01:39:14 GMT",
+          "source_url": "https://online.nikkei-cnbc.co.jp"
+        },
+        {
+          "title": "ミライノカード（Mastercard・Travelers Gold）の付帯保険の改定について - 住信SBIネット銀行",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE15NVFWQmNEQWRpWEZrdUdkVGlVT0J2TENGUGJOMFZjUzVNWmlrZ2J6R25SekYweUtRZF9xdjhIYlB2WDZPYzNWd2lKczVQNGxhc0JsVUpKem5BQVZ2VVNzVnktR1ZzNm9oZGszSy1WeW9pQ0ZjOUE?oc=5",
+          "published_at": "Mon, 09 Nov 2026 01:49:33 GMT",
+          "source_url": "https://www.netbk.co.jp"
+        },
+        {
+          "title": "イラン攻撃で金利は上昇方向か ただし、年後半以降の中長期金利の予測に変更なし 野村證券・宍戸知暁 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBKZF9za1JKMmhYeG1xVVBEWWZmZnl4Vm1GaTZLUkRELWZWZll1bG5UT3pSaWhUdE9qcW5LcFVlZENiVzdFOEJJZlMtTTVTbjNzYkdiZ1Z2aGlIaUlVY0NJ?oc=5",
+          "published_at": "Fri, 06 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "長期金利2.665%に低下、4カ月ぶり水準 米金利低下が波及 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1PQTZxOVQ4NWhtY2pIcUlYMVY3SnNHYUJySjNXVm1lYy05a1FNVk92c3hzUGE3aGU5RkNUMk1Wb1ljWDE5dklLUEp1a2piTmNtMG82allNdDUxSTJzUV96WVh5eXY4OU1EZUM5Vw?oc=5",
+          "published_at": "Fri, 06 Nov 2026 00:39:38 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "焦点：預金から国債へ、「金利ある世界」で個人の動き活発 警戒する銀行 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxON1VHa295dW9zZEJpTEVabnJMQ0dfZmRsel80Vjc1SkNKSi1OZHJpRzMzSndyU3hjcnBfNVlqTUxkWVVua0lrVTFOUmVOaFlIZmlia1JYendkaVU3X2ppTDBYZGtNOGtlLUgzOGczelAxRFJKY1dMbXo5Zjl0WWN4VlhQLUZjNy1BQkIxcFpzYTk?oc=5",
+          "published_at": "Thu, 05 Nov 2026 23:43:49 GMT",
+          "source_url": "https://www.reuters.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.20628528318084213,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.29649602296253186,
+        "japan_risk": 0.18495206967320876,
+        "usd_rate_pressure": -0.0448948798631581
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

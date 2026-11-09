@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-09T11:35:25.295061+09:00",
+  "prediction_date": "2026-11-09",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-09T11:35:25.295061+09:00",
+  "market_data_through": "2026-11-09",
+  "reference_price": 192.75599670410156,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.22358752964391343,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.6205521708899054,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.10551590888961726,
+      "direction": "UP",
+      "day_change": -0.0016884226757734044,
+      "momentum5": 0.008232939355609759,
+      "trend": 0.009122297403972857,
+      "volatility": 0.05521264597204956
+    },
+    "news": {
+      "score": 0.75,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀、基調インフレ2%到達と判断 野村證券は12月追加利上げのメインシナリオ維持 野村證券・森田京平 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9QWF9CWlVUME14Z3VLNmtJOHRoVkQ1c3RtSEtpQ3ppQzRqMDlFQUN3VFQwYmVyenZzWWxZaV9KZkVfMnRKS2tXV0FwZFdsdmVTNmVlclNhTXZMTW5XTFhr?oc=5",
+          "published_at": "Fri, 06 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "【速報】政府・日銀は７月３０日、１日当たりの円買い介入としては過去最大の７兆９７５６億円に上る為替介入を実施した - 時事ドットコム",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9FdG9xWU9HN3NySXllRnExRnpBdTY5NzAydmo1dHlzMk93VkZyaGZjSmFfTlpGQmNfZVplWnNvT0pya3N6OW51dmdGYl9FZlRtRTU2VzlvQ0h4aThSQzlHUmdUcVRRdw?oc=5",
+          "published_at": "Sun, 08 Nov 2026 23:53:00 GMT",
+          "source_url": "https://www.jiji.com"
+        },
+        {
+          "title": "9日のスイスフラン・円、売り・買い要因＆支持抵抗ライン(フィスコ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNUEZGX2xPMHpXQ0VSWUZzNXVwdFpIU2lLOUh2eDM3ekcxVXExaVZCYWdVS2ZNeGNDVGRrRF9RTHpRdkNucmt4cGxzeEhpZlBJMEhzRGpEOEtsRVIwQXd2OEZkV1FSQUZ2eV92eEpvMmRvTXBIZXdyQXpFREVOYTc2Vkhyekd4bms?oc=5",
+          "published_at": "Mon, 09 Nov 2026 01:30:59 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "利上げはどこまで続く? 日銀が最終到達点を議論 9月会合議事要旨 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4xNExmWjFMaDZIV3NPb21aaWwyRm83R3BKSHRoOXBXQXNrY1p1UUVZZGdDaVI3aXB2VHRxcjRNZ0o4ejN4ajR4SXBVVmN2QU9zRHNvQ0k3MDZCOHYtVVI0MEw3cHNTYVE?oc=5",
+          "published_at": "Thu, 05 Nov 2026 06:41:25 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "速いペースでの利上げ継続意識した意見が複数＝9月日銀会合要旨 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPaHVKZ0hscFVQdHZ2Rjl6WWk2LW9ScTg0Z1pHNjZ5NmY1c0NXZk4tcXo0X0NUc3pTX28taUZGaW80NVpuVHFlcm9GNTZiekxXQ1dtaVFqU3haV3NtUERFQkJMRC10VExSbk5veU5EMnVSVi0ycGwtdkZ4bTJrNUJmNzd4YlhZR0M5Snl5OTlZbVU?oc=5",
+          "published_at": "Thu, 05 Nov 2026 00:42:00 GMT",
+          "source_url": "https://www.reuters.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.1622447439931579,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.29649602296253186,
+        "japan_risk": 0.18495206967320876,
+        "usd_rate_pressure": -0.0448948798631581
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

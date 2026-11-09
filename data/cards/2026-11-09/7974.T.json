@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-09T11:35:25.295061+09:00",
+  "prediction_date": "2026-11-09",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-09T11:35:25.295061+09:00",
+  "market_data_through": "2026-11-09",
+  "reference_price": 8632.0,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.14531719552330677,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.5488929789422493,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.17840764047545113,
+      "direction": "UP",
+      "day_change": 0.05551479579359264,
+      "momentum5": 0.041380142357341,
+      "trend": 0.0018521156859951926,
+      "volatility": 0.48886215813623524
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "「応援ソング大集合『カラオケJOYSOUND for Nintendo Switch』10日間無料キャンペーン」開催。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQZEkyM2hiNGNKOVc5bXlNdUdEX1VlNGFINjNCb3RqX29KM1BnSGxLdUNWdEVBQUJqNENZTExwX3lSNE9PU25DV2NhY1Q4aG1KenIzRTNDQUN2a0EtSkg4eHhhRHV1VUFSdnRUbGo1MG0tTUxvcTJWempzN1dwT2VwZVkwNGN6UQ?oc=5",
+          "published_at": "Fri, 06 Nov 2026 01:15:08 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『ピクミン4 Nintendo Switch 2 Edition + だれでもチャレンジ! ダンドリ検定』の体験版が配信開始。「Pikmin Day Direct」で公開した情報もご紹介。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQTlQzeWFfUXBOY0R2OFBpZ2dQZ2ZfY25HUjY5dUZ4Rm5RUHRPbUh0NUJhOHhQMFVvQXdXZ29zTkV5U0xfd01xNmpsRDlvUm1fcDRkVXlDVXI2bW51eTZ1b1J2OVNqQVFlVkVwOE16Nm5oNlQxcFZWZHdFLUs3RkV2QWVEazFJZw?oc=5",
+          "published_at": "Mon, 02 Nov 2026 02:59:45 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "3本のソフトからお好きな1本を選択してダウンロードできるお得な「Nintendo Switch 2（日本語・国内専用） 選べるソフトセット」が登場。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSnhiVFcyUXVfNDdlVXZ4RTdna2hqbEttc2tpaEdEUi1vNElGSm41UHoxa1dlYzNPc3RocDh3UWJ0eEdGUTVDNEZEMnNmakZ1UjgzZy1BeWtBWUoxeDZJcTVqcHVwT24tNlVQbjF2RmFQTnFDSTNlQ1hLcW1xVVJLNVZCcGZvQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "遊びが広がる有料追加コンテンツ『ファイアーエムブレム 万紫千紅 エキスパンション・パス』が本日発売。最新映像も公開中。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNdFBVa044ZWNzUHRQMDVXWm1nZXhyU252VnhoUEl3UmRYOVhVSXFTcVFhR2FuMXVrUjJ2ZURGYnpQb25nRHprZFRkMkZ2amdWR0JocVpROXd6LVpQVEdRZlJKZWlOYjZORG84RWhQdFJUcHMtM3hTdlRMRWYyUFN2bWVidFczUQ?oc=5",
+          "published_at": "Thu, 15 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "開発者に訊きました : ゼルダの伝説 時のオカリナ｜任天堂 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5WS0tqS2dETko3TUoyUDZDQUFYRWtOcDRBLVBldXBYNEQzLVVtckFnZVNfc3lkTlFvdU1BM2dfR0FOUzBVTGNJbXBLU21feTJpWndqb3ZkTHA4NVBOWnJ3RA?oc=5",
+          "published_at": "Mon, 02 Nov 2026 14:03:41 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.29649602296253186,
+        "japan_risk": 0.18495206967320876,
+        "usd_rate_pressure": -0.0448948798631581
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-09T11:35:25.295061+09:00",
+  "prediction_date": "2026-11-09",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-09T11:35:25.295061+09:00",
+  "market_data_through": "2026-11-09",
+  "reference_price": 8652.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.7265882488756223,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.26378076980095644,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.9975037273381001,
+      "direction": "DOWN",
+      "day_change": 0.016566795911173715,
+      "momentum5": -0.3576837416481069,
+      "trend": -0.23896155789820073,
+      "volatility": 1.1411157003203252
+    },
+    "news": {
+      "score": 0.14285714285714285,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "AIバブル懸念で1万円割れのキオクシア株 今後のカギ握る「期末配当」 - 現代ビジネス",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE03ekJiekRYaWFkRnZnR2Q4enRrazdmVUtHaVJHRzhjbW1BcEtYOVdhekhzX2d5SFZZS19OOXZ3T3Y2RUlDeXpLdmtyczRSX3c?oc=5",
+          "published_at": "Sun, 08 Nov 2026 20:04:59 GMT",
+          "source_url": "https://gendai.media"
+        },
+        {
+          "title": "キオクシア・東京エレクほか、株価急落で再評価したい上半期大幅増益銘柄 - SBI証券",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9UR0ZoWDBiY0gyVUpHLUg3enlqZjJJZUNmckhPM3puTVQzVWx4STFrQ3JBNm5hMnBOUEl5aTFfblZhUWtmS195LUJSSUZ0X0wyOUJ2cmtBaGF1bUVYZnAtT2JER1ZQVjlPUG5SUDIxLW5laU9Zc1hjSlo5eWY5ZjA?oc=5",
+          "published_at": "Fri, 06 Nov 2026 07:01:49 GMT",
+          "source_url": "https://go.sbisec.co.jp"
+        },
+        {
+          "title": "寄前【成行注文】売り越しランキング ＪＴ、キオクシア、ランド [08:35] - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4zMENaSEhRZnhmVDh6RWlmNFA3dkI4Q3Y1OFZwclVCdVE4emJnOWlmaU9XX3RvTG15YW4ycHo1Z0gtOWdhOVROZUJQQzJMa2FNYnc?oc=5",
+          "published_at": "Sun, 08 Nov 2026 23:35:57 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "キオクシア株、1万円割れでも逆張り止まらず 信用買いが過去最多 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE42TjV2aHVEcXpxMHB6bTB4cl9xa01lTFVfS3lTRUF3X3NTS0dKZnloa2FDbDNFQkstTlVGRDVqaWVEbFVHUDBqRFVEUHNaVUx1MFllU2NpOXEycU9LNXVJQ05iRzFvV3gzZkk2Vw?oc=5",
+          "published_at": "Thu, 05 Nov 2026 23:50:23 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "キオクシアHD 米市場で半導体株が総崩れ、サンディスク株は22%安 - 日経CNBC online",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBUTm1aZEthOVAzYmwyNEh5SmNUSXBoa2hfM1ZDanZ6Z2JZRzgxWGs5ZnVndWZUTGtwMTBTMFdMWWx4QUR0WjNETTZVWEJRVUFKTDQtVA?oc=5",
+          "published_at": "Fri, 06 Nov 2026 00:27:00 GMT",
+          "source_url": "https://online.nikkei-cnbc.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.29649602296253186,
+        "japan_risk": 0.18495206967320876,
+        "usd_rate_pressure": -0.0448948798631581
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
