@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-10T13:35:32.200623+09:00",
+  "prediction_date": "2026-11-10",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-10T13:35:32.200623+09:00",
+  "market_data_through": "2026-11-10",
+  "reference_price": 157.97999572753906,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.10308033425704005,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.54654838632327,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.013205551160013698,
+      "direction": "NEUTRAL",
+      "day_change": -0.0019711148009533552,
+      "momentum5": 0.00041162932064642277,
+      "trend": 0.001444975197674614,
+      "volatility": 0.0578332763379365
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜158円挟みの展開続く」 外為どっとコム トゥデイ 2026年11月10日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5rUndETEJySXVlZFFzYjExR0NWRl9MV2pEVGRLb2M1Tk11YWxZWlhGRWRMRkxDdGs2c1F1VUtRSm5GNVE0QnRTbUl5SFBsQzlfN1pMSmVJbmlHT0NsRHE1WTFhQQ?oc=5",
+          "published_at": "Mon, 09 Nov 2026 23:40:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀政策金利「到達点」予想、2%ちょうど付近に低下 AI懸念揺さぶる - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1rLU1rZm1XTXJWSExBS19kZ3NVcEZwVnhYQVpST3FxYjJYcWNCX1dwZ1ZtRElUdExhaWNKX1R3M0tySHZqYTNIeVlnWXdyQlVKeVBQajNoZmdTVHp5TDB2aWQwcXBDcVk4dEoxNg?oc=5",
+          "published_at": "Mon, 09 Nov 2026 19:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "金融政策の手法「全て日銀が決定」、ＥＴＦ売却影響せず＝片山財務相 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOUEhRTmFCeEN6QV9MaF9lTk9MS0dIVTV3LUpKR1FkajdBajdoRjVBX19hd211NkM5amlEZ2JTRUZYdDhMdGhlcTdldEx4U3JOT3g0UEtzWTc2YndBWndqdktYdXYtYlpaQW9WVTh5NE5zdWJGZU5ESVllMkVkVHJvbEJnNUZtQQ?oc=5",
+          "published_at": "Tue, 10 Nov 2026 02:27:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "利上げ「できる時に実施した方がよい」日銀委員、10月の金融政策決定会合意見 - 産経ニュース",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4tODdHb0JweHlQLUZDV1ZWdnpUeXdlTFktWV9LZEVwVWdLN1l4WDhsVkJyX0N6Z3l2QWNudXlzMWx3UUROdUtnYXRDR1RzY3J5OUNyc2NBd2doWUZCZmltTkIxQV9KT1pKdHhOYkJhR3d1a19maUE?oc=5",
+          "published_at": "Tue, 10 Nov 2026 01:35:39 GMT",
+          "source_url": "https://www.sankei.com"
+        },
+        {
+          "title": "日銀、政策金利「早く中立に」 利上げ注目点は〝春闘〟動向 10月会合意見 - ニッキンONLINE",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAtdjRlZHczN21sWlV1SnY0M1RCbTl5ejJiMlJBRDdiUFJ0MmhlT2ZUSUlwVnFJWWt0S3Zad0NrRWlfTVlLYzF5YlFUdU53SDNPakJXaDJB?oc=5",
+          "published_at": "Tue, 10 Nov 2026 03:25:00 GMT",
+          "source_url": "https://www.nikkinonline.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.060670396454871496,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": -0.23488887294865046,
+        "oil_pressure": -0.5484139504184266,
+        "japan_risk": 0.13864704318966514,
+        "usd_rate_pressure": -0.0264954609683129
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

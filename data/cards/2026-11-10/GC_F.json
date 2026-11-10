@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-10T13:35:32.200623+09:00",
+  "prediction_date": "2026-11-10",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-10T13:35:32.200623+09:00",
+  "market_data_through": "2026-11-09",
+  "reference_price": 4123.2998046875,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.22235324426266734,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.6131612439183605,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.12994556287432701,
+      "direction": "UP",
+      "day_change": 0.011877568407486994,
+      "momentum5": 0.03871919166920579,
+      "trend": -0.0030240361471952637,
+      "volatility": 0.2391038458984823
+    },
+    "news": {
+      "score": 0.75,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀政策金利「到達点」予想、2%ちょうど付近に低下 AI懸念揺さぶる - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1rLU1rZm1XTXJWSExBS19kZ3NVcEZwVnhYQVpST3FxYjJYcWNCX1dwZ1ZtRElUdExhaWNKX1R3M0tySHZqYTNIeVlnWXdyQlVKeVBQajNoZmdTVHp5TDB2aWQwcXBDcVk4dEoxNg?oc=5",
+          "published_at": "Mon, 09 Nov 2026 19:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "米中間選挙後の金利 原油価格の低下は日銀の利上げ姿勢に大きく影響しないとみる 野村證券・宍戸知暁 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9nakFxbFAyVGk5QVFVRHNodkJENWJIMHN4UF9kR0g4SmFjc2dWY3ZmTjNVeFdzN3BGblYwVzFRM0NxQXRPWVg2ZXRWdG9Zc2c2ckpyZFUya3FkbjI2aUpR?oc=5",
+          "published_at": "Mon, 09 Nov 2026 06:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "「トランプ後」へ動く米国、より強硬になる中国 地政学リスク先読み - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE0wQUYyMU9FdHJjZWhoTERMRjgwU1BNM1FfY2tEN0NiQW1HMGdWR0pqaDUwTDRoZi16ci1oWk95cFhhWlNIMVljdTg5blZ0WjdlNUFyN1RKazNnN3NTaGJIM1VTdzR5Z1U?oc=5",
+          "published_at": "Tue, 10 Nov 2026 01:00:00 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "日銀、政策金利「早く中立に」 利上げ注目点は〝春闘〟動向 10月会合意見 - ニッキンONLINE",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAtdjRlZHczN21sWlV1SnY0M1RCbTl5ejJiMlJBRDdiUFJ0MmhlT2ZUSUlwVnFJWWt0S3Zad0NrRWlfTVlLYzF5YlFUdU53SDNPakJXaDJB?oc=5",
+          "published_at": "Tue, 10 Nov 2026 03:25:00 GMT",
+          "source_url": "https://www.nikkinonline.com"
+        },
+        {
+          "title": "バークシャー円債、前回4月上回る上乗せ金利で需要探る-13日にも起債 - Bloomberg.com",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBzZ0hxM2pEM2c1aGZtOVdlSDdkYzhrY1QzOXQ1eFFUVy1Jb3pIUWVGbUZucHNqUGMtM2VZbFRUWWFubm5NaUZZM0RnMTNHb19ENHdiMlB1VkRYdERqVnNDQTRodzFLVkdKc1QycmVoZnQwRTlZZWFr?oc=5",
+          "published_at": "Tue, 10 Nov 2026 01:39:00 GMT",
+          "source_url": "https://www.bloomberg.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.04326841005416629,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": -0.23488887294865046,
+        "oil_pressure": -0.5484139504184266,
+        "japan_risk": 0.13864704318966514,
+        "usd_rate_pressure": -0.0264954609683129
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

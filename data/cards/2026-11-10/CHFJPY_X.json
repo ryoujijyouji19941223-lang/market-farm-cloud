@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-10T13:35:32.200623+09:00",
+  "prediction_date": "2026-11-10",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-10T13:35:32.200623+09:00",
+  "market_data_through": "2026-11-10",
+  "reference_price": 192.7429962158203,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.13481243611890148,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5677451870796544,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.06525561636087678,
+      "direction": "UP",
+      "day_change": -0.0019398465063167336,
+      "momentum5": -0.000736181118591861,
+      "trend": 0.008536650514121114,
+      "volatility": 0.05367152215845104
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "金融政策の手法「全て日銀が決定」、ＥＴＦ売却影響せず＝片山財務相 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOUEhRTmFCeEN6QV9MaF9lTk9MS0dIVTV3LUpKR1FkajdBajdoRjVBX19hd211NkM5amlEZ2JTRUZYdDhMdGhlcTdldEx4U3JOT3g0UEtzWTc2YndBWndqdktYdXYtYlpaQW9WVTh5NE5zdWJGZU5ESVllMkVkVHJvbEJnNUZtQQ?oc=5",
+          "published_at": "Tue, 10 Nov 2026 02:27:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀政策金利「到達点」予想、2%ちょうど付近に低下 AI懸念揺さぶる - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1rLU1rZm1XTXJWSExBS19kZ3NVcEZwVnhYQVpST3FxYjJYcWNCX1dwZ1ZtRElUdExhaWNKX1R3M0tySHZqYTNIeVlnWXdyQlVKeVBQajNoZmdTVHp5TDB2aWQwcXBDcVk4dEoxNg?oc=5",
+          "published_at": "Mon, 09 Nov 2026 19:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "外為：スイスフラン、192円88銭前後とフラン安・円高で推移 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBnSGtmQjNkemR0S2V0dW56VVFyRzNsUElzS3pYM1U2V0tVcWVqNlN0Q294X3M1VXlLc0kxMTNpeWJxMTFxdTFQMHktd2VoRkZsR0E?oc=5",
+          "published_at": "Tue, 10 Nov 2026 01:31:04 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "日銀ETFの追加売却益「経済安全保障特別会計の財源に」片山さつき財務大臣 - TBS NEWS DIG",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFB0SVV5X2lCQUI1UmF3Rl8tV3lSeTQzSFFoRjZpRDJ3OHpBa1ZYc1JnellUeDJySUpPNVFCR3JhTllZOVVvNFNpWWFKY2MzSkltZmVieUJRRQ?oc=5",
+          "published_at": "Tue, 10 Nov 2026 03:00:59 GMT",
+          "source_url": "https://newsdig.tbs.co.jp"
+        },
+        {
+          "title": "利上げ「できる時に実施した方がよい」日銀委員、10月の金融政策決定会合意見 - 産経ニュース",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4tODdHb0JweHlQLUZDV1ZWdnpUeXdlTFktWV9LZEVwVWdLN1l4WDhsVkJyX0N6Z3l2QWNudXlzMWx3UUROdUtnYXRDR1RzY3J5OUNyc2NBd2doWUZCZmltTkIxQV9KT1pKdHhOYkJhR3d1a19maUE?oc=5",
+          "published_at": "Tue, 10 Nov 2026 01:35:39 GMT",
+          "source_url": "https://www.sankei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.036257446623368425,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.23488887294865046,
+        "oil_pressure": -0.5484139504184266,
+        "japan_risk": 0.13864704318966514,
+        "usd_rate_pressure": -0.0264954609683129
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

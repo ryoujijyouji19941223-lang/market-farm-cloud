@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-10T13:35:32.200623+09:00",
+  "prediction_date": "2026-11-10",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-10T13:35:32.200623+09:00",
+  "market_data_through": "2026-11-10",
+  "reference_price": 8465.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.1470283615511744,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5739692679602091,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.20792798323589237,
+      "direction": "UP",
+      "day_change": -0.016383918196607006,
+      "momentum5": 0.03877776414283951,
+      "trend": 0.006986708069381065,
+      "volatility": 0.4743407194103115
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "『ピクミン4 Nintendo Switch 2 Edition + だれでもチャレンジ! ダンドリ検定』の体験版が配信開始。「Pikmin Day Direct」で公開した情報もご紹介。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQTlQzeWFfUXBOY0R2OFBpZ2dQZ2ZfY25HUjY5dUZ4Rm5RUHRPbUh0NUJhOHhQMFVvQXdXZ29zTkV5U0xfd01xNmpsRDlvUm1fcDRkVXlDVXI2bW51eTZ1b1J2OVNqQVFlVkVwOE16Nm5oNlQxcFZWZHdFLUs3RkV2QWVEazFJZw?oc=5",
+          "published_at": "Mon, 02 Nov 2026 02:59:45 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "3本のソフトからお好きな1本を選択してダウンロードできるお得な「Nintendo Switch 2（日本語・国内専用） 選べるソフトセット」が登場。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSnhiVFcyUXVfNDdlVXZ4RTdna2hqbEttc2tpaEdEUi1vNElGSm41UHoxa1dlYzNPc3RocDh3UWJ0eEdGUTVDNEZEMnNmakZ1UjgzZy1BeWtBWUoxeDZJcTVqcHVwT24tNlVQbjF2RmFQTnFDSTNlQ1hLcW1xVVJLNVZCcGZvQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "遊びが広がる有料追加コンテンツ『ファイアーエムブレム 万紫千紅 エキスパンション・パス』が本日発売。最新映像も公開中。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNdFBVa044ZWNzUHRQMDVXWm1nZXhyU252VnhoUEl3UmRYOVhVSXFTcVFhR2FuMXVrUjJ2ZURGYnpQb25nRHprZFRkMkZ2amdWR0JocVpROXd6LVpQVEdRZlJKZWlOYjZORG84RWhQdFJUcHMtM3hTdlRMRWYyUFN2bWVidFczUQ?oc=5",
+          "published_at": "Thu, 15 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "開発者に訊きました : ゼルダの伝説 時のオカリナ｜任天堂 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5WS0tqS2dETko3TUoyUDZDQUFYRWtOcDRBLVBldXBYNEQzLVVtckFnZVNfc3lkTlFvdU1BM2dfR0FOUzBVTGNJbXBLU21feTJpWndqb3ZkTHA4NVBOWnJ3RA?oc=5",
+          "published_at": "Mon, 02 Nov 2026 14:03:41 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "【10月14日追加】「ゲームボーイアドバンス Nintendo Classics」に3タイトルを追加。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxONXJNQXFGZ2txSVRWUzFEclhzSVkta1BFOHVELUU5MzdRZExXdktIY1dsSDFMcnRZRHV6R1FtSDFnbFZvejBHbnB3VUxyOGdoUTVYTkNBWjQ1QlJHUVp4NmVOX1NqYWpUeDJ5TGNVTEY4TWN5UEVnYmZ0VklSV2VKb29adW1zdw?oc=5",
+          "published_at": "Wed, 14 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.03758221967178407,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.23488887294865046,
+        "oil_pressure": -0.5484139504184266,
+        "japan_risk": 0.13864704318966514,
+        "usd_rate_pressure": -0.0264954609683129
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

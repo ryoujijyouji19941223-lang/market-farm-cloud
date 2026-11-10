@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-10T13:35:32.200623+09:00",
+  "prediction_date": "2026-11-10",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-10T13:35:32.200623+09:00",
+  "market_data_through": "2026-11-10",
+  "reference_price": 8881.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.7029758631501608,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.2768437893393859,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.9942478385285194,
+      "direction": "DOWN",
+      "day_change": 0.06974223078776198,
+      "momentum5": -0.21718818862935219,
+      "trend": -0.2569338146029322,
+      "volatility": 1.186357080087137
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "キオクシアは55％下落､この1カ月で株価が下がった大型株17社 - 四季報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5EX1loYmFWa0F3cnJlOUYtVWxMRE5CalRKRTJBNElKRGdoWGx6SUZ4MXVvVHN6ZkZxSUg1OUt6YTQ5SmtSNTRibndTeGp2akxWWlhjWjctQQ?oc=5",
+          "published_at": "Tue, 10 Nov 2026 03:00:00 GMT",
+          "source_url": "https://shikiho.toyokeizai.net"
+        },
+        {
+          "title": "話題株先取り【特別気配】速報 ＜買いトップ キオクシア、売りトップ 日経Ｄインバ＞ - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9Cc2w2ZlM4QW80YThKZHNOU2s1eWV4cUhkMFhxOXlLX0EyVnc3V2RFcVV3c3M4Y1BpWUFuNjdxOW9WNVVMU05JMGFYN19fb3NiSGZTSktpcTg4SkQ4MVZWaA?oc=5",
+          "published_at": "Tue, 10 Nov 2026 00:03:23 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "オリックス株価一時6.8%安 キオクシアHD株安で業績鈍化意識 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5lV3F4R2VCd1MyODhoYTVnc3BVZkdjUzZWVmRiQXI2VDRQUXZWX2l2M1F1TmlZcWpqRDhlMmpxSS1FX3JWMnpBQWRoYnA5S1pTT3ZJd3RXYkFwOF9ISGRIeTIzSDkxN25HMkhVLQ?oc=5",
+          "published_at": "Tue, 10 Nov 2026 01:11:18 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "オリックス上半期最高益、キオクシア株寄与 株安で今後評価損も - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQNUd5TVptMUlTdl9LZ3RMM2o3dGFLVDFJVXhhSW1xY0hRT3kxQ0c0LTdLOVhZRkxlaDgwREJ1SXdIUDhsVUNxRUI1WjJpaDZsVWYtbDc5bHg5dHVTZFVUZjZtcjBkYVZwQk13QzBRaS1XallHeGlDMTRLdzlKY1dJaGtGSG5hZw?oc=5",
+          "published_at": "Mon, 09 Nov 2026 07:01:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "キオクシア株連動の1.25倍レバレッジ商品、香港で取引スタート - Bloomberg.com",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFA2SU5LRnZtdXlzYU9lVUZTZHV2MVZxVjRKZl9ua1hQZkFOTFBuMVZHS1VWWFNsN2xhSHBtNHg2T0ZqeVA2anljZ28teVN5eGEzdVlUNWp5Z21CQkw2MXFERk1qWWxaN05XRDU5WDBHdjc4NFczWGFz?oc=5",
+          "published_at": "Tue, 10 Nov 2026 02:24:00 GMT",
+          "source_url": "https://www.bloomberg.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.03758221967178407,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.23488887294865046,
+        "oil_pressure": -0.5484139504184266,
+        "japan_risk": 0.13864704318966514,
+        "usd_rate_pressure": -0.0264954609683129
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-10T13:35:32.200623+09:00",
+  "prediction_date": "2026-11-10",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-10T13:35:32.200623+09:00",
+  "market_data_through": "2026-11-10",
+  "reference_price": 1121.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.4155032186688294,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.3029272886007247,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.6027439495853849,
+      "direction": "DOWN",
+      "day_change": -0.04147071398033353,
+      "momentum5": -0.08452429563086972,
+      "trend": -0.04491856292148111,
+      "volatility": 0.42961388031324466
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "サンリオ株安、米国事業物価高の影 国内7万人フェスに攻略のヒント - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBLTV9Fd2t0OVoyUzFLaW52Z1k2VFlocU53MGl0WGlVWS05Q0lzSndtWGFHSU1rVjlLRVVWVkw2MThYSjJBRTRjWGNzdER0Mk5ORW1SRGl1SkFUWkd0ZWdYOEduYWlUU1ZWaUdXRA?oc=5",
+          "published_at": "Mon, 09 Nov 2026 02:46:12 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "【株式】サンリオが続落 2Q決算は売上高と営業利益で過去最高を記録も市場の期待には届かなかったとの見方が優勢に - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNZG82S3BmbmJRaGsyMmN6MDBSN3lHeVI4YXdxd2ZvRkpZVTVWcHJkY2UzOFRfNjF0aE5GRC1qdHN6WGY0dHQ5VGJlLXNLVTRYOEVOT0pQOGE0UDlFNXZJOXRMbEdxSkNUbk1zRm45eFhFbkMyU1k5MzdibHJOU29YdzU5M0otNTQ?oc=5",
+          "published_at": "Mon, 09 Nov 2026 00:45:52 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "しまむらで「サンリオキャラクターズ」グッズが11月11日発売！冬アートが可愛いハローキティたちのアパレル、あったか布団や着る毛布など豊富なデザイン - インサイド",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5uOEhaY0N2c0dhTWdBOTNoOUxnZ2I4M2x4ZnpTTW5DNFBSOXNfcm1qdkpYRndZTV84ancxeG5YYVFuS2FYV3lNbU82STFPcldyOXF2SFNad0lKTFMxbUNWZHAxVDF1N3h4ZGc?oc=5",
+          "published_at": "Mon, 09 Nov 2026 11:15:02 GMT",
+          "source_url": "https://www.inside-games.jp"
+        },
+        {
+          "title": "「サンリオ」キティやマイメロがピザのおふとんでスヤスヤ♪ かわいすぎてとろけちゃうソフビ人形が登場 - アニメ！アニメ！",
+          "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9UX21wYmFWMjBQOHo0aHpzZTJXelV3UElUMl93TmhaQVBYZVVNQ29SbXdCWHpOUkdUbk1EUktJUGZ1QWJidlVZWFhTei1IME5vbldCTFpaZ2h2Vldpc3VqTnhR?oc=5",
+          "published_at": "Tue, 10 Nov 2026 01:00:03 GMT",
+          "source_url": "https://animeanime.jp"
+        },
+        {
+          "title": "かわいすぎて全種類買っちゃった！セリアでみつけた「サンリオの食器」毎日出番が止まりません！《購入レビュー》 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5IWG5oQnh4czMtYTltRV9mWlZUeHhLT1FzRG9SUDBybW9RZG9MeWpFUmtxVXpuS201cHI3MHM5N25fcU9yTzc0dmxLckY?oc=5",
+          "published_at": "Sun, 08 Nov 2026 01:00:00 GMT",
+          "source_url": "https://diamond.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.03758221967178407,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.23488887294865046,
+        "oil_pressure": -0.5484139504184266,
+        "japan_risk": 0.13864704318966514,
+        "usd_rate_pressure": -0.0264954609683129
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

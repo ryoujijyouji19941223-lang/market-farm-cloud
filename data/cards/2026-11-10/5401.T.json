@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-10T13:35:32.200623+09:00",
+  "prediction_date": "2026-11-10",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-10T13:35:32.200623+09:00",
+  "market_data_through": "2026-11-10",
+  "reference_price": 688.5999755859375,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.23300202717543536,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.6254168219000427,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.3031098444480408,
+      "direction": "UP",
+      "day_change": 0.0202992305175409,
+      "momentum5": 0.04761902993192724,
+      "trend": 0.01530805206344299,
+      "volatility": 0.2096245504630945
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日本製鉄、水素100％で低品位鉄鉱石から還元鉄 累計1000トン - 日経クロステック",
+          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB3c1lMaG1PNkN6Y1E2WkZKNTZvdENKSlUzWHhaM0U0Sk9KQlhkSUhRc2o2MUlvTG1sOWpURGlITWl4cU04MGhvYVJZSmN0NW1zSnF3SWZpRWRBTS1I?oc=5",
+          "published_at": "Mon, 09 Nov 2026 20:00:00 GMT",
+          "source_url": "https://xtech.nikkei.com"
+        },
+        {
+          "title": "日本製鉄－岩井コスモが目標株価引き上げ USスチールの好調と海外成長投資の進展を評価〔DZH 個別株情報〕(時事通信) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQUHQ2cE1SbGtCdUtTdDd3Z20teG5aWHdNX0l2VTFYSUd6Y24zcVV1QWpBRHRRblhGLTNDalJPQnlHWmFqeWJ6V24yek5fWmtnYzJDUldqU3VWdnhzRERZN0hWY2w4Tmk2MU1ha3VKNlJuMWlUMURFYXdjb01nMkc2djlVN1JwTVU?oc=5",
+          "published_at": "Tue, 10 Nov 2026 01:33:39 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日本製鉄はなぜ全国に7つの野球チームを持つのか？ 社会人野球が担う役割 - au Webポータル",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9Ebk5XREc2Y2c5eG5TRjNjbmlYVVFGUGlEU2hKM3plNGFtZkY4YVZYcHVfSjAzdFJlNjZXNThuSjhoRENvbVdjeVdvOHFsTFd6NG94SEh2azB3bXNwdjNqZVY4MlEwdFJ1ZjNuVDlR?oc=5",
+          "published_at": "Tue, 10 Nov 2026 04:00:00 GMT",
+          "source_url": "https://article.auone.jp"
+        },
+        {
+          "title": "日本製鉄、水素100%で還元鉄1000トン超を製造…300時間連続操業に成功 - レスポンス（Response.jp）",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9FYnhraHMtekpMNzJGUTh1ZjZQUVJuY2NkTzBmV0dDX29YdzZDb0hnOUhUajY3b1YyZHFEZXlxNmVvS2ctb0RDWklLWVBZcW1SdlRjeXVaTDNzMjM2d0tV?oc=5",
+          "published_at": "Mon, 09 Nov 2026 08:45:02 GMT",
+          "source_url": "https://response.jp"
+        },
+        {
+          "title": "社会人野球日本選手権2026 日本製鉄瀬戸内―Honda（2回戦）ダイジェスト - 毎日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1aZkxNeVNZMmczb0R5cHJGMDR0cV94MmdqenBkQkVVS3FucEZNLS00UHN6cU92OUdtSmM1RkczLTliUG9VX1VDTmFXaFIxT0FBZ210c0dmZ09Bek1NU3BZalpSVFN3UQ?oc=5",
+          "published_at": "Sat, 07 Nov 2026 12:16:19 GMT",
+          "source_url": "https://mainichi.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.03758221967178407,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.23488887294865046,
+        "oil_pressure": -0.5484139504184266,
+        "japan_risk": 0.13864704318966514,
+        "usd_rate_pressure": -0.0264954609683129
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
