@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-11T11:43:49.052437+09:00",
+  "prediction_date": "2026-11-11",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-11T11:43:49.052437+09:00",
+  "market_data_through": "2026-11-11",
+  "reference_price": 192.33299255371094,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.13513930876140262,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.5670115083902246,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.0332469687167499,
+      "direction": "NEUTRAL",
+      "day_change": -0.002231312579044409,
+      "momentum5": -0.005398813476202302,
+      "trend": 0.006856810089887588,
+      "volatility": 0.05459309574349122
+    },
+    "news": {
+      "score": 0.625,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "物価上昇、とっくに2%超では? 日銀はなぜ今さら「到達」を判断? - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5hQkdERGtGWldPQlZuTU9MQjFpRGdvclNCakgzY1pMUUVBdThhS2loRVhId0xReHBzWDVkWXM5OFJBMmVoaFRpYzBYU1E0WUh2MURUMDNMcVpCaFh0eUJ5ejJiZG42cFk?oc=5",
+          "published_at": "Wed, 11 Nov 2026 01:30:00 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "日銀37年ぶり「年3回利上げ」、予想7割台 市場混乱後に回復 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9jLXQzMmFtU1Nocl9UeW5veFYyRWdvU1VZb3U1R1A5bVNLYmxyYTY5RmZBekh0SUg1R2gtdlhPa3Ytc085UjVYZWpFTTQxTzZGdERmdE56aUYyR09vTUZPV2ZwNW0wVGQ5RGQ1Ng?oc=5",
+          "published_at": "Tue, 10 Nov 2026 08:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "外為：スイスフラン、192円40銭前後と大幅なフラン安・円高で推移 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE43T3d2amNHUzhvOVlkbi03S0N3bEJUM3NKWUhTRjlJalMzckdnUU9QUmRPSGdINlQ1NUpaVFdBTlowQ2JQSmE4OVktQ2JoSnhqdUE?oc=5",
+          "published_at": "Wed, 11 Nov 2026 01:31:04 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "日銀、2％目標の持続的・安定的実現へ適切な政策運営引き続き期待＝高市首相 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNc1ZyaGN3MWc2aU9XRmRSdzdWYTQ3U2F1TXdTT1dGbWpEUkpuVHNpcVVQSlVVVmw1cjJSOUQxaGRqSW15cmNsTHBJa2U1RnV4cjV3MnpiVnZHcW5HVzhKandjWUNSdFNjR3JZZkt4VlpDM1JvUTFZcjBuS0NoWUV5ZElpeWlFQQ?oc=5",
+          "published_at": "Wed, 11 Nov 2026 02:34:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "11日のスイスフラン・円、売り・買い要因＆支持抵抗ライン(フィスコ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOSGtKX1IzMjI0NVZJMlBKbmY3UXUtSWl3MTZFUS1BU09ucnA2S2UySDJmWE9tLS04TWsxcFpvSEpQcnBqMGVNT0s4RXVHVWt1WVAwQXhzZV93WWc5N1NDNFNiY0hqRVYwU3EzS19SWHdxcmg3cmtKWElId2kzamZ4bXNrUF9wUzg?oc=5",
+          "published_at": "Wed, 11 Nov 2026 01:26:33 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.04187580022675124,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": -0.25040151703047564,
+        "oil_pressure": -0.49536876916876527,
+        "japan_risk": 0.06091246207904899,
+        "usd_rate_pressure": 0.03623115003750277
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

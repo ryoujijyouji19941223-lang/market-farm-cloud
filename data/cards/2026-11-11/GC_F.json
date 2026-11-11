@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-11T11:43:49.052437+09:00",
+  "prediction_date": "2026-11-11",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-11T11:43:49.052437+09:00",
+  "market_data_through": "2026-11-10",
+  "reference_price": 4052.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.21086536818477625,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.6052772628281926,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.14168010076922705,
+      "direction": "UP",
+      "day_change": -0.015190181066958353,
+      "momentum5": 0.028322023251972528,
+      "trend": 0.0036689481321698914,
+      "volatility": 0.24306757349501448
+    },
+    "news": {
+      "score": 0.625,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "米国中間選挙後の金（ゴールド）価格見通し 中国の金買い増加が目立つ 野村證券・髙島雄貴 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9lZ29MTWxfek1zczRzQ1dUTlhuYlNTVVplQjVYMmEzY0VNNDl5bzg2Y0dnVFFINlBOeVVLS0VmN2JyZ2kzd3JzazNfcWZPRHowMk1sT1I4bGt2ZzYyOVZJ?oc=5",
+          "published_at": "Wed, 11 Nov 2026 02:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "PwC Japanグループ、 「企業の地政学リスク対応実態調査2026（グローバル編）」結果発表 - Digital PR Platform",
+          "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1NeGdaRmtvdjFRTVVjU0RnQWk0NlpPSHg5QlFoaHFBNzRIdU9OekFCbkVIc2Z3a1JGNGhPc3hVZDJETzg?oc=5",
+          "published_at": "Wed, 11 Nov 2026 01:01:46 GMT",
+          "source_url": "https://digitalpr.jp"
+        },
+        {
+          "title": "ＥＣＢの政策金利決定、燃料高の波及が左右 レーン専務理事 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1vMl9WX3hqd2VzNnFleXYyaW9rODVVakx3Z3FuN2t3X192Yy1GcV9ld3l6Q09ucGdxQlVaZzNrdTljV1d5d3hLOGUyU05VNG1NQXFLRGdMdTJKYzRWMWxDQlNwMFYxazB6eFBWMGVKZkV2X3gwaVpCUl9la2V4dw?oc=5",
+          "published_at": "Tue, 10 Nov 2026 22:33:54 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "債券11時 長期金利、2.765%に上昇 米債安と日本株高が重荷 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1vRURPYlh4ajlDM1l3RUJCOHBlRjRUY2FXSzJlX0VyM3psUk4yOUJsakZlQ28xUGRGcHNkdEZHS0Q1VG1Hd21VRWN1MjByTi1UT1MtVnVlTEJNQzBrcXJFRUROWFllYXU1RGJVdA?oc=5",
+          "published_at": "Wed, 11 Nov 2026 02:35:30 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "住宅ローンの金利、11月は三菱UFJ銀行の変動金利で年1.195％。負債がある世帯で貯蓄が住宅ローンなどを上回るのは世帯主が「50歳代」から（LIMO） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5Sd21kZkxSMmkxVmQwckk4RW9ONzREUW1jVWFZY3N3MzVJWlI4RVMyRjEwZzhPalktbnRtZm55UXM0Z3FnbVFEMWVOcl9IaXh3MDRkazA1dy1ocFQtY2lJbnRuZ3AwNW1PdEVKV2JzV1I5VENRd1V6UkFLeHZ0NHc?oc=5",
+          "published_at": "Tue, 10 Nov 2026 13:05:46 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.05515266441134552,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": -0.25040151703047564,
+        "oil_pressure": -0.49536876916876527,
+        "japan_risk": 0.06091246207904899,
+        "usd_rate_pressure": 0.03623115003750277
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

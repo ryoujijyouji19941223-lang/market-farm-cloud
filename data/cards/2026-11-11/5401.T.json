@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-11T11:43:49.052437+09:00",
+  "prediction_date": "2026-11-11",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-11T11:43:49.052437+09:00",
+  "market_data_through": "2026-11-11",
+  "reference_price": 694.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.25251443012947217,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.6354180435739797,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.3625070495893246,
+      "direction": "UP",
+      "day_change": 0.008867532155029778,
+      "momentum5": 0.051355894058276785,
+      "trend": 0.021793208079762927,
+      "volatility": 0.19039763345884145
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "日本製鉄 GXスチール「NSCarbolex Neutral」を使用したオフィス家具が鹿嶋市・姫路市に初採用 - Digital PR Platform",
+          "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE0zUmRMeDZ6QVJOWEExNlBXM00yYjBwR1ZwVXdFT2J6dFNJbGt5MmFaWTBjT0RwNWx0UWNnZDRiMHA0dDg?oc=5",
+          "published_at": "Wed, 11 Nov 2026 02:16:00 GMT",
+          "source_url": "https://digitalpr.jp"
+        },
+        {
+          "title": "テクニカルで選ぶ注目銘柄：日本製鉄＝日足一目均衡表の雲の上限突破(ウエルスアドバイザー) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPOE51T2FzZk5lTlBYcGF1TWx2QXhGQ1lmMGhYSXpQSGh1ZndzTy04M0Q1eGJuM1FOS05jb09GUDNDNVZYNHpVWW0xZWZNS1ZmUDRXcG9qd1dyYkRmUDZoOFBfTGk4RWVUUW85UnJraTNEQk84YVBnLVRoZ1dCUjFjVkEzU1VJaVk?oc=5",
+          "published_at": "Tue, 10 Nov 2026 23:45:12 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日本製鉄、水素100％で低品位鉄鉱石から還元鉄 累計1000トン - 日経クロステック",
+          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB3c1lMaG1PNkN6Y1E2WkZKNTZvdENKSlUzWHhaM0U0Sk9KQlhkSUhRc2o2MUlvTG1sOWpURGlITWl4cU04MGhvYVJZSmN0NW1zSnF3SWZpRWRBTS1I?oc=5",
+          "published_at": "Mon, 09 Nov 2026 20:00:00 GMT",
+          "source_url": "https://xtech.nikkei.com"
+        },
+        {
+          "title": "日本製鉄のステンレス厚板／ハイパーカミオカンデに採用／約７００トン - 日刊鉄鋼新聞 Japan Metal Daily",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5iR0M3Qlc3YWptRTh6b3FHTE9YSVpyRHhRcmE1LVpucXNwQlRweE5NeVlsNnBKM1M0dGZHZHJlTFpqREpqZ05DUnAtMGpCQVljVnJNcGcyd1BtSWhfQWc?oc=5",
+          "published_at": "Tue, 10 Nov 2026 20:00:00 GMT",
+          "source_url": "https://www.japanmetaldaily.com"
+        },
+        {
+          "title": "社会人野球日本選手権2026 日本製鉄瀬戸内―Honda（2回戦）ダイジェスト - 毎日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1aZkxNeVNZMmczb0R5cHJGMDR0cV94MmdqenBkQkVVS3FucEZNLS00UHN6cU92OUdtSmM1RkczLTliUG9VX1VDTmFXaFIxT0FBZ210c0dmZ09Bek1NU3BZalpSVFN3UQ?oc=5",
+          "published_at": "Sat, 07 Nov 2026 13:35:13 GMT",
+          "source_url": "https://mainichi.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.040064242724876103,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.25040151703047564,
+        "oil_pressure": -0.49536876916876527,
+        "japan_risk": 0.06091246207904899,
+        "usd_rate_pressure": 0.03623115003750277
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

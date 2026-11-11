@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-11T11:43:49.052437+09:00",
+  "prediction_date": "2026-11-11",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-11T11:43:49.052437+09:00",
+  "market_data_through": "2026-11-11",
+  "reference_price": 158.8520050048828,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.14990675355157076,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.5750196501145369,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.023782132301877746,
+      "direction": "NEUTRAL",
+      "day_change": 0.005500612638688729,
+      "momentum5": 0.0024169451338722503,
+      "trend": 0.0017648546165620616,
+      "volatility": 0.06101985291612152
+    },
+    "news": {
+      "score": 0.75,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "物価上昇、とっくに2%超では? 日銀はなぜ今さら「到達」を判断? - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5hQkdERGtGWldPQlZuTU9MQjFpRGdvclNCakgzY1pMUUVBdThhS2loRVhId0xReHBzWDVkWXM5OFJBMmVoaFRpYzBYU1E0WUh2MURUMDNMcVpCaFh0eUJ5ejJiZG42cFk?oc=5",
+          "published_at": "Wed, 11 Nov 2026 01:30:00 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜12月FOMCでの大幅利上げの可能性浮上 200日線を維持できるか」 外為どっとコム トゥデイ 2026年11月11日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5jWkdFY1R3aFY4X00wb2dscGFVQjkzMk4wM1JKYmNROU5NWlVYWDM0aUZYYTdqZE9FZVdHVEFIVVpiQkdXSldEdWVBUzZOWkNSS2pyNmxTdFJLUUlfeWJyUC1kcw?oc=5",
+          "published_at": "Tue, 10 Nov 2026 23:38:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀37年ぶり「年3回利上げ」、予想7割台 市場混乱後に回復 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9jLXQzMmFtU1Nocl9UeW5veFYyRWdvU1VZb3U1R1A5bVNLYmxyYTY5RmZBekh0SUg1R2gtdlhPa3Ytc085UjVYZWpFTTQxTzZGdERmdE56aUYyR09vTUZPV2ZwNW0wVGQ5RGQ1Ng?oc=5",
+          "published_at": "Tue, 10 Nov 2026 08:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "日銀、2％目標の持続的・安定的実現へ適切な政策運営引き続き期待＝高市首相 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNc1ZyaGN3MWc2aU9XRmRSdzdWYTQ3U2F1TXdTT1dGbWpEUkpuVHNpcVVQSlVVVmw1cjJSOUQxaGRqSW15cmNsTHBJa2U1RnV4cjV3MnpiVnZHcW5HVzhKandjWUNSdFNjR3JZZkt4VlpDM1JvUTFZcjBuS0NoWUV5ZElpeWlFQQ?oc=5",
+          "published_at": "Wed, 11 Nov 2026 02:34:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀「2％到達」宣言は単なる通過儀礼、3～4カ月に一度のペースで利上げは続く | 日銀 早耳深掘 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1FUVBqbDVjbGJqX1NWVU1vTWtoQjVDVm1haWlacnpscDZJU2hUa1FZeUg3WmxzYUhUaXF3eEJONkRlZ1p6dEtwZHM4dm8?oc=5",
+          "published_at": "Mon, 09 Nov 2026 19:17:00 GMT",
+          "source_url": "https://diamond.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.04156602390862592,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": -0.25040151703047564,
+        "oil_pressure": -0.49536876916876527,
+        "japan_risk": 0.06091246207904899,
+        "usd_rate_pressure": 0.03623115003750277
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

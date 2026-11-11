@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-11T11:43:49.052437+09:00",
+  "prediction_date": "2026-11-11",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-11T11:43:49.052437+09:00",
+  "market_data_through": "2026-11-11",
+  "reference_price": 8354.0,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.03729435317263645,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5188684134167613,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.046006936417507395,
+      "direction": "UP",
+      "day_change": -0.011594888783719837,
+      "momentum5": 0.00011971746677841288,
+      "trend": 0.005695070981186268,
+      "volatility": 0.4776750835045073
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "Nintendo Switch 2 / Nintendo Switchの本体機能をバージョンアップ。新しい機能をご紹介します。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOOTJvT1NwaGhqQTZXNUxyRTFSdjB2WUFIZ1NleElObFVLcVNyUFZtQjBXaFVCOFc1Zk4wQVpzVF9ycGg0dHpoNm1hMlF5bUszUmhiNF9IYWw3ZEcxaXV6NmlRM0dhUTRDZXEzTXVKZms0ZmpQeld4NHFPSE5lRUNqcWQwX3BlQQ?oc=5",
+          "published_at": "Tue, 10 Nov 2026 01:11:36 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "開発者に訊きました : ゼルダの伝説 時のオカリナ｜任天堂 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAzZURSNndtbEZFRzhrY1VsMUZaS1l4X3lsTkZ4bVlZbkNTU0FHUURhMDBaWmlQMFExSkVHZWdyR000QVNwNkFWOE1EdW9jeUJqWVZTd1dzbGhfTUd2QTMzdkpUdnc?oc=5",
+          "published_at": "Mon, 02 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "3本のソフトからお好きな1本を選択してダウンロードできるお得な「Nintendo Switch 2（日本語・国内専用） 選べるソフトセット」が登場。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSnhiVFcyUXVfNDdlVXZ4RTdna2hqbEttc2tpaEdEUi1vNElGSm41UHoxa1dlYzNPc3RocDh3UWJ0eEdGUTVDNEZEMnNmakZ1UjgzZy1BeWtBWUoxeDZJcTVqcHVwT24tNlVQbjF2RmFQTnFDSTNlQ1hLcW1xVVJLNVZCcGZvQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "遊びが広がる有料追加コンテンツ『ファイアーエムブレム 万紫千紅 エキスパンション・パス』が本日発売。最新映像も公開中。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNdFBVa044ZWNzUHRQMDVXWm1nZXhyU252VnhoUEl3UmRYOVhVSXFTcVFhR2FuMXVrUjJ2ZURGYnpQb25nRHprZFRkMkZ2amdWR0JocVpROXd6LVpQVEdRZlJKZWlOYjZORG84RWhQdFJUcHMtM3hTdlRMRWYyUFN2bWVidFczUQ?oc=5",
+          "published_at": "Thu, 15 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『ピクミン4 Nintendo Switch 2 Edition + だれでもチャレンジ! ダンドリ検定』の体験版が配信開始。「Pikmin Day Direct」で公開した情報もご紹介。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQTlQzeWFfUXBOY0R2OFBpZ2dQZ2ZfY25HUjY5dUZ4Rm5RUHRPbUh0NUJhOHhQMFVvQXdXZ29zTkV5U0xfd01xNmpsRDlvUm1fcDRkVXlDVXI2bW51eTZ1b1J2OVNqQVFlVkVwOE16Nm5oNlQxcFZWZHdFLUs3RkV2QWVEazFJZw?oc=5",
+          "published_at": "Mon, 02 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.040064242724876103,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.25040151703047564,
+        "oil_pressure": -0.49536876916876527,
+        "japan_risk": 0.06091246207904899,
+        "usd_rate_pressure": 0.03623115003750277
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

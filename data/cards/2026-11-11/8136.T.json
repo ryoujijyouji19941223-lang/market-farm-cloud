@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-11T11:43:49.052437+09:00",
+  "prediction_date": "2026-11-11",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-11T11:43:49.052437+09:00",
+  "market_data_through": "2026-11-11",
+  "reference_price": 1132.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.4721574607782469,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.27881612354777574,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.685511506425758,
+      "direction": "DOWN",
+      "day_change": 0.005328596802841812,
+      "momentum5": -0.09294871794871795,
+      "trend": -0.058455445544554396,
+      "volatility": 0.42488362425098686
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "サンリオ株安、米国事業物価高の影 国内7万人フェスに攻略のヒント - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBLTV9Fd2t0OVoyUzFLaW52Z1k2VFlocU53MGl0WGlVWS05Q0lzSndtWGFHSU1rVjlLRVVWVkw2MThYSjJBRTRjWGNzdER0Mk5ORW1SRGl1SkFUWkd0ZWdYOEduYWlUU1ZWaUdXRA?oc=5",
+          "published_at": "Mon, 09 Nov 2026 02:46:12 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "【株式】サンリオが続落 2Q決算は売上高と営業利益で過去最高を記録も市場の期待には届かなかったとの見方が優勢に - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNZG82S3BmbmJRaGsyMmN6MDBSN3lHeVI4YXdxd2ZvRkpZVTVWcHJkY2UzOFRfNjF0aE5GRC1qdHN6WGY0dHQ5VGJlLXNLVTRYOEVOT0pQOGE0UDlFNXZJOXRMbEdxSkNUbk1zRm45eFhFbkMyU1k5MzdibHJOU29YdzU5M0otNTQ?oc=5",
+          "published_at": "Mon, 09 Nov 2026 00:45:52 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "ロマンチックな可愛いリボン姿にキュン！「サンリオキャラクターズ」マイメロディたちの新作グッズ全6種 - インサイド",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0wUmwzUzhsSXJLcmRlWWd2M3RydmRaVGdEWFdDMUtFaTRCX19xcC13ZTVpMWZWX2l6US0zbnMyVGN4ZG1UNWZnb3F4UzIyZzdZdzJjZDRNalYweW5YVXNGcWxQYzQ3eWl5WlE?oc=5",
+          "published_at": "Tue, 10 Nov 2026 21:00:03 GMT",
+          "source_url": "https://www.inside-games.jp"
+        },
+        {
+          "title": "『ポムポムプリン30th号』が八王子へ！桑都テラスでサンリオスイーツ - 八王子ジャーニー",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBMbGFmZmpuSEJ2RVhMRHY0bDB5X0hPSVZkcXN5NWpFbERXb3NpblByVG51azRYWnQ4MHhBb3RENlh3d3M4QzI0a2ZSVVdOOUx4U2REWm5hdDh2Yms?oc=5",
+          "published_at": "Wed, 11 Nov 2026 02:00:36 GMT",
+          "source_url": "https://8dabe.com"
+        },
+        {
+          "title": "『ちょこっとファーム』×「サンリオキャラクターズ」コラボ第13弾!!～サンリオの人気キャラクターたちが『ちょこっとファーム』に再び登場! - 株式会社ドリコム",
+          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBwd0JPV1QxRzJBdUg2d1Q3N1VXWjE4aHRtdkd5QlNnaE5rT3Q3aFJUVldNU0ZYMlZBWmdjT2dMQVV1UlY2RVNQdWxXZ2tDSk9BR09VakFvYkpUb2J4RmlIRURFZVNTamZZ?oc=5",
+          "published_at": "Tue, 10 Nov 2026 11:46:05 GMT",
+          "source_url": "https://drecom.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.040064242724876103,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -0.25040151703047564,
+        "oil_pressure": -0.49536876916876527,
+        "japan_risk": 0.06091246207904899,
+        "usd_rate_pressure": 0.03623115003750277
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
