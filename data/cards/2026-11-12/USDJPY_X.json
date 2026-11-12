@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-12T12:45:49.395018+09:00",
+  "prediction_date": "2026-11-12",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-12T12:45:49.395018+09:00",
+  "market_data_through": "2026-11-12",
+  "reference_price": 159.73199462890625,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.10478999122668192,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5573805825490299,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.05709501578669903,
+      "direction": "UP",
+      "day_change": 0.006471080218031222,
+      "momentum5": 0.0086829129538748,
+      "trend": 0.0028031907275480883,
+      "volatility": 0.06330058818198457
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "ドル円見通し｜2026年末は160円突破か？為替相場を動かす「決定打イベント」完全ガイド 2026年11月12日 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5LZ0FKUWo3Y0w1OVlHMVpQYzBNM3lzOEhjc1kzakF0cE9iXzlOdDlFc3BqdWJlNWxsQWJjTTZBcFBsQzQzVkZwcGJuUXM5YkJlcWpBSC0wQjMwdDVzZEJZcHR3TQ?oc=5",
+          "published_at": "Wed, 11 Nov 2026 23:20:45 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀の浅田委員、利上げによる経済・物価下振れ「十分留意を」 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5DQmotYnJ3Q1lOT1JPRngyZGNEWm5xbWdFNFFqSHU1MGlNSUQtNnBRazd2UUFsQ0wxY3U5RkhoZW5lNlBral9mWk5jeWcyS1l4T0VwZGhISHRHeUhhcXpiRlJ5Wm1RMGJEcHRDaQ?oc=5",
+          "published_at": "Thu, 12 Nov 2026 02:11:54 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "午前のドルは159円後半で一進一退、円安けん制が下押し 根強い買いも - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE41SF9JUUR0X0FnSnhXUGtTWm1ibkJEaUlIMVJQLVdvTUdRT0gyUjdwWk1uNGhvclNjSFU0UkkxYVZ4REZ5WlhvaFN2N3kzWS1SSXVJa1dKODhTeUFMOHhQS0tna0ttUEdtazRTZU9lRVpBQ2dJR3pnSHBldml2dw?oc=5",
+          "published_at": "Thu, 12 Nov 2026 03:12:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "ドル円予想レンジ159.00～160.50円 注目通貨はポンド（11/12） - 日経CNBC online",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9XM2dNOXgzR0VLY2JYcWZKTDA1SjhHTjU3ZDdGdGNSY1I1bzl4b0xzVzZJUFU5SXM4LWw5OXdPeHhyMnBLdzdoLUIxSjZyNkJOSVVxcw?oc=5",
+          "published_at": "Thu, 12 Nov 2026 01:21:48 GMT",
+          "source_url": "https://online.nikkei-cnbc.co.jp"
+        },
+        {
+          "title": "円相場1ドル＝159円台後半 FRBの追加利上げ観測で - NHKニュース",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0tQk9FdGJUaHkxc3NvOGp5UHlIdm0wcF9IVDJFX0RRb2laOVJTd0FQX3hWLWdBU2tuU2I5VHRhVThWU0FqMlQ4TDZjM2xQb19lTjkzOUkyRkozN2xpcjVv?oc=5",
+          "published_at": "Wed, 11 Nov 2026 19:09:15 GMT",
+          "source_url": "https://news.web.nhk"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.014769203278177191,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.2299314150930698,
+        "oil_pressure": -0.13788017643190764,
+        "japan_risk": -0.018619025319996707,
+        "usd_rate_pressure": 0.12980554964258162
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

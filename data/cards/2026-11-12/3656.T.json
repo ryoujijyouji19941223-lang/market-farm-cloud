@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-12T12:45:49.395018+09:00",
+  "prediction_date": "2026-11-12",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-12T12:45:49.395018+09:00",
+  "market_data_through": "2026-11-12",
+  "reference_price": 144.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.4156573876642272,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.30775174840025415,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.48207040127203277,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.574468085106383,
+    "heldout_signals": 47
+  },
+  "evidence": {
+    "price": {
+      "score": -0.6031456377970493,
+      "direction": "DOWN",
+      "day_change": -0.020408163265306145,
+      "momentum5": 0.04347826086956519,
+      "trend": -0.10899873257287718,
+      "volatility": 0.5743026271759539
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "ＫＬａｂ[3656]：KLab、UAE子会社の商号変更および新役員を選任 ～ドローン・航空関連技術・安全保障分野へ本格展開～ 2026年11月9日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQUm5mWG92ekJtTjk5Mm5mSFlWUThSOG9naEpqUV9aRGVMemFFdXVROVJKcVNUSVF0dnIwbFBRa0JSWldra3lnR0RlMEtQZlhBdWwtZklyeVN5cXRDemg0NTA1elFDLThhM3FEMndhUjI1VEItMFBET1JjQU9BeXJfOVNXSmt5U3EzeFZzZUVVWkY3Tk9LTmR4aEpJQ2ZZZ3BrbkxVZG9XUjBweWFDelY5YTIxWEFCVDNuSXZsTk5BQUFfcm9lX1VaTUlId0s?oc=5",
+          "published_at": "Mon, 09 Nov 2026 07:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "KLab HOMMA Middle Eastが グローバルに活躍する空間デザイナー秋葉達雄氏(株式会社T&C JAPAN)とのパートナーシップを発表 〜建築、デジタル、LED技術が融合するコンセプト動画を公開〜 - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5nMEZUTFhPT1hXdmZCdnZNMEVmZnh5N3JiM2NPTXBjNzBrM1dwWWhkTVN3WC1aSTJXU2I5YjVkMjg1S3pUZnItR1lsc2VfdVd3VHRFQVg3V0VlMi11NmM3NllXZ2s?oc=5",
+          "published_at": "Wed, 19 Aug 2026 07:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        },
+        {
+          "title": "KLab、UAE子会社の商号変更および新役員を選任 - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5IZUs4VXE5RlFoMUloVHJPUlFVb3BaTzVPM0o1SWd0M21tRHQwVXFPWWxhZ2NQNUZGdFBmUE9JVGNKbzh5S1U5WmxheDRQdVFreWxQMGkyYjJ5ZDgzUmE3V0g2ZkZLUC1sZFE?oc=5",
+          "published_at": "Mon, 09 Nov 2026 07:30:02 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "KLab（3656）、IP／エンターテインメント・AI・ブロックチェーンの多角化経営を推進 AI自動取引システムは実運用間近 - ログミーFinance",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5WSFJEczFlMWo4WTVUOVVKdzVfajlDZndkTWU2amlMaG1QcnNFME12R0NBZmtLY3J4ZG14Z2JsNFR6NTZESmxUdjhfTTZmRjN6c0E?oc=5",
+          "published_at": "Tue, 16 Jun 2026 07:00:00 GMT",
+          "source_url": "https://finance.logmi.jp"
+        },
+        {
+          "title": "KLab、HOMMAとドバイに合弁会社設立…100兆円規模へ拡大見込むスマートホーム市場に参入 - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE8xYUVDT3p2dll5MEU1WTlTWTZiVlhVaV85WDBreDVBOTFiOTM0MnVjMXFXdlB1eEQxMzJab2lONHllMmdm?oc=5",
+          "published_at": "Thu, 16 Jul 2026 07:00:00 GMT",
+          "source_url": "https://gamebiz.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.03678902641489117,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.2299314150930698,
+        "oil_pressure": -0.13788017643190764,
+        "japan_risk": -0.018619025319996707,
+        "usd_rate_pressure": 0.12980554964258162
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

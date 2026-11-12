@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-12T12:45:49.395018+09:00",
+  "prediction_date": "2026-11-12",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-12T12:45:49.395018+09:00",
+  "market_data_through": "2026-11-12",
+  "reference_price": 191.677001953125,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.12045249428168281,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5553970648628648,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.014202473443777184,
+      "direction": "NEUTRAL",
+      "day_change": -0.003410702406674959,
+      "momentum5": -0.011630378106686767,
+      "trend": 0.004039760492402067,
+      "volatility": 0.056291127874908656
+    },
+    "news": {
+      "score": 0.625,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "スイスフラン/円【CHFJPY】：外国為替相場FXレート・チャートをリアルタイム表示 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBoZ1k1UUFNWkpHXzd1Vld5QnVVVng4Ty1COWVJd3BldFJpV1paaGxLYXpzLU0wZWVPYTMyV2Z1MXBHakhmSkZwaTk0VmJ4Z3lGbmdxbGxB?oc=5",
+          "published_at": "Thu, 12 Nov 2026 02:12:45 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日銀の浅田委員、利上げによる経済・物価下振れ「十分留意を」 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5DQmotYnJ3Q1lOT1JPRngyZGNEWm5xbWdFNFFqSHU1MGlNSUQtNnBRazd2UUFsQ0wxY3U5RkhoZW5lNlBral9mWk5jeWcyS1l4T0VwZGhISHRHeUhhcXpiRlJ5Wm1RMGJEcHRDaQ?oc=5",
+          "published_at": "Thu, 12 Nov 2026 02:11:54 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "現在の物価高は需要主導でない、利上げペース「十分に留意必要」＝浅田日銀委員 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZ2FqaEN0Uzh6SUx6bVFHTzNwb1ZiTWFMbmhzOG5XSG9RRGdXUlZfdkMzU2tnV3BtSkZWVjdyT013N192aHZKTzVFdk1qSmFCQnlYandWUktVNERsdkRWcXZnUURWcVQxZmQ2aHdzQU80UkJuSkRNR1NwTEo4YkF5dWFKMFRJbERRVGY4RnFQV1U?oc=5",
+          "published_at": "Thu, 12 Nov 2026 02:21:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "浅田日銀審議委員 景気や個人消費はそれほど堅調ではない - みんかぶ FX/為替",
+          "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFAyZ0k0N0o1RjdiVWlzNnlhX1EtdHl5VzV0TEp2eFNyZFpiQnZ6WUxsOHVWOHo5S1RZWHNUendxblV0TjNFUVJLcA?oc=5",
+          "published_at": "Thu, 12 Nov 2026 01:37:29 GMT",
+          "source_url": "https://fx.minkabu.jp"
+        },
+        {
+          "title": "追加利上げ「早く」「慌てなくても」日銀10月決定会合の主な意見 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5Ud0dBdXVtM3owZ1JpU1dHbEtJdWVHVk52OEJHRk5adXdCa0pCVkFyRkI0ZmhzS3JCNVpiU1h6Z2NvUnNtYi1BNlM0OWdJZ1VMNW9WWm9qV2xnYW84NzJIMlZpZF9wcTQ?oc=5",
+          "published_at": "Tue, 10 Nov 2026 06:24:36 GMT",
+          "source_url": "https://www.asahi.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.03029874893276209,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.2299314150930698,
+        "oil_pressure": -0.13788017643190764,
+        "japan_risk": -0.018619025319996707,
+        "usd_rate_pressure": 0.12980554964258162
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

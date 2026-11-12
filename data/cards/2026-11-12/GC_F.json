@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-12T12:45:49.395018+09:00",
+  "prediction_date": "2026-11-12",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-12T12:45:49.395018+09:00",
+  "market_data_through": "2026-11-11",
+  "reference_price": 3987.5,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.1028584710761324,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.4947672604627938,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.08262712524387429,
+      "direction": "DOWN",
+      "day_change": -0.010594995704731436,
+      "momentum5": -0.020991897863982367,
+      "trend": 0.00014395671376843389,
+      "volatility": 0.24381089150707164
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "長期金利、再び3%台に上昇も 「時間分散」で国債投資有効 - 日経ヴェリタス - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1mMl9xWDl4TTdORng0XzBFZWZPbDQ0VlNIZVZJRTMyZXBmcVFhSHQ2UFpmUzdkR3pEaFJveW9lamFyUnBaRWE3MExDU3ctUjVVVGM0Rlc3RkJBNXpsOUJhV05NOEhLRUZDR0poTUJCMlVTUnBTWlNmTHRISnN4Zw?oc=5",
+          "published_at": "Wed, 11 Nov 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "米中間選挙後の金利 原油価格の低下は日銀の利上げ姿勢に大きく影響しないとみる 野村證券・宍戸知暁 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9nakFxbFAyVGk5QVFVRHNodkJENWJIMHN4UF9kR0g4SmFjc2dWY3ZmTjNVeFdzN3BGblYwVzFRM0NxQXRPWVg2ZXRWdG9Zc2c2ckpyZFUya3FkbjI2aUpR?oc=5",
+          "published_at": "Mon, 09 Nov 2026 06:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "地域銀の法人貸出、市場金利連動3割超に 利ざや確保意識高まる - ニッキンONLINE",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5VMDMxNC03bW9sSGJJVGJ6Y19WTmR1eW1wYjY4ajgzNlZ1NlJUanBDLTV1UTVxdVRoaUNJczJ0RFFqWTFUeGxmZGVjc1gtQjBtS1BxeU5R?oc=5",
+          "published_at": "Wed, 11 Nov 2026 19:50:00 GMT",
+          "source_url": "https://www.nikkinonline.com"
+        },
+        {
+          "title": "金価格は誰が決めているのか? 知られざる｢金市場｣の仕組み ゴールド投資の特別連載 第3回 - PRESIDENT Online（プレジデントオンライン）",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9TbWdleXhrcFpySl81d1dGb1lhaXQ4bWVhWWJyZGRBUTFRZWxsWVpQQzhjQjdfMTRLcGFZQjZESzJnSjZIbENpaVotQ243cWdVeFA5ejJkeGdHRFhZSDhNRThRT2NvdXo3bEE?oc=5",
+          "published_at": "Thu, 12 Nov 2026 00:30:00 GMT",
+          "source_url": "https://president.jp"
+        },
+        {
+          "title": "足利銀行、純利益38％増 金利上昇で貸出金利息など増加 2026年9月中間決算 - 下野新聞社",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBERWJ0YzlkeWQwbFhibURJXzlYWE1lQXZNclhXcW0zZjN6RjY3b0w5ZmxRUWwzWjJQanI3MTdPN19TNHBzRzBQTmJOZnNxTkJ2a2Q4eThfT3M4eVU?oc=5",
+          "published_at": "Wed, 11 Nov 2026 20:01:14 GMT",
+          "source_url": "https://www.shimotsuke.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.027813506068652533,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.2299314150930698,
+        "oil_pressure": -0.13788017643190764,
+        "japan_risk": -0.018619025319996707,
+        "usd_rate_pressure": 0.12980554964258162
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

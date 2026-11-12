@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-12T12:45:49.395018+09:00",
+  "prediction_date": "2026-11-12",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-12T12:45:49.395018+09:00",
+  "market_data_through": "2026-11-12",
+  "reference_price": 8455.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.1607098281010131,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.4193183302829454,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.22822275608644033,
+      "direction": "DOWN",
+      "day_change": 0.010034643411778843,
+      "momentum5": -0.04786036036036034,
+      "trend": -0.005109040162732503,
+      "volatility": 0.4761823170435905
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "Nintendo Switch 2 / Nintendo Switchの本体機能をバージョンアップ。新しい機能をご紹介します。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOOTJvT1NwaGhqQTZXNUxyRTFSdjB2WUFIZ1NleElObFVLcVNyUFZtQjBXaFVCOFc1Zk4wQVpzVF9ycGg0dHpoNm1hMlF5bUszUmhiNF9IYWw3ZEcxaXV6NmlRM0dhUTRDZXEzTXVKZms0ZmpQeld4NHFPSE5lRUNqcWQwX3BlQQ?oc=5",
+          "published_at": "Tue, 10 Nov 2026 01:11:36 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "ゼルダの伝説 時のオカリナ : ZELDA NOTES | 任天堂 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9GUVJqaWFDMXRkMGtPalNVMER0SElmU1R4Q0NQWktQNHVGcnZOeEZHX20yUHozRWFibjBPZXhzeHlBTUtPVUJ4WUNiSWdUTzduV01hRTI1ZDFqdXZZX2hlSDRjajE3dVlNTXc?oc=5",
+          "published_at": "Thu, 05 Nov 2026 01:42:55 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "遊びが広がる有料追加コンテンツ『ファイアーエムブレム 万紫千紅 エキスパンション・パス』が本日発売。最新映像も公開中。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNdFBVa044ZWNzUHRQMDVXWm1nZXhyU252VnhoUEl3UmRYOVhVSXFTcVFhR2FuMXVrUjJ2ZURGYnpQb25nRHprZFRkMkZ2amdWR0JocVpROXd6LVpQVEdRZlJKZWlOYjZORG84RWhQdFJUcHMtM3hTdlRMRWYyUFN2bWVidFczUQ?oc=5",
+          "published_at": "Thu, 15 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "3本のソフトからお好きな1本を選択してダウンロードできるお得な「Nintendo Switch 2（日本語・国内専用） 選べるソフトセット」が登場。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSnhiVFcyUXVfNDdlVXZ4RTdna2hqbEttc2tpaEdEUi1vNElGSm41UHoxa1dlYzNPc3RocDh3UWJ0eEdGUTVDNEZEMnNmakZ1UjgzZy1BeWtBWUoxeDZJcTVqcHVwT24tNlVQbjF2RmFQTnFDSTNlQ1hLcW1xVVJLNVZCcGZvQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "【10月14日追加】「ゲームボーイアドバンス Nintendo Classics」に3タイトルを追加。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxONXJNQXFGZ2txSVRWUzFEclhzSVkta1BFOHVELUU5MzdRZExXdktIY1dsSDFMcnRZRHV6R1FtSDFnbFZvejBHbnB3VUxyOGdoUTVYTkNBWjQ1QlJHUVp4NmVOX1NqYWpUeDJ5TGNVTEY4TWN5UEVnYmZ0VklSV2VKb29adW1zdw?oc=5",
+          "published_at": "Wed, 14 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.03678902641489117,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.2299314150930698,
+        "oil_pressure": -0.13788017643190764,
+        "japan_risk": -0.018619025319996707,
+        "usd_rate_pressure": 0.12980554964258162
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

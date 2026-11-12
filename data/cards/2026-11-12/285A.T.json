@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-12T12:45:49.395018+09:00",
+  "prediction_date": "2026-11-12",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-12T12:45:49.395018+09:00",
+  "market_data_through": "2026-11-12",
+  "reference_price": 9793.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.7021089569930165,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.3001625809181236,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.9306479456335041,
+      "direction": "DOWN",
+      "day_change": 0.023195068435900135,
+      "momentum5": 0.050300300300300194,
+      "trend": -0.2330510988498733,
+      "volatility": 1.193873796426753
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "キオクシア株、期待の月末買いは半減か 株安で4700億円規模との見方 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9rZ1ZkblNPMlE5NkNiVUJwZ0Jib1c0dE5TTVdkOG9Mcnh1bGpocGQyNTY2S1M3MlpYODdfQmIyRndRdndNMERRV0p5cmRRdHUxOTk2V29NNDhlNVU0S1ZGNUFWSWk0T1RHWEZxcw?oc=5",
+          "published_at": "Tue, 10 Nov 2026 06:13:42 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "株価急落のキオクシア、「底力」が見えてくるのはこれからだ：大山聡の業界スコープ（106）（1/2 ページ） - EE Times Japan",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE50elozOVpfRG8zUXpGWURKZHJWLTN1ZHR3MnRpUVV3LUltbVFtM2Q1MUU3bmEtSU1xY19Udk9icXkwX1llWlk0aEgwUWt1QXNSNzJiTTNMcjNoVDkwYTNNV2xPdWpycEFDbjdzSzBwOA?oc=5",
+          "published_at": "Wed, 11 Nov 2026 02:00:00 GMT",
+          "source_url": "https://eetimes.itmedia.co.jp"
+        },
+        {
+          "title": "オリックス上半期最高益、キオクシア株寄与 株安で今後評価損も - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQNUd5TVptMUlTdl9LZ3RMM2o3dGFLVDFJVXhhSW1xY0hRT3kxQ0c0LTdLOVhZRkxlaDgwREJ1SXdIUDhsVUNxRUI1WjJpaDZsVWYtbDc5bHg5dHVTZFVUZjZtcjBkYVZwQk13QzBRaS1XallHeGlDMTRLdzlKY1dJaGtGSG5hZw?oc=5",
+          "published_at": "Mon, 09 Nov 2026 09:47:56 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "話題株先取り【特別気配】速報 ＜買いトップ キオクシア、売りトップ 日経Ｄインバ＞ - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9Cc2w2ZlM4QW80YThKZHNOU2s1eWV4cUhkMFhxOXlLX0EyVnc3V2RFcVV3c3M4Y1BpWUFuNjdxOW9WNVVMU05JMGFYN19fb3NiSGZTSktpcTg4SkQ4MVZWaA?oc=5",
+          "published_at": "Tue, 10 Nov 2026 00:03:23 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "急落のキオクシアは何位？時価総額を増やした銘柄トップ50 - 四季報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5VSkU0Vl9uV011TndKaC1CU0s2eV9VdUx2NlY5Q0l4SGxjSHlpSTNaZ0RnR0JPOHhsTi1weE5MdnBtNzhiWTFRWjFWYVAyYWczY1VDVGNmYw?oc=5",
+          "published_at": "Tue, 10 Nov 2026 21:00:00 GMT",
+          "source_url": "https://shikiho.toyokeizai.net"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.03678902641489117,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.2299314150930698,
+        "oil_pressure": -0.13788017643190764,
+        "japan_risk": -0.018619025319996707,
+        "usd_rate_pressure": 0.12980554964258162
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

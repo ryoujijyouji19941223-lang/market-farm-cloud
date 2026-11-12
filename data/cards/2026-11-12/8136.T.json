@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-12T12:45:49.395018+09:00",
+  "prediction_date": "2026-11-12",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-12T12:45:49.395018+09:00",
+  "market_data_through": "2026-11-12",
+  "reference_price": 1115.5,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6250484714392892,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.25032712879155306,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.8396451307435691,
+      "direction": "DOWN",
+      "day_change": -0.015880017644464006,
+      "momentum5": -0.14192307692307693,
+      "trend": -0.08153462879920281,
+      "volatility": 0.40873555166610775
+    },
+    "news": {
+      "score": 0.2857142857142857,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "サンリオ株、「キティ」好調で最高益も失速 北米事業の停滞が影 - 日経ヴェリタス - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9RaDdZczFZVnA1ZEhzMnFrR2gzTXFDRFlHMTl2VDg4UXEtRHZ2Mm05SURpVDFwN3hvVWZMLVVqUi0wT1MzU191Qmh4emFvV1NhejRSYU5UaVQ4NF9iV3VQLWM4N1IyeTQzbElQdnhBRkk5MmtGR2VnRWNpUVFwQQ?oc=5",
+          "published_at": "Wed, 11 Nov 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "サンリオ「キキ＆ララ当りくじ」が11月21日発売！両面に焼き目がつくパンケーキメーカーほか、日常使いできるアイテムがラインナップ（インサイド） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5LX0JqbUlsRXk4RnQtb2lkbmk0cVRKUkpCdVBNZnFaOERlN2ZwNzZJanEzRmhoS1dlMlVLaUpscnpKczdYb2Fjd0FDaTQwVWFpUVA0ZFdPbDIwN01fekFraTdPMU1HZk1sVkhFNFFZVlA5bjBUQng0eUVGYTdsSkk?oc=5",
+          "published_at": "Thu, 12 Nov 2026 02:30:03 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "かわいすぎて全種類買っちゃった！セリアでみつけた「サンリオの食器」毎日出番が止まりません！《購入レビュー》 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5IWG5oQnh4czMtYTltRV9mWlZUeHhLT1FzRG9SUDBybW9RZG9MeWpFUmtxVXpuS201cHI3MHM5N25fcU9yTzc0dmxLckY?oc=5",
+          "published_at": "Sun, 08 Nov 2026 01:00:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "人気キャラクター福袋2027はどうなる？サンリオ、スヌーピーなど激戦攻略へ動向おさらい - イザ！",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBPNW0zaWVxcU01bW50SFRMNDZXTmpjclpKUnlCNW8zdEg2WlFwV0JsMkdGQzFTUTJBblBkU1JyUUlmb2pOajRZUmIxSFA2Wmo5ckczME9WWDN1cy0xSUZqbmFRMlRBdmlPSjdpUGx5OFNMdFRR0gGIAUFVX3lxTE5kSkgyNGgyTTdzSWEyY3NWWVpUV3FNcUZfY1h4M1VuMG5UVGV0UjV4RkVZTXZtdEVZSU5SRExNaVhmMG9oV3RkdnlObURCeHRwXzJ5MmNlOGJfWDN6Mm9HeWFTNGJ1QS1wTkxESzFIbEFUaVBqcGFTakM5NHR1WndEdTVRaHJvc0I?oc=5",
+          "published_at": "Wed, 11 Nov 2026 02:42:09 GMT",
+          "source_url": "https://www.iza.ne.jp"
+        },
+        {
+          "title": "しまむらで「サンリオキャラクターズ」グッズが11月10日発売！冬アートが可愛いハローキティたちのアパレル、あったか布団や着る毛布など豊富なデザイン - インサイド",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5uOEhaY0N2c0dhTWdBOTNoOUxnZ2I4M2x4ZnpTTW5DNFBSOXNfcm1qdkpYRndZTV84ancxeG5YYVFuS2FYV3lNbU82STFPcldyOXF2SFNad0lKTFMxbUNWZHAxVDF1N3h4ZGc?oc=5",
+          "published_at": "Mon, 09 Nov 2026 11:15:02 GMT",
+          "source_url": "https://www.inside-games.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.03678902641489117,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.2299314150930698,
+        "oil_pressure": -0.13788017643190764,
+        "japan_risk": -0.018619025319996707,
+        "usd_rate_pressure": 0.12980554964258162
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

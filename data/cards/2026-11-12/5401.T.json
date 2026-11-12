@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-12T12:45:49.395018+09:00",
+  "prediction_date": "2026-11-12",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-12T12:45:49.395018+09:00",
+  "market_data_through": "2026-11-12",
+  "reference_price": 700.2000122070312,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.285293295503895,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.6464256713663985,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.41143373756126667,
+      "direction": "UP",
+      "day_change": 0.003727116846456102,
+      "momentum5": 0.05135136968022702,
+      "trend": 0.028991301788358737,
+      "volatility": 0.19321027861630985
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "日本製鉄グループ 「建設技術フェア2026 in 中部」に出展 - Digital PR Platform",
+          "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBoVDNuWHo3aDRvQURyekRoZ0Jwa3Y4WTlCQVFNMENCeVdMYWdKMmRqc0p6SzJycm5NX3BOMzU2NEx4OHM?oc=5",
+          "published_at": "Thu, 12 Nov 2026 02:05:28 GMT",
+          "source_url": "https://digitalpr.jp"
+        },
+        {
+          "title": "日本製鉄ステンレス鋼板11契 Ni系冷薄1.5万円値下げ 厚中板も（日刊産業新聞） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5HRHpITWVlTjRuY0FJTmVVay1GZG1iSjVPUlNjTTBBYTJRTC1JeWF3UnpDbkR3Z2xXa1hjSlVLVld0T0I2N3B0MjR3TFNUOThxY3lHaHBDNGl2dlNuUE1rNDJiTWhZdzM4T05IWW0waTU0bkZSbVc5U28wQjU4dWc?oc=5",
+          "published_at": "Wed, 11 Nov 2026 07:48:19 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "日本製鉄、水素100％で低品位鉄鉱石から還元鉄 累計1000トン - 日経クロステック",
+          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB3c1lMaG1PNkN6Y1E2WkZKNTZvdENKSlUzWHhaM0U0Sk9KQlhkSUhRc2o2MUlvTG1sOWpURGlITWl4cU04MGhvYVJZSmN0NW1zSnF3SWZpRWRBTS1I?oc=5",
+          "published_at": "Mon, 09 Nov 2026 20:00:00 GMT",
+          "source_url": "https://xtech.nikkei.com"
+        },
+        {
+          "title": "日本製鉄、ニュートリノ観測装置「ハイパーカミオカンデ」にステンレス厚板を完納 - マイナビニュース",
+          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5xLURmbG1RR3ZyeTVtWDlYZkNlaU9wdWVJQWJKSTZ0bTZ5WUppT241OWI5S3Z4WTV3cGxnYU5naXhnbWF1b0Mzblg4TEVPa3d2eS1LR2Z1azNFOGdkTHZkTFpjOVNhd3hy?oc=5",
+          "published_at": "Wed, 11 Nov 2026 07:34:02 GMT",
+          "source_url": "https://news.mynavi.jp"
+        },
+        {
+          "title": "日本製鉄、水素100%で還元鉄1000トン超を製造…300時間連続操業に成功 - レスポンス（Response.jp）",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9FYnhraHMtekpMNzJGUTh1ZjZQUVJuY2NkTzBmV0dDX29YdzZDb0hnOUhUajY3b1YyZHFEZXlxNmVvS2ctb0RDWklLWVBZcW1SdlRjeXVaTDNzMjM2d0tV?oc=5",
+          "published_at": "Mon, 09 Nov 2026 08:45:02 GMT",
+          "source_url": "https://response.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.03678902641489117,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.2299314150930698,
+        "oil_pressure": -0.13788017643190764,
+        "japan_risk": -0.018619025319996707,
+        "usd_rate_pressure": 0.12980554964258162
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
