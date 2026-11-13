@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-13T12:21:58.902200+09:00",
+  "prediction_date": "2026-11-13",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-13T12:21:58.902200+09:00",
+  "market_data_through": "2026-11-12",
+  "reference_price": 3922.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.23333531853404937,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.4191319828759394,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.22824677320235978,
+      "direction": "DOWN",
+      "day_change": -0.01962254718160228,
+      "momentum5": -0.046554029415339704,
+      "trend": -0.0057653727534277,
+      "volatility": 0.24275913083192674
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "米国中間選挙後の金（ゴールド）価格見通し 中国の金買い増加が目立つ 野村證券・髙島雄貴 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9lZ29MTWxfek1zczRzQ1dUTlhuYlNTVVplQjVYMmEzY0VNNDl5bzg2Y0dnVFFINlBOeVVLS0VmN2JyZ2kzd3JzazNfcWZPRHowMk1sT1I4bGt2ZzYyOVZJ?oc=5",
+          "published_at": "Fri, 13 Nov 2026 01:42:14 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "ＦＲＢ、27年の会合日程発表 金利決定の回数8回から7回に - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOYklEWkZMelFLU0ZLWjR0Y3pidjBSd25BVG54VzdxUDdpTjBYNUJHT1lURFJlUXlqTllPTFRXR2lPUlVXWUpUNFVDb3RjeG92cWJzQy1KbXhwcGtZZTFMTW9vMWNERl9xaUYwaDA4RXNpWTJGUjkzRjBKLV9BTFcyMzl4SkMtbkg1cW83TlZwaHIxMWN0a2RXUXNVYw?oc=5",
+          "published_at": "Thu, 12 Nov 2026 21:20:11 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "和製ユニコーンのスマートニュース、金利高とAIで失速 企業価値8割減 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBvTnFzTVlzcGZpWDdCek9EbW12WHdrWjN5ckhBM3U2X1BqbUc1enR0ZHR4UF95d3VzbE1yZVdjVnllX1lpWV9zd1ZZeW1jNVRjVDZCZG5aREZWcXhIVFZXMXpNMmE3YXp3UWgtQg?oc=5",
+          "published_at": "Thu, 12 Nov 2026 10:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "地政学リスクの高まり (2026年11月12日 No.3751) - 日本経済団体連合会",
+          "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE94cTB4Ykc0dnpfYk55YzZzS2MwRFNkd1NmazZZaW9CTzA0cG9uamVsbXliT1hfZlpyeW9DZ3hmb0lRdjlMU1I4TDJpSTY4YmkxV0tNaHFnV1dBQ3liRVVfTmVuclNjT3o2RkNZ?oc=5",
+          "published_at": "Thu, 12 Nov 2026 07:00:18 GMT",
+          "source_url": "https://www.keidanren.or.jp"
+        },
+        {
+          "title": "〔東京外為〕ドル、159円台後半＝米金利上昇で強含み（13日午前9時）（時事通信） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5lZk1DTWtDVWs5YUNzQzlEak9wNS0tSkdvdU9mdE8zLUJHek12a0twN1R4V1NvTk0yNzROendNV2I4cDdRTWE3MEtPY2hQbWZPUFpid0EzeFcyeUoyOThlVEFDMkhsV20tU25KVmNETXRvdGJydEI2b3pLVjdjX28?oc=5",
+          "published_at": "Fri, 13 Nov 2026 00:30:26 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.23751675170963146,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": -0.1248339919712671,
+        "japan_risk": -0.22888309230695913,
+        "usd_rate_pressure": 0.26797679792593887
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

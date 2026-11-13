@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-13T12:21:58.902200+09:00",
+  "prediction_date": "2026-11-13",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-13T12:21:58.902200+09:00",
+  "market_data_through": "2026-11-13",
+  "reference_price": 191.46400451660156,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.14187108522098785,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.5387679332000584,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.014134204759622489,
+      "direction": "NEUTRAL",
+      "day_change": -0.002334393059792217,
+      "momentum5": -0.00837983970376699,
+      "trend": 0.0024230265898563808,
+      "volatility": 0.052332987867133134
+    },
+    "news": {
+      "score": 0.625,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "【為替】人気通貨、スイスフラン／円が反落した理由 - マネクリ",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE82SlZacmhJeFFqWTJtdkNzX0M3dm8xY0wzSXl3bTZ2OWNERDVQZGxCN3h5SkViT2Y5ZThzeHlJYzd0ZFJYcEFacG11R2xJZlFjcVdPT9IBV0FVX3lxTE02NXNsMGs1M0dDVlBDNUt2SV95VzQzR1liZTVkbnlIY1ZRdEFxMUJkaUc0RHhXaDRCSGtpZG05MFcxdXQ0Zmp2a1hYbng5aVBDVnNMR1lYTQ?oc=5",
+          "published_at": "Fri, 13 Nov 2026 00:20:00 GMT",
+          "source_url": "https://media.monex.co.jp"
+        },
+        {
+          "title": "日銀委員、利上げで経済減速懸念 「ペースに留意する必要ある」 - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1Yd05hOUJCaEpVT21XbVNOR2VrS0t1alczVzJpcmFIaWRVTC1teWdZMm5YLVdxN2dKV1M0UmJOVGlhdE1OX0RRbUJVbWZoajFN?oc=5",
+          "published_at": "Thu, 12 Nov 2026 09:36:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "外為：スイスフラン、191円39銭前後と大幅なフラン安・円高で推移 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5mcXNhZmlPMnBxWi1MZHZXMG0yY0pac21haHh6V2t4Xzl0NllNUmJMWTlGbmhVbjdWV1Q1Z3MyN2NPYnBlcWpibU51X2c0aTNXV3c?oc=5",
+          "published_at": "Fri, 13 Nov 2026 01:31:04 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "日銀の物価指標、２つの「２％」 消費者物価指数・基調的な上昇率 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBReE9tZnB5TVk2ak5VMVdhcnZjVGptcWJIMjRmZi1vZERDeFdfaXJMd0p6OXJHcVVtcTFmckdFQURydzdWck15XzRDYVk3Mm1DV0U0TFpLclc0Y3dE?oc=5",
+          "published_at": "Thu, 12 Nov 2026 20:00:00 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "氷見野日銀副総裁、午後1時26分から参院特別委に出席＝関係筋 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1Jekh0aHZQa0lMcmRDVjFFTnk4UXo5X0tEM09SVms1aXU3bkx3R05jelhmSjRRS1FmWlZXa3dFOHNLaUdHMGJSVjRnTzFkQ3JPYnlLQmFwbDZCbUtpcW1zTUNLWXRJNUZGQm5EZURyRXdUNVQ1UE9tWjBfT29KNjg?oc=5",
+          "published_at": "Thu, 12 Nov 2026 22:09:56 GMT",
+          "source_url": "https://www.reuters.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.17339883989629695,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": -0.1248339919712671,
+        "japan_risk": -0.22888309230695913,
+        "usd_rate_pressure": 0.26797679792593887
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

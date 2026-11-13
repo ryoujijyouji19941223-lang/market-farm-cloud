@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-13T12:21:58.902200+09:00",
+  "prediction_date": "2026-11-13",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-13T12:21:58.902200+09:00",
+  "market_data_through": "2026-11-13",
+  "reference_price": 9460.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6437249415973992,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.3144807819242724,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.8488602082314693,
+      "direction": "DOWN",
+      "day_change": 0.017204301075268713,
+      "momentum5": 0.11150276113265178,
+      "trend": -0.21225884573452658,
+      "volatility": 1.125611241910488
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "＜特別気配＞ キオクシア、太陽誘電、村田製が買い気配 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBuLUJWLXpwVjN4QndlMUxEdTJtdFkwNTEzSS1ZbzJCRU1wZ3VRMEhsUTd2eUdEZU9iaGg4eWZJcjdQY2lZTlk4MWVOU1JyZUN4amVaMDktOWZIZ0hJRkNMVg?oc=5",
+          "published_at": "Fri, 13 Nov 2026 00:03:47 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "キオクシア株、期待の月末買いは半減か 株安で4700億円規模との見方 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9rZ1ZkblNPMlE5NkNiVUJwZ0Jib1c0dE5TTVdkOG9Mcnh1bGpocGQyNTY2S1M3MlpYODdfQmIyRndRdndNMERRV0p5cmRRdHUxOTk2V29NNDhlNVU0S1ZGNUFWSWk0T1RHWEZxcw?oc=5",
+          "published_at": "Tue, 10 Nov 2026 06:13:42 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "株価急落のキオクシア、「底力」が見えてくるのはこれからだ：大山聡の業界スコープ（106）（1/2 ページ） - EE Times Japan",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE50elozOVpfRG8zUXpGWURKZHJWLTN1ZHR3MnRpUVV3LUltbVFtM2Q1MUU3bmEtSU1xY19Udk9icXkwX1llWlk0aEgwUWt1QXNSNzJiTTNMcjNoVDkwYTNNV2xPdWpycEFDbjdzSzBwOA?oc=5",
+          "published_at": "Wed, 11 Nov 2026 02:00:00 GMT",
+          "source_url": "https://eetimes.itmedia.co.jp"
+        },
+        {
+          "title": "話題株先取り【特別気配】速報 ＜買いトップ キオクシア、売りトップ テルモ＞(株探ニュース) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQcS00MTBqckN2Z1lVTkZzN0ctcnVnOVNoa1AyWDY4QXFDOHJLVERSUHJqQUdnSk1mSmFBVEZfVzVqZVVGMG5XVW45UHcwcExuVHhBM0YtZHFqei15YWZuRENNX0V3MU96UzdpbFc4QkE4cUxSNVJDQnowODMxRURoc0VqVktVSDA?oc=5",
+          "published_at": "Fri, 13 Nov 2026 00:18:31 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "急落のキオクシアは何位？時価総額を増やした銘柄トップ50 - 四季報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5VSkU0Vl9uV011TndKaC1CU0s2eV9VdUx2NlY5Q0l4SGxjSHlpSTNaZ0RnR0JPOHhsTi1weE5MdnBtNzhiWTFRWjFWYVAyYWczY1VDVGNmYw?oc=5",
+          "published_at": "Tue, 10 Nov 2026 21:00:00 GMT",
+          "source_url": "https://shikiho.toyokeizai.net"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.16,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": -0.1248339919712671,
+        "japan_risk": -0.22888309230695913,
+        "usd_rate_pressure": 0.26797679792593887
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

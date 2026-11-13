@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-13T12:21:58.902200+09:00",
+  "prediction_date": "2026-11-13",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-13T12:21:58.902200+09:00",
+  "market_data_through": "2026-11-13",
+  "reference_price": 8748.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.24443358955907654,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.6209278417456144,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.3241670434692302,
+      "direction": "UP",
+      "day_change": 0.02160457783487102,
+      "momentum5": 0.06969919295671323,
+      "trend": 0.0071874631789796695,
+      "volatility": 0.4851877588410559
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "Nintendo Switch 2 / Nintendo Switchの本体機能をバージョンアップ。新しい機能をご紹介します。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOOTJvT1NwaGhqQTZXNUxyRTFSdjB2WUFIZ1NleElObFVLcVNyUFZtQjBXaFVCOFc1Zk4wQVpzVF9ycGg0dHpoNm1hMlF5bUszUmhiNF9IYWw3ZEcxaXV6NmlRM0dhUTRDZXEzTXVKZms0ZmpQeld4NHFPSE5lRUNqcWQwX3BlQQ?oc=5",
+          "published_at": "Tue, 10 Nov 2026 01:11:36 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "任天堂、Nintendo Switchの「改造チップ用プログラム」にごっそり削除要請。改造チップを“動かす手段”にも追及の手、海賊版対策さらに進む - AUTOMATON",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1yYl9UeW5kVm1tM2hZaHVuU2ZiSDc1d3dBWUZkbmtORllHMjJVMFM1WUR4dkxTVDYzNjdVRGVSTU50MjhEMXBkaHBOY0V5YnpZNlY3QXpucEVsSFRVeTloN242RWxzU0ZXTVJoNQ?oc=5",
+          "published_at": "Thu, 12 Nov 2026 05:20:16 GMT",
+          "source_url": "https://automaton-media.com"
+        },
+        {
+          "title": "ゼルダの伝説 時のオカリナ : ZELDA NOTES | 任天堂 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9GUVJqaWFDMXRkMGtPalNVMER0SElmU1R4Q0NQWktQNHVGcnZOeEZHX20yUHozRWFibjBPZXhzeHlBTUtPVUJ4WUNiSWdUTzduV01hRTI1ZDFqdXZZX2hlSDRjajE3dVlNTXc?oc=5",
+          "published_at": "Thu, 05 Nov 2026 01:02:02 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "3本のソフトからお好きな1本を選択してダウンロードできるお得な「Nintendo Switch 2（日本語・国内専用） 選べるソフトセット」が登場。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSnhiVFcyUXVfNDdlVXZ4RTdna2hqbEttc2tpaEdEUi1vNElGSm41UHoxa1dlYzNPc3RocDh3UWJ0eEdGUTVDNEZEMnNmakZ1UjgzZy1BeWtBWUoxeDZJcTVqcHVwT24tNlVQbjF2RmFQTnFDSTNlQ1hLcW1xVVJLNVZCcGZvQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "遊びが広がる有料追加コンテンツ『ファイアーエムブレム 万紫千紅 エキスパンション・パス』が本日発売。最新映像も公開中。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNdFBVa044ZWNzUHRQMDVXWm1nZXhyU252VnhoUEl3UmRYOVhVSXFTcVFhR2FuMXVrUjJ2ZURGYnpQb25nRHprZFRkMkZ2amdWR0JocVpROXd6LVpQVEdRZlJKZWlOYjZORG84RWhQdFJUcHMtM3hTdlRMRWYyUFN2bWVidFczUQ?oc=5",
+          "published_at": "Thu, 15 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.16,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": -0.1248339919712671,
+        "japan_risk": -0.22888309230695913,
+        "usd_rate_pressure": 0.26797679792593887
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

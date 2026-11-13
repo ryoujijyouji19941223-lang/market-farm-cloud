@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-13T12:21:58.902200+09:00",
+  "prediction_date": "2026-11-13",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-13T12:21:58.902200+09:00",
+  "market_data_through": "2026-11-13",
+  "reference_price": 129.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.5784919280819056,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.266962255848504,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5755788615440561,
+    "direction": "UP",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.574468085106383,
+    "heldout_signals": 47
+  },
+  "evidence": {
+    "price": {
+      "score": -0.6904293060028024,
+      "direction": "DOWN",
+      "day_change": -0.07857142857142863,
+      "momentum5": -0.007692307692307665,
+      "trend": -0.10225080385852092,
+      "volatility": 0.6343341171439293
+    },
+    "news": {
+      "score": -0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "DOWN",
+      "headlines": [
+        {
+          "title": "【株式】KLabが大幅続落 26年12月期通期の連結業績予想の下方修正の発表を嫌気(gamebiz) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNODFmMFByNWxyY3dGZkpZN0tKTU1ta0ZCTTQxd0VxMWxURUdiRElDY05SMGI5U0NfRGlJbUZ4MV9GLWhDT1ppd1EyYWZCZkpETDl3MEFiRFZydzk1VEJnVS1fV0tWN19KQmtLdmNBWnlScERqTmpPbTdyVjdlMDZoWXdaVUJjd28?oc=5",
+          "published_at": "Fri, 13 Nov 2026 00:55:19 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "KLabの決算説明資料より…開発に3年以上で30億～50億円規模の投資を要する大規模な開発体制から脱却へ 『スマグロ』『ヒロサバ』のブラッシュアップを優先 - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBEcmxtcmF3MUJIaG92b0lyQnQzRlktcGgxb3lSM3FxNnkzdk5UdGhFNDQtTkFiS3lNbFNaZjdYck16OGhx?oc=5",
+          "published_at": "Fri, 13 Nov 2026 01:48:00 GMT",
+          "source_url": "https://gamebiz.jp"
+        },
+        {
+          "title": "ＫＬａｂ[3656]：KLab AVN、UAEの首長国安全保障会議で単独プレゼンテーションを実施 2026年11月12日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxORTROQ1dfODNXbkhRakc5dE16c2NLbW1hYktrTGdIRHNCbjVFdW1Rc05DLVFWMVEzdzE5U3h1bDBoOWxxQ0Frb0ljMlJZVS14Rmh5MnVzX3ZmZGtMejhJb1FyWmFPcHI1TzJJM0ZKTGdSWmstN0ZqcURQVFNPQnFNbkd2VXRuX1RrVHZVMkZhb3VpNHk1Zkx1REl0Z2lJWlVzZ0hrbmlLdm80a0xoQXNvWl9lRk9USGdVeDd6RDZVVWdTb2Vac0pyZlN3VDk?oc=5",
+          "published_at": "Thu, 12 Nov 2026 06:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "KLab、『ドラゴンクエストスマッシュグロウ』牽引で大幅増収―3Q単体は営業赤字に転落 - GameBusiness.jp",
+          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9OTlU3R1U2Rzl6Y1pMd0JvVE1KS19oYUJWaXh4ZlV6bE1rNjRqMS1rT0JaNzlBeF9zc1dSYkxJc3hfQXg5eG5wZWtwREx3b2NvNTQ5SzZjbTdmWG9Kamlrak5zSVVZWmw0?oc=5",
+          "published_at": "Thu, 12 Nov 2026 10:09:57 GMT",
+          "source_url": "https://www.gamebusiness.jp"
+        },
+        {
+          "title": "KLabの決算説明資料より…3Q末のグループ従業員数は前年同期比35名減、前四半期比1名減の310名に 開発体制の再編は一巡 - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE5XLWgtbjVLdmRzM2lRRTJEZGQ1Q0dMSktrZlZid3cwVHdMaW9YN2NHSFNYVnJuVkV6aVE2VVRQUTNQejlG?oc=5",
+          "published_at": "Fri, 13 Nov 2026 02:00:00 GMT",
+          "source_url": "https://gamebiz.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.16,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": -0.1248339919712671,
+        "japan_risk": -0.22888309230695913,
+        "usd_rate_pressure": 0.26797679792593887
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

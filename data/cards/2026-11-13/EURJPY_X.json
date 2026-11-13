@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-13T12:21:58.902200+09:00",
+  "prediction_date": "2026-11-13",
+  "symbol": "EURJPY=X",
+  "name": "ユーロ円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-13T12:21:58.902200+09:00",
+  "market_data_through": "2026-11-13",
+  "reference_price": 176.89999389648438,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.14209934007143743,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5775242900146311,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.01154168238715447,
+      "direction": "NEUTRAL",
+      "day_change": -0.0018226375387909721,
+      "momentum5": 0.0004467498281217619,
+      "trend": 0.0012193994508082895,
+      "volatility": 0.06175898579929157
+    },
+    "news": {
+      "score": 0.75,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀委員、利上げで経済減速懸念 「ペースに留意する必要ある」 - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1Yd05hOUJCaEpVT21XbVNOR2VrS0t1alczVzJpcmFIaWRVTC1teWdZMm5YLVdxN2dKV1M0UmJOVGlhdE1OX0RRbUJVbWZoajFN?oc=5",
+          "published_at": "Thu, 12 Nov 2026 09:36:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "日銀の物価指標、２つの「２％」 消費者物価指数・基調的な上昇率 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBReE9tZnB5TVk2ak5VMVdhcnZjVGptcWJIMjRmZi1vZERDeFdfaXJMd0p6OXJHcVVtcTFmckdFQURydzdWck15XzRDYVk3Mm1DV0U0TFpLclc0Y3dE?oc=5",
+          "published_at": "Thu, 12 Nov 2026 20:00:00 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "氷見野日銀副総裁、午後1時26分から参院特別委に出席＝関係筋 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1Jekh0aHZQa0lMcmRDVjFFTnk4UXo5X0tEM09SVms1aXU3bkx3R05jelhmSjRRS1FmWlZXa3dFOHNLaUdHMGJSVjRnTzFkQ3JPYnlLQmFwbDZCbUtpcW1zTUNLWXRJNUZGQm5EZURyRXdUNVQ1UE9tWjBfT29KNjg?oc=5",
+          "published_at": "Thu, 12 Nov 2026 22:09:56 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀・浅田委員が経済減速に懸念「消費強くない、利上げペース留意を」 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5DQmotYnJ3Q1lOT1JPRngyZGNEWm5xbWdFNFFqSHU1MGlNSUQtNnBRazd2UUFsQ0wxY3U5RkhoZW5lNlBral9mWk5jeWcyS1l4T0VwZGhISHRHeUhhcXpiRlJ5Wm1RMGJEcHRDaQ?oc=5",
+          "published_at": "Thu, 12 Nov 2026 02:11:54 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "日銀の【ETF】売却益「年1兆円」は政府の財源になる？買い入れの経緯と、巨額の含み益が国庫納付金に直結しない理由を解説 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1qRGMxZFIyc3Z4LW5IUjVLLXdZQmtueUNZVzBJNHktUTItZmU3a0FMXzZZdjVGaHRSdnVPV3RSN2hNVHUwRFkzWV9fbzc?oc=5",
+          "published_at": "Thu, 12 Nov 2026 19:25:00 GMT",
+          "source_url": "https://diamond.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.045006640321149316,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": -0.1248339919712671,
+        "japan_risk": -0.22888309230695913,
+        "usd_rate_pressure": 0.26797679792593887
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

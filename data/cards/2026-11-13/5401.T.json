@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-13T12:21:58.902200+09:00",
+  "prediction_date": "2026-11-13",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-13T12:21:58.902200+09:00",
+  "market_data_through": "2026-11-13",
+  "reference_price": 701.4000244140625,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.3812517634569996,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.6982027037563882,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.5253702403779406,
+      "direction": "UP",
+      "day_change": -0.004541514735668217,
+      "momentum5": 0.06839303033368238,
+      "trend": 0.03876957192535535,
+      "volatility": 0.18679900037184963
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "宇宙の謎に挑むハイパーカミオカンデ、日本製鉄が巨大水槽の内張り材を完納：材料技術 - MONOist",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9pNHk4cGFDOC1xbWJpOU9mN3FiTUFEa0duVG5vT2pCeWdydmNnWHdILWZUUlhVMGtGbTlPNlZEUHY0d0VfLTJhQW1UVHRBOGlfa2pRNTBhOE8wYWk1WDhYQVd6VEx5X1JUVEFvZGFJWQ?oc=5",
+          "published_at": "Fri, 13 Nov 2026 02:00:00 GMT",
+          "source_url": "https://monoist.itmedia.co.jp"
+        },
+        {
+          "title": "日本製鉄グループ、橋梁・水道管の長寿命化技術を紹介 - 建設技術展2026近畿(後編) - マイナビニュース",
+          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5wRkZHY2VnVFJNNTdXWmxfV2FvVlA1VjNrSWxITmE0ajhpU2ZIVTVFTlN6cmlWcUFsMGY5bWt6WDVWeUMxMlJxVGJWdm9TRFg3UHBkLUxZMl82NlRCR0oxejFudl9TbXMz?oc=5",
+          "published_at": "Fri, 13 Nov 2026 00:00:00 GMT",
+          "source_url": "https://news.mynavi.jp"
+        },
+        {
+          "title": "日本製鉄グループ 「建設技術フェア2026 in 中部」に出展 - Digital PR Platform",
+          "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBoVDNuWHo3aDRvQURyekRoZ0Jwa3Y4WTlCQVFNMENCeVdMYWdKMmRqc0p6SzJycm5NX3BOMzU2NEx4OHM?oc=5",
+          "published_at": "Thu, 12 Nov 2026 02:08:28 GMT",
+          "source_url": "https://digitalpr.jp"
+        },
+        {
+          "title": "日本製鉄、水素100％で低品位鉄鉱石から還元鉄 累計1000トン - 日経クロステック",
+          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB3c1lMaG1PNkN6Y1E2WkZKNTZvdENKSlUzWHhaM0U0Sk9KQlhkSUhRc2o2MUlvTG1sOWpURGlITWl4cU04MGhvYVJZSmN0NW1zSnF3SWZpRWRBTS1I?oc=5",
+          "published_at": "Mon, 09 Nov 2026 20:00:00 GMT",
+          "source_url": "https://xtech.nikkei.com"
+        },
+        {
+          "title": "日本製鉄のステンレス厚板、ハイパーカミオカンデに採用。約700トン（鉄鋼新聞） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0wN0ZraXhYU1A5OGtrSzZUS2E5eXhVZVhiUmxWTVRkdVljUndMRUM1RkpqenV3WkZrUWlmM0FVY3JlSURHUlY2SmRzcEFGbUYxUk5ELWRTMy1PQWZZUXRWamlPM2Y4OTBOa1lGZDVTVGV4azkxOW94TkdtbVdKRXc?oc=5",
+          "published_at": "Tue, 10 Nov 2026 21:03:08 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.16,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": -0.1248339919712671,
+        "japan_risk": -0.22888309230695913,
+        "usd_rate_pressure": 0.26797679792593887
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

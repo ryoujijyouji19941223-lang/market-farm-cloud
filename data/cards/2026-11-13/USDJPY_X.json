@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-13T12:21:58.902200+09:00",
+  "prediction_date": "2026-11-13",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-13T12:21:58.902200+09:00",
+  "market_data_through": "2026-11-13",
+  "reference_price": 159.95399475097656,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.16316166843137175,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5887876078608114,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.10469256467556583,
+      "direction": "UP",
+      "day_change": 0.0013772974420840356,
+      "momentum5": 0.015593808398912223,
+      "trend": 0.005337795224351405,
+      "volatility": 0.06334568901266509
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜FRB利上げ加速観測も160円台では神経質な値動き」 外為どっとコム トゥデイ 2026年11月13日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE04MW8xVkFUUUUwMnFxeHpPRDk5Q1R6bFlWbWNCWi1oMjlFWDFPanpnQ2dPaTR5UUJzN2U5MUZwcWhuOXNOUEcwM09YV0Z1WmM4TEh4a0VBdGZBblF3YVpPSVp6NA?oc=5",
+          "published_at": "Thu, 12 Nov 2026 23:47:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀委員、利上げで経済減速懸念 「ペースに留意する必要ある」 - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1Yd05hOUJCaEpVT21XbVNOR2VrS0t1alczVzJpcmFIaWRVTC1teWdZMm5YLVdxN2dKV1M0UmJOVGlhdE1OX0RRbUJVbWZoajFN?oc=5",
+          "published_at": "Thu, 12 Nov 2026 09:36:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "東京為替：ドル・円は伸び悩み、159円80銭台で小動き - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5pbmtkM0Q3NUxKUWY1YXgtQXdhTTViLW1oYzBWbVVXWFF4c1VwZEdLUzh6Q3dlTVlsbFcwYi11UmZTZWJhOEhtYWFPRERYaXpUQlE?oc=5",
+          "published_at": "Fri, 13 Nov 2026 01:04:37 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "ドル円こう着、１６０円が日本政府の防衛ラインに＝東京為替前場概況 - みんかぶ FX/為替",
+          "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5XRk05cW5aSm1MSTFhWkEyTWRCTUdvMUUwS3FaSFNhUlFnU3VYajdWNHVNd1R5dzA5VlZicmF0bWtEXy1RMEk5ag?oc=5",
+          "published_at": "Fri, 13 Nov 2026 02:45:29 GMT",
+          "source_url": "https://fx.minkabu.jp"
+        },
+        {
+          "title": "日銀の物価指標、２つの「２％」 消費者物価指数・基調的な上昇率 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBReE9tZnB5TVk2ak5VMVdhcnZjVGptcWJIMjRmZi1vZERDeFdfaXJMd0p6OXJHcVVtcTFmckdFQURydzdWck15XzRDYVk3Mm1DV0U0TFpLclc0Y3dE?oc=5",
+          "published_at": "Thu, 12 Nov 2026 20:00:00 GMT",
+          "source_url": "https://www.asahi.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.04647149634657984,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": -0.1248339919712671,
+        "japan_risk": -0.22888309230695913,
+        "usd_rate_pressure": 0.26797679792593887
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

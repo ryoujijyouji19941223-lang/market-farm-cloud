@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-13T12:21:58.902200+09:00",
+  "prediction_date": "2026-11-13",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-13T12:21:58.902200+09:00",
+  "market_data_through": "2026-11-13",
+  "reference_price": 1129.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.5926124724496243,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.28332138863359974,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.7647662409973466,
+      "direction": "DOWN",
+      "day_change": 0.011648745519713177,
+      "momentum5": -0.07154605263157898,
+      "trend": -0.09017658495520242,
+      "volatility": 0.4136548948879926
+    },
+    "news": {
+      "score": 0.2857142857142857,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "サンリオ株、「キティ」好調で最高益も失速 北米事業の停滞が影 - 日経ヴェリタス - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9RaDdZczFZVnA1ZEhzMnFrR2gzTXFDRFlHMTl2VDg4UXEtRHZ2Mm05SURpVDFwN3hvVWZMLVVqUi0wT1MzU191Qmh4emFvV1NhejRSYU5UaVQ4NF9iV3VQLWM4N1IyeTQzbElQdnhBRkk5MmtGR2VnRWNpUVFwQQ?oc=5",
+          "published_at": "Wed, 11 Nov 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "【サンリオキャラクターズ】オフィスでこっそりエクササイズ！ 『むぎゅーず』が11月26日発売（アニメージュプラス） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9talZCaC01dXN3dmhNYmVPMnJCV19fS3lTMGhIMlJ5bW05UVlHOU00Tk9id3d5MXYtZ0JkMGVFbDZUM3JxOTBnbXIyczgxSGw4ZTVSQndfQ1h6d3pxcXMxN0l3dnFXUmthYnhnM1JGRnRpT1BHbHBQc2xZXzFjNUk?oc=5",
+          "published_at": "Thu, 12 Nov 2026 22:30:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "天使衣装のハローキティやマイメロディたちをデザイン！「サンリオキャラクターズ」のオーナメントチャーム付きチョコボーロが登場！ - 電撃ホビーウェブ",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1vVjVZX0ZXSXRmX1BzVXdyX0xkQ1QwWG52d2V6cDNtNl8wRTJuVGM0RXMyc25ocnVoX2xGTEw5SWZjY19ENE9qZFBoeVgycDdT?oc=5",
+          "published_at": "Thu, 12 Nov 2026 23:00:00 GMT",
+          "source_url": "https://hobby.dengeki.com"
+        },
+        {
+          "title": "【(株)サンリオ】リトルツインスターズ × マクセル アクアパーク品川コラボイベントが2026年11月13日 (金) 〜12月25日 (金) まで開催、ゆめかわいい “星降る海” の水族館！ - iFLYER",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1fQkJVZnE4OFVmSWtrbnU2ZW80X0xYZlpEWEZRdVgxc19xMVhSYVl6RTN1YWZpVDh6bXhmV1BJM2c1dDUwcDRlbDZ0bzlfSjJPZzN3aEpoTmxyeFNVSG5N?oc=5",
+          "published_at": "Fri, 13 Nov 2026 03:00:00 GMT",
+          "source_url": "https://iflyer.tv"
+        },
+        {
+          "title": "「サンリオハウス」が渋谷PARCOに出店 大人の心を掴むファッション発の商品づくり - Fashionsnap.com",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1pSGJ5cDFRc0ZJUVl2T0Q3NTZual90WUhJQU53ZFpXeDdCSlU2cWdfRFVqV1E1RkFPaldDZVYzYWNLUEVMWXpVVFVCaTN3ZFVobHdSMm02S0I4NHY4UllIUUk2Ny1YSE5VbmprZnNUemxGWVNhV2pB?oc=5",
+          "published_at": "Thu, 12 Nov 2026 07:55:58 GMT",
+          "source_url": "https://www.fashionsnap.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.16,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": -0.1248339919712671,
+        "japan_risk": -0.22888309230695913,
+        "usd_rate_pressure": 0.26797679792593887
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
