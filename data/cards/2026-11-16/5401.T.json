@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-16T11:41:13.935580+09:00",
+  "prediction_date": "2026-11-16",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-16T11:41:13.935580+09:00",
+  "market_data_through": "2026-11-16",
+  "reference_price": 695.5,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.30707163448262514,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.6627464787269715,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.41628181541562514,
+      "direction": "UP",
+      "day_change": -0.003581661891117527,
+      "momentum5": 0.030523003171947005,
+      "trend": 0.0401367465966751,
+      "volatility": 0.19273451755500748
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "日本製鉄／事業部長インタビュー／鋼管／内藤寛人常務執行役員／油井管でＵＳスチールと相互補完／国内事業「再編から成長」掲げ総合力発揮 - 日刊鉄鋼新聞 Japan Metal Daily",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBFZTVpTXQwZTlINUo1YmhPb3VsbVNhRi1ZTng1TTdhYTRaRjZRS2RNVTFrNzR0dHBFaGVZbFZzaXhZbHFybzc0eThnWWtBazFTZFM1ckFxUlZuRmthU0E?oc=5",
+          "published_at": "Sun, 15 Nov 2026 20:00:00 GMT",
+          "source_url": "https://www.japanmetaldaily.com"
+        },
+        {
+          "title": "日本製鉄釜石シーウェイブス 2026-27シーズン 出陣式開催のお知らせ - 釜石シーウェイブスRFC",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE81d01hcGRzRldlR2Jfb0c3QmN1MlJ3TUVhN204aTctRDFpV3E1Y2N1WHNCMndfTDRnU0ZUV2hNc3ltWFZ3NWZLanBjeVpHbFpaUnBmOF9MWVNidw?oc=5",
+          "published_at": "Fri, 13 Nov 2026 09:00:52 GMT",
+          "source_url": "https://kamaishi-seawaves.com"
+        },
+        {
+          "title": "ヤクルトD6位・石沢大和が入団に合意　日本製鉄室蘭シャークスの25歳左腕　背番号は「58」に決定 - サンスポ",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOWWRSd095MTd1WEF2aHdtYlNTY2NxeTY3eXVERENYU0F1NFVIVWlWaWM0VTFBWTF1WE9uUVVISU5ZT1BEUEJoX0VxSnRfN3RmalExUElmM2JCTkc3dmVMLUVQa1B6NmtOU0h0c0Vic0JzZFdXQVU1bDFiV0RMS2g5U0p3d1dGNlhYamt0cXMweGdud29aRzA1TdIBigFBVV95cUxQdjNBNEZEOElPbENvQVV6ZFEtTldXMlNQOHNDN1lXMjcwYzRrcUhOcURFV2tWbklPQ3F6QzFGUjA5MnpZQmpYZlRoeTlhZVhwOEZCTVBQNGZ6Nkoya0RCYmRhVjJiZ0xBc2I1b3FWRkRQV2s3X19ORnZDcENIUXNtM0hKVGMtOXI1Rnc?oc=5",
+          "published_at": "Sun, 15 Nov 2026 08:33:35 GMT",
+          "source_url": "https://www.sanspo.com"
+        },
+        {
+          "title": "日本製鉄株式会社がモリテックスチール株式会社＜5986＞株式の変更報告書を提出（保有減少） - ｄメニューニュース",
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNVFQxTkotWGZHSm91ZEdSbW5lQWc5eW5vZWloWjQ4SzF6QVU2SU9NNU5iNGRfY1FGNkFXSDVDb29walBRcUxPUWM4a01kMERHS2VXdnA3T2ZHbW5sVXBDTERhM19JSzY1bFlTVk5zcHctQUJ5UmFWeHU3NGpXTUJ6bEt5dVbSAYoBQVVfeXFMTVgxc2JWUGJ5b05yWVhlY2ItYlNHRno0TWI3clZhell3eEZwUmhfNE04T0xnUFY2WTdWRzdLT3hHbnVCcVYzVTFkakFySmpiMWVMNlJNTzVSSlFlWmtJb2plRzBuX0U0dEZaUklXdzU1SXktV1FseVRWTlpzLVNWVWtKeTdJa3VJYlpR?oc=5",
+          "published_at": "Mon, 16 Nov 2026 01:57:00 GMT",
+          "source_url": "https://topics.smt.docomo.ne.jp"
+        },
+        {
+          "title": "宇宙の謎に挑むハイパーカミオカンデ、日本製鉄が巨大水槽の内張り材を完納：材料技術 - MONOist",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9pNHk4cGFDOC1xbWJpOU9mN3FiTUFEa0duVG5vT2pCeWdydmNnWHdILWZUUlhVMGtGbTlPNlZEUHY0d0VfLTJhQW1UVHRBOGlfa2pRNTBhOE8wYWk1WDhYQVd6VEx5X1JUVEFvZGFJWQ?oc=5",
+          "published_at": "Fri, 13 Nov 2026 02:00:00 GMT",
+          "source_url": "https://monoist.itmedia.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.16,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": 0.07253898436198059,
+        "japan_risk": -0.07453001782205182,
+        "usd_rate_pressure": 0.295263160730852
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-16T11:41:13.935580+09:00",
+  "prediction_date": "2026-11-16",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-16T11:41:13.935580+09:00",
+  "market_data_through": "2026-11-16",
+  "reference_price": 125.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.5959594225100859,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.26010486043008757,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5757268292579024,
+    "direction": "UP",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5510204081632653,
+    "heldout_signals": 49
+  },
+  "evidence": {
+    "price": {
+      "score": -0.8411167978089498,
+      "direction": "DOWN",
+      "day_change": -0.015748031496062964,
+      "momentum5": -0.09420289855072461,
+      "trend": -0.10602094240837712,
+      "volatility": 0.6294174103567359
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "KLabの決算説明資料より…開発に3年以上で30億～50億円規模の投資を要する大規模な開発体制から脱却へ 『スマグロ』『ヒロサバ』のブラッシュアップを優先 - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBEcmxtcmF3MUJIaG92b0lyQnQzRlktcGgxb3lSM3FxNnkzdk5UdGhFNDQtTkFiS3lNbFNaZjdYck16OGhx?oc=5",
+          "published_at": "Fri, 13 Nov 2026 01:48:00 GMT",
+          "source_url": "https://gamebiz.jp"
+        },
+        {
+          "title": "ＫＬａｂ(株)【3656】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9lTndiVlkzRWNtdnpudzVoR3lqdHJjZXZoNFo4WFBFMUNwcU13YUE0RDBpXzN4VW5qaVR3ZE1nMXRRZExscGZVbzh1YUg0Z1dySm5yN1p1LUN3TmlkQ3h3?oc=5",
+          "published_at": "Fri, 13 Nov 2026 06:55:45 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "KLab、UAE子会社の商号変更および新役員を選任 〜 ドローン・航空関連技術・安全保障分野へ本格展開 〜 - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5rSFZRcTRwQ2tHVjhUMk8tM3dnNXBzZTlHYk1jWW1Ebi1xR3U5WFBzTkMyalk4d1NtUjl1ZzFGQl9IT0I2ajJLTXJmVGZLdnliRUthS0MtSHJJWldFQmhsT0Y2SE5oT3Rjbm1jVQ?oc=5",
+          "published_at": "Mon, 09 Nov 2026 08:29:26 GMT",
+          "source_url": "https://www.klab.com"
+        },
+        {
+          "title": "KLab（3656）、IP／エンターテインメント・AI・ブロックチェーンの多角化経営を推進 AI自動取引システムは実運用間近 - ログミーFinance",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5WSFJEczFlMWo4WTVUOVVKdzVfajlDZndkTWU2amlMaG1QcnNFME12R0NBZmtLY3J4ZG14Z2JsNFR6NTZESmxUdjhfTTZmRjN6c0E?oc=5",
+          "published_at": "Tue, 16 Jun 2026 07:00:00 GMT",
+          "source_url": "https://finance.logmi.jp"
+        },
+        {
+          "title": "11月12日の主な決算記事…ブシロード・KLab・KADOKAWA・ハピネット・エイベックス - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE8ydS1xUFNYOV9fYnUtOWJiSEVnSWlLeFV0dHkyN2ZPUmJsUjJ1Zm1XaTVJTm5meXE3dnU4WEo4UFNfUFRC?oc=5",
+          "published_at": "Thu, 12 Nov 2026 13:09:00 GMT",
+          "source_url": "https://gamebiz.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.16,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": 0.07253898436198059,
+        "japan_risk": -0.07453001782205182,
+        "usd_rate_pressure": 0.295263160730852
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

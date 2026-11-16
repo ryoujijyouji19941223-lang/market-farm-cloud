@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-16T11:41:13.935580+09:00",
+  "prediction_date": "2026-11-16",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-16T11:41:13.935580+09:00",
+  "market_data_through": "2026-11-15",
+  "reference_price": 3886.300048828125,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.35162080506555954,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.3792813421276887,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.3701033510150171,
+      "direction": "DOWN",
+      "day_change": 0.0,
+      "momentum5": -0.055462377244349215,
+      "trend": -0.020836667501329287,
+      "volatility": 0.252700862392005
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "世界の中銀、「タカ派」色再び 金利に上昇圧力・株価に重荷 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5heDlPdDFkcGUzWUs1Wlo3dENPcjhRNGNwcHRaOHNtMkNKZ1FKSXVCOHNQVXFrUWxHakMwSlBGM1ZEV2V3Z0NIRHRDYmVhMldQU2FpY3FqT3JOa3pLRV92TDlNNDBkWUM0aVc5VQ?oc=5",
+          "published_at": "Mon, 16 Nov 2026 02:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "長期金利の上昇が加速、「ターミナルレート」も引き上がる？ 住宅ローンや債券投資の判断のポイント 野村證券・美和卓 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5CODR4SFN3VHlXeUVXOTk1ZDRCcTZJeHY1ODZOM0doa3FhRVZOazBrT1VEX2hic2tmcGx3RERpeW84bnZibzk1d3FYaG9OVFRreW5KaE1vUncxbFRPRHl3?oc=5",
+          "published_at": "Fri, 13 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "「ウェルカム円定期プログラム」実施のお知らせ | プレスリリース | ドコモSMTBネット銀行（旧 住信SBIネット銀行） - 住信SBIネット銀行",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE94NDVzVk1nZm9pQ1hibVd0RHNXNXB2SWJSN1ZHbFJ6d0pRNXBtS0c1MkNWSEM1RlQxMllCOENMQ2xpT2xjX3pYVk02clp0MkNSZWpBWTBIb3R2NVViYWtnaG5kMElpdWdxaWVDZDY2bFZDTm9sMWRZ?oc=5",
+          "published_at": "Mon, 16 Nov 2026 00:51:06 GMT",
+          "source_url": "https://www.netbk.co.jp"
+        },
+        {
+          "title": "マイナス金利下の「10年固定住宅ローン」11年目の選択 - 毎日新聞",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE15TmhXODR4UzJDUnVvMlgyT3RwN2hINkRVekFXREl0UFQyU29yUm1iUi11Wm5BRUNCcnBxdUdwOUtYakRvYWFSVXhvRzFPYzFqMF9fQzhPRk9YbVFlMHU5UlhpMXA1V214YU0wUGlRR29TYUNBYXB5Vk9Ic0hiV00?oc=5",
+          "published_at": "Sun, 15 Nov 2026 21:30:00 GMT",
+          "source_url": "https://mainichi.jp"
+        },
+        {
+          "title": "韓国金融委員会、10年超固定金利の住宅ローン再推進へ…12月に青写真、金利格差が鍵 - BigGo ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5XZV8wdXloWC0zcm5aYnhGT1lwbDd6RzVNMVdlNmlqNVBpeXVCN29fMXFaTndSNGtVN3BmT1BVXzlKNFBsQm93aVVDY0RfdnBYYTNrRWE0ZW1uMkwzTWpYMTAyV00tUHN4TVpJLWpoYnY5bjEy?oc=5",
+          "published_at": "Mon, 16 Nov 2026 02:06:00 GMT",
+          "source_url": "https://finance.biggo.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.2413368425023193,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": 0.07253898436198059,
+        "japan_risk": -0.07453001782205182,
+        "usd_rate_pressure": 0.295263160730852
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-16T11:41:13.935580+09:00",
+  "prediction_date": "2026-11-16",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-16T11:41:13.935580+09:00",
+  "market_data_through": "2026-11-16",
+  "reference_price": 8996.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.21654630044794715,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.607661806528517,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.28315632418815756,
+      "direction": "UP",
+      "day_change": 0.025418898894334907,
+      "momentum5": 0.0453172205438066,
+      "trend": 0.013730165255282367,
+      "volatility": 0.4833418936502225
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "Nintendo Switch 2 / Nintendo Switchの本体機能をバージョンアップ。新しい機能をご紹介します。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOOTJvT1NwaGhqQTZXNUxyRTFSdjB2WUFIZ1NleElObFVLcVNyUFZtQjBXaFVCOFc1Zk4wQVpzVF9ycGg0dHpoNm1hMlF5bUszUmhiNF9IYWw3ZEcxaXV6NmlRM0dhUTRDZXEzTXVKZms0ZmpQeld4NHFPSE5lRUNqcWQwX3BlQQ?oc=5",
+          "published_at": "Tue, 10 Nov 2026 01:11:36 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『Minecraft』が、より鮮やかなグラフィックにアップデートしてNintendo Switch 2 に登場。本日より発売開始。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOSmdSZDB2dDMzU2VxbG9sY3V2SElxQ2Rnby1TSGFxeEpEeDAyNXVnVTlzaFMtODlpTkpKbEtuYjFtYjloZWRvOGFla3hBWktwT21zYkVJZHh2X1hBZjlReTJIWGF0X0t6ZVRNMExoWTJVLV9tNGV2ZEVBV0xMWVNDR0ZIbGUyZw?oc=5",
+          "published_at": "Wed, 28 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『スーパー マリオパーティ ジャンボリー Nintendo Switch 2 Edition ＋ ジャンボリーTV』が無料アップデート。ソフトが1本あれば、オンラインで、みんなでスゴロクができるように。 | トピックス - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNYVdIZFhUZjI4WjZ0c1BhV1dacnVWRlZVU29yam04TVExNjk5MVFLRlVhX2c2M0dnN0dvUF9IcUFiLTU5cjJXQnZHR1pQTFJrR1VfelRhd2hBeGF2Q2VfekM5UnI4TE9Vb1VKVjAyak54R1JaZ1EzbnpVaHdTN1BJNGg3bVhSQQ?oc=5",
+          "published_at": "Tue, 10 Nov 2026 01:21:01 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "「ゼルダの伝説 40周年 アニバーサリーエディション」のNintendo Switch 2 や周辺機器は本日発売。「ゼルダの伝説」に関するさまざまな取り組みもご紹介。 | トピックス - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQT3UwN041aXJ0SUpZM2Z3c3BVLTNXSlhEUTRuM0xmSHNpUlFiSzFiNEVQMzZUdHRHb2FfZ2o0QnJ4ME92cU1PWGtkeTZMb0lIdkg4WEFGdzFpbzZlSEVMeWtxNGZnUHpEb2hSWndGclluaF91bUNyMWplLXRmeXRpbjJfM3JEdw?oc=5",
+          "published_at": "Thu, 29 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "3本のソフトからお好きな1本を選択してダウンロードできるお得な「Nintendo Switch 2（日本語・国内専用） 選べるソフトセット」が登場。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSnhiVFcyUXVfNDdlVXZ4RTdna2hqbEttc2tpaEdEUi1vNElGSm41UHoxa1dlYzNPc3RocDh3UWJ0eEdGUTVDNEZEMnNmakZ1UjgzZy1BeWtBWUoxeDZJcTVqcHVwT24tNlVQbjF2RmFQTnFDSTNlQ1hLcW1xVVJLNVZCcGZvQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.16,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": 0.07253898436198059,
+        "japan_risk": -0.07453001782205182,
+        "usd_rate_pressure": 0.295263160730852
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

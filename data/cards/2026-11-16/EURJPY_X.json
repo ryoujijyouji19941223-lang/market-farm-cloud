@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-16T11:41:13.935580+09:00",
+  "prediction_date": "2026-11-16",
+  "symbol": "EURJPY=X",
+  "name": "ユーロ円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-16T11:41:13.935580+09:00",
+  "market_data_through": "2026-11-16",
+  "reference_price": 176.02200317382812,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.07363047567859578,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5382819282722492,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.0028606496653292607,
+      "direction": "NEUTRAL",
+      "day_change": -0.0036057796122901387,
+      "momentum5": -0.0024142800018264188,
+      "trend": 0.0008495578173421947,
+      "volatility": 0.06356723337830274
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "ユーロ/円【EURJPY】：外国為替相場FXレート・チャートをリアルタイム表示 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1pREZlRmliZXhfWS15YlhsbFYzdjdIYkVVeXpwU0Z1T2U0S1lVYzB4U0RkUGtFcEhxeUhZa2M4Y1JRcVJGNTFEdkpBaU9nLTV4NXVKaW5R?oc=5",
+          "published_at": "Mon, 16 Nov 2026 00:25:50 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "メガバンク株、日銀の利上げ観測の高まり背景に先週は持ち直し - 日経CNBC online",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBON1BYTXA4TTZPX3RBaFprdVBIRWlaU3lBcUJ1VjVZdlRaeVdBNzh0Xy1SWTNERTJGZURCSFRiNmpya1gtUEhFM1lJdGxiZFZtdnozeQ?oc=5",
+          "published_at": "Mon, 16 Nov 2026 00:16:03 GMT",
+          "source_url": "https://online.nikkei-cnbc.co.jp"
+        },
+        {
+          "title": "【今日のドル円】昨日の振り返りと今日のドル円相場見通し「先週金曜は159円50銭台へ小反落——本日は国内7-9月期GDPと高田日銀委員講演に注目」 2026年11月16日 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE92SHlxX2gtOUFnaWpZZGFUTXFDWjhDRUZmNllFbHNiTU5ERXVxNTJqVXRVekdFcmxNSG5uM3VNaWZ3UmxsM09DcXNsLXdHYjZmUVcxelk2SmhVdzNnWTlvckxsbw?oc=5",
+          "published_at": "Sun, 15 Nov 2026 21:51:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "ユーロ/円見通し(為替/FX ニュース )：175円台後半で週明け｜NY時間に崩れ0.77円下落(2026年11月16日) - OANDA証券",
+          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBrbWlGWTBCdDQydW9Jenh5WTZWR0Jvd2sxMnREMDJ4N0ZmZjRwS0gwbm52cXFSd2tuX24ySTZGMTNoZjBNWGlvRmtRczFKaWVzWl9ITndESFVSSXZjOWVrWlMzVS1DS0ZjUE5sTDNSVXdGdXRoaHduNUtB?oc=5",
+          "published_at": "Sun, 15 Nov 2026 22:40:49 GMT",
+          "source_url": "https://www.oanda.jp"
+        },
+        {
+          "title": "日銀・浅田委員が経済減速に懸念「消費強くない、利上げペース留意を」 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5DQmotYnJ3Q1lOT1JPRngyZGNEWm5xbWdFNFFqSHU1MGlNSUQtNnBRazd2UUFsQ0wxY3U5RkhoZW5lNlBral9mWk5jeWcyS1l4T0VwZGhISHRHeUhhcXpiRlJ5Wm1RMGJEcHRDaQ?oc=5",
+          "published_at": "Thu, 12 Nov 2026 02:11:54 GMT",
+          "source_url": "https://www.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.052901559374479226,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": 0.07253898436198059,
+        "japan_risk": -0.07453001782205182,
+        "usd_rate_pressure": 0.295263160730852
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

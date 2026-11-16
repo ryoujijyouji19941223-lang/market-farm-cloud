@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-16T11:41:13.935580+09:00",
+  "prediction_date": "2026-11-16",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-16T11:41:13.935580+09:00",
+  "market_data_through": "2026-11-16",
+  "reference_price": 159.74200439453125,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.1558484231889303,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5848866691099709,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.0882597854696801,
+      "direction": "UP",
+      "day_change": -0.0008318724345192097,
+      "momentum5": 0.009160266343417156,
+      "trend": 0.006481121535554912,
+      "volatility": 0.0627220344082425
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜160円挟んで神経質な展開」 外為どっとコム トゥデイ 2026年11月16日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1NWjBBT3N1dFUwSnJha2h6d0JjTFlHeWtxM3FPRV9nYWwzMlN5Zy1lb3ZhbFMxeGpsTzdiMExVcC00VTFHX2RXN2hXcUJuczBDcUJlZTNTT2FEZXk4eXhuZHhUUQ?oc=5",
+          "published_at": "Mon, 16 Nov 2026 00:00:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "ドルは高値もみ合い、タカ派ＦＲＢと介入警戒が綱引き＝今週の外為市場 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1hWV8xMTRaTFNScC1HM1pEWjRyVnZROEdkdThqTW1GemMtU0o5X3VFVXUteTkyem9pNnE4YzRfQWtTYjFVQ1ZkbGhvTHB1dnViUEszczM4cWxBSXZVNlQyT3BydEtKQ1FUc2k4cERRVlhwTGxyTmtmRkhQZE9idw?oc=5",
+          "published_at": "Sun, 15 Nov 2026 22:35:43 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀は「普通」の利上げペースへ 2027年の利上げ局面終了後、超長期金利の低下を予想 野村證券・宍戸知暁 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9MZWVXNWxHQ1VPREtUZmFGQ3Q2U0M2Wmx1QmJtTXpNaGR6OGNFanlwMVdqUDdXcHpKWVEtd3ktZ3ZBRHVCLWVldGd3WHE0QzVkN01rVENmVUpqREdGOTZZ?oc=5",
+          "published_at": "Fri, 13 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "ドル円理論価格 1ドル＝158.86円（前日比-0.09円） - みんかぶ FX/為替",
+          "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9kN2Vneko5SUpQaFg1QWdybS04a2hHNkxQMGVXMjJQU1lqRk1pUElVMFdhOUUtMFpXbXRwSWFjVUJlNFhsaVlDWA?oc=5",
+          "published_at": "Mon, 16 Nov 2026 00:15:29 GMT",
+          "source_url": "https://fx.minkabu.jp"
+        },
+        {
+          "title": "メガバンク株、日銀の利上げ観測の高まり背景に先週は持ち直し - 日経CNBC online",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBON1BYTXA4TTZPX3RBaFprdVBIRWlaU3lBcUJ1VjVZdlRaeVdBNzh0Xy1SWTNERTJGZURCSFRiNmpya1gtUEhFM1lJdGxiZFZtdnozeQ?oc=5",
+          "published_at": "Mon, 16 Nov 2026 00:16:03 GMT",
+          "source_url": "https://online.nikkei-cnbc.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.0722117937969855,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": 0.07253898436198059,
+        "japan_risk": -0.07453001782205182,
+        "usd_rate_pressure": 0.295263160730852
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

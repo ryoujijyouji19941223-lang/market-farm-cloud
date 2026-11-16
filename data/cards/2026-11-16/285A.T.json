@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-16T11:41:13.935580+09:00",
+  "prediction_date": "2026-11-16",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-16T11:41:13.935580+09:00",
+  "market_data_through": "2026-11-16",
+  "reference_price": 8588.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6301628403522468,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.29008248170048967,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.8914159416944805,
+      "direction": "DOWN",
+      "day_change": -0.05532944670553297,
+      "momentum5": 0.034449530233678693,
+      "trend": -0.19582204006081838,
+      "volatility": 1.110594572370185
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "東芝 純利益4.4兆円→2.5兆円 キオクシア株が大きく影響 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBEbjh1aFMwekUtamVFRU0wOGNYWGwxMXJlZVZYaDVaQTVrQk40MnB0QjNhQWxPMGdoenRvRDJyTm14RzVZVlZCMHFicWRrOWFhX1ZiQmR5WGVGWVp3Tnh4bTFKTThFMTg?oc=5",
+          "published_at": "Fri, 13 Nov 2026 09:41:07 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "信用残ランキング【売り残増加】 サンリオ、ＪＴ、キオクシア - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1LRUZmc2lsYTZGdzlqeTFOSkZaTF82aFZRNjZLbHVNZURPRE1kR1BTa3lSMHVtRnMyNEQ5TVRlbVRWMUd0Vm9PVlpYZEpnVUUyQzA2aTlmYWFjS1B1WXRBdw?oc=5",
+          "published_at": "Sat, 14 Nov 2026 23:15:00 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "キオクシア株、期待の月末買いは半減か 株安で4700億円規模との見方 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9rZ1ZkblNPMlE5NkNiVUJwZ0Jib1c0dE5TTVdkOG9Mcnh1bGpocGQyNTY2S1M3MlpYODdfQmIyRndRdndNMERRV0p5cmRRdHUxOTk2V29NNDhlNVU0S1ZGNUFWSWk0T1RHWEZxcw?oc=5",
+          "published_at": "Tue, 10 Nov 2026 06:13:42 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "株価急落のキオクシア、「底力」が見えてくるのはこれからだ：大山聡の業界スコープ（106）（1/2 ページ） - EE Times Japan",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE50elozOVpfRG8zUXpGWURKZHJWLTN1ZHR3MnRpUVV3LUltbVFtM2Q1MUU3bmEtSU1xY19Udk9icXkwX1llWlk0aEgwUWt1QXNSNzJiTTNMcjNoVDkwYTNNV2xPdWpycEFDbjdzSzBwOA?oc=5",
+          "published_at": "Wed, 11 Nov 2026 02:00:00 GMT",
+          "source_url": "https://eetimes.itmedia.co.jp"
+        },
+        {
+          "title": "急落のキオクシアは何位？時価総額を増やした銘柄トップ50 - 四季報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5VSkU0Vl9uV011TndKaC1CU0s2eV9VdUx2NlY5Q0l4SGxjSHlpSTNaZ0RnR0JPOHhsTi1weE5MdnBtNzhiWTFRWjFWYVAyYWczY1VDVGNmYw?oc=5",
+          "published_at": "Tue, 10 Nov 2026 21:00:00 GMT",
+          "source_url": "https://shikiho.toyokeizai.net"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.16,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": 0.07253898436198059,
+        "japan_risk": -0.07453001782205182,
+        "usd_rate_pressure": 0.295263160730852
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

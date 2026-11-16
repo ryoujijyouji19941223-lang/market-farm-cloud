@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-16T11:41:13.935580+09:00",
+  "prediction_date": "2026-11-16",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-16T11:41:13.935580+09:00",
+  "market_data_through": "2026-11-16",
+  "reference_price": 1091.5,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.5786107388748489,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.2671531682981274,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.779889742042845,
+      "direction": "DOWN",
+      "day_change": -0.01622352410995942,
+      "momentum5": -0.0666951688755879,
+      "trend": -0.09728854714690416,
+      "volatility": 0.3884052703439182
+    },
+    "news": {
+      "score": 0.14285714285714285,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "(株)サンリオ【8136】：株主優待 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE93aExJcHV5VUJ2aVpjcWI5TWpsR3BhT2dqNHhHRXlQVDJPc1Zma3NWVTB3LVpQLVI2T0tZNEFzQUd0RmJqb2pHWTJsdzVaMzFaNmVCUVpxZE5KRnRHRFp3?oc=5",
+          "published_at": "Fri, 13 Nov 2026 08:00:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "サンリオ株、「キティ」好調で最高益も失速 北米事業の停滞が影 - 日経ヴェリタス - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9RaDdZczFZVnA1ZEhzMnFrR2gzTXFDRFlHMTl2VDg4UXEtRHZ2Mm05SURpVDFwN3hvVWZMLVVqUi0wT1MzU191Qmh4emFvV1NhejRSYU5UaVQ4NF9iV3VQLWM4N1IyeTQzbElQdnhBRkk5MmtGR2VnRWNpUVFwQQ?oc=5",
+          "published_at": "Wed, 11 Nov 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "信用残ランキング【売り残増加】 サンリオ、ＪＴ、キオクシア - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9CQm9FQlpIaXotYVk2TXR6Vm9ra3RDUEt3YXRDYVhmbHYyc2lRWWQ3MVpjVlM3OERSbzFZNXZZcG8waUsxMm5BRk1lZTF0SENxMXc?oc=5",
+          "published_at": "Sat, 14 Nov 2026 23:15:00 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "【大分】サンリオ ハーモニーランド、「パラスポーツチャレンジ」を開催 - 車椅子バスケやボッチャなど - Infoseek",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE83Tk02TjNwTTIyQ1BGaHFNOXJMTGVsdUJLZEN1WjJSN2RyZ1RPNG84bUlEb2NHTTk5Nm42c3ZkMlI0V0lnMlkyeVFzbWVFbFNMbmViNG4zb2YycVV1TXFWWg?oc=5",
+          "published_at": "Mon, 16 Nov 2026 01:42:34 GMT",
+          "source_url": "https://news.infoseek.co.jp"
+        },
+        {
+          "title": "ローソンで発見！サンリオキャラクターズの新作「アクキー」が可愛い！《開封レビュー》 - ウレぴあ総研",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBNNkZuVFM2T09VSGdxUG5vTVdRQ01lVG1Sc3VZV3FaU2pSQlNua04yc1pCR1dCNUVGRldMWmhYNUVlWUgtbXVFU1lUQWNhRjlieUE?oc=5",
+          "published_at": "Sat, 14 Nov 2026 12:11:00 GMT",
+          "source_url": "https://ure.pia.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.16,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": 0.07253898436198059,
+        "japan_risk": -0.07453001782205182,
+        "usd_rate_pressure": 0.295263160730852
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

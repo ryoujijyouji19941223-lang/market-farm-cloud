@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-16T11:41:13.935580+09:00",
+  "prediction_date": "2026-11-16",
+  "symbol": "8316.T",
+  "name": "三井住友FG",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-16T11:41:13.935580+09:00",
+  "market_data_through": "2026-11-16",
+  "reference_price": 3252.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.27371875649442157,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.639681268026139,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5831008447452504,
+    "direction": "UP",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5441176470588235,
+    "heldout_signals": 68
+  },
+  "evidence": {
+    "price": {
+      "score": 0.33151917971868716,
+      "direction": "UP",
+      "day_change": -0.007022900763358764,
+      "momentum5": 0.040307101727447225,
+      "trend": 0.02291320565464061,
+      "volatility": 0.38380041955793914
+    },
+    "news": {
+      "score": 0.14285714285714285,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "(株)三井住友フィナンシャルグループ【8316】：株主優待 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1mODUtSWQ5NjA1QzJJR3dCTmlKOU5fSGh4Y0J4c3h2V0pSV0RsX0t1Z05wS2RjQjNVLXhuYzFQcnh4MTdYTDU0bUNwd2g5NU9ESjdYMTdCRE9NM29QQlU0?oc=5",
+          "published_at": "Fri, 13 Nov 2026 08:00:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "三井住友フィナンシャルグループ[8316]：2026年度 第２四半期決算説明資料 2026年11月13日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9meFVjRnBNLW40d3ZmTmpJVHVFUGE5Qk8wbG5lLVN5Sm9Ic0JKMW9VNDVZWnpHYnlxdmVZR0k1ZGVIVlJGY0QyU2JHUHl2dmVoS3RwSDRKNGlXWTdwTFEzckFqVG16djJnMnc?oc=5",
+          "published_at": "Fri, 13 Nov 2026 04:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "【増配後の配当利回りは3.05％】三井住友フィナンシャルグループの年間配当金は100円（分割考慮後）、11月13日の中間決算で純利益予想を1兆9,000億円に上方修正 2,200億円を上限とする自己株式取得も決定。期末配当の権利付き最終日は2027年3月29日 | 概要 | LIMO - LIMO | くらしとお金の経済メディア",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9GVmgyaVZSSXYwOVEzTWpiWmVJbXVqaFRsZmRPYTJKZ3RUbFFDbUFTVHBadl9jQTl4Y2tEX054UGNFc3dQMHpwbDVZZlI?oc=5",
+          "published_at": "Sun, 15 Nov 2026 08:45:00 GMT",
+          "source_url": "https://limo.media"
+        },
+        {
+          "title": "三井住友フィナンシャルグループ (8316) : 株主優待・優待利回り [SMFG] - みんかぶ",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5DWEdmbEQ3TzA2Z05OMkhHSDBlcGFlLUhjMXBOa2k0V1ZTYU45X1ctSS1DU0lwWHRWRHZxUURna2ZMODdYX3J6bkhKWQ?oc=5",
+          "published_at": "Fri, 13 Nov 2026 06:30:00 GMT",
+          "source_url": "https://minkabu.jp"
+        },
+        {
+          "title": "SMBCグループ、富士通、ソフトバンク、健康・医療分野での業務提携に合意し、持続可能な医療の実現に向けて国産ヘルスケア基盤を構築〜国民の健康寿命延伸と医療機関の経営効率化、国の医療費抑制に寄与〜 | 企業・IR | ソフトバンク - ソフトバンク",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9Xd1lzblUxbmh1OFNEd3Q2S2R0QS1oR0E5MHplb3FVeng2QVk3al80b25FTjF6cVQ1WmQ3ZDctbE5udFdPZHhTLXFIeDdBNi1NSFlLcktSa2hNNDhHZ0IwVWx4VjZnV0NwdUFxNkw2QQ?oc=5",
+          "published_at": "Tue, 19 May 2026 07:00:00 GMT",
+          "source_url": "https://www.softbank.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.16,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": -1.0,
+        "oil_pressure": 0.07253898436198059,
+        "japan_risk": -0.07453001782205182,
+        "usd_rate_pressure": 0.295263160730852
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
