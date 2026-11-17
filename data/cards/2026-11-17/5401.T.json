@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-17T14:02:09.734873+09:00",
+  "prediction_date": "2026-11-17",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-17T14:02:09.734873+09:00",
+  "market_data_through": "2026-11-17",
+  "reference_price": 689.9000244140625,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.22117888932901816,
+      "factor_agreement": 0.5,
+      "reason": "news_unavailable"
+    },
+    "direction_score": 0.6033542292946762,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.3028256713068787,
+      "direction": "UP",
+      "day_change": -0.0074808680110968195,
+      "momentum5": 0.0029073992281125616,
+      "trend": 0.03762475573194557,
+      "volatility": 0.19492461326615831
+    },
+    "news": {
+      "score": null,
+      "status": "ERROR",
+      "error": "429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=%28%22%E6%97%A5%E6%9C%AC%E8%A3%BD%E9%89%84%22%20OR%20%22Nippon%20Steel%22%20OR%20%22U.S.%20Steel%22%20OR%20%22US%20Steel%22%29&hl=ja&gl=JP&ceid=JP:ja",
+      "direction": "UNKNOWN",
+      "headlines": []
+    },
+    "outside_wind": {
+      "score": -0.10171621893560406,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6357263683475254,
+        "oil_pressure": -0.06505453501848224,
+        "japan_risk": 0.06989994347979911,
+        "usd_rate_pressure": 0.26742347645649156
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

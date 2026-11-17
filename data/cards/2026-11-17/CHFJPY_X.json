@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-17T14:02:09.734873+09:00",
+  "prediction_date": "2026-11-17",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-17T14:02:09.734873+09:00",
+  "market_data_through": "2026-11-17",
+  "reference_price": 189.57699584960938,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.18110312904527448,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.5318022215076427,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.09059025335052581,
+      "direction": "DOWN",
+      "day_change": -0.004249292125268811,
+      "momentum5": -0.016528637117474765,
+      "trend": -0.0030905930967196626,
+      "volatility": 0.056136905486574615
+    },
+    "news": {
+      "score": 0.625,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "スイスフラン/円【CHFJPY】：外国為替相場FXレート・チャートをリアルタイム表示 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBoZ1k1UUFNWkpHXzd1Vld5QnVVVng4Ty1COWVJd3BldFJpV1paaGxLYXpzLU0wZWVPYTMyV2Z1MXBHakhmSkZwaTk0VmJ4Z3lGbmdxbGxB?oc=5",
+          "published_at": "Tue, 17 Nov 2026 02:43:57 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日銀政策運営、個人消費含む経済・物価を総合判断と理解＝城内経財相 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZE1nMkxqMWo3aGF6NWtkT09ZYXVkQkdjUnBxcUxCMjl4ajRwMDE4ZWtXQXNFclQyVmRtbU9Td25vQ0w4QjNWTTN4YzR5TEhuZFBxZTd5VF8yRm5BSU16VlFnR2xlcHJFMzV0cTNYSDcyYUtGVWpWSXhDMGZBdXF4WHZhYU12Mnp0LS1KQnJiZmM?oc=5",
+          "published_at": "Tue, 17 Nov 2026 01:14:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "【通貨別まとめと見通し】スイスフラン円：米インフレ上振れと安全資産需要の後退で190円割れ、21日線下放れで下値模索の展開へ - みんかぶ FX/為替",
+          "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5rZldIQnpJYmpNX3hMVnVDRXJwNG9ZRGU1T1pCUTdfLUZhUlFKSDdaNDRBMDVRSVplLWZQSVNzVl9PUnhmQUU4VA?oc=5",
+          "published_at": "Tue, 17 Nov 2026 03:46:29 GMT",
+          "source_url": "https://fx.minkabu.jp"
+        },
+        {
+          "title": "外為：スイスフラン、189円61銭前後とフラン安・円高で推移 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5WV2JiUHVtOEdMOTJVeWZHbm5SY1FSMk1kN3gwMXREVldYM1VydzJOUTdjQVJVMkVGNDVoT3lvMHVLdnNnNG84WWVIU0E5T21NZXc?oc=5",
+          "published_at": "Tue, 17 Nov 2026 04:31:05 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "日銀・高田委員、利上げの累積効果発生「タイミングはまだ先」 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5sa2I2M204U3hoMVdKajJRVk9lUGZ2aU9jdWtEQk92eGp5a1NwTUhWVGxHaEZwbGw0eW9Oc3BxUkVvTTg3T0pnUTZ4WnNwc0hxX1Z5REZJVlI5ZV9TNWp4VF9KTElPVkwwU1Vfag?oc=5",
+          "published_at": "Mon, 16 Nov 2026 09:02:18 GMT",
+          "source_url": "https://www.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.08834504511277949,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 0.6357263683475254,
+        "oil_pressure": -0.06505453501848224,
+        "japan_risk": 0.06989994347979911,
+        "usd_rate_pressure": 0.26742347645649156
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

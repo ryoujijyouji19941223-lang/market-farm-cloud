@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-17T14:02:09.734873+09:00",
+  "prediction_date": "2026-11-17",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-17T14:02:09.734873+09:00",
+  "market_data_through": "2026-11-17",
+  "reference_price": 159.1909942626953,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.07106799861118078,
+      "factor_agreement": 1.0,
+      "reason": "news_unavailable"
+    },
+    "direction_score": 0.5390079684710974,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.09296888516675557,
+      "direction": "UP",
+      "day_change": -0.0036863469839873986,
+      "momentum5": 0.007646345117154674,
+      "trend": 0.00783159404504885,
+      "volatility": 0.06264586080854011
+    },
+    "news": {
+      "score": null,
+      "status": "ERROR",
+      "error": "429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=%E3%83%89%E3%83%AB%E5%86%86%20OR%20USDJPY%20OR%20FRB%20OR%20%E6%97%A5%E9%8A%80&hl=ja&gl=JP&ceid=JP:ja",
+      "direction": "UNKNOWN",
+      "headlines": []
+    },
+    "outside_wind": {
+      "score": 0.05232771131857992,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 0.6357263683475254,
+        "oil_pressure": -0.06505453501848224,
+        "japan_risk": 0.06989994347979911,
+        "usd_rate_pressure": 0.26742347645649156
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

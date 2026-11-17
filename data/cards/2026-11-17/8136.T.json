@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-17T14:02:09.734873+09:00",
+  "prediction_date": "2026-11-17",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-17T14:02:09.734873+09:00",
+  "market_data_through": "2026-11-17",
+  "reference_price": 1070.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.5410130394477833,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.2607123576801135,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.7419200097168275,
+      "direction": "DOWN",
+      "day_change": -0.03690369036903696,
+      "momentum5": -0.04973357015985791,
+      "trend": -0.09447531873161152,
+      "volatility": 0.3918747332913354
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "【サンリオ】キャラクターズ、“オーナメントチャーム” 発売！ 入手ゲット＆交換募集が加熱中 「キティさん当たった」！（LASISA） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1fSHRMeDd0dzYyQkRocTkzc010TE5VbnU3VkRzeVRFcmg4dmp3TnNnU2pPQkJOSGdNRXpHRDlzUlBwbVhEVEpmLTVsMGFtOEQ3SzdVYjdvS0Q5VC1wb2NhZGd6YnB0N1YxWVZrT01RYnItQnpPOThNdk42b0tmQUk?oc=5",
+          "published_at": "Mon, 16 Nov 2026 15:04:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "サンリオ株、「キティ」好調で最高益も失速 北米事業の停滞が影 - 日経ヴェリタス - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9RaDdZczFZVnA1ZEhzMnFrR2gzTXFDRFlHMTl2VDg4UXEtRHZ2Mm05SURpVDFwN3hvVWZMLVVqUi0wT1MzU191Qmh4emFvV1NhejRSYU5UaVQ4NF9iV3VQLWM4N1IyeTQzbElQdnhBRkk5MmtGR2VnRWNpUVFwQQ?oc=5",
+          "published_at": "Wed, 11 Nov 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "「サンリオキャラクターズ」をふわふわ生地で表現！ボールチェーン付きの「缶チャーム」全12種が12月7日発売 - インサイド",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBNcXlWbmFXeWdwLXB1akRQVDN5bWQ4cDcwblVPX3NfbE1LMzZ1ckRoNGE2NndDZjNkRF8wc1N4aFZ5a2Vndmp4UE1JOWxWOG5PTk5NRGRWTlhlN1dCdXlGNTNRRXRKbTIzemc?oc=5",
+          "published_at": "Tue, 17 Nov 2026 03:40:03 GMT",
+          "source_url": "https://www.inside-games.jp"
+        },
+        {
+          "title": "信用残ランキング【売り残増加】 サンリオ、ＪＴ、キオクシア - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1LRUZmc2lsYTZGdzlqeTFOSkZaTF82aFZRNjZLbHVNZURPRE1kR1BTa3lSMHVtRnMyNEQ5TVRlbVRWMUd0Vm9PVlpYZEpnVUUyQzA2aTlmYWFjS1B1WXRBdw?oc=5",
+          "published_at": "Sat, 14 Nov 2026 23:15:00 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "ローソンで発見！サンリオキャラクターズの新作「アクキー」が可愛い！《開封レビュー》 - ウレぴあ総研",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBNNkZuVFM2T09VSGdxUG5vTVdRQ01lVG1Sc3VZV3FaU2pSQlNua04yc1pCR1dCNUVGRldMWmhYNUVlWUgtbXVFU1lUQWNhRjlieUE?oc=5",
+          "published_at": "Sat, 14 Nov 2026 12:11:00 GMT",
+          "source_url": "https://ure.pia.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.10171621893560406,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6357263683475254,
+        "oil_pressure": -0.06505453501848224,
+        "japan_risk": 0.06989994347979911,
+        "usd_rate_pressure": 0.26742347645649156
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
