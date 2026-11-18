@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-18T13:10:26.296578+09:00",
+  "prediction_date": "2026-11-18",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-18T13:10:26.296578+09:00",
+  "market_data_through": "2026-11-18",
+  "reference_price": 159.36500549316406,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.08173137986882131,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5448315355197493,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.08546632782939032,
+      "direction": "UP",
+      "day_change": -0.0009903870094587486,
+      "momentum5": 0.004158682174440598,
+      "trend": 0.008630076501129125,
+      "volatility": 0.06113009249204243
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "米ドル/円【USDJPY】：外国為替相場FXレート・チャートをリアルタイム表示 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzbWxqc1ltSU1ndEE0VElnZldUTGdyRVJpOTdKeXBsc0RDSm40dm9kLTJqaDZlOVpoR2E5eEZIX1o0bFR1SFR2N2k4WjRiTnN5dHVBTHJn?oc=5",
+          "published_at": "Wed, 18 Nov 2026 00:30:34 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "経済・物価・金融情勢に応じ政策金利上げ、緩和度合い調整が適切＝日銀総裁 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZk1UWjlOWF81bDFWX0xWMEViUlN5c2FjbE96YzJ1ZGI1WWUzSEpqRlRHa0MzU1dYcDFYcHVGWFRSS2NiYjNLRFFLa3o4QS1lTmRJSmRFSG9TQzFXX0RyTHhCams5dmVnUzVMMjBWd2NPQldOMjFVMTVpMERDekFZU25uODVlQlVQd0trR1A2V1g?oc=5",
+          "published_at": "Wed, 18 Nov 2026 02:13:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜AI株安一服なら160円を目指すか」 外為どっとコム トゥデイ 2026年11月18日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5KMmNfdkNEa2YxTlZfOGY1SEQ5MDRVV3NielZjTFFqYXhvb3dlcEVaZ05CT3JNaXMzQzEtU29meHRJQWhPdUZvUnBOeW5QbGVsaE40cklodDZHVFdwRjVXc3RIaw?oc=5",
+          "published_at": "Wed, 18 Nov 2026 00:00:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "通貨オプション ボラティリティー ドル円1週間6％前後 - みんかぶ FX/為替",
+          "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9uWlFIVFNKS0JDaG1XbWV5dzJoMWZPcjl0RFpkM05EOUNoNGdsX3RoQzBYR3hFam5kOUlsVHRfOFZ0ZTJyY3AyZA?oc=5",
+          "published_at": "Wed, 18 Nov 2026 02:00:51 GMT",
+          "source_url": "https://fx.minkabu.jp"
+        },
+        {
+          "title": "ドル円予想レンジ158.70～160.10円 注目通貨は南アフリカ ランド（11/18） - 日経CNBC online",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE41UVNZNjVkemhlSnVzT2RGTng1Z1pmRUptY05MSWd3TmxocjVDNmtITUZfSHA4bk9MVEZWdWVsWUVUTE5OaEJ2Q0dVLXNjSU1EanhuOA?oc=5",
+          "published_at": "Wed, 18 Nov 2026 01:22:51 GMT",
+          "source_url": "https://online.nikkei-cnbc.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.01576184629890594,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.09938756760474232,
+        "japan_risk": 0.10820032272426672,
+        "usd_rate_pressure": 0.11682092299718261
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

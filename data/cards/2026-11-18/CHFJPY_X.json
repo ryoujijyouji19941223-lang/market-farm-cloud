@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-18T13:10:26.296578+09:00",
+  "prediction_date": "2026-11-18",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-18T13:10:26.296578+09:00",
+  "market_data_through": "2026-11-18",
+  "reference_price": 189.55599975585938,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.19665549530943904,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.53409769858805,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.0989436062234087,
+      "direction": "DOWN",
+      "day_change": -0.0017619592775026671,
+      "momentum5": -0.014438463006163915,
+      "trend": -0.005189318091406658,
+      "volatility": 0.05513256141623672
+    },
+    "news": {
+      "score": 0.625,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "経済・物価・金融情勢に応じ政策金利上げ、緩和度合い調整が適切＝日銀総裁 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZk1UWjlOWF81bDFWX0xWMEViUlN5c2FjbE96YzJ1ZGI1WWUzSEpqRlRHa0MzU1dYcDFYcHVGWFRSS2NiYjNLRFFLa3o4QS1lTmRJSmRFSG9TQzFXX0RyTHhCams5dmVnUzVMMjBWd2NPQldOMjFVMTVpMERDekFZU25uODVlQlVQd0trR1A2V1g?oc=5",
+          "published_at": "Wed, 18 Nov 2026 02:13:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "植田日銀総裁 機動的オペは市場機能に深刻な問題が発生した場合に判断 - みんかぶ FX/為替",
+          "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9RQTg0bEJMQ1dIb2w3NTVKNkt2NVdVaWxfUjhUSnhBVXJsdkR0S19ZaXl2SUZZQmJNamREbzlVUWlvTDZuX2xOWg?oc=5",
+          "published_at": "Wed, 18 Nov 2026 01:22:50 GMT",
+          "source_url": "https://fx.minkabu.jp"
+        },
+        {
+          "title": "日銀法改正の「理の人」 稲葉延雄さんを悼む - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1oNXIyenFmZjVjaWR1SEFkTzZEbk8yZWpHU0hqQXdfQUxCYnJJSVg3cUp6RWhVaWlfVEtOSzdJN0oxdjBMUEJENHRFNU9wd2xLbU1HMVNfZ1VMcnZSY281UEFfRFZidkJ3eW56Wg?oc=5",
+          "published_at": "Wed, 18 Nov 2026 02:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "外為：スイスフラン、189円74銭前後と小幅なフラン高・円安で推移(株探ニュース) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNa3NYYzZ4QlAwaXhFY1hKYWhnUlFuTXZWOGJBLWpSNGtzQ29yUHlzcFYzNzd0ZVlJZWE3cjFhNmcyd1NLbGw0d1lFaGJwblFBQzhwdXAwWjVJTDJuWVc0NGF6RkpLWmZFejNxdlNsTGI3bEFzazVnSGo0QmVVODIzMEJzMVFDN1U?oc=5",
+          "published_at": "Wed, 18 Nov 2026 01:31:48 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "FX実践解説、リスク回避強まる「日銀利上げは可能か？」（2026年11月17日） - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wcUxVUzNHQ2NLWUZYbnFJUTJGbGE1TmdxX0gxSEFTZjhqX1dESy1qbGJKODBVS2l3SVN5T2Jwb1RpU0Vkd2gwcE5xZHdLM3ZtUU94TWFxZ0cwd3ByMVowTDFGdw?oc=5",
+          "published_at": "Tue, 17 Nov 2026 11:00:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.15415895385014086,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.09938756760474232,
+        "japan_risk": 0.10820032272426672,
+        "usd_rate_pressure": 0.11682092299718261
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

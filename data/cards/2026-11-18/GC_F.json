@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-18T13:10:26.296578+09:00",
+  "prediction_date": "2026-11-18",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-18T13:10:26.296578+09:00",
+  "market_data_through": "2026-11-18",
+  "reference_price": 3788.39990234375,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.3934887949787106,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.38641737007839777,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.44440005053184034,
+      "direction": "DOWN",
+      "day_change": -0.019615974790625823,
+      "momentum5": -0.053018397114423244,
+      "trend": -0.03320335172140165,
+      "volatility": 0.2596848463295152
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "長期金利「3.115％」はピークだったのか？国債暴落“4つの背景”と27年の金利再上昇リスク - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE15YVI1bUNhR3lTT0tTR0NtUUljaExfN2xsX3ZjNWZldHE4dldkRktDY1E4RkVHQy1RUnhmUTdSLXE2SzJIM09EWVdJTHI?oc=5",
+          "published_at": "Tue, 17 Nov 2026 19:30:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "信用金庫の預金金利、銀行と「格差」急拡大 利払い重く8割が追いつけず - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9nVTdyV3MwSUNBRkszdFJqYUlPakxsU25SR1R4dTZxU2F0WHMxUmgyZVUtYVQ1bUZZanhpU1Rqa21wLWxyaXNRalJLenRQVmxaVHJnNzIxMUNFbkt2NFE1RkNLbHJTajROaE9zeA?oc=5",
+          "published_at": "Tue, 17 Nov 2026 09:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "経済・物価・金融情勢に応じ政策金利上げ、緩和度合い調整が適切＝日銀総裁 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZk1UWjlOWF81bDFWX0xWMEViUlN5c2FjbE96YzJ1ZGI1WWUzSEpqRlRHa0MzU1dYcDFYcHVGWFRSS2NiYjNLRFFLa3o4QS1lTmRJSmRFSG9TQzFXX0RyTHhCams5dmVnUzVMMjBWd2NPQldOMjFVMTVpMERDekFZU25uODVlQlVQd0trR1A2V1g?oc=5",
+          "published_at": "Wed, 18 Nov 2026 02:13:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "国内債券は「買い時」か？ 長期金利3％時代、ファンドマネジャーに聞く債券投資の魅力と活用法（ウエルスアドバイザー） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE13QUI1c213VTJVZURCVUpLVkRtZFpnU1BUZ0tqS2RRM1R5T3JnZ3ktbzctUWtMU1BTLWZmOHhsdkc5QjBtcWpfWlZocUd6aVJscmc2RXlKTVFlN0pvbUVSdFRTR1UydnN0Y1J3dzF1TXFBeTRqcWRPb01XT3dZWUE?oc=5",
+          "published_at": "Wed, 18 Nov 2026 01:30:02 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "金価格が3,800ドル割れ、14カ月ぶり安値 FRBのタカ派シグナルが強気派を圧迫 - BigGo ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9ZNTZ3VjZpRU1DVWljS3BmN1g5MFJ0LUxDaHlNeUZjSXd5M3I1ak43Y1RnZ29uRVlkSXJwSDVId1N4ZGNnYlJqUG9hTFoyMl9DLVY1M1hJLUFLZDdHUjA4V3ZQMlo3bXhkU1NVd09tTjFUU3Vj?oc=5",
+          "published_at": "Wed, 18 Nov 2026 02:55:00 GMT",
+          "source_url": "https://finance.biggo.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.18364507078039444,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.09938756760474232,
+        "japan_risk": 0.10820032272426672,
+        "usd_rate_pressure": 0.11682092299718261
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

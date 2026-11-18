@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-18T13:10:26.296578+09:00",
+  "prediction_date": "2026-11-18",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-18T13:10:26.296578+09:00",
+  "market_data_through": "2026-11-18",
+  "reference_price": 117.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.7639515981039846,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.18918633733932128,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.42438562872058994,
+    "direction": "DOWN",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5510204081632653,
+    "heldout_signals": 49
+  },
+  "evidence": {
+    "price": {
+      "score": -0.9631641148588008,
+      "direction": "DOWN",
+      "day_change": -0.01680672268907568,
+      "momentum5": -0.20408163265306123,
+      "trend": -0.14644920149507312,
+      "volatility": 0.6331542322035573
+    },
+    "news": {
+      "score": -0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "DOWN",
+      "headlines": [
+        {
+          "title": "ＫＬａｂ(株)【3656】：決算情報 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5xaTRnUTdHaExCNFlpa3o4SllrY1lyNXJXT2FLajB3VGpZWHgtdl9MYUlrVFl6cjJ1QnBQQ3NleXlUVnhwWkxKQXY1VFVfWE5HSUlkdFNkNmhrUU5pZTc5TA?oc=5",
+          "published_at": "Thu, 12 Nov 2026 06:30:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "ＫＬａｂ[3656]：KLab、ドローン技術企業トラジェクトリーと業務提携 2026年11月12日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9NR1U3Y1pUX1Z4YmhRdURQbnNVMXFqbnljN3VSaWxKT3FqZFlWU1ljUmhwMVdUXzdVdk5kTk04MjU0cFBjODBsLXN4NUN5QW8wLWtlZUlfWTRLTXV6bVF4VGw1ZlByMExybmc?oc=5",
+          "published_at": "Thu, 12 Nov 2026 06:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "KLab、在UAE日本国大使館主催の自衛隊記念日レセプションにてドローン関連技術を紹介 - ASCII.jp",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE0taGt1QndOZjJ0TW8zcjI4TXM5T3BWekVKVFdIekxoUDVFa0JzYjlENDNBbHY5MFBsbmI1c18tckZ1U3dscHd4WkZWUzFrN01WMlpNdQ?oc=5",
+          "published_at": "Tue, 17 Nov 2026 04:22:44 GMT",
+          "source_url": "https://ascii.jp"
+        },
+        {
+          "title": "KLab、3Q(1～9月)決算は売上高72％増、1億3500万円の営業赤字を計上 新作『スマグロ』『ヒロサバ』の貢献で大幅増収に 通期予想を下方修正 - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBtOFk5UEl5U0lCYjUzM25DSHVOY3kzMGFUS24yR1dIYW15YWsyZTRKdmtsSHVlT2hJRkoxbmpzdnAybUYw?oc=5",
+          "published_at": "Thu, 12 Nov 2026 06:40:00 GMT",
+          "source_url": "https://gamebiz.jp"
+        },
+        {
+          "title": "KLab HOMMA Middle Eastが グローバルに活躍する空間デザイナー秋葉達雄氏(株式会社T&C JAPAN)とのパートナーシップを発表 〜建築、デジタル、LED技術が融合するコンセプト動画を公開〜 - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5nMEZUTFhPT1hXdmZCdnZNMEVmZnh5N3JiM2NPTXBjNzBrM1dwWWhkTVN3WC1aSTJXU2I5YjVkMjg1S3pUZnItR1lsc2VfdVd3VHRFQVg3V0VlMi11NmM3NllXZ2s?oc=5",
+          "published_at": "Wed, 19 Aug 2026 07:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.09938756760474232,
+        "japan_risk": 0.10820032272426672,
+        "usd_rate_pressure": 0.11682092299718261
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

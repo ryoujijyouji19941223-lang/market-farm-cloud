@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-18T13:10:26.296578+09:00",
+  "prediction_date": "2026-11-18",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-18T13:10:26.296578+09:00",
+  "market_data_through": "2026-11-18",
+  "reference_price": 8045.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.7116435639153784,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.26465558383798615,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.979990535169674,
+      "direction": "DOWN",
+      "day_change": 0.009917147878483634,
+      "momentum5": -0.15943997492425033,
+      "trend": -0.207445133808686,
+      "volatility": 1.123778587163892
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "話題株先取り【特別気配】速報 ＜買いトップ キオクシア、売りトップ データセク＞ - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBuZHFwLXdVV1JGdXVDeWNpYUtiWWMzclpzVld3ZFhhMEMxX1FXYnl0dDFCcWMxX0ZJRjllVDA2YnNnTGI1eEJHNGVPYWppcGZhTjRkN2FrYzEzc1NhVm5MMA?oc=5",
+          "published_at": "Wed, 18 Nov 2026 00:03:22 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "キオクシア株価が7カ月ぶり安値 NVIDIA決算に警戒（17日の株式市場） - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE01NDVJcmF1aXhzTDQzNHVwSFV2ek5US2k2cG1sazdSUlVzTG1CWjlzTGtGYUowOUhhSFZ6WjJwdWhaMzMwcDAxV1J4Uk9WQXdubkZlNnhnNHJHOG9HaW1xYTlkWl9iSnJzV1EyZg?oc=5",
+          "published_at": "Tue, 17 Nov 2026 07:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "最高益続くキオクシア…NANDにAI特需、磨く高速性能 - ニュースイッチ by 日刊工業新聞社",
+          "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE5WYUI1bFFFOXlRSlBfNkg1YXN1eThsTkNPa2trZHJ5VUhyeTY0cGdGcWF3WEQ2R1ZXMEZZaGVvd1c0Zw?oc=5",
+          "published_at": "Tue, 17 Nov 2026 07:02:00 GMT",
+          "source_url": "https://newswitch.jp"
+        },
+        {
+          "title": "話題株先取り【特別気配】速報 ＜買いトップ キオクシア、売りトップ データセク＞(株探ニュース) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQaGVQMVR6N1dLLVJKbEpVSGxnQVN4Zi16eF9tVWZXazVmaVJQWVBoanR5R2RyTnl2d2tfLWJ4N0ltUklXYUNERl9vNU1jSnNEZ09panhQNElzREdxZWRKdldWV2NxY3NsZUppN0xabFJBZE5uVXo4Nm9CS1NmTHNaM3RqWGdraUE?oc=5",
+          "published_at": "Wed, 18 Nov 2026 00:18:29 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "【ランキング】キオクシアは？日経平均急落から｢値戻し｣が大きかった14銘柄 - 四季報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9xRkNZUEZhaE5ETnJLaGxLUUl4TC1zQjhpX2plcHhZT0FEcGlrVDZaalhwWk9pcGRkZWx1VXlsOHRaNlltSWVoU0hPem1XWDJuRzBWZ0hPSQ?oc=5",
+          "published_at": "Mon, 16 Nov 2026 03:00:00 GMT",
+          "source_url": "https://shikiho.toyokeizai.net"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.09938756760474232,
+        "japan_risk": 0.10820032272426672,
+        "usd_rate_pressure": 0.11682092299718261
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

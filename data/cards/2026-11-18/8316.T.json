@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-18T13:10:26.296578+09:00",
+  "prediction_date": "2026-11-18",
+  "symbol": "8316.T",
+  "name": "三井住友FG",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-18T13:10:26.296578+09:00",
+  "market_data_through": "2026-11-18",
+  "reference_price": 3089.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.17112639548183164,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.41130777364459736,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.4169641182379522,
+    "direction": "DOWN",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5441176470588235,
+    "heldout_signals": 68
+  },
+  "evidence": {
+    "price": {
+      "score": -0.1806480605825255,
+      "direction": "DOWN",
+      "day_change": -0.015615041427660903,
+      "momentum5": -0.061664641555285504,
+      "trend": 0.008000754491582773,
+      "volatility": 0.38596947635781237
+    },
+    "news": {
+      "score": -0.14285714285714285,
+      "status": "OK",
+      "error": null,
+      "direction": "DOWN",
+      "headlines": [
+        {
+          "title": "11月17日のSumitomo Mitsui Financial Group Inc (SMFG) 値動きは3.14%下落：主な推進要因が明らかにされました - TradingKey",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeHlpOU9HMzFKYU93UjFXRTZCRFhhbEpCeXQzZDNSM3VDSlNzcFU0d09RYjFJM2dZRHVMcUV6QU56eVBUTm5yYnphb0RhZFpFSlNkXzVBTUw0eXU5QVpDRFBEYVlPcDJVNFQ1akFESV9pWlhhaEgzR3VycmxZbGpuZzgyR1laVnA1WGhGVkZySQ?oc=5",
+          "published_at": "Tue, 17 Nov 2026 15:17:35 GMT",
+          "source_url": "https://www.tradingkey.com"
+        },
+        {
+          "title": "(株)三井住友フィナンシャルグループ【8316】：決算情報 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA0TEN3UlZFQ1VXNllXT1hOMlBVTGp4RDNWR1JGZHZaN2tuS1c5dG0wZkZSSWtLSmt6RmRVR1JoS1FyY0tOXzhXOThjc25yZ2EybkMweURGeXJmaTczRlNKVQ?oc=5",
+          "published_at": "Fri, 13 Nov 2026 04:30:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "SMBCグループ、富士通、ソフトバンク、健康・医療分野での業務提携に合意し、持続可能な医療の実現に向けて国産ヘルスケア基盤を構築〜国民の健康寿命延伸と医療機関の経営効率化、国の医療費抑制に寄与〜 | 企業・IR | ソフトバンク - ソフトバンク",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9Xd1lzblUxbmh1OFNEd3Q2S2R0QS1oR0E5MHplb3FVeng2QVk3al80b25FTjF6cVQ1WmQ3ZDctbE5udFdPZHhTLXFIeDdBNi1NSFlLcktSa2hNNDhHZ0IwVWx4VjZnV0NwdUFxNkw2QQ?oc=5",
+          "published_at": "Tue, 19 May 2026 07:00:00 GMT",
+          "source_url": "https://www.softbank.jp"
+        },
+        {
+          "title": "【三井住友FG（8316）の株主優待】分割後、優待対象の株主になるにはいくら必要？優待の株数の条件は2027年9月から200株にVポイントはいつ届くのか（11月16日時点） - LIMO | くらしとお金の経済メディア",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBhUnk4VUwyWFBIc0dERVc0NV9wZ2ZTQjA4SE9YT0g2RmNucHFTV0JLd1lvR2xEOFZaSS1DQVVSb3FLSkN5MDE2Vnd1UHI?oc=5",
+          "published_at": "Mon, 16 Nov 2026 12:49:00 GMT",
+          "source_url": "https://limo.media"
+        },
+        {
+          "title": "SMBCグループの財務部門変革 - EY",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbFlGYm5aNW5YT2FDcXJkb1pXalMwSi1idFQ0Sl80NGhybzVHcllReUJiaG5uX2w3ekI4amEtNVlXX1QxOFZMX3ZHeDZ0NTNZd18yQzFMdXptSDVuRXAwOHROTkl6VGRudExBSnBMZF9OYnJOSUtMYUFNMVJBSmxXZ0VxT3hkcjNGZnU2NkhvaWxsdVF6WWlXOVhFaVM5N3JxaFVUMWFhMEh1MUgxaXc?oc=5",
+          "published_at": "Mon, 29 Jun 2026 07:00:00 GMT",
+          "source_url": "https://www.ey.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.09938756760474232,
+        "japan_risk": 0.10820032272426672,
+        "usd_rate_pressure": 0.11682092299718261
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

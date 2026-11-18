@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-18T13:10:26.296578+09:00",
+  "prediction_date": "2026-11-18",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-18T13:10:26.296578+09:00",
+  "market_data_through": "2026-11-18",
+  "reference_price": 1052.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.58201799433752,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.24395517160143992,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.7893646975551765,
+      "direction": "DOWN",
+      "day_change": -0.00941619585687381,
+      "momentum5": -0.0719011910013233,
+      "trend": -0.09776738604150714,
+      "volatility": 0.38437535936370304
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "サンリオキャラクターズが水族館の人気者と戯れる。カプセルトイ「PUTITTO サンリオキャラクターズ 水族館1」が11月27日より順次発売（HOBBY Watch） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGSDVJVXZwam05ZHlNWHNyZWdTRkF1R2JWQzZSTkg1UE9jSVZqdXFrdVNiZ1RHZy1QSFpldlBuTF9meFJzc2RJSkdZaVNENGFMaHRTdWRmTV9RNTh5WkFEU1VKb3ZmUS1OU1R4MGVCT1RLZTl3VnhZbUhyZ0VjSGM?oc=5",
+          "published_at": "Wed, 18 Nov 2026 02:40:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "河本結が地元・松山市の子どもたちにサンリオグッズを寄贈へ 「いいプレーが多くの笑顔につながるように」 - ALBA Net",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9YWHRVS1VwVVhLdDVfVkJKemkwTUtMX012bnptbk1NTGRKNzk3WEZXNHhyckdKVFRHMlo3a2lDUGNxWGVXMXp4Ni1wNGQ1LWxhM3JBWjR0eVQ5OWhMdzg4dmhmWlVKUGlMTGdVVmF1aklGRzJSUmt3?oc=5",
+          "published_at": "Wed, 18 Nov 2026 03:04:30 GMT",
+          "source_url": "https://www.alba.co.jp"
+        },
+        {
+          "title": "信用残ランキング【売り残増加】 サンリオ、ＪＴ、キオクシア - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9CQm9FQlpIaXotYVk2TXR6Vm9ra3RDUEt3YXRDYVhmbHYyc2lRWWQ3MVpjVlM3OERSbzFZNXZZcG8waUsxMm5BRk1lZTF0SENxMXc?oc=5",
+          "published_at": "Sat, 14 Nov 2026 23:15:00 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "ファミマで発見！サンリオ「チャーム」がかわいい【新作食玩】4個開封レビュー（※シークレットネタバレあり） - ウレぴあ総研",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9STWUzWHFSYk5PRGJtMldWbU9rTWQ0U2lLYjJDbTZIaC11eWc4REYybGkwQ0RlWnplRTJ0VTkyQU0wNHVlV2JpVzBDRHhsT3RyWWc?oc=5",
+          "published_at": "Tue, 17 Nov 2026 12:21:00 GMT",
+          "source_url": "https://ure.pia.co.jp"
+        },
+        {
+          "title": "サンリオ株、「キティ」好調で最高益も失速 北米事業の停滞が影 - 日経ヴェリタス - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9RaDdZczFZVnA1ZEhzMnFrR2gzTXFDRFlHMTl2VDg4UXEtRHZ2Mm05SURpVDFwN3hvVWZMLVVqUi0wT1MzU191Qmh4emFvV1NhejRSYU5UaVQ4NF9iV3VQLWM4N1IyeTQzbElQdnhBRkk5MmtGR2VnRWNpUVFwQQ?oc=5",
+          "published_at": "Wed, 11 Nov 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.09938756760474232,
+        "japan_risk": 0.10820032272426672,
+        "usd_rate_pressure": 0.11682092299718261
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
