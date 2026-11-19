@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-19T13:05:56.778312+09:00",
+  "prediction_date": "2026-11-19",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-19T13:05:56.778312+09:00",
+  "market_data_through": "2026-11-19",
+  "reference_price": 1071.5,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.5626230555974618,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.2705221888504521,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.7295927288197968,
+      "direction": "DOWN",
+      "day_change": 0.027817745803357274,
+      "momentum5": -0.039874551971326166,
+      "trend": -0.09604472455453417,
+      "volatility": 0.40987148162144443
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "「VICKS」×「サンリオキャラクターズ」 コラボ実現 - 大正製薬",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5tZjFmNUZ0Zl9BcW9EUE4tSEIweG9pb3MtQnZZaWMxTGs0cml4REQ0TVdkc00zaUNWY003VC16SUlvWklOOEtidDJFaTVHWnlBTkluUkJhTVdsUkRfck9TS2lwdk9HRkVseUE?oc=5",
+          "published_at": "Tue, 17 Nov 2026 02:01:38 GMT",
+          "source_url": "https://www.taisho.co.jp"
+        },
+        {
+          "title": "「サンリオキャラクターズ」のブックカバーコレクション！アンティーク調のデザインが美しい文具雑貨シリーズが登場 - Digital PR Platform",
+          "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1lUzhCdFFXdDRoc09QNk9Udk1COXM5SmxGX3VhbXFPVFdFakIzaGZINHR5bThRQVVNVktzYzhtV0l0ZjA?oc=5",
+          "published_at": "Thu, 19 Nov 2026 01:46:12 GMT",
+          "source_url": "https://digitalpr.jp"
+        },
+        {
+          "title": "「サンリオ」カプセルトイが登場！ キティ×イルカ、キキララ×エイ、ポチャッコ×カワウソ…水族館の人気者と戯れる♪ - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9XckZkczFVN1NqbXVaS0dJY1ZvZ0Y5Z0ZVcEhjUjJaYWZQZkprSHBLV25zS2xvN003TWt1MFFVWkJReklrTjRfbHRuVF8wLXpzaHFvcklucWFZNGJVNWlBejBCYjBzc3ZyOFM1VjlFR2RKVDVpRDFRa3VhRGNkQzA?oc=5",
+          "published_at": "Wed, 18 Nov 2026 08:00:04 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "ランナーまでかわいいプラモデル「SNAP SCENE」シリーズに新作が登場！「サンリオキャラクターズ」より、ハローキティ、クロミ、マイメロディ、シナモロールがラインナップ！ - 電撃ホビーウェブ",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9fX0IwV3JOQ2tVN0J5QlVWdGZESnQyR1g0Q1dXNHBmcGo5WnZ1Qzc4aUN2Y0k1eS1wdUptUDh6T1NFQUlpTlJEbzJwZC0xWFNm?oc=5",
+          "published_at": "Thu, 19 Nov 2026 01:29:25 GMT",
+          "source_url": "https://hobby.dengeki.com"
+        },
+        {
+          "title": "相葉雅紀司会「FNS歌謡祭」ラウール「YUME」披露決定♪ サンリオキャラ×“カワイイ選抜メンバー”も - 推し楽",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5wTVQ5X0txelREbDNTeEx3dlBzcDVONEdoNTktRkZNZ3VEcGc1MTJZU1B6ZWNWeXJWU1lrMHFJZ2lfT0FmdXpmMWZzQ0pFTUJPTmlULXgzNnR5bGNfbWE4ZDVSRlVCT0s5Z1FIejRPMkNRLTA?oc=5",
+          "published_at": "Wed, 18 Nov 2026 21:00:00 GMT",
+          "source_url": "https://fan.books.rakuten.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.2600254283764458,
+        "japan_risk": 0.07535840638735758,
+        "usd_rate_pressure": 0.08500163893361257
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

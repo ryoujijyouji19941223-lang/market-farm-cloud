@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-19T13:05:56.778312+09:00",
+  "prediction_date": "2026-11-19",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-19T13:05:56.778312+09:00",
+  "market_data_through": "2026-11-19",
+  "reference_price": 9261.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.434519904165133,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.6857753859812497,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.6037057414193131,
+      "direction": "UP",
+      "day_change": 0.028771384136858424,
+      "momentum5": 0.08151348826345917,
+      "trend": 0.046612962498469024,
+      "volatility": 0.4848687103388492
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "Nintendo Switch 2『スプラトゥーン レイダース』の体験版を配信中。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOOXdCZFQxYTZLajBBRk9SQUxQSUozR0JxM0lqbUs1Skg5SnR3RE9aQ2RkbjJ0aC1BQ2JSaHpXa3ZSUUttSjFFbjdvME5RTDVKWWtNV3phQTJ0VjBvVlNUNVpvNmQxbHd5RG5ja2lLelh6VGVCN1ROcmxNRE1xLWEzWERzRW5UZw?oc=5",
+          "published_at": "Tue, 17 Nov 2026 03:16:05 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "Nintendo Switch 2 / Nintendo Switchの本体機能をバージョンアップ。新しい機能をご紹介します。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOOTJvT1NwaGhqQTZXNUxyRTFSdjB2WUFIZ1NleElObFVLcVNyUFZtQjBXaFVCOFc1Zk4wQVpzVF9ycGg0dHpoNm1hMlF5bUszUmhiNF9IYWw3ZEcxaXV6NmlRM0dhUTRDZXEzTXVKZms0ZmpQeld4NHFPSE5lRUNqcWQwX3BlQQ?oc=5",
+          "published_at": "Tue, 10 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "ゼルダの伝説 時のオカリナ：目黒蓮さんのプレイ映像公開中 | Nintendo Switch 2 | 任天堂 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9NSTVHSFNTQXotU2NxMUJKVUtHeV9PUTdTVWdGTVk4OFVaR2lDOHdWN3lRXzd0OGdYdmtvYlBRWVppX0tzSGNJNlNSS013SE9taEdFTW52Ni1Ld2JxbFJPOEZCMElNalJDMnBYbVNFLWtwNGpK?oc=5",
+          "published_at": "Thu, 29 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『Minecraft』が、より鮮やかなグラフィックにアップデートしてNintendo Switch 2 に登場。本日より発売開始。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOSmdSZDB2dDMzU2VxbG9sY3V2SElxQ2Rnby1TSGFxeEpEeDAyNXVnVTlzaFMtODlpTkpKbEtuYjFtYjloZWRvOGFla3hBWktwT21zYkVJZHh2X1hBZjlReTJIWGF0X0t6ZVRNMExoWTJVLV9tNGV2ZEVBV0xMWVNDR0ZIbGUyZw?oc=5",
+          "published_at": "Wed, 28 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "3本のソフトからお好きな1本を選択してダウンロードできるお得な「Nintendo Switch 2（日本語・国内専用） 選べるソフトセット」が登場。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSnhiVFcyUXVfNDdlVXZ4RTdna2hqbEttc2tpaEdEUi1vNElGSm41UHoxa1dlYzNPc3RocDh3UWJ0eEdGUTVDNEZEMnNmakZ1UjgzZy1BeWtBWUoxeDZJcTVqcHVwT24tNlVQbjF2RmFQTnFDSTNlQ1hLcW1xVVJLNVZCcGZvQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.2600254283764458,
+        "japan_risk": 0.07535840638735758,
+        "usd_rate_pressure": 0.08500163893361257
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

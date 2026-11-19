@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-19T13:05:56.778312+09:00",
+  "prediction_date": "2026-11-19",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-19T13:05:56.778312+09:00",
+  "market_data_through": "2026-11-19",
+  "reference_price": 118.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6725234241091188,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.21592253946860523,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.42389459523593087,
+    "direction": "DOWN",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5510204081632653,
+    "heldout_signals": 49
+  },
+  "evidence": {
+    "price": {
+      "score": -0.9537109178075275,
+      "direction": "DOWN",
+      "day_change": -0.01666666666666672,
+      "momentum5": -0.15714285714285714,
+      "trend": -0.15533980582524265,
+      "volatility": 0.6168359565634439
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "KLab、ドローン技術企業トラジェクトリーと業務提携 ― 日本政府機関へのカウンタードローンシステムの納入実績を有する先端技術企業と協業 ― - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5DaXdhRER4ZS03S3hYUzJKdll3a3J5X3Z6dGxGNGRhWkswX1JiY0REd0k2RXJPa3hQdmFkQ29fVTlkSXhtS2xOSXNmOWt4RTljaFJDd2VkVkZ6NVhOeG83aHpKMVg?oc=5",
+          "published_at": "Thu, 12 Nov 2026 06:59:44 GMT",
+          "source_url": "https://www.klab.com"
+        },
+        {
+          "title": "ＫＬａｂ[3656]：KLab、ドローン技術企業トラジェクトリーと業務提携 2026年11月12日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9NR1U3Y1pUX1Z4YmhRdURQbnNVMXFqbnljN3VSaWxKT3FqZFlWU1ljUmhwMVdUXzdVdk5kTk04MjU0cFBjODBsLXN4NUN5QW8wLWtlZUlfWTRLTXV6bVF4VGw1ZlByMExybmc?oc=5",
+          "published_at": "Thu, 12 Nov 2026 06:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "【ゲームエンタメ株概況(11/13)】アカツキとハピネットが高値更新 「SAKAMOTO DAYS」の大ヒットで好決算のエイベックスは大幅続伸 業績予想減額のKLabは大幅続落 - gamebiz【ゲームビズ】",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE5LMGdOaWoybW5UdWluYWdoOFA5ZkhoUnlGYnA5MzNZNjlyWW1CeGEyZngtUTF6NzJ0N0I1ZTMzWUViVF9Q?oc=5",
+          "published_at": "Fri, 13 Nov 2026 07:34:00 GMT",
+          "source_url": "https://gamebiz.jp"
+        },
+        {
+          "title": "KLab（3656）、IP／エンターテインメント・AI・ブロックチェーンの多角化経営を推進 AI自動取引システムは実運用間近 - ログミーFinance",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5WSFJEczFlMWo4WTVUOVVKdzVfajlDZndkTWU2amlMaG1QcnNFME12R0NBZmtLY3J4ZG14Z2JsNFR6NTZESmxUdjhfTTZmRjN6c0E?oc=5",
+          "published_at": "Tue, 16 Jun 2026 07:00:00 GMT",
+          "source_url": "https://finance.logmi.jp"
+        },
+        {
+          "title": "KLab HOMMA Middle Eastが グローバルに活躍する空間デザイナー秋葉達雄氏(株式会社T&C JAPAN)とのパートナーシップを発表 〜建築、デジタル、LED技術が融合するコンセプト動画を公開〜 - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5nMEZUTFhPT1hXdmZCdnZNMEVmZnh5N3JiM2NPTXBjNzBrM1dwWWhkTVN3WC1aSTJXU2I5YjVkMjg1S3pUZnItR1lsc2VfdVd3VHRFQVg3V0VlMi11NmM3NllXZ2s?oc=5",
+          "published_at": "Wed, 19 Aug 2026 07:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.2600254283764458,
+        "japan_risk": 0.07535840638735758,
+        "usd_rate_pressure": 0.08500163893361257
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

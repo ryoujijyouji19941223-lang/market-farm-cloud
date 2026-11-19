@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-19T13:05:56.778312+09:00",
+  "prediction_date": "2026-11-19",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-19T13:05:56.778312+09:00",
+  "market_data_through": "2026-11-19",
+  "reference_price": 189.0780029296875,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.2522769179628915,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.550399687794049,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.11788886802190231,
+      "direction": "DOWN",
+      "day_change": -0.0025915168632117958,
+      "momentum5": -0.014767182854296457,
+      "trend": -0.007421358463150507,
+      "volatility": 0.05532269180576717
+    },
+    "news": {
+      "score": 0.875,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "植田日銀総裁 為替変動が物価に影響を及ぼしやすくなっていることに留意 - みんかぶ FX/為替",
+          "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBUeURiVzA2dnZjaTV3YWQ0UEwxUFp4a1g3SmJVWXBraGRBMTY0UEZNUUQ0a2daOV9kZFlWODNDSTdHMEpzSG5nRQ?oc=5",
+          "published_at": "Thu, 19 Nov 2026 01:46:51 GMT",
+          "source_url": "https://fx.minkabu.jp"
+        },
+        {
+          "title": "緩和的な金融環境は維持、経済活動サポートされている＝利上げ影響で日銀総裁 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOSWdCN3J3ZjE4b2xLaFdiQkVwWDNWb1FQWnE5YmNWQVlHcFRMZjRmVFRvb0tpdHg1R0dkd0N2clJLa2V1ZVMzVFQ1NDlacUdWRzFSMkRoZ2dkNXJiV1prZXIwbDFOeE1TcEs5Y2hHT2xYYVVzTUFKeGpQLXN1V3liWHQ5SXZmMzM1VENRUWVpaGM?oc=5",
+          "published_at": "Thu, 19 Nov 2026 01:29:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "外為：スイスフラン、189円06銭前後とフラン安・円高で推移(株探ニュース) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdlZOWU90RGhrN2pZRUVHNVctc254NHE3dUYtR09LV05PbS1uWFZxWjJjU3BLc1c1YmF6N2hDaEZJWUhQZVp1U3dhNE5iU2ZZTFlVN3YwZW1QOGo4d1BYeHpoX1pST2M5RGt1c0V4Y1hyaFJ6Nlg1R1JJbGhJTnBlTzltMXhFZVk?oc=5",
+          "published_at": "Thu, 19 Nov 2026 01:31:51 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日銀・植田総裁、追加利上げを示唆 日本の金融環境はなお緩和的と発言 - BigGo ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5lT3drVzhZSFRMZ3lfejZSLV9TMXVLZWdMS3NENVR5RGhmR2NMWlFzVkRROHBQaVlMV21jYm83bHZFdVNOYjFEdlhQU3NqYWQtNHYtNXZaSHdkcTJJcFZRU01KSWpwYTh4N043Vk9TQkJwdjBV?oc=5",
+          "published_at": "Thu, 19 Nov 2026 02:05:00 GMT",
+          "source_url": "https://finance.biggo.jp"
+        },
+        {
+          "title": "家計のおカネは株式から国債へ 日銀の利上げの影響 - 第一ライフ資産運用経済研究所",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9saFM5THBWc3RjMERabGJSY0Y0Wm9nd1UzQkNSTzlGd0hSOW9renBZVW5seU1KQnFBZnR2V1NrS01XMTVmZ25NQlZDTk84bURMSTV6YldUVDJNMmc?oc=5",
+          "published_at": "Wed, 18 Nov 2026 04:53:38 GMT",
+          "source_url": "https://www.dlri.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.15574991805331936,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.2600254283764458,
+        "japan_risk": 0.07535840638735758,
+        "usd_rate_pressure": 0.08500163893361257
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-19T13:05:56.778312+09:00",
+  "prediction_date": "2026-11-19",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-19T13:05:56.778312+09:00",
+  "market_data_through": "2026-11-19",
+  "reference_price": 7992.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.7105197510502158,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.2635658357056317,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.9783378691914937,
+      "direction": "DOWN",
+      "day_change": -0.00411214953271033,
+      "momentum5": -0.14064516129032256,
+      "trend": -0.2118303380503891,
+      "volatility": 1.109541422041615
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "キオクシア株急落、投資した高校生も「忍耐力」学ぶ - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBhRUhfVlZnTEVhTzFRUjkwMnAzSnZ0T0s3M2oyRmhBVVplYUhXSkc5WEhYRVNab3FuVXRhams0cEN5R3kxaU9pazBwM0dQcC1YMExaV3N5VzZiYmlaTlhOV2ZQUDF0VGZ5VXo5SQ?oc=5",
+          "published_at": "Wed, 18 Nov 2026 17:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "サムスンより割安なキオクシア PER2.77倍が示す「当面の目安株価」 - 現代ビジネス",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9Tek5yUXp6V05HdmMtV1B0cm1kT0ZiS1RPRGltbjVBQUhIY3RkRVlDWEdIWEJSejc0STFJZU9sVlcwVXhlTHBITmRLZzc0bmM?oc=5",
+          "published_at": "Wed, 18 Nov 2026 20:01:48 GMT",
+          "source_url": "https://gendai.media"
+        },
+        {
+          "title": "株価急落で「追証」続出！ キオクシア株の事例に学ぶ信用取引のリスク（MONEY PLUS） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPZFppQTd4UUtaR08zY2FwMHdzNmxfVjRrY2ZqOEphdWlHcGhoTDlTT3JJRmZpS2liUlJfYmh4T2JURk1aMVFScjNiZ1BGMVFCZGxfejNxbnhkMklBYmpWQzZucVN1U0R4M2FoMU1XX082QkhBdlhqY3FXVkJqd21qSFRmY3MyenJ4?oc=5",
+          "published_at": "Wed, 18 Nov 2026 22:30:26 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "最高益続くキオクシア…NANDにAI特需、磨く高速性能 - ニュースイッチ by 日刊工業新聞社",
+          "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE5WYUI1bFFFOXlRSlBfNkg1YXN1eThsTkNPa2trZHJ5VUhyeTY0cGdGcWF3WEQ2R1ZXMEZZaGVvd1c0Zw?oc=5",
+          "published_at": "Tue, 17 Nov 2026 07:02:00 GMT",
+          "source_url": "https://newswitch.jp"
+        },
+        {
+          "title": "話題株先取り【特別気配】速報 ＜買いトップ キオクシア、売りトップ データセク＞ - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBuZHFwLXdVV1JGdXVDeWNpYUtiWWMzclpzVld3ZFhhMEMxX1FXYnl0dDFCcWMxX0ZJRjllVDA2YnNnTGI1eEJHNGVPYWppcGZhTjRkN2FrYzEzc1NhVm5MMA?oc=5",
+          "published_at": "Wed, 18 Nov 2026 00:03:22 GMT",
+          "source_url": "https://kabutan.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.2600254283764458,
+        "japan_risk": 0.07535840638735758,
+        "usd_rate_pressure": 0.08500163893361257
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

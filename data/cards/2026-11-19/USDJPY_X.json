@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-19T13:05:56.778312+09:00",
+  "prediction_date": "2026-11-19",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-19T13:05:56.778312+09:00",
+  "market_data_through": "2026-11-19",
+  "reference_price": 159.61700439453125,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.12833426185332583,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5689371175862347,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.062116080165424054,
+      "direction": "UP",
+      "day_change": 0.0007084875197713725,
+      "momentum5": -0.0007323997425758844,
+      "trend": 0.008140719288748821,
+      "volatility": 0.0607797625364184
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "アメリカ ドル / 日本 円【USDJPY=X】：為替レート・相場 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBQa1U5NTk2aS1xRjBZb0dxSzJocWtGel9GdVBUTEx4TVhJY0R1cHB1aGlFZnltb1dpQ3lYVmd2M09TUnMxXzV2cE1GR1kxbGhHWXNGUQ?oc=5",
+          "published_at": "Thu, 19 Nov 2026 02:37:16 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜利上げ期待でドル堅調 円は株価動向がカギ」 外為どっとコム トゥデイ 2026年11月19日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9vcmhVTWptY0VKWWJNaUdRaEVwaUJacGJYQlhYMTVKRDhJLThUY0dmOV9idmdqd0tOZjIzSHNmYndwd0ZXMVhQak9yNjhJWEw2WW5qREJfYzY1QkplbUlJa3JNOA?oc=5",
+          "published_at": "Wed, 18 Nov 2026 23:44:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "植田日銀総裁 為替変動が物価に影響を及ぼしやすくなっていることに留意 - みんかぶ FX/為替",
+          "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBUeURiVzA2dnZjaTV3YWQ0UEwxUFp4a1g3SmJVWXBraGRBMTY0UEZNUUQ0a2daOV9kZFlWODNDSTdHMEpzSG5nRQ?oc=5",
+          "published_at": "Thu, 19 Nov 2026 01:46:51 GMT",
+          "source_url": "https://fx.minkabu.jp"
+        },
+        {
+          "title": "FRBが10月会合の議事録公表 ほぼ全員が「追加利上げ適切」 - NHKニュース",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBXVlBlVnBGZ0xQeFN4eENhWVJndFJobnA0VHFDY2FDajJJUHpUaU1fR0dlZGprd0RMV2VYRzZvYzhBXy1zNkI3aW5fYjNacVZaalRHWlJia3NkdFo5Y1JF?oc=5",
+          "published_at": "Wed, 18 Nov 2026 23:36:40 GMT",
+          "source_url": "https://news.web.nhk"
+        },
+        {
+          "title": "緩和的な金融環境は維持、経済活動サポートされている＝利上げ影響で日銀総裁 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOSWdCN3J3ZjE4b2xLaFdiQkVwWDNWb1FQWnE5YmNWQVlHcFRMZjRmVFRvb0tpdHg1R0dkd0N2clJLa2V1ZVMzVFQ1NDlacUdWRzFSMkRoZ2dkNXJiV1prZXIwbDFOeE1TcEs5Y2hHT2xYYVVzTUFKeGpQLXN1V3liWHQ5SXZmMzM1VENRUWVpaGM?oc=5",
+          "published_at": "Thu, 19 Nov 2026 01:29:00 GMT",
+          "source_url": "https://www.reuters.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.007302182272249817,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.2600254283764458,
+        "japan_risk": 0.07535840638735758,
+        "usd_rate_pressure": 0.08500163893361257
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

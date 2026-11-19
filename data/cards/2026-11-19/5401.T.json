@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-19T13:05:56.778312+09:00",
+  "prediction_date": "2026-11-19",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-19T13:05:56.778312+09:00",
+  "market_data_through": "2026-11-19",
+  "reference_price": 689.7999877929688,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.12157589788696341,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.5403786192397259,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.14349396748082854,
+      "direction": "UP",
+      "day_change": -0.0010137758248098816,
+      "momentum5": -0.02100480883590894,
+      "trend": 0.028563802980534847,
+      "volatility": 0.1865565377478768
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "日本製鉄㈱山口製鉄所勤務 冨田 莉奈さん（31）｜今日のひとこと - 新周南新聞社",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE16RUdrMGJFVW82OE5BX3AtRktVS1R6OEYtcDhEOGVSTXJ5YzVCT0gtWC1rRnpuallWbk1XeXdrTHpQQTB0OWRDajhVN0dkTkMxVzhkSXhGTkdiQnRSX1VVdnVqOEI3TFU?oc=5",
+          "published_at": "Thu, 19 Nov 2026 03:43:58 GMT",
+          "source_url": "https://www.shinshunan.co.jp"
+        },
+        {
+          "title": "日本製鉄の30代前半、主査級の年収は？【1万件の口コミ情報データ】 | ダイヤモンド・口コミ情報 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFA1aWZXVEoyWmRBQnFHVEpnVUk5NDZEdEVzdGp0WXdqVlpncjc3QmVKSE1nUFpMSHNKeTR4bS1KVS1KcFYtNWNNNjVhQXk?oc=5",
+          "published_at": "Tue, 17 Nov 2026 20:30:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "【N高グループ投資部】初めての株主総会に参加 日本製鉄株式会社の魅力と学び - N高等学校",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE44SWhtak1vUXU3SWNQVWViVFA1U3cyX0VZS2JuMHRaY3ZreF92bzVERDJad2U2WWc2SGk3c19VUmdkRVVBUGdfczZBUQ?oc=5",
+          "published_at": "Tue, 17 Nov 2026 02:36:44 GMT",
+          "source_url": "https://nnn.ed.jp"
+        },
+        {
+          "title": "日本製鉄人事担当役員が求める新卒「骨太さとしなやかさ両立する人」 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9pb20xQlRXWmpBR00zLXJkNU5uYldzUWpfcXpIdFJmczB4bEFMOTFiRFdCeTlYZTBBd1RUWUNYMmlXT3dFYjdSVzVtcUZPRHRodS1ZdElBc21tcGtsb0lXaVpyOXZVZFNhc05LdA?oc=5",
+          "published_at": "Tue, 17 Nov 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "【経済学部】プロスポーツの現場で学ぶ ! 日本製鉄堺ブレイザーズのホームゲームで調査を実施 - 摂南大学",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5PWnBraDdhSkpqMnp1WDY1b0JvU2FaaThCMm9CTDFRaXlJdVdqNHFJR0lXWkIydnJmazBPNnVLTmFhcUN5QUNjblNYZXFyeDFINWJ2R2VB?oc=5",
+          "published_at": "Wed, 18 Nov 2026 04:32:40 GMT",
+          "source_url": "https://www.setsunan.ac.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.2600254283764458,
+        "japan_risk": 0.07535840638735758,
+        "usd_rate_pressure": 0.08500163893361257
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

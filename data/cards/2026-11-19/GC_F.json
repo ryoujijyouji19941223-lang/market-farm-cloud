@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-19T13:05:56.778312+09:00",
+  "prediction_date": "2026-11-19",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-19T13:05:56.778312+09:00",
+  "market_data_through": "2026-11-18",
+  "reference_price": 3720.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.44086865192485236,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.3637122422337778,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.5130936563859679,
+      "direction": "DOWN",
+      "day_change": -0.03731689689819084,
+      "momentum5": -0.07011623547056622,
+      "trend": -0.03580687109636205,
+      "volatility": 0.28021230271935454
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "高騰する長期金利が迫る大転換 企業経営や私たちの生活はどう変わるか - 日経BOOKプラス",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5TWjMzSXhjTG1leVBOYUZSczdqelpDOThoQWtzWVByLUprRXpINkRwZEp6Yk9sV2RqLUpxaWFuQjRyTjl4SXhhOXAweVJSVVRtdVpZZElhcHpuaURDcnV6SVlJRW5YZnRreldGNw?oc=5",
+          "published_at": "Wed, 18 Nov 2026 20:00:00 GMT",
+          "source_url": "https://bookplus.nikkei.com"
+        },
+        {
+          "title": "ニュースを読んで終わりにしない 出生数や政策金利の記事をデジタルマーケティングにつなげる60分（12/11無料・オンライン） - Digital PR Platform",
+          "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE0xaE9GRnFGVThKWE9yM3ZJNlpPNFlmUkRrOEt2NmJrRVh1ejdaZ19aOVBoY25uUWdnX3FSNWVOMnZyZlk?oc=5",
+          "published_at": "Thu, 19 Nov 2026 01:00:09 GMT",
+          "source_url": "https://digitalpr.jp"
+        },
+        {
+          "title": "長期金利「3.115％」はピークだったのか？国債暴落“4つの背景”と27年の金利再上昇リスク - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE15YVI1bUNhR3lTT0tTR0NtUUljaExfN2xsX3ZjNWZldHE4dldkRktDY1E4RkVHQy1RUnhmUTdSLXE2SzJIM09EWVdJTHI?oc=5",
+          "published_at": "Tue, 17 Nov 2026 19:30:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "楽天G社債の上乗せ金利拡大、情報漏洩で警戒－1500億円劣後債控える - Bloomberg",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE84S1NDTFM2WEY4WHRsd2NYaGNVaGVqRGZkUDM0bG9TQmlVdVZNNUJIaV96VTBFSnBNbTl5OW5lY2JZaWxPdmdSZW9oY0hON0VJaVk5ZWdyeE04OXNCWldOc3VlMjQ2ZGRES3JFV1N0RnBFMG9famln?oc=5",
+          "published_at": "Thu, 19 Nov 2026 02:36:00 GMT",
+          "source_url": "https://www.bloomberg.com"
+        },
+        {
+          "title": "国内債券は「買い時」か？ 長期金利3％時代、ファンドマネジャーに聞く債券投資の魅力と活用法（ウエルスアドバイザー） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE13QUI1c213VTJVZURCVUpLVkRtZFpnU1BUZ0tqS2RRM1R5T3JnZ3ktbzctUWtMU1BTLWZmOHhsdkc5QjBtcWpfWlZocUd6aVJscmc2RXlKTVFlN0pvbUVSdFRTR1UydnN0Y1J3dzF1TXFBeTRqcWRPb01XT3dZWUE?oc=5",
+          "published_at": "Wed, 18 Nov 2026 01:30:02 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.18809977054929425,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.2600254283764458,
+        "japan_risk": 0.07535840638735758,
+        "usd_rate_pressure": 0.08500163893361257
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-19T13:05:56.778312+09:00",
+  "prediction_date": "2026-11-19",
+  "symbol": "EURJPY=X",
+  "name": "ユーロ円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-19T13:05:56.778312+09:00",
+  "market_data_through": "2026-11-19",
+  "reference_price": 174.93299865722656,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.19234479487842837,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.5344059032849812,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.08203623868848484,
+      "direction": "DOWN",
+      "day_change": -0.0022927997333508365,
+      "momentum5": -0.012921621075472345,
+      "trend": -0.003816816775898957,
+      "volatility": 0.06304024844836366
+    },
+    "news": {
+      "score": 0.75,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "植田日銀総裁 為替変動が物価に影響を及ぼしやすくなっていることに留意 - みんかぶ FX/為替",
+          "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBUeURiVzA2dnZjaTV3YWQ0UEwxUFp4a1g3SmJVWXBraGRBMTY0UEZNUUQ0a2daOV9kZFlWODNDSTdHMEpzSG5nRQ?oc=5",
+          "published_at": "Thu, 19 Nov 2026 01:46:51 GMT",
+          "source_url": "https://fx.minkabu.jp"
+        },
+        {
+          "title": "緩和的な金融環境は維持、経済活動サポートされている＝利上げ影響で日銀総裁 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOSWdCN3J3ZjE4b2xLaFdiQkVwWDNWb1FQWnE5YmNWQVlHcFRMZjRmVFRvb0tpdHg1R0dkd0N2clJLa2V1ZVMzVFQ1NDlacUdWRzFSMkRoZ2dkNXJiV1prZXIwbDFOeE1TcEs5Y2hHT2xYYVVzTUFKeGpQLXN1V3liWHQ5SXZmMzM1VENRUWVpaGM?oc=5",
+          "published_at": "Thu, 19 Nov 2026 01:29:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "ドイツ政府、ECB専務理事に独出身者推薦 総裁はスペインのデコス氏優勢 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBSYUZ0bllIWmFrWmNCaGwzYVBweTJVeWNhcWVDQUFPSXFabXd6VEhiUGI4ZlJjUUZMVncwMFA0T1M0dllBc19GZjJmLTlXR01YVFFlZHF2ZDVTVlE0M1M5M1V3TjM1OTV0T2Zxdg?oc=5",
+          "published_at": "Wed, 18 Nov 2026 21:17:38 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "ECB副総裁、12月利上げの可能性高い－来年の追加利上げもあり得る - TBS NEWS DIG",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1rUGhVNnR6WnVLSVBTSkJhMnBacEVpcFY4dzBhUE9CckxQckx0NWZlTnBmcUlOMFlpRGRRX2V2S2N6ZmVocEtldnlONnFrcG5SRDItRjl5dmYzNFlnUTdYTDZsdDVxNk95czdpOVZia2JXWmNz?oc=5",
+          "published_at": "Wed, 18 Nov 2026 22:24:00 GMT",
+          "source_url": "https://newsdig.tbs.co.jp"
+        },
+        {
+          "title": "ＥＣＢが最低準備率引き上げ来週協議へ、利払い負担軽減狙う＝関係者（ロイター） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9GMlQ1cWlsTk5keGR3VU1hRmRETVh2NTh6SlNZcUZ5YW1rZ0QyNHNaU05hXzFFVVdSR3dLcXo2Nm5PR1BxOU1naW9xcXNLcm9EbDVHOFRsa1Bmc1RPRWQ3YjlMdWpIVm92QXQtUFNsb3JLdFRYN1l0N3lXWVdNTWM?oc=5",
+          "published_at": "Wed, 18 Nov 2026 23:03:40 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.060401017135057834,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.2600254283764458,
+        "japan_risk": 0.07535840638735758,
+        "usd_rate_pressure": 0.08500163893361257
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
