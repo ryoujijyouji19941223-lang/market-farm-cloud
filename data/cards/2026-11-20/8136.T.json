@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-20T12:56:50.221095+09:00",
+  "prediction_date": "2026-11-20",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-20T12:56:50.221095+09:00",
+  "market_data_through": "2026-11-20",
+  "reference_price": 1010.5,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6076624178108918,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.24053690303234027,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.8226127993017316,
+      "direction": "DOWN",
+      "day_change": -0.05516596540439456,
+      "momentum5": -0.08922938260477697,
+      "trend": -0.1009910234917133,
+      "volatility": 0.4364389158878771
+    },
+    "news": {
+      "score": 0.14285714285714285,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "「VICKS」×「サンリオキャラクターズ」 コラボ実現 - 大正製薬",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5tZjFmNUZ0Zl9BcW9EUE4tSEIweG9pb3MtQnZZaWMxTGs0cml4REQ0TVdkc00zaUNWY003VC16SUlvWklOOEtidDJFaTVHWnlBTkluUkJhTVdsUkRfck9TS2lwdk9HRkVseUE?oc=5",
+          "published_at": "Tue, 17 Nov 2026 02:01:38 GMT",
+          "source_url": "https://www.taisho.co.jp"
+        },
+        {
+          "title": "カップケーキになったハローキティ、クロミたちが可愛い！「サンリオキャラクターズ」小物入れ食玩全7種、それぞれ個性豊かなトッピング＆カラーリング（インサイド） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAxQVdRUzQ3VWtueFpZcklENmowUXpON0w0ZkFoVjhPZjV6eHBiWW5HMC1QNktTakV5empmV0E0bld1dUhUbjR2OXkzRHBwa1Y3eGc5QmxwZW1CcjIzaFFhazEtUFRLd0NfcFRRT2FIRmhZUXpzeGNhQ19BdFFESXM?oc=5",
+          "published_at": "Fri, 20 Nov 2026 01:45:03 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "11/25(水)発売『CoComelon Playdates with Sanrio Friends』初回限定盤の開封動画が公開！ - UNIVERSAL MUSIC JAPAN",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1yYnY4R0Q1OS03MWJvdTAzUWxDa21DZzE4c3RuRks4LUs1SkVvVGtab0JtQVRiVVd3X05DRHZmdllCd09hQXFPalRRRDY4bnEtV25YaUpEbHRZWXoxZHdrU3gxamYwTGdnUDk0VA?oc=5",
+          "published_at": "Thu, 19 Nov 2026 11:11:47 GMT",
+          "source_url": "https://www.universal-music.co.jp"
+        },
+        {
+          "title": "「雲の上の浮世絵～サンリオキャラクターズとめぐる北斎展～in TOKYO SKYTREE®」詳細決定！ - 東京スカイツリー公式サイト",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBncjloVDBXZXBQVGVxZjVHb1czZ01pTEVZWGJqcktCUzNXMXZhdUlJTV81ajVOb2Z2MklIQUo3OE9Fa2xVTnBfa3Rnd2xRSzE0ZFBOQW9PZw?oc=5",
+          "published_at": "Thu, 19 Nov 2026 05:01:07 GMT",
+          "source_url": "https://www.tokyo-skytree.jp"
+        },
+        {
+          "title": "「サンリオキャラクターズ」のブックカバーコレクション！アンティーク調のデザインが美しい文具雑貨シリーズが登場 - Digital PR Platform",
+          "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1lUzhCdFFXdDRoc09QNk9Udk1COXM5SmxGX3VhbXFPVFdFakIzaGZINHR5bThRQVVNVktzYzhtV0l0ZjA?oc=5",
+          "published_at": "Thu, 19 Nov 2026 01:49:12 GMT",
+          "source_url": "https://digitalpr.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.32116278371972784,
+        "japan_risk": 0.2069897463922883,
+        "usd_rate_pressure": -0.02078484353012988
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

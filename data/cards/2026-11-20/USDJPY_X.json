@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-20T12:56:50.221095+09:00",
+  "prediction_date": "2026-11-20",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-20T12:56:50.221095+09:00",
+  "market_data_through": "2026-11-20",
+  "reference_price": 159.24200439453125,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.1774492206829848,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5905340585058921,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.034111586898080255,
+      "direction": "NEUTRAL",
+      "day_change": -0.0008720757960144487,
+      "momentum5": -0.00395931574960906,
+      "trend": 0.006245261236623945,
+      "volatility": 0.04625058560702117
+    },
+    "news": {
+      "score": 0.875,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "【今日のドル円】昨日の振り返りと今日のドル円相場見通し「リスクオフの円買い優勢も、FRB大幅利上げ観測が下値を支え」 2026年11月20日 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9JUEJWMXJ2ZXlxRTJjbnN4MWpjVWE4Wjh0RG5hVHRmZzViRW1Iekxsdi1vSGVjbDdxRXEwTVpQbEt5YkVFSUxKd3U2UTNsR2FPVlBwS2h6MVNOU3E5SUs1QTN2QQ?oc=5",
+          "published_at": "Fri, 20 Nov 2026 02:02:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "慢性円安「通貨防衛する気あるのか」ちぐはぐ政策、ディーラーの絶望 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9udS1DaWhpempZNzV2SlVzRndXN3pnWDF4aFpKb2hyZ1BaNklhSEtyWFlUaVdwOVZKNlJCNkgzdWhYSVlsQXBtYzhjbThjYUw1QWN6RS16a0FaQ2JuVm5BQnVDcC1BOFk?oc=5",
+          "published_at": "Fri, 20 Nov 2026 02:00:00 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "日銀・植田総裁、個人消費「先行きは回復」 利上げ路線は継続 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxV0F3R3V1ZkVrSWpwVS03aFZfaEtuNjFWV3h2d0hJSmhWOHFJUlhUV3NlUmNlbVllYlE0WngyZlpOd2QzWkFMaEt3RFFKSEljcmxHUndhaFJmYjVabWVLbDlvVXBMNnBOSk9WeA?oc=5",
+          "published_at": "Thu, 19 Nov 2026 07:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "FRB当局者、利上げの必要性認識 10月議事要旨 - WSJ",
+          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQUjU5M01FdmMyY0ZMdlpPdy1va0d0N1I0NmdXUHNXVWFIZ0o4VW1Lcm8xWEljbTEwNEpZbmtlNWxVaHBsTEl4RGlBVmtMZEljWlFNd3VNTUptWUo0Z0hpaDJXSjNjbGhIT3h5S3BfQmQ2UnVfeEYydVNaR054MTVsQnNuaU5zem14b1NYRTE0MXc0a1A4MUFaZzJPRThhTi1MZTZRdXUtV2Uydw?oc=5",
+          "published_at": "Thu, 19 Nov 2026 23:05:14 GMT",
+          "source_url": "https://jp.wsj.com"
+        },
+        {
+          "title": "ハイテク懸念でリスク回避の円買い継続、豪ドル円106円台割れ - みんかぶ FX/為替",
+          "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBpYkFDaUZPNXh3R0pQVHlBM2FwQTBhRGZ1MHg3clFMUkZJdm5VOXc3ekFiTlgzM0I1Mks0aDNwQzR0MXdVVkhWRg?oc=5",
+          "published_at": "Fri, 20 Nov 2026 01:00:51 GMT",
+          "source_url": "https://fx.minkabu.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.03668894394860136,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.32116278371972784,
+        "japan_risk": 0.2069897463922883,
+        "usd_rate_pressure": -0.02078484353012988
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

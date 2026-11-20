@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-20T12:56:50.221095+09:00",
+  "prediction_date": "2026-11-20",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-20T12:56:50.221095+09:00",
+  "market_data_through": "2026-11-20",
+  "reference_price": 188.947998046875,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.2771912917409392,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.560813697494701,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.12211089031538705,
+      "direction": "DOWN",
+      "day_change": -6.137460377031445e-06,
+      "momentum5": -0.011876414808875468,
+      "trend": -0.009402206784818068,
+      "volatility": 0.05322616936329897
+    },
+    "news": {
+      "score": 1.0,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜日銀利上げ期待でも円高は限定的か」 外為どっとコム トゥデイ 2026年11月20日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1RYVNSSHZ1b2h3OUlDbk5kNVFUZzhCbm10S0FRTm42WWlKOWR0ZTZLYjlMTWZTdVpZWGN5NS02NU9uWC1wQlZvRExtUm1NbUxyYXlvMXAzTXc4dzd0X2ZNM212QQ?oc=5",
+          "published_at": "Thu, 19 Nov 2026 23:37:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀・植田総裁、個人消費「先行きは回復」 利上げ路線は継続 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxV0F3R3V1ZkVrSWpwVS03aFZfaEtuNjFWV3h2d0hJSmhWOHFJUlhUV3NlUmNlbVllYlE0WngyZlpOd2QzWkFMaEt3RFFKSEljcmxHUndhaFJmYjVabWVLbDlvVXBMNnBOSk9WeA?oc=5",
+          "published_at": "Thu, 19 Nov 2026 07:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "外為：スイスフラン、189円07銭前後とフラン安・円高で推移(株探ニュース) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdEw3UmpVcFlQUmJ1eFpFUDN5aTVYeXhuQV90XzhPek9XdVJPOVN1WTU5RG96S3VCN0ZIYXh4Y0thUDVzalcxUHVOdHZKSFk2aS1lVkZNNG1KMzc2OWJ1ZG8xb2R4eWtNbUtCRzNzUTVieEpTcG1qclhISlFBMEs5bG1WMWZtTWc?oc=5",
+          "published_at": "Fri, 20 Nov 2026 01:31:45 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "独眼経眼：基調物価2％後に待ち受ける日銀の難路 愛宕伸康 - 週刊エコノミスト Online",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE04LTRXa0k3c25GT256SXFMa3NvNXp1QTNwd2ZzVm9IX0NWTVFPSkxKeW5XWGxJdTF1VURRbG1XZlVRdm5wS3ZicHlvR09OVGtfeVRsbzdKSEx3NjVvREtEal8tVk1OejBEeVhXcVVGdUt2SkJOeXZfRTBmMUM5RGc?oc=5",
+          "published_at": "Thu, 19 Nov 2026 22:27:12 GMT",
+          "source_url": "https://weekly-economist.mainichi.jp"
+        },
+        {
+          "title": "経済・物価・金融情勢に応じ政策金利上げ、緩和度合い調整が適切＝日銀総裁 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZk1UWjlOWF81bDFWX0xWMEViUlN5c2FjbE96YzJ1ZGI1WWUzSEpqRlRHa0MzU1dYcDFYcHVGWFRSS2NiYjNLRFFLa3o4QS1lTmRJSmRFSG9TQzFXX0RyTHhCams5dmVnUzVMMjBWd2NPQldOMjFVMTVpMERDekFZU25uODVlQlVQd0trR1A2V1g?oc=5",
+          "published_at": "Wed, 18 Nov 2026 02:13:00 GMT",
+          "source_url": "https://www.reuters.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.1610392421765065,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.32116278371972784,
+        "japan_risk": 0.2069897463922883,
+        "usd_rate_pressure": -0.02078484353012988
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

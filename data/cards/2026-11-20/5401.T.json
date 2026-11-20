@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-20T12:56:50.221095+09:00",
+  "prediction_date": "2026-11-20",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-20T12:56:50.221095+09:00",
+  "market_data_through": "2026-11-20",
+  "reference_price": 675.7000122070312,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.07491222298945527,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.4880896904206579,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.0391566304466779,
+      "direction": "NEUTRAL",
+      "day_change": -0.01730652094448626,
+      "momentum5": -0.031948406580184496,
+      "trend": 0.02087128592383758,
+      "volatility": 0.19828947730178034
+    },
+    "news": {
+      "score": -0.14285714285714285,
+      "status": "OK",
+      "error": null,
+      "direction": "DOWN",
+      "headlines": [
+        {
+          "title": "Ｈ形店売り11契 日本製鉄、販価据え置き（日刊産業新聞） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5BZEU2RXc1VlYtbnNpQllidWd3ZHZiTkRsNnpwMkliODZ1WDJmYm1ySlJEUlRFT0RGWFpKaFA0cU5ORjFqVWdoV2h0czViN2gwREV2UVBVckN1OGJkeFNBYXN3RjV0ZnVDT0dJaGhUZzh3aXktZTZ4djNvTW94bjA?oc=5",
+          "published_at": "Thu, 19 Nov 2026 06:56:23 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "日本製鉄の30代前半、主査級の年収は？【1万件の口コミ情報データ】 | ダイヤモンド・口コミ情報 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFA1aWZXVEoyWmRBQnFHVEpnVUk5NDZEdEVzdGp0WXdqVlpncjc3QmVKSE1nUFpMSHNKeTR4bS1KVS1KcFYtNWNNNjVhQXk?oc=5",
+          "published_at": "Tue, 17 Nov 2026 20:30:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "日本製鉄人事担当役員が求める新卒「骨太さとしなやかさ両立する人」 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9pb20xQlRXWmpBR00zLXJkNU5uYldzUWpfcXpIdFJmczB4bEFMOTFiRFdCeTlYZTBBd1RUWUNYMmlXT3dFYjdSVzVtcUZPRHRodS1ZdElBc21tcGtsb0lXaVpyOXZVZFNhc05LdA?oc=5",
+          "published_at": "Tue, 17 Nov 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "【経済学部】プロスポーツの現場で学ぶ ! 日本製鉄堺ブレイザーズのホームゲームで調査を実施 - 摂南大学",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5PWnBraDdhSkpqMnp1WDY1b0JvU2FaaThCMm9CTDFRaXlJdVdqNHFJR0lXWkIydnJmazBPNnVLTmFhcUN5QUNjblNYZXFyeDFINWJ2R2VB?oc=5",
+          "published_at": "Wed, 18 Nov 2026 04:32:40 GMT",
+          "source_url": "https://www.setsunan.ac.jp"
+        },
+        {
+          "title": "2026 Oracle Partner Awardsで「Japan OCI Breakthrough Award」を受賞｜プレスルーム - 日鉄ソリューションズ",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5sY0U4ZFlwMG5hUFE3Z0oxLWZnU29aUWJGV2JqeEZsSXJSRk9xVV9URmNqV0xoQUJEVEVmQnI5X2NtaFBxM2VuWDhRZGVrVDF0MlRLQmdtQ1JuVU51a18zSEg4M2d1ckJoQ2NOWXlpVDZTNUE?oc=5",
+          "published_at": "Thu, 19 Nov 2026 06:17:41 GMT",
+          "source_url": "https://www.nssol.nipponsteel.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.32116278371972784,
+        "japan_risk": 0.2069897463922883,
+        "usd_rate_pressure": -0.02078484353012988
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

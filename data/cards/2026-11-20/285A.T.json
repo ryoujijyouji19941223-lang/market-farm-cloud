@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-20T12:56:50.221095+09:00",
+  "prediction_date": "2026-11-20",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-20T12:56:50.221095+09:00",
+  "market_data_through": "2026-11-20",
+  "reference_price": 7401.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6950258747572762,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.25994935004703457,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.9868027569959943,
+      "direction": "DOWN",
+      "day_change": -0.10518679724338054,
+      "momentum5": -0.1858981410185898,
+      "trend": -0.22044305614347515,
+      "volatility": 1.1521902726517153
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "キオクシア株の下げ止まらず PER1倍台目前、AI需要を警戒 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ZTlUxb1hGSzlrRUVWNXhrNWlnRmtMVkhTT1FKTWEzRUp3Y0F5TEpVbTJZZGNVY184VUlqQlJuNGFGUzJseVZsRmFPc3h5YkdkcEEzTVQtUF9VUkpDYVR5Mk1LNDZPbGo3eFlubw?oc=5",
+          "published_at": "Fri, 20 Nov 2026 03:18:47 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "＜特別気配＞ キオクシア、ＳＢＧ、フジクラが売り気配 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBRRkx5YkJwanF3SGIyR2NlaXBBd01EZGtLdVhKWmJRaWxnNUhOcVFPM21tNFlURzN3MThtc2pPbnpsM2hidzJSdG9rWUp5cGNQZjBvQThRU1F5RVRicTFnbA?oc=5",
+          "published_at": "Fri, 20 Nov 2026 00:03:42 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "株価急落で「追証」続出！ キオクシア株の事例に学ぶ信用取引のリスク（MONEY PLUS） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPZFppQTd4UUtaR08zY2FwMHdzNmxfVjRrY2ZqOEphdWlHcGhoTDlTT3JJRmZpS2liUlJfYmh4T2JURk1aMVFScjNiZ1BGMVFCZGxfejNxbnhkMklBYmpWQzZucVN1U0R4M2FoMU1XX082QkhBdlhqY3FXVkJqd21qSFRmY3MyenJ4?oc=5",
+          "published_at": "Wed, 18 Nov 2026 22:30:26 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "SKハイニックス、キオクシアCBの株式転換を検討…筆頭株主の地位を固める - BigGo ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1sOWJLd3FvSlByQVNLU1pOZUFxVDloZFkyNzlSTGdEbWVlUkwwQnZzU1oyRzVJY01LbXFXT3BJejZzZmE5UG5RbDNVS013bmx4WGRGaEJxNW96dGdyN1ZycTluXzRiZE8xTmxjZzV1bmNHRko1?oc=5",
+          "published_at": "Fri, 20 Nov 2026 02:55:00 GMT",
+          "source_url": "https://finance.biggo.jp"
+        },
+        {
+          "title": "最高益続くキオクシア…NANDにAI特需、磨く高速性能 - ニュースイッチ by 日刊工業新聞社",
+          "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE5WYUI1bFFFOXlRSlBfNkg1YXN1eThsTkNPa2trZHJ5VUhyeTY0cGdGcWF3WEQ2R1ZXMEZZaGVvd1c0Zw?oc=5",
+          "published_at": "Tue, 17 Nov 2026 07:02:00 GMT",
+          "source_url": "https://newswitch.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.32116278371972784,
+        "japan_risk": 0.2069897463922883,
+        "usd_rate_pressure": -0.02078484353012988
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

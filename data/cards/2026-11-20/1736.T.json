@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-20T12:56:50.221095+09:00",
+  "prediction_date": "2026-11-20",
+  "symbol": "1736.T",
+  "name": "オーテック",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-20T12:56:50.221095+09:00",
+  "market_data_through": "2026-11-20",
+  "reference_price": 2145.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.43393815075316167,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.2779478356261631,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.6028502216958259,
+      "direction": "DOWN",
+      "day_change": -0.025000000000000022,
+      "momentum5": -0.03378378378378377,
+      "trend": -0.07030968480403588,
+      "volatility": 0.2335874779189753
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "(株)オーテック【1736】：決算情報 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9VUVVTdVZxR3Q5aExEckpxSC1tQkNsa3IwUm9xd0d5eHl5RFVXUURmWXkyVTNOY2ZmbVBjVFpNTnNaTEpXZTQ4N1gwVXFXNmJ4Zm5mX3NrcGtXZy1qd0M2Vg?oc=5",
+          "published_at": "Mon, 09 Nov 2026 06:30:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "オーテック[1736]：有限会社ケー・ティー・エスの株式取得（子会社化）に関するお知らせ 2026年3月30日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5TOEpYMG1TNWpyRG1FcWNjUlhLZEdQdWxrQ0p4V3FzQnZTZGh5RzNIZEI5LUdCN1NHQlg5azhXdEprbG1fRTVqVmdBM2YzVTIzMERzUUN2VVl4NVlzQWM2ekpabl9jdUVfUkE?oc=5",
+          "published_at": "Mon, 30 Mar 2026 07:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.32116278371972784,
+        "japan_risk": 0.2069897463922883,
+        "usd_rate_pressure": -0.02078484353012988
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

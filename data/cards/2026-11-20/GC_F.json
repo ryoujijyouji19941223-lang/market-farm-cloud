@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-20T12:56:50.221095+09:00",
+  "prediction_date": "2026-11-20",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-20T12:56:50.221095+09:00",
+  "market_data_through": "2026-11-19",
+  "reference_price": 3556.300048828125,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.4636389470783928,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.3152153496527179,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.6058124490650882,
+      "direction": "DOWN",
+      "day_change": -0.049600432496704094,
+      "momentum5": -0.08467814476754043,
+      "trend": -0.0454458209065034,
+      "volatility": 0.3103335224850775
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日本の長期金利、米国と連動深まる 国内要因目立たず - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBFTkt6NEZkY2R1b282aFFvS2hWSGxBQlR5SlFneEdTMllzcFNZWWhKaHBrdV9ZVGVzRWhFWFB6U3pya1JIYmNiTS1hSUkzbi10TVNDWmJjNjQ4TEVwZ3ZtT3hWQVZJbHpwVVoteQ?oc=5",
+          "published_at": "Thu, 19 Nov 2026 05:39:25 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "中国人民銀、最優遇貸出金利据え置き 18カ月連続 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQNVJzNjhGYmdHNEYxaU9QWjM5bTlWU3BXeXlsMF9hWWw5Rk4xbjZrQ0dvVXZBS3ZCeUE1bTJWSXJDUWx6Q3BwZUIyNVlDSzJmdkItcWgtX2YtaDREdkJhVFNJUERJbmNuUXRPNGJ2WGZRYzd3S0pwTUVWcUZJRzhUcGRwWQ?oc=5",
+          "published_at": "Fri, 20 Nov 2026 01:17:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "金利上昇と建築費高騰で不動産価格はどうなる？ 首都圏マンション価格は下落傾向 野村證券・野﨑宇一朗 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE8weEtaMS1GemRibERHVzlMejlSZHN0RDZjQlI1VWNKUFVTQXpFRG04NENPSU50dTRxNnpNLWZGMXpHbXhrWXk3QUxDX3pKLXJJVTliZ1ZMVEZGN21IZ3FV?oc=5",
+          "published_at": "Wed, 18 Nov 2026 05:30:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "インドネシア中央銀行、主要政策金利を6%に引き上げ FRB引き締めに先手 - BigGo ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFB5a0hnTlFQM3pVN3l6ZUR6aF9wZU5SRHhjYlRIenBjSGtvdHJjN3ZrNmdQaUFSLXJmdWk1d19XSlk5Q0M5Y1VIV212cTZpUU1GektkVjNtc3ByMnNIWVlkOU5NREtySjd6UFdhbC1pQVlQdzFJ?oc=5",
+          "published_at": "Thu, 19 Nov 2026 23:55:00 GMT",
+          "source_url": "https://finance.biggo.jp"
+        },
+        {
+          "title": "まもなく中国最優遇貸出金利ローンプライムレートの発表 - みんかぶ FX/為替",
+          "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5HQUJWa0IwTUJCd3hUam42Z1pfeXFRdmdocThpa3VoeHlTNlJ3dkp2OV83LU96MTE4TEFPSHpoUGZ3SDl3dHUzMA?oc=5",
+          "published_at": "Fri, 20 Nov 2026 00:40:50 GMT",
+          "source_url": "https://fx.minkabu.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.2029098780942182,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.32116278371972784,
+        "japan_risk": 0.2069897463922883,
+        "usd_rate_pressure": -0.02078484353012988
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

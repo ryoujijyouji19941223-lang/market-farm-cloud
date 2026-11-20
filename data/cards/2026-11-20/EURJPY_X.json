@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-20T12:56:50.221095+09:00",
+  "prediction_date": "2026-11-20",
+  "symbol": "EURJPY=X",
+  "name": "ユーロ円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-20T12:56:50.221095+09:00",
+  "market_data_through": "2026-11-20",
+  "reference_price": 174.79400634765625,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.1968289002414832,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.5319505097410819,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.08809106402818358,
+      "direction": "DOWN",
+      "day_change": -0.0004174489471455711,
+      "momentum5": -0.01055700683496752,
+      "trend": -0.005761495850508336,
+      "volatility": 0.048576173191390085
+    },
+    "news": {
+      "score": 0.75,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜日銀利上げ期待でも円高は限定的か」 外為どっとコム トゥデイ 2026年11月20日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1RYVNSSHZ1b2h3OUlDbk5kNVFUZzhCbm10S0FRTm42WWlKOWR0ZTZLYjlMTWZTdVpZWGN5NS02NU9uWC1wQlZvRExtUm1NbUxyYXlvMXAzTXc4dzd0X2ZNM212QQ?oc=5",
+          "published_at": "Thu, 19 Nov 2026 23:37:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀・植田総裁、個人消費「先行きは回復」 利上げ路線は継続 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxV0F3R3V1ZkVrSWpwVS03aFZfaEtuNjFWV3h2d0hJSmhWOHFJUlhUV3NlUmNlbVllYlE0WngyZlpOd2QzWkFMaEt3RFFKSEljcmxHUndhaFJmYjVabWVLbDlvVXBMNnBOSk9WeA?oc=5",
+          "published_at": "Thu, 19 Nov 2026 07:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "ユーロ圏の銀行、データセンター向け与信が急速に拡大＝ＥＣＢ - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5fUEdzTU52X3R6SmhDeC1ZZlJmMWtQa3RfT1drT25SNkR3NkJsQWFvRUxxcUNyb0JoZmFyWGhDR3dGaWZMSThVcnVmdmRNcExPbS1idDFyVFZkZXl2VzA4TTRyX1RHWWpCaWR1cmM1SUVmY2t3LUkzR2w3UmFUQQ?oc=5",
+          "published_at": "Fri, 20 Nov 2026 03:14:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀・利上げのロジック再考（NRI研究員の時事解説） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE81c2tQaWVmbjRPWlZNcFkzckVaVE9zYVppS3k5alFKQ0cwWElNR2I1ZUFmb0FjQktnSUNETFJrRklONi14WkxqUUpCYmlFaEpIWWxjR0tBeE0yd3ItRWo5Tk9Nd1VINkdnTlY5ODQ5cHREMk50YjdBOW1KQUJ3N2M?oc=5",
+          "published_at": "Fri, 20 Nov 2026 00:21:29 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "独眼経眼：基調物価2％後に待ち受ける日銀の難路 愛宕伸康 - 週刊エコノミスト Online",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE04LTRXa0k3c25GT256SXFMa3NvNXp1QTNwd2ZzVm9IX0NWTVFPSkxKeW5XWGxJdTF1VURRbG1XZlVRdm5wS3ZicHlvR09OVGtfeVRsbzdKSEx3NjVvREtEal8tVk1OejBEeVhXcVVGdUt2SkJOeXZfRTBmMUM5RGc?oc=5",
+          "published_at": "Thu, 19 Nov 2026 22:27:12 GMT",
+          "source_url": "https://weekly-economist.mainichi.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.06284651134878912,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.32116278371972784,
+        "japan_risk": 0.2069897463922883,
+        "usd_rate_pressure": -0.02078484353012988
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-20T12:56:50.221095+09:00",
+  "prediction_date": "2026-11-20",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-20T12:56:50.221095+09:00",
+  "market_data_through": "2026-11-20",
+  "reference_price": 8833.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.2887997600890682,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.6174312601112408,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.3894114118956885,
+      "direction": "UP",
+      "day_change": -0.05082742316784872,
+      "momentum5": 0.006839165621794097,
+      "trend": 0.047968673519334315,
+      "volatility": 0.5255971960750784
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "『カラオケJOYSOUND for Nintendo Switch』のNintendo Switch 2 向け無料アップデートを本日より配信。本体の内蔵マイクで、別売のマイクがなくてもカラオケが楽しめる。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNZGZCdThydUVmN1MxVG1fZHozdkFvNGxqbHpSQ0g4NzZHSkNxM1NnVHFRWk10eTFQNmVDMEZ4NG5HODRaeU1FMlhqMFRLUEZWNjhGcFZiZzN1MEhaTXVUc25tSUxPcV9FUXNOb3B6S0sxa05tdUIwSkFLOFA4M3RNUTBsYnpfQQ?oc=5",
+          "published_at": "Thu, 19 Nov 2026 01:14:20 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "Nintendo Storeでホリデーキャンペーンを開催中。ダウンロードソフトを手渡しでプレゼントできる「ダウンロード版ギフトセット」も。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNYndBT1lyYzhwWmQ2MXRGcWNaNHJfajkyWEE0cEZFM1RnbXNJcFBXX3lKbXAwTmdtU0ZxaXgwRUxkRkRnT01tbEV2dF9ScGdsSXotbXJYN1gwU1EwQjkwTEZUYkVkcjgxRWVWWElMLWR4cFdUYzh2eFNySUhxN1BLYzk4T0xtQQ?oc=5",
+          "published_at": "Thu, 19 Nov 2026 01:14:20 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "Nintendo Switch 2『スプラトゥーン レイダース』の体験版を配信中。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOOXdCZFQxYTZLajBBRk9SQUxQSUozR0JxM0lqbUs1Skg5SnR3RE9aQ2RkbjJ0aC1BQ2JSaHpXa3ZSUUttSjFFbjdvME5RTDVKWWtNV3phQTJ0VjBvVlNUNVpvNmQxbHd5RG5ja2lLelh6VGVCN1ROcmxNRE1xLWEzWERzRW5UZw?oc=5",
+          "published_at": "Tue, 17 Nov 2026 03:16:05 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "3本のソフトからお好きな1本を選択してダウンロードできるお得な「Nintendo Switch 2（日本語・国内専用） 選べるソフトセット」が登場。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSnhiVFcyUXVfNDdlVXZ4RTdna2hqbEttc2tpaEdEUi1vNElGSm41UHoxa1dlYzNPc3RocDh3UWJ0eEdGUTVDNEZEMnNmakZ1UjgzZy1BeWtBWUoxeDZJcTVqcHVwT24tNlVQbjF2RmFQTnFDSTNlQ1hLcW1xVVJLNVZCcGZvQQ?oc=5",
+          "published_at": "Tue, 06 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "Nintendo Switch 2 / Nintendo Switchの本体機能をバージョンアップ。新しい機能をご紹介します。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOOTJvT1NwaGhqQTZXNUxyRTFSdjB2WUFIZ1NleElObFVLcVNyUFZtQjBXaFVCOFc1Zk4wQVpzVF9ycGg0dHpoNm1hMlF5bUszUmhiNF9IYWw3ZEcxaXV6NmlRM0dhUTRDZXEzTXVKZms0ZmpQeld4NHFPSE5lRUNqcWQwX3BlQQ?oc=5",
+          "published_at": "Tue, 10 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.32116278371972784,
+        "japan_risk": 0.2069897463922883,
+        "usd_rate_pressure": -0.02078484353012988
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
