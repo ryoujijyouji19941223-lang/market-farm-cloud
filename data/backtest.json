@@ -1,47 +1,47 @@
 {
-  "generated_at": "2026-11-15T07:04:06.493039+00:00",
+  "generated_at": "2026-11-22T07:20:48.113183+00:00",
   "model": "historical base model: price + market proxies; no historical news",
   "method": "walk-forward next-trading-day test using only data available up to each day",
   "assets": {
     "USDJPY=X": {
       "name": "ドル円",
       "kind": "fx",
-      "available_start": "2021-12-13",
-      "available_end": "2026-11-12",
+      "available_start": "2021-12-20",
+      "available_end": "2026-11-19",
       "usable_days": 1279,
       "windows": {
         "1y": {
           "days": 260,
-          "signals": 47,
+          "signals": 48,
           "correct": 15,
-          "accuracy": 0.3191489361702128,
-          "signal_rate": 0.18076923076923077
+          "accuracy": 0.3125,
+          "signal_rate": 0.18461538461538463
         },
         "3y": {
           "days": 779,
-          "signals": 271,
+          "signals": 272,
           "correct": 91,
-          "accuracy": 0.33579335793357934,
-          "signal_rate": 0.3478818998716303
+          "accuracy": 0.33455882352941174,
+          "signal_rate": 0.3491655969191271
         },
         "5y": {
           "days": 1279,
-          "signals": 509,
+          "signals": 510,
           "correct": 187,
-          "accuracy": 0.36738703339882123,
-          "signal_rate": 0.39796716184519154
+          "accuracy": 0.36666666666666664,
+          "signal_rate": 0.39874902267396406
         }
       },
       "diagnostics": {
         "all_signals": {
-          "signals": 509,
+          "signals": 510,
           "correct": 187,
-          "accuracy": 0.36738703339882123
+          "accuracy": 0.36666666666666664
         },
         "up_calls": {
-          "signals": 302,
+          "signals": 303,
           "correct": 116,
-          "accuracy": 0.3841059602649007
+          "accuracy": 0.38283828382838286
         },
         "down_calls": {
           "signals": 207,
@@ -54,14 +54,14 @@
           "accuracy": 0.32142857142857145
         },
         "mild_calls": {
-          "signals": 453,
+          "signals": 454,
           "correct": 169,
-          "accuracy": 0.3730684326710817
+          "accuracy": 0.3722466960352423
         },
         "price_macro_agree": {
-          "signals": 290,
+          "signals": 291,
           "correct": 128,
-          "accuracy": 0.4413793103448276
+          "accuracy": 0.43986254295532645
         },
         "price_macro_disagree": {
           "signals": 219,
@@ -74,30 +74,30 @@
         "development_fraction": 0.8,
         "untouched_fraction": 0.2,
         "baseline_development": {
-          "signals": 462,
-          "correct": 172,
-          "accuracy": 0.3722943722943723
+          "signals": 465,
+          "correct": 173,
+          "accuracy": 0.3720430107526882
         },
         "baseline_untouched": {
-          "signals": 47,
-          "correct": 15,
-          "accuracy": 0.3191489361702128
+          "signals": 45,
+          "correct": 14,
+          "accuracy": 0.3111111111111111
         },
         "candidate": {
           "price_coef": -0.5,
           "macro_coef": 1.0,
           "edge": 0.05,
           "development": {
-            "signals": 167,
-            "accuracy": 0.47305389221556887,
-            "signal_rate": 0.16324535679374388
+            "signals": 169,
+            "accuracy": 0.47337278106508873,
+            "signal_rate": 0.1652003910068426
           },
           "untouched": {
-            "signals": 36,
-            "accuracy": 0.4722222222222222,
-            "signal_rate": 0.140625
+            "signals": 34,
+            "accuracy": 0.47058823529411764,
+            "signal_rate": 0.1328125
           },
-          "untouched_improvement": 0.15307328605200943
+          "untouched_improvement": 0.15947712418300652
         },
         "note": "Candidate chosen on older 80%; newest 20% remained untouched until final check."
       }
@@ -105,23 +105,23 @@
     "EURJPY=X": {
       "name": "ユーロ円",
       "kind": "fx",
-      "available_start": "2021-12-13",
-      "available_end": "2026-11-12",
+      "available_start": "2021-12-20",
+      "available_end": "2026-11-19",
       "usable_days": 1279,
       "windows": {
         "1y": {
           "days": 260,
-          "signals": 32,
+          "signals": 31,
           "correct": 7,
-          "accuracy": 0.21875,
-          "signal_rate": 0.12307692307692308
+          "accuracy": 0.22580645161290322,
+          "signal_rate": 0.11923076923076924
         },
         "3y": {
           "days": 779,
-          "signals": 194,
-          "correct": 69,
-          "accuracy": 0.3556701030927835,
-          "signal_rate": 0.2490372272143774
+          "signals": 189,
+          "correct": 66,
+          "accuracy": 0.3492063492063492,
+          "signal_rate": 0.24261874197689345
         },
         "5y": {
           "days": 1279,
@@ -173,30 +173,30 @@
         "development_fraction": 0.8,
         "untouched_fraction": 0.2,
         "baseline_development": {
-          "signals": 343,
-          "correct": 123,
-          "accuracy": 0.358600583090379
+          "signals": 345,
+          "correct": 124,
+          "accuracy": 0.35942028985507246
         },
         "baseline_untouched": {
-          "signals": 31,
-          "correct": 7,
-          "accuracy": 0.22580645161290322
+          "signals": 29,
+          "correct": 6,
+          "accuracy": 0.20689655172413793
         },
         "candidate": {
           "price_coef": -0.5,
           "macro_coef": 1.0,
           "edge": 0.05,
           "development": {
-            "signals": 155,
-            "accuracy": 0.45806451612903226,
-            "signal_rate": 0.15151515151515152
+            "signals": 159,
+            "accuracy": 0.4528301886792453,
+            "signal_rate": 0.15542521994134897
           },
           "untouched": {
-            "signals": 14,
-            "accuracy": 0.42857142857142855,
-            "signal_rate": 0.0546875
+            "signals": 10,
+            "accuracy": 0.5,
+            "signal_rate": 0.0390625
           },
-          "untouched_improvement": 0.20276497695852533
+          "untouched_improvement": 0.2931034482758621
         },
         "note": "Candidate chosen on older 80%; newest 20% remained untouched until final check."
       }
@@ -204,23 +204,23 @@
     "CHFJPY=X": {
       "name": "スイスフラン円",
       "kind": "fx",
-      "available_start": "2021-12-13",
-      "available_end": "2026-11-12",
+      "available_start": "2021-12-20",
+      "available_end": "2026-11-19",
       "usable_days": 1279,
       "windows": {
         "1y": {
           "days": 260,
-          "signals": 40,
+          "signals": 37,
           "correct": 8,
-          "accuracy": 0.2,
-          "signal_rate": 0.15384615384615385
+          "accuracy": 0.21621621621621623,
+          "signal_rate": 0.1423076923076923
         },
         "3y": {
           "days": 779,
-          "signals": 185,
+          "signals": 183,
           "correct": 54,
-          "accuracy": 0.2918918918918919,
-          "signal_rate": 0.2374839537869063
+          "accuracy": 0.29508196721311475,
+          "signal_rate": 0.23491655969191272
         },
         "5y": {
           "days": 1279,
@@ -272,30 +272,30 @@
         "development_fraction": 0.8,
         "untouched_fraction": 0.2,
         "baseline_development": {
-          "signals": 321,
-          "correct": 108,
-          "accuracy": 0.3364485981308411
+          "signals": 325,
+          "correct": 110,
+          "accuracy": 0.3384615384615385
         },
         "baseline_untouched": {
-          "signals": 38,
-          "correct": 8,
-          "accuracy": 0.21052631578947367
+          "signals": 34,
+          "correct": 6,
+          "accuracy": 0.17647058823529413
         },
         "candidate": {
-          "price_coef": 0.5,
+          "price_coef": -0.5,
           "macro_coef": -1.0,
           "edge": 0.08,
           "development": {
-            "signals": 153,
-            "accuracy": 0.43137254901960786,
-            "signal_rate": 0.1495601173020528
+            "signals": 154,
+            "accuracy": 0.42207792207792205,
+            "signal_rate": 0.15053763440860216
           },
           "untouched": {
-            "signals": 29,
-            "accuracy": 0.27586206896551724,
-            "signal_rate": 0.11328125
+            "signals": 27,
+            "accuracy": 0.2962962962962963,
+            "signal_rate": 0.10546875
           },
-          "untouched_improvement": 0.06533575317604357
+          "untouched_improvement": 0.11982570806100215
         },
         "note": "Candidate chosen on older 80%; newest 20% remained untouched until final check."
       }
@@ -303,37 +303,37 @@
     "GC=F": {
       "name": "金",
       "kind": "commodity",
-      "available_start": "2021-12-14",
-      "available_end": "2026-11-12",
+      "available_start": "2021-12-21",
+      "available_end": "2026-11-19",
       "usable_days": 1237,
       "windows": {
         "1y": {
           "days": 252,
           "signals": 184,
-          "correct": 87,
-          "accuracy": 0.47282608695652173,
+          "correct": 90,
+          "accuracy": 0.4891304347826087,
           "signal_rate": 0.7301587301587301
         },
         "3y": {
           "days": 756,
-          "signals": 495,
-          "correct": 220,
-          "accuracy": 0.4444444444444444,
-          "signal_rate": 0.6547619047619048
+          "signals": 498,
+          "correct": 224,
+          "accuracy": 0.4497991967871486,
+          "signal_rate": 0.6587301587301587
         },
         "5y": {
           "days": 1237,
-          "signals": 770,
-          "correct": 331,
-          "accuracy": 0.42987012987012985,
-          "signal_rate": 0.6224737267582862
+          "signals": 774,
+          "correct": 335,
+          "accuracy": 0.43281653746770027,
+          "signal_rate": 0.6257073565076798
         }
       },
       "diagnostics": {
         "all_signals": {
-          "signals": 770,
-          "correct": 331,
-          "accuracy": 0.42987012987012985
+          "signals": 774,
+          "correct": 335,
+          "accuracy": 0.43281653746770027
         },
         "up_calls": {
           "signals": 476,
@@ -341,29 +341,29 @@
           "accuracy": 0.46218487394957986
         },
         "down_calls": {
-          "signals": 294,
-          "correct": 111,
-          "accuracy": 0.37755102040816324
+          "signals": 298,
+          "correct": 115,
+          "accuracy": 0.3859060402684564
         },
         "strong_calls": {
-          "signals": 283,
-          "correct": 122,
-          "accuracy": 0.43109540636042404
+          "signals": 288,
+          "correct": 126,
+          "accuracy": 0.4375
         },
         "mild_calls": {
-          "signals": 487,
+          "signals": 486,
           "correct": 209,
-          "accuracy": 0.42915811088295686
+          "accuracy": 0.43004115226337447
         },
         "price_macro_agree": {
-          "signals": 344,
-          "correct": 159,
-          "accuracy": 0.4622093023255814
+          "signals": 345,
+          "correct": 160,
+          "accuracy": 0.463768115942029
         },
         "price_macro_disagree": {
-          "signals": 426,
-          "correct": 172,
-          "accuracy": 0.40375586854460094
+          "signals": 429,
+          "correct": 175,
+          "accuracy": 0.40792540792540793
         }
       },
       "research": {
@@ -372,29 +372,29 @@
         "untouched_fraction": 0.2,
         "baseline_development": {
           "signals": 590,
-          "correct": 244,
-          "accuracy": 0.4135593220338983
+          "correct": 245,
+          "accuracy": 0.4152542372881356
         },
         "baseline_untouched": {
-          "signals": 180,
-          "correct": 87,
-          "accuracy": 0.48333333333333334
+          "signals": 184,
+          "correct": 90,
+          "accuracy": 0.4891304347826087
         },
         "candidate": {
-          "price_coef": 0.5,
-          "macro_coef": 0.0,
-          "edge": 0.08,
+          "price_coef": 1.0,
+          "macro_coef": 1.0,
+          "edge": 0.12,
           "development": {
-            "signals": 158,
-            "accuracy": 0.44936708860759494,
-            "signal_rate": 0.1597573306370071
+            "signals": 326,
+            "accuracy": 0.450920245398773,
+            "signal_rate": 0.32962588473205257
           },
           "untouched": {
-            "signals": 75,
-            "accuracy": 0.4533333333333333,
-            "signal_rate": 0.3024193548387097
+            "signals": 119,
+            "accuracy": 0.46218487394957986,
+            "signal_rate": 0.4798387096774194
           },
-          "untouched_improvement": -0.030000000000000027
+          "untouched_improvement": -0.026945560833028848
         },
         "note": "Candidate chosen on older 80%; newest 20% remained untouched until final check."
       }
@@ -402,42 +402,42 @@
     "7974.T": {
       "name": "任天堂",
       "kind": "equity",
-      "available_start": "2021-12-14",
-      "available_end": "2026-11-12",
+      "available_start": "2021-12-21",
+      "available_end": "2026-11-19",
       "usable_days": 1200,
       "windows": {
         "1y": {
           "days": 243,
-          "signals": 194,
-          "correct": 99,
-          "accuracy": 0.5103092783505154,
-          "signal_rate": 0.7983539094650206
+          "signals": 196,
+          "correct": 103,
+          "accuracy": 0.5255102040816326,
+          "signal_rate": 0.8065843621399177
         },
         "3y": {
           "days": 731,
           "signals": 543,
-          "correct": 258,
-          "accuracy": 0.47513812154696133,
+          "correct": 261,
+          "accuracy": 0.48066298342541436,
           "signal_rate": 0.7428180574555403
         },
         "5y": {
           "days": 1200,
           "signals": 862,
-          "correct": 393,
-          "accuracy": 0.45591647331786544,
+          "correct": 394,
+          "accuracy": 0.45707656612529,
           "signal_rate": 0.7183333333333334
         }
       },
       "diagnostics": {
         "all_signals": {
           "signals": 862,
-          "correct": 393,
-          "accuracy": 0.45591647331786544
+          "correct": 394,
+          "accuracy": 0.45707656612529
         },
         "up_calls": {
           "signals": 480,
-          "correct": 219,
-          "accuracy": 0.45625
+          "correct": 220,
+          "accuracy": 0.4583333333333333
         },
         "down_calls": {
           "signals": 382,
@@ -445,24 +445,24 @@
           "accuracy": 0.45549738219895286
         },
         "strong_calls": {
-          "signals": 471,
-          "correct": 220,
-          "accuracy": 0.46709129511677283
+          "signals": 472,
+          "correct": 222,
+          "accuracy": 0.4703389830508475
         },
         "mild_calls": {
-          "signals": 391,
-          "correct": 173,
-          "accuracy": 0.4424552429667519
+          "signals": 390,
+          "correct": 172,
+          "accuracy": 0.441025641025641
         },
         "price_macro_agree": {
-          "signals": 402,
+          "signals": 401,
           "correct": 190,
-          "accuracy": 0.472636815920398
+          "accuracy": 0.47381546134663344
         },
         "price_macro_disagree": {
-          "signals": 460,
-          "correct": 203,
-          "accuracy": 0.44130434782608696
+          "signals": 461,
+          "correct": 204,
+          "accuracy": 0.44251626898047725
         }
       },
       "research": {
@@ -470,30 +470,30 @@
         "development_fraction": 0.8,
         "untouched_fraction": 0.2,
         "baseline_development": {
-          "signals": 670,
-          "correct": 294,
-          "accuracy": 0.4388059701492537
+          "signals": 669,
+          "correct": 292,
+          "accuracy": 0.43647234678624813
         },
         "baseline_untouched": {
-          "signals": 192,
-          "correct": 99,
-          "accuracy": 0.515625
+          "signals": 193,
+          "correct": 102,
+          "accuracy": 0.5284974093264249
         },
         "candidate": {
           "price_coef": 0.0,
           "macro_coef": 1.0,
           "edge": 0.05,
           "development": {
-            "signals": 269,
-            "accuracy": 0.5204460966542751,
-            "signal_rate": 0.28020833333333334
+            "signals": 273,
+            "accuracy": 0.5238095238095238,
+            "signal_rate": 0.284375
           },
           "untouched": {
             "signals": 67,
-            "accuracy": 0.417910447761194,
+            "accuracy": 0.40298507462686567,
             "signal_rate": 0.2791666666666667
           },
-          "untouched_improvement": -0.09771455223880599
+          "untouched_improvement": -0.1255123346995592
         },
         "note": "Candidate chosen on older 80%; newest 20% remained untouched until final check."
       }
@@ -501,16 +501,16 @@
     "8316.T": {
       "name": "三井住友FG",
       "kind": "equity",
-      "available_start": "2021-12-14",
-      "available_end": "2026-11-12",
+      "available_start": "2021-12-21",
+      "available_end": "2026-11-19",
       "usable_days": 1200,
       "windows": {
         "1y": {
           "days": 243,
-          "signals": 196,
-          "correct": 93,
-          "accuracy": 0.4744897959183674,
-          "signal_rate": 0.8065843621399177
+          "signals": 195,
+          "correct": 92,
+          "accuracy": 0.4717948717948718,
+          "signal_rate": 0.8024691358024691
         },
         "3y": {
           "days": 731,
@@ -521,17 +521,17 @@
         },
         "5y": {
           "days": 1200,
-          "signals": 832,
-          "correct": 372,
-          "accuracy": 0.44711538461538464,
-          "signal_rate": 0.6933333333333334
+          "signals": 834,
+          "correct": 374,
+          "accuracy": 0.44844124700239807,
+          "signal_rate": 0.695
         }
       },
       "diagnostics": {
         "all_signals": {
-          "signals": 832,
-          "correct": 372,
-          "accuracy": 0.44711538461538464
+          "signals": 834,
+          "correct": 374,
+          "accuracy": 0.44844124700239807
         },
         "up_calls": {
           "signals": 620,
@@ -539,24 +539,24 @@
           "accuracy": 0.4661290322580645
         },
         "down_calls": {
-          "signals": 212,
-          "correct": 83,
-          "accuracy": 0.3915094339622642
+          "signals": 214,
+          "correct": 85,
+          "accuracy": 0.397196261682243
         },
         "strong_calls": {
-          "signals": 471,
+          "signals": 473,
           "correct": 221,
-          "accuracy": 0.4692144373673036
+          "accuracy": 0.46723044397463004
         },
         "mild_calls": {
           "signals": 361,
-          "correct": 151,
-          "accuracy": 0.4182825484764543
+          "correct": 153,
+          "accuracy": 0.42382271468144045
         },
         "price_macro_agree": {
-          "signals": 406,
-          "correct": 196,
-          "accuracy": 0.4827586206896552
+          "signals": 408,
+          "correct": 198,
+          "accuracy": 0.4852941176470588
         },
         "price_macro_disagree": {
           "signals": 426,
@@ -569,30 +569,30 @@
         "development_fraction": 0.8,
         "untouched_fraction": 0.2,
         "baseline_development": {
-          "signals": 639,
-          "correct": 281,
-          "accuracy": 0.4397496087636933
+          "signals": 642,
+          "correct": 284,
+          "accuracy": 0.4423676012461059
         },
         "baseline_untouched": {
-          "signals": 193,
-          "correct": 91,
-          "accuracy": 0.47150259067357514
+          "signals": 192,
+          "correct": 90,
+          "accuracy": 0.46875
         },
         "candidate": {
           "price_coef": 0.0,
           "macro_coef": 1.0,
           "edge": 0.05,
           "development": {
-            "signals": 265,
-            "accuracy": 0.5886792452830188,
-            "signal_rate": 0.2760416666666667
+            "signals": 269,
+            "accuracy": 0.5799256505576208,
+            "signal_rate": 0.28020833333333334
           },
           "untouched": {
             "signals": 68,
-            "accuracy": 0.5441176470588235,
+            "accuracy": 0.5882352941176471,
             "signal_rate": 0.2833333333333333
           },
-          "untouched_improvement": 0.07261505638524834
+          "untouched_improvement": 0.11948529411764708
         },
         "note": "Candidate chosen on older 80%; newest 20% remained untouched until final check."
       }
@@ -601,36 +601,36 @@
       "name": "キオクシア",
       "kind": "equity",
       "available_start": "2025-01-22",
-      "available_end": "2026-11-12",
-      "usable_days": 441,
+      "available_end": "2026-11-19",
+      "usable_days": 446,
       "windows": {
         "1y": {
           "days": 243,
-          "signals": 230,
-          "correct": 121,
-          "accuracy": 0.5260869565217391,
-          "signal_rate": 0.9465020576131687
+          "signals": 231,
+          "correct": 123,
+          "accuracy": 0.5324675324675324,
+          "signal_rate": 0.9506172839506173
         },
         "3y": {
-          "days": 441,
-          "signals": 404,
-          "correct": 209,
-          "accuracy": 0.5173267326732673,
-          "signal_rate": 0.9160997732426304
+          "days": 446,
+          "signals": 409,
+          "correct": 212,
+          "accuracy": 0.5183374083129584,
+          "signal_rate": 0.9170403587443946
         },
         "5y": {
-          "days": 441,
-          "signals": 404,
-          "correct": 209,
-          "accuracy": 0.5173267326732673,
-          "signal_rate": 0.9160997732426304
+          "days": 446,
+          "signals": 409,
+          "correct": 212,
+          "accuracy": 0.5183374083129584,
+          "signal_rate": 0.9170403587443946
         }
       },
       "diagnostics": {
         "all_signals": {
-          "signals": 404,
-          "correct": 209,
-          "accuracy": 0.5173267326732673
+          "signals": 409,
+          "correct": 212,
+          "accuracy": 0.5183374083129584
         },
         "up_calls": {
           "signals": 253,
@@ -638,14 +638,14 @@
           "accuracy": 0.5335968379446641
         },
         "down_calls": {
-          "signals": 151,
-          "correct": 74,
-          "accuracy": 0.4900662251655629
+          "signals": 156,
+          "correct": 77,
+          "accuracy": 0.4935897435897436
         },
         "strong_calls": {
-          "signals": 331,
-          "correct": 170,
-          "accuracy": 0.513595166163142
+          "signals": 336,
+          "correct": 173,
+          "accuracy": 0.5148809523809523
         },
         "mild_calls": {
           "signals": 73,
@@ -653,14 +653,14 @@
           "accuracy": 0.5342465753424658
         },
         "price_macro_agree": {
-          "signals": 172,
-          "correct": 97,
-          "accuracy": 0.563953488372093
+          "signals": 176,
+          "correct": 99,
+          "accuracy": 0.5625
         },
         "price_macro_disagree": {
-          "signals": 232,
-          "correct": 112,
-          "accuracy": 0.4827586206896552
+          "signals": 233,
+          "correct": 113,
+          "accuracy": 0.48497854077253216
         }
       },
       "research": {
@@ -668,30 +668,30 @@
         "development_fraction": 0.8,
         "untouched_fraction": 0.2,
         "baseline_development": {
-          "signals": 323,
-          "correct": 172,
-          "accuracy": 0.5325077399380805
+          "signals": 327,
+          "correct": 175,
+          "accuracy": 0.5351681957186545
         },
         "baseline_untouched": {
-          "signals": 81,
+          "signals": 82,
           "correct": 37,
-          "accuracy": 0.4567901234567901
+          "accuracy": 0.45121951219512196
         },
         "candidate": {
           "price_coef": 0.5,
-          "macro_coef": 0.0,
+          "macro_coef": 1.0,
           "edge": 0.12,
           "development": {
-            "signals": 217,
-            "accuracy": 0.5529953917050692,
-            "signal_rate": 0.6164772727272727
+            "signals": 209,
+            "accuracy": 0.5550239234449761,
+            "signal_rate": 0.5870786516853933
           },
           "untouched": {
-            "signals": 48,
-            "accuracy": 0.4583333333333333,
-            "signal_rate": 0.5393258426966292
+            "signals": 47,
+            "accuracy": 0.44680851063829785,
+            "signal_rate": 0.5222222222222223
           },
-          "untouched_improvement": 0.0015432098765432167
+          "untouched_improvement": -0.004411001556824112
         },
         "note": "Candidate chosen on older 80%; newest 20% remained untouched until final check."
       }
@@ -699,8 +699,8 @@
     "8136.T": {
       "name": "サンリオ",
       "kind": "equity",
-      "available_start": "2021-12-14",
-      "available_end": "2026-11-12",
+      "available_start": "2021-12-21",
+      "available_end": "2026-11-19",
       "usable_days": 1200,
       "windows": {
         "1y": {
@@ -712,10 +712,10 @@
         },
         "3y": {
           "days": 731,
-          "signals": 637,
-          "correct": 308,
-          "accuracy": 0.4835164835164835,
-          "signal_rate": 0.8714090287277702
+          "signals": 639,
+          "correct": 310,
+          "accuracy": 0.48513302034428796,
+          "signal_rate": 0.8741450068399452
         },
         "5y": {
           "days": 1200,
@@ -742,24 +742,24 @@
           "accuracy": 0.4595238095238095
         },
         "strong_calls": {
-          "signals": 749,
-          "correct": 340,
-          "accuracy": 0.4539385847797063
+          "signals": 750,
+          "correct": 341,
+          "accuracy": 0.45466666666666666
         },
         "mild_calls": {
-          "signals": 284,
-          "correct": 141,
-          "accuracy": 0.4964788732394366
+          "signals": 283,
+          "correct": 140,
+          "accuracy": 0.49469964664310956
         },
         "price_macro_agree": {
-          "signals": 450,
-          "correct": 231,
-          "accuracy": 0.5133333333333333
+          "signals": 452,
+          "correct": 233,
+          "accuracy": 0.5154867256637168
         },
         "price_macro_disagree": {
-          "signals": 583,
-          "correct": 250,
-          "accuracy": 0.4288164665523156
+          "signals": 581,
+          "correct": 248,
+          "accuracy": 0.4268502581755594
         }
       },
       "research": {
@@ -781,9 +781,9 @@
           "macro_coef": 1.0,
           "edge": 0.05,
           "development": {
-            "signals": 241,
-            "accuracy": 0.5103734439834025,
-            "signal_rate": 0.25104166666666666
+            "signals": 245,
+            "accuracy": 0.5102040816326531,
+            "signal_rate": 0.2552083333333333
           },
           "untouched": {
             "signals": 61,
@@ -798,42 +798,42 @@
     "5401.T": {
       "name": "日本製鉄",
       "kind": "equity",
-      "available_start": "2021-12-14",
-      "available_end": "2026-11-12",
+      "available_start": "2021-12-21",
+      "available_end": "2026-11-19",
       "usable_days": 1200,
       "windows": {
         "1y": {
           "days": 243,
-          "signals": 166,
-          "correct": 74,
-          "accuracy": 0.4457831325301205,
-          "signal_rate": 0.6831275720164609
+          "signals": 170,
+          "correct": 75,
+          "accuracy": 0.4411764705882353,
+          "signal_rate": 0.6995884773662552
         },
         "3y": {
           "days": 731,
-          "signals": 519,
-          "correct": 232,
-          "accuracy": 0.44701348747591524,
-          "signal_rate": 0.7099863201094391
+          "signals": 520,
+          "correct": 231,
+          "accuracy": 0.4442307692307692,
+          "signal_rate": 0.7113543091655267
         },
         "5y": {
           "days": 1200,
           "signals": 896,
-          "correct": 394,
-          "accuracy": 0.43973214285714285,
+          "correct": 393,
+          "accuracy": 0.43861607142857145,
           "signal_rate": 0.7466666666666667
         }
       },
       "diagnostics": {
         "all_signals": {
           "signals": 896,
-          "correct": 394,
-          "accuracy": 0.43973214285714285
+          "correct": 393,
+          "accuracy": 0.43861607142857145
         },
         "up_calls": {
           "signals": 547,
-          "correct": 257,
-          "accuracy": 0.46983546617915906
+          "correct": 256,
+          "accuracy": 0.4680073126142596
         },
         "down_calls": {
           "signals": 349,
@@ -841,24 +841,24 @@
           "accuracy": 0.39255014326647564
         },
         "strong_calls": {
-          "signals": 470,
-          "correct": 208,
-          "accuracy": 0.4425531914893617
+          "signals": 471,
+          "correct": 209,
+          "accuracy": 0.4437367303609342
         },
         "mild_calls": {
-          "signals": 426,
-          "correct": 186,
-          "accuracy": 0.43661971830985913
+          "signals": 425,
+          "correct": 184,
+          "accuracy": 0.4329411764705882
         },
         "price_macro_agree": {
-          "signals": 417,
-          "correct": 200,
-          "accuracy": 0.47961630695443647
+          "signals": 416,
+          "correct": 199,
+          "accuracy": 0.47836538461538464
         },
         "price_macro_disagree": {
-          "signals": 479,
+          "signals": 480,
           "correct": 194,
-          "accuracy": 0.40501043841336115
+          "accuracy": 0.4041666666666667
         }
       },
       "research": {
@@ -866,30 +866,30 @@
         "development_fraction": 0.8,
         "untouched_fraction": 0.2,
         "baseline_development": {
-          "signals": 730,
-          "correct": 320,
-          "accuracy": 0.4383561643835616
+          "signals": 727,
+          "correct": 318,
+          "accuracy": 0.437414030261348
         },
         "baseline_untouched": {
-          "signals": 166,
-          "correct": 74,
-          "accuracy": 0.4457831325301205
+          "signals": 169,
+          "correct": 75,
+          "accuracy": 0.4437869822485207
         },
         "candidate": {
           "price_coef": 0.0,
           "macro_coef": 1.0,
           "edge": 0.05,
           "development": {
-            "signals": 268,
-            "accuracy": 0.5335820895522388,
-            "signal_rate": 0.2791666666666667
+            "signals": 272,
+            "accuracy": 0.5257352941176471,
+            "signal_rate": 0.2833333333333333
           },
           "untouched": {
             "signals": 73,
-            "accuracy": 0.4657534246575342,
+            "accuracy": 0.4931506849315068,
             "signal_rate": 0.30416666666666664
           },
-          "untouched_improvement": 0.019970292127413747
+          "untouched_improvement": 0.04936370268298612
         },
         "note": "Candidate chosen on older 80%; newest 20% remained untouched until final check."
       }
@@ -897,37 +897,37 @@
     "6522.T": {
       "name": "アスタリスク",
       "kind": "equity",
-      "available_start": "2021-12-14",
-      "available_end": "2026-11-12",
+      "available_start": "2021-12-21",
+      "available_end": "2026-11-19",
       "usable_days": 1200,
       "windows": {
         "1y": {
           "days": 243,
-          "signals": 209,
-          "correct": 104,
-          "accuracy": 0.49760765550239233,
-          "signal_rate": 0.8600823045267489
+          "signals": 213,
+          "correct": 109,
+          "accuracy": 0.5117370892018779,
+          "signal_rate": 0.8765432098765432
         },
         "3y": {
           "days": 731,
           "signals": 586,
-          "correct": 263,
-          "accuracy": 0.44880546075085326,
+          "correct": 266,
+          "accuracy": 0.4539249146757679,
           "signal_rate": 0.801641586867305
         },
         "5y": {
           "days": 1200,
           "signals": 989,
-          "correct": 459,
-          "accuracy": 0.4641051567239636,
+          "correct": 460,
+          "accuracy": 0.46511627906976744,
           "signal_rate": 0.8241666666666667
         }
       },
       "diagnostics": {
         "all_signals": {
           "signals": 989,
-          "correct": 459,
-          "accuracy": 0.4641051567239636
+          "correct": 460,
+          "accuracy": 0.46511627906976744
         },
         "up_calls": {
           "signals": 360,
@@ -936,13 +936,13 @@
         },
         "down_calls": {
           "signals": 629,
-          "correct": 319,
-          "accuracy": 0.5071542130365659
+          "correct": 320,
+          "accuracy": 0.5087440381558028
         },
         "strong_calls": {
           "signals": 699,
-          "correct": 340,
-          "accuracy": 0.4864091559370529
+          "correct": 341,
+          "accuracy": 0.48783977110157367
         },
         "mild_calls": {
           "signals": 290,
@@ -950,14 +950,14 @@
           "accuracy": 0.4103448275862069
         },
         "price_macro_agree": {
-          "signals": 448,
-          "correct": 225,
-          "accuracy": 0.5022321428571429
+          "signals": 450,
+          "correct": 228,
+          "accuracy": 0.5066666666666667
         },
         "price_macro_disagree": {
-          "signals": 541,
-          "correct": 234,
-          "accuracy": 0.43253234750462105
+          "signals": 539,
+          "correct": 232,
+          "accuracy": 0.43042671614100186
         }
       },
       "research": {
@@ -965,30 +965,30 @@
         "development_fraction": 0.8,
         "untouched_fraction": 0.2,
         "baseline_development": {
-          "signals": 781,
-          "correct": 355,
-          "accuracy": 0.45454545454545453
+          "signals": 778,
+          "correct": 352,
+          "accuracy": 0.4524421593830334
         },
         "baseline_untouched": {
-          "signals": 208,
-          "correct": 104,
-          "accuracy": 0.5
+          "signals": 211,
+          "correct": 108,
+          "accuracy": 0.5118483412322274
         },
         "candidate": {
           "price_coef": 0.0,
           "macro_coef": 1.0,
           "edge": 0.05,
           "development": {
-            "signals": 223,
-            "accuracy": 0.5739910313901345,
-            "signal_rate": 0.23229166666666667
+            "signals": 228,
+            "accuracy": 0.5701754385964912,
+            "signal_rate": 0.2375
           },
           "untouched": {
-            "signals": 45,
-            "accuracy": 0.5777777777777777,
-            "signal_rate": 0.1875
+            "signals": 44,
+            "accuracy": 0.6136363636363636,
+            "signal_rate": 0.18333333333333332
           },
-          "untouched_improvement": 0.07777777777777772
+          "untouched_improvement": 0.1017880224041362
         },
         "note": "Candidate chosen on older 80%; newest 20% remained untouched until final check."
       }
@@ -996,8 +996,8 @@
     "1736.T": {
       "name": "オーテック",
       "kind": "equity",
-      "available_start": "2021-12-14",
-      "available_end": "2026-11-12",
+      "available_start": "2021-12-21",
+      "available_end": "2026-11-19",
       "usable_days": 1200,
       "windows": {
         "1y": {
@@ -1010,23 +1010,23 @@
         "3y": {
           "days": 731,
           "signals": 497,
-          "correct": 204,
-          "accuracy": 0.4104627766599598,
+          "correct": 203,
+          "accuracy": 0.4084507042253521,
           "signal_rate": 0.679890560875513
         },
         "5y": {
           "days": 1200,
-          "signals": 748,
-          "correct": 280,
-          "accuracy": 0.37433155080213903,
-          "signal_rate": 0.6233333333333333
+          "signals": 752,
+          "correct": 281,
+          "accuracy": 0.37367021276595747,
+          "signal_rate": 0.6266666666666667
         }
       },
       "diagnostics": {
         "all_signals": {
-          "signals": 748,
-          "correct": 280,
-          "accuracy": 0.37433155080213903
+          "signals": 752,
+          "correct": 281,
+          "accuracy": 0.37367021276595747
         },
         "up_calls": {
           "signals": 473,
@@ -1034,29 +1034,29 @@
           "accuracy": 0.4164904862579281
         },
         "down_calls": {
-          "signals": 275,
-          "correct": 83,
-          "accuracy": 0.3018181818181818
+          "signals": 279,
+          "correct": 84,
+          "accuracy": 0.3010752688172043
         },
         "strong_calls": {
-          "signals": 361,
-          "correct": 155,
-          "accuracy": 0.4293628808864266
+          "signals": 366,
+          "correct": 157,
+          "accuracy": 0.42896174863387976
         },
         "mild_calls": {
-          "signals": 387,
-          "correct": 125,
-          "accuracy": 0.32299741602067183
+          "signals": 386,
+          "correct": 124,
+          "accuracy": 0.32124352331606215
         },
         "price_macro_agree": {
-          "signals": 347,
-          "correct": 133,
-          "accuracy": 0.38328530259365995
+          "signals": 350,
+          "correct": 134,
+          "accuracy": 0.38285714285714284
         },
         "price_macro_disagree": {
-          "signals": 401,
+          "signals": 402,
           "correct": 147,
-          "accuracy": 0.36658354114713215
+          "accuracy": 0.3656716417910448
         }
       },
       "research": {
@@ -1064,30 +1064,30 @@
         "development_fraction": 0.8,
         "untouched_fraction": 0.2,
         "baseline_development": {
-          "signals": 580,
-          "correct": 217,
-          "accuracy": 0.3741379310344828
+          "signals": 584,
+          "correct": 219,
+          "accuracy": 0.375
         },
         "baseline_untouched": {
           "signals": 168,
-          "correct": 63,
-          "accuracy": 0.375
+          "correct": 62,
+          "accuracy": 0.36904761904761907
         },
         "candidate": {
           "price_coef": -0.5,
           "macro_coef": 1.0,
-          "edge": 0.08,
+          "edge": 0.12,
           "development": {
-            "signals": 320,
-            "accuracy": 0.4375,
-            "signal_rate": 0.3333333333333333
+            "signals": 148,
+            "accuracy": 0.49324324324324326,
+            "signal_rate": 0.15416666666666667
           },
           "untouched": {
-            "signals": 78,
-            "accuracy": 0.38461538461538464,
-            "signal_rate": 0.325
+            "signals": 38,
+            "accuracy": 0.4473684210526316,
+            "signal_rate": 0.15833333333333333
           },
-          "untouched_improvement": 0.009615384615384637
+          "untouched_improvement": 0.07832080200501251
         },
         "note": "Candidate chosen on older 80%; newest 20% remained untouched until final check."
       }
@@ -1095,23 +1095,23 @@
     "3656.T": {
       "name": "KLab",
       "kind": "equity",
-      "available_start": "2021-12-14",
-      "available_end": "2026-11-12",
+      "available_start": "2021-12-21",
+      "available_end": "2026-11-19",
       "usable_days": 1200,
       "windows": {
         "1y": {
           "days": 243,
-          "signals": 206,
-          "correct": 100,
-          "accuracy": 0.4854368932038835,
-          "signal_rate": 0.8477366255144033
+          "signals": 209,
+          "correct": 104,
+          "accuracy": 0.49760765550239233,
+          "signal_rate": 0.8600823045267489
         },
         "3y": {
           "days": 731,
-          "signals": 587,
-          "correct": 262,
-          "accuracy": 0.4463373083475298,
-          "signal_rate": 0.8030095759233926
+          "signals": 591,
+          "correct": 265,
+          "accuracy": 0.44839255499153974,
+          "signal_rate": 0.8084815321477428
         },
         "5y": {
           "days": 1200,
@@ -1148,14 +1148,14 @@
           "accuracy": 0.49264705882352944
         },
         "price_macro_agree": {
-          "signals": 407,
-          "correct": 203,
-          "accuracy": 0.4987714987714988
+          "signals": 409,
+          "correct": 205,
+          "accuracy": 0.5012224938875306
         },
         "price_macro_disagree": {
-          "signals": 552,
-          "correct": 241,
-          "accuracy": 0.4365942028985507
+          "signals": 550,
+          "correct": 239,
+          "accuracy": 0.43454545454545457
         }
       },
       "research": {
@@ -1163,30 +1163,30 @@
         "development_fraction": 0.8,
         "untouched_fraction": 0.2,
         "baseline_development": {
-          "signals": 755,
-          "correct": 344,
-          "accuracy": 0.4556291390728477
+          "signals": 752,
+          "correct": 341,
+          "accuracy": 0.45345744680851063
         },
         "baseline_untouched": {
-          "signals": 204,
-          "correct": 100,
-          "accuracy": 0.49019607843137253
+          "signals": 207,
+          "correct": 103,
+          "accuracy": 0.4975845410628019
         },
         "candidate": {
           "price_coef": 0.0,
           "macro_coef": 1.0,
           "edge": 0.05,
           "development": {
-            "signals": 244,
-            "accuracy": 0.5573770491803278,
-            "signal_rate": 0.25416666666666665
+            "signals": 248,
+            "accuracy": 0.5524193548387096,
+            "signal_rate": 0.25833333333333336
           },
           "untouched": {
-            "signals": 49,
-            "accuracy": 0.5510204081632653,
-            "signal_rate": 0.20416666666666666
+            "signals": 48,
+            "accuracy": 0.5625,
+            "signal_rate": 0.2
           },
-          "untouched_improvement": 0.06082432973189272
+          "untouched_improvement": 0.06491545893719808
         },
         "note": "Candidate chosen on older 80%; newest 20% remained untouched until final check."
       }
