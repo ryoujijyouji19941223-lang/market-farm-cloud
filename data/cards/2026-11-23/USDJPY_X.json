@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-23T12:40:48.607826+09:00",
+  "prediction_date": "2026-11-23",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-23T12:40:48.607826+09:00",
+  "market_data_through": "2026-11-23",
+  "reference_price": 158.98399353027344,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.10684974724495117,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.5495650384997146,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.020047751724060724,
+      "direction": "NEUTRAL",
+      "day_change": -0.004527085217508997,
+      "momentum5": -0.004981882933438708,
+      "trend": 0.004997246239834441,
+      "volatility": 0.049729409329055826
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "ドル円見通し｜AI好決算でも世界株急落、NASDAQ5.28％安 米金利低下で158円台へ【相場の現在地】 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9PRlhjNk44QjdXVEZuSVR3RTZ0NGQ1SmdNLURkUHlLTGhKZ3RXYy1Ndk1JUUFqMDAxS2hSeGgxV3NKcHkxVDEtaHZ4blFJcTgxS3JBcWNEUmRuUE9tR2pYanh1VQ?oc=5",
+          "published_at": "Mon, 23 Nov 2026 00:00:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀4月会合 利上げの“サイン”はあるのか？ 日銀短観と支店長会議報告から 野村證券・岩下真理 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4wV1dxc3FIRTlMeHBfWWM5YW9GV3ZZUkxtTjNpY1BtaFEtQUhjVnlVRWxCZkJ4dm9tNGdUZGNrQ3ViOFc1aE5jODRHVHhscFJfbVVRWHJEb1VzazYzTkxz?oc=5",
+          "published_at": "Fri, 20 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "東京為替：ドル・円は159円03銭まで上昇、朝方から上値を伸ばす(フィスコ) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNZE9zNjhQdHA2QTBPR1U2V0xEMDI0cVQyOHJtdXNoR0RTYkYzVnBfNXpyZGFrNnJaMERDd1hKMkxlalBpcTVPUHFJS2xSTUk3VldrRlF1UnlwTTFZVngxS2dzbGlGb2ZtcEdiWWo4cXFKV1h6ckd3VjlZMDMyYXVUUGE1Z3FLdGc?oc=5",
+          "published_at": "Mon, 23 Nov 2026 00:06:13 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "東京為替、ドル円が159円台前半まで上昇 FRB高官の利上げ示唆で円売り優勢 - BigGo ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9UQ051eDdXWmx2Zmx3bll3VVFGRFlYYU1ybktiRWI1TmFMVmZlbFlYaWFvckNjUW93MmRPa0JXQU9sY3RzM3kwU1JWX0p3OW1oTE5Oc3dHbVI5Q0Ewd2NiU2Jkc3VhS1hZR2hxbXdVVnVZVG94?oc=5",
+          "published_at": "Mon, 23 Nov 2026 01:05:00 GMT",
+          "source_url": "https://finance.biggo.jp"
+        },
+        {
+          "title": "ベッセント米財務長官、FRBにけん制球「過度な引き締めは政策ミスになりかねない」 - TBS NEWS DIG",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9QX05Rdi1XVGtyTHQtZXl4ZXYwNG9tRjgzeXZleVlYWWJyUkNmSW9VSE4xTzFfQ1hWeDh5eFNDZUkydU9EVFp1TlRKYjlYR2p4UF9KbTJDc3VZNnJJc19tdzhTR2k5MFk?oc=5",
+          "published_at": "Mon, 23 Nov 2026 00:22:00 GMT",
+          "source_url": "https://newsdig.tbs.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.05478184048393248,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.14699044777033377,
+        "japan_risk": 0.23088921204755153,
+        "usd_rate_pressure": -0.1821945259404505
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

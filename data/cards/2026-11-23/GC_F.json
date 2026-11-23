@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-23T12:40:48.607826+09:00",
+  "prediction_date": "2026-11-23",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-23T12:40:48.607826+09:00",
+  "market_data_through": "2026-11-22",
+  "reference_price": 3601.800048828125,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.5922566528934231,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.35928958171762443,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.633721423306873,
+      "direction": "DOWN",
+      "day_change": 0.024577615316758505,
+      "momentum5": -0.06519593853409678,
+      "trend": -0.06085338016575359,
+      "volatility": 0.3207191337530773
+    },
+    "news": {
+      "score": 0.75,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "長期金利3％到達で日本株はどう動く？ 金利上昇に強い属性を備える銘柄リスト 野村證券ストラテジストが解説 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBkVWJ3Y0NkRVVTWVRXX2dYdkJDZHlvZ1FlMTBNUm5IT3RZTnVrbF81b3BEN1FxVmZOVHloSTNIYWZPRk9ialJzeUVpTXNBX3ZLdVl0cGJuczJKMU41R3FZ?oc=5",
+          "published_at": "Fri, 20 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "金利が動く世界、銀行・証券・地銀に迫るビジネスモデルの転換 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE05NGVtbWdieGNJWmtXdVo4QUlVM0Z1S2xjazl2RXFCSkNINnhHQUF6Z0dxQ0x6NmV5Q0xUQktCZlRKeG0xRGRlbDRUTWI3QjAwSXpQelJqV080aEJsei0xS21Yb0x6Z2FkSndUeA?oc=5",
+          "published_at": "Sun, 22 Nov 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "ドル円見通し｜AI好決算でも世界株急落、NASDAQ5.28％安 米金利低下で158円台へ【相場の現在地】 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9PRlhjNk44QjdXVEZuSVR3RTZ0NGQ1SmdNLURkUHlLTGhKZ3RXYy1Ndk1JUUFqMDAxS2hSeGgxV3NKcHkxVDEtaHZ4blFJcTgxS3JBcWNEUmRuUE9tR2pYanh1VQ?oc=5",
+          "published_at": "Mon, 23 Nov 2026 00:00:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "提言｜金利ある世界の資産運用を考える－預金と投信を競わせない地域金融の新たな役割－ - ニッキンONLINE",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1TSlVRODAycDd6RC0zUmV4UzZCWkdLNnhDa20zaFEybE5mSmsya09tdkFaMlRPMkpLSWR4ZWx4cXhRRVVDYnFWQjlTc3RZOTlsNFdNMjRlbk1mbnBLbTVuVkdPU1pVVnlMR2c?oc=5",
+          "published_at": "Sun, 22 Nov 2026 20:30:26 GMT",
+          "source_url": "https://www.nikkinonline.com"
+        },
+        {
+          "title": "金利上昇 ６行増収増益 利息、運用益増 ３行最高益 岡山、広島、香川の地銀と第二地銀 - 山陽新聞",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5BZEdraWFSWEpDbHlrOHA3NGFnUlJPT1RqcTVYSlduczBiVjl4MmpsSkVxQnBnOWlrZXVFS2RHaVVCMDJ2SFhOZHdXWXlQWTN5aGc?oc=5",
+          "published_at": "Mon, 23 Nov 2026 00:51:20 GMT",
+          "source_url": "https://www.sanyonews.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.22550723363166308,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.14699044777033377,
+        "japan_risk": 0.23088921204755153,
+        "usd_rate_pressure": -0.1821945259404505
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

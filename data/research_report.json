@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T08:53:20.530010+00:00",
+  "generated_at": "2026-11-23T03:40:49.303360+00:00",
   "replay_months": [
     "2021-09",
     "2021-10",
@@ -4150,7 +4150,7 @@
     "Adjusted daily price histories are not archived as-published vintages.",
     "Market availability is conservatively buffered rather than verified to dissemination time."
   ],
-  "live_settled_rows": 529,
+  "live_settled_rows": 532,
   "note": "Diagnostics only. These findings must not auto-change the production model.",
   "by_asset": {
     "1736.T": {
@@ -5194,39 +5194,39 @@
     "CHFJPY=X": {
       "name": "スイスフラン円",
       "summary": {
-        "observations": 44,
-        "signals": 15,
+        "observations": 45,
+        "signals": 16,
         "flat_forecasts": 12,
         "abstained": 17,
-        "coverage": 0.6136363636363636,
-        "directional_coverage": 0.3409090909090909,
+        "coverage": 0.6222222222222222,
+        "directional_coverage": 0.35555555555555557,
         "correct": 3,
-        "accuracy": 0.2,
-        "all_forecast_accuracy": 0.2222222222222222
+        "accuracy": 0.1875,
+        "all_forecast_accuracy": 0.21428571428571427
       },
       "result_types": {
         "動きを見逃した": 16,
         "一致": 16,
-        "動くと読んだが横ばい": 7,
+        "動くと読んだが横ばい": 8,
         "方向を逆に読んだ": 5
       }
     },
     "EURJPY=X": {
       "name": "ユーロ円",
       "summary": {
-        "observations": 44,
+        "observations": 45,
         "signals": 7,
-        "flat_forecasts": 18,
+        "flat_forecasts": 19,
         "abstained": 19,
-        "coverage": 0.5681818181818182,
-        "directional_coverage": 0.1590909090909091,
+        "coverage": 0.5777777777777777,
+        "directional_coverage": 0.15555555555555556,
         "correct": 2,
         "accuracy": 0.2857142857142857,
-        "all_forecast_accuracy": 0.28
+        "all_forecast_accuracy": 0.3076923076923077
       },
       "result_types": {
         "動きを見逃した": 22,
-        "一致": 17,
+        "一致": 18,
         "方向を逆に読んだ": 4,
         "動くと読んだが横ばい": 1
       }
@@ -5254,20 +5254,20 @@
     "USDJPY=X": {
       "name": "ドル円",
       "summary": {
-        "observations": 44,
-        "signals": 14,
+        "observations": 45,
+        "signals": 15,
         "flat_forecasts": 12,
         "abstained": 18,
-        "coverage": 0.5909090909090909,
-        "directional_coverage": 0.3181818181818182,
+        "coverage": 0.6,
+        "directional_coverage": 0.3333333333333333,
         "correct": 3,
-        "accuracy": 0.21428571428571427,
-        "all_forecast_accuracy": 0.2692307692307692
+        "accuracy": 0.2,
+        "all_forecast_accuracy": 0.25925925925925924
       },
       "result_types": {
         "動きを見逃した": 15,
         "一致": 17,
-        "動くと読んだが横ばい": 8,
+        "動くと読んだが横ばい": 9,
         "方向を逆に読んだ": 4
       }
     }

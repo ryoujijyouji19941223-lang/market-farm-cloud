@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-23T12:40:48.607826+09:00",
+  "prediction_date": "2026-11-23",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-23T12:40:48.607826+09:00",
+  "market_data_through": "2026-11-23",
+  "reference_price": 189.23599243164062,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.2029725542417519,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.5330947426806993,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.10493543426058605,
+      "direction": "DOWN",
+      "day_change": 0.000375329199522767,
+      "momentum5": -0.006040408148119236,
+      "trend": -0.010145191272658893,
+      "volatility": 0.05294898646361517
+    },
+    "news": {
+      "score": 0.625,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀は「普通」の利上げペースへ 2027年の利上げ局面終了後、超長期金利の低下を予想 野村證券・宍戸知暁 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9MZWVXNWxHQ1VPREtUZmFGQ3Q2U0M2Wmx1QmJtTXpNaGR6OGNFanlwMVdqUDdXcHpKWVEtd3ktZ3ZBRHVCLWVldGd3WHE0QzVkN01rVENmVUpqREdGOTZZ?oc=5",
+          "published_at": "Fri, 20 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "【展望】【展望】気候変動オペ見直しに映る日銀の「静かなQT」 ～脚注に込められた意図？ - ニッキンONLINE",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1Cc0RZNlpJVDRkTjAzdTFha0ZWM3M2TmJ1TEc1aUJwUjFraEpCUG1hdVl0Nl9ieVRScVBzSlhNSXU2ek90TjFvdFZvQzhTRmdHQ0ppSWd2Qm9vdE1hajNKbmtLY2pES2pIOWc?oc=5",
+          "published_at": "Sun, 22 Nov 2026 20:30:20 GMT",
+          "source_url": "https://www.nikkinonline.com"
+        },
+        {
+          "title": "日銀・植田総裁、個人消費「先行きは回復」 利上げ路線は継続 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxV0F3R3V1ZkVrSWpwVS03aFZfaEtuNjFWV3h2d0hJSmhWOHFJUlhUV3NlUmNlbVllYlE0WngyZlpOd2QzWkFMaEt3RFFKSEljcmxHUndhaFJmYjVabWVLbDlvVXBMNnBOSk9WeA?oc=5",
+          "published_at": "Thu, 19 Nov 2026 07:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "日銀の物価目標“到達”でも喜んでいられない「物価も金利も2％」時代、金融政策に「4つの課題」 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1HdmlJUVJHQV82UThhMG1NdzRrVVJfR2EwRS13ZWY4bzBZaFl5T2s0WG9mMV9NbXlfeDk5cWwwTWJ3WktZR29PUWJGSmk?oc=5",
+          "published_at": "Sat, 21 Nov 2026 19:55:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "日銀利上げの「残弾」はあと何発？最タカ派と最ハト派のはざまで読む利上げの行方 - トウシル",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1NVlNzV3g3M2tnWUU5dmVFZEVHM2JwUnV0a3AzR2hMT2JETFpLb1BTY3BBcm1sdFVzb1dhVThZMkxheEg4UXgzbkRWR1lYVzA4bHRuWTVlUVNGQQ?oc=5",
+          "published_at": "Sat, 21 Nov 2026 02:00:00 GMT",
+          "source_url": "https://media.rakuten-sec.net"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.16910972629702253,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.14699044777033377,
+        "japan_risk": 0.23088921204755153,
+        "usd_rate_pressure": -0.1821945259404505
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

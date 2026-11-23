@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-23T12:40:48.607826+09:00",
+  "prediction_date": "2026-11-23",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-23T12:40:48.607826+09:00",
+  "market_data_through": "2026-11-20",
+  "reference_price": 1009.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.584904053143061,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.23111897110648366,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.824858901680972,
+      "direction": "DOWN",
+      "day_change": -0.05656848994857411,
+      "momentum5": -0.0905813429472736,
+      "trend": -0.10118845500848905,
+      "volatility": 0.43825436932977824
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "【サンリオ】クロミのかわいいイベント限定・完売アイテムがオンラインショップに登場！ 「KUROMI’S MYSTERIOUS DEPARTMENT STORE」限定商品の受注販売が実施中 - PASH! PLUS",
+          "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5jWlQ5TDZmMlY3M1VfNWhsbGdQckJYZDVHajhaX1FjWTJ6RHJQcGxIOExmUHFLR0g5ZWUtR1B4ZEh5eVUwZkE4NThYRFNGUQ?oc=5",
+          "published_at": "Mon, 23 Nov 2026 00:56:15 GMT",
+          "source_url": "https://www.pashplus.jp"
+        },
+        {
+          "title": "「サンリオキャラクターズ」が12星座に変身！ガシャポン「星座スイングマスコット」発売 - au Webポータル",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1aWGVZRlBxNGRWY29uOXBKYnV6YVc1STk2eVE2S1ZGRWI1SW51UGVMODM2Tm50YmZvd0lxM3dFSjhFcTdldlhsRVhrN2x2YmQ3RkhJOVItTm9UM0FjdlIzUWJGWmFCc2lxZUZZLXJB?oc=5",
+          "published_at": "Sun, 22 Nov 2026 23:27:57 GMT",
+          "source_url": "https://article.auone.jp"
+        },
+        {
+          "title": "コンビニで買える「サンリオ新作アクキー」が可愛すぎ！ 全6種ランダム食玩を開封レポート - ぴあエンタメ情報",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9sSHc1QVNQVW5salc5MG4wcTFDSDN2OWY4cVQ0bW9FRmZLR2Rxd1lBU2dUWUdQVlBMem1RODNtZUpyV1JGM3lFOE5rTVYwNGluZzEybF9CZUFKR0tZb09F?oc=5",
+          "published_at": "Mon, 23 Nov 2026 03:00:00 GMT",
+          "source_url": "https://lp.p.pia.jp"
+        },
+        {
+          "title": "着ぐるみ部分はふわふわフロッキー加工で表現！「サンリオキャラクターズ」より、ラテクマデザインのガシャポンクリップが登場！ - 電撃ホビーウェブ",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1BRU1jU2lCeEhEaVZpT0o1VjVvemZPbnBlVGU0S01WeGdWQmY4OUppdTVzV3gzYmcxcENjZWJ0amtMYjZKM1RYZjcwZzFFTC02?oc=5",
+          "published_at": "Sun, 22 Nov 2026 22:30:00 GMT",
+          "source_url": "https://hobby.dengeki.com"
+        },
+        {
+          "title": "あなたの星座はどのキャラクター？ 「サンリオキャラクターズ12星座ガシャポン®」が来週11月第4週から順次発売 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1pSjFYaDlUemNRbGxxa1l2LXUxVEowc1FPOVZYTFVzRkRnM0x2WUtjZkt1eVFySWJnNi15cjRGbHQ1M1pjQ2pJakFjSWtQNWlRdHZUZkFBYVIwb1J3YXc4WEpLbw?oc=5",
+          "published_at": "Sat, 21 Nov 2026 03:09:01 GMT",
+          "source_url": "https://www.asahi.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.14699044777033377,
+        "japan_risk": 0.23088921204755153,
+        "usd_rate_pressure": -0.1821945259404505
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

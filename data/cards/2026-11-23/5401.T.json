@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-23T12:40:48.607826+09:00",
+  "prediction_date": "2026-11-23",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-23T12:40:48.607826+09:00",
+  "market_data_through": "2026-11-20",
+  "reference_price": 667.0,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.04170801117807599,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.4770766751002163,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.02604119290893528,
+      "direction": "NEUTRAL",
+      "day_change": -0.029959244207917957,
+      "momentum5": -0.044412607449856756,
+      "trend": 0.018950418492119647,
+      "volatility": 0.2176388762702651
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "【無料公開】日本製鉄グループ再編の「守りと攻めが混在」する裏事情、子会社の吸収合併で“重役の天下り先”は減少 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1WN0tpNHVaaTNweFJ6YlFEdVB5ZGlwbFhoTEtPMjBRRzhidlREamdLNGZXM2ZJUWJlRzJ0Umlqc2ppQm9VQkcwQ2V1bk4?oc=5",
+          "published_at": "Sun, 22 Nov 2026 20:30:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "日本製鉄 無担保社債発行に関するお知らせ - Digital PR Platform",
+          "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE53Q3NkaUVPZmdnR21sQTNsLVBNLUhGUzEzcWVEU0RMeXNNSVBrbjFpQTVSVVRfSEFqTlN0NnhGSzhBRUE?oc=5",
+          "published_at": "Fri, 20 Nov 2026 04:07:49 GMT",
+          "source_url": "https://digitalpr.jp"
+        },
+        {
+          "title": "日本製鉄、普通社債600億円発行へ 借り換えなどに充当 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1fLVhJVzJZSkxOcFVIOXV0RDgxZzVhOTlVVDlEXzI1cnVmN2FFWEhhQ2kwak8zU2xxY1EwVmxMV3N1Tm96YTNueEVNQ1BGN2taazJxNHFZVEtjU2VESnBRSFd0a3poMmhEV0ZWXw?oc=5",
+          "published_at": "Fri, 20 Nov 2026 06:29:19 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "「エクサベース IRアシスタント」、グローバル展開と脱炭素を進める 日本製鉄に導入 ～ 年間数百件の投資家対話を生成AIで資産化し、国内外の投資家との対話を高度化 - 株式会社エクサウィザーズ",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE80Zm8wUFhrN1B0RS1hRVdBZ3lmRzFhcmgwY2VJN3ZRckZGcHBfcFlsN1FWS21aZEQybjBNMkxxdkRPUkpUZ2MtUVJkVHIxdVE?oc=5",
+          "published_at": "Mon, 16 Nov 2026 23:33:26 GMT",
+          "source_url": "https://exawizards.com"
+        },
+        {
+          "title": "｢子供が将来製鉄所で働くと言っている!｣日本製鉄のUSスチール買収で一変した｢瀕死だった鉄鋼町｣の現在地 - PRESIDENT Online（プレジデントオンライン）",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1ZLXVCSnlraHN3YjZtaDI0ek9XLVloZ0o4LW1scHIxdHQyNTNUQThCY1gzYnlCZE9fRHNGLWNoM3RRMmtJbTBpVWdOODBiRHVBUnBsMjhoWmQ?oc=5",
+          "published_at": "Thu, 01 Oct 2026 07:00:00 GMT",
+          "source_url": "https://president.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.14699044777033377,
+        "japan_risk": 0.23088921204755153,
+        "usd_rate_pressure": -0.1821945259404505
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

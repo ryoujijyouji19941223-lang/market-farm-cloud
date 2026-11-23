@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-23T12:40:48.607826+09:00",
+  "prediction_date": "2026-11-23",
+  "symbol": "6522.T",
+  "name": "アスタリスク",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-23T12:40:48.607826+09:00",
+  "market_data_through": "2026-11-20",
+  "reference_price": 577.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.653238658872856,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.22313094050435708,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.42419942852893333,
+    "direction": "DOWN",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.6136363636363636,
+    "heldout_signals": 44
+  },
+  "evidence": {
+    "price": {
+      "score": -0.9253509689306705,
+      "direction": "DOWN",
+      "day_change": -0.06785137318255252,
+      "momentum5": -0.1697841726618705,
+      "trend": -0.11823703912982053,
+      "volatility": 0.6269669179914844
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "RFIDソリューション販売開始。次世代RFIDソリューション『AsReader BOX-Type』を「coca」旗艦店に導入 ～全国100店舗以上を展開するadapt retailingで店舗DXを実証、中長期の業績拡大へ本格着手～ - 株式会社アスタリスク",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBoNnp1MzhONTZfSElhcFJia0pQUi16eFpCajdyQVIyODlTelhKUGpzQWd4M0czRDgxZ2p4XzBtOXJKYXY0V05NT3BUQVE2c00?oc=5",
+          "published_at": "Mon, 10 Aug 2026 07:00:00 GMT",
+          "source_url": "https://www.asx.co.jp"
+        },
+        {
+          "title": "大手アパレル企業「株式会社ワールド」へRFIDリーダー『AsReader』を導入 - 株式会社アスタリスク",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1DSGs3X2xPdTZka0cxOUdIQ2lDa1NsLUh0R0NJQ0hlc3Jmb0p3bHZSanNhbjFJX3oyLS04SWVmTThiYndpWnN5M2stTFU?oc=5",
+          "published_at": "Tue, 24 Feb 2026 08:00:00 GMT",
+          "source_url": "https://www.asx.co.jp"
+        },
+        {
+          "title": "アスタリスク[6522]：特許権の譲受（再取得）の決定および「グローバル標準レジ戦略」の本格始動に関するお知らせ 2026年3月16日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBZU25TWS1ZREJSaUJoRmVMVGZkTVg5b0huWnlZdTlzMzlIU2p5ZUlqNUlyekV1LXVjSThrMVdfOWtUUVBxdnRSUWY4VlVPVVR5ek53eHJQcU1nS2txQWNvVmdxZ0RVZjNFTlE?oc=5",
+          "published_at": "Mon, 16 Mar 2026 07:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "アスタリスク[6522]：大手アパレル企業「株式会社ワールド」へRFIDリーダー『AsReader』を導入 2026年2月24日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB1YlpRNGlZTmNOVWlRR1N2alprM2U0YXlBNnNEOVVIbGhaZHp3UmpvcDhzVzQwZm1NdVdjTUpMbjRjVTRhX0hZVFlNQW1XSWhjMXJtQTZKRlh4YkFKTm5LWmZ4cXJMYWZMZXc?oc=5",
+          "published_at": "Tue, 24 Feb 2026 08:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "AsReader, Inc. が米国ニューヨークで開催された「NRF 2026」に出展 － COO Paul Whitney が Don Percival Award を受賞 － - 株式会社アスタリスク",
+          "link": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxNdVRrSmNRMHMxRUs2RVllcGhlM2R5Q3E4dDEweGFSWXZVTGwwOXpxa1NFRkpleDZOZXNFZk1QMHBDTHU4U0dOTXBtTGt4TFB1YUpmNHZFLVBheDM2M25MejRVRUxhT2JzYTczS21mTEF2SlVrTnZvWHdMSktSTjEydmozYndSN1BlNk0zUVpqQk5GS2VUYzE5ajBxRF9ELUVFVUhMOTFqWW1IZ2s1Y1d3SWdsLUNKZE1VQUR1Q0hLbmxnSlNpNG9Pc3lkeVRmamo4dVhsSkt3aFdFRVRWUTAyYmtZT1J1NmlvblYxVUxTNmpaMGdGem1nMEYxbWVDc21IUDNRM3NUOW1oeHQwYU5qbmtJbjdaSnRidlVrM0ZHSVJtVWZzcEhVaTM1U2RxREVYUEhDbUduZjVvbW1MQjliVnpB?oc=5",
+          "published_at": "Mon, 19 Jan 2026 08:00:00 GMT",
+          "source_url": "https://www.asx.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.16,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 1.0,
+        "oil_pressure": -0.14699044777033377,
+        "japan_risk": 0.23088921204755153,
+        "usd_rate_pressure": -0.1821945259404505
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
