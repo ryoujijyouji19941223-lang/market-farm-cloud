@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-24T15:54:35.578562+09:00",
+  "prediction_date": "2026-11-24",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-24T15:54:35.578562+09:00",
+  "market_data_through": "2026-11-24",
+  "reference_price": 1018.5,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6010146078881912,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.24143427290356784,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.8280255179912397,
+      "direction": "DOWN",
+      "day_change": 0.00941526263627357,
+      "momentum5": -0.0832583258325833,
+      "trend": -0.10609868746106432,
+      "volatility": 0.44509067198991337
+    },
+    "news": {
+      "score": 0.125,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "佐々木希、娘と人生初のサンリオピューロランドへ！親子そろって大興奮「はしゃいでる娘さんが浮かびます」（ハフポスト日本版） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBCUXM5d2FkZWpIY3g4U0tUZ0NKMF8wM2RKUjZoVFk5MkJmNlJfWDg3NS1FaFpOYlpmR25sdlFKZ0Z0cDkyQklVVlRIQnRIQzJIVmJnMEtlaW8zZk5CYUpPWG9GOG5HbGRjY2dWQXQ1UVBic1QydkNGaWxRMHVWemc?oc=5",
+          "published_at": "Tue, 24 Nov 2026 03:14:50 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "7-Elevenがサンリオキャラクターのゲーム機で「Re-Play Retro Fun」キャンペーンを開始 - 共同通信PRワイヤー",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA0MjlxeC04NWhLUFJMdXhQeWFpd0lOZDNqdFF3MGZPV1dhTlgxckswOWJJQkFKS3QzNWRraExZVVlJNDJKbGY5bXRNSHBPRndIU1ZKaDJTTEctdnc?oc=5",
+          "published_at": "Tue, 24 Nov 2026 03:22:02 GMT",
+          "source_url": "https://kyodonewsprwire.jp"
+        },
+        {
+          "title": "Happyくじ『Sanrio characters Holiday Collection 2026』が12月4日(金)～発売開始！｜ローソン公式サイト - LAWSON",
+          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5MdVVSX1E5SWtpdkExN21CeXRCLW1Tb3NtVnZKQW5sVE1Mc0lLUm50bGpWSy16UXNsTFROOUpCcTJNNUJteE5Qd09sdjluQ0g4T0tmdEZqQXUtM0d6VEktV2JxQklEWmxYVEdWZGdPTF9xVEZndHJGXzNSOA?oc=5",
+          "published_at": "Tue, 24 Nov 2026 01:19:25 GMT",
+          "source_url": "https://www.lawson.co.jp"
+        },
+        {
+          "title": "信用残ランキング【買い残増加】 日産自、ＳＢＧ、サンリオ - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBaekhaRFpTUWE3RjdxV2wxR3VaanZKRlhjYlhocnVaMzI4VjRqOHliZkp3WUg4MlhxSWs3YTZHblVfYUNoU1hVR3JwNnpQMGZaeWVxLVhxTVU5dWZIVFViTw?oc=5",
+          "published_at": "Sat, 21 Nov 2026 23:10:00 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "おうち英語にもぴったり！ CoComelonとサンリオキャラクターズのコラボ映像コンテンツで話題のアルバム新発売！ - たまひよ",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE13YjRVN3hqWUtkRl8xMzVPSVhISGhpeUc1QVBaOGlkSGtNdl9yUGVSVFhUQnNOaWkzQVR3QmdpOTlwbkM4dWNmM3NEYkRvTFVpOTRKNHBfOG40M0Y3MFE?oc=5",
+          "published_at": "Mon, 23 Nov 2026 15:00:00 GMT",
+          "source_url": "https://st.benesse.ne.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.1113817043609875,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6961356522561719,
+        "oil_pressure": -0.35402882316170947,
+        "japan_risk": 0.05115770299061573,
+        "usd_rate_pressure": -0.13493692535203894
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

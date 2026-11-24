@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-24T15:54:35.578562+09:00",
+  "prediction_date": "2026-11-24",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-24T15:54:35.578562+09:00",
+  "market_data_through": "2026-11-24",
+  "reference_price": 159.322998046875,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.07129868964579682,
+      "factor_agreement": 0.5,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5284438501874109,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.027993145237873364,
+      "direction": "NEUTRAL",
+      "day_change": 0.0024664684147068794,
+      "momentum5": -0.0012537186143496415,
+      "trend": 0.004126916886946885,
+      "volatility": 0.04869220478432511
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜一時159円台回復も160円の壁を前に伸び悩む」 外為どっとコム トゥデイ 2026年11月24日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE45bDlTbFFxWFFQLUJtTmhlMm9fNmlVN3BLbmxaaU05VktqTzlzMUxXN2FZMlMzN21fUVZQeDIwbENkZk5Ddk5MbUpFTHViZVB6LWVKS2FZQ19KR05ZYlNYOUZ4NA?oc=5",
+          "published_at": "Mon, 23 Nov 2026 23:46:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "【債券市場】12月利上げ観測が強まる日銀、物価2％定着のカギを握る認知度(週刊 金融財政事情) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQd1p3LWRQa2ZfdzhMd1ViRzBweEJsM0VmLS1ZdU1QOVR3Y0kycGZCRlhNY1B1ZnVxRXVUc1h0Rm9CYmgxYlA5LTdvcHBtZVZLb1ZqbzNscEZBYlBXX2F4cVZsaFl2bDBYOHFoQXp0Nm1rQ1habzZIbzNWVUt4NUJ0ZEU2bFdQUzg?oc=5",
+          "published_at": "Tue, 24 Nov 2026 00:30:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "東京為替：ドル・円は底堅い、株価にらみ - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1tOW5zN2dnM1hObEd4dENKaXUwVE9mNTcxRE5qYTZTZ3pIV3Q3Rlc1M0diRUtIRGRoU0ZFZDRkeWs5V05RcVNQd0tBQ0g1NFhweHI0TG04SXVqbTdUamJxaA?oc=5",
+          "published_at": "Tue, 24 Nov 2026 04:18:10 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "コラム：ＦＲＢ利上げの見通しとＡＩ経済、米国出張で見えた強気派と慎重派の議論＝井上哲也氏 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPTjZPd3dtOGFnVHJZYXYwc1YycEtadDVQMHJiSXpldmZ3Z1lBOHZxd0VZcnBMeXlHY0Q5V1pjY01Hdk95VlhFazhuamEtdVp1ZEhqM19lSUp0b3ZvQ25iSGNMZE85cHJuNE9VeXN5TGNNUF9seGVpbjc4bWVkdXBma25DSGtua3dPMnF2RFJ3?oc=5",
+          "published_at": "Tue, 24 Nov 2026 05:59:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "ドル円は安値から反発、158.90円台での推移＝東京為替 - みんかぶ FX/為替",
+          "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1xTUJaUXI4N2tIbUtMbTRBRE82N011ODYyY1EyY1VyRTA3aEdBTTFmcTQwS1FoZGtxNUtQazJNcHd1ZExRNHhtbA?oc=5",
+          "published_at": "Tue, 24 Nov 2026 03:27:51 GMT",
+          "source_url": "https://fx.minkabu.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.06508900589361952,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6961356522561719,
+        "oil_pressure": -0.35402882316170947,
+        "japan_risk": 0.05115770299061573,
+        "usd_rate_pressure": -0.13493692535203894
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

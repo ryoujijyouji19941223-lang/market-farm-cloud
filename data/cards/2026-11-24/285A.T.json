@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-24T15:54:35.578562+09:00",
+  "prediction_date": "2026-11-24",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-24T15:54:35.578562+09:00",
+  "market_data_through": "2026-11-24",
+  "reference_price": 8034.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.7068168516721545,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.2901341820351365,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.9523670529676563,
+      "direction": "DOWN",
+      "day_change": 0.0994936362392227,
+      "momentum5": -0.0426596758817922,
+      "trend": -0.21074973095779026,
+      "volatility": 1.2384411764869432
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "キオクシア株、急反発 米メモリー株高が波及 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5jdXNEYWtXcGFpRlZSVlN0djJ3QTJQUm5fUUdLMGFrbU5yVERpMDlSYzJaX0ktOXR5TTl1VWhZWmRRVW9EdlZBM1FnU2RMVGJZRG9Fa2k5S1JnOVlzM2pnNTRsQ3h1QzBWQV9ORA?oc=5",
+          "published_at": "Tue, 24 Nov 2026 01:41:28 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "＜特別気配＞ ワコム、キオクシア、フジクラが買い気配 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA2TVp4d19qR1RlbnowXzlxLTJ0cUg0UGItQ0JzNXA3d2FsZ29HcmxmLWRPaUthUllpS1dfTktUUlJzZ0xoQkI5VU1ZUlNSN3hsMFZqUlk3ajFCSmwtdGlFYg?oc=5",
+          "published_at": "Tue, 24 Nov 2026 00:03:43 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "ＳＫハイニックス、社債転換でキオクシアの筆頭株主へ（ロイター） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9nU2RrOUdIV1RyMWFRb0NuYmJFeC14SnVaXzlYcU12VnlVd2NoaUY3SFMyZnBkZGhVQUxJLWNFRTNpcUxCN2xlZnhKTXp5d0draFc0djl3UXBUd2Z3dGpmcFhoREVWcnBTVEdwcmI2WUNJT081d0pPSEQwTnpnRTg?oc=5",
+          "published_at": "Sun, 22 Nov 2026 08:51:00 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "キオクシア株高は「お家芸」復活ののろしか 日本の半導体関連企業の勝ち筋はどこに？ 野村證券・小山晃弘 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBoVURsSUdUWWdlZ1VfUzVmbV9aQUpiWDdRejBnZHJaZ3czZUdJSzFSZDBmUzFYb2Qxc2JTVUF3Sm8zLTFkdlBIb2ZWdkNRTUhSMW5UZDdsZUVFNEUtUm9r?oc=5",
+          "published_at": "Fri, 20 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "キオクシア、株価急落後にゴールドマン・サックスが買い推奨 株主還元率は最大5割視野、バリュエーションは循環底値圏と指摘 - BigGo ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE85Q191dWt1TUs0U3R4SFJxd2owS0lpZVNrRHdxckFHdnBacHlvdnpTMk5QcnZsZllNQUtOUE1Dd0JaTk8wMXRBNVA5U0ZKejhqTjJYTmI4eFZnYmd3eU8zWXlaeEJWcVk1Q0ZxQUVUWjBMZHo0?oc=5",
+          "published_at": "Mon, 23 Nov 2026 04:25:00 GMT",
+          "source_url": "https://finance.biggo.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.1113817043609875,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6961356522561719,
+        "oil_pressure": -0.35402882316170947,
+        "japan_risk": 0.05115770299061573,
+        "usd_rate_pressure": -0.13493692535203894
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

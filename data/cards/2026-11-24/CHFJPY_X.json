@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-24T15:54:35.578562+09:00",
+  "prediction_date": "2026-11-24",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-24T15:54:35.578562+09:00",
+  "market_data_through": "2026-11-24",
+  "reference_price": 189.1580047607422,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.1506526635901131,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.5067568345247276,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.10174026617033038,
+      "direction": "DOWN",
+      "day_change": 0.0010478304394581084,
+      "momentum5": -0.003857876814562178,
+      "trend": -0.010832749494620986,
+      "volatility": 0.05319583828461463
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "外為：スイスフラン、188円88銭前後と大幅なフラン安・円高で推移 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE83d2JMM0g5U0R1OThKNFRSWEEteTdyQm5hb2xZcmp1Y2U0X1BaZFR2Wk95Y2pDei1sdjlSSWpZN2JiVnkteWthR1dDS3BVYU9mM1E?oc=5",
+          "published_at": "Tue, 24 Nov 2026 04:31:04 GMT",
+          "source_url": "https://s.kabutan.jp"
+        },
+        {
+          "title": "【債券市場】12月利上げ観測が強まる日銀、物価2％定着のカギを握る認知度(週刊 金融財政事情) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQd1p3LWRQa2ZfdzhMd1ViRzBweEJsM0VmLS1ZdU1QOVR3Y0kycGZCRlhNY1B1ZnVxRXVUc1h0Rm9CYmgxYlA5LTdvcHBtZVZLb1ZqbzNscEZBYlBXX2F4cVZsaFl2bDBYOHFoQXp0Nm1rQ1habzZIbzNWVUt4NUJ0ZEU2bFdQUzg?oc=5",
+          "published_at": "Tue, 24 Nov 2026 00:30:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日銀短観から見える物価の頭打ち感 企業の積極的な価格転嫁姿勢に変化の兆しか 野村證券・岩下真理 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5DeWgxLWYwbktfWG1vSGttT2xkT01jS2ptNk1tazVfcmF4N0QwbTJrcm5VNTR1em1iR2VWYkxtZVRMenJsVFcxdU5lNTNpUGxOZFJBRjZKaThQSEdla0tr?oc=5",
+          "published_at": "Fri, 20 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "日銀利上げの「残弾」はあと何発？最タカ派と最ハト派のはざまで読む利上げの行方 - トウシル",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1NVlNzV3g3M2tnWUU5dmVFZEVHM2JwUnV0a3AzR2hMT2JETFpLb1BTY3BBcm1sdFVzb1dhVThZMkxheEg4UXgzbkRWR1lYVzA4bHRuWTVlUVNGQQ?oc=5",
+          "published_at": "Sat, 21 Nov 2026 02:00:00 GMT",
+          "source_url": "https://media.rakuten-sec.net"
+        },
+        {
+          "title": "日銀・植田総裁、個人消費「先行きは回復」 利上げ路線は継続 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxV0F3R3V1ZkVrSWpwVS03aFZfaEtuNjFWV3h2d0hJSmhWOHFJUlhUV3NlUmNlbVllYlE0WngyZlpOd2QzWkFMaEt3RFFKSEljcmxHUndhaFJmYjVabWVLbDlvVXBMNnBOSk9WeA?oc=5",
+          "published_at": "Thu, 19 Nov 2026 07:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.11812855062858944,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 0.6961356522561719,
+        "oil_pressure": -0.35402882316170947,
+        "japan_risk": 0.05115770299061573,
+        "usd_rate_pressure": -0.13493692535203894
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

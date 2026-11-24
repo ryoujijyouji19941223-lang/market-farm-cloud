@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-24T15:54:35.578562+09:00",
+  "prediction_date": "2026-11-24",
+  "symbol": "1736.T",
+  "name": "オーテック",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-24T15:54:35.578562+09:00",
+  "market_data_through": "2026-11-24",
+  "reference_price": 2132.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.43828035856145037,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.27603471833987225,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.6199604454519151,
+      "direction": "DOWN",
+      "day_change": 0.0,
+      "momentum5": -0.03963963963963968,
+      "trend": -0.07079778476276,
+      "volatility": 0.2395408132461457
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "(株)オーテック【1736】：決算情報 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9VUVVTdVZxR3Q5aExEckpxSC1tQkNsa3IwUm9xd0d5eHl5RFVXUURmWXkyVTNOY2ZmbVBjVFpNTnNaTEpXZTQ4N1gwVXFXNmJ4Zm5mX3NrcGtXZy1qd0M2Vg?oc=5",
+          "published_at": "Mon, 09 Nov 2026 08:00:00 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "オーテック[1736]：有限会社ケー・ティー・エスの株式取得（子会社化）に関するお知らせ 2026年3月30日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5TOEpYMG1TNWpyRG1FcWNjUlhLZEdQdWxrQ0p4V3FzQnZTZGh5RzNIZEI5LUdCN1NHQlg5azhXdEprbG1fRTVqVmdBM2YzVTIzMERzUUN2VVl4NVlzQWM2ekpabl9jdUVfUkE?oc=5",
+          "published_at": "Mon, 30 Mar 2026 07:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "オーテック（1736）のプロフィール - 四季報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9WY1BtLUxaTlpwSVcxRXZQSVdZZkNobVJSTnIzM1FXbW5qeVkzcFVseWZ5LTMxTWFDQ1F3WTRDanFsa2JROURTZlhuS2JGNFBBYk5walU0MVI3a01naTR4LThB?oc=5",
+          "published_at": "Fri, 29 Apr 2022 06:27:43 GMT",
+          "source_url": "https://shikiho.toyokeizai.net"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.1113817043609875,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6961356522561719,
+        "oil_pressure": -0.35402882316170947,
+        "japan_risk": 0.05115770299061573,
+        "usd_rate_pressure": -0.13493692535203894
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

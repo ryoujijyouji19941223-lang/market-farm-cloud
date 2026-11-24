@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-24T15:54:35.578562+09:00",
+  "prediction_date": "2026-11-24",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-24T15:54:35.578562+09:00",
+  "market_data_through": "2026-11-24",
+  "reference_price": 670.7000122070312,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.05520804235856175,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.4696728496437413,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.05661880397707885,
+      "direction": "DOWN",
+      "day_change": 0.005547244688202779,
+      "momentum5": -0.035102811445703486,
+      "trend": 0.010466478051536665,
+      "volatility": 0.20404616720659552
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "東京V戦（12/19）「日本製鉄スペシャルマッチ ～世界は鉄でできている。～」開催のお知らせ - 鹿島アントラーズ オフィシャルサイト",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBvR2FCdlJENW9Rd1hlaGowMmF1bXdNa1M2d25iUmhPem03RDF0OVM0aGcyVHN1NHppLU5ocWcwMkVSQ2xicWN4eGxLUlFpQVFxNmxPWWR5S2g3R3hsZnc?oc=5",
+          "published_at": "Tue, 24 Nov 2026 02:14:15 GMT",
+          "source_url": "https://www.antlers.co.jp"
+        },
+        {
+          "title": "日本製鉄 鹿島アントラーズの「クラブ創設35周年記念マッチ」に協賛、冠試合「日本製鉄スペシャルマッチ ～世界は鉄でできている。～」を開催 - Digital PR Platform",
+          "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE5IWThYS3BiMG1yOHNmNDFicWJoM2M3NURveGx0bzhwRVZ6bG9nUE5EWS1HWW5uLXRsQXhxckFxMWF1TkE?oc=5",
+          "published_at": "Tue, 24 Nov 2026 02:00:00 GMT",
+          "source_url": "https://digitalpr.jp"
+        },
+        {
+          "title": "鹿島、MUFG国立開催の東京V戦で『日本製鉄スペシャルマッチ ～世界は鉄でできている。～』開催…オリジナル缶マグネットを先着15000名様にプレゼント - サッカーキング",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5EWExqSHFiVFAyWEJpWktaeWQxem9PckkwSnE0Q19rZm9OODF2M0ZZbmJ5dWZzVmVNSmRiNEdNdWF6cWhrcGRQMEk5X0tiMGFHTGNWTFlfOVVTNlc5b1pRcnMyMFVyT2xZWmNQdDI1cw?oc=5",
+          "published_at": "Tue, 24 Nov 2026 06:06:18 GMT",
+          "source_url": "https://www.soccer-king.jp"
+        },
+        {
+          "title": "日本製鉄[5401]：発行登録追補書類（株券､社債券等） (有価証券報告書) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBkMG5YcUVwaEVVQndFWC1nUG1teHhMeHZHM2pNUmVyVVZlVzdGRjFlQXlaa3BabEFTVVFXSWI5SkZfWEM1NjdrcEg2eW5aaFZzalF4M3dlMXFqNWNTV09fenhyaGtldTVncmVVOA?oc=5",
+          "published_at": "Sat, 21 Nov 2026 06:09:12 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "日本製鉄(株)【5401】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9CVmx5TUl6TGxMX0lYTnVadHZ1b256QUpCY1ctQWx5ZFFaOEtGZ0ZkV0FuYlFvM3hDVF91b0J6Tk9kOFZNSVpPSWxBTUNkOUN0S1Y3TmszM2dNMmVHU2xB?oc=5",
+          "published_at": "Fri, 20 Nov 2026 06:53:35 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.1113817043609875,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6961356522561719,
+        "oil_pressure": -0.35402882316170947,
+        "japan_risk": 0.05115770299061573,
+        "usd_rate_pressure": -0.13493692535203894
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

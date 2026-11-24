@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-24T15:54:35.578562+09:00",
+  "prediction_date": "2026-11-24",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-24T15:54:35.578562+09:00",
+  "market_data_through": "2026-11-24",
+  "reference_price": 3622.800048828125,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.5087496830077967,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.30949627697243315,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.6507822617760568,
+      "direction": "DOWN",
+      "day_change": -0.007832572240928037,
+      "momentum5": -0.062470862117407266,
+      "trend": -0.06584637726440434,
+      "volatility": 0.3377131202240382
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "地銀など定期預金金利を大幅上げ - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1ZWVR3M2k3dGdFVnRGSFFiS1pyVklnSzNDYjl2cE9GYmJwNGNsZEpYdXNQdWV2QXVYM2tmRTJhSnVVekgwUEJFVHY0bXVsS255?oc=5",
+          "published_at": "Mon, 23 Nov 2026 12:48:48 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "奨学金620万→770万 金利3％で膨らんだ22歳「返せるか」 - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB6RmI0SXpuckFQTG5pUHpWM1NUOENLQWxWZE5VYjZEblg3OGdWdGs4cUFGWURiVVhRd0dwY3Yta0RDcFRhcVlJSlhwRVJiMEhzRV9fN19uWXpJOElHckNSdl9pWGJxV2M?oc=5",
+          "published_at": "Tue, 24 Nov 2026 03:57:50 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "長期金利3％到達で日本株はどう動く？ 金利上昇に強い属性を備える銘柄リスト 野村證券ストラテジストが解説 - 野村證券",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBkVWJ3Y0NkRVVTWVRXX2dYdkJDZHlvZ1FlMTBNUm5IT3RZTnVrbF81b3BEN1FxVmZOVHloSTNIYWZPRk9ialJzeUVpTXNBX3ZLdVl0cGJuczJKMU41R3FZ?oc=5",
+          "published_at": "Fri, 20 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.nomura.co.jp"
+        },
+        {
+          "title": "野村マスター - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOQmlmaDgzVmQ5T1RLT3hHVW9XSkowaU9Ra3lHbmJra2dNSXhYdzlibFZ6S1FhbDNQSW40NUNTdjkzQVl3VFFxUmxFdW9CLXNjU3JuU18xLXUta1ZVRnBEdVhoeWZhSWNrUndPZ2t3cGVaMy01X0U5emUzUlFEdHFvY3hxVHpkRzZocHpyS0kxUWZjcUZ5YWNNZ2ctYXZreVF1bFA3YjBhVFl2aXFFZTJPay14dUU4aGxiSVpzNGZSbzNuemU4T2RMLWdRQ08?oc=5",
+          "published_at": "Tue, 24 Nov 2026 06:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "決済網、地政学的影響力の手段に 伊中銀総裁が「分断」警告 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPTk8zVy1HT0hjWXQtaWFNZFphd3pveU9aUDduVEhkYUVQWEdwNjhnVEtHQ1dkWUN2Y0t2aEtyTzFKMkVMV1ZDZ1luTWM0YzBJNzQ4OWwzUk1nbmlrdzFQTGQtdEJsUm5ZY2VxMUY0akw0WW5faHhzWUhiTWtld0dRbGREeFBmZw?oc=5",
+          "published_at": "Tue, 24 Nov 2026 06:01:00 GMT",
+          "source_url": "https://www.reuters.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.15811830000051985,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 0.6961356522561719,
+        "oil_pressure": -0.35402882316170947,
+        "japan_risk": 0.05115770299061573,
+        "usd_rate_pressure": -0.13493692535203894
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
