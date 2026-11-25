@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-25T14:23:26.553524+09:00",
+  "prediction_date": "2026-11-25",
+  "symbol": "8316.T",
+  "name": "三井住友FG",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-25T14:23:26.553524+09:00",
+  "market_data_through": "2026-11-25",
+  "reference_price": 2992.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.34206821912345625,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.3305002398432566,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.485196074824521,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5882352941176471,
+    "heldout_signals": 68
+  },
+  "evidence": {
+    "price": {
+      "score": -0.46099579032991317,
+      "direction": "DOWN",
+      "day_change": -0.016759776536312887,
+      "momentum5": -0.0465264499681326,
+      "trend": -0.03905865935076658,
+      "volatility": 0.4270234729062818
+    },
+    "news": {
+      "score": -0.14285714285714285,
+      "status": "OK",
+      "error": null,
+      "direction": "DOWN",
+      "headlines": [
+        {
+          "title": "Trunkサービス拡充、ビジネスカード、ファクタリング、リワード SMBCグループ、中小企業向けデジタル総合金融を強化 - ペイメントナビ",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5CMmZIa0hlZGFGY2l0b2RuN1RCMGo2M3Q4dzBYOVRXajh0UHJqeFh5UE1MNFZ0NjdJbW55aWxfdzJLelV5UjRUYm0wLVJ0UWRjdjFTVTFOdmlYQ3c?oc=5",
+          "published_at": "Mon, 23 Nov 2026 23:30:00 GMT",
+          "source_url": "https://paymentnavi.com"
+        },
+        {
+          "title": "【SMBCグループ】AIトランスフォーメーションのキーメッセージ「『やりたい』を『できる』に。Achieve Your Aspiration.」を策定 - PR TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5JU0pzT1ZUTldLMzBoT2NnYXhXYzNnM1AwQS0wZnkyWU9jTkZtOTM3UVVoaXNzeTI5REpjRFRqb2VIS3N0SmNpN0YydFBELXVNSjE0WHd3cVV6OTdXZTZXNjU5VTlxdUY2Znc?oc=5",
+          "published_at": "Tue, 24 Nov 2026 10:49:25 GMT",
+          "source_url": "https://prtimes.jp"
+        },
+        {
+          "title": "SMBCグループ、富士通、ソフトバンク、健康・医療分野での業務提携に合意し、持続可能な医療の実現に向けて国産ヘルスケア基盤を構築〜国民の健康寿命延伸と医療機関の経営効率化、国の医療費抑制に寄与〜 | 企業・IR - ソフトバンク",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9Xd1lzblUxbmh1OFNEd3Q2S2R0QS1oR0E5MHplb3FVeng2QVk3al80b25FTjF6cVQ1WmQ3ZDctbE5udFdPZHhTLXFIeDdBNi1NSFlLcktSa2hNNDhHZ0IwVWx4VjZnV0NwdUFxNkw2QQ?oc=5",
+          "published_at": "Tue, 19 May 2026 07:00:00 GMT",
+          "source_url": "https://www.softbank.jp"
+        },
+        {
+          "title": "SMBCグループの財務部門変革 - EY",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbFlGYm5aNW5YT2FDcXJkb1pXalMwSi1idFQ0Sl80NGhybzVHcllReUJiaG5uX2w3ekI4amEtNVlXX1QxOFZMX3ZHeDZ0NTNZd18yQzFMdXptSDVuRXAwOHROTkl6VGRudExBSnBMZF9OYnJOSUtMYUFNMVJBSmxXZ0VxT3hkcjNGZnU2NkhvaWxsdVF6WWlXOVhFaVM5N3JxaFVUMWFhMEh1MUgxaXc?oc=5",
+          "published_at": "Mon, 29 Jun 2026 07:00:00 GMT",
+          "source_url": "https://www.ey.com"
+        },
+        {
+          "title": "11月17日のSumitomo Mitsui Financial Group Inc (SMFG) 値動きは3.14%下落：主な推進要因が明らかにされました - TradingKey",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeHlpOU9HMzFKYU93UjFXRTZCRFhhbEpCeXQzZDNSM3VDSlNzcFU0d09RYjFJM2dZRHVMcUV6QU56eVBUTm5yYnphb0RhZFpFSlNkXzVBTUw0eXU5QVpDRFBEYVlPcDJVNFQ1akFESV9pWlhhaEgzR3VycmxZbGpuZzgyR1laVnA1WGhGVkZySQ?oc=5",
+          "published_at": "Tue, 17 Nov 2026 06:17:00 GMT",
+          "source_url": "https://www.tradingkey.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.028702449422673196,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.17939030889170748,
+        "oil_pressure": -0.15133342588303622,
+        "japan_risk": 0.09301306652986718,
+        "usd_rate_pressure": -0.1522893396124816
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

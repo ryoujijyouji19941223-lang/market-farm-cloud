@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-25T14:23:26.553524+09:00",
+  "prediction_date": "2026-11-25",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-25T14:23:26.553524+09:00",
+  "market_data_through": "2026-11-25",
+  "reference_price": 9002.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.23971778838117783,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.6120828561259318,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.3461947367173189,
+      "direction": "UP",
+      "day_change": 0.03997227356746769,
+      "momentum5": 0.008514452162222685,
+      "trend": 0.04088200099910533,
+      "volatility": 0.544233848805142
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "【11月24日追加】「ニンテンドー ゲームキューブ Nintendo Classics」に『ウェーブレース ブルーストーム』を追加。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQTjFtOWtkUGFPTno4QzhoQ2Y4RXFoRnVaeG5WMGl0OXRuWV91LWRnWEs0S3VfVnMtenlkWWdYNUNVWWFoSHgteGtzUGVxTFNWdldmQ1ZGRkVkT2w3WWV6R1BQSmk2TnpMYlZMdWhxOTNjbUxiY00xc1hfVlAwcTJ5TTV5Qnc3Zw?oc=5",
+          "published_at": "Tue, 24 Nov 2026 01:24:48 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『モンスターハンターワイルズ』の序盤が遊べる体験版がNintendo Switch 2 で本日より配信開始。製品版へのセーブデータ引き継ぎも可能。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSF9WaGZRd1pFRllVcjZWOENCWWRmZEJBSmYtejFvQUhVMFR3UDkybWVaTVBXVktxdjJoWUc2UTk0RkNORzNCQ3ZQWHhuN0JpNWdXQjdYcHIxRzBkZ3htblhHLTRhWExhZUE5aFY4NHNhZWJnVGxxellWb05zNnJQMTdrOGlYdw?oc=5",
+          "published_at": "Tue, 20 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『オバケイドロ２』が10月26日から期間限定で遊び放題。Nintendo Switch Online加入者限定イベント「いっせいトライアル」開催。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPUGpVTWkxUFZrem5HQWFaSFVyc1pFY1hhU0ZwQkcyTUx0azd3QVZmMHVrTVBZN2FmU1E2UzAwWFJ1UlNicmpHWmlWOHlmSVJDUzA3b2RGRFNENVY1NUswS3FZZ3lTbkFGY3FlakMwcE9yUWRMVW5vOU1qRWRTYmlrNUV6SHZYZw?oc=5",
+          "published_at": "Fri, 23 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "Nintendo Storeでホリデーキャンペーンを開催中。ダウンロードソフトを手渡しでプレゼントできる「ダウンロード版ギフトセット」も。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNYndBT1lyYzhwWmQ2MXRGcWNaNHJfajkyWEE0cEZFM1RnbXNJcFBXX3lKbXAwTmdtU0ZxaXgwRUxkRkRnT01tbEV2dF9ScGdsSXotbXJYN1gwU1EwQjkwTEZUYkVkcjgxRWVWWElMLWR4cFdUYzh2eFNySUhxN1BLYzk4T0xtQQ?oc=5",
+          "published_at": "Thu, 19 Nov 2026 01:14:20 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "ゼルダの伝説 時のオカリナ：目黒蓮さんのプレイ映像公開中 | Nintendo Switch 2 | 任天堂 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9NSTVHSFNTQXotU2NxMUJKVUtHeV9PUTdTVWdGTVk4OFVaR2lDOHdWN3lRXzd0OGdYdmtvYlBRWVppX0tzSGNJNlNSS013SE9taEdFTW52Ni1Ld2JxbFJPOEZCMElNalJDMnBYbVNFLWtwNGpK?oc=5",
+          "published_at": "Thu, 29 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.028702449422673196,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.17939030889170748,
+        "oil_pressure": -0.15133342588303622,
+        "japan_risk": 0.09301306652986718,
+        "usd_rate_pressure": -0.1522893396124816
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

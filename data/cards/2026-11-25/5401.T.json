@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-25T14:23:26.553524+09:00",
+  "prediction_date": "2026-11-25",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-25T14:23:26.553524+09:00",
+  "market_data_through": "2026-11-25",
+  "reference_price": 682.5999755859375,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.03506954940319697,
+      "factor_agreement": 1.0,
+      "reason": "news_unavailable"
+    },
+    "direction_score": 0.48072131005247654,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.04524144410264115,
+      "direction": "DOWN",
+      "day_change": 0.01774260200137423,
+      "momentum5": -0.020660006332944736,
+      "trend": 0.0046709595893708045,
+      "volatility": 0.2088288297315954
+    },
+    "news": {
+      "score": null,
+      "status": "ERROR",
+      "error": "429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=%28%22%E6%97%A5%E6%9C%AC%E8%A3%BD%E9%89%84%22%20OR%20%22Nippon%20Steel%22%20OR%20%22U.S.%20Steel%22%20OR%20%22US%20Steel%22%29&hl=ja&gl=JP&ceid=JP:ja",
+      "direction": "UNKNOWN",
+      "headlines": []
+    },
+    "outside_wind": {
+      "score": -0.028702449422673196,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.17939030889170748,
+        "oil_pressure": -0.15133342588303622,
+        "japan_risk": 0.09301306652986718,
+        "usd_rate_pressure": -0.1522893396124816
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

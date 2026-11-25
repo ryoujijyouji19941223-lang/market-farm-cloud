@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-25T14:23:26.553524+09:00",
+  "prediction_date": "2026-11-25",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-25T14:23:26.553524+09:00",
+  "market_data_through": "2026-11-25",
+  "reference_price": 190.6580047607422,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.10733301812678024,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.5170774859355952,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.05608158921512595,
+      "direction": "DOWN",
+      "day_change": 0.009088852656520041,
+      "momentum5": 0.005743176783048254,
+      "trend": -0.00988915030645976,
+      "volatility": 0.06251742925958916
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "インタビュー：日銀は来年2％まで利上げか、経済・株価絡み判断難しく＝安達元委員 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFB1UGVsa2Mta3lfZFBnbmlERTJvcUR0Rm5DV0ZQeWUtWG02VkxfTzRaaWlXQU9BSFVGYjczdTBmb2FuVUlaV185V1BHVW5ZZjRZYUFKa1E3MEZ1aHgtejlsREo3aDN1eC12RllXel9IV2NuWUhZdk1lSzNmeElKUQ?oc=5",
+          "published_at": "Tue, 24 Nov 2026 22:00:21 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀利上げでも円安地獄が終わらない…住宅ローンは苦しいのになぜ円は買われない？ | ニュースな本 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9GVjVCbWM1ZmUzblFic1BwbjgwOEp4OTNvMlQ5SmpvR1pCeUdZNVJ5d3dZRDNIaHBpNW0xOXhzT2JybmF3T2xpcTRVZXo?oc=5",
+          "published_at": "Wed, 25 Nov 2026 02:00:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "日銀政策金利は来夏までに2%の可能性、インフレ対応重視－桜井元委員 - Bloomberg.com",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPM0NmUldlTnBiNUR2cmFHbDhlSVo4STNiUzVMNWlxTXBDaVgwNHBnWmRwSkc0SHpuSW5BczVRTjZtakNZdlpxb3ZrR0dBaExVM0VvUEk5WHRQcmFNUVdtTFN4bUd3dFNWTS11LTNZN1RIZTFwMVhudXdkNURYY3FVcC1oU3RLcEVDNDFMVjl3?oc=5",
+          "published_at": "Tue, 24 Nov 2026 22:00:00 GMT",
+          "source_url": "https://www.bloomberg.com"
+        },
+        {
+          "title": "外為：スイスフラン、190円46銭前後と大幅なフラン高・円安で推移(株探ニュース) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPbE5kQjVIMDd3LWU0Q3dudTVpZ1VvWlFPblpLblNzcmtXZV9EejA3cnNHT1RXN0pwY1gwQUNKYkVUc192LW40NzZOc3ZnSmtmOHYwM280bkxTRWdoUE5RUXo3cmw0bU5nYTNiVnIyMUlDM1p3LWQzV2lwVm4zbEl3YlhRMGZma0E?oc=5",
+          "published_at": "Wed, 25 Nov 2026 01:31:44 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "［動画］日銀保有ETFの売却益を、官民投資の財源にする際のポイントと留意点 - トウシル",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9KQ3dZM0gzSjA3ek5LbUJEdXR4UVBBZTVnU3B6ZklVMC1BYWxEbHR5RmpWT0Q5RV9vQWVUY0xNdmZMNkFGQ0Y4c2xHUFBRU0lxUFRJSFoxRUM2QQ?oc=5",
+          "published_at": "Wed, 25 Nov 2026 03:29:00 GMT",
+          "source_url": "https://media.rakuten-sec.net"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.036316916403297275,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.17939030889170748,
+        "oil_pressure": -0.15133342588303622,
+        "japan_risk": 0.09301306652986718,
+        "usd_rate_pressure": -0.1522893396124816
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

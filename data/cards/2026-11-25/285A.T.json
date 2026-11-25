@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-25T14:23:26.553524+09:00",
+  "prediction_date": "2026-11-25",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-25T14:23:26.553524+09:00",
+  "market_data_through": "2026-11-25",
+  "reference_price": 6894.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.7108577380956447,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.26570453544284806,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.9765476039444759,
+      "direction": "DOWN",
+      "day_change": -0.14189693801344283,
+      "momentum5": -0.13457193070549833,
+      "trend": -0.2098474284308096,
+      "volatility": 1.3116364641275395
+    },
+    "news": {
+      "score": -0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "DOWN",
+      "headlines": [
+        {
+          "title": "キオクシア株が一時16%安、7000円割れ 最高値から8割超下落の深層 - BigGo ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1vbWYwbFBka2x5TzNWeWNrakpFTG05SXN0NXh2dG4tNHUyUUd5ZlcwdlA0TFg5WU9yblp4UzlHZDJrY0U4V2hGQ2ZBYUVHLWVmV0Z4S2pvV210bk5zMU52bFR2R1JvcW82VHlrLXBNMVdjVEta?oc=5",
+          "published_at": "Wed, 25 Nov 2026 01:35:00 GMT",
+          "source_url": "https://finance.biggo.jp"
+        },
+        {
+          "title": "SK、キオクシア株取得の裏に9年前の約束 防衛的出資で筆頭株主に - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ZeldmcmllWXpEM0k2MUo1UmdpMGllcVczOGxULXZyRmdWVVdNUVg2YmQyLXY2TC1pRWQ0a3ltV3NlVDhtazdTMXQzVk5IY2ZHTlctNDhoUGp1NlVkdEtsbm1UVi1EVXBtMTh3Qg?oc=5",
+          "published_at": "Tue, 24 Nov 2026 20:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "前日10%高から一転14%安、キオクシア株7000円割れの理由は？ - CRYPTO TIMES",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1lME1kZWEzUjB1MlNRRjJ4LWFXMlAzOVhuSW12ZVRyMmxEdkRoVnBqX1hWbUNRTDFfMUJHc3otQ1hGQUt3TnkzNkxudE5ub091YWhFNDZ5T19hNC1yTkE?oc=5",
+          "published_at": "Wed, 25 Nov 2026 01:06:19 GMT",
+          "source_url": "https://crypto-times.jp"
+        },
+        {
+          "title": "特別気配＞ キオクシア、ＳＢＧ、フジクラが売り気配(株探ニュース) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQUVFDbGRFZ0ZlOUlBWk1zTjNRcmdWRWFucV9YNTVnb0huNXM4U0tudU51VmN0OGE1U1Y2di16NzRQeFN6VGZYVGJKT0tqaGhJSzlhcUhqQUFTR3RhaXFvZmZURUNmZWdVc3N6akgtcmFzNGhPanZtRmtPT0swOEpzWmpDZlRzZEE?oc=5",
+          "published_at": "Wed, 25 Nov 2026 00:04:07 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "日本株の買付ランキング、1位は「キオクシア」！ ソフトバンクG、JX金属も上位に - Infoseek",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1OQVpZRHNnWkFfQS14R1lidDQ3NEU2Uk5aXzFDaFpCTU95a29FZGJKbXNWeFNLVnRCak5ua2lQbVFBaTh3LXAwc0lpRWFZUUJTWmdoNzhRcVc5akFuVWp2SA?oc=5",
+          "published_at": "Wed, 25 Nov 2026 02:30:00 GMT",
+          "source_url": "https://news.infoseek.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.028702449422673196,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.17939030889170748,
+        "oil_pressure": -0.15133342588303622,
+        "japan_risk": 0.09301306652986718,
+        "usd_rate_pressure": -0.1522893396124816
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

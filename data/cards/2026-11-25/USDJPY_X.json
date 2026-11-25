@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-25T14:23:26.553524+09:00",
+  "prediction_date": "2026-11-25",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-25T14:23:26.553524+09:00",
+  "market_data_through": "2026-11-25",
+  "reference_price": 159.45199584960938,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.08812789658963735,
+      "factor_agreement": 0.5,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.5403572541485854,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.02512109852085282,
+      "direction": "NEUTRAL",
+      "day_change": 0.0027859627856325897,
+      "momentum5": -0.00032602288244409916,
+      "trend": 0.003303809554942916,
+      "volatility": 0.04806475345308438
+    },
+    "news": {
+      "score": 0.375,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "米ドル/円【USDJPY】：外国為替相場FXレート・チャートをリアルタイム表示 - Yahoo! JAPAN",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzbWxqc1ltSU1ndEE0VElnZldUTGdyRVJpOTdKeXBsc0RDSm40dm9kLTJqaDZlOVpoR2E5eEZIX1o0bFR1SFR2N2k4WjRiTnN5dHVBTHJn?oc=5",
+          "published_at": "Wed, 25 Nov 2026 02:07:45 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "インタビュー：日銀は来年2％まで利上げか、経済・株価絡み判断難しく＝安達元委員 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFB1UGVsa2Mta3lfZFBnbmlERTJvcUR0Rm5DV0ZQeWUtWG02VkxfTzRaaWlXQU9BSFVGYjczdTBmb2FuVUlaV185V1BHVW5ZZjRZYUFKa1E3MEZ1aHgtejlsREo3aDN1eC12RllXel9IV2NuWUhZdk1lSzNmeElKUQ?oc=5",
+          "published_at": "Tue, 24 Nov 2026 22:00:21 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "【FX】11/25 米PCEデフレーターでドル円160円突破できる？ ｜為替市場ニュースの振り返り、今日の見通し - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9SZWdyX3hQTmxJbTlOWTRubHVtSldEUjFLbUxpYS1zZEdTcFJJWUpyRTFGUXhPZk40cGdCYXA1VllGVm1zM25RU0pCRDJUZ2UxazNlcUdOWFZXN2xLaEpmRDA5NA?oc=5",
+          "published_at": "Wed, 25 Nov 2026 02:30:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "日銀利上げでも円安地獄が終わらない…住宅ローンは苦しいのになぜ円は買われない？ | ニュースな本 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9GVjVCbWM1ZmUzblFic1BwbjgwOEp4OTNvMlQ5SmpvR1pCeUdZNVJ5d3dZRDNIaHBpNW0xOXhzT2JybmF3T2xpcTRVZXo?oc=5",
+          "published_at": "Wed, 25 Nov 2026 02:00:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "東京為替：ドル・円は小動き、日本株にらみ - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5Zay1IdGV3VkFHSEdpMTUxS2ZWZFdDTEhjbTc2TUdrOE9rY0RBNG84SEZfelFUNWRKRWtid1pkWGdZdHFyclpyMHJIelJlMU9PQ1E?oc=5",
+          "published_at": "Wed, 25 Nov 2026 04:52:18 GMT",
+          "source_url": "https://s.kabutan.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.04863699730304957,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.17939030889170748,
+        "oil_pressure": -0.15133342588303622,
+        "japan_risk": 0.09301306652986718,
+        "usd_rate_pressure": -0.1522893396124816
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

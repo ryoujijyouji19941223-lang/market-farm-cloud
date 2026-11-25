@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-25T14:23:26.553524+09:00",
+  "prediction_date": "2026-11-25",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-25T14:23:26.553524+09:00",
+  "market_data_through": "2026-11-25",
+  "reference_price": 3545.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.5409192334659355,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.32025939737086856,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.6578521295107678,
+      "direction": "DOWN",
+      "day_change": -0.004744631462728521,
+      "momentum5": -0.05262030184731059,
+      "trend": -0.07231704483807089,
+      "volatility": 0.34431630184159995
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "金利上昇による企業への影響調査（2026年10月） - 帝国データバンク",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1sUVd4bk9mRTBtZVRaT1J2elRaUkR3VHhXTmszZm5aZ3pJZ0hibmlvTVlNcVFWRFpDd3p5N0RVdXJDNmhaMmRwVDAtcThHOVFNX3VrNzlvdHNRV0N5Y2wyOHlVWlpic1VwSmpFREt3?oc=5",
+          "published_at": "Wed, 25 Nov 2026 01:02:53 GMT",
+          "source_url": "https://www.tdb.co.jp"
+        },
+        {
+          "title": "インタビュー：日銀は来年2％まで利上げか、経済・株価絡み判断難しく＝安達元委員 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFB1UGVsa2Mta3lfZFBnbmlERTJvcUR0Rm5DV0ZQeWUtWG02VkxfTzRaaWlXQU9BSFVGYjczdTBmb2FuVUlaV185V1BHVW5ZZjRZYUFKa1E3MEZ1aHgtejlsREo3aDN1eC12RllXel9IV2NuWUhZdk1lSzNmeElKUQ?oc=5",
+          "published_at": "Tue, 24 Nov 2026 22:00:21 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "財政拡大の予想は国債金利の上昇招く、実証関係は明らか 亀田啓悟氏 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1jclA1T0FJVmEzaTRqU0RZTFNoVVFhaFd5VkJEV2E2OUFhSDR0LV96VDlRQmhQYjhpbXhUWlI4RXQzRGVTZnlxSzNXdlBNeEhnei1nOFhtTUZueDlLNjd4eExYYkRxbVVYQ2luVw?oc=5",
+          "published_at": "Tue, 24 Nov 2026 17:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "個人向け国債に大きな変化。利率は2％前後、「プラス」への改称や複利型も検討 - 健美家",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1IQzUzSUVMMmdQbnUxSFNScWQyRlFnZ0hUTnZQZ3JrSm00Zzkxam04VGUtbjVaanBBNUE3NWFjSGFYdTVpZXptaFZ0d3FEbkZrTi1xWEpyNTFPcGhEQ3dEdEJZUFZzZw?oc=5",
+          "published_at": "Tue, 24 Nov 2026 21:08:44 GMT",
+          "source_url": "https://www.kenbiya.com"
+        },
+        {
+          "title": "地銀など定期預金金利を大幅上げ - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1ZWVR3M2k3dGdFVnRGSFFiS1pyVklnSzNDYjl2cE9GYmJwNGNsZEpYdXNQdWV2QXVYM2tmRTJhSnVVekgwUEJFVHY0bXVsS255?oc=5",
+          "published_at": "Mon, 23 Nov 2026 12:48:48 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.05719856932408893,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 0.17939030889170748,
+        "oil_pressure": -0.15133342588303622,
+        "japan_risk": 0.09301306652986718,
+        "usd_rate_pressure": -0.1522893396124816
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

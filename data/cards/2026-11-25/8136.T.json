@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-25T14:23:26.553524+09:00",
+  "prediction_date": "2026-11-25",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-25T14:23:26.553524+09:00",
+  "market_data_through": "2026-11-25",
+  "reference_price": 1041.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.4844216160120894,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.2715099307357802,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.706053306762777,
+      "direction": "DOWN",
+      "day_change": 0.022091310751104487,
+      "momentum5": -0.019774011299435013,
+      "trend": -0.10002171552660155,
+      "volatility": 0.46112948227416256
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "＼本日発売！／『CoComelon Playdates with Sanrio Friends』日本盤CD！ - UNIVERSAL MUSIC JAPAN",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9MMUJHWVFOLVQ5ZVBHTkUtZWp2elVjY0NKazZaRlBGOEV3WW5peWNkanNzdnpBVHVBQUNLODdUcU5KMG9BcnBXTjRQTTBpLW5wRmUxemRWYmNkdHJ5N3pMdFhZNHdxTVFHTTRZbw?oc=5",
+          "published_at": "Wed, 25 Nov 2026 04:35:10 GMT",
+          "source_url": "https://www.universal-music.co.jp"
+        },
+        {
+          "title": "お薬手帳とカード80枚がすっぽり！ダイソー×サンリオの「ぺたんこポーチ」病院の受付がスムーズになって嬉しい！《購入レビュー》 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBXQmxsbWNkUGtBMkFhY1Q0VnVGdmt3dXpvX1RzQTNuWjRJbjQ2d2l5U21ISHpnV2dTMkR3RzBNNDFZVWlYSW9EOTdzVVo?oc=5",
+          "published_at": "Tue, 24 Nov 2026 09:41:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "癒やされながら筋トレ！ 【サンリオキャラクターズ】「ウエイト入りぬいぐるみ」11/26発売。キティにポム、マイメロも展開 - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9kcTluMjJMVDd6OVRsTWw3akNBYXZrbEE3aVNNZEpmaVB5Q1ExeTlnbm15TlhaRm1idG9veC1rdkJQd2NtX3hwZlpab0x5Uk1BNVQteHFWSllkekNMQlJEODVtOERoOE5GSENrT2toRWNjaHNsRUlqY3d6eEpPZGM?oc=5",
+          "published_at": "Wed, 25 Nov 2026 02:50:21 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "「大阪モノレール×サンリオキャラクターズ コラボレーショングッズ」5アイテムを発売 - 鉄道ファン・railf.jp",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1BM3dRVDBzNmc2RHRrWWhIT2FXWUNORkdWa2NYSE5Qd2tUT2FYT1JNWWdBMmFSYkUtYWg4R05oc1d0cTRLWHhuUjJhazMydGQ3SDF3TUstaw?oc=5",
+          "published_at": "Wed, 25 Nov 2026 03:12:37 GMT",
+          "source_url": "https://railf.jp"
+        },
+        {
+          "title": "サンリオ「2027年福袋」が12月1日予約開始！干支のヒツジぬいぐるみやトートバッグなど、豪華セットで全7キャラクターが登場 - インサイド",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9UZTRPUjNzWXUzdlBzNEIzV3NiT2hwWFdjVU9zQmRBcF9aRFFhbGRTLUxRTDZwWEg5MjhydDFhVmtpdExKeEdiejFxbEJ5MmxMVERnTWx2cFd0NGllRzlod0pPdVFCVkwzZGc?oc=5",
+          "published_at": "Wed, 25 Nov 2026 02:45:03 GMT",
+          "source_url": "https://www.inside-games.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.028702449422673196,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.17939030889170748,
+        "oil_pressure": -0.15133342588303622,
+        "japan_risk": 0.09301306652986718,
+        "usd_rate_pressure": -0.1522893396124816
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
