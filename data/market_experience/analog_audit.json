@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-25T08:58:41.283430+00:00",
+  "generated_at": "2026-11-26T08:45:47.584108+00:00",
   "minimum_sample": 5,
-  "release_events": 111,
+  "release_events": 112,
   "status_counts": {
     "INSUFFICIENT_ANALOGS": 10,
-    "OK": 101
+    "OK": 102
   },
   "similarity_tier_counts": {
     "SURPRISE_ONLY": 41,
     "LEVEL_ONLY": 36,
-    "LEVEL_AND_MOMENTUM": 34
+    "LEVEL_AND_MOMENTUM": 35
   },
   "missing_regime_context_count": 11,
-  "usable_event_count": 101,
-  "usable_event_share": 0.9099099099099099,
+  "usable_event_count": 102,
+  "usable_event_share": 0.9107142857142857,
   "prior_analog_count": {
     "min": 0,
     "max": 30,
-    "mean": 9.73873873873874
+    "mean": 9.758928571428571
   },
   "rows": [
     {
@@ -3095,6 +3095,30 @@
         }
       ],
       "prior_analog_count": 15
+    },
+    {
+      "release_event_id": "RTDSM:ROUTPUT:2026Q3:r1",
+      "actual_available_at": "2026-10-29T08:30:00-04:00",
+      "semantic_effect": "stronger_growth",
+      "surprise_direction": "ABOVE",
+      "regime_filters": {
+        "headline_level": "low",
+        "headline_momentum": "cooling"
+      },
+      "status": "OK",
+      "similarity_tier": "LEVEL_AND_MOMENTUM",
+      "regime_context_missing": false,
+      "search_attempts": [
+        {
+          "similarity_tier": "LEVEL_AND_MOMENTUM",
+          "regime_filters": {
+            "headline_level": "low",
+            "headline_momentum": "cooling"
+          },
+          "event_count": 12
+        }
+      ],
+      "prior_analog_count": 12
     }
   ],
   "note": "Walk-forward coverage audit only. Each event may use only earlier release events; no future reaction outcomes are visible."

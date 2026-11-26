@@ -1,81 +1,105 @@
 {
-  "generated_at": "2026-11-25T08:58:40.383275+00:00",
-  "actual_release_count": 110,
+  "generated_at": "2026-11-26T08:45:46.835325+00:00",
+  "actual_release_count": 111,
   "eligibility_rule": "exact public release timestamp required",
   "incremental": true,
-  "pending_reaction_rows": 0,
-  "saved": 0,
+  "pending_reaction_rows": 4,
+  "saved": 4,
   "sources": {
     "usd_jpy": {
-      "status": "cached",
-      "pending_events": 0,
-      "fetched_rows": 0
+      "status": "ok",
+      "pending_events": 1,
+      "fetched_rows": 29,
+      "first_date": "2026-10-19 00:00:00",
+      "last_date": "2026-11-26 00:00:00",
+      "data_provider": "yfinance_fx_proxy",
+      "fallback": true,
+      "data_provenance_url": "https://finance.yahoo.com/quote/JPY=X/history/",
+      "primary_error": "FRED DEXJPUS failed after 1 attempts for 2026-10-19..2026-12-13: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=8)"
     },
     "us10y": {
-      "status": "cached",
-      "pending_events": 0,
-      "fetched_rows": 0
+      "status": "ok",
+      "pending_events": 1,
+      "fetched_rows": 28,
+      "first_date": "2026-10-19 00:00:00",
+      "last_date": "2026-11-25 00:00:00",
+      "data_provider": "yfinance_tnx_proxy",
+      "fallback": true,
+      "data_provenance_url": "https://finance.yahoo.com/quote/%5ETNX/history/",
+      "primary_error": "FRED DGS10 failed after 1 attempts for 2026-10-19..2026-12-13: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=8)"
     },
     "sp500": {
-      "status": "cached",
-      "pending_events": 0,
-      "fetched_rows": 0
+      "status": "ok",
+      "pending_events": 1,
+      "fetched_rows": 28,
+      "first_date": "2026-10-19 00:00:00",
+      "last_date": "2026-11-25 00:00:00",
+      "data_provider": "yfinance",
+      "fallback": false,
+      "data_provenance_url": "https://finance.yahoo.com/quote/%5EGSPC/history/",
+      "primary_error": null
     },
     "gold_futures": {
-      "status": "cached",
-      "pending_events": 0,
-      "fetched_rows": 0
+      "status": "ok",
+      "pending_events": 1,
+      "fetched_rows": 29,
+      "first_date": "2026-10-19 00:00:00",
+      "last_date": "2026-11-26 00:00:00",
+      "data_provider": "yfinance",
+      "fallback": false,
+      "data_provenance_url": "https://finance.yahoo.com/quote/GC%3DF/history/",
+      "primary_error": null
     }
   },
   "reaction_coverage": {
     "usd_jpy": {
-      "total_events": 110,
-      "usable_reactions": 108,
-      "coverage": 0.9818181818181818,
+      "total_events": 111,
+      "usable_reactions": 109,
+      "coverage": 0.9819819819819819,
       "status_counts": {
         "MISSING_MARKET_WINDOW": 1,
         "NO_PRE_RELEASE_BASELINE": 1,
-        "OK": 108
+        "OK": 109
       },
       "provider_counts": {
-        "yfinance_fx_proxy": 110
+        "yfinance_fx_proxy": 111
       },
-      "fallback_count": 110
+      "fallback_count": 111
     },
     "us10y": {
-      "total_events": 110,
-      "usable_reactions": 110,
+      "total_events": 111,
+      "usable_reactions": 111,
       "coverage": 1.0,
       "status_counts": {
-        "OK": 110
+        "OK": 111
       },
       "provider_counts": {
-        "yfinance_tnx_proxy": 110
+        "yfinance_tnx_proxy": 111
       },
-      "fallback_count": 110
+      "fallback_count": 111
     },
     "sp500": {
-      "total_events": 110,
-      "usable_reactions": 110,
+      "total_events": 111,
+      "usable_reactions": 111,
       "coverage": 1.0,
       "status_counts": {
-        "OK": 110
+        "OK": 111
       },
       "provider_counts": {
-        "yfinance": 110
+        "yfinance": 111
       },
       "fallback_count": 0
     },
     "gold_futures": {
-      "total_events": 110,
-      "usable_reactions": 93,
-      "coverage": 0.8454545454545455,
+      "total_events": 111,
+      "usable_reactions": 94,
+      "coverage": 0.8468468468468469,
       "status_counts": {
         "MISSING_MARKET_WINDOW": 17,
-        "OK": 93
+        "OK": 94
       },
       "provider_counts": {
-        "yfinance": 110
+        "yfinance": 111
       },
       "fallback_count": 0
     }
