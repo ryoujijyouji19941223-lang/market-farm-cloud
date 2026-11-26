@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-26T13:56:42.043651+09:00",
+  "prediction_date": "2026-11-26",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-26T13:56:42.043651+09:00",
+  "market_data_through": "2026-11-26",
+  "reference_price": 191.28799438476562,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.13137900201863117,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5627719310019885,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.012237403162215933,
+      "direction": "NEUTRAL",
+      "day_change": 0.003967659367678067,
+      "momentum5": 0.012378126995683969,
+      "trend": -0.00771881525833551,
+      "volatility": 0.06287160299324132
+    },
+    "news": {
+      "score": 0.625,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀・田村委員、利上げ「悠々として急ぐ」 物価上振れを警戒 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBybG80RkNTXzJHSGo5bEtiYlJoa1Y1MWZSc1RyeFpiako5QVp6b1FXOVJBYW02OTE5c182NEEzMWVHZXVJajNnd3lVQ1pTZ29yZG1wd2hKTzdGUFdqd01xVnJKUlY4QXp5Vzc4bA?oc=5",
+          "published_at": "Thu, 26 Nov 2026 01:57:42 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "日銀の利上げ「悠々として急ぐ」 田村審議委員、環境は依然緩和的（共同通信） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9yQWU1UExQOFpQZUpYb2NlNzZCeUwtRV96QktkRzRPR0NJMVJDVGFzNENFb1hlNDRqQXEzYkV6dVRMc0hET0JyR1hiMk9SRFJkc2dndlBEMXlmZklwZkNnX1NtdHF3QVhRVl9way1kVGpYc042TFFqS2JweGV0ZHM?oc=5",
+          "published_at": "Thu, 26 Nov 2026 02:02:35 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "ＮＹ外為市場＝ドル下落、ＡＩ株急落で円・スイスフランに逃避買い - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1yMU5uUGgydU96b2RsUW1uelZVem15NHRxSThmbHU5bVFZUXEyOGdfNUVxRXFPWk9HWFZKWDE1cWxRNFZFeGdQc25oVTZrVEhwNWRjLUdnNDNGb1FtVDA4UFRYT2RYdEdjNjhJTlRyTjNwVUlQNW9OM0I2TUdUUQ?oc=5",
+          "published_at": "Wed, 25 Nov 2026 22:07:06 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "物価の上ぶれ「俊敏に反応」日銀・田村審議委員、利上げペース加速も - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBkeFpOaFFUeXBIN3UyclNBSFlkT2o1Rzl2Um9CX2FkZ1RLV1hTc2FDSkg5Z2JyNEVtVnZfbGoxQWJYVnFUbXQ3X1hwUV9xM2tBRGRFUnFLdFJjWWptcjJoMUMzRXFKN1U?oc=5",
+          "published_at": "Thu, 26 Nov 2026 02:43:56 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "外為：スイスフラン、191円29銭前後と大幅なフラン高・円安で推移 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBYa2VsYnpLZVpfNFpBeVA5TW1PQnBxc3ZuUkk0RHAtamptWjRSbnR5MGxabGtHUWJfN0xpR1MzRnU1TktBUlFTWjRHanFYZGJyN0E?oc=5",
+          "published_at": "Thu, 26 Nov 2026 04:31:04 GMT",
+          "source_url": "https://s.kabutan.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.1120504524554955,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 0.6459566651934339,
+        "oil_pressure": 0.06846020660575824,
+        "japan_risk": 0.05695788862316742,
+        "usd_rate_pressure": -0.17394772049092144
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

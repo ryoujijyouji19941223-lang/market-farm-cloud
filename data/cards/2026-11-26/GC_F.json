@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-26T13:56:42.043651+09:00",
+  "prediction_date": "2026-11-26",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-26T13:56:42.043651+09:00",
+  "market_data_through": "2026-11-25",
+  "reference_price": 3625.699951171875,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.5515088323934008,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.3703468983998052,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.5896723975107182,
+      "direction": "DOWN",
+      "day_change": 0.017911802851659164,
+      "momentum5": -0.0310537305124311,
+      "trend": -0.06911859496745365,
+      "volatility": 0.3550152835970151
+    },
+    "news": {
+      "score": 0.75,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "利率が上昇した個人向け国債 固定3年・固定5年・変動10年の選び方 - SBI証券",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1OLW9Uby1faUphVUlQb09rVXF5UlFyc0tKdXktLTMwZy15eGJWckRVdFhUSVVpZlc5YkktS2hYU3dEbGowR0ZmMjNoR1E5WUlTODQ0TDRnSTh2QTlwY0M5MUZEenJhbDdHYXEzR3UtazM5aXhr?oc=5",
+          "published_at": "Thu, 26 Nov 2026 02:35:31 GMT",
+          "source_url": "https://go.sbisec.co.jp"
+        },
+        {
+          "title": "政策金利は早期に中立水準へ、物価上振れの兆しに「俊敏な反応を」＝田村委員 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZEhoMFdZdkZwWWZndWhLWmh3OWZVSkZSXzExZ0YyUm9TUjJmOVBpNzNiUWFNSzRmZUp0S2NNV2taVWg3dG1MMXQwbE5ibWJmc3BNRklydV9hblRVR2IyaVNMUl9YZzBSLWJIamxPOHRPdV85V0xWeUYxWmp5c3hXaFBHS2Iyck85bGFyZ0MtWEg?oc=5",
+          "published_at": "Thu, 26 Nov 2026 01:59:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀・田村委員、中立金利に「少しでも早く」 物価上振れ回避へ〝利上げ加速〟も - ニッキンONLINE",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1NzhmbmxQVnI5UnAtSmhCSlliZFRFNHhFME5PbENJY0FzRFYtZUJrbGh4Y0tZTWFFOXU3YXpOY3dDUkpmN3dJR1hkWHlmNEI2VVhkM1lB?oc=5",
+          "published_at": "Thu, 26 Nov 2026 03:22:00 GMT",
+          "source_url": "https://www.nikkinonline.com"
+        },
+        {
+          "title": "日銀利上げで気になるわが家のローン金利 「うちは返済額、変わってないよ」 同じ変動金利のママ友が涼しいで顔でいられるワケ【FPが解説】 - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBZTHJkUjh5SHhxaWNDeks5elFsLUxheFJsUWJtNmRVUHFLYzJvNUdvaEl3cFMyeVJMXzhGR0F3c2tCWUExTG9QMHhqdENmcllqc2loZmlEenZGcjA0VC05MHIwUDhZODFPejdFVHFweGh6SDhSdnhGYzhSOXZ2XzQ?oc=5",
+          "published_at": "Wed, 25 Nov 2026 10:30:06 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "浪岡氏が語る2027年の金利 「10年金利は3%前後、3.5%まで来れば生保の買いも」 - QUICK Money World",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE45NHk5aVhaN05GZDcwaElUeERrMktPNExPLVhlQlhlWXdNcGg5Uk95WjRwdkRmV0J5NWJjOVF5TElnOGtCT0pqUUFnVWV1MEVaQWxpdUV3?oc=5",
+          "published_at": "Thu, 26 Nov 2026 03:30:00 GMT",
+          "source_url": "https://moneyworld.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.15354401390741576,
+      "direction": "UP",
+      "regime_snapshot": {
+        "risk_off": 0.6459566651934339,
+        "oil_pressure": 0.06846020660575824,
+        "japan_risk": 0.05695788862316742,
+        "usd_rate_pressure": -0.17394772049092144
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

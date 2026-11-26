@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-26T13:56:42.043651+09:00",
+  "prediction_date": "2026-11-26",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-26T13:56:42.043651+09:00",
+  "market_data_through": "2026-11-26",
+  "reference_price": 7876.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6868364525578605,
+      "factor_agreement": 0.6666666666666666,
+      "reason": null
+    },
+    "direction_score": 0.2972085463492975,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.9247551361664972,
+      "direction": "DOWN",
+      "day_change": 0.14227701232777368,
+      "momentum5": -0.018566978193146455,
+      "trend": -0.19332941028119865,
+      "volatility": 1.4392581052554194
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "キオクシアHD株が一時ストップ高 株主還元の強化に期待の声 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE55YjY2MVN6ZlAwT3ZUYUJOR0RwU2M5aWUxOEx4WkVva1Exb2Nsamt1VFVFN2sxbnRZRmExUVJCX2FPbmlLMHVaQUYyMDRfUEFyb3U4OFl6QVJueGxST3lGaWdyUm11bFJuNk1mSA?oc=5",
+          "published_at": "Thu, 26 Nov 2026 01:23:45 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "話題株先取り【特別気配】速報 ＜買いトップ キオクシア、売りトップ セレンＨＤ＞ - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9lZmJZNjU1bHEzV3ZqQlZJaXIwZkxlSWszQzViNUI3dUlYY09GTlo2X045WkJjWU1feThSaTJYTTh3ZWRxT0xaOXFILWZzSUZCRFpnMjNnN2hTeEFILUs5bw?oc=5",
+          "published_at": "Thu, 26 Nov 2026 00:03:23 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "キオクシアHDが一時ストップ高､子会社から配当金2兆円超 - 四季報オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFA0R3o2ZnR3blIyV2hHQmV5TEJmWWVVN181RzVkWUR0M0RnYXJGT2g0Z3RhUEdndmJFZ1lndHlwSkloUm9GVEVLWmplNjRWc2l6V0xoWXUtTQ?oc=5",
+          "published_at": "Thu, 26 Nov 2026 00:49:18 GMT",
+          "source_url": "https://shikiho.toyokeizai.net"
+        },
+        {
+          "title": "キオクシアHDに早期の自社株買い観測､子会社から配当2.2兆円－株急伸 - Bloomberg",
+          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQUjdjdGJUa2NmWnZZZTQ5ZDNzNnZ6TjcwM3FYRkc3RVpCU29xcGRNVzF0T2R1MF9QVWtqeEhIZWkyVmZIajdVVkVBc3RmU29oVnZTaUUxX0JpdDQzN1dtMm1zX1h2M1ppNmVEZzVDYXBOd2tIVWRiWEFON2xGOTFTSnh0UkRkNlBzWkh3?oc=5",
+          "published_at": "Thu, 26 Nov 2026 02:52:00 GMT",
+          "source_url": "https://www.bloomberg.com"
+        },
+        {
+          "title": "キオクシア株が一時ストップ高、2兆円超の配当金受領で株主還元に期待 - CRYPTO TIMES",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE00eE5nYnFKZUNtZ2t2YVlPcDdBSGtJd3dRNnluVFVYd0VwQUFjYS1xSWhqOTlMc0RmRW5fMndYNXU0U1lKbHRhNks0NDdDWkJmdTdtdXZMYURVaUREaFVXcE5CdVpPanFYU0ItR3hhZlhBWXlnYlc0?oc=5",
+          "published_at": "Thu, 26 Nov 2026 03:05:07 GMT",
+          "source_url": "https://crypto-times.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.10335306643094942,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6459566651934339,
+        "oil_pressure": 0.06846020660575824,
+        "japan_risk": 0.05695788862316742,
+        "usd_rate_pressure": -0.17394772049092144
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

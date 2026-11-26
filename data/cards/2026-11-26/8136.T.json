@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-26T13:56:42.043651+09:00",
+  "prediction_date": "2026-11-26",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-26T13:56:42.043651+09:00",
+  "market_data_through": "2026-11-26",
+  "reference_price": 1039.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.4453486534966486,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.2874158049588112,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.632126019900009,
+      "direction": "DOWN",
+      "day_change": 0.0019286403085825299,
+      "momentum5": -0.003357314148681012,
+      "trend": -0.09143998770554784,
+      "volatility": 0.45937609603898694
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "大正製薬「ヴイックス」がサンリオとコラボ オリジナルケース付き - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5ib2NNOGhtcWtqUjVWRG1SZm9LdS13WDBRUzNKaGJwNXJYbE5OcEtIVGlVZ190UmxWSHlXS2lZaHBoTEtBRmtva3MyY1ZpcDE4aGlxeXF5OEZPdTJ6OFFyQzhUdEF5MVFaZWtvYQ?oc=5",
+          "published_at": "Thu, 26 Nov 2026 01:07:22 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "アベイルから「サンリオキャラクターズ」福袋が多数ラインナップ！ハローキティやクロミたちのお顔バック付きアパレル6点セットなど（インサイド） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1ZenA4OTh2X0lQWGxyS1ZmZmJ6N0RPdXZ2bERHU3FnU29RamlQMW9fUVNwUHZ2d0U0VU90d3phMVNJc0lzX09LVDg0cHdMT0hTNTRHa0RfeHI2SEg0U0o3V2cwZndzRjFMRGp0ZG82NkxnTUZXMGdhdzFFMDRyWnM?oc=5",
+          "published_at": "Thu, 26 Nov 2026 01:30:02 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "Happyくじ『Sanrio characters Holiday Collection 2026』が12月4日(金)～発売開始！｜ローソン公式サイト - LAWSON",
+          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5MdVVSX1E5SWtpdkExN21CeXRCLW1Tb3NtVnZKQW5sVE1Mc0lLUm50bGpWSy16UXNsTFROOUpCcTJNNUJteE5Qd09sdjluQ0g4T0tmdEZqQXUtM0d6VEktV2JxQklEWmxYVEdWZGdPTF9xVEZndHJGXzNSOA?oc=5",
+          "published_at": "Tue, 24 Nov 2026 01:19:25 GMT",
+          "source_url": "https://www.lawson.co.jp"
+        },
+        {
+          "title": "オリエンタルランド vs サンリオ 国民的人気キャラクターの推し活需要を取り込む2社 あなたはどっち派？ - トウシル",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5DY3BDNFNxSm1Bb1ZZamU5SXdQUzRORm9COUVQZ29IWV9PeVdTLWQ0ekxXV25lX2hPR0MxY18zbkFyckFZVV9xTlhzTG5yQk5mdlZRS2dreWt1Zw?oc=5",
+          "published_at": "Wed, 25 Nov 2026 05:40:00 GMT",
+          "source_url": "https://media.rakuten-sec.net"
+        },
+        {
+          "title": "ウサハナ・チャーミーキティ・シュガーバニーズが猫背をサポート！ドリームズ『ふんばるず サンリオキャラクターズ』 - Dtimes",
+          "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBBR3dpUmEtLUdmYlBHX0t5ZXNNWlptcDBQSkItUkVRX1JoZmF4SW5LVXU2a1laX3dDcnh1bkdObXFDdS1LZGc?oc=5",
+          "published_at": "Thu, 26 Nov 2026 04:15:57 GMT",
+          "source_url": "https://dtimes.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.10335306643094942,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6459566651934339,
+        "oil_pressure": 0.06846020660575824,
+        "japan_risk": 0.05695788862316742,
+        "usd_rate_pressure": -0.17394772049092144
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

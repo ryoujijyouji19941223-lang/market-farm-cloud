@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-26T13:56:42.043651+09:00",
+  "prediction_date": "2026-11-26",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-26T13:56:42.043651+09:00",
+  "market_data_through": "2026-11-26",
+  "reference_price": 113.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.611164758063768,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.23244996664683287,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.4496698370660707,
+    "direction": "DOWN",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5625,
+    "heldout_signals": 48
+  },
+  "evidence": {
+    "price": {
+      "score": -0.875973232498714,
+      "direction": "DOWN",
+      "day_change": 0.008928571428571397,
+      "momentum5": -0.05833333333333335,
+      "trend": -0.140607424071991,
+      "volatility": 0.5688159900508879
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "AI VTuber『ゆめみなな』が複数人と同時に会話できるようになるまで。 －リアルタイム会話を支える仕組みと工夫－ - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBiLTlkUzhlUU1Ra3NOSkVVdnpFNlQ0ZkxvcExtQXp2QkI3ZzdSNFd0SHdKM2QzS2E0U1JpNkp4N3lKVGFwNFZZR3dLc3draWpiQThlV0d4TDE?oc=5",
+          "published_at": "Wed, 25 Nov 2026 12:33:14 GMT",
+          "source_url": "https://www.klab.com"
+        },
+        {
+          "title": "ＫＬａｂ[3656]：KLab AVN、UAEの首長国安全保障会議で単独プレゼンテーションを実施 2026年11月12日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBxV2ZWcmZjNWx6dUl3TGxnZ2FKbGI5UnZZX0NTUkFOMDVtZmVCb2ZYQ0VhTnpoaUNST3FyVkFfdjBEU3VIWF9iMjNXLTF5djAzVEZCRld6RHNCRi1kOGlYaFhzRjF4QzF2NXc?oc=5",
+          "published_at": "Thu, 12 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "KLab、UAEでドローン技術を紹介 航空管制技術のトラジェクトリーと大使館主催行事に出席 - ドローントリビューン",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBvQ1VFc0tHUTRtUjNUNVZuZDBWUXJZNThtZlpoS3haTTRrbVYzWU5NdDFPelYxU2pTbGJDOXNyNmZKRDRuRmdta1dIYWJ2Ujdj?oc=5",
+          "published_at": "Fri, 20 Nov 2026 00:04:28 GMT",
+          "source_url": "https://dronetribune.jp"
+        },
+        {
+          "title": "KLab、ドローン技術企業トラジェクトリーと業務提携 ― 日本政府機関へのカウンタードローンシステムの納入実績を有する先端技術企業と協業 ― - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5DaXdhRER4ZS03S3hYUzJKdll3a3J5X3Z6dGxGNGRhWkswX1JiY0REd0k2RXJPa3hQdmFkQ29fVTlkSXhtS2xOSXNmOWt4RTljaFJDd2VkVkZ6NVhOeG83aHpKMVg?oc=5",
+          "published_at": "Thu, 12 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        },
+        {
+          "title": "KLab AVN、UAEの首長国安全保障会議でプレゼンテーションを実施 | ニュース | KLab株式会社 - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5LZF9QSjFDZDRYU3BDRWUwQlQ2c3J6T21BZDhFamxsY1ZhQ0pOSUx1QmxsZXFjZXlUbV9zb3BzM19aM0lYdTJ2eHJiX2lZcmNsRVNORnZxaXdiRzR5Y1hPenp1RWNhYUxneXZYdUhIRWc2Zw?oc=5",
+          "published_at": "Thu, 12 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.10335306643094942,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6459566651934339,
+        "oil_pressure": 0.06846020660575824,
+        "japan_risk": 0.05695788862316742,
+        "usd_rate_pressure": -0.17394772049092144
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

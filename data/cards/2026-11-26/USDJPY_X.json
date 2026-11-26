@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-26T13:56:42.043651+09:00",
+  "prediction_date": "2026-11-26",
+  "symbol": "USDJPY=X",
+  "name": "ドル円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-26T13:56:42.043651+09:00",
+  "market_data_through": "2026-11-26",
+  "reference_price": 159.16299438476562,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.1417114037637191,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5722473580490338,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.013967694245007455,
+      "direction": "NEUTRAL",
+      "day_change": -0.0006216111033079397,
+      "momentum5": -0.0013678062243560607,
+      "trend": 0.002429978449764336,
+      "volatility": 0.04734807735965894
+    },
+    "news": {
+      "score": 0.75,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀・田村委員、利上げ「悠々として急ぐ」 物価上振れを警戒 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBybG80RkNTXzJHSGo5bEtiYlJoa1Y1MWZSc1RyeFpiako5QVp6b1FXOVJBYW02OTE5c182NEEzMWVHZXVJajNnd3lVQ1pTZ29yZG1wd2hKTzdGUFdqd01xVnJKUlY4QXp5Vzc4bA?oc=5",
+          "published_at": "Thu, 26 Nov 2026 01:57:42 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "日銀の利上げ「悠々として急ぐ」 田村審議委員、環境は依然緩和的（共同通信） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9yQWU1UExQOFpQZUpYb2NlNzZCeUwtRV96QktkRzRPR0NJMVJDVGFzNENFb1hlNDRqQXEzYkV6dVRMc0hET0JyR1hiMk9SRFJkc2dndlBEMXlmZklwZkNnX1NtdHF3QVhRVl9way1kVGpYc042TFFqS2JweGV0ZHM?oc=5",
+          "published_at": "Thu, 26 Nov 2026 02:02:35 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "FX/為替「ドル/円今日の見通し｜159円挟みのもみ合い継続」 外為どっとコム トゥデイ 2026年11月26日号 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1BdnpVVUd0Q0E1MEl6dHRxdGFxR1Z1ek5tajZxYk1FQ01ZVjlaZ19uNFZVdUlTQm5OOVpocG95YjJJTHJVcFQyTmZMRTZTejQtdzJGVk4yNDJrN3VrVGdKQVc1UQ?oc=5",
+          "published_at": "Wed, 25 Nov 2026 23:41:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "物価の上ぶれ「俊敏に反応」日銀・田村審議委員、利上げペース加速も - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBkeFpOaFFUeXBIN3UyclNBSFlkT2o1Rzl2Um9CX2FkZ1RLV1hTc2FDSkg5Z2JyNEVtVnZfbGoxQWJYVnFUbXQ3X1hwUV9xM2tBRGRFUnFLdFJjWWptcjJoMUMzRXFKN1U?oc=5",
+          "published_at": "Thu, 26 Nov 2026 02:43:56 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "東京為替：ドル・円は小幅に上昇、159円20銭台で推移 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1ha0h4Ulo5dXNoTUNoLV9ZVjQ4SW43TDFXLVpHUEpiS3VmUFRZZFpNQ0ZEN0tJdlJDYUI1cEJQR1FvNFUtN1lyME5WTGdYczJVQ20tTjhvblNfUHNtOGd2Vw?oc=5",
+          "published_at": "Thu, 26 Nov 2026 00:03:58 GMT",
+          "source_url": "https://kabutan.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.03142247784742689,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.6459566651934339,
+        "oil_pressure": 0.06846020660575824,
+        "japan_risk": 0.05695788862316742,
+        "usd_rate_pressure": -0.17394772049092144
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

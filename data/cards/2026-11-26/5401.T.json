@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-26T13:56:42.043651+09:00",
+  "prediction_date": "2026-11-26",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-26T13:56:42.043651+09:00",
+  "market_data_through": "2026-11-26",
+  "reference_price": 684.4000244140625,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.03474870022911858,
+      "factor_agreement": 1.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.4808975171402317,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.028302559212464943,
+      "direction": "NEUTRAL",
+      "day_change": 0.005731115964823674,
+      "momentum5": -0.008834142774710396,
+      "trend": 0.000878306392503081,
+      "volatility": 0.20641843489529538
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "日本製鉄堺ブレイザーズ vs. 東京グレートベアーズ(11/26) 男子 第6節【大同生命SVリーグ 2026-27】 - ABEMA",
+          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBDT3JCWVhQU2ZnQUxicVpRTEVBZXdnUzMtOXB2dzNQSENScDdxRzVuQzV6NGtZcGZyMWUzT0hVeTgtQUU4aFp3UDJxN0Nyd1BqSkFQdVAxdS1TTTBuU0NCSDJVMHY4RUpBYXA0REw1TEhOQQ?oc=5",
+          "published_at": "Thu, 26 Nov 2026 01:38:14 GMT",
+          "source_url": "https://abema.tv"
+        },
+        {
+          "title": "日本製鉄(株)【5401】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9CVmx5TUl6TGxMX0lYTnVadHZ1b256QUpCY1ctQWx5ZFFaOEtGZ0ZkV0FuYlFvM3hDVF91b0J6Tk9kOFZNSVpPSWxBTUNkOUN0S1Y3TmszM2dNMmVHU2xB?oc=5",
+          "published_at": "Tue, 24 Nov 2026 06:53:12 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "東京V戦（12/19）「日本製鉄スペシャルマッチ ～世界は鉄でできている。～」開催のお知らせ - 鹿島アントラーズ オフィシャルサイト",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBvR2FCdlJENW9Rd1hlaGowMmF1bXdNa1M2d25iUmhPem03RDF0OVM0aGcyVHN1NHppLU5ocWcwMkVSQ2xicWN4eGxLUlFpQVFxNmxPWWR5S2g3R3hsZnc?oc=5",
+          "published_at": "Tue, 24 Nov 2026 02:14:15 GMT",
+          "source_url": "https://www.antlers.co.jp"
+        },
+        {
+          "title": "日本製鉄[5401]：発行登録追補書類（株券､社債券等） (有価証券報告書) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBkMG5YcUVwaEVVQndFWC1nUG1teHhMeHZHM2pNUmVyVVZlVzdGRjFlQXlaa3BabEFTVVFXSWI5SkZfWEM1NjdrcEg2eW5aaFZzalF4M3dlMXFqNWNTV09fenhyaGtldTVncmVVOA?oc=5",
+          "published_at": "Sat, 21 Nov 2026 06:09:12 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "どうなる首都圏CCS。東京湾・君津地区の日本製鉄東日本製鉄所で回収したCO2を、パイプラインで房総の九十九海岸まで運び海底下に埋めるCCS事業を巡り、事業者と住民団体が「討論会」（RIEF） - 環境金融研究機構",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1VRXB6RjNicmppRV9Sc3Z3Z29Db2RiWlFfR25HcGUteDNBaWNXaGRYTm1aZDM1UkU3azFyN1QyRjJoMExI?oc=5",
+          "published_at": "Wed, 25 Nov 2026 05:29:30 GMT",
+          "source_url": "https://rief-jp.org"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.10335306643094942,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6459566651934339,
+        "oil_pressure": 0.06846020660575824,
+        "japan_risk": 0.05695788862316742,
+        "usd_rate_pressure": -0.17394772049092144
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

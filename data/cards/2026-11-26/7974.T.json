@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-26T13:56:42.043651+09:00",
+  "prediction_date": "2026-11-26",
+  "symbol": "7974.T",
+  "name": "任天堂",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-26T13:56:42.043651+09:00",
+  "market_data_through": "2026-11-26",
+  "reference_price": 8997.0,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.21052310510299269,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.5878426674464797,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": 0.2867943310858092,
+      "direction": "UP",
+      "day_change": 0.0015584993877324482,
+      "momentum5": -0.0005554321261941331,
+      "trend": 0.03716143827564422,
+      "volatility": 0.538534538100603
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "【11月24日追加】「ニンテンドー ゲームキューブ Nintendo Classics」に『ウェーブレース ブルーストーム』を追加。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQTjFtOWtkUGFPTno4QzhoQ2Y4RXFoRnVaeG5WMGl0OXRuWV91LWRnWEs0S3VfVnMtenlkWWdYNUNVWWFoSHgteGtzUGVxTFNWdldmQ1ZGRkVkT2w3WWV6R1BQSmk2TnpMYlZMdWhxOTNjbUxiY00xc1hfVlAwcTJ5TTV5Qnc3Zw?oc=5",
+          "published_at": "Tue, 24 Nov 2026 01:24:48 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『マリオカート ワールド』の無料アップデートが本日配信。いつものコースをアレンジした8つの新コースや、サバイバルの新ルートを追加。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPNzhhNjlFR041NnB5Q3pvWElJODZKS1RQZEJQRGVXdFNQQ28yRVF2dzV5bW1BVkZxUUFOc3ppSWdzRnpDeXhUMEVJRVNKLWNVSzVvUGh4OUludHNZMjFhSXdVZnBDd1R3RDhRMjVEMWZHNzV5WkxmQ29jYktUOUlrTHZRUzlqQQ?oc=5",
+          "published_at": "Wed, 25 Nov 2026 01:08:44 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『Minecraft』が、より鮮やかなグラフィックにアップデートしてNintendo Switch 2 に登場。本日より発売開始。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOSmdSZDB2dDMzU2VxbG9sY3V2SElxQ2Rnby1TSGFxeEpEeDAyNXVnVTlzaFMtODlpTkpKbEtuYjFtYjloZWRvOGFla3hBWktwT21zYkVJZHh2X1hBZjlReTJIWGF0X0t6ZVRNMExoWTJVLV9tNGV2ZEVBV0xMWVNDR0ZIbGUyZw?oc=5",
+          "published_at": "Wed, 28 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "「ゼルダの伝説 40周年 アニバーサリーエディション」のNintendo Switch 2 や周辺機器は本日発売。「ゼルダの伝説」に関するさまざまな取り組みもご紹介。 | トピックス - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQT3UwN041aXJ0SUpZM2Z3c3BVLTNXSlhEUTRuM0xmSHNpUlFiSzFiNEVQMzZUdHRHb2FfZ2o0QnJ4ME92cU1PWGtkeTZMb0lIdkg4WEFGdzFpbzZlSEVMeWtxNGZnUHpEb2hSWndGclluaF91bUNyMWplLXRmeXRpbjJfM3JEdw?oc=5",
+          "published_at": "Thu, 29 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        },
+        {
+          "title": "『Pokémon LEGENDS Z-A Nintendo Switch 2 Edition ＋ M次元ラッシュ』と『ぽこ あ ポケモン ＋ エキスパンションパス』のパッケージ版がNintendo Switch 2 で本日発売。『Pokémon LEGENDS Z-A』でビビヨン（ボールのもよう）を仲間にできるキャンペーンも。 - Nintendo",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQTy1ZcGVhb2J2c1RTWW5YZEJQdkVPYmpVSFd4Y3NCanlJbF9DWTFxUm8wZTE5ZVpIaUF4Zl8xb01QbjNNMGc2WHQ0Z0lUSmNaeHFUQWxkNmJzeE1UX0VhR3REVFdIMUVwS3o1TjRsMXNfbVpWZWFQTmg1SE1BYlhORDFXYWxtQQ?oc=5",
+          "published_at": "Thu, 29 Oct 2026 07:00:00 GMT",
+          "source_url": "https://www.nintendo.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.10335306643094942,
+      "direction": "DOWN",
+      "regime_snapshot": {
+        "risk_off": 0.6459566651934339,
+        "oil_pressure": 0.06846020660575824,
+        "japan_risk": 0.05695788862316742,
+        "usd_rate_pressure": -0.17394772049092144
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

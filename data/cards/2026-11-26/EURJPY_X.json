@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-26T13:56:42.043651+09:00",
+  "prediction_date": "2026-11-26",
+  "symbol": "EURJPY=X",
+  "name": "ユーロ円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-26T13:56:42.043651+09:00",
+  "market_data_through": "2026-11-26",
+  "reference_price": 174.43600463867188,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "FORECAST",
+      "evidence_strength": 0.18811273820288005,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.536721754390187,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.08261591831406448,
+      "direction": "DOWN",
+      "day_change": -0.0008190567972318208,
+      "momentum5": -0.002464728879823186,
+      "trend": -0.009118217283602514,
+      "volatility": 0.05898811757453997
+    },
+    "news": {
+      "score": 0.75,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀・田村委員、利上げ「悠々として急ぐ」 物価上振れを警戒 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBybG80RkNTXzJHSGo5bEtiYlJoa1Y1MWZSc1RyeFpiako5QVp6b1FXOVJBYW02OTE5c182NEEzMWVHZXVJajNnd3lVQ1pTZ29yZG1wd2hKTzdGUFdqd01xVnJKUlY4QXp5Vzc4bA?oc=5",
+          "published_at": "Thu, 26 Nov 2026 01:57:42 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "日銀の利上げ「悠々として急ぐ」 田村審議委員、環境は依然緩和的（共同通信） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9yQWU1UExQOFpQZUpYb2NlNzZCeUwtRV96QktkRzRPR0NJMVJDVGFzNENFb1hlNDRqQXEzYkV6dVRMc0hET0JyR1hiMk9SRFJkc2dndlBEMXlmZklwZkNnX1NtdHF3QVhRVl9way1kVGpYc042TFFqS2JweGV0ZHM?oc=5",
+          "published_at": "Thu, 26 Nov 2026 02:02:35 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "AI株安・消費低迷でも利上げ確率は高水準 日銀、12月の判断は？ - 朝日新聞",
+          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5xZ1ZQRTRrQ0E0ZUNvZjFzanYxa0FCOFNqblUyekhvTzBZcklxMlJ1NXhPMThqVlRlck5TMzYwQmt5Tm41dkZZTHdTYVpkZ0xfX05mMUlwQWY5eDdmWEVLZlA0eUd6bDA?oc=5",
+          "published_at": "Wed, 25 Nov 2026 07:16:02 GMT",
+          "source_url": "https://www.asahi.com"
+        },
+        {
+          "title": "【テクニカル】日足テクニカル・ユーロ円＝転換線を巡る攻防へ - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9tMWp3dzd3d3QyZjUxS2lRMkptaWdxU1lzdEFtbHlYcTlzQnRteU5yWmlFQllFN3pIN3dnRng5YlFUZTJneVFTb3UzMnQyY0xIdzNnNU9UTldLQ0Q4Z095UGNFXzdYdw?oc=5",
+          "published_at": "Thu, 26 Nov 2026 02:48:10 GMT",
+          "source_url": "https://www.gaitame.com"
+        },
+        {
+          "title": "インタビュー：日銀は来年2％まで利上げか、経済・株価絡み判断難しく＝安達元委員 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFB1UGVsa2Mta3lfZFBnbmlERTJvcUR0Rm5DV0ZQeWUtWG02VkxfTzRaaWlXQU9BSFVGYjczdTBmb2FuVUlaV185V1BHVW5ZZjRZYUFKa1E3MEZ1aHgtejlsREo3aDN1eC12RllXel9IV2NuWUhZdk1lSzNmeElKUQ?oc=5",
+          "published_at": "Tue, 24 Nov 2026 22:00:21 GMT",
+          "source_url": "https://www.reuters.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.029559424995441362,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": 0.6459566651934339,
+        "oil_pressure": 0.06846020660575824,
+        "japan_risk": 0.05695788862316742,
+        "usd_rate_pressure": -0.17394772049092144
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
