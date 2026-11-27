@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-27T13:56:16.417092+09:00",
+  "prediction_date": "2026-11-27",
+  "symbol": "GC=F",
+  "name": "金",
+  "kind": "commodity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-27T13:56:16.417092+09:00",
+  "market_data_through": "2026-11-26",
+  "reference_price": 3662.800048828125,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.44249241805417044,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.36053023534752565,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.5226907838667882,
+      "direction": "DOWN",
+      "day_change": 0.03591832067599299,
+      "momentum5": -0.006159259577228293,
+      "trend": -0.06942473075004274,
+      "volatility": 0.37591701846428405
+    },
+    "news": {
+      "score": 0.5,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀は12 月の利上げを見送りへ | 藤代 宏一 | 第一ライフ資産運用経済研究所 - 第一ライフ資産運用経済研究所",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE45T3N2QVppOWlaTnkxRU5LbmY4ME1FS1A1YVNZVzVXSmRER2Q4SG1PS1VUVVNaMmh5RUkwQlR2NGpFQloyb2x5OG5XNWVfcUZMQVF1TUVGQXBDQ1E?oc=5",
+          "published_at": "Thu, 26 Nov 2026 08:02:33 GMT",
+          "source_url": "https://www.dlri.co.jp"
+        },
+        {
+          "title": "金利上昇その先 証券化が開く貸し出し余力 - 独立行政法人経済産業研究所 RIETI",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE01bjc4cER0UXd4Q3haT1ZhZDVqRVE0QWtvZzBQRGkwZmQ0RG8yVXpyYWNUbFlPTUNzTUMzVHVWeGc4V0ZlbnZXeXBGdnhObkNTclFoOVhQa0JueVBwZm9sdlRBM2JfaG0xMVhhNlRR?oc=5",
+          "published_at": "Fri, 27 Nov 2026 03:01:55 GMT",
+          "source_url": "https://www.rieti.go.jp"
+        },
+        {
+          "title": "フランスのCPIやECB当局者の発言、米長期金利の動向が材料になりそう - マネースクエア",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1BQmNqMmJhdW42ZVlvdlYtTUNzQXBaR2VfUUlHM1FLU25VaEVpczRrekRuUzRxT0V0MElzY2R6YVB6dkVTeDdBYU4wemprNTV1NXY0dw?oc=5",
+          "published_at": "Fri, 27 Nov 2026 00:15:00 GMT",
+          "source_url": "https://www.m2j.co.jp"
+        },
+        {
+          "title": "利率が上昇した個人向け国債 固定3年・固定5年・変動10年の選び方 - SBI証券",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1OLW9Uby1faUphVUlQb09rVXF5UlFyc0tKdXktLTMwZy15eGJWckRVdFhUSVVpZlc5YkktS2hYU3dEbGowR0ZmMjNoR1E5WUlTODQ0TDRnSTh2QTlwY0M5MUZEenJhbDdHYXEzR3UtazM5aXhr?oc=5",
+          "published_at": "Thu, 26 Nov 2026 02:35:31 GMT",
+          "source_url": "https://go.sbisec.co.jp"
+        },
+        {
+          "title": "金利上昇による企業への影響調査（2026年10月） - 帝国データバンク",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1sUVd4bk9mRTBtZVRaT1J2elRaUkR3VHhXTmszZm5aZ3pJZ0hibmlvTVlNcVFWRFpDd3p5N0RVdXJDNmhaMmRwVDAtcThHOVFNX3VrNzlvdHNRV0N5Y2wyOHlVWlpic1VwSmpFREt3?oc=5",
+          "published_at": "Wed, 25 Nov 2026 01:02:53 GMT",
+          "source_url": "https://www.tdb.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.013751233498362641,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.19219665965766342,
+        "oil_pressure": 0.1532269606906922,
+        "japan_risk": 0.04372416416180136,
+        "usd_rate_pressure": -0.17634356023692888
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

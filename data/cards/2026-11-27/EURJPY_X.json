@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-27T13:56:16.417092+09:00",
+  "prediction_date": "2026-11-27",
+  "symbol": "EURJPY=X",
+  "name": "ユーロ円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-27T13:56:16.417092+09:00",
+  "market_data_through": "2026-11-27",
+  "reference_price": 174.75,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.09976756809953367,
+      "factor_agreement": 0.5,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.49447498281866903,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.08074519321758389,
+      "direction": "DOWN",
+      "day_change": 0.0005496183206106231,
+      "momentum5": -0.0023862764279199977,
+      "trend": -0.008922032205291752,
+      "volatility": 0.058301219516817805
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀は12 月の利上げを見送りへ | 藤代 宏一 | 第一ライフ資産運用経済研究所 - 第一ライフ資産運用経済研究所",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE45T3N2QVppOWlaTnkxRU5LbmY4ME1FS1A1YVNZVzVXSmRER2Q4SG1PS1VUVVNaMmh5RUkwQlR2NGpFQloyb2x5OG5XNWVfcUZMQVF1TUVGQXBDQ1E?oc=5",
+          "published_at": "Thu, 26 Nov 2026 08:02:33 GMT",
+          "source_url": "https://www.dlri.co.jp"
+        },
+        {
+          "title": "ＡＩの能力向上、トークンのサイバー対策で「問題の重大性高める」＝日銀理事 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOWnBNZ0JKNkJPbWZxVWtsUzgxcmx6ZG9OUkNCSFlOSm1GRFo4anJnWVl1eDFLMDRSYUx1bGtQbVYyclM2Ny1FSmwwUkJmMVVpeFpnTmZzTVpMM2x5aFgyX2h0YnZpWkJ5Vm40MXYyak5sWU9oa0ZaUnFJQ1dQbld1STMxUnNTbmFxam8yQ0ZYdkw?oc=5",
+          "published_at": "Fri, 27 Nov 2026 02:07:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "ECB総裁にデコス氏 EU首脳が合意 - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBKX0gtT01VaUNmS0U4YS1XN1l6d2JLdThVaTJodlRacXZiTm4xNng4TnhQM2RZZ01WaG1OSmYwQW1icHBRa1otRDI3bGMtQy01?oc=5",
+          "published_at": "Thu, 26 Nov 2026 21:06:20 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "ECB・デコス新総裁は50代「最年少エリート」 ユーロ時代の申し子 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBLbEg2Zmo2MHhoM0wzTWhEeDl1R3ZrVHR0TUg3b2p5bTR6cnhlZ1FKYlFJN3J1cmhLYkJ4YUo5U3VrekQyQTBHVGNBS0d4NFg0cW9QMHNUVnZDaElCOFZfcm5MWWJfbl9Pa2Nvag?oc=5",
+          "published_at": "Fri, 27 Nov 2026 03:52:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "ECBインフレを警戒 ～財政不安や金融市場の動揺が新たなリスク～ - 日経CNBC online",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE85UzhJWERyOWo4YmhCeU9KNWptdGlMUzNtQVR1eUFOaXJVbHZpRGRiNWFvcW15SlY5NlpGazZvX2x0QTRUbnVEYWx2QVFmZW16NTFCcA?oc=5",
+          "published_at": "Fri, 27 Nov 2026 01:40:25 GMT",
+          "source_url": "https://online.nikkei-cnbc.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.01573891141051086,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.19219665965766342,
+        "oil_pressure": 0.1532269606906922,
+        "japan_risk": 0.04372416416180136,
+        "usd_rate_pressure": -0.17634356023692888
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

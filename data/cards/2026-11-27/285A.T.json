@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-27T13:56:16.417092+09:00",
+  "prediction_date": "2026-11-27",
+  "symbol": "285A.T",
+  "name": "キオクシア",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-27T13:56:16.417092+09:00",
+  "market_data_through": "2026-11-27",
+  "reference_price": 8283.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6402259152531397,
+      "factor_agreement": 0.5,
+      "reason": null
+    },
+    "direction_score": 0.3141516560224173,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.8722252873843466,
+      "direction": "DOWN",
+      "day_change": 0.06712187580520479,
+      "momentum5": 0.0014508523757708058,
+      "trend": -0.16851382244497903,
+      "volatility": 1.330997948182735
+    },
+    "news": {
+      "score": 0.25,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "キオクシアHD株、一時5%高 TOPIX比率見直しで5000億円の買い観測 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE00dXUyckhwdHVuTk9IT1ZOenZJdzZKUE1udlFiRU1nNUt5MU5hOGVtdHhocE5SeHZiSVdUXy1uZnduNDY5MWQ4Wk5melB6ZS11VjdmemVGNmxfbzY2d3VmRHhmQ3d0Nk95dmdpMQ?oc=5",
+          "published_at": "Fri, 27 Nov 2026 01:40:31 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "キオクシアHD株に底入れの兆し-日経平均で最割安､還元期待も追い風に AI投資巡る懸念も - Bloomberg.com",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFA0MU5YamZpZFZtUF82eU83NnpOMjFkNThfb2lndDZ2bi1EamxZMVpVTmppZEI5aXhhQ2dWYjJual94TkRCQVI3eVB0a1AzdHBjcnk3TW81TjZTdUtxbXJITkQ3NUpYMlREUkwtLTlOenRKMVJGT0Zj?oc=5",
+          "published_at": "Thu, 26 Nov 2026 22:32:21 GMT",
+          "source_url": "https://www.bloomberg.com"
+        },
+        {
+          "title": "GPUとのダイレクトアクセスによってAIシステムの実効メモリ容量を拡張可能なSuper High IOPS SSD「KIOXIA GP2シリーズ」の開発について | KIOXIA - Japan (日本語) - KIOXIA Corporation",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBVWmNqcmhndXNjMUk5bnFoQkUyRHhvQmlnV3JXb1h4RjYtVExudUxmMnVDQ2ZJenppb21pU0JkX2ttbEVTcEdLTjVyYWZoQ3YwcXJHaU5oclBjUUhEZXpTTzJuZk82ek85ODhraXBGakM?oc=5",
+          "published_at": "Thu, 26 Nov 2026 01:12:12 GMT",
+          "source_url": "https://www.kioxia.com"
+        },
+        {
+          "title": "２７日の株式相場見通し＝続伸、欧州株大幅高が支援材料に キオクシアに注目 - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8wem9IOW5rTjI0VXVINTJSUUpXTWZFMEExV01mR05FVWRhdGxWRFlIbVlJTWdXRXFNcHpLandldlRkZjVFSlJSUm9EOTN0NXh0STJ5OFVrdW54eHpYS3JJUA?oc=5",
+          "published_at": "Thu, 26 Nov 2026 23:00:00 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "キオクシア、エヌビディアと組みSSD144台でGPUメモリ約1.1PBへ HBMの壁に挑む実証 ｜Seizo Trend - ビジネス+IT",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5MYUNUeFMyWXQwLUc4MmxybkdkelBjNVdEN216eHNMM2lwOWhQZXJaQlNKY3FxLTZJTVc1dy13SDFZNnVwaGI0d0VjdE9TMlk?oc=5",
+          "published_at": "Thu, 26 Nov 2026 07:54:00 GMT",
+          "source_url": "https://www.sbbit.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.030751465545226148,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.19219665965766342,
+        "oil_pressure": 0.1532269606906922,
+        "japan_risk": 0.04372416416180136,
+        "usd_rate_pressure": -0.17634356023692888
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

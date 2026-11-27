@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-27T13:56:16.417092+09:00",
+  "prediction_date": "2026-11-27",
+  "symbol": "8136.T",
+  "name": "サンリオ",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-27T13:56:16.417092+09:00",
+  "market_data_through": "2026-11-27",
+  "reference_price": 1056.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.4266970699550409,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.2996226703969724,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.620712279593025,
+      "direction": "DOWN",
+      "day_change": 0.008114558472553712,
+      "momentum5": -0.012622720897615736,
+      "trend": -0.084459010585057,
+      "volatility": 0.4657150149326982
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "「堂島ロール キャンバス」とサンリオがコラボ!マイメロディの顔ムースやシナモロールのロールケーキなどの新スイーツ発売 - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1rSkJtLVBuSDJPRkxfWFYxVGlTZTNmQkJJaEJUb1V3elp5dzd1SmtkOHVsdmZncENWMXI1NnNraEU1a09ibHVRdjRPV0JfY19Zb3Z0c052b1FvSXYtQVVsUWlyNDY0RjE3eWM0N084Z1B2Zk9wNDhKTEoyZFV6RlU?oc=5",
+          "published_at": "Fri, 27 Nov 2026 03:31:18 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "サンリオとBEAMS COUTURE（ビームス クチュール）がコラボレーション！ハローキティやマイメロディなどを配した全6型のアイテムが登場 - 装苑ONLINE",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5mVGc3bkdfbXlwdWlBZzZJN1VzUHRFdTBGY01SWjJWT1FBU0lSSnM5NXAtUUZPUlFxajZ1Sy0yUnNxSHJNbVR3Y2ItX3pnenJnaXQxN25DZFcteHVCMDBmc012Z1hPQQ?oc=5",
+          "published_at": "Fri, 27 Nov 2026 03:13:40 GMT",
+          "source_url": "https://soen.tokyo"
+        },
+        {
+          "title": "お薬手帳とカード80枚がすっぽり！ダイソー×サンリオの「ぺたんこポーチ」病院の受付がスムーズになって嬉しい！《購入レビュー》 - ダイヤモンド・オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBXQmxsbWNkUGtBMkFhY1Q0VnVGdmt3dXpvX1RzQTNuWjRJbjQ2d2l5U21ISHpnV2dTMkR3RzBNNDFZVWlYSW9EOTdzVVo?oc=5",
+          "published_at": "Tue, 24 Nov 2026 09:41:00 GMT",
+          "source_url": "https://diamond.jp"
+        },
+        {
+          "title": "くらげドレスの8キャラクターがマスコットに！むにゅぐるみパティオ サンリオキャラクターズ「ゆらゆらくらげシリーズ」むにゅぐるみマスコット - Dtimes",
+          "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBILVQ2OWdmX0JsVU96TjVBV1l3amVoUHVkU0hQWGN2RDFtODVvR0U2NzBhR3RnZDJaMHBaLU1fLXVzZFpKclE?oc=5",
+          "published_at": "Thu, 26 Nov 2026 20:03:11 GMT",
+          "source_url": "https://dtimes.jp"
+        },
+        {
+          "title": "「お文具といっしょ」×「サンリオキャラクターズ」コラボ！ぬいぐるみやステッカーなどグッズが、イトーヨーカドー対象店舗にて発売 - Infoseek",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE11Q1pOUmVGa1Z5WVJSMThvMmhkcXdZZkRKUzQyVXdEV012Y0tTUHhiY3dNeGlKdmFPeVRUcDR2YjVMWVRjbmFRazlyM3lhZFF6MUcxZHBxTkRUSURHWEhB?oc=5",
+          "published_at": "Fri, 27 Nov 2026 04:25:02 GMT",
+          "source_url": "https://news.infoseek.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.030751465545226148,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.19219665965766342,
+        "oil_pressure": 0.1532269606906922,
+        "japan_risk": 0.04372416416180136,
+        "usd_rate_pressure": -0.17634356023692888
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

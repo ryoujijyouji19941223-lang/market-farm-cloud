@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-27T13:56:16.417092+09:00",
+  "prediction_date": "2026-11-27",
+  "symbol": "3656.T",
+  "name": "KLab",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-27T13:56:16.417092+09:00",
+  "market_data_through": "2026-11-27",
+  "reference_price": 112.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.6311614737015959,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.22878682184300245,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5150164754557385,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.5625,
+    "heldout_signals": 48
+  },
+  "evidence": {
+    "price": {
+      "score": -0.8713952262791352,
+      "direction": "DOWN",
+      "day_change": 0.009009009009008917,
+      "momentum5": -0.05882352941176472,
+      "trend": -0.13794421092854414,
+      "volatility": 0.5696660325820981
+    },
+    "news": {
+      "score": -0.2,
+      "status": "OK",
+      "error": null,
+      "direction": "DOWN",
+      "headlines": [
+        {
+          "title": "KLab、ドローン技術企業トラジェクトリーと業務提携 ― 日本政府機関へのカウンタードローンシステムの納入実績を有する先端技術企業と協業 ― - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5DaXdhRER4ZS03S3hYUzJKdll3a3J5X3Z6dGxGNGRhWkswX1JiY0REd0k2RXJPa3hQdmFkQ29fVTlkSXhtS2xOSXNmOWt4RTljaFJDd2VkVkZ6NVhOeG83aHpKMVg?oc=5",
+          "published_at": "Thu, 12 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        },
+        {
+          "title": "ＫＬａｂ[3656]：営業外収益及び営業外費用の計上に関するお知らせ 2026年11月12日(適時開示) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1BdVNsY3hKRVptNmlIeW1falJPVDdSZW55MnkxZUtzNXN5LUZva3d0WE8zMXN1NXY4OElUNDRnMWY4d2wtd3dXQ1dwV0lNSTU5YW5zNU1JNHJkMmo2dkoxdlY1dkJSR25HTnc?oc=5",
+          "published_at": "Thu, 12 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "【3656】KLab株式会社 事業概要と成長戦略に関するIRインタビュー - invest-n.jp",
+          "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE0ta2RmWEh0TWZHUDlCWi1keW5Ud25XSkdSUE5OOVQ1NDN1Yk5OaE5QZUdwRHNjSWhNVzJlSUdMUThzeEk?oc=5",
+          "published_at": "Wed, 11 Nov 2026 08:00:00 GMT",
+          "source_url": "https://invest-n.jp"
+        },
+        {
+          "title": "KLab AVN、UAEの首長国安全保障会議でプレゼンテーションを実施 | ニュース | KLab株式会社 - KLab.Inc",
+          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5LZF9QSjFDZDRYU3BDRWUwQlQ2c3J6T21BZDhFamxsY1ZhQ0pOSUx1QmxsZXFjZXlUbV9zb3BzM19aM0lYdTJ2eHJiX2lZcmNsRVNORnZxaXdiRzR5Y1hPenp1RWNhYUxneXZYdUhIRWc2Zw?oc=5",
+          "published_at": "Thu, 12 Nov 2026 08:00:00 GMT",
+          "source_url": "https://www.klab.com"
+        },
+        {
+          "title": "【株式】KLabが大幅続落 26年12月期通期の連結業績予想の下方修正の発表を嫌気(gamebiz) - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNODFmMFByNWxyY3dGZkpZN0tKTU1ta0ZCTTQxd0VxMWxURUdiRElDY05SMGI5U0NfRGlJbUZ4MV9GLWhDT1ppd1EyYWZCZkpETDl3MEFiRFZydzk1VEJnVS1fV0tWN19KQmtLdmNBWnlScERqTmpPbTdyVjdlMDZoWXdaVUJjd28?oc=5",
+          "published_at": "Fri, 13 Nov 2026 00:55:19 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.030751465545226148,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.19219665965766342,
+        "oil_pressure": 0.1532269606906922,
+        "japan_risk": 0.04372416416180136,
+        "usd_rate_pressure": -0.17634356023692888
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

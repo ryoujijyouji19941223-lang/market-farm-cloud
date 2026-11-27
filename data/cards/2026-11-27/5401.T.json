@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-27T13:56:16.417092+09:00",
+  "prediction_date": "2026-11-27",
+  "symbol": "5401.T",
+  "name": "日本製鉄",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-27T13:56:16.417092+09:00",
+  "market_data_through": "2026-11-27",
+  "reference_price": 686.7000122070312,
+  "prediction": {
+    "direction": "FLAT",
+    "qualification": {
+      "direction": "FLAT",
+      "decision": "ABSTAIN",
+      "evidence_strength": 0.021835470183900457,
+      "factor_agreement": 0.0,
+      "reason": "insufficient_evidence"
+    },
+    "direction_score": 0.49306492799027835,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.025327574047230197,
+      "direction": "NEUTRAL",
+      "day_change": 0.009852959127987226,
+      "momentum5": -0.001308847310733774,
+      "trend": -0.0025122003313975405,
+      "volatility": 0.20399307877074374
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "日本製鉄(株)【5401】：今の株価の理由は？値動きの背景をAIが解説 - Yahoo!ファイナンス",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9CVmx5TUl6TGxMX0lYTnVadHZ1b256QUpCY1ctQWx5ZFFaOEtGZ0ZkV0FuYlFvM3hDVF91b0J6Tk9kOFZNSVpPSWxBTUNkOUN0S1Y3TmszM2dNMmVHU2xB?oc=5",
+          "published_at": "Thu, 26 Nov 2026 06:53:12 GMT",
+          "source_url": "https://finance.yahoo.co.jp"
+        },
+        {
+          "title": "「日本製鉄スペシャルマッチ ～世界は鉄でできている。～」開催 - 鹿島アントラーズ オフィシャルサイト",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9WN2s1d2pPVFZYREFPbGl1cVFEYWRHX2R5QmtmLTdtQWFQb0ZHbnFIVE40VG5fT3d3cFdlRUlOVUx0OGQ3RmhrZ1Vjc05Eczh6cXhKeGo5dE1Wam5ubjVib0JtX3k?oc=5",
+          "published_at": "Wed, 25 Nov 2026 06:57:28 GMT",
+          "source_url": "https://www.antlers.co.jp"
+        },
+        {
+          "title": "どうなる首都圏CCS。東京湾・君津地区の日本製鉄東日本製鉄所で回収したCO2を、パイプラインで房総の九十九海岸まで運び海底下に埋めるCCS事業を巡り、事業者と住民団体が「討論会」（RIEF） - 環境金融研究機構",
+          "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1VRXB6RjNicmppRV9Sc3Z3Z29Db2RiWlFfR25HcGUteDNBaWNXaGRYTm1aZDM1UkU3azFyN1QyRjJoMExI?oc=5",
+          "published_at": "Wed, 25 Nov 2026 05:29:30 GMT",
+          "source_url": "https://rief-jp.org"
+        },
+        {
+          "title": "日本製鉄の｢2兆円M＆A｣でUSスチールに見えた復活の希望 アメリカにとっては良いことだが… - 東洋経済オンライン",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5FY1ZTVzNqM2tFSjh4NmZZaGpiZHE5a1hFcXFJTG0yaUlNT2FsV09KNWlONDFwbzJLcWxXYVVSYWl0X1NJQU12OWJ5dVpOYU14UWFGNFd6cXNIbUczclNB?oc=5",
+          "published_at": "Tue, 24 Nov 2026 20:50:00 GMT",
+          "source_url": "https://toyokeizai.net"
+        },
+        {
+          "title": "鹿島、MUFG国立開催の東京V戦で『日本製鉄スペシャルマッチ ～世界は鉄でできている。～』開催…オリジナル缶マグネットを先着15000名様にプレゼント - サッカーキング",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5EWExqSHFiVFAyWEJpWktaeWQxem9PckkwSnE0Q19rZm9OODF2M0ZZbmJ5dWZzVmVNSmRiNEdNdWF6cWhrcGRQMEk5X0tiMGFHTGNWTFlfOVVTNlc5b1pRcnMyMFVyT2xZWmNQdDI1cw?oc=5",
+          "published_at": "Tue, 24 Nov 2026 06:06:18 GMT",
+          "source_url": "https://www.soccer-king.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.030751465545226148,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.19219665965766342,
+        "oil_pressure": 0.1532269606906922,
+        "japan_risk": 0.04372416416180136,
+        "usd_rate_pressure": -0.17634356023692888
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

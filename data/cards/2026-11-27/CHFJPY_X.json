@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-27T13:56:16.417092+09:00",
+  "prediction_date": "2026-11-27",
+  "symbol": "CHFJPY=X",
+  "name": "スイスフラン円",
+  "kind": "fx",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-27T13:56:16.417092+09:00",
+  "market_data_through": "2026-11-27",
+  "reference_price": 190.90499877929688,
+  "prediction": {
+    "direction": "UP",
+    "qualification": {
+      "direction": "UP",
+      "decision": "FORECAST",
+      "evidence_strength": 0.1571418934936682,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.5765893576968516,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": null,
+  "evidence": {
+    "price": {
+      "score": -0.007502574064207692,
+      "direction": "NEUTRAL",
+      "day_change": -0.0032334969441677464,
+      "momentum5": 0.009198348293397496,
+      "trend": -0.005537013501549115,
+      "volatility": 0.06241176378544207
+    },
+    "news": {
+      "score": 0.875,
+      "status": "OK",
+      "error": null,
+      "direction": "UP",
+      "headlines": [
+        {
+          "title": "日銀は12 月の利上げを見送りへ | 藤代 宏一 | 第一ライフ資産運用経済研究所 - 第一ライフ資産運用経済研究所",
+          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE45T3N2QVppOWlaTnkxRU5LbmY4ME1FS1A1YVNZVzVXSmRER2Q4SG1PS1VUVVNaMmh5RUkwQlR2NGpFQloyb2x5OG5XNWVfcUZMQVF1TUVGQXBDQ1E?oc=5",
+          "published_at": "Thu, 26 Nov 2026 08:02:33 GMT",
+          "source_url": "https://www.dlri.co.jp"
+        },
+        {
+          "title": "ＡＩの能力向上、トークンのサイバー対策で「問題の重大性高める」＝日銀理事 - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOWnBNZ0JKNkJPbWZxVWtsUzgxcmx6ZG9OUkNCSFlOSm1GRFo4anJnWVl1eDFLMDRSYUx1bGtQbVYyclM2Ny1FSmwwUkJmMVVpeFpnTmZzTVpMM2x5aFgyX2h0YnZpWkJ5Vm40MXYyak5sWU9oa0ZaUnFJQ1dQbld1STMxUnNTbmFxam8yQ0ZYdkw?oc=5",
+          "published_at": "Fri, 27 Nov 2026 02:07:00 GMT",
+          "source_url": "https://www.reuters.com"
+        },
+        {
+          "title": "日銀・審議委員が利上げに前向き（ABEMA TIMES） - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9PaGVFMTExSS1RMjhYYmVxMlpVQ1dvQjlRSlgyZjlfR2RCa1F6QXYwZkpUd2p4eXhGUzZRckhpSWxta2Z0TGZhMHZ1SGdBRDJLUV90eHBZWFRrM2xja01VS0dYZEtBVkhlYnQwRmVfbTV0QzIzc2kxaHhZRFQtXzA?oc=5",
+          "published_at": "Thu, 26 Nov 2026 10:54:16 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "日銀・田村委員、12月利上げ「判断がつく場合は十分ある」 - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1oY1AtMnRfRDh0TmU1d3VLVlNEMjVOQjNwV195SjlPV0dUVlk5aW9LSWdJOENLMDZSaTdSQTF6UHFuMEFudTRvNkFiX0Y1a1dVSlN6WHp4SHRUSmdlM3dIVjNKX1QxdUJJRjVYZQ?oc=5",
+          "published_at": "Thu, 26 Nov 2026 07:30:00 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "【今日のドル円】昨日の振り返りと今日のドル円相場見通し「日銀利上げ発言の円買い一巡後159円台回復、ブラックフライデーの薄商い警戒」 2026年11月27日 - 外為どっとコム",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9vdUJ3LWVxRWVOVFFfMVktOFlJRXRzZjdUSU5ZaVhBNkJURG9DZzJuQVF1M3hlVGh6TFB4TDJSUWk3TkRKek4zMlgyQWZmQTlkMnkzZkpBT2wxQVZKSi1EMWg2cw?oc=5",
+          "published_at": "Fri, 27 Nov 2026 01:15:00 GMT",
+          "source_url": "https://www.gaitame.com"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": -0.021934287533379705,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.19219665965766342,
+        "oil_pressure": 0.1532269606906922,
+        "japan_risk": 0.04372416416180136,
+        "usd_rate_pressure": -0.17634356023692888
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}

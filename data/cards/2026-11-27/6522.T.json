@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "model_version": "market-farm-live-v0.6-news-quality",
+  "status": "OPEN",
+  "created_at_jst": "2026-11-27T13:56:16.417092+09:00",
+  "prediction_date": "2026-11-27",
+  "symbol": "6522.T",
+  "name": "アスタリスク",
+  "kind": "equity",
+  "horizon": "NEXT_TRADING_DAY",
+  "information_cutoff_jst": "2026-11-27T13:56:16.417092+09:00",
+  "market_data_through": "2026-11-27",
+  "reference_price": 615.0,
+  "prediction": {
+    "direction": "DOWN",
+    "qualification": {
+      "direction": "DOWN",
+      "decision": "FORECAST",
+      "evidence_strength": 0.5276510888044081,
+      "factor_agreement": 1.0,
+      "reason": null
+    },
+    "direction_score": 0.28027405010360984,
+    "note": "direction_score is a model score, not a calibrated probability"
+  },
+  "challenger": {
+    "probability_up": 0.5139818637861889,
+    "direction": "FLAT",
+    "price_coef": 0.0,
+    "macro_coef": 1.0,
+    "edge": 0.05,
+    "heldout_accuracy": 0.6136363636363636,
+    "heldout_signals": 44
+  },
+  "evidence": {
+    "price": {
+      "score": -0.769174072018565,
+      "direction": "DOWN",
+      "day_change": 0.07894736842105265,
+      "momentum5": -0.00646203554119551,
+      "trend": -0.1240567461515244,
+      "volatility": 0.7445887960117348
+    },
+    "news": {
+      "score": 0.0,
+      "status": "OK",
+      "error": null,
+      "direction": "NEUTRAL",
+      "headlines": [
+        {
+          "title": "アスタリスク[6522]：内部統制報告書－第20期(2025/09/01－2026/08/31) (有価証券報告書) ：日経会社情報DIGITAL - 日本経済新聞",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9sWnI4WUNLX3ZrOFB0a08zbU83b1lRY3ZHOEEzSzl1RjlERlJRX2ZsRTR6NlhEUVl4c09qQVBGZDZhbnFURVRvU0lHcGhJU0dmeFV5NVhoSkRaRmxseGZ3TktEOVhtOW83V19uNQ?oc=5",
+          "published_at": "Thu, 26 Nov 2026 11:29:03 GMT",
+          "source_url": "https://www.nikkei.com"
+        },
+        {
+          "title": "6522 アスタリスク - 株探",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1HVHRPTkZWak14cU8wYjdvcFZ2MEl3NUhKa0JOVUJXZHVOWlA5M0VvZlVkMFBPUlB3SnJXZFEtOVpvcHFkR3NMX2N6dW9keHlq?oc=5",
+          "published_at": "Fri, 20 Nov 2026 06:30:00 GMT",
+          "source_url": "https://kabutan.jp"
+        },
+        {
+          "title": "札幌市 65歳以上の介護保険料を9年ぶり値上げへ 月額6522円に引き上げ方針 - Yahoo!ニュース",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9rcHFsZVZmXzZmclJRNjlmcnVnejVmUm4xeFRwanI5bGhNQzdmeEh0M0NXai1FU3h5bE4tR3UwYkNRQmxiNkMzRXJBZjJYQWFuMDZTYlVrVEtDVDBEWl82bnIxWndCUXJpZXpKenNRUV91eXZWTi1UckxzQ0VuN0E?oc=5",
+          "published_at": "Wed, 25 Nov 2026 08:17:08 GMT",
+          "source_url": "https://news.yahoo.co.jp"
+        },
+        {
+          "title": "札幌市、65歳以上の介護保険料値上げへ 749円増6522円 利用者増見込みで - 北海道新聞デジタル",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8tblJfUzUtNGxzMDg0MkVlWFZtSExIanlmN21jbUNlcjRBWUE4MmhReEg3SDkxZnZLTVlnU3d5dmlDbXA2cjJwOHhCRzQybU4wU3AxaExDTXZqdw?oc=5",
+          "published_at": "Tue, 24 Nov 2026 13:34:24 GMT",
+          "source_url": "https://www.hokkaido-np.co.jp"
+        },
+        {
+          "title": "RFIDソリューション販売開始。次世代RFIDソリューション『AsReader BOX-Type』を「coca」旗艦店に導入 ～全国100店舗以上を展開するadapt retailingで店舗DXを実証、中長期の業績拡大へ本格着手～ - 株式会社アスタリスク",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBoNnp1MzhONTZfSElhcFJia0pQUi16eFpCajdyQVIyODlTelhKUGpzQWd4M0czRDgxZ2p4XzBtOXJKYXY0V05NT3BUQVE2c00?oc=5",
+          "published_at": "Mon, 10 Aug 2026 07:00:00 GMT",
+          "source_url": "https://www.asx.co.jp"
+        }
+      ]
+    },
+    "outside_wind": {
+      "score": 0.030751465545226148,
+      "direction": "NEUTRAL",
+      "regime_snapshot": {
+        "risk_off": -0.19219665965766342,
+        "oil_pressure": 0.1532269606906922,
+        "japan_risk": 0.04372416416180136,
+        "usd_rate_pressure": -0.17634356023692888
+      }
+    }
+  },
+  "sources": {
+    "price": "yfinance daily market data",
+    "live_news": "Google News RSS headlines",
+    "outside_wind": "market proxies: VIX, S&P500, US10Y, DXY, oil, Nikkei"
+  },
+  "outcome": null,
+  "review": null
+}
